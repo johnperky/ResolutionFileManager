@@ -1,0 +1,33 @@
+# Python and editor state
+__pycache__/
+*.py[cod]
+*.log
+.idea/
+.vscode/
+
+# Local application/test state
+.*-localappdata*/
+.smoke-*/
+.test-*/
+.final-*/
+.pytest_cache/
+
+# Generated builds and packages
+build/
+build-*/
+dist/
+dist-*/
+release-output/
+*.spec
+*.exe
+*.9exe
+*.zip
+*.sha256
+windows-startup-fix/
+
+# Linux packaging is retained privately while public distribution is Windows-only.
+build_linux.sh
+run_linux.sh
+
+# Keep the maintained packaging specification if it is deliberately added later.
+!packaging/*.spec
