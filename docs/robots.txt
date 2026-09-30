@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://johnperky.github.io/ResolutionFileManager/sitemap.xml

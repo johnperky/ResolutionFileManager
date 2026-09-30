@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resolution File Manager — Fast Windows Video and Image Organisation</title>
+  <meta name="description" content="Rapidly scan, preview, sort, select, organise and convert large video and image collections across folders and subfolders by codec, resolution, size, duration and other metadata.">
+  <meta name="keywords" content="video file manager, media organiser, codec sorter, resolution sorter, video converter, H.264, H.265, HEVC, AV1, Windows media manager, duplicate video finder">
+  <link rel="canonical" href="https://johnperky.github.io/ResolutionFileManager/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Resolution File Manager for Windows">
+  <meta property="og:description" content="Rapidly scan and manipulate large video and image collections across subfolders by codec, resolution, size and more.">
+  <meta property="og:url" content="https://johnperky.github.io/ResolutionFileManager/">
+  <meta property="og:image" content="https://johnperky.github.io/ResolutionFileManager/app_icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Resolution File Manager",
+    "operatingSystem": "Windows 10, Windows 11",
+    "applicationCategory": "MultimediaApplication",
+    "softwareVersion": "12.2.2",
+    "description": "A portable dual-pane Windows application for rapidly scanning, previewing, sorting, selecting, organising and converting large image and video collections across folders and subfolders.",
+    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "isAccessibleForFree": true,
+    "downloadUrl": "https://github.com/johnperky/ResolutionFileManager/releases/latest",
+    "codeRepository": "https://github.com/johnperky/ResolutionFileManager",
+    "author": {"@type": "Person", "name": "JohnPerky"}
+  }
+  </script>
+  <style>
+    :root { color-scheme: dark; --bg:#0c1424; --panel:#14223a; --text:#eef5ff; --muted:#b6c7dc; --blue:#58a6ff; --green:#55d68b; }
+    * { box-sizing:border-box; }
+    body { margin:0; font:17px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; background:linear-gradient(145deg,#09101d,#122440); color:var(--text); }
+    main { width:min(1080px,92%); margin:auto; padding:60px 0 80px; }
+    header { display:grid; grid-template-columns:120px 1fr; gap:28px; align-items:center; margin-bottom:38px; }
+    header img { width:112px; height:112px; border-radius:24px; box-shadow:0 12px 40px #0008; }
+    h1 { margin:0 0 8px; font-size:clamp(2.2rem,6vw,4.4rem); line-height:1.05; }
+    h2 { margin-top:0; font-size:1.45rem; }
+    p { color:var(--muted); }
+    .lead { font-size:1.2rem; max-width:850px; }
+    .buttons { display:flex; flex-wrap:wrap; gap:12px; margin:28px 0 46px; }
+    .button { display:inline-block; padding:13px 20px; border-radius:9px; background:var(--blue); color:#06101c; font-weight:750; text-decoration:none; }
+    .button.secondary { background:#263b5d; color:var(--text); }
+    .button.support { background:#ffdd76; color:#2d2300; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; }
+    article { background:#14223add; border:1px solid #ffffff18; border-radius:15px; padding:24px; box-shadow:0 12px 30px #0003; }
+    ul { padding-left:22px; color:var(--muted); }
+    strong { color:var(--text); }
+    footer { margin-top:42px; padding-top:24px; border-top:1px solid #ffffff22; color:var(--muted); font-size:.95rem; }
+    a { color:#83beff; }
+    @media (max-width:600px) { header { grid-template-columns:1fr; } header img { width:88px; height:88px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="app_icon.png" alt="Resolution File Manager icon">
+    <div>
+      <h1>Resolution File Manager</h1>
+      <p class="lead">Rapidly scan, preview and manipulate large video and image collections across entire folder trees—then select files by codec, resolution, size, duration and much more.</p>
+    </div>
+  </header>
+
+  <div class="buttons">
+    <a class="button" href="https://github.com/johnperky/ResolutionFileManager/releases/latest">Download for Windows</a>
+    <a class="button secondary" href="https://github.com/johnperky/ResolutionFileManager">View source and documentation</a>
+    <a class="button support" href="https://buymeacoffee.com/johnperky">Buy John a coffee</a>
+  </div>
+
+  <section class="grid">
+    <article>
+      <h2>Review videos quickly</h2>
+      <p>Scan thousands of files, use cached thumbnails and metadata, and preview videos independently on either side without opening every clip in another program.</p>
+    </article>
+    <article>
+      <h2>Work across subfolders</h2>
+      <p>Turn on <strong>Include subfolders</strong> to treat a complete folder tree as one collection. Filter, sort and select media wherever it is stored below the chosen folder.</p>
+    </article>
+    <article>
+      <h2>Select what matters</h2>
+      <p>Find and manipulate groups by codec, resolution, file size, duration, bitrate, frame rate, date, type, rating, label, tags and other technical properties.</p>
+    </article>
+    <article>
+      <h2>Convert resolution and codecs</h2>
+      <p>Convert selected videos to H.264, H.265/HEVC or AV1, change resolution, create proxies or remux streams. Supported NVIDIA, Intel and AMD hardware acceleration can reduce conversion time.</p>
+    </article>
+    <article>
+      <h2>Organise safely</h2>
+      <p>Copy, move and batch-rename selected groups with previews, queues and undo support. Compare folders, find duplicates, verify media integrity and export inventory reports.</p>
+    </article>
+    <article>
+      <h2>Portable and private</h2>
+      <p>No account, subscription, advertising or analytics. Media analysis and conversion stay on the computer. Version 12.2.2 is free software under GPL-3.0-or-later.</p>
+    </article>
+  </section>
+
+  <footer>
+    <p>Current release: 12.2.2 for Windows x64. The build is currently unsigned, so Windows may display a SmartScreen warning. Download only from the official GitHub release and verify the supplied SHA-256 checksum.</p>
+    <p><a href="https://github.com/johnperky/ResolutionFileManager/blob/main/PRIVACY.md">Privacy</a> · <a href="https://github.com/johnperky/ResolutionFileManager/blob/main/THIRD_PARTY_NOTICES.md">Third-party notices</a> · <a href="https://github.com/johnperky/ResolutionFileManager/issues">Report an issue</a></p>
+  </footer>
+</main>
+</body>
+</html>
