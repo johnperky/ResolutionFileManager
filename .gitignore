@@ -18,6 +18,8 @@ build-*/
 dist/
 dist-*/
 release-output/
+packaging/microsoft-store/stage/
+packaging/microsoft-store/output/
 *.spec
 *.exe
 *.9exe
