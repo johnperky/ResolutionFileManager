@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory = $true)] [string] $IdentityName,
     [Parameter(Mandatory = $true)] [string] $Publisher,
     [Parameter(Mandatory = $true)] [string] $PublisherDisplayName,
-    [string] $Version = "12.2.2.0"
+    [string] $Version = "12.3.0.0"
 )
 
 $ErrorActionPreference = "Stop"
@@ -11,7 +11,7 @@ $storeRoot = $PSScriptRoot
 $stageRoot = Join-Path $storeRoot "stage"
 $outputRoot = Join-Path $storeRoot "output"
 $assetRoot = Join-Path $stageRoot "Assets"
-$sourceExe = Join-Path $projectRoot "ResolutionFileManager.exe"
+$sourceExe = Join-Path $projectRoot "dist\ResolutionFileManager.exe"
 $sourceIcon = Join-Path $projectRoot "app_icon.png"
 $makeAppx = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\makeappx.exe"
 

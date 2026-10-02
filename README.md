@@ -2,7 +2,7 @@
 
 A portable dual-pane media file manager for Windows that scans images and videos, displays technical metadata, sorts and filters large collections, previews content, and performs reviewable file-management and conversion workflows.
 
-Current version: 12.2.2
+Current version: 12.3.0
 
 ## Download and support
 
@@ -13,12 +13,14 @@ Resolution File Manager is free software licensed under GNU GPL version 3 or lat
 ## Features
 
 - Dual folder panes
+- Independent per-pane tick boxes that collect an action group while ordinary highlighting remains free for previewing
 - Expandable folder tree in each pane
 - Video support: MP4, MKV, MOV, AVI, WebM, M4V, WMV, MPG, MPEG
 - Image support: JPG and JPEG
 - Sort by name, type, resolution, megapixels, or file size
 - Per-pane thumbnail Sort menu with explicit ascending/descending choices for name, date, size, length, codec, resolution, type, bitrate, frame rate, and rating
 - Filter to one resolution and select the whole visible group
+- Tick/untick all shown files, preserve ticks through sorting and filtering, and clear the group in one click
 - Right-click one file or a multi-file selection to copy or move it
 - Optional recursive scanning of all subfolders (folder structure is preserved on transfer)
 - Independent Videos and Images visibility toggles
@@ -264,6 +266,8 @@ Version 12.2 adds Keep source resolution, 1080p, and 720p choices to the video-c
 Version 12.2.1 lets either preview timeline jump directly to a clicked position. Clicking the track moves the marker to that percentage and resumes playback there; ordinary click-and-drag scrubbing and the comma/full-stop ten-percent shortcuts remain available. Version 12.2 remains available for rollback.
 
 Version 12.2.2 adds an optional support link for the application's creator. Help contains “If you like this, buy John a coffee,” and the redesigned About window repeats the button, displays the public address, and clearly states that support is optional. Activation opens `https://buymeacoffee.com/johnperky` in the normal web browser; the application never opens it automatically or handles payment information. Version 12.2.1 remains available for rollback.
+
+Version 12.3.0 adds independent tick-box action groups to both panes. Details rows and thumbnail cards have visible ☐/☑ controls, while the Details checkmark heading and thumbnail ✓ All shown control toggle every displayed file. Ticks persist through sorting, filtering, paging, and thumbnail recycling so another file can be highlighted and previewed without losing the collected group. Existing commands use ticks when present and ordinary highlighted rows otherwise. Ticks are session-only and changing a pane's folder clears only that pane. Version 12.2.2 remains available for rollback.
 
 On Linux, install Python Tk and FFmpeg as described above, then run:
 

@@ -34,7 +34,7 @@ Everything runs locally. The app does not require an account, contain advertisin
 
 ## What's new
 
-Version 12.2.2 adds an optional Buy Me a Coffee link under Help and About. It never opens automatically, and payment information is handled entirely by the external website.
+Version 12.3.0 adds independent tick-box action groups in both panes. Collect files across sorting and filtering while continuing to highlight and preview other media, then apply file-management, analysis or conversion actions to the complete ticked group.
 
 ## Category
 
@@ -59,7 +59,7 @@ media manager; video organiser; file manager; codec; resolution; thumbnails; dup
 - Architecture: x64
 - Age rating answers: No violence, sexual content, controlled substances, gambling, user-generated content, online communication or location sharing
 - Personal information: None collected by the developer
-- Capabilities explanation: `runFullTrust` is required for user-directed local file management, previews and FFmpeg media conversion
+- Capabilities explanation (491 characters): `RFM is a file-mngment & media-process util. It needs runFullTrust to access files & folders selected on local drives; scan trees; perform requested copy, move, rename & Bin ops; launch bundled media tools for metadata, thumbnails, previews & conversions; & open files in Windows Explorer. Its only to carry out actions initd by the user. The app doesnt instal drivers, require admini privileges, run hidden background services, collect analytics, or upload filenames, metadata, imgs or vids.`
 
 ## Certification notes
 

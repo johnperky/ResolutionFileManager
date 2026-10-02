@@ -30,4 +30,10 @@ if ($LASTEXITCODE -ne 0) { throw "PyInstaller failed with exit code $LASTEXITCOD
 $OutputPath = Join-Path $ProjectDirectory "dist\ResolutionFileManager.exe"
 if (-not (Test-Path -LiteralPath $OutputPath)) { throw "Build output was not created: $OutputPath" }
 if ((Get-Item -LiteralPath $OutputPath).LastWriteTime -lt $BuildStarted) { throw "Build output was not refreshed: $OutputPath" }
+$Version = (Get-Content -LiteralPath (Join-Path $ProjectDirectory "VERSION.txt") -Raw).Trim()
+if ($Version -notmatch '^\d+\.\d+\.\d+$') { throw "VERSION.txt does not contain a valid release version." }
+$DesktopPath = [Environment]::GetFolderPath("Desktop")
+$DesktopExe = Join-Path $DesktopPath "ResolutionFileManager-$Version.exe"
+Copy-Item -LiteralPath $OutputPath -Destination $DesktopExe -Force
 Write-Host "Build complete: $OutputPath"
+Write-Host "Desktop copy: $DesktopExe"

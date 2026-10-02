@@ -1,8 +1,10 @@
 # Resolution File Manager project
 
-Current version: 12.2.2
+Current version: 12.3.0
 
 Public Windows release preparation for 12.2.2 adds GPL-3.0-or-later licensing, third-party and FFmpeg notices, a local-only privacy statement, changelog and release notes, clean Git exclusions, WinGet/Chocolatey submission guidance, and a reproducible `build_windows_release.ps1` pipeline. The pipeline creates a portable Windows x64 folder and ZIP, a source ZIP, a standalone versioned executable, bundled licence texts, and SHA-256 checksums under `release-output/12.2.2`. The in-app Help Centre documents official-release verification, licensing, privacy, and the unsigned-build SmartScreen caveat. Linux distribution is deliberately outside this release preparation.
+
+Version 12.3.0 ports Rapid Clips' tick-box selection model into both Resolution File Manager panes. Details uses a dedicated ☐/☑ tree column whose heading toggles all shown files; thumbnail cards have their own visible checkbox plus a ✓ All shown control. Ticks form a persistent per-pane action group across preview changes, sorting, filters, paging, and virtual thumbnail recycling, while ordinary highlighting remains independent for browsing and preview. All established file, metadata, analysis, drag, and conversion commands prefer ticks and fall back to highlighted rows when no ticks exist. Counters and Clear ticks controls are always visible, hidden filtered ticks remain included, navigation clears only the affected pane, rescans prune missing paths, and ticks are not written to workspace settings. Version 12.2.2 remains the executable rollback.
 
 Cross-platform Python/Tkinter dual-pane media file manager for Windows and Linux. It scans videos and JPEG images, including optional subfolders; displays and sorts resolution, megapixels, file size, modified date, and video duration; filters media types and resolutions; copies or moves selections while preserving recursive folder structure; and provides an inline image/video preview with silent autoplay, looping, Play/Pause, and timeline scrubbing.
 

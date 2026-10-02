@@ -42,7 +42,7 @@ except ImportError:  # Keep source startup graceful if optional dependencies are
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".webm", ".m4v", ".wmv", ".mpg", ".mpeg"}
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", ".gif", ".heic", ".heif", ".avif"}
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | IMAGE_EXTENSIONS
-APP_VERSION = "12.2.2"
+APP_VERSION = "12.3.0"
 SUPPORT_URL = "https://buymeacoffee.com/johnperky"
 CODEC_LABELS = {"h264": "H.264", "hevc": "H.265 / HEVC", "av1": "AV1", "vp9": "VP9", "vp8": "VP8", "mpeg4": "MPEG-4", "mpeg2video": "MPEG-2", "mjpeg": "Motion JPEG"}
 COLOR_LABEL_HEX = {"Red": "#d9534f", "Yellow": "#d8aa18", "Green": "#4b9b57", "Blue": "#4a90e2", "Purple": "#8c62b8"}
@@ -662,6 +662,10 @@ class FilePane(ttk.Frame):
         self.current_path = start_path
         self.metadata_cache = metadata_cache
         self.items: dict[str, MediaItem] = {}
+        # Ticks are an action queue, independent from the ordinary highlight
+        # used for browsing and previewing.  They intentionally are not saved
+        # in workspaces and are cleared when this pane navigates elsewhere.
+        self.checked_paths: set[str] = set()
         self.results: queue.Queue = queue.Queue()
         self.scan_generation = 0
         self.scan_active = False
@@ -812,7 +816,9 @@ class FilePane(ttk.Frame):
         if isinstance(saved_order, list):
             compatible_order = [column for column in saved_order if column in columns]
             compatible_order.extend(column for column in columns if column not in compatible_order)
-        self.tree = ttk.Treeview(details_frame, columns=columns, displaycolumns=compatible_order, show="headings", selectmode="extended")
+        self.tree = ttk.Treeview(details_frame, columns=columns, displaycolumns=compatible_order, show="tree headings", selectmode="extended")
+        self.tree.heading("#0", text="✓", command=self.toggle_all_checks)
+        self.tree.column("#0", width=38, minwidth=38, stretch=False, anchor="center")
         for column in columns:
             self.tree.heading(column, text=labels[column], command=lambda c=column: self.set_sort(c))
             try: saved_width = int(saved_widths.get(column, widths[column]))
@@ -833,6 +839,7 @@ class FilePane(ttk.Frame):
         self.tree.bind("<<TreeviewSelect>>", self.selection_changed)
         self.tree.bind("<Double-1>", self.open_on_double_click)
         self.tree.bind("<F2>", lambda _event: self.rename_selected())
+        self.tree.bind("<space>", self.toggle_focused_check)
         # Registering the entire Treeview for left-button DnD steals native
         # header resize/reorder drags after a few pixels. Details view uses
         # right-button file dragging; thumbnail cards can safely use left drag.
@@ -852,6 +859,7 @@ class FilePane(ttk.Frame):
         self.thumbnail_sort_button.configure(menu=self.thumbnail_sort_menu)
         self.build_sort_menu()
         self.thumbnail_sort_button.pack(side="left", padx=(0, 6))
+        ttk.Button(thumbnail_navigation, text="✓ All shown", command=self.toggle_all_checks).pack(side="left", padx=(0, 6))
         mode_box = ttk.Combobox(thumbnail_navigation, textvariable=self.thumbnail_browse_mode_var, state="readonly", width=10, values=("Continuous", "Paged"))
         mode_box.pack(side="left", padx=(0, 6)); mode_box.bind("<<ComboboxSelected>>", self.change_thumbnail_browse_mode)
         self.thumbnail_previous_button = ttk.Button(thumbnail_navigation, text="←", width=4, command=lambda: self.change_thumbnail_page(-1))
@@ -903,6 +911,7 @@ class FilePane(ttk.Frame):
         self.context_menu.add_command(label="Move to Recycle Bin", command=lambda: self.app.delete_selected(self))
         self.context_menu.add_separator()
         self.context_menu.add_command(label="Select all shown", command=self.select_matching)
+        self.context_menu.add_command(label="Clear ticks", command=self.clear_checks)
         self.context_menu.add_command(label="Find duplicates", command=lambda: self.app.find_duplicates(self))
         self.context_menu.add_command(label="Compare selected", command=lambda: self.app.compare_selected(self))
         self.context_menu.add_separator()
@@ -938,6 +947,9 @@ class FilePane(ttk.Frame):
         status_row.pack(fill="x", pady=(5, 0))
         self.status_var = tk.StringVar(value="Ready")
         ttk.Label(status_row, textvariable=self.status_var).pack(side="left", fill="x", expand=True)
+        self.checked_label_var = tk.StringVar(value="0 ticked")
+        ttk.Label(status_row, textvariable=self.checked_label_var).pack(side="left", padx=(6, 4))
+        ttk.Button(status_row, text="Clear ticks", command=self.clear_checks).pack(side="left", padx=(0, 5))
         self.scan_progress = ttk.Progressbar(status_row, mode="determinate", length=110)
         self.scan_progress.pack(side="left", padx=5)
         self.cancel_button = ttk.Button(status_row, text="Cancel", width=7, command=self.cancel_scan, state="disabled")
@@ -1084,7 +1096,10 @@ class FilePane(ttk.Frame):
             messagebox.showerror("Folder not found", f"This folder does not exist:\n{path}")
             self.path_var.set(str(self.current_path))
             return False
-        if record_history and path != self.current_path:
+        path_changed = path != self.current_path
+        if path_changed:
+            self.clear_checks()
+        if record_history and path_changed:
             self.navigation_history = self.navigation_history[:self.navigation_index + 1]
             self.navigation_history.append(path)
             self.navigation_index = len(self.navigation_history) - 1
@@ -1236,7 +1251,7 @@ class FilePane(ttk.Frame):
 
     def scan(self, preferred_path: Path | str | None = None):
         if preferred_path is None:
-            selected = self.selected_items()
+            selected = self.highlighted_items()
             preferred_path = selected[0].path if selected else None
         self.preferred_selection_path = str(preferred_path) if preferred_path is not None else None
         self.scan_cancel_event.set()
@@ -1330,6 +1345,8 @@ class FilePane(ttk.Frame):
                     self.scan_progress.configure(maximum=max(1, value), value=0)
                 elif kind == "done":
                     self.scan_active = False
+                    self.checked_paths.intersection_update(self.items)
+                    self.update_checked_label()
                     failures = sum(bool(item.error) for item in self.items.values())
                     suffix = f" · {failures} unreadable" if failures else ""
                     if self.live_updates_var.get() and self.live_observer:
@@ -1489,9 +1506,10 @@ class FilePane(ttk.Frame):
                 display_name = item.path.name
             modified = datetime.fromtimestamp(item.modified).strftime("%Y-%m-%d %H:%M")
             stars = "★" * item.rating if item.rating else "—"
-            self.tree.insert("", "end", iid=iid, values=(display_name, item.codec, item.resolution, human_duration(item.duration), human_size(item.size), rate, fps, modified, item.path.suffix[1:].upper(), bitrate, audio, item.hdr, megapixels, item.color_label or "—", ", ".join(item.tags) or "—", stars), tags=(str(item.path),))
-            self.path_to_iid[str(item.path)] = iid
-            if str(item.path) in selected_paths:
+            path_key = str(item.path)
+            self.tree.insert("", "end", iid=iid, text="☑" if path_key in self.checked_paths else "☐", values=(display_name, item.codec, item.resolution, human_duration(item.duration), human_size(item.size), rate, fps, modified, item.path.suffix[1:].upper(), bitrate, audio, item.hdr, megapixels, item.color_label or "—", ", ".join(item.tags) or "—", stars), tags=(path_key,))
+            self.path_to_iid[path_key] = iid
+            if path_key in selected_paths:
                 self.tree.selection_add(iid)
             index += 1
         if index < len(values):
@@ -1565,6 +1583,10 @@ class FilePane(ttk.Frame):
         card.pack_propagate(False)
         image_label = tk.Label(card, text="Loading…", anchor="center", bg="#202020", fg="#dddddd")
         image_label.pack(fill="both", expand=True, padx=3, pady=(3, 1))
+        check_label = tk.Label(card, text="☑" if str(item.path) in self.checked_paths else "☐", font=("Segoe UI Symbol", 13, "bold"), bg="#202020", fg="#ffffff", cursor="hand2")
+        check_label.place(x=7, y=6)
+        check_label.bind("<Button-1>", lambda _event, value=item: self.toggle_check(str(value.path)))
+        card.check_label = check_label
         display_name = compact_relative_path(item.path.relative_to(self.current_path), max(20, int(cell_width / 7))) if self.recursive_var.get() else item.path.name
         label_details = ""
         if item.rating: label_details += "\n" + "★" * item.rating
@@ -1739,7 +1761,7 @@ class FilePane(ttk.Frame):
         enabled = self.preview_enabled_var.get()
         self.preview_toggle_callback(self, enabled)
         if enabled:
-            selected = self.selected_items()
+            selected = self.highlighted_items()
             if selected: self.preview_callback(selected[0])
 
     def toggle_inspector(self):
@@ -1747,7 +1769,7 @@ class FilePane(ttk.Frame):
         if self.inspector_enabled_var.get() and not shown:
             # Capture the selection before changing the paned-window layout.
             # On Windows that layout change can briefly disturb focus/events.
-            selected = self.selected_items()
+            selected = self.highlighted_items()
             item = selected[0] if selected else None
             self.content_panes.add(self.inspector_frame, weight=0)
             self.after_idle(lambda: self.content_panes.sashpos(1, max(300, self.content_panes.winfo_width() - 280)) if len(self.content_panes.panes()) > 2 else None)
@@ -1758,7 +1780,7 @@ class FilePane(ttk.Frame):
 
     def update_inspector(self, item: MediaItem | None = None):
         if item is None:
-            selected = self.selected_items()
+            selected = self.highlighted_items()
             item = selected[0] if selected else None
         if not item:
             self.inspector_name_var.set("No file selected")
@@ -1789,7 +1811,7 @@ class FilePane(ttk.Frame):
         self.inspector_details_var.set("\n".join(details))
 
     def copy_inspector_path(self):
-        selected = self.selected_items()
+        selected = self.highlighted_items()
         if not selected: return
         self.clipboard_clear(); self.clipboard_append(str(selected[0].path)); self.update()
 
@@ -1798,18 +1820,21 @@ class FilePane(ttk.Frame):
         for path, card in self.thumbnail_cells.items():
             item = self.items.get(path)
             card.configure(highlightbackground="#4a90e2" if path in selected else COLOR_LABEL_HEX.get(item.color_label if item else "", "#d0d0d0"))
+            check_label = getattr(card, "check_label", None)
+            if check_label and check_label.winfo_exists():
+                check_label.configure(text="☑" if path in self.checked_paths else "☐")
 
     def thumbnail_opened(self, item: MediaItem):
         iid = self.path_to_iid.get(str(item.path))
         if iid: self.tree.selection_set(iid); self.tree.focus(iid)
-        self.open_selected()
+        self.open_items([item])
 
     def show_thumbnail_context(self, event, item: MediaItem):
         iid = self.path_to_iid.get(str(item.path))
         if not iid: return
         if iid not in self.tree.selection(): self.tree.selection_set(iid); self.tree.focus(iid)
         self.update_thumbnail_selection()
-        count = len(self.tree.selection()); suffix = f" ({count} files)" if count > 1 else ""
+        count = len(self.selected_items()); suffix = f" ({count} files)" if count > 1 else ""
         self.context_menu.entryconfigure(0, label=f"Copy to other pane{suffix}"); self.context_menu.entryconfigure(1, label=f"Move to other pane{suffix}")
         self.context_menu.tk_popup(event.x_root, event.y_root)
 
@@ -1866,7 +1891,10 @@ class FilePane(ttk.Frame):
     def remove_known_paths(self, paths) -> bool:
         changed = False
         for path in paths:
-            changed = self.items.pop(str(Path(path)), None) is not None or changed
+            path_key = str(Path(path))
+            changed = self.items.pop(path_key, None) is not None or changed
+            self.checked_paths.discard(path_key)
+        self.update_checked_label()
         return changed
 
     def continuation_path_after_removal(self, paths) -> Path | None:
@@ -1961,13 +1989,65 @@ class FilePane(ttk.Frame):
         else:
             messagebox.showinfo("No size outliers", f"No visible video is at least {multiplier:g}× the average data rate of {average:.1f} MB/min.")
 
-    def selected_items(self) -> list[MediaItem]:
+    def update_checked_label(self):
+        if hasattr(self, "checked_label_var"):
+            self.checked_label_var.set(f"{len(self.checked_paths)} ticked")
+
+    def refresh_checks(self):
+        for iid in self.tree.get_children():
+            tags = self.tree.item(iid, "tags")
+            path_key = tags[0] if tags else ""
+            self.tree.item(iid, text="☑" if path_key in self.checked_paths else "☐")
+        self.update_checked_label()
+        self.update_thumbnail_selection()
+
+    def clear_checks(self):
+        self.checked_paths.clear()
+        self.refresh_checks()
+
+    def toggle_all_checks(self):
+        visible = {str(item.path) for item in self.visible_items}
+        if visible and visible.issubset(self.checked_paths):
+            self.checked_paths.difference_update(visible)
+        else:
+            self.checked_paths.update(visible)
+        self.refresh_checks()
+
+    def toggle_focused_check(self, _event=None):
+        iid = self.tree.focus()
+        tags = self.tree.item(iid, "tags") if iid else ()
+        if tags:
+            self.toggle_check(tags[0])
+        return "break"
+
+    def toggle_check(self, path_key: str):
+        if path_key in self.checked_paths:
+            self.checked_paths.remove(path_key)
+        elif path_key in self.items:
+            self.checked_paths.add(path_key)
+        iid = self.path_to_iid.get(path_key)
+        if iid and self.tree.exists(iid):
+            self.tree.item(iid, text="☑" if path_key in self.checked_paths else "☐")
+        self.update_checked_label()
+        self.update_thumbnail_selection()
+        return "break"
+
+    def highlighted_items(self) -> list[MediaItem]:
         result = []
         for iid in self.tree.selection():
             tags = self.tree.item(iid, "tags")
             if tags and tags[0] in self.items:
                 result.append(self.items[tags[0]])
         return result
+
+    def selected_items(self) -> list[MediaItem]:
+        """Return the ticked action group, or highlighted rows when it is empty."""
+        if not self.checked_paths:
+            return self.highlighted_items()
+        visible_order = [item for item in self.visible_items if str(item.path) in self.checked_paths]
+        visible_keys = {str(item.path) for item in visible_order}
+        hidden = [self.items[path] for path in sorted(self.checked_paths, key=str.casefold) if path in self.items and path not in visible_keys]
+        return visible_order + hidden
 
     def start_file_drag(self, event):
         local_x = event.x_root - self.tree.winfo_rootx()
@@ -2026,7 +2106,10 @@ class FilePane(ttk.Frame):
         selected = self.selected_items()
         if not selected:
             return
-        for item in selected[:10]:
+        self.open_items(selected)
+
+    def open_items(self, items: list[MediaItem]):
+        for item in items[:10]:
             try:
                 if sys.platform == "win32":
                     os.startfile(item.path)  # type: ignore[attr-defined]
@@ -2040,7 +2123,8 @@ class FilePane(ttk.Frame):
 
     def open_on_double_click(self, event):
         if self.tree.identify_region(event.x, event.y) == "cell":
-            self.open_selected()
+            highlighted = self.highlighted_items()
+            if highlighted: self.open_items([highlighted[0]])
 
     def reveal_selected(self):
         selected = self.selected_items()
@@ -2090,6 +2174,9 @@ class FilePane(ttk.Frame):
         try:
             item.path.rename(target)
             self.metadata_cache.move_user_data(item.path, target)
+            old_key, new_key = str(item.path), str(target)
+            if old_key in self.checked_paths:
+                self.checked_paths.discard(old_key); self.checked_paths.add(new_key)
             self.app.record_undo("rename", [(target, item.path)])
             self.scan(target)
         except OSError as exc:
@@ -2101,6 +2188,12 @@ class FilePane(ttk.Frame):
         self.column_drag_moved = False
         self.resizing_column = None
         region = self.tree.identify_region(event.x, event.y)
+        if region == "tree" and self.tree.identify_column(event.x) == "#0":
+            iid = self.tree.identify_row(event.y)
+            tags = self.tree.item(iid, "tags") if iid else ()
+            if tags:
+                self.tree.focus_set(); self.tree.focus(iid); self.toggle_check(tags[0])
+            return "break"
         if region == "separator":
             displayed_index = int(self.tree.identify_column(event.x)[1:]) - 1
             order = list(self.tree["displaycolumns"])
@@ -2199,7 +2292,7 @@ class FilePane(ttk.Frame):
     def selection_changed(self, _event=None):
         self.active_callback(self)
         self.update_thumbnail_selection()
-        selected = self.selected_items()
+        selected = self.highlighted_items()
         self.update_inspector(selected[0] if selected else None)
         if selected and self.preview_enabled_var.get():
             focused = self.tree.focus()
@@ -2223,7 +2316,7 @@ class FilePane(ttk.Frame):
         if row not in self.tree.selection():
             self.tree.selection_set(row)
             self.tree.focus(row)
-        count = len(self.tree.selection())
+        count = len(self.selected_items())
         suffix = f" ({count} files)" if count > 1 else ""
         self.context_menu.entryconfigure(0, label=f"Copy to other pane{suffix}")
         self.context_menu.entryconfigure(1, label=f"Move to other pane{suffix}")
@@ -3321,6 +3414,10 @@ class MediaSorterApp(TkinterDnD.Tk):
             pairs = [(plan["item"].path, plan["target"]) for plan in changed]; success, error = self.perform_batch_rename(pairs)
             if not success: messagebox.showerror("Batch rename failed", f"No completed rename was kept where rollback was possible.\n\n{error}", parent=window); pane.scan(); return
             for old, new in pairs: self.metadata_cache.move_user_data(old, new)
+            for old, new in pairs:
+                old_key, new_key = str(old), str(new)
+                if old_key in pane.checked_paths:
+                    pane.checked_paths.discard(old_key); pane.checked_paths.add(new_key)
             self.record_undo("batch_rename", [(new, old) for old, new in pairs]); window.destroy(); pane.scan(pairs[0][1]); messagebox.showinfo("Batch rename complete", f"Renamed {len(pairs)} file(s). Use Ctrl+Z to undo the batch.")
         buttons = ttk.Frame(window, padding=10); buttons.pack(fill="x")
         ttk.Button(buttons, text="Refresh preview", command=refresh_preview).pack(side="left")
@@ -5108,7 +5205,9 @@ Ordinary image thumbnails are decoded efficiently in-process with Pillow; FFmpeg
 Generated thumbnails remain available after the program closes, so revisiting an unchanged file normally uses its cached image immediately. Tools > Cache and scanning controls the maximum thumbnail-cache size as a percentage of the operating-system drive; the default is 1%. Reused thumbnails are marked as recent, and when the limit is exceeded the least recently used entries are removed first. The limit can be set from 0.1% to 10% and enforced immediately. Clear thumbnails reports the current count and size before confirmation, then removes only generated thumbnails—not original media or cached technical metadata. Clear all cache removes both thumbnails and metadata.
 
 SELECTING AND PREVIEWING
-Each browser pane has its own large ▶ Preview toggle, which defaults off to avoid unnecessary decoding. Enable Preview on the left, right, or both sides to open separate aligned preview panels below the browsers. The button has a distinct selected state so enabled previews are easy to spot. When both toggles are off, the preview area collapses completely and the browsers use the full window height. Click a file to preview it on its own side. Hold Ctrl while clicking thumbnails or detail rows to select several files. Select matching chooses every currently displayed result. Double-click opens a file in its normal application.
+Each pane has an independent tick-box action group. Click the ☐/☑ box beside a Details row or on a thumbnail card, or focus a Details row and press Space. Ticks remain collected while you highlight and preview other files, sort the pane, or change filters. The counter below the browser shows the total, including ticked files currently hidden by a filter. Click the ✓ Details heading or ✓ All shown in Thumbnails to tick every currently displayed file; repeat it to untick that displayed group. Clear ticks removes the complete group. Copy, move, drag, delete, rename, rating, tag, comparison, integrity and conversion actions use all ticked files when any exist; with no ticks they use the ordinary highlighted rows. Changing that pane to a different folder or drive clears its ticks, and ticks are not saved after closing the application.
+
+Each browser pane has its own large ▶ Preview toggle, which defaults off to avoid unnecessary decoding. Enable Preview on the left, right, or both sides to open separate aligned preview panels below the browsers. The button has a distinct selected state so enabled previews are easy to spot. When both toggles are off, the preview area collapses completely and the browsers use the full window height. Click a file to preview it on its own side. Highlighting is independent from ticks, so you can inspect or preview another file without losing the action group. Hold Ctrl while clicking thumbnails or detail rows to highlight several files. Select matching highlights every currently displayed result. Double-click opens the highlighted file in its normal application.
 
 Each pane also has a large independent ⓘ Info toggle. It defaults off and adds a collapsible inspector on that pane's right edge. If a file is already selected, enabling Info displays it immediately—there is no need to select it again. The inspector follows later selection in Details, Continuous thumbnails, and Paged thumbnails and shows the full path, dimensions, size, dates, duration, codec, frame rate, bitrate, pixel format, HDR, audio, unreadable reason, rating, colour, and tags. Copy path places the full path on the clipboard; Open and Reveal use the normal file actions. Turning Info off removes the inspector completely, and saved workspaces remember its state.
 

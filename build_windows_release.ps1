@@ -8,6 +8,8 @@ Set-Location -LiteralPath $ProjectDirectory
 
 $Version = (Get-Content -LiteralPath (Join-Path $ProjectDirectory "VERSION.txt") -Raw).Trim()
 if ($Version -notmatch '^\d+\.\d+\.\d+$') { throw "VERSION.txt does not contain a valid release version." }
+$ReleaseNotes = Join-Path $ProjectDirectory "RELEASE_NOTES_$Version.md"
+if (-not (Test-Path -LiteralPath $ReleaseNotes)) { throw "Release notes were not found: $ReleaseNotes" }
 
 if (-not $SkipBuild) {
     & (Join-Path $ProjectDirectory "build_windows.ps1")
@@ -35,7 +37,7 @@ New-Item -ItemType Directory -Path (Join-Path $PortableDirectory "licenses\pytho
 
 $VersionedExe = Join-Path $PortableDirectory "ResolutionFileManager-$Version.exe"
 Copy-Item -LiteralPath $BuiltExe -Destination $VersionedExe
-Copy-Item -LiteralPath README.md, WINDOWS_RELEASE.md, RELEASE_NOTES_12.2.2.md, LICENSE, THIRD_PARTY_NOTICES.md, PRIVACY.md, CHANGELOG.md -Destination $PortableDirectory
+Copy-Item -LiteralPath README.md, WINDOWS_RELEASE.md, $ReleaseNotes, LICENSE, THIRD_PARTY_NOTICES.md, PRIVACY.md, CHANGELOG.md -Destination $PortableDirectory
 
 $FfmpegPath = (Get-Command ffmpeg -ErrorAction Stop).Source
 $FfmpegRoot = Split-Path (Split-Path $FfmpegPath -Parent) -Parent
@@ -58,8 +60,17 @@ foreach ($Entry in $PythonLicenceMap.GetEnumerator()) {
 
 $SourceDirectory = Join-Path $ReleaseRoot "ResolutionFileManager-$Version-Source"
 New-Item -ItemType Directory -Path $SourceDirectory -Force | Out-Null
-Copy-Item -LiteralPath media_sorter.py, app_icon.ico, app_icon.png, requirements.txt, build_windows.ps1, build_windows_release.ps1, run_windows.bat, VERSION.txt, README.md, PROJECT_CONTEXT.md, LICENSE, THIRD_PARTY_NOTICES.md, PRIVACY.md, CHANGELOG.md, WINDOWS_RELEASE.md, RELEASE_NOTES_12.2.2.md, .gitignore -Destination $SourceDirectory
+Copy-Item -LiteralPath media_sorter.py, app_icon.ico, app_icon.png, requirements.txt, build_windows.ps1, build_windows_release.ps1, run_windows.bat, VERSION.txt, README.md, PROJECT_CONTEXT.md, LICENSE, THIRD_PARTY_NOTICES.md, PRIVACY.md, CHANGELOG.md, WINDOWS_RELEASE.md, $ReleaseNotes, .gitignore -Destination $SourceDirectory
 Copy-Item -LiteralPath packaging -Destination $SourceDirectory -Recurse
+$GeneratedPackagingDirectories = @(
+    (Join-Path $SourceDirectory "packaging\microsoft-store\output"),
+    (Join-Path $SourceDirectory "packaging\microsoft-store\stage")
+)
+foreach ($GeneratedDirectory in $GeneratedPackagingDirectories) {
+    if (Test-Path -LiteralPath $GeneratedDirectory) {
+        Remove-Item -LiteralPath $GeneratedDirectory -Recurse -Force
+    }
+}
 
 $PortableZip = Join-Path $ReleaseRoot "$PortableName.zip"
 $SourceZip = Join-Path $ReleaseRoot "ResolutionFileManager-$Version-Source.zip"
