@@ -33,7 +33,7 @@ if ((Get-Item -LiteralPath $OutputPath).LastWriteTime -lt $BuildStarted) { throw
 $Version = (Get-Content -LiteralPath (Join-Path $ProjectDirectory "VERSION.txt") -Raw).Trim()
 if ($Version -notmatch '^\d+\.\d+\.\d+$') { throw "VERSION.txt does not contain a valid release version." }
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
-$DesktopExe = Join-Path $DesktopPath "ResolutionFileManager-$Version.exe"
+$DesktopExe = Join-Path $DesktopPath "ResolutionFileManager-v$Version.exe"
 Copy-Item -LiteralPath $OutputPath -Destination $DesktopExe -Force
 Write-Host "Build complete: $OutputPath"
 Write-Host "Desktop copy: $DesktopExe"

@@ -57,6 +57,7 @@ class TranslatorTests(unittest.TestCase):
                     {"id": "privacy", "title": "Privacy", "body": "Local only."},
                 ]
             },
+            "literals": {"Error": "Error", "Could not open {name}: {error}": "Could not open {name}: {error}"},
         }
         (self.root / "en.json").write_text(json.dumps(self.english), encoding="utf-8")
 
@@ -117,6 +118,50 @@ class TranslatorTests(unittest.TestCase):
             ("Schnellstart", "Hier beginnen."),
             ("Privacy", "Local only."),
         ])
+
+    def test_localized_choices_display_translations_but_preserve_internal_values(self):
+        from localization import LocalizedChoices, Translator
+
+        self.english["strings"].update({
+            "view.details": "Details",
+            "view.thumbnails": "Thumbnails",
+            "size.medium": "Medium",
+        })
+        (self.root / "en.json").write_text(json.dumps(self.english), encoding="utf-8")
+        self.write_pack("de", {
+            "meta": {"language": "Deutsch"},
+            "strings": {
+                "view.details": "Details",
+                "view.thumbnails": "Miniaturen",
+                "size.medium": "Mittel",
+            },
+            "help": {"chapters": []},
+        })
+        translator = Translator(self.root, "de")
+        choices = LocalizedChoices(translator, {
+            "Details": "view.details",
+            "Thumbnails": "view.thumbnails",
+            "Medium": "size.medium",
+        })
+
+        self.assertEqual(choices.labels, ("Details", "Miniaturen", "Mittel"))
+        self.assertEqual(choices.label("Thumbnails"), "Miniaturen")
+        self.assertEqual(choices.internal("Miniaturen"), "Thumbnails")
+        self.assertEqual(choices.internal("unknown"), "unknown")
+
+    def test_ui_text_translates_exact_and_dynamic_dialog_messages(self):
+        from localization import Translator
+
+        self.write_pack("de", {
+            "meta": {"language": "Deutsch"},
+            "strings": {},
+            "literals": {"Error": "Fehler", "Could not open {name}: {error}": "{name} konnte nicht geöffnet werden: {error}"},
+            "help": {"chapters": []},
+        })
+        translator = Translator(self.root, "de")
+        self.assertEqual(translator.ui_text("Error"), "Fehler")
+        self.assertEqual(translator.ui_text("Could not open film.avi: access denied"), "film.avi konnte nicht geöffnet werden: access denied")
+        self.assertEqual(translator.ui_text("Uncatalogued text"), "Uncatalogued text")
 
 
 if __name__ == "__main__":

@@ -32,7 +32,7 @@ from tkinter import filedialog, messagebox, simpledialog, ttk
 from tkinterdnd2 import ASK, COPY, DND_FILES, LINK, MOVE, REFUSE_DROP, TkinterDnD
 from send2trash import send2trash
 from PIL import ExifTags, Image, ImageDraw, ImageFont, ImageOps, ImageSequence
-from localization import SUPPORTED_LANGUAGES, Translator, select_language
+from localization import LocalizedChoices, SUPPORTED_LANGUAGES, Translator, select_language
 from reminder_policy import apply_reminder_choice, eligible_reminder, normalise_state as normalise_reminder_state, record_successful_launch, set_reminder_enabled
 try:
     from watchdog.events import FileSystemEventHandler
@@ -45,7 +45,28 @@ except ImportError:  # Keep source startup graceful if optional dependencies are
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".webm", ".m4v", ".wmv", ".mpg", ".mpeg"}
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", ".gif", ".heic", ".heif", ".avif"}
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | IMAGE_EXTENSIONS
-APP_VERSION = "12.3.0"
+APP_VERSION = "12.4.0"
+
+
+_tk_messagebox = messagebox
+
+
+class LocalizedMessageBox:
+    """Translate every standard dialog title and message before it is shown."""
+
+    def __init__(self, module, translator: Translator):
+        self.module = module
+        self.translator = translator
+
+    def __getattr__(self, name):
+        original = getattr(self.module, name)
+        if name not in {"showinfo", "showwarning", "showerror", "askyesno", "askokcancel", "askyesnocancel"}:
+            return original
+
+        def translated(title, message, *args, **kwargs):
+            return original(self.translator.ui_text(title), self.translator.ui_text(message), *args, **kwargs)
+
+        return translated
 SUPPORT_URL = "https://buymeacoffee.com/johnperky"
 STORE_PRODUCT_ID = "9NZL6GF5JSJK"
 CODEC_LABELS = {"h264": "H.264", "hevc": "H.265 / HEVC", "av1": "AV1", "vp9": "VP9", "vp8": "VP8", "mpeg4": "MPEG-4", "mpeg2video": "MPEG-2", "mjpeg": "Motion JPEG"}
@@ -721,15 +742,33 @@ class FilePane(ttk.Frame):
         self.advanced_filters = dict(saved_state.get("advanced_filters", {}))
         self.view_mode_var = tk.StringVar(value=saved_state.get("view_mode", "Details"))
         self.thumbnail_size_var = tk.StringVar(value=saved_state.get("thumbnail_size", "Medium"))
+        self.view_mode_choices = LocalizedChoices(self.app.translator, {
+            "Details": "view.details", "Thumbnails": "view.thumbnails",
+        })
+        self.thumbnail_size_choices = LocalizedChoices(self.app.translator, {
+            "Small": "size.small", "Medium": "size.medium", "Large": "size.large",
+        })
+        self.thumbnail_browse_choices = LocalizedChoices(self.app.translator, {
+            "Continuous": "browse.continuous", "Paged": "browse.paged",
+        })
+        self.outlier_choices = LocalizedChoices(self.app.translator, {
+            "Moderate (1.4×)": "outlier.moderate", "Large (1.75×)": "outlier.large",
+            "Extreme (2.5×)": "outlier.extreme",
+        })
+        self.view_mode_display_var = tk.StringVar(value=self.view_mode_choices.label(self.view_mode_var.get()))
+        self.thumbnail_size_display_var = tk.StringVar(value=self.thumbnail_size_choices.label(self.thumbnail_size_var.get()))
+        self.outlier_display_var = tk.StringVar(value=self.outlier_choices.label(self.outlier_sensitivity_var.get()))
         self.thumbnail_generation = 0
         self.thumbnail_page = 0
         self.thumbnail_page_size_mode = str(saved_state.get("thumbnail_page_size_mode", "Auto"))
         if self.thumbnail_page_size_mode not in {"Auto", "200", "500", "1000"}: self.thumbnail_page_size_mode = "Auto"
         self.thumbnail_page_size = 500
         self.thumbnail_page_size_var = tk.StringVar(value=self.thumbnail_page_size_mode)
+        self.thumbnail_page_size_display_var = tk.StringVar(value=self.tr("browse.auto") if self.thumbnail_page_size_mode == "Auto" else self.thumbnail_page_size_mode)
         self.thumbnail_browse_mode = str(saved_state.get("thumbnail_browse_mode", "Continuous"))
         if self.thumbnail_browse_mode not in {"Continuous", "Paged"}: self.thumbnail_browse_mode = "Continuous"
         self.thumbnail_browse_mode_var = tk.StringVar(value=self.thumbnail_browse_mode)
+        self.thumbnail_browse_display_var = tk.StringVar(value=self.thumbnail_browse_choices.label(self.thumbnail_browse_mode))
         self.thumbnail_filter_signature = None
         self.thumbnail_layout_job: str | None = None
         self.thumbnail_columns = 0
@@ -757,12 +796,12 @@ class FilePane(ttk.Frame):
         heading = ttk.Frame(self)
         heading.pack(fill="x", pady=(0, 6))
         ttk.Label(heading, text=title, style="PaneTitle.TLabel").pack(side="left")
-        view_box = ttk.Combobox(heading, textvariable=self.view_mode_var, state="readonly", width=11, values=("Details", "Thumbnails"))
+        view_box = ttk.Combobox(heading, textvariable=self.view_mode_display_var, state="readonly", width=14, values=self.view_mode_choices.labels)
         view_box.pack(side="left", padx=8)
-        view_box.bind("<<ComboboxSelected>>", lambda _event: self.set_view_mode(self.view_mode_var.get()))
-        size_box = ttk.Combobox(heading, textvariable=self.thumbnail_size_var, state="readonly", width=8, values=("Small", "Medium", "Large"))
+        view_box.bind("<<ComboboxSelected>>", lambda _event: self.set_view_mode(self.view_mode_choices.internal(self.view_mode_display_var.get())))
+        size_box = ttk.Combobox(heading, textvariable=self.thumbnail_size_display_var, state="readonly", width=10, values=self.thumbnail_size_choices.labels)
         size_box.pack(side="left")
-        size_box.bind("<<ComboboxSelected>>", lambda _event: self.render_thumbnail_grid())
+        size_box.bind("<<ComboboxSelected>>", self.change_thumbnail_size)
         ttk.Checkbutton(heading, text=f"▶ {self.tr('pane.preview')}", style="PaneToggle.Toolbutton", variable=self.preview_enabled_var, command=self.toggle_preview).pack(side="left", padx=(10, 0))
         ttk.Checkbutton(heading, text=f"ⓘ {self.tr('pane.info')}", style="PaneToggle.Toolbutton", variable=self.inspector_enabled_var, command=self.toggle_inspector).pack(side="left", padx=(7, 0))
         ttk.Button(heading, text=self.tr("pane.browse"), command=self.choose_folder).pack(side="right")
@@ -793,7 +832,7 @@ class FilePane(ttk.Frame):
         ttk.Checkbutton(type_row, text=self.tr("pane.videos"), variable=self.show_videos_var, command=self.refresh_view).pack(side="left", padx=(5, 0))
         ttk.Checkbutton(type_row, text=self.tr("pane.images"), variable=self.show_images_var, command=self.refresh_view).pack(side="left", padx=(5, 0))
         ttk.Checkbutton(type_row, text=self.tr("pane.subfolders"), variable=self.recursive_var, command=self.recursive_changed).pack(side="right")
-        ttk.Checkbutton(type_row, text="Live", variable=self.live_updates_var, command=self.toggle_live_updates).pack(side="right", padx=(0, 8))
+        ttk.Checkbutton(type_row, text=self.tr("pane.live"), variable=self.live_updates_var, command=self.toggle_live_updates).pack(side="right", padx=(0, 8))
         ttk.Label(type_row, text=self.tr("pane.find")).pack(side="left", padx=(12, 2))
         search_entry = ttk.Entry(type_row, textvariable=self.search_var, width=18)
         search_entry.pack(side="left")
@@ -803,14 +842,16 @@ class FilePane(ttk.Frame):
         filter_row.pack(fill="x", pady=(0, 6))
         ttk.Label(filter_row, text=self.tr("pane.resolution")).pack(side="left")
         self.filter_var = tk.StringVar(value=saved_state.get("resolution_filter", "All"))
-        self.filter_box = ttk.Combobox(filter_row, textvariable=self.filter_var, state="readonly", width=18)
+        self.filter_display_var = tk.StringVar(value=self.tr("pane.all") if self.filter_var.get() == "All" else self.filter_var.get())
+        self.filter_box = ttk.Combobox(filter_row, textvariable=self.filter_display_var, state="readonly", width=18)
         self.filter_box.pack(side="left", padx=5)
-        self.filter_box.bind("<<ComboboxSelected>>", lambda _event: self.refresh_view())
+        self.filter_box.bind("<<ComboboxSelected>>", self.change_resolution_filter)
         ttk.Button(filter_row, text=self.tr("pane.select_matching"), command=self.select_matching).pack(side="left")
         ttk.Button(filter_row, text=self.tr("pane.more_filters"), command=self.edit_advanced_filters).pack(side="left", padx=(5, 0))
         ttk.Button(filter_row, text=self.tr("pane.outliers"), command=self.select_size_outliers).pack(side="left", padx=5)
-        self.outlier_box = ttk.Combobox(filter_row, textvariable=self.outlier_sensitivity_var, state="readonly", width=15, values=("Moderate (1.4×)", "Large (1.75×)", "Extreme (2.5×)"))
+        self.outlier_box = ttk.Combobox(filter_row, textvariable=self.outlier_display_var, state="readonly", width=18, values=self.outlier_choices.labels)
         self.outlier_box.pack(side="left")
+        self.outlier_box.bind("<<ComboboxSelected>>", self.change_outlier_sensitivity)
 
         columns = ("name", "codec", "resolution", "duration", "size", "rate", "fps", "modified", "type", "bitrate", "audio", "hdr", "pixels", "color", "tags", "rating")
         content = ttk.Panedwindow(self, orient="horizontal")
@@ -831,7 +872,7 @@ class FilePane(ttk.Frame):
         self.media_frame = media_frame
         details_frame = ttk.Frame(media_frame)
         self.details_frame = details_frame
-        labels = {"name": "Name / relative path", "rating": "Rating", "color": "Label", "tags": "Tags", "type": "Type", "codec": "Codec", "resolution": "Resolution", "pixels": "Megapixels", "size": "File size", "rate": "MB/min", "bitrate": "Bitrate", "fps": "FPS", "audio": "Audio", "hdr": "HDR", "modified": "Date modified", "duration": "Video length"}
+        labels = {column: self.tr(f"column.{column}") for column in columns}
         widths = {"name": 230, "rating": 75, "color": 75, "tags": 170, "type": 60, "codec": 105, "resolution": 110, "pixels": 85, "size": 85, "rate": 75, "bitrate": 90, "fps": 60, "audio": 110, "hdr": 55, "modified": 135, "duration": 90}
         saved_widths = saved_state.get("column_widths", {})
         if isinstance(saved_widths, dict):
@@ -889,19 +930,19 @@ class FilePane(ttk.Frame):
         self.thumbnail_sort_button.configure(menu=self.thumbnail_sort_menu)
         self.build_sort_menu()
         self.thumbnail_sort_button.pack(side="left", padx=(0, 6))
-        ttk.Button(thumbnail_navigation, text="✓ All shown", command=self.toggle_all_checks).pack(side="left", padx=(0, 6))
-        mode_box = ttk.Combobox(thumbnail_navigation, textvariable=self.thumbnail_browse_mode_var, state="readonly", width=10, values=("Continuous", "Paged"))
+        ttk.Button(thumbnail_navigation, text=f"✓ {self.tr('menu.select_all')}", command=self.toggle_all_checks).pack(side="left", padx=(0, 6))
+        mode_box = ttk.Combobox(thumbnail_navigation, textvariable=self.thumbnail_browse_display_var, state="readonly", width=12, values=self.thumbnail_browse_choices.labels)
         mode_box.pack(side="left", padx=(0, 6)); mode_box.bind("<<ComboboxSelected>>", self.change_thumbnail_browse_mode)
         self.thumbnail_previous_button = ttk.Button(thumbnail_navigation, text="←", width=4, command=lambda: self.change_thumbnail_page(-1))
         self.thumbnail_previous_button.pack(side="left")
         self.thumbnail_next_button = ttk.Button(thumbnail_navigation, text="→", width=4, command=lambda: self.change_thumbnail_page(1))
         self.thumbnail_next_button.pack(side="left", padx=(4, 0))
-        self.thumbnail_page_var = tk.StringVar(value="Page 1 of 1")
+        self.thumbnail_page_var = tk.StringVar(value=self.tr("browse.page_summary", page=1, pages=1, count=0, automatic=""))
         ttk.Label(thumbnail_navigation, textvariable=self.thumbnail_page_var).pack(side="left", padx=8)
-        page_size_box = ttk.Combobox(thumbnail_navigation, textvariable=self.thumbnail_page_size_var, state="readonly", width=6, values=("Auto", "200", "500", "1000"))
+        page_size_box = ttk.Combobox(thumbnail_navigation, textvariable=self.thumbnail_page_size_display_var, state="readonly", width=9, values=(self.tr("browse.auto"), "200", "500", "1000"))
         self.thumbnail_page_size_box = page_size_box
         page_size_box.pack(side="right")
-        ttk.Label(thumbnail_navigation, text="Per page:").pack(side="right", padx=(8, 3))
+        ttk.Label(thumbnail_navigation, text=self.tr("browse.per_page")).pack(side="right", padx=(8, 3))
         page_size_box.bind("<<ComboboxSelected>>", self.change_thumbnail_page_size)
         self.thumbnail_canvas = tk.Canvas(self.thumbnail_frame, highlightthickness=0)
         thumbnail_scroll = ttk.Scrollbar(self.thumbnail_frame, orient="vertical", command=self.thumbnail_yview)
@@ -921,68 +962,68 @@ class FilePane(ttk.Frame):
         self.thumbnail_canvas.dnd_bind("<<Drop:DND_Files>>", self.drop_files_in_current_folder)
 
         self.context_menu = tk.Menu(self, tearoff=False)
-        self.context_menu.add_command(label="Copy to other pane", command=lambda: self.transfer_callback(self, False))
-        self.context_menu.add_command(label="Move to other pane", command=lambda: self.transfer_callback(self, True))
+        self.context_menu.add_command(label=self.tr("context.copy_other"), command=lambda: self.transfer_callback(self, False))
+        self.context_menu.add_command(label=self.tr("context.move_other"), command=lambda: self.transfer_callback(self, True))
         self.context_menu.add_separator()
-        self.context_menu.add_command(label="Open", command=self.open_selected)
-        self.context_menu.add_command(label="Show in File Explorer", command=self.reveal_selected)
-        self.context_menu.add_command(label="Rename…", command=self.rename_selected)
+        self.context_menu.add_command(label=self.tr("context.open"), command=self.open_selected)
+        self.context_menu.add_command(label=self.tr("context.reveal"), command=self.reveal_selected)
+        self.context_menu.add_command(label=self.tr("context.rename"), command=self.rename_selected)
         rating_menu = tk.Menu(self.context_menu, tearoff=False)
-        rating_menu.add_command(label="Clear rating", command=lambda: self.assign_rating(0))
+        rating_menu.add_command(label=self.tr("context.clear_rating"), command=lambda: self.assign_rating(0))
         rating_menu.add_separator()
         for rating in range(1, 6): rating_menu.add_command(label="★" * rating, command=lambda value=rating: self.assign_rating(value))
-        self.context_menu.add_cascade(label="Rating", menu=rating_menu)
+        self.context_menu.add_cascade(label=self.tr("context.rating"), menu=rating_menu)
         color_menu = tk.Menu(self.context_menu, tearoff=False)
-        color_menu.add_command(label="None", command=lambda: self.assign_color_label(""))
+        color_menu.add_command(label=self.tr("context.none"), command=lambda: self.assign_color_label(""))
         color_menu.add_separator()
-        for color in ("Red", "Yellow", "Green", "Blue", "Purple"): color_menu.add_command(label=color, command=lambda value=color: self.assign_color_label(value))
-        self.context_menu.add_cascade(label="Colour label", menu=color_menu)
-        self.context_menu.add_command(label="Edit tags…", command=self.edit_tags)
-        self.context_menu.add_command(label="Move to Recycle Bin", command=lambda: self.app.delete_selected(self))
+        for color in ("Red", "Yellow", "Green", "Blue", "Purple"): color_menu.add_command(label=self.tr(f"context.{color.lower()}"), command=lambda value=color: self.assign_color_label(value))
+        self.context_menu.add_cascade(label=self.tr("context.colour"), menu=color_menu)
+        self.context_menu.add_command(label=self.tr("context.edit_tags"), command=self.edit_tags)
+        self.context_menu.add_command(label=self.tr("context.recycle"), command=lambda: self.app.delete_selected(self))
         self.context_menu.add_separator()
-        self.context_menu.add_command(label="Select all shown", command=self.select_matching)
-        self.context_menu.add_command(label="Clear ticks", command=self.clear_checks)
-        self.context_menu.add_command(label="Find duplicates", command=lambda: self.app.find_duplicates(self))
-        self.context_menu.add_command(label="Compare selected", command=lambda: self.app.compare_selected(self))
+        self.context_menu.add_command(label=self.tr("context.select_all"), command=self.select_matching)
+        self.context_menu.add_command(label=self.tr("context.clear_ticks"), command=self.clear_checks)
+        self.context_menu.add_command(label=self.tr("context.find_duplicates"), command=lambda: self.app.find_duplicates(self))
+        self.context_menu.add_command(label=self.tr("context.compare"), command=lambda: self.app.compare_selected(self))
         self.context_menu.add_separator()
-        self.context_menu.add_command(label="Refresh this pane", command=self.refresh_browser)
+        self.context_menu.add_command(label=self.tr("context.refresh_pane"), command=self.refresh_browser)
         self.background_menu = tk.Menu(self, tearoff=False)
-        self.background_menu.add_command(label="Refresh this pane", command=self.refresh_browser)
-        self.background_menu.add_command(label="Refresh both panes", command=self.app.refresh)
+        self.background_menu.add_command(label=self.tr("context.refresh_pane"), command=self.refresh_browser)
+        self.background_menu.add_command(label=self.tr("context.refresh_both"), command=self.app.refresh)
         self.folder_context_menu = tk.Menu(self, tearoff=False)
-        self.folder_context_menu.add_command(label="Open folder", command=self.open_folder_context)
-        self.folder_context_menu.add_command(label="Refresh this pane", command=self.refresh_browser)
+        self.folder_context_menu.add_command(label=self.tr("context.open_folder"), command=self.open_folder_context)
+        self.folder_context_menu.add_command(label=self.tr("context.refresh_pane"), command=self.refresh_browser)
         self.folder_context_path: Path | None = None
         self.header_menu = tk.Menu(self, tearoff=False)
-        self.header_menu.add_command(label="Configure columns…", command=self.configure_columns)
-        self.header_menu.add_command(label="Reset column widths", command=self.reset_column_widths)
+        self.header_menu.add_command(label=self.tr("context.configure_columns"), command=self.configure_columns)
+        self.header_menu.add_command(label=self.tr("context.reset_columns"), command=self.reset_column_widths)
         content.add(folder_frame, weight=0)
         content.add(media_frame, weight=1)
 
         self.inspector_frame = ttk.Frame(content, padding=8)
-        ttk.Label(self.inspector_frame, text="Inspector", style="PaneTitle.TLabel").pack(anchor="w", pady=(0, 6))
-        self.inspector_name_var = tk.StringVar(value="No file selected")
+        ttk.Label(self.inspector_frame, text=self.tr("inspector.title"), style="PaneTitle.TLabel").pack(anchor="w", pady=(0, 6))
+        self.inspector_name_var = tk.StringVar(value=self.tr("inspector.no_file"))
         ttk.Label(self.inspector_frame, textvariable=self.inspector_name_var, font=("Segoe UI", 10, "bold"), wraplength=260, justify="left").pack(fill="x", anchor="w")
         self.inspector_path_var = tk.StringVar(value="")
         ttk.Label(self.inspector_frame, textvariable=self.inspector_path_var, wraplength=260, justify="left").pack(fill="x", anchor="w", pady=(3, 8))
-        self.inspector_details_var = tk.StringVar(value="Select a media file to see its details.")
+        self.inspector_details_var = tk.StringVar(value=self.tr("inspector.select_file"))
         ttk.Label(self.inspector_frame, textvariable=self.inspector_details_var, wraplength=260, justify="left").pack(fill="both", expand=True, anchor="nw")
         inspector_buttons = ttk.Frame(self.inspector_frame); inspector_buttons.pack(fill="x", pady=(8, 0))
-        ttk.Button(inspector_buttons, text="Copy path", command=self.copy_inspector_path).pack(side="left")
-        ttk.Button(inspector_buttons, text="Open", command=self.open_selected).pack(side="left", padx=4)
-        ttk.Button(inspector_buttons, text="Reveal", command=self.reveal_selected).pack(side="left")
+        ttk.Button(inspector_buttons, text=self.tr("inspector.copy_path"), command=self.copy_inspector_path).pack(side="left")
+        ttk.Button(inspector_buttons, text=self.tr("inspector.open"), command=self.open_selected).pack(side="left", padx=4)
+        ttk.Button(inspector_buttons, text=self.tr("inspector.reveal"), command=self.reveal_selected).pack(side="left")
         if self.inspector_enabled_var.get(): content.add(self.inspector_frame, weight=0)
 
         status_row = ttk.Frame(self)
         status_row.pack(fill="x", pady=(5, 0))
-        self.status_var = tk.StringVar(value="Ready")
+        self.status_var = tk.StringVar(value=self.tr("status.ready"))
         ttk.Label(status_row, textvariable=self.status_var).pack(side="left", fill="x", expand=True)
         self.checked_label_var = tk.StringVar(value="0 ticked")
         ttk.Label(status_row, textvariable=self.checked_label_var).pack(side="left", padx=(6, 4))
-        ttk.Button(status_row, text="Clear ticks", command=self.clear_checks).pack(side="left", padx=(0, 5))
+        ttk.Button(status_row, text=self.tr("pane.clear_ticks"), command=self.clear_checks).pack(side="left", padx=(0, 5))
         self.scan_progress = ttk.Progressbar(status_row, mode="determinate", length=110)
         self.scan_progress.pack(side="left", padx=5)
-        self.cancel_button = ttk.Button(status_row, text="Cancel", width=7, command=self.cancel_scan, state="disabled")
+        self.cancel_button = ttk.Button(status_row, text=self.tr("pane.cancel"), width=7, command=self.cancel_scan, state="disabled")
         self.cancel_button.pack(side="right")
         self.after(100, self.poll_results)
         self.build_folder_roots()
@@ -1022,7 +1063,7 @@ class FilePane(ttk.Frame):
         # an expansion arrow. On large disks that turns one tree expansion into
         # hundreds of extra directory reads. Empty folders simply clear the
         # placeholder when opened.
-        self.folder_tree.insert(node, "end", text="Loading…", tags=("__placeholder__",))
+        self.folder_tree.insert(node, "end", text=self.tr("status.loading"), tags=("__placeholder__",))
 
     def expand_folder(self, _event=None):
         node = self.folder_tree.focus()
@@ -1183,6 +1224,7 @@ class FilePane(ttk.Frame):
         self.show_videos_var.set(bool(state.get("show_videos", True)))
         self.show_images_var.set(bool(state.get("show_images", True)))
         self.filter_var.set(state.get("resolution_filter", "All"))
+        self.filter_display_var.set(self.tr("pane.all") if self.filter_var.get() == "All" else self.filter_var.get())
         self.search_var.set(state.get("search", ""))
         self.advanced_filters = dict(state.get("advanced_filters", {}))
         self.sort_column = state.get("sort_column", "name")
@@ -1190,13 +1232,18 @@ class FilePane(ttk.Frame):
         self.update_sort_label()
         self.view_mode_var.set(state.get("view_mode", "Details"))
         self.thumbnail_size_var.set(state.get("thumbnail_size", "Medium"))
+        self.view_mode_display_var.set(self.view_mode_choices.label(self.view_mode_var.get()))
+        self.thumbnail_size_display_var.set(self.thumbnail_size_choices.label(self.thumbnail_size_var.get()))
         self.thumbnail_page_size_mode = str(state.get("thumbnail_page_size_mode", "Auto"))
         if self.thumbnail_page_size_mode not in {"Auto", "200", "500", "1000"}: self.thumbnail_page_size_mode = "Auto"
         self.thumbnail_page_size_var.set(self.thumbnail_page_size_mode)
+        self.thumbnail_page_size_display_var.set(self.tr("browse.auto") if self.thumbnail_page_size_mode == "Auto" else self.thumbnail_page_size_mode)
         self.thumbnail_browse_mode = str(state.get("thumbnail_browse_mode", "Continuous"))
         if self.thumbnail_browse_mode not in {"Continuous", "Paged"}: self.thumbnail_browse_mode = "Continuous"
         self.thumbnail_browse_mode_var.set(self.thumbnail_browse_mode)
+        self.thumbnail_browse_display_var.set(self.thumbnail_browse_choices.label(self.thumbnail_browse_mode))
         self.outlier_sensitivity_var.set(state.get("outlier_sensitivity", "Large (1.75×)"))
+        self.outlier_display_var.set(self.outlier_choices.label(self.outlier_sensitivity_var.get()))
         columns = list(self.tree["columns"])
         order = [column for column in state.get("column_order", []) if column in columns]
         order.extend(column for column in columns if column not in order)
@@ -1217,7 +1264,7 @@ class FilePane(ttk.Frame):
             self.start_live_monitoring(show_error=True)
         else:
             self.stop_live_monitoring()
-            self.status_var.set("Live updates off")
+            self.status_var.set(self.tr("status.live_off"))
 
     def restart_live_monitoring(self):
         self.stop_live_monitoring()
@@ -1238,7 +1285,7 @@ class FilePane(ttk.Frame):
             observer.schedule(handler, str(self.current_path), recursive=self.recursive_var.get())
             observer.start()
             self.live_observer = observer
-            self.status_var.set("Live updates on")
+            self.status_var.set(self.tr("status.live_on"))
             return True
         except (OSError, RuntimeError) as exc:
             self.live_updates_var.set(False)
@@ -1295,10 +1342,10 @@ class FilePane(ttk.Frame):
         self.thumbnail_page = 0
         self.tree.delete(*self.tree.get_children())
         if self.view_mode_var.get() == "Thumbnails": self.render_thumbnail_grid()
-        self.status_var.set("Scanning media…")
+        self.status_var.set(self.tr("pane.scanning"))
         self.scan_progress.configure(value=0, maximum=1)
         self.cancel_button.configure(state="normal")
-        self.filter_box["values"] = ("All",)
+        self.filter_box["values"] = (self.tr("pane.all"),)
 
         scan_path = self.current_path
         recursive = self.recursive_var.get()
@@ -1350,7 +1397,7 @@ class FilePane(ttk.Frame):
     def cancel_scan(self):
         self.scan_cancel_event.set()
         self.cancel_button.configure(state="disabled")
-        self.status_var.set("Cancelling scan…")
+        self.status_var.set(self.tr("status.cancelling"))
 
     def poll_results(self):
         view_dirty = False
@@ -1369,7 +1416,7 @@ class FilePane(ttk.Frame):
                     item, index, total, cached_count = value
                     self.items[str(item.path)] = item
                     self.scan_progress.configure(value=index)
-                    self.status_var.set(f"Scanning {index} of {total}… · {cached_count} from cache")
+                    self.status_var.set(self.tr("status.scanning_progress", current=index, total=total, cached=cached_count))
                     view_dirty = True
                 elif kind == "total":
                     self.scan_progress.configure(maximum=max(1, value), value=0)
@@ -1378,11 +1425,11 @@ class FilePane(ttk.Frame):
                     self.checked_paths.intersection_update(self.items)
                     self.update_checked_label()
                     failures = sum(bool(item.error) for item in self.items.values())
-                    suffix = f" · {failures} unreadable" if failures else ""
+                    suffix = f" · {self.tr('status.unreadable', count=failures)}" if failures else ""
                     if self.live_updates_var.get() and self.live_observer:
-                        suffix += " · Live"
-                    scope = "including subfolders" if self.recursive_var.get() else "in this folder"
-                    self.status_var.set(f"{value} media file(s) {scope}{suffix}")
+                        suffix += f" · {self.tr('pane.live')}"
+                    status_key = "status.scan_complete_subfolders" if self.recursive_var.get() else "status.scan_complete_folder"
+                    self.status_var.set(self.tr(status_key, count=value) + suffix)
                     self.scan_progress.configure(value=value, maximum=max(1, value))
                     self.cancel_button.configure(state="disabled")
                     threading.Thread(target=self.metadata_cache.save, daemon=True).start()
@@ -1390,15 +1437,15 @@ class FilePane(ttk.Frame):
                     force_refresh = True
                 elif kind == "cancelled":
                     self.scan_active = False
-                    self.status_var.set(f"Scan cancelled after {value} file(s)")
+                    self.status_var.set(self.tr("status.scan_cancelled", count=value))
                     self.cancel_button.configure(state="disabled")
                     view_dirty = True
                     force_refresh = True
                 elif kind == "file_error":
-                    self.status_var.set(f"Skipped file: {value}")
+                    self.status_var.set(self.tr("status.skipped_file", error=value))
                 else:
                     self.scan_active = False
-                    self.status_var.set(f"Could not scan: {value}")
+                    self.status_var.set(self.tr("status.scan_failed", error=value))
                     self.cancel_button.configure(state="disabled")
                     force_refresh = True
         except queue.Empty:
@@ -1413,45 +1460,45 @@ class FilePane(ttk.Frame):
         self.after(10 if not self.results.empty() else 100, self.poll_results)
 
     SORT_FIELDS = (
-        ("Name", "name"), ("Date modified", "modified"), ("File size", "size"),
-        ("Length", "duration"), ("Codec", "codec"), ("Resolution", "resolution"),
-        ("Type", "type"), ("Bitrate", "bitrate"), ("Frame rate", "fps"),
-        ("Rating", "rating"),
+        ("sort.name", "name"), ("sort.modified", "modified"), ("sort.size", "size"),
+        ("sort.duration", "duration"), ("sort.codec", "codec"), ("sort.resolution", "resolution"),
+        ("sort.type", "type"), ("sort.bitrate", "bitrate"), ("sort.fps", "fps"),
+        ("sort.rating", "rating"),
     )
 
     def build_sort_menu(self):
         """Build an explicit-direction sort menu for thumbnail browsing."""
         self.thumbnail_sort_menu.delete(0, "end")
-        for label, column in self.SORT_FIELDS:
+        for label_key, column in self.SORT_FIELDS:
             submenu = tk.Menu(self.thumbnail_sort_menu, tearoff=False)
             if column == "name":
-                ascending, descending = "A to Z", "Z to A"
+                ascending, descending = self.tr("sort.a_z"), self.tr("sort.z_a")
             elif column == "modified":
-                ascending, descending = "Oldest first", "Newest first"
+                ascending, descending = self.tr("sort.oldest"), self.tr("sort.newest")
             elif column in {"size", "resolution", "bitrate", "fps", "rating"}:
-                ascending, descending = "Smallest first", "Largest first"
+                ascending, descending = self.tr("sort.smallest"), self.tr("sort.largest")
             elif column == "duration":
-                ascending, descending = "Shortest first", "Longest first"
+                ascending, descending = self.tr("sort.shortest"), self.tr("sort.longest")
             else:
-                ascending, descending = "Ascending", "Descending"
+                ascending, descending = self.tr("sort.ascending"), self.tr("sort.descending")
             submenu.add_command(label=ascending, command=lambda value=column: self.set_sort_direction(value, False))
             submenu.add_command(label=descending, command=lambda value=column: self.set_sort_direction(value, True))
-            self.thumbnail_sort_menu.add_cascade(label=label, menu=submenu)
+            self.thumbnail_sort_menu.add_cascade(label=self.tr(label_key), menu=submenu)
 
     def update_sort_label(self):
-        labels = {column: label for label, column in self.SORT_FIELDS}
+        labels = {column: self.tr(label_key) for label_key, column in self.SORT_FIELDS}
         field = labels.get(self.sort_column, self.sort_column.title())
         if self.sort_column == "name":
             direction = "Z–A" if self.sort_reverse else "A–Z"
         elif self.sort_column == "modified":
-            direction = "Newest" if self.sort_reverse else "Oldest"
+            direction = self.tr("sort.newest") if self.sort_reverse else self.tr("sort.oldest")
         elif self.sort_column == "duration":
-            direction = "Longest" if self.sort_reverse else "Shortest"
+            direction = self.tr("sort.longest") if self.sort_reverse else self.tr("sort.shortest")
         elif self.sort_column in {"size", "resolution", "bitrate", "fps", "rating"}:
-            direction = "Largest" if self.sort_reverse else "Smallest"
+            direction = self.tr("sort.largest") if self.sort_reverse else self.tr("sort.smallest")
         else:
-            direction = "Descending" if self.sort_reverse else "Ascending"
-        self.sort_label_var.set(f"Sort: {field} · {direction} ▾")
+            direction = self.tr("sort.descending") if self.sort_reverse else self.tr("sort.ascending")
+        self.sort_label_var.set(f"{self.tr('sort.sort')}: {field} · {direction} ▾")
 
     def set_sort_direction(self, column: str, reverse: bool):
         if column not in dict(self.SORT_FIELDS).values():
@@ -1493,7 +1540,8 @@ class FilePane(ttk.Frame):
         values = [item for item in values if self.matches_advanced_filters(item)]
         resolution_filter = self.filter_var.get()
         resolutions = sorted({item.resolution for item in values}, key=lambda x: (x == "Unknown", x))
-        self.filter_box["values"] = ("All", *resolutions)
+        self.filter_box["values"] = (self.tr("pane.all"), *resolutions)
+        self.filter_display_var.set(self.tr("pane.all") if resolution_filter == "All" else resolution_filter)
         if resolution_filter != "All":
             values = [item for item in values if item.resolution == resolution_filter]
         key_map = {
@@ -1556,11 +1604,28 @@ class FilePane(ttk.Frame):
     def set_view_mode(self, mode: str):
         mode = mode if mode in {"Details", "Thumbnails"} else "Details"
         self.view_mode_var.set(mode)
+        self.view_mode_display_var.set(self.view_mode_choices.label(mode))
         self.details_frame.pack_forget(); self.thumbnail_frame.pack_forget()
         if mode == "Thumbnails":
             self.thumbnail_frame.pack(fill="both", expand=True); self.render_thumbnail_grid()
         else:
             self.thumbnail_generation += 1; self.details_frame.pack(fill="both", expand=True)
+
+    def change_resolution_filter(self, _event=None):
+        value = self.filter_display_var.get()
+        self.filter_var.set("All" if value == self.tr("pane.all") else value)
+        self.refresh_view()
+
+    def change_outlier_sensitivity(self, _event=None):
+        value = self.outlier_choices.internal(self.outlier_display_var.get())
+        self.outlier_sensitivity_var.set(value if value in {"Moderate (1.4×)", "Large (1.75×)", "Extreme (2.5×)"} else "Large (1.75×)")
+        self.outlier_display_var.set(self.outlier_choices.label(self.outlier_sensitivity_var.get()))
+
+    def change_thumbnail_size(self, _event=None):
+        size = self.thumbnail_size_choices.internal(self.thumbnail_size_display_var.get())
+        self.thumbnail_size_var.set(size if size in {"Small", "Medium", "Large"} else "Medium")
+        self.thumbnail_size_display_var.set(self.thumbnail_size_choices.label(self.thumbnail_size_var.get()))
+        self.render_thumbnail_grid()
 
     def render_thumbnail_grid(self):
         if self.view_mode_var.get() != "Thumbnails": return
@@ -1591,8 +1656,8 @@ class FilePane(ttk.Frame):
         self.thumbnail_page = max(0, min(self.thumbnail_page, page_count - 1))
         page_start = self.thumbnail_page * self.thumbnail_page_size
         page_items = self.visible_items[page_start:page_start + self.thumbnail_page_size]
-        automatic = f" · Auto {self.thumbnail_page_size}/page" if self.thumbnail_page_size_mode == "Auto" else ""
-        self.thumbnail_page_var.set(f"Page {self.thumbnail_page + 1} of {page_count} · {len(self.visible_items)} files{automatic}")
+        automatic = self.tr("browse.auto_suffix", count=self.thumbnail_page_size) if self.thumbnail_page_size_mode == "Auto" else ""
+        self.thumbnail_page_var.set(self.tr("browse.page_summary", page=self.thumbnail_page + 1, pages=page_count, count=len(self.visible_items), automatic=automatic))
         self.thumbnail_previous_button.configure(state="normal" if self.thumbnail_page > 0 else "disabled")
         self.thumbnail_next_button.configure(state="normal" if self.thumbnail_page < page_count - 1 else "disabled")
         selected = {self.tree.item(iid, "tags")[0] for iid in self.tree.selection() if self.tree.item(iid, "tags")}
@@ -1611,7 +1676,7 @@ class FilePane(ttk.Frame):
         border = "#4a90e2" if selected else COLOR_LABEL_HEX.get(item.color_label, "#d0d0d0")
         card = tk.Frame(parent, bd=1, relief="solid", highlightthickness=2, highlightbackground=border, width=cell_width - 10, height=height + 78)
         card.pack_propagate(False)
-        image_label = tk.Label(card, text="Loading…", anchor="center", bg="#202020", fg="#dddddd")
+        image_label = tk.Label(card, text=self.tr("status.loading"), anchor="center", bg="#202020", fg="#dddddd")
         image_label.pack(fill="both", expand=True, padx=3, pady=(3, 1))
         check_label = tk.Label(card, text="☑" if str(item.path) in self.checked_paths else "☐", font=("Segoe UI Symbol", 13, "bold"), bg="#202020", fg="#ffffff", cursor="hand2")
         check_label.place(x=7, y=6)
@@ -1648,7 +1713,7 @@ class FilePane(ttk.Frame):
         self.thumbnail_previous_button.configure(state="disabled")
         self.thumbnail_next_button.configure(state="disabled")
         self.thumbnail_page_size_box.configure(state="disabled")
-        self.thumbnail_page_var.set(f"{len(self.visible_items)} files · Continuous · visible cards only")
+        self.thumbnail_page_var.set(self.tr("browse.continuous_summary", count=len(self.visible_items), mode=self.tr("browse.continuous")))
         self.virtual_row_height = height + 88
         self.virtual_cell_width = cell_width
         self.virtual_dimensions = (width, height)
@@ -1719,7 +1784,10 @@ class FilePane(ttk.Frame):
         return "break"
 
     def change_thumbnail_browse_mode(self, _event=None):
-        self.thumbnail_browse_mode = self.thumbnail_browse_mode_var.get() if self.thumbnail_browse_mode_var.get() in {"Continuous", "Paged"} else "Continuous"
+        chosen = self.thumbnail_browse_choices.internal(self.thumbnail_browse_display_var.get())
+        self.thumbnail_browse_mode = chosen if chosen in {"Continuous", "Paged"} else "Continuous"
+        self.thumbnail_browse_mode_var.set(self.thumbnail_browse_mode)
+        self.thumbnail_browse_display_var.set(self.thumbnail_browse_choices.label(self.thumbnail_browse_mode))
         self.thumbnail_page = 0
         self.render_thumbnail_grid()
 
@@ -1728,8 +1796,11 @@ class FilePane(ttk.Frame):
         self.render_thumbnail_grid()
 
     def change_thumbnail_page_size(self, _event=None):
-        requested = self.thumbnail_page_size_var.get()
+        displayed = self.thumbnail_page_size_display_var.get()
+        requested = "Auto" if displayed == self.tr("browse.auto") else displayed
         self.thumbnail_page_size_mode = requested if requested in {"Auto", "200", "500", "1000"} else "Auto"
+        self.thumbnail_page_size_var.set(self.thumbnail_page_size_mode)
+        self.thumbnail_page_size_display_var.set(self.tr("browse.auto") if self.thumbnail_page_size_mode == "Auto" else self.thumbnail_page_size_mode)
         self.thumbnail_page = 0
         self.render_thumbnail_grid()
 
@@ -1813,9 +1884,9 @@ class FilePane(ttk.Frame):
             selected = self.highlighted_items()
             item = selected[0] if selected else None
         if not item:
-            self.inspector_name_var.set("No file selected")
+            self.inspector_name_var.set(self.tr("inspector.no_file"))
             self.inspector_path_var.set("")
-            self.inspector_details_var.set("Select a media file to see its details.")
+            self.inspector_details_var.set(self.tr("inspector.select_file"))
             return
         self.inspector_name_var.set(item.path.name)
         self.inspector_path_var.set(str(item.path))
@@ -2347,15 +2418,16 @@ class FilePane(ttk.Frame):
             self.tree.selection_set(row)
             self.tree.focus(row)
         count = len(self.selected_items())
-        suffix = f" ({count} files)" if count > 1 else ""
-        self.context_menu.entryconfigure(0, label=f"Copy to other pane{suffix}")
-        self.context_menu.entryconfigure(1, label=f"Move to other pane{suffix}")
+        suffix = self.tr("context.files_suffix", count=count) if count > 1 else ""
+        self.context_menu.entryconfigure(0, label=self.tr("context.copy_other") + suffix)
+        self.context_menu.entryconfigure(1, label=self.tr("context.move_other") + suffix)
         self.context_menu.tk_popup(event.x_root, event.y_root)
 
 
 class PreviewPane(ttk.Frame):
-    def __init__(self, master: tk.Misc, title: str = "Scratch preview", workload: WorkloadController | None = None):
+    def __init__(self, master: tk.Misc, title: str = "Scratch preview", workload: WorkloadController | None = None, tr=None):
         super().__init__(master, padding=(10, 5, 10, 10))
+        self.tr = tr or (lambda key, **_values: key)
         self.workload = workload or WorkloadController()
         self.workload_source = f"preview-{id(self)}"
         self.item: MediaItem | None = None
@@ -2382,18 +2454,18 @@ class PreviewPane(ttk.Frame):
         header = ttk.Frame(self)
         header.pack(fill="x", pady=(0, 4))
         ttk.Label(header, text=title, style="PaneTitle.TLabel").pack(side="left")
-        self.info_var = tk.StringVar(value="Preview is off")
+        self.info_var = tk.StringVar(value=self.tr("preview.is_off"))
         ttk.Label(header, textvariable=self.info_var).pack(side="left", padx=12)
 
-        self.preview_label = tk.Label(self, text="Preview off", bg="#171717", fg="#dddddd", height=12)
+        self.preview_label = tk.Label(self, text=self.tr("preview.off"), bg="#171717", fg="#dddddd", height=12)
         self.preview_label.pack(fill="both", expand=True)
         self.preview_label.bind("<Configure>", self.preview_resized)
 
         controls = ttk.Frame(self)
         controls.pack(fill="x", pady=(5, 0))
-        self.play_button = ttk.Button(controls, text="▶ Play", width=9, command=self.toggle_playback)
+        self.play_button = ttk.Button(controls, text=f"▶ {self.tr('preview.play')}", width=9, command=self.toggle_playback)
         self.play_button.pack(side="left")
-        ttk.Label(controls, text="Skim:").pack(side="left")
+        ttk.Label(controls, text=self.tr("preview.skim")).pack(side="left")
         self.position_var = tk.DoubleVar(value=0)
         self.slider = ttk.Scale(controls, from_=0, to=100, variable=self.position_var)
         self.slider.pack(side="left", fill="x", expand=True, padx=8)
@@ -2405,12 +2477,12 @@ class PreviewPane(ttk.Frame):
 
         playback_options = ttk.Frame(self)
         playback_options.pack(fill="x", pady=(4, 0))
-        ttk.Label(playback_options, text="Speed:").pack(side="left")
+        ttk.Label(playback_options, text=self.tr("preview.speed")).pack(side="left")
         for speed in (1, 2, 4, 6, 8, 16):
             button = ttk.Button(playback_options, text=f"{speed}×", width=4, command=lambda value=float(speed): self.set_playback_speed(value))
             button.pack(side="left", padx=(4, 0))
             self.speed_buttons[float(speed)] = button
-        self.mute_button = ttk.Button(playback_options, text="🔇 Muted", width=10, command=self.toggle_mute)
+        self.mute_button = ttk.Button(playback_options, text=f"🔇 {self.tr('preview.muted')}", width=12, command=self.toggle_mute)
         self.mute_button.pack(side="left", padx=(10, 0))
         self.previous_frame_button = ttk.Button(playback_options, text="|◀", width=4, command=lambda: self.step_frame(-1), state="disabled")
         self.previous_frame_button.pack(side="left", padx=(10, 0))
@@ -2426,18 +2498,18 @@ class PreviewPane(ttk.Frame):
         self.cancel_still_renders()
         self.item = None
         self.photo = None
-        self.preview_label.configure(image="", text="Preview off")
-        self.info_var.set("Preview is off")
+        self.preview_label.configure(image="", text=self.tr("preview.off"))
+        self.info_var.set(self.tr("preview.is_off"))
         self.position_var.set(0)
         self.slider.state(["disabled"])
-        self.play_button.configure(text="▶ Play", state="disabled")
+        self.play_button.configure(text=f"▶ {self.tr('preview.play')}", state="disabled")
         self.previous_frame_button.configure(state="disabled"); self.next_frame_button.configure(state="disabled"); self.export_frame_button.configure(state="disabled")
         self.time_var.set("—")
 
     def enable(self):
         if self.item is None:
-            self.preview_label.configure(image="", text="Select a file to preview")
-            self.info_var.set("Select an image or video on this side")
+            self.preview_label.configure(image="", text=self.tr("preview.select"))
+            self.info_var.set(self.tr("preview.select_side"))
 
     def show_item(self, item: MediaItem):
         if self.item and self.item.path == item.path:
@@ -2452,12 +2524,12 @@ class PreviewPane(ttk.Frame):
             details += f"  ·  {duration_text}"
         self.info_var.set(details)
         self.slider.state(["!disabled"] if item.duration else ["disabled"])
-        self.time_var.set(f"0:00 / {duration_text}" if item.duration else "Still image")
+        self.time_var.set(f"0:00 / {duration_text}" if item.duration else self.tr("preview.still"))
         if item.path.suffix.lower() in VIDEO_EXTENSIONS and item.duration:
             self.previous_frame_button.configure(state="normal"); self.next_frame_button.configure(state="normal"); self.export_frame_button.configure(state="normal")
             self.start_video(0)
         else:
-            self.play_button.configure(text="▶ Play", state="disabled")
+            self.play_button.configure(text=f"▶ {self.tr('preview.play')}", state="disabled")
             self.previous_frame_button.configure(state="disabled"); self.next_frame_button.configure(state="disabled"); self.export_frame_button.configure(state="disabled")
             self.render_still(0)
 
@@ -2537,7 +2609,7 @@ class PreviewPane(ttk.Frame):
 
     def toggle_mute(self):
         self.muted = not self.muted
-        self.mute_button.configure(text="🔇 Muted" if self.muted else "🔊 Audio")
+        self.mute_button.configure(text=f"🔇 {self.tr('preview.muted')}" if self.muted else f"🔊 {self.tr('preview.unmuted')}")
         self.stop_audio()
         if not self.muted and self.playing:
             self.start_audio(self.current_playback_seconds())
@@ -2634,13 +2706,13 @@ class PreviewPane(ttk.Frame):
         try:
             self.process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, creationflags=flags)
         except Exception as exc:
-            self.preview_label.configure(image="", text=f"Preview unavailable\n{exc}")
+            self.preview_label.configure(image="", text=f"{self.tr('preview.unavailable')}\n{exc}")
             return
         self.playing = True
         self.workload.set_interactive(self.workload_source, True)
         self.start_seconds = seconds
         self.started_at = time.monotonic()
-        self.play_button.configure(text="Ⅱ Pause", state="normal")
+        self.play_button.configure(text=f"Ⅱ {self.tr('preview.pause')}", state="normal")
         if not self.muted:
             self.start_audio(seconds)
         frame_size = width * height * 3
@@ -2734,7 +2806,7 @@ class PreviewPane(ttk.Frame):
         if process and process.stdout:
             try: process.stdout.close()
             except OSError: pass
-        self.play_button.configure(text="▶ Play")
+        self.play_button.configure(text=f"▶ {self.tr('preview.play')}")
 
     def cancel_still_renders(self):
         """Stop obsolete scrub decoders so they cannot compete with playback."""
@@ -2833,7 +2905,7 @@ class PreviewPane(ttk.Frame):
         if generation != self.generation:
             return
         if error or not output.exists():
-            self.preview_label.configure(image="", text=f"Preview unavailable\n{error or 'Could not read frame'}")
+            self.preview_label.configure(image="", text=f"{self.tr('preview.unavailable')}\n{error or self.tr('preview.read_failed')}")
             return
         try:
             self.photo = tk.PhotoImage(file=output)
@@ -2843,7 +2915,7 @@ class PreviewPane(ttk.Frame):
                 while len(self.still_cache) > 120:
                     self.still_cache.pop(next(iter(self.still_cache)))
         except tk.TclError as exc:
-            self.preview_label.configure(image="", text=f"Preview unavailable\n{exc}")
+            self.preview_label.configure(image="", text=f"{self.tr('preview.unavailable')}\n{exc}")
 
 
 class MediaSorterApp(TkinterDnD.Tk):
@@ -2856,6 +2928,8 @@ class MediaSorterApp(TkinterDnD.Tk):
         self.language = select_language(self.language_override, system_display_locale())
         self.translator = Translator(bundled_resource("locales"), self.language)
         self.tr = self.translator.text
+        global messagebox
+        messagebox = LocalizedMessageBox(_tk_messagebox, self.translator)
         self.reminder_state = normalise_reminder_state(self.settings.get("reminders", {}))
         self.reminder_shown_this_launch = False
         self.performance_profile = str(self.settings.get("performance_profile", "Balanced"))
@@ -2958,8 +3032,8 @@ class MediaSorterApp(TkinterDnD.Tk):
             workspace, orient=tk.HORIZONTAL, sashwidth=3, sashrelief=tk.FLAT,
             showhandle=False, opaqueresize=True, bg="#a0a0a0", bd=0,
         )
-        self.left_preview = PreviewPane(self.preview_area, self.tr("pane.left") + " — " + self.tr("pane.preview"), self.workload)
-        self.right_preview = PreviewPane(self.preview_area, self.tr("pane.right") + " — " + self.tr("pane.preview"), self.workload)
+        self.left_preview = PreviewPane(self.preview_area, self.tr("pane.left") + " — " + self.tr("pane.preview"), self.workload, self.tr)
+        self.right_preview = PreviewPane(self.preview_area, self.tr("pane.right") + " — " + self.tr("pane.preview"), self.workload, self.tr)
         self.left_preview.disable()
         self.right_preview.disable()
         self.preview_area.add(self.left_preview, stretch="always", minsize=300)
@@ -3016,8 +3090,8 @@ class MediaSorterApp(TkinterDnD.Tk):
         view_menu.add_command(label=self.tr("menu.details"), command=lambda: self.current_pane().set_view_mode("Details"))
         view_menu.add_command(label=self.tr("menu.thumbnails"), command=lambda: self.current_pane().set_view_mode("Thumbnails"))
         size_menu = tk.Menu(view_menu, tearoff=False)
-        for size in ("Small", "Medium", "Large"):
-            size_menu.add_command(label=size, command=lambda value=size: self.set_active_thumbnail_size(value))
+        for size, key in (("Small", "size.small"), ("Medium", "size.medium"), ("Large", "size.large")):
+            size_menu.add_command(label=self.tr(key), command=lambda value=size: self.set_active_thumbnail_size(value))
         view_menu.add_cascade(label=self.tr("menu.thumbnail_size"), menu=size_menu)
         view_menu.add_command(label=self.tr("menu.columns"), command=lambda: self.current_pane().configure_columns())
         view_menu.add_command(label=self.tr("menu.appearance"), command=self.appearance_controls)
@@ -3180,7 +3254,10 @@ class MediaSorterApp(TkinterDnD.Tk):
         messagebox.showerror(self.tr("link.error_title"), self.tr("link.error_body", url=web_url, error="; ".join(errors)), parent=self)
 
     def set_active_thumbnail_size(self, size: str):
-        pane = self.current_pane(); pane.thumbnail_size_var.set(size); pane.render_thumbnail_grid()
+        pane = self.current_pane()
+        pane.thumbnail_size_var.set(size)
+        pane.thumbnail_size_display_var.set(pane.thumbnail_size_choices.label(size))
+        pane.render_thumbnail_grid()
 
     def apply_appearance(self, theme: str, scale: int):
         theme = theme if theme in {"System", "Light", "Dark", "High contrast"} else "System"
@@ -4402,26 +4479,27 @@ class MediaSorterApp(TkinterDnD.Tk):
 
     def convert_selected_videos(self):
         pane = self.current_pane(); items = [item for item in pane.selected_items() if item.path.suffix.lower() in VIDEO_EXTENSIONS]
-        if not items: messagebox.showinfo("Convert videos", "Select one or more video files first."); return
+        if not items: messagebox.showinfo(self.tr("convert.select_first_title"), self.tr("convert.select_first")); return
         other = self.right if pane is self.left else self.left
-        window = tk.Toplevel(self); window.title("Convert selected videos"); window.geometry("1060x690"); window.transient(self)
-        settings = ttk.LabelFrame(window, text="Conversion settings", padding=10); settings.pack(fill="x", padx=10, pady=10)
-        preset_var = tk.StringVar(value="H.264 MP4 (compatible)"); crf_var = tk.IntVar(value=23); resolution_var = tk.StringVar(value=TRANSCODE_SOURCE_RESOLUTION); destination_var = tk.StringVar(value=str(other.current_path)); preserve_var = tk.BooleanVar(value=pane.recursive_var.get()); existing_var = tk.StringVar(value="Skip existing")
+        window = tk.Toplevel(self); window.title(self.tr("convert.title")); window.geometry("1060x690"); window.transient(self)
+        settings = ttk.LabelFrame(window, text=self.tr("convert.settings"), padding=10); settings.pack(fill="x", padx=10, pady=10)
+        existing_choices = LocalizedChoices(self.translator, {"Skip existing": "convert.skip_existing", "Keep both": "convert.keep_both"})
+        preset_var = tk.StringVar(value="H.264 MP4 (compatible)"); crf_var = tk.IntVar(value=23); resolution_var = tk.StringVar(value=TRANSCODE_SOURCE_RESOLUTION); destination_var = tk.StringVar(value=str(other.current_path)); preserve_var = tk.BooleanVar(value=pane.recursive_var.get()); existing_var = tk.StringVar(value=existing_choices.label("Skip existing"))
         engine_var = tk.StringVar(value=TRANSCODE_AUTOMATIC); hardware_decode_var = tk.BooleanVar(value=True); engine_status_var = tk.StringVar()
-        ttk.Label(settings, text="Preset:").grid(row=0, column=0, sticky="w", pady=4); preset_box = ttk.Combobox(settings, textvariable=preset_var, state="readonly", values=tuple(TRANSCODE_PRESETS), width=30); preset_box.grid(row=0, column=1, sticky="w", padx=5)
-        ttk.Label(settings, text="Quality (CRF):").grid(row=0, column=2, sticky="w", padx=(15, 0)); ttk.Spinbox(settings, from_=18, to=35, textvariable=crf_var, width=6).grid(row=0, column=3, sticky="w", padx=5)
-        ttk.Label(settings, text="Resolution:").grid(row=1, column=0, sticky="w", pady=4); resolution_box = ttk.Combobox(settings, textvariable=resolution_var, state="readonly", values=tuple(TRANSCODE_RESOLUTIONS), width=24); resolution_box.grid(row=1, column=1, sticky="w", padx=5)
-        ttk.Label(settings, text="1080p and 720p set the output height while preserving the aspect ratio.").grid(row=1, column=2, columnspan=2, sticky="w", padx=(15, 0))
-        ttk.Label(settings, text="Lower quality values request higher quality; hardware engines map this value to their own control. Remux ignores quality and resolution.").grid(row=2, column=1, columnspan=3, sticky="w")
-        ttk.Label(settings, text="Encoding engine:").grid(row=3, column=0, sticky="w", pady=(10, 4)); engine_box = ttk.Combobox(settings, textvariable=engine_var, state="readonly", width=24); engine_box.grid(row=3, column=1, sticky="w", padx=5, pady=(10, 4))
-        hardware_decode_check = ttk.Checkbutton(settings, text="Use hardware decoding when available", variable=hardware_decode_var)
+        ttk.Label(settings, text=self.tr("convert.preset")).grid(row=0, column=0, sticky="w", pady=4); preset_box = ttk.Combobox(settings, textvariable=preset_var, state="readonly", values=tuple(TRANSCODE_PRESETS), width=30); preset_box.grid(row=0, column=1, sticky="w", padx=5)
+        ttk.Label(settings, text=self.tr("convert.quality")).grid(row=0, column=2, sticky="w", padx=(15, 0)); ttk.Spinbox(settings, from_=18, to=35, textvariable=crf_var, width=6).grid(row=0, column=3, sticky="w", padx=5)
+        ttk.Label(settings, text=self.tr("convert.resolution")).grid(row=1, column=0, sticky="w", pady=4); resolution_box = ttk.Combobox(settings, textvariable=resolution_var, state="readonly", values=tuple(TRANSCODE_RESOLUTIONS), width=24); resolution_box.grid(row=1, column=1, sticky="w", padx=5)
+        ttk.Label(settings, text=self.tr("convert.resolution_help")).grid(row=1, column=2, columnspan=2, sticky="w", padx=(15, 0))
+        ttk.Label(settings, text=self.tr("convert.quality_help")).grid(row=2, column=1, columnspan=3, sticky="w")
+        ttk.Label(settings, text=self.tr("convert.engine")).grid(row=3, column=0, sticky="w", pady=(10, 4)); engine_box = ttk.Combobox(settings, textvariable=engine_var, state="readonly", width=24); engine_box.grid(row=3, column=1, sticky="w", padx=5, pady=(10, 4))
+        hardware_decode_check = ttk.Checkbutton(settings, text=self.tr("convert.hardware_decode"), variable=hardware_decode_var)
         hardware_decode_check.grid(row=3, column=2, columnspan=2, sticky="w", padx=(15, 0), pady=(10, 4))
         ttk.Label(settings, textvariable=engine_status_var, wraplength=780).grid(row=4, column=1, columnspan=3, sticky="w")
-        ttk.Label(settings, text="Output folder:").grid(row=5, column=0, sticky="w", pady=(10, 4)); ttk.Entry(settings, textvariable=destination_var).grid(row=5, column=1, columnspan=2, sticky="ew", padx=5, pady=(10, 4)); ttk.Button(settings, text="Browse…", command=lambda: destination_var.set(filedialog.askdirectory(parent=window, title="Choose conversion output folder") or destination_var.get())).grid(row=5, column=3, sticky="w", pady=(10, 4))
-        ttk.Checkbutton(settings, text="Preserve folders relative to the active pane", variable=preserve_var).grid(row=6, column=1, columnspan=2, sticky="w", pady=4); ttk.Combobox(settings, textvariable=existing_var, state="readonly", values=("Skip existing", "Keep both"), width=16).grid(row=6, column=3, sticky="w"); settings.columnconfigure(1, weight=1)
-        ttk.Label(window, text="Original videos are always retained. Review every output path before starting.", padding=(10, 0)).pack(fill="x")
+        ttk.Label(settings, text=self.tr("convert.output_folder")).grid(row=5, column=0, sticky="w", pady=(10, 4)); ttk.Entry(settings, textvariable=destination_var).grid(row=5, column=1, columnspan=2, sticky="ew", padx=5, pady=(10, 4)); ttk.Button(settings, text=self.tr("pane.browse"), command=lambda: destination_var.set(filedialog.askdirectory(parent=window, title=self.tr("convert.choose_output")) or destination_var.get())).grid(row=5, column=3, sticky="w", pady=(10, 4))
+        ttk.Checkbutton(settings, text=self.tr("convert.preserve_folders"), variable=preserve_var).grid(row=6, column=1, columnspan=2, sticky="w", pady=4); ttk.Combobox(settings, textvariable=existing_var, state="readonly", values=(self.tr("convert.skip_existing"), self.tr("convert.keep_both")), width=16).grid(row=6, column=3, sticky="w"); settings.columnconfigure(1, weight=1)
+        ttk.Label(window, text=self.tr("convert.originals_retained"), padding=(10, 0)).pack(fill="x")
         tree = ttk.Treeview(window, columns=("status", "source", "target", "result"), show="headings")
-        for key, label, width in (("status", "Status", 110), ("source", "Source", 340), ("target", "Output", 430), ("result", "Result", 180)): tree.heading(key, text=label); tree.column(key, width=width)
+        for key, label_key, width in (("status", "convert.status", 110), ("source", "convert.source", 340), ("target", "convert.output", 430), ("result", "convert.result", 180)): tree.heading(key, text=self.tr(label_key)); tree.column(key, width=width)
         scroll = ttk.Scrollbar(window, orient="vertical", command=tree.yview); tree.configure(yscrollcommand=scroll.set); scroll.pack(side="right", fill="y", padx=(0, 10)); tree.pack(fill="both", expand=True, padx=(10, 0), pady=8)
         progress = ttk.Progressbar(window, mode="determinate", maximum=100); progress.pack(fill="x", padx=10); status_var = tk.StringVar(); ttk.Label(window, textvariable=status_var, padding=(10, 4)).pack(fill="x")
         current = {"plans": []}; cancel_event = threading.Event(); running = {"value": False}; previous_preset = {"value": preset_var.get()}
@@ -4434,37 +4512,38 @@ class MediaSorterApp(TkinterDnD.Tk):
             if engine_var.get() not in values: engine_var.set(values[0])
             encoders, accelerators, error = self.ffmpeg_capabilities()
             if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_var.get()) is None:
-                engine_box.configure(state="disabled"); resolution_box.configure(state="disabled"); hardware_decode_check.configure(state="disabled"); engine_status_var.set("Remux copies streams directly; encoding, resizing, and hardware decoding are not used.")
+                engine_box.configure(state="disabled"); resolution_box.configure(state="disabled"); hardware_decode_check.configure(state="disabled"); engine_status_var.set(self.tr("convert.remux_help"))
             else:
                 engine_box.configure(state="readonly"); resolution_box.configure(state="readonly"); hardware_decode_check.configure(state="normal")
                 hardware = [value for value in values if value not in {TRANSCODE_AUTOMATIC, TRANSCODE_SOFTWARE}]
-                acceleration = ", ".join(sorted(accelerators)) if accelerators else "none reported"
-                engine_status_var.set(("FFmpeg hardware encoder support: " + (", ".join(hardware) if hardware else "none; Automatic will use CPU") + f" · Decode methods: {acceleration}") if not error else f"Capability check failed: {error} · Software encoding remains available")
+                acceleration = ", ".join(sorted(accelerators)) if accelerators else self.tr("convert.none_reported")
+                engine_status_var.set(self.tr("convert.capabilities", hardware=", ".join(hardware) if hardware else self.tr("convert.cpu_fallback"), decode=acceleration) if not error else self.tr("convert.capability_failed", error=error))
             refresh_preview()
         def refresh_preview():
             if running["value"]: return
             destination_text = destination_var.get().strip()
-            if not destination_text: current["plans"] = []; status_var.set("Choose an output folder."); start_button.configure(state="disabled"); return
-            plans = self.plan_video_conversions(items, preset_var.get(), Path(destination_text), pane.current_path, preserve_var.get(), existing_var.get(), resolution_var.get()); current["plans"] = plans; tree.delete(*tree.get_children())
+            if not destination_text: current["plans"] = []; status_var.set(self.tr("convert.choose_folder")); start_button.configure(state="disabled"); return
+            existing_mode = existing_choices.internal(existing_var.get())
+            plans = self.plan_video_conversions(items, preset_var.get(), Path(destination_text), pane.current_path, preserve_var.get(), existing_mode, resolution_var.get()); current["plans"] = plans; tree.delete(*tree.get_children())
             for index, plan in enumerate(plans): tree.insert("", "end", iid=str(index), values=(plan["status"], str(plan["item"].path), str(plan["target"]), ""))
             ready = sum(plan["status"] == "Ready" for plan in plans); skipped = len(plans) - ready; source_size = sum(plan["item"].size for plan in plans if plan["status"] == "Ready")
-            status_var.set(f"{ready} ready · {skipped} skipped/problem · source size {human_size(source_size)}"); start_button.configure(state="normal" if ready else "disabled")
+            status_var.set(self.tr("convert.preview_summary", ready=ready, skipped=skipped, size=human_size(source_size))); start_button.configure(state="normal" if ready else "disabled")
         def start():
             refresh_preview(); plans = [plan for plan in current["plans"] if plan["status"] == "Ready"]
             if not plans: return
             try: crf = max(18, min(35, crf_var.get()))
-            except tk.TclError: messagebox.showerror("Invalid quality", "CRF must be a whole number from 18 to 35.", parent=window); return
+            except tk.TclError: messagebox.showerror(self.tr("convert.invalid_quality"), self.tr("convert.invalid_quality_body"), parent=window); return
             preset_name = preset_var.get(); engine_name = engine_var.get(); use_hardware_decode = hardware_decode_var.get(); resolution_name = resolution_var.get()
             available_engines = self.available_transcode_engines(preset_name)
             if engine_name not in available_engines:
-                messagebox.showerror("Encoding engine unavailable", f"{engine_name} is not available for {preset_name}. Choose another engine.", parent=window); return
-            resolution_summary = resolution_name if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is not None else "Unchanged (stream copy)"
-            decode_summary = "not used (stream copy)" if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is None else ("requested with safe fallback" if use_hardware_decode else "off")
-            if not messagebox.askyesno("Start video conversion", f"Create {len(plans)} new video file(s)?\n\nEncoding: {engine_name}\nResolution: {resolution_summary}\nHardware decoding: {decode_summary}\n\nOriginal files will be retained. Cancel removes the current partial output and stops the remaining queue.", parent=window): return
+                messagebox.showerror(self.tr("convert.engine_unavailable"), self.tr("convert.engine_unavailable_body", engine=engine_name, preset=preset_name), parent=window); return
+            resolution_summary = resolution_name if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is not None else self.tr("convert.unchanged")
+            decode_summary = self.tr("convert.decode_unused") if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is None else (self.tr("convert.decode_fallback") if use_hardware_decode else self.tr("convert.off"))
+            if not messagebox.askyesno(self.tr("convert.confirm_title"), self.tr("convert.confirm_body", count=len(plans), engine=engine_name, resolution=resolution_summary, decode=decode_summary), parent=window): return
             cancel_event.clear(); running["value"] = True; start_button.configure(state="disabled"); refresh_button.configure(state="disabled"); cancel_button.configure(state="normal"); progress.configure(value=0)
             def update(index, fraction):
                 if not window.winfo_exists(): return
-                progress.configure(value=((index + fraction) / len(plans)) * 100); status_var.set(f"Converting file {index + 1} of {len(plans)} · {fraction*100:.0f}%")
+                progress.configure(value=((index + fraction) / len(plans)) * 100); status_var.set(self.tr("convert.progress", current=index + 1, total=len(plans), percent=f"{fraction*100:.0f}"))
             def worker():
                 passed = failed = cancelled = 0
                 for index, plan in enumerate(plans):
@@ -4481,11 +4560,11 @@ class MediaSorterApp(TkinterDnD.Tk):
                     if state == "Cancelled": break
                 def finished():
                     if not window.winfo_exists(): return
-                    running["value"] = False; start_button.configure(state="normal"); refresh_button.configure(state="normal"); cancel_button.configure(state="disabled"); progress.configure(value=100 if not cancel_event.is_set() else progress["value"]); status_var.set(f"Complete · {passed} created · {failed} failed · {cancelled} cancelled"); other.refresh_browser()
+                    running["value"] = False; start_button.configure(state="normal"); refresh_button.configure(state="normal"); cancel_button.configure(state="disabled"); progress.configure(value=100 if not cancel_event.is_set() else progress["value"]); status_var.set(self.tr("convert.complete", created=passed, failed=failed, cancelled=cancelled)); other.refresh_browser()
                 self.post_ui(finished)
             threading.Thread(target=worker, daemon=True).start()
         def close(): cancel_event.set(); window.destroy()
-        buttons = ttk.Frame(window, padding=10); buttons.pack(fill="x"); refresh_button = ttk.Button(buttons, text="Refresh preview", command=refresh_preview); refresh_button.pack(side="left"); start_button = ttk.Button(buttons, text="Start conversion…", command=start); start_button.pack(side="left", padx=6); cancel_button = ttk.Button(buttons, text="Cancel conversion", command=cancel_event.set, state="disabled"); cancel_button.pack(side="left"); ttk.Button(buttons, text="Close", command=close).pack(side="right"); window.protocol("WM_DELETE_WINDOW", close)
+        buttons = ttk.Frame(window, padding=10); buttons.pack(fill="x"); refresh_button = ttk.Button(buttons, text=self.tr("convert.refresh"), command=refresh_preview); refresh_button.pack(side="left"); start_button = ttk.Button(buttons, text=self.tr("convert.start"), command=start); start_button.pack(side="left", padx=6); cancel_button = ttk.Button(buttons, text=self.tr("convert.cancel"), command=cancel_event.set, state="disabled"); cancel_button.pack(side="left"); ttk.Button(buttons, text=self.tr("common.close"), command=close).pack(side="right"); window.protocol("WM_DELETE_WINDOW", close)
         preset_box.bind("<<ComboboxSelected>>", update_engine_choices); resolution_box.bind("<<ComboboxSelected>>", lambda _event: refresh_preview()); update_engine_choices()
 
     @staticmethod
@@ -4634,8 +4713,8 @@ class MediaSorterApp(TkinterDnD.Tk):
         size_groups: dict[int, list[MediaItem]] = {}
         for item in items: size_groups.setdefault(item.size, []).append(item)
         candidates = [item for group in size_groups.values() if len(group) > 1 for item in group]
-        if not candidates: messagebox.showinfo("Duplicates", "No same-size duplicate candidates were found."); return
-        pane.status_var.set(f"Quick-checking {len(candidates)} duplicate candidate(s)…")
+        if not candidates: messagebox.showinfo(self.tr("duplicates.title"), self.tr("duplicates.none_candidates")); return
+        pane.status_var.set(self.tr("duplicates.quick_start", count=len(candidates)))
         def worker():
             quick_groups: dict[tuple[int, str], list[MediaItem]] = {}
             quick_cache_hits = 0
@@ -4651,7 +4730,7 @@ class MediaSorterApp(TkinterDnD.Tk):
                 except OSError:
                     continue
                 if index % 25 == 0 or index == len(candidates):
-                    self.post_ui(pane.status_var.set, f"Quick-checking duplicates {index} of {len(candidates)}…")
+                    self.post_ui(pane.status_var.set, self.tr("duplicates.quick_progress", current=index, total=len(candidates)))
             full_candidates = [item for group in quick_groups.values() if len(group) > 1 for item in group]
             groups: dict[str, list[MediaItem]] = {}
             full_cache_hits = 0
@@ -4667,7 +4746,7 @@ class MediaSorterApp(TkinterDnD.Tk):
                 except OSError:
                     continue
                 if index % 10 == 0 or index == len(full_candidates):
-                    self.post_ui(pane.status_var.set, f"Verifying exact matches {index} of {len(full_candidates)}…")
+                    self.post_ui(pane.status_var.set, self.tr("duplicates.verify_progress", current=index, total=len(full_candidates)))
             self.metadata_cache.save()
             duplicates = [item for group in groups.values() if len(group) > 1 for item in group[1:]]
             self.post_ui(self.finish_duplicate_search, pane, groups, duplicates, quick_cache_hits + full_cache_hits)
@@ -4676,38 +4755,37 @@ class MediaSorterApp(TkinterDnD.Tk):
     def finish_duplicate_search(self, pane: FilePane, groups: dict, duplicates: list[MediaItem], hash_cache_hits: int = 0):
         duplicate_groups = [group for group in groups.values() if len(group) > 1]
         if not duplicate_groups:
-            pane.status_var.set(f"No exact duplicates found · {hash_cache_hits} cached fingerprint(s)")
-            messagebox.showinfo("Duplicate search complete", "No exact duplicates were found.")
+            pane.status_var.set(self.tr("duplicates.none_status", cached=hash_cache_hits))
+            messagebox.showinfo(self.tr("duplicates.complete_title"), self.tr("duplicates.none"))
             return
-        pane.status_var.set(f"{len(duplicate_groups)} exact duplicate group(s) · {hash_cache_hits} cached fingerprint(s)")
+        pane.status_var.set(self.tr("duplicates.groups_status", groups=len(duplicate_groups), cached=hash_cache_hits))
         self.show_duplicate_review(pane, duplicate_groups)
 
-    @staticmethod
-    def duplicate_labels(group: list[MediaItem], item: MediaItem) -> str:
+    def duplicate_labels(self, group: list[MediaItem], item: MediaItem) -> str:
         labels = []
-        if item is group[0]: labels.append("First")
-        if item.modified == max(value.modified for value in group): labels.append("Newest")
-        if item.modified == min(value.modified for value in group): labels.append("Oldest")
-        if item.size == min(value.size for value in group): labels.append("Smallest")
-        if item.size == max(value.size for value in group): labels.append("Largest")
+        if item is group[0]: labels.append(self.tr("duplicates.first"))
+        if item.modified == max(value.modified for value in group): labels.append(self.tr("duplicates.newest"))
+        if item.modified == min(value.modified for value in group): labels.append(self.tr("duplicates.oldest"))
+        if item.size == min(value.size for value in group): labels.append(self.tr("duplicates.smallest"))
+        if item.size == max(value.size for value in group): labels.append(self.tr("duplicates.largest"))
         return ", ".join(labels)
 
     def show_duplicate_review(self, pane: FilePane, groups: list[list[MediaItem]]):
         window = tk.Toplevel(self)
-        window.title("Review exact duplicates")
+        window.title(self.tr("duplicates.review_title"))
         window.geometry("1120x760")
         window.thumbnail_images = []
-        ttk.Label(window, text=f"Found {len(groups)} exact duplicate group(s). Select a row to preview it beside another copy from the same group.", font=("Segoe UI", 11, "bold")).pack(fill="x", padx=10, pady=(10, 4))
-        ttk.Label(window, text="Exact duplicates have identical contents and file size, so Smallest and Largest will normally be tied. Dates and locations can still differ.").pack(fill="x", padx=10, pady=(0, 8))
+        ttk.Label(window, text=self.tr("duplicates.found", count=len(groups)), font=("Segoe UI", 11, "bold")).pack(fill="x", padx=10, pady=(10, 4))
+        ttk.Label(window, text=self.tr("duplicates.explanation")).pack(fill="x", padx=10, pady=(0, 8))
 
         preview = ttk.Frame(window)
         preview.pack(fill="x", padx=10, pady=(0, 8))
         preview_labels = []
         preview_details = []
         for column in range(2):
-            card = ttk.LabelFrame(preview, text=f"Preview {column + 1}", padding=8)
+            card = ttk.LabelFrame(preview, text=self.tr("duplicates.preview", number=column + 1), padding=8)
             card.grid(row=0, column=column, sticky="nsew", padx=(0, 5) if column == 0 else (5, 0))
-            image_label = ttk.Label(card, text="Select a duplicate", anchor="center")
+            image_label = ttk.Label(card, text=self.tr("duplicates.select"), anchor="center")
             image_label.pack(fill="both", expand=True)
             detail = tk.StringVar(value="—")
             ttk.Label(card, textvariable=detail, anchor="center", justify="center", wraplength=500).pack(fill="x", pady=(6, 0))
@@ -4717,7 +4795,7 @@ class MediaSorterApp(TkinterDnD.Tk):
         columns = ("group", "name", "folder", "size", "modified", "labels")
         tree_frame = ttk.Frame(window); tree_frame.pack(fill="both", expand=True, padx=10)
         tree = ttk.Treeview(tree_frame, columns=columns, show="headings", selectmode="extended")
-        headings = {"group": "Group", "name": "Filename", "folder": "Folder", "size": "Size", "modified": "Modified", "labels": "Why it may be kept"}
+        headings = {"group": self.tr("duplicates.group"), "name": self.tr("duplicates.filename"), "folder": self.tr("duplicates.folder"), "size": self.tr("duplicates.size"), "modified": self.tr("duplicates.modified"), "labels": self.tr("duplicates.reason")}
         widths = {"group": 60, "name": 210, "folder": 390, "size": 90, "modified": 145, "labels": 200}
         for column in columns:
             tree.heading(column, text=headings[column]); tree.column(column, width=widths[column], anchor="center" if column in {"group", "size", "modified"} else "w")
@@ -4738,7 +4816,7 @@ class MediaSorterApp(TkinterDnD.Tk):
             second = next((item_map[iid][1] for iid in selection[1:] if item_map[iid][0] == group_index), None)
             second = second or next((item for item in group if item is not chosen), chosen)
             for index, item in enumerate((chosen, second)):
-                preview_labels[index].configure(image="", text="Loading preview…")
+                preview_labels[index].configure(image="", text=self.tr("duplicates.loading"))
                 preview_details[index].set(f"{item.path}\n{human_size(item.size)} · {datetime.fromtimestamp(item.modified).strftime('%Y-%m-%d %H:%M:%S')}\n{self.duplicate_labels(group, item)}")
                 self.generate_thumbnail(window, preview_labels[index], item, index)
         tree.bind("<<TreeviewSelect>>", show_pair)
@@ -4746,11 +4824,11 @@ class MediaSorterApp(TkinterDnD.Tk):
         if first_row: tree.selection_set(first_row); tree.focus(first_row); show_pair()
 
         controls = ttk.Frame(window); controls.pack(fill="x", padx=10, pady=10)
-        ttk.Label(controls, text="Keep one per group:").pack(side="left")
-        for strategy in ("First", "Newest", "Oldest", "Smallest", "Largest"):
-            ttk.Button(controls, text=strategy, command=lambda value=strategy.lower(): self.apply_duplicate_strategy(pane, groups, value, window)).pack(side="left", padx=3)
-        ttk.Button(controls, text="Clear proposal", command=lambda: pane.tree.selection_remove(pane.tree.selection())).pack(side="left", padx=(10, 3))
-        ttk.Button(controls, text="Close without changes", command=window.destroy).pack(side="right")
+        ttk.Label(controls, text=self.tr("duplicates.keep_one")).pack(side="left")
+        for strategy in ("first", "newest", "oldest", "smallest", "largest"):
+            ttk.Button(controls, text=self.tr(f"duplicates.{strategy}"), command=lambda value=strategy: self.apply_duplicate_strategy(pane, groups, value, window)).pack(side="left", padx=3)
+        ttk.Button(controls, text=self.tr("duplicates.clear"), command=lambda: pane.tree.selection_remove(pane.tree.selection())).pack(side="left", padx=(10, 3))
+        ttk.Button(controls, text=self.tr("duplicates.close"), command=window.destroy).pack(side="right")
 
     def apply_duplicate_strategy(self, pane: FilePane, groups: list[list[MediaItem]], strategy: str, window: tk.Toplevel):
         redundant = []
@@ -4765,9 +4843,10 @@ class MediaSorterApp(TkinterDnD.Tk):
         rows = [iid for iid in pane.tree.get_children() if pane.tree.item(iid, "tags") and pane.tree.item(iid, "tags")[0] in paths]
         pane.tree.selection_set(rows)
         if rows: pane.tree.focus(rows[0]); pane.tree.see(rows[0])
-        pane.status_var.set(f"Duplicate proposal: keep {strategy} · selected {len(rows)} redundant file(s) for review")
+        strategy_label = self.tr(f"duplicates.{strategy}")
+        pane.status_var.set(self.tr("duplicates.proposal_status", strategy=strategy_label, count=len(rows)))
         window.destroy()
-        messagebox.showinfo("Duplicate proposal applied", f"The {strategy} copy in each group was kept unselected.\n\n{len(rows)} redundant file(s) are selected in the main pane. Review them there before moving or deleting anything.")
+        messagebox.showinfo(self.tr("duplicates.applied_title"), self.tr("duplicates.applied_body", strategy=strategy_label, count=len(rows)))
 
     def compare_selected(self, pane: FilePane | None = None):
         pane = pane or self.current_pane(); items = pane.selected_items()
