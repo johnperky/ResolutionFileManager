@@ -2,7 +2,7 @@
 
 A portable dual-pane media file manager for Windows that scans images and videos, displays technical metadata, sorts and filters large collections, previews content, and performs reviewable file-management and conversion workflows.
 
-Current version: 12.3.0
+Current version: 12.4.0
 
 ## Download and support
 
@@ -13,6 +13,8 @@ Resolution File Manager is free software licensed under GNU GPL version 3 or lat
 ## Features
 
 - Dual folder panes
+- Automatic operating-system language detection with English, Simplified Chinese, Dutch, French, German, Japanese, Korean, Russian and Spanish interface/help packs
+- Optional private local reminders for Microsoft Store ratings and Buy Me a Coffee support, with independent controls under Tools
 - Independent per-pane tick boxes that collect an action group while ordinary highlighting remains free for previewing
 - Expandable folder tree in each pane
 - Video support: MP4, MKV, MOV, AVI, WebM, M4V, WMV, MPG, MPEG

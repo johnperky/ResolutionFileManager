@@ -1,5 +1,14 @@
 # Changelog
 
+## 12.4.0 — 13 October 2026
+
+- Added automatic system-language detection and nine bundled interface/help languages.
+- Added Tools > Language with a persistent override, System default restoration and safe English fallback.
+- Added an optional Microsoft Store rating reminder after five launches across three dates; Later postpones it by ten launches.
+- Added an optional Buy Me a Coffee reminder at launch 11 with an 11-launch Maybe later interval.
+- Added Tools > Reminders to independently disable or re-enable both private, local-only reminders.
+- Added build-time language-pack validation and bundled locale assets for Windows and Linux packages.
+
 ## 12.3.0 — 2 October 2026
 
 - Added independent tick-box action groups to both browser panes.

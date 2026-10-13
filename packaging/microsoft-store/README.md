@@ -1,6 +1,8 @@
 # Microsoft Store submission kit
 
-This folder contains the repeatable MSIX build and the prepared English (United Kingdom) Store listing for Resolution File Manager 12.3.0.
+This folder contains the repeatable MSIX build and prepared Store-listing material for Resolution File Manager 12.4.0.
+
+Version 12.4.0 ships English, Simplified Chinese, Dutch, French, German, Japanese, Korean, Russian and Spanish interface/help packs. Store listing translations remain separate marketing assets and must continue to disclose English fallback where appropriate.
 
 ## Before the final package can be built
 

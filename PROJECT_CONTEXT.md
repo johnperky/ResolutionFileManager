@@ -1,6 +1,8 @@
 # Resolution File Manager project
 
-Current version: 12.3.0
+Current version: 12.4.0
+
+Version 12.4.0 adds automatic operating-system language detection and bundled English, Simplified Chinese, Dutch, French, German, Japanese, Korean, Russian and Spanish interface/help packs. Tools > Language provides a saved override and System default restoration, with safe English fallback and restart-based application. Private local reminder state can invite a Microsoft Store rating after five launches across three dates, with a ten-launch Later delay, and optional Buy Me a Coffee support from launch 11 with an 11-launch Maybe later interval. Only one prompt appears per launch, rating has priority, either can be disabled or re-enabled under Tools > Reminders, and no usage state is transmitted. Both build scripts validate and bundle every pack. Version 12.3.0 remains the executable rollback.
 
 Public Windows release preparation for 12.2.2 adds GPL-3.0-or-later licensing, third-party and FFmpeg notices, a local-only privacy statement, changelog and release notes, clean Git exclusions, WinGet/Chocolatey submission guidance, and a reproducible `build_windows_release.ps1` pipeline. The pipeline creates a portable Windows x64 folder and ZIP, a source ZIP, a standalone versioned executable, bundled licence texts, and SHA-256 checksums under `release-output/12.2.2`. The in-app Help Centre documents official-release verification, licensing, privacy, and the unsigned-build SmartScreen caveat. Linux distribution is deliberately outside this release preparation.
 

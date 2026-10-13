@@ -11,6 +11,8 @@ $IconPath = Join-Path $ProjectDirectory "app_icon.ico"
 $IconPngPath = Join-Path $ProjectDirectory "app_icon.png"
 if (-not (Test-Path -LiteralPath $IconPath)) { throw "Application icon was not found: $IconPath" }
 if (-not (Test-Path -LiteralPath $IconPngPath)) { throw "Application icon PNG was not found: $IconPngPath" }
+python verify_release_assets.py "$ProjectDirectory"
+if ($LASTEXITCODE -ne 0) { throw "Language-pack validation failed with exit code $LASTEXITCODE" }
 
 $BuildStarted = Get-Date
 python -m PyInstaller `
@@ -21,6 +23,7 @@ python -m PyInstaller `
     --name ResolutionFileManager `
     --icon "$IconPath" `
     --add-data "$IconPngPath;." `
+    --add-data "$ProjectDirectory\locales;locales" `
     --add-binary "$FfprobePath;." `
     --add-binary "$FfmpegPath;." `
     --add-binary "$FfplayPath;." `
