@@ -1,0 +1,19 @@
+{
+  "meta": {
+    "language": "English"
+  },
+  "strings": {
+    "hello": "Hello",
+    "greeting": "Hello, {name}",
+    "english_only": "English only"
+  },
+  "help": {
+    "chapters": [
+      {
+        "id": "quick_start",
+        "title": "Quick Start",
+        "body": "Start here."
+      }
+    ]
+  }
+}
