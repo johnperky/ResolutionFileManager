@@ -1,0 +1,17 @@
+{"meta":{"language":"日本語"},"strings":{
+"app.title":"Resolution File Manager {version}","menu.file":"ファイル","menu.edit":"編集","menu.view":"表示","menu.tools":"ツール","menu.help":"ヘルプ","menu.language":"言語","menu.reminders":"リマインダー…","menu.how_to":"Resolution File Manager の使い方","menu.about":"バージョン情報",
+"toolbar.guide":"どちらかのペインでファイルを選び、もう一方のペインへ送ります。","toolbar.refresh":"更新","toolbar.move":"選択項目を移動 → 反対側","toolbar.copy":"選択項目をコピー → 反対側","toolbar.undo":"元に戻す",
+"pane.left":"左ペイン","pane.right":"右ペイン","pane.preview":"プレビュー","pane.info":"情報","pane.browse":"参照…","pane.show":"表示：","pane.videos":"動画","pane.images":"画像","pane.find":"検索：","pane.subfolders":"サブフォルダーを含める","pane.scanning":"メディアをスキャン中…","pane.cancel":"キャンセル",
+"common.system_default":"システム既定","common.restart_required":"再起動が必要です","common.close":"閉じる","common.save":"保存",
+"language.title":"言語","language.message":"言語設定を保存しました。全体に適用するには Resolution File Manager を再起動してください。",
+"reminders.title":"リマインダー設定","reminders.rating":"Microsoft Store 評価リマインダー","reminders.support":"Buy Me a Coffee リマインダー",
+"rating.title":"Resolution File Manager は役立っていますか？","rating.body":"役立っている場合は Microsoft Store で評価していただけますか？評価は他の利用者が見つける助けになります。","rating.rate":"Microsoft Store で評価","rating.later":"後で","rating.never":"今後表示しない",
+"support.title":"Resolution File Manager を支援","support.body":"このプログラムが役立つ場合は、John にコーヒーをごちそうできます。支援は完全に任意です。","support.open":"コーヒーを贈る","support.later":"後で考える","support.never":"今後表示しない",
+"link.error_title":"ページを開けませんでした","link.error_body":"ブラウザーで次のアドレスを開いてください：\n\n{url}\n\n{error}","help.title":"Resolution File Manager ヘルプ — {version}","help.search":"ガイド全体を検索：","help.previous":"前の章","help.next":"次の章"},
+"help":{"chapters":[
+{"id":"quick_start","title":"クイックスタート","body":"どちらかのペインでフォルダーを選択します。必要に応じて動画、画像、サブフォルダーを有効にします。詳細またはサムネイルでファイルをチェックし、グループ全体をコピー、移動、分析、変換できます。"},
+{"id":"browsing","title":"閲覧とプレビュー","body":"各ペインには独立した履歴、フィルター、並べ替え、サムネイル、情報、プレビューがあります。動画は既定で 4× 再生です。カンマとピリオドで 10% 戻る／進むことができます。"},
+{"id":"organising","title":"整理と変換","body":"コピー、移動、名前変更、重複確認、タグや評価、レポート出力ができます。対応するハードウェアアクセラレーションで H.264、H.265、AV1 に変換できます。元ファイルは保持されます。"},
+{"id":"language","title":"言語","body":"初回起動時は、対応していれば OS の言語を使用します。ツール > 言語で変更またはシステム既定へ戻せます。変更後は再起動してください。不足する翻訳は英語に戻ります。"},
+{"id":"reminders","title":"評価と任意の支援","body":"3 日以上にわたり 5 回起動すると Store 評価を案内する場合があります。後でを選ぶと 10 回延期します。コーヒーの案内は 11 回目から始まり、後で考えるを選んだ場合のみ 11 回ごとに再表示されます。どちらも無効化と再有効化が可能です。"},
+{"id":"privacy","title":"プライバシーとトラブル対処","body":"スキャン、プレビュー、メタデータ、リマインダー、ファイル操作はローカルです。アカウント、広告、分析はなく、メディアや起動履歴を送信しません。遅い場合は不要なプレビューを切り、静音プロファイルか狭いフォルダーを使ってください。"}]}}

@@ -1,0 +1,17 @@
+{"meta":{"language":"한국어"},"strings":{
+"app.title":"Resolution File Manager {version}","menu.file":"파일","menu.edit":"편집","menu.view":"보기","menu.tools":"도구","menu.help":"도움말","menu.language":"언어","menu.reminders":"알림…","menu.how_to":"Resolution File Manager 사용법","menu.about":"정보",
+"toolbar.guide":"한쪽 창에서 파일을 선택한 다음 다른 창으로 보내세요.","toolbar.refresh":"새로 고침","toolbar.move":"선택 항목 이동 → 다른 창","toolbar.copy":"선택 항목 복사 → 다른 창","toolbar.undo":"실행 취소",
+"pane.left":"왼쪽 창","pane.right":"오른쪽 창","pane.preview":"미리 보기","pane.info":"정보","pane.browse":"찾아보기…","pane.show":"표시:","pane.videos":"동영상","pane.images":"이미지","pane.find":"찾기:","pane.subfolders":"하위 폴더 포함","pane.scanning":"미디어 검색 중…","pane.cancel":"취소",
+"common.system_default":"시스템 기본값","common.restart_required":"다시 시작 필요","common.close":"닫기","common.save":"저장",
+"language.title":"언어","language.message":"언어 설정을 저장했습니다. 전체에 적용하려면 Resolution File Manager를 다시 시작하세요.",
+"reminders.title":"알림 설정","reminders.rating":"Microsoft Store 평가 알림","reminders.support":"Buy Me a Coffee 알림",
+"rating.title":"Resolution File Manager가 마음에 드시나요?","rating.body":"Resolution File Manager가 유용했다면 Microsoft Store에서 평가해 주시겠어요? 평가는 다른 사용자가 앱을 찾는 데 도움이 됩니다.","rating.rate":"Microsoft Store에서 평가","rating.later":"나중에","rating.never":"다시 묻지 않음",
+"support.title":"Resolution File Manager 후원","support.body":"프로그램이 유용하다면 John에게 커피 한 잔을 선물할 수 있습니다. 후원은 전적으로 선택 사항입니다.","support.open":"커피 선물하기","support.later":"나중에","support.never":"다시 묻지 않음",
+"link.error_title":"페이지를 열 수 없음","link.error_body":"브라우저에서 다음 주소를 여세요:\n\n{url}\n\n{error}","help.title":"Resolution File Manager 도움말 — {version}","help.search":"전체 안내서 검색:","help.previous":"이전 장","help.next":"다음 장"},
+"help":{"chapters":[
+{"id":"quick_start","title":"빠른 시작","body":"어느 창에서든 폴더를 선택하세요. 필요에 따라 동영상, 이미지, 하위 폴더 포함을 켭니다. 세부 정보 또는 미리보기 이미지에서 파일을 체크한 뒤 전체 그룹을 복사, 이동, 분석 또는 변환하세요."},
+{"id":"browsing","title":"탐색 및 미리 보기","body":"각 창에는 독립적인 기록, 필터, 정렬, 미리보기 이미지, 정보 및 미리 보기가 있습니다. 동영상은 기본 4×로 시작합니다. 쉼표와 마침표로 10% 뒤나 앞으로 이동합니다."},
+{"id":"organising","title":"정리 및 변환","body":"복사, 이동, 이름 변경, 중복 검토, 태그와 평점 지정, 보고서 내보내기가 가능합니다. 호환되는 하드웨어 가속으로 H.264, H.265 및 AV1 변환을 지원하며 원본은 유지됩니다."},
+{"id":"language","title":"언어","body":"첫 실행 시 지원되는 운영 체제 언어를 따릅니다. 도구 > 언어에서 변경하거나 시스템 기본값으로 돌아갈 수 있습니다. 변경 후 다시 시작하세요. 누락된 번역은 영어로 안전하게 대체됩니다."},
+{"id":"reminders","title":"평가 및 선택적 후원","body":"최소 3일에 걸쳐 5번 실행하면 Store 평가를 요청할 수 있습니다. 나중에는 10회 실행을 연기합니다. 커피 알림은 11번째 실행에 시작하고 나중에를 선택한 경우에만 11회마다 다시 나타납니다. 둘 다 끄거나 다시 켤 수 있습니다."},
+{"id":"privacy","title":"개인정보 및 문제 해결","body":"검색, 미리 보기, 메타데이터, 알림 및 파일 작업은 로컬에만 남습니다. 계정, 광고, 분석이 없으며 미디어나 실행 기록을 업로드하지 않습니다. 느리면 미리 보기를 끄고 조용한 프로필 또는 더 좁은 폴더를 사용하세요."}]}}

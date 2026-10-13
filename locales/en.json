@@ -1,19 +1,31 @@
 {
-  "meta": {
-    "language": "English"
-  },
+  "meta": {"language": "English"},
   "strings": {
-    "hello": "Hello",
-    "greeting": "Hello, {name}",
-    "english_only": "English only"
+    "app.title": "Resolution File Manager {version}",
+    "menu.file": "File", "menu.edit": "Edit", "menu.view": "View", "menu.tools": "Tools", "menu.help": "Help",
+    "menu.browse": "Browse active pane…", "menu.refresh": "Refresh", "menu.exit": "Exit",
+    "menu.copy": "Copy", "menu.cut": "Cut", "menu.paste": "Paste", "menu.undo": "Undo", "menu.rename": "Rename…", "menu.batch_rename": "Batch rename selected…", "menu.delete": "Move to Recycle Bin / Trash", "menu.select_all": "Select all shown",
+    "menu.details": "Details in active pane", "menu.thumbnails": "Thumbnails in active pane", "menu.thumbnail_size": "Thumbnail size", "menu.columns": "Configure columns…", "menu.appearance": "Appearance and text size…", "menu.refresh_active": "Refresh active pane", "menu.refresh_both": "Refresh both panes", "menu.go_up": "Go up",
+    "menu.verify": "Verify media integrity…", "menu.contact_sheet": "Create video contact sheet…", "menu.export_report": "Export media report…", "menu.metadata": "View embedded metadata…", "menu.convert": "Convert selected videos…", "menu.duplicates": "Find duplicates…", "menu.similar": "Find visually similar images…", "menu.compare": "Compare selected…", "menu.sync": "Compare / synchronize folders…", "menu.save_workspace": "Save workspace…", "menu.load_workspace": "Load workspace…", "menu.save_collection": "Save active smart collection…", "menu.manage_collections": "Manage smart collections…", "menu.folder_rules": "Folder organization rules…", "menu.cache": "Cache and scanning…", "menu.queue": "Transfer queue…", "menu.language": "Language", "menu.reminders": "Reminders…",
+    "menu.how_to": "How to use Resolution File Manager", "menu.shortcuts": "Keyboard shortcuts", "menu.coffee": "☕ If you like this, buy John a coffee…", "menu.about": "About",
+    "toolbar.guide": "Choose files in either pane, then send them to the other pane.", "toolbar.refresh": "Refresh", "toolbar.move": "Move selected → other pane", "toolbar.copy": "Copy selected → other pane", "toolbar.undo": "Undo",
+    "pane.left": "Left pane", "pane.right": "Right pane", "pane.preview": "Preview", "pane.info": "Info", "pane.browse": "Browse…", "pane.drag": "↗ Drag selected", "pane.show": "Show:", "pane.videos": "Videos", "pane.images": "Images", "pane.find": "Find:", "pane.live": "Live", "pane.subfolders": "Include subfolders", "pane.resolution": "Resolution:", "pane.all": "All", "pane.select_matching": "Select matching", "pane.more_filters": "More filters…", "pane.outliers": "Select size outliers", "pane.scanning": "Scanning media…", "pane.cancel": "Cancel", "pane.no_files": "No matching media files", "pane.checked": "{count} ticked", "pane.clear_ticks": "Clear ticks",
+    "common.system_default": "System default", "common.restart_required": "Restart required", "common.ok": "OK", "common.cancel": "Cancel", "common.close": "Close", "common.save": "Save", "common.enable": "Enable", "common.disable": "Disable", "common.never": "Never", "common.launch": "launch {count}",
+    "language.title": "Language", "language.message": "The language setting has been saved. Restart Resolution File Manager to apply it everywhere.",
+    "reminders.title": "Reminder settings", "reminders.rating": "Microsoft Store rating reminder", "reminders.support": "Buy Me a Coffee reminder", "reminders.next": "Next eligible: {value}", "reminders.saved": "Reminder settings saved.",
+    "rating.title": "Enjoying Resolution File Manager?", "rating.body": "If Resolution File Manager has been useful, would you like to rate it in Microsoft Store? Ratings help other people discover it.", "rating.rate": "Rate in Microsoft Store", "rating.later": "Later", "rating.never": "Don't ask again",
+    "support.title": "Support Resolution File Manager", "support.body": "If the program is useful to you, feel free to buy John a coffee. Support is completely optional.", "support.open": "Buy me a coffee", "support.later": "Maybe later", "support.never": "Don't ask again",
+    "link.error_title": "Could not open page", "link.error_body": "Open this address in your web browser:\n\n{url}\n\n{error}",
+    "about.title": "About Resolution File Manager", "about.description": "A cross-platform dual-pane application for browsing, previewing, analysing and organising image and video collections.", "about.support": "Support development", "about.optional": "If Resolution File Manager is useful to you, you can buy John a coffee. Support is entirely optional.",
+    "help.title": "Resolution File Manager Help — {version}", "help.search": "Search the complete guide:", "help.previous": "Previous chapter", "help.next": "Next chapter", "help.next_match": "Next match (F3)", "help.clear": "Clear search", "help.no_results": "No results", "help.no_results_body": "No help chapter contains “{query}”. Try a shorter term.",
+    "status.folder_missing": "Folder not found", "status.select_files": "Select one or more files in the active pane first.", "status.finished": "Finished", "status.error": "Error"
   },
-  "help": {
-    "chapters": [
-      {
-        "id": "quick_start",
-        "title": "Quick Start",
-        "body": "Start here."
-      }
-    ]
-  }
+  "help": {"chapters": [
+    {"id": "quick_start", "title": "Quick Start", "body": "Choose a folder in either pane. Enable Videos, Images and Include subfolders as needed. Use Details or Thumbnails, select or tick files, preview them, then copy, move, analyse or convert them. Ticked files form the action group; highlighting remains available for browsing and preview."},
+    {"id": "browsing", "title": "Browsing and Preview", "body": "Each pane has independent Back, Forward, Up and Refresh controls, filters, sorting, thumbnails, Info and Preview. Video preview starts at 4× speed. Comma and full stop move backward or forward ten percent. Preview and Info remain off until enabled to reduce background work."},
+    {"id": "organising", "title": "Organising and Converting", "body": "Copy, move, rename, send files to the Recycle Bin or Trash, review duplicates, apply tags and ratings, export reports and create contact sheets. Conversion supports H.264, H.265 and AV1 with compatible hardware acceleration. Source files are retained and partial failed outputs are removed."},
+    {"id": "language", "title": "Language", "body": "On first launch the application follows the operating-system language when supported. Choose Tools > Language to override it or return to System default. Restart the application after changing language. Missing translations safely fall back to English."},
+    {"id": "reminders", "title": "Ratings and Optional Support", "body": "After five launches across at least three days, the app may invite you to rate it in Microsoft Store. Later postpones the request by ten launches. The optional coffee reminder begins at launch 11 and repeats every 11 launches only after Maybe later. Don't ask again disables either reminder; Tools > Reminders can re-enable it. A page opens only after you press its explicit button."},
+    {"id": "privacy", "title": "Privacy and Troubleshooting", "body": "Scanning, previews, thumbnails, metadata, reminders and file operations remain local. The app has no account, advertising or analytics and never uploads your media or launch history. If scanning is slow, disable unused previews, choose Quiet performance or narrow the folder. Refresh after external changes. Use Verify media integrity for unreadable files."}
+  ]}
 }

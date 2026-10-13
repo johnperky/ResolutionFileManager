@@ -1,0 +1,17 @@
+{"meta":{"language":"简体中文"},"strings":{
+"app.title":"Resolution File Manager {version}","menu.file":"文件","menu.edit":"编辑","menu.view":"查看","menu.tools":"工具","menu.help":"帮助","menu.language":"语言","menu.reminders":"提醒…","menu.how_to":"Resolution File Manager 使用指南","menu.about":"关于",
+"toolbar.guide":"在任一窗格中选择文件，然后将其发送到另一个窗格。","toolbar.refresh":"刷新","toolbar.move":"移动所选项 → 另一窗格","toolbar.copy":"复制所选项 → 另一窗格","toolbar.undo":"撤销",
+"pane.left":"左窗格","pane.right":"右窗格","pane.preview":"预览","pane.info":"信息","pane.browse":"浏览…","pane.show":"显示：","pane.videos":"视频","pane.images":"图像","pane.find":"查找：","pane.subfolders":"包括子文件夹","pane.scanning":"正在扫描媒体…","pane.cancel":"取消",
+"common.system_default":"系统默认","common.restart_required":"需要重新启动","common.close":"关闭","common.save":"保存",
+"language.title":"语言","language.message":"语言设置已保存。请重新启动 Resolution File Manager 以在整个应用中应用。",
+"reminders.title":"提醒设置","reminders.rating":"Microsoft Store 评分提醒","reminders.support":"Buy Me a Coffee 提醒",
+"rating.title":"喜欢 Resolution File Manager 吗？","rating.body":"如果 Resolution File Manager 对您有帮助，是否愿意在 Microsoft Store 中评分？评分能帮助其他人发现它。","rating.rate":"在 Microsoft Store 中评分","rating.later":"稍后","rating.never":"不再询问",
+"support.title":"支持 Resolution File Manager","support.body":"如果本程序对您有用，欢迎请 John 喝杯咖啡。支持完全自愿。","support.open":"请我喝咖啡","support.later":"以后再说","support.never":"不再询问",
+"link.error_title":"无法打开页面","link.error_body":"请在浏览器中打开此地址：\n\n{url}\n\n{error}","help.title":"Resolution File Manager 帮助 — {version}","help.search":"搜索完整指南：","help.previous":"上一章","help.next":"下一章"},
+"help":{"chapters":[
+{"id":"quick_start","title":"快速开始","body":"在任一窗格中选择文件夹。按需启用视频、图像和包括子文件夹。使用详细信息或缩略图，勾选文件，然后对整组执行复制、移动、分析或转换。普通高亮仍可用于浏览和预览。"},
+{"id":"browsing","title":"浏览与预览","body":"每个窗格都有独立的历史记录、筛选、排序、缩略图、信息和预览。视频默认以 4× 播放。逗号和句点可后退或前进百分之十。"},
+{"id":"organising","title":"整理与转换","body":"可复制、移动、重命名、检查重复项、设置标签和评分以及导出报告。支持使用兼容硬件加速转换为 H.264、H.265 和 AV1。源文件始终保留。"},
+{"id":"language","title":"语言","body":"首次启动时，应用会在支持的情况下使用操作系统语言。通过“工具 > 语言”可覆盖或恢复系统默认。更改后请重新启动。缺失的翻译会安全回退到英语。"},
+{"id":"reminders","title":"评分与自愿支持","body":"在至少三个日期启动五次后，应用可能邀请您评分。选择稍后会推迟十次启动。咖啡提醒从第 11 次启动开始，仅在选择以后再说后每 11 次启动再次出现。两种提醒都可禁用并重新启用。"},
+{"id":"privacy","title":"隐私与故障排除","body":"扫描、预览、元数据、提醒和文件操作均保留在本机。应用无账户、广告或分析，也不会上传媒体或启动记录。扫描较慢时可关闭未使用的预览、选择安静配置或缩小文件夹范围。"}]}}
