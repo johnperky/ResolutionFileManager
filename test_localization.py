@@ -16,6 +16,9 @@ class LocalizationSelectionTests(unittest.TestCase):
             "zh_CN": "zh-CN",
             "en-IN": "en",
             "ja_JP": "ja",
+            "German_Germany.1252": "de",
+            "Spanish_Spain.1252": "es",
+            "Chinese (Simplified)_China.936": "zh-CN",
         }
         for raw, expected in cases.items():
             with self.subTest(raw=raw):

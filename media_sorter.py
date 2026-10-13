@@ -9,6 +9,7 @@ import csv
 import fnmatch
 import functools
 import html
+import locale as pylocale
 import os
 import queue
 import re
@@ -25,12 +26,14 @@ import tkinter.font as tkfont
 import webbrowser
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, replace
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from tkinter import filedialog, messagebox, simpledialog, ttk
 from tkinterdnd2 import ASK, COPY, DND_FILES, LINK, MOVE, REFUSE_DROP, TkinterDnD
 from send2trash import send2trash
 from PIL import ExifTags, Image, ImageDraw, ImageFont, ImageOps, ImageSequence
+from localization import SUPPORTED_LANGUAGES, Translator, select_language
+from reminder_policy import apply_reminder_choice, eligible_reminder, normalise_state as normalise_reminder_state, record_successful_launch, set_reminder_enabled
 try:
     from watchdog.events import FileSystemEventHandler
     from watchdog.observers import Observer
@@ -44,6 +47,7 @@ IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", "
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | IMAGE_EXTENSIONS
 APP_VERSION = "12.3.0"
 SUPPORT_URL = "https://buymeacoffee.com/johnperky"
+STORE_PRODUCT_ID = "9NZL6GF5JSJK"
 CODEC_LABELS = {"h264": "H.264", "hevc": "H.265 / HEVC", "av1": "AV1", "vp9": "VP9", "vp8": "VP8", "mpeg4": "MPEG-4", "mpeg2video": "MPEG-2", "mjpeg": "Motion JPEG"}
 COLOR_LABEL_HEX = {"Red": "#d9534f", "Yellow": "#d8aa18", "Green": "#4b9b57", "Blue": "#4a90e2", "Purple": "#8c62b8"}
 TRANSCODE_PRESETS = {
@@ -97,6 +101,31 @@ def save_json(path: Path, value) -> None:
     temporary = path.with_suffix(path.suffix + ".tmp")
     temporary.write_text(json.dumps(value, indent=2), encoding="utf-8")
     temporary.replace(path)
+
+
+def bundled_resource(name: str) -> Path:
+    return Path(getattr(sys, "_MEIPASS", Path(__file__).parent)) / name
+
+
+def merge_application_settings(existing: dict, updates: dict, reminders: dict) -> dict:
+    merged = dict(existing) if isinstance(existing, dict) else {}
+    merged.update(updates)
+    merged["reminders"] = dict(reminders)
+    return merged
+
+
+def microsoft_store_destinations() -> tuple[str, str]:
+    return (
+        f"ms-windows-store://pdp/?productid={STORE_PRODUCT_ID}",
+        f"https://apps.microsoft.com/detail/{STORE_PRODUCT_ID}",
+    )
+
+
+def system_display_locale() -> str | None:
+    try:
+        return pylocale.getlocale()[0]
+    except (ValueError, TypeError):
+        return None
 
 
 @dataclass(frozen=True)
@@ -654,10 +683,11 @@ def compact_relative_path(path: Path, maximum: int) -> str:
 
 
 class FilePane(ttk.Frame):
-    def __init__(self, master: tk.Misc, title: str, start_path: Path, active_callback, transfer_callback, preview_callback, preview_toggle_callback, metadata_cache: MetadataCache, saved_state: dict | None = None):
+    def __init__(self, master: tk.Misc, title: str, start_path: Path, active_callback, transfer_callback, preview_callback, preview_toggle_callback, metadata_cache: MetadataCache, saved_state: dict | None = None, tr=None):
         super().__init__(master, padding=8)
         saved_state = saved_state or {}
         self.title = title
+        self.tr = tr or (lambda key, **_values: key)
         self.app = master.winfo_toplevel()
         self.current_path = start_path
         self.metadata_cache = metadata_cache
@@ -733,9 +763,9 @@ class FilePane(ttk.Frame):
         size_box = ttk.Combobox(heading, textvariable=self.thumbnail_size_var, state="readonly", width=8, values=("Small", "Medium", "Large"))
         size_box.pack(side="left")
         size_box.bind("<<ComboboxSelected>>", lambda _event: self.render_thumbnail_grid())
-        ttk.Checkbutton(heading, text="▶ Preview", style="PaneToggle.Toolbutton", variable=self.preview_enabled_var, command=self.toggle_preview).pack(side="left", padx=(10, 0))
-        ttk.Checkbutton(heading, text="ⓘ Info", style="PaneToggle.Toolbutton", variable=self.inspector_enabled_var, command=self.toggle_inspector).pack(side="left", padx=(7, 0))
-        ttk.Button(heading, text="Browse…", command=self.choose_folder).pack(side="right")
+        ttk.Checkbutton(heading, text=f"▶ {self.tr('pane.preview')}", style="PaneToggle.Toolbutton", variable=self.preview_enabled_var, command=self.toggle_preview).pack(side="left", padx=(10, 0))
+        ttk.Checkbutton(heading, text=f"ⓘ {self.tr('pane.info')}", style="PaneToggle.Toolbutton", variable=self.inspector_enabled_var, command=self.toggle_inspector).pack(side="left", padx=(7, 0))
+        ttk.Button(heading, text=self.tr("pane.browse"), command=self.choose_folder).pack(side="right")
 
         navigation = ttk.Frame(self)
         navigation.pack(fill="x", pady=(0, 5))
@@ -746,7 +776,7 @@ class FilePane(ttk.Frame):
         self.up_button = ttk.Button(navigation, text="↑", width=4, command=self.go_up)
         self.up_button.pack(side="left", padx=(4, 0))
         ttk.Button(navigation, text="↻", width=4, command=self.refresh_browser).pack(side="left", padx=(4, 0))
-        self.drag_selected_button = ttk.Button(navigation, text="↗ Drag selected", style="PaneToggle.Toolbutton")
+        self.drag_selected_button = ttk.Button(navigation, text=self.tr("pane.drag"), style="PaneToggle.Toolbutton")
         self.drag_selected_button.pack(side="right")
         self.drag_selected_button.drag_source_register(1, DND_FILES)
         self.drag_selected_button.dnd_bind("<<DragInitCmd>>", self.start_selected_drag)
@@ -759,26 +789,26 @@ class FilePane(ttk.Frame):
 
         type_row = ttk.Frame(self)
         type_row.pack(fill="x", pady=(0, 5))
-        ttk.Label(type_row, text="Show:").pack(side="left")
-        ttk.Checkbutton(type_row, text="Videos", variable=self.show_videos_var, command=self.refresh_view).pack(side="left", padx=(5, 0))
-        ttk.Checkbutton(type_row, text="Images", variable=self.show_images_var, command=self.refresh_view).pack(side="left", padx=(5, 0))
-        ttk.Checkbutton(type_row, text="Include subfolders", variable=self.recursive_var, command=self.recursive_changed).pack(side="right")
+        ttk.Label(type_row, text=self.tr("pane.show")).pack(side="left")
+        ttk.Checkbutton(type_row, text=self.tr("pane.videos"), variable=self.show_videos_var, command=self.refresh_view).pack(side="left", padx=(5, 0))
+        ttk.Checkbutton(type_row, text=self.tr("pane.images"), variable=self.show_images_var, command=self.refresh_view).pack(side="left", padx=(5, 0))
+        ttk.Checkbutton(type_row, text=self.tr("pane.subfolders"), variable=self.recursive_var, command=self.recursive_changed).pack(side="right")
         ttk.Checkbutton(type_row, text="Live", variable=self.live_updates_var, command=self.toggle_live_updates).pack(side="right", padx=(0, 8))
-        ttk.Label(type_row, text="Find:").pack(side="left", padx=(12, 2))
+        ttk.Label(type_row, text=self.tr("pane.find")).pack(side="left", padx=(12, 2))
         search_entry = ttk.Entry(type_row, textvariable=self.search_var, width=18)
         search_entry.pack(side="left")
         search_entry.bind("<KeyRelease>", lambda _event: self.refresh_view())
 
         filter_row = ttk.Frame(self)
         filter_row.pack(fill="x", pady=(0, 6))
-        ttk.Label(filter_row, text="Resolution:").pack(side="left")
+        ttk.Label(filter_row, text=self.tr("pane.resolution")).pack(side="left")
         self.filter_var = tk.StringVar(value=saved_state.get("resolution_filter", "All"))
         self.filter_box = ttk.Combobox(filter_row, textvariable=self.filter_var, state="readonly", width=18)
         self.filter_box.pack(side="left", padx=5)
         self.filter_box.bind("<<ComboboxSelected>>", lambda _event: self.refresh_view())
-        ttk.Button(filter_row, text="Select matching", command=self.select_matching).pack(side="left")
-        ttk.Button(filter_row, text="More filters…", command=self.edit_advanced_filters).pack(side="left", padx=(5, 0))
-        ttk.Button(filter_row, text="Select size outliers", command=self.select_size_outliers).pack(side="left", padx=5)
+        ttk.Button(filter_row, text=self.tr("pane.select_matching"), command=self.select_matching).pack(side="left")
+        ttk.Button(filter_row, text=self.tr("pane.more_filters"), command=self.edit_advanced_filters).pack(side="left", padx=(5, 0))
+        ttk.Button(filter_row, text=self.tr("pane.outliers"), command=self.select_size_outliers).pack(side="left", padx=5)
         self.outlier_box = ttk.Combobox(filter_row, textvariable=self.outlier_sensitivity_var, state="readonly", width=15, values=("Moderate (1.4×)", "Large (1.75×)", "Extreme (2.5×)"))
         self.outlier_box.pack(side="left")
 
@@ -2822,6 +2852,12 @@ class MediaSorterApp(TkinterDnD.Tk):
         self.data_directory = application_data_directory()
         self.settings_path = self.data_directory / "settings.json"
         self.settings = load_json(self.settings_path, {})
+        self.language_override = str(self.settings.get("language", "system"))
+        self.language = select_language(self.language_override, system_display_locale())
+        self.translator = Translator(bundled_resource("locales"), self.language)
+        self.tr = self.translator.text
+        self.reminder_state = normalise_reminder_state(self.settings.get("reminders", {}))
+        self.reminder_shown_this_launch = False
         self.performance_profile = str(self.settings.get("performance_profile", "Balanced"))
         if self.performance_profile not in PERFORMANCE_PROFILES: self.performance_profile = "Balanced"
         self.workload = WorkloadController(self.performance_profile)
@@ -2861,7 +2897,7 @@ class MediaSorterApp(TkinterDnD.Tk):
         self.operation_paused = False
         self.operation_window: tk.Toplevel | None = None
         self.last_failed_operation: dict | None = None
-        self.title(f"Resolution File Manager {APP_VERSION}")
+        self.title(self.tr("app.title", version=APP_VERSION))
         apply_application_icon(self)
         try: self.geometry(self.settings.get("geometry", "1300x900"))
         except tk.TclError: self.geometry("1300x900")
@@ -2880,11 +2916,11 @@ class MediaSorterApp(TkinterDnD.Tk):
 
         toolbar = ttk.Frame(self, padding=(10, 8))
         toolbar.pack(fill="x")
-        ttk.Label(toolbar, text="Choose files in either pane, then send them to the other pane.").pack(side="left")
-        ttk.Button(toolbar, text="Undo", command=self.undo_last).pack(side="right", padx=4)
-        ttk.Button(toolbar, text="Copy selected → other pane", command=lambda: self.transfer(False)).pack(side="right", padx=4)
-        ttk.Button(toolbar, text="Move selected → other pane", command=lambda: self.transfer(True)).pack(side="right", padx=4)
-        ttk.Button(toolbar, text="Refresh", command=self.refresh).pack(side="right", padx=4)
+        ttk.Label(toolbar, text=self.tr("toolbar.guide")).pack(side="left")
+        ttk.Button(toolbar, text=self.tr("toolbar.undo"), command=self.undo_last).pack(side="right", padx=4)
+        ttk.Button(toolbar, text=self.tr("toolbar.copy"), command=lambda: self.transfer(False)).pack(side="right", padx=4)
+        ttk.Button(toolbar, text=self.tr("toolbar.move"), command=lambda: self.transfer(True)).pack(side="right", padx=4)
+        ttk.Button(toolbar, text=self.tr("toolbar.refresh"), command=self.refresh).pack(side="right", padx=4)
 
         workspace = tk.PanedWindow(
             self,
@@ -2922,14 +2958,14 @@ class MediaSorterApp(TkinterDnD.Tk):
             workspace, orient=tk.HORIZONTAL, sashwidth=3, sashrelief=tk.FLAT,
             showhandle=False, opaqueresize=True, bg="#a0a0a0", bd=0,
         )
-        self.left_preview = PreviewPane(self.preview_area, "Left preview", self.workload)
-        self.right_preview = PreviewPane(self.preview_area, "Right preview", self.workload)
+        self.left_preview = PreviewPane(self.preview_area, self.tr("pane.left") + " — " + self.tr("pane.preview"), self.workload)
+        self.right_preview = PreviewPane(self.preview_area, self.tr("pane.right") + " — " + self.tr("pane.preview"), self.workload)
         self.left_preview.disable()
         self.right_preview.disable()
         self.preview_area.add(self.left_preview, stretch="always", minsize=300)
         self.preview_area.add(self.right_preview, stretch="always", minsize=300)
-        self.left = FilePane(panes, "Left pane", left_path, self.set_active, self.transfer_from, self.left_preview.show_item, self.set_pane_preview, self.metadata_cache, left_state)
-        self.right = FilePane(panes, "Right pane", right_path, self.set_active, self.transfer_from, self.right_preview.show_item, self.set_pane_preview, self.metadata_cache, right_state)
+        self.left = FilePane(panes, self.tr("pane.left"), left_path, self.set_active, self.transfer_from, self.left_preview.show_item, self.set_pane_preview, self.metadata_cache, left_state, self.tr)
+        self.right = FilePane(panes, self.tr("pane.right"), right_path, self.set_active, self.transfer_from, self.right_preview.show_item, self.set_pane_preview, self.metadata_cache, right_state, self.tr)
         panes.add(self.left, stretch="always", minsize=350)
         panes.add(self.right, stretch="always", minsize=350)
         workspace.add(panes, stretch="always", minsize=400)
@@ -2948,70 +2984,85 @@ class MediaSorterApp(TkinterDnD.Tk):
         self.bind_all("<Delete>", self.keyboard_delete)
         self.bind_all("<Key-comma>", lambda event: self.keyboard_preview_jump(event, -0.10))
         self.bind_all("<Key-period>", lambda event: self.keyboard_preview_jump(event, 0.10))
+        self.reminder_state = record_successful_launch(self.reminder_state, date.today())
+        self.settings = merge_application_settings(self.settings, {"language": self.language_override}, self.reminder_state)
+        try:
+            save_json(self.settings_path, self.settings)
+        except OSError:
+            pass
+        self.after(1800, self.schedule_startup_reminder)
 
     def create_menu_bar(self):
         menu_bar = tk.Menu(self)
         file_menu = tk.Menu(menu_bar, tearoff=False)
-        file_menu.add_command(label="Browse active pane…", command=lambda: self.current_pane().choose_folder())
-        file_menu.add_command(label="Refresh", accelerator="F5", command=self.refresh)
-        file_menu.add_separator(); file_menu.add_command(label="Exit", command=self.close_app)
-        menu_bar.add_cascade(label="File", menu=file_menu)
+        file_menu.add_command(label=self.tr("menu.browse"), command=lambda: self.current_pane().choose_folder())
+        file_menu.add_command(label=self.tr("menu.refresh"), accelerator="F5", command=self.refresh)
+        file_menu.add_separator(); file_menu.add_command(label=self.tr("menu.exit"), command=self.close_app)
+        menu_bar.add_cascade(label=self.tr("menu.file"), menu=file_menu)
 
         edit_menu = tk.Menu(menu_bar, tearoff=False)
-        edit_menu.add_command(label="Copy", accelerator="Ctrl+C", command=lambda: self.copy_to_clipboard(False))
-        edit_menu.add_command(label="Cut", accelerator="Ctrl+X", command=lambda: self.copy_to_clipboard(True))
-        edit_menu.add_command(label="Paste", accelerator="Ctrl+V", command=self.paste_clipboard)
-        edit_menu.add_command(label="Undo", accelerator="Ctrl+Z", command=self.undo_last)
+        edit_menu.add_command(label=self.tr("menu.copy"), accelerator="Ctrl+C", command=lambda: self.copy_to_clipboard(False))
+        edit_menu.add_command(label=self.tr("menu.cut"), accelerator="Ctrl+X", command=lambda: self.copy_to_clipboard(True))
+        edit_menu.add_command(label=self.tr("menu.paste"), accelerator="Ctrl+V", command=self.paste_clipboard)
+        edit_menu.add_command(label=self.tr("menu.undo"), accelerator="Ctrl+Z", command=self.undo_last)
         edit_menu.add_separator()
-        edit_menu.add_command(label="Rename…", accelerator="F2", command=lambda: self.current_pane().rename_selected())
-        edit_menu.add_command(label="Batch rename selected…", command=self.batch_rename_selected)
-        edit_menu.add_command(label="Move to Recycle Bin / Trash", accelerator="Delete", command=self.delete_selected)
-        edit_menu.add_command(label="Select all shown", accelerator="Ctrl+A", command=lambda: self.current_pane().select_matching())
-        menu_bar.add_cascade(label="Edit", menu=edit_menu)
+        edit_menu.add_command(label=self.tr("menu.rename"), accelerator="F2", command=lambda: self.current_pane().rename_selected())
+        edit_menu.add_command(label=self.tr("menu.batch_rename"), command=self.batch_rename_selected)
+        edit_menu.add_command(label=self.tr("menu.delete"), accelerator="Delete", command=self.delete_selected)
+        edit_menu.add_command(label=self.tr("menu.select_all"), accelerator="Ctrl+A", command=lambda: self.current_pane().select_matching())
+        menu_bar.add_cascade(label=self.tr("menu.edit"), menu=edit_menu)
 
         view_menu = tk.Menu(menu_bar, tearoff=False)
-        view_menu.add_command(label="Details in active pane", command=lambda: self.current_pane().set_view_mode("Details"))
-        view_menu.add_command(label="Thumbnails in active pane", command=lambda: self.current_pane().set_view_mode("Thumbnails"))
+        view_menu.add_command(label=self.tr("menu.details"), command=lambda: self.current_pane().set_view_mode("Details"))
+        view_menu.add_command(label=self.tr("menu.thumbnails"), command=lambda: self.current_pane().set_view_mode("Thumbnails"))
         size_menu = tk.Menu(view_menu, tearoff=False)
         for size in ("Small", "Medium", "Large"):
             size_menu.add_command(label=size, command=lambda value=size: self.set_active_thumbnail_size(value))
-        view_menu.add_cascade(label="Thumbnail size", menu=size_menu)
-        view_menu.add_command(label="Configure columns…", command=lambda: self.current_pane().configure_columns())
-        view_menu.add_command(label="Appearance and text size…", command=self.appearance_controls)
+        view_menu.add_cascade(label=self.tr("menu.thumbnail_size"), menu=size_menu)
+        view_menu.add_command(label=self.tr("menu.columns"), command=lambda: self.current_pane().configure_columns())
+        view_menu.add_command(label=self.tr("menu.appearance"), command=self.appearance_controls)
         view_menu.add_separator()
-        view_menu.add_command(label="Refresh active pane", command=lambda: self.current_pane().refresh_browser())
-        view_menu.add_command(label="Refresh both panes", accelerator="F5", command=self.refresh)
-        view_menu.add_command(label="Go up", accelerator="Backspace", command=lambda: self.current_pane().go_up())
-        menu_bar.add_cascade(label="View", menu=view_menu)
+        view_menu.add_command(label=self.tr("menu.refresh_active"), command=lambda: self.current_pane().refresh_browser())
+        view_menu.add_command(label=self.tr("menu.refresh_both"), accelerator="F5", command=self.refresh)
+        view_menu.add_command(label=self.tr("menu.go_up"), accelerator="Backspace", command=lambda: self.current_pane().go_up())
+        menu_bar.add_cascade(label=self.tr("menu.view"), menu=view_menu)
 
         tools_menu = tk.Menu(menu_bar, tearoff=False)
-        tools_menu.add_command(label="Verify media integrity…", command=self.verify_media_integrity)
-        tools_menu.add_command(label="Create video contact sheet…", command=self.create_video_contact_sheet)
-        tools_menu.add_command(label="Export media report…", command=self.export_media_report)
-        tools_menu.add_command(label="View embedded metadata…", command=self.view_embedded_metadata)
-        tools_menu.add_command(label="Convert selected videos…", command=self.convert_selected_videos)
+        tools_menu.add_command(label=self.tr("menu.verify"), command=self.verify_media_integrity)
+        tools_menu.add_command(label=self.tr("menu.contact_sheet"), command=self.create_video_contact_sheet)
+        tools_menu.add_command(label=self.tr("menu.export_report"), command=self.export_media_report)
+        tools_menu.add_command(label=self.tr("menu.metadata"), command=self.view_embedded_metadata)
+        tools_menu.add_command(label=self.tr("menu.convert"), command=self.convert_selected_videos)
         tools_menu.add_separator()
-        tools_menu.add_command(label="Find duplicates…", command=self.find_duplicates)
-        tools_menu.add_command(label="Find visually similar images…", command=self.find_similar_images)
-        tools_menu.add_command(label="Compare selected…", command=self.compare_selected)
-        tools_menu.add_command(label="Compare / synchronize folders…", command=self.compare_folders)
+        tools_menu.add_command(label=self.tr("menu.duplicates"), command=self.find_duplicates)
+        tools_menu.add_command(label=self.tr("menu.similar"), command=self.find_similar_images)
+        tools_menu.add_command(label=self.tr("menu.compare"), command=self.compare_selected)
+        tools_menu.add_command(label=self.tr("menu.sync"), command=self.compare_folders)
         tools_menu.add_separator()
-        tools_menu.add_command(label="Save workspace…", command=self.save_workspace)
-        tools_menu.add_command(label="Load workspace…", command=self.load_workspace)
-        tools_menu.add_command(label="Save active smart collection…", command=self.save_smart_collection)
-        tools_menu.add_command(label="Manage smart collections…", command=self.manage_smart_collections)
-        tools_menu.add_command(label="Folder organization rules…", command=self.manage_folder_rules)
-        tools_menu.add_command(label="Cache and scanning…", command=self.cache_controls)
-        tools_menu.add_command(label="Transfer queue…", command=self.show_operation_window)
-        menu_bar.add_cascade(label="Tools", menu=tools_menu)
+        tools_menu.add_command(label=self.tr("menu.save_workspace"), command=self.save_workspace)
+        tools_menu.add_command(label=self.tr("menu.load_workspace"), command=self.load_workspace)
+        tools_menu.add_command(label=self.tr("menu.save_collection"), command=self.save_smart_collection)
+        tools_menu.add_command(label=self.tr("menu.manage_collections"), command=self.manage_smart_collections)
+        tools_menu.add_command(label=self.tr("menu.folder_rules"), command=self.manage_folder_rules)
+        tools_menu.add_command(label=self.tr("menu.cache"), command=self.cache_controls)
+        tools_menu.add_command(label=self.tr("menu.queue"), command=self.show_operation_window)
+        tools_menu.add_separator()
+        language_menu = tk.Menu(tools_menu, tearoff=False)
+        language_menu.add_command(label=self.tr("common.system_default"), command=lambda: self.choose_language("system"))
+        language_menu.add_separator()
+        for code, label in SUPPORTED_LANGUAGES.items():
+            language_menu.add_command(label=label, command=lambda value=code: self.choose_language(value))
+        tools_menu.add_cascade(label=self.tr("menu.language"), menu=language_menu)
+        tools_menu.add_command(label=self.tr("menu.reminders"), command=self.reminder_controls)
+        menu_bar.add_cascade(label=self.tr("menu.tools"), menu=tools_menu)
 
         help_menu = tk.Menu(menu_bar, tearoff=False)
-        help_menu.add_command(label="How to use Resolution File Manager", command=self.show_help)
-        help_menu.add_command(label="Keyboard shortcuts", command=self.show_shortcuts)
+        help_menu.add_command(label=self.tr("menu.how_to"), command=self.show_help)
+        help_menu.add_command(label=self.tr("menu.shortcuts"), command=self.show_shortcuts)
         help_menu.add_separator()
-        help_menu.add_command(label="☕ If you like this, buy John a coffee…", command=self.open_support_page)
-        help_menu.add_separator(); help_menu.add_command(label="About", command=self.show_about)
-        menu_bar.add_cascade(label="Help", menu=help_menu)
+        help_menu.add_command(label=self.tr("menu.coffee"), command=self.open_support_page)
+        help_menu.add_separator(); help_menu.add_command(label=self.tr("menu.about"), command=self.show_about)
+        menu_bar.add_cascade(label=self.tr("menu.help"), menu=help_menu)
         self.configure(menu=menu_bar)
 
     def open_support_page(self):
@@ -3019,20 +3070,114 @@ class MediaSorterApp(TkinterDnD.Tk):
             if not webbrowser.open_new_tab(SUPPORT_URL):
                 raise OSError("No web browser accepted the request")
         except (OSError, webbrowser.Error) as exc:
-            messagebox.showerror("Could not open support page", f"Open this address in your web browser:\n\n{SUPPORT_URL}\n\n{exc}", parent=self)
+            messagebox.showerror(self.tr("link.error_title"), self.tr("link.error_body", url=SUPPORT_URL, error=exc), parent=self)
 
     def show_about(self):
-        window = tk.Toplevel(self); window.title("About Resolution File Manager"); window.geometry("480x285"); window.resizable(False, False); window.transient(self); window.grab_set()
+        window = tk.Toplevel(self); window.title(self.tr("about.title")); window.geometry("480x285"); window.resizable(False, False); window.transient(self); window.grab_set()
         body = ttk.Frame(window, padding=18); body.pack(fill="both", expand=True)
         ttk.Label(body, text="Resolution File Manager", font=("Segoe UI", 16, "bold")).pack(anchor="center")
         ttk.Label(body, text=f"Version {APP_VERSION}", font=("Segoe UI", 10, "bold")).pack(anchor="center", pady=(3, 10))
-        ttk.Label(body, text="A cross-platform dual-pane application for browsing, previewing, analysing and organising image and video collections.", wraplength=430, justify="center").pack(fill="x")
-        support = ttk.LabelFrame(body, text="Support development", padding=10); support.pack(fill="x", pady=(16, 10))
-        ttk.Label(support, text="If Resolution File Manager is useful to you, you can buy John a coffee. Support is entirely optional.", wraplength=390, justify="center").pack(fill="x")
-        ttk.Button(support, text="☕ Buy John a coffee", command=self.open_support_page).pack(pady=(8, 0))
+        ttk.Label(body, text=self.tr("about.description"), wraplength=430, justify="center").pack(fill="x")
+        support = ttk.LabelFrame(body, text=self.tr("about.support"), padding=10); support.pack(fill="x", pady=(16, 10))
+        ttk.Label(support, text=self.tr("about.optional"), wraplength=390, justify="center").pack(fill="x")
+        ttk.Button(support, text="☕ " + self.tr("support.open"), command=self.open_support_page).pack(pady=(8, 0))
         ttk.Label(support, text=SUPPORT_URL).pack(pady=(4, 0))
-        ttk.Button(body, text="Close", command=window.destroy).pack()
+        ttk.Button(body, text=self.tr("common.close"), command=window.destroy).pack()
         window.bind("<Escape>", lambda _event: window.destroy())
+
+    def save_local_preferences(self):
+        self.settings = merge_application_settings(
+            self.settings,
+            {"language": self.language_override},
+            self.reminder_state,
+        )
+        save_json(self.settings_path, self.settings)
+
+    def choose_language(self, language: str):
+        self.language_override = language if language in SUPPORTED_LANGUAGES else "system"
+        try:
+            self.save_local_preferences()
+        except OSError:
+            pass
+        messagebox.showinfo(self.tr("common.restart_required"), self.tr("language.message"), parent=self)
+
+    def reminder_controls(self):
+        window = tk.Toplevel(self); window.title(self.tr("reminders.title")); window.geometry("520x240"); window.resizable(False, False); window.transient(self); window.grab_set()
+        body = ttk.Frame(window, padding=18); body.pack(fill="both", expand=True)
+        rating_enabled = tk.BooleanVar(value=not self.reminder_state["rating_disabled"])
+        support_enabled = tk.BooleanVar(value=not self.reminder_state["support_disabled"])
+        ttk.Checkbutton(body, text=self.tr("reminders.rating"), variable=rating_enabled).grid(row=0, column=0, sticky="w")
+        ttk.Label(body, text=self.tr("reminders.next", value=self.tr("common.launch", count=self.reminder_state["next_rating_launch"]))).grid(row=1, column=0, sticky="w", padx=(24, 0), pady=(2, 12))
+        ttk.Checkbutton(body, text=self.tr("reminders.support"), variable=support_enabled).grid(row=2, column=0, sticky="w")
+        ttk.Label(body, text=self.tr("reminders.next", value=self.tr("common.launch", count=self.reminder_state["next_support_launch"]))).grid(row=3, column=0, sticky="w", padx=(24, 0), pady=(2, 16))
+
+        def save():
+            if rating_enabled.get() == self.reminder_state["rating_disabled"]:
+                self.reminder_state = set_reminder_enabled(self.reminder_state, "rating", rating_enabled.get())
+            if support_enabled.get() == self.reminder_state["support_disabled"]:
+                self.reminder_state = set_reminder_enabled(self.reminder_state, "support", support_enabled.get())
+            try: self.save_local_preferences()
+            except OSError: pass
+            window.destroy()
+
+        buttons = ttk.Frame(body); buttons.grid(row=4, column=0, sticky="e")
+        ttk.Button(buttons, text=self.tr("common.save"), command=save).pack(side="left", padx=4)
+        ttk.Button(buttons, text=self.tr("common.cancel"), command=window.destroy).pack(side="left")
+        window.bind("<Escape>", lambda _event: window.destroy())
+
+    def schedule_startup_reminder(self):
+        if self.reminder_shown_this_launch or self.operation_running:
+            if self.operation_running:
+                self.after(1000, self.schedule_startup_reminder)
+            return
+        reminder = eligible_reminder(self.reminder_state)
+        if reminder:
+            self.reminder_shown_this_launch = True
+            self.show_reminder_dialog(reminder)
+
+    def show_reminder_dialog(self, reminder: str):
+        is_rating = reminder == "rating"
+        window = tk.Toplevel(self)
+        window.title(self.tr("rating.title" if is_rating else "support.title"))
+        window.geometry("560x250"); window.resizable(False, False); window.transient(self); window.grab_set()
+        body = ttk.Frame(window, padding=20); body.pack(fill="both", expand=True)
+        ttk.Label(body, text=self.tr("rating.title" if is_rating else "support.title"), font=("Segoe UI", 14, "bold")).pack(anchor="w")
+        ttk.Label(body, text=self.tr("rating.body" if is_rating else "support.body"), wraplength=510, justify="left").pack(fill="x", pady=(12, 20))
+
+        def choose(choice: str):
+            self.reminder_state = apply_reminder_choice(self.reminder_state, reminder, choice)
+            try: self.save_local_preferences()
+            except OSError: pass
+            window.destroy()
+            if reminder == "rating" and choice == "rate": self.open_store_page()
+            elif reminder == "support" and choice == "open": self.open_support_page()
+
+        buttons = ttk.Frame(body); buttons.pack(anchor="e")
+        primary = ("rating.rate", "rate") if is_rating else ("support.open", "open")
+        later = ("rating.later", "later") if is_rating else ("support.later", "later")
+        never = "rating.never" if is_rating else "support.never"
+        ttk.Button(buttons, text=self.tr(primary[0]), command=lambda: choose(primary[1])).pack(side="left", padx=4)
+        ttk.Button(buttons, text=self.tr(later[0]), command=lambda: choose(later[1])).pack(side="left", padx=4)
+        ttk.Button(buttons, text=self.tr(never), command=lambda: choose("never")).pack(side="left", padx=4)
+        window.protocol("WM_DELETE_WINDOW", lambda: choose("close"))
+        window.bind("<Escape>", lambda _event: choose("close"))
+
+    def open_store_page(self):
+        store_uri, web_url = microsoft_store_destinations()
+        errors = []
+        if sys.platform == "win32":
+            try:
+                os.startfile(store_uri)
+                return
+            except OSError as exc:
+                errors.append(str(exc))
+        try:
+            if webbrowser.open_new_tab(web_url):
+                return
+            raise OSError("No web browser accepted the request")
+        except (OSError, webbrowser.Error) as exc:
+            errors.append(str(exc))
+        messagebox.showerror(self.tr("link.error_title"), self.tr("link.error_body", url=web_url, error="; ".join(errors)), parent=self)
 
     def set_active_thumbnail_size(self, size: str):
         pane = self.current_pane(); pane.thumbnail_size_var.set(size); pane.render_thumbnail_grid()
@@ -3110,7 +3255,7 @@ class MediaSorterApp(TkinterDnD.Tk):
     def close_app(self):
         self.operation_cancel.set()
         try:
-            settings = {
+            updates = {
                 "geometry": self.geometry(),
                 "browser_split": self.browser_panes.sash_coord(0)[0],
                 "preview_split": self.current_preview_split(),
@@ -3123,7 +3268,9 @@ class MediaSorterApp(TkinterDnD.Tk):
                 "left": self.left.get_state(),
                 "right": self.right.get_state(),
             }
-            save_json(self.settings_path, settings)
+            self.settings = merge_application_settings(self.settings, updates, self.reminder_state)
+            self.settings["language"] = self.language_override
+            save_json(self.settings_path, self.settings)
             self.metadata_cache.save()
         except (OSError, tk.TclError):
             pass
@@ -5153,13 +5300,13 @@ class MediaSorterApp(TkinterDnD.Tk):
         messagebox.showinfo("Keyboard shortcuts", "Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file")
 
     def show_help(self):
-        window = tk.Toplevel(self); window.title(f"Resolution File Manager Help — {APP_VERSION}"); window.geometry("1100x740"); window.minsize(820, 540)
+        window = tk.Toplevel(self); window.title(self.tr("help.title", version=APP_VERSION)); window.geometry("1100x740"); window.minsize(820, 540)
         window.transient(self)
         header = ttk.Frame(window, padding=(12, 10)); header.pack(fill="x")
-        ttk.Label(header, text="Resolution File Manager Help", font=("Segoe UI", 15, "bold")).pack(side="left")
+        ttk.Label(header, text=self.tr("help.title", version=APP_VERSION), font=("Segoe UI", 15, "bold")).pack(side="left")
         search_var = tk.StringVar(); search_entry = ttk.Entry(header, textvariable=search_var, width=34)
-        search_button = ttk.Button(header, text="Search")
-        search_button.pack(side="right", padx=(5, 0)); search_entry.pack(side="right", padx=(6, 0)); ttk.Label(header, text="Search all chapters:").pack(side="right")
+        search_button = ttk.Button(header, text=self.tr("pane.find").rstrip(":"))
+        search_button.pack(side="right", padx=(5, 0)); search_entry.pack(side="right", padx=(6, 0)); ttk.Label(header, text=self.tr("help.search")).pack(side="right")
         body = ttk.Panedwindow(window, orient="horizontal"); body.pack(fill="both", expand=True, padx=12)
         contents_frame = ttk.Frame(body, padding=(0, 0, 8, 0)); reader_frame = ttk.Frame(body)
         body.add(contents_frame, weight=0); body.add(reader_frame, weight=1)
@@ -5333,6 +5480,7 @@ Smart Collection: A saved view definition containing a location, filters, sortin
                 continue
             end = matches[index + 1].start() if index + 1 < len(matches) else len(guide)
             chapters.append((title, guide[match.end():end].strip()))
+        chapters = self.translator.help_chapters() or chapters
         visible_chapters = list(range(len(chapters))); current = {"chapter": 0, "match": 0}
         status_var = tk.StringVar(value=f"{len(chapters)} chapters · Resolution File Manager {APP_VERSION}")
 
@@ -5398,11 +5546,11 @@ Smart Collection: A saved view definition containing a location, filters, sortin
         chapter_list.bind("<<ListboxSelect>>", chapter_selected); search_entry.bind("<Return>", search_help); window.bind("<F3>", lambda _event: next_match()); window.bind("<Escape>", lambda _event: window.destroy())
         controls = ttk.Frame(window, padding=(12, 8)); controls.pack(fill="x")
         ttk.Label(controls, textvariable=status_var).pack(side="left", fill="x", expand=True)
-        ttk.Button(controls, text="Previous chapter", command=lambda: step_chapter(-1)).pack(side="left", padx=3)
-        ttk.Button(controls, text="Next chapter", command=lambda: step_chapter(1)).pack(side="left", padx=3)
-        ttk.Button(controls, text="Next match (F3)", command=next_match).pack(side="left", padx=3)
-        ttk.Button(controls, text="Clear search", command=clear_search).pack(side="left", padx=3)
-        ttk.Button(controls, text="Close", command=window.destroy).pack(side="left", padx=(8, 0))
+        ttk.Button(controls, text=self.tr("help.previous"), command=lambda: step_chapter(-1)).pack(side="left", padx=3)
+        ttk.Button(controls, text=self.tr("help.next"), command=lambda: step_chapter(1)).pack(side="left", padx=3)
+        ttk.Button(controls, text=self.tr("help.next_match"), command=next_match).pack(side="left", padx=3)
+        ttk.Button(controls, text=self.tr("help.clear"), command=clear_search).pack(side="left", padx=3)
+        ttk.Button(controls, text=self.tr("common.close"), command=window.destroy).pack(side="left", padx=(8, 0))
         fill_contents(); show_chapter(0); search_entry.focus_set()
 
 

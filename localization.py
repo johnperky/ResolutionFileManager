@@ -24,10 +24,17 @@ def normalise_locale(value: str | None) -> str:
         return "en"
     cleaned = str(value).split(".", 1)[0].replace("_", "-").strip()
     lowered = cleaned.casefold()
-    if lowered.startswith("zh"):
+    aliases = {
+        "english": "en", "chinese": "zh-CN", "dutch": "nl",
+        "french": "fr", "german": "de", "japanese": "ja",
+        "korean": "ko", "russian": "ru", "spanish": "es",
+    }
+    if lowered.startswith("zh") or lowered.startswith("chinese"):
         return "zh-CN"
     base = lowered.split("-", 1)[0]
-    return base if base in SUPPORTED_LANGUAGES else "en"
+    if base in SUPPORTED_LANGUAGES:
+        return base
+    return next((code for name, code in aliases.items() if base.startswith(name)), "en")
 
 
 def select_language(saved: str | None, system_locale: str | None) -> str:
