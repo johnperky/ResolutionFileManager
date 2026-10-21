@@ -1,22 +1,13 @@
-# Screenshot continuation — 21 October 2026
+# Screenshot checkpoint — 21 October 2026
 
-- Current Windows review version: 12.7.8. Read `LAYOUT_REVIEW_CHECKPOINT.md` and verify its exact hashes/readiness first.
-- Capture root: `F:/Resolution File Manager project/Store Preparation 12.7.8/Screenshots E Drive`.
-- Completed: **one Arabic `01-details-info` capture**, visually reviewed, genuine maximized 1920 x 1032 native image, actual PNG/pixel/dimension validation passed. Zero complete language sets. **171 of 172 views remain.**
-- `capture-progress.json` records selected originals; `validation.json` gives exact missing views; `REVIEW.html` shows selected captures. Original JPEG and identical-pixel PNG are both retained.
-- Old 12.7.5 English/Arabic/German sets remain untouched. The 12.7.6 diagnostic dual-preview image is excluded because it exposed Info clipping; its bytes remain preserved. New UI fixes/version titles require final-version captures; never relabel old screenshots.
-- 11:10 work was delayed by additional layout fixes and verification. Continuation is scheduled for **11:45 Europe/London today**. No upload/submission/public release yet.
+captureComplete: true
+visualReviewComplete: true
+readyForStoreImport: false
+readyForRelease: false
 
-## Exact resume state
-
-An isolated Arabic 12.7.8 review app is open, maximized, main Details/Info view, no modal or conversion running. Right wildlife/landscape video is selected and populated Info is visible. Left list is duration sorted; snowy wildlife clip `19784079-hd_1080_1918_60fps.mp4` is visible near row y924. Coordinate hints are not permission to replay blindly: inspect each fresh native screenshot.
-
-In a Computer Use node session, import `tools/store_capture_session.mjs`; create the session with the root above and version `12.7.8`. `select()` observes the current binary; `act(method,args)` performs one observed action then refreshes, passing its current screenshot ID. `save(code,layout,{reviewed:true})` preserves earlier captures. Do not overwrite the completed Arabic Info shot.
-
-Four required views per language: Details/Info, two distinct previews, varied suitable thumbnails, conversion options with selected actual videos (never Start). Use only E: sample folders. UI control positions vary by language. Existing helper is not an unattended all-language robot. Stop and checkpoint any new clipping instead of saving it as reviewed.
-
-Before changing language settings, close only the isolated review app; then run the established launcher with the requested language. Choose E: Demo Media for conservative nature/architecture thumbnail content where appropriate. Do not modify sample files.
-
-Run `python tools/validate_store_captures.py "F:/Resolution File Manager project/Store Preparation 12.7.8/Screenshots E Drive"` to normalise/validate native images in a batch. It preserves original pixels/resolution and writes completeness/index files. Capture count is not native linguistic sign-off; inspect every actual view.
-
-Release remains blocked until native visual review, screenshot sets, tests and matching release assets are complete. No Store work is authorised beyond local preparation.
+- **172 final PNG candidates / 43 complete language sets**, four views each, 1920×1032. Integrity checks and gallery/control/preview review complete. Exact scope, hashes and binary evidence: `STORE_SCREENSHOT_REVIEW_12.7.8.md`.
+- Current root: `F:/Resolution File Manager project/Store Preparation 12.7.8/Batch Candidates v2`. Read `visual-review.json`, `run-status.json`, `review-evidence/integrity.json`; open `REVIEW.html` for the gallery.
+- Captures use native UI source matched to six embedded modules and 43 locales in the exact review EXE; they are not packaged-process captures. Binary spot checks include the existing Arabic four views and a fresh English packaged-process diagnostic.
+- Focus/notification handling and paused frame/time staging were repaired. The contaminated Bengali image and all replaced preview originals remain under `rejected/`. No app code/build change, media operation or conversion occurred.
+- Packaged-process Arabic originals remain in `Screenshots E Drive`; older 12.7.5/12.7.6 captures are preserved. Default future method: `Capture Store Screenshots.cmd`; see `BATCH_SCREENSHOTS.md`. Manual screenshot automation was deleted; batch children have finished.
+- Remaining: broader native release QA beyond these four views, matching release/package assets, final release checks and authorised Store listing/import work. No Store submission, GitHub binary publication or Linux release performed.

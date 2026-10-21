@@ -3,7 +3,9 @@
 readyForScreenshots: true
 readyForRelease: false
 
-Version: 12.7.8 Windows review build. Ready to resume inspected capture, not exhaustive native visual sign-off. Review each remaining locale/view during capture; stop on a new demonstrated issue. Release remains blocked by incomplete native review/screenshots and release packaging.
+Screenshot update: **172 final candidates / 43 complete sets** now pass integrity checks and four-view visual review. See `STORE_SCREENSHOT_REVIEW_12.7.8.md` for exact hashes and scope. New captures use matching source native UI; packaged-binary checks include the existing Arabic four views and a fresh English process diagnostic. Broader native release QA beyond these four views remains incomplete, so `readyForRelease` stays false. The manual screenshot automation was deleted; retain the local batch workflow.
+
+Version: 12.7.8 Windows review build. Screenshot-view review is complete; exhaustive native resizing/dialog/theme/scaling review and release packaging remain outstanding.
 
 ## Exact reviewed baseline
 
@@ -26,14 +28,14 @@ Version: 12.7.8 Windows review build. Ready to resume inspected capture, not exh
 ## Actual native coverage and remaining review
 
 - Final 12.7.8 Arabic main, populated Info, preview-shortened Info (actions visible), scroll to final metadata, and conversion dialog inspected through native UI. Intermediate 12.7.6 German main/Info/conversion inspected. This is not full native review of every language, screen, theme or scaling level.
-- Screenshot/native review is incomplete: final 12.7.8 has **one selected Arabic Info capture**, true PNG/pixel/dimension validated; zero complete language sets. Capture-time inspection must cover remaining views and locales. Do not equate automated completeness with linguistic approval.
+- Four-view screenshot review is complete for all 43 source-native locales; automated completeness was supplemented by actual image review. Professional translation proofreading and broader release QA are not implied. The separate packaged-process set contains four Arabic views.
 - Preserve all older native captures. 12.7.5 has 12 captures/three sets; 12.7.6 has one selected Info capture and an excluded dual-preview diagnostic original. Do not relabel old images as current.
-- Current isolated final Arabic app is open, maximized, main/Info view, no modal/conversion running. Resume via the capture helper; close only this isolated instance if launcher settings must change.
+- Batch children have finished. The earlier isolated English packaged review app remains open; do not change personal settings or confuse it with a batch child.
 
 ## Resume and publication gates
 
-- Final capture root: `F:/Resolution File Manager project/Store Preparation 12.7.8/Screenshots E Drive`.
-- Use `store_capture_session.mjs`, `launch_store_review.ps1`, `validate_store_captures.py`; helper now supplies fresh native screenshot IDs. Validator keeps historical version titles from the preparation folder.
-- Screenshot continuation requeued for **11:45 Europe/London today** because the 11:10 run found/fixed additional layout defects. Need 43 final-version sets (172 views total), with 171 views still missing at this checkpoint.
+- Final candidate root: `F:/Resolution File Manager project/Store Preparation 12.7.8/Batch Candidates v2`; exact reviewed images in `visual-review.json`, gallery in `REVIEW.html`.
+- Use `Capture Store Screenshots.cmd` / `batch_store_screenshots.py` and `review_batch_candidates.py`; preserve the older manual capture tools for binary spot checks. No remaining scheduled manual capture run.
+- All 172 screenshot candidates are captured and reviewed. Capture-tool failures and replacements are recorded in the screenshot review document; no application edits/rebuild were needed for that work.
 - No GitHub binary release, Store upload/submission, Linux build or publication. Conditional release follow-up must wait for finished native review, validated captures and matching release assets.
 - Verified pre-edit source snapshots/ZIPs: `Recovery Backups/2026-10-21-before-layout-review/source` (294 files) and `2026-10-21-before-info-height-fix/source` (307 files), beneath the F: project parent. Earlier versioned binaries retained.
