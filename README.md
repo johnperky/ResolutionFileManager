@@ -2,7 +2,7 @@
 
 A dual-pane media file manager with shared Windows/Linux source that scans images and videos, displays technical metadata, sorts and filters large collections, previews content, and performs reviewable file-management and conversion workflows. Linux binaries require a compatible Linux environment; see LINUX_INSTALL.txt for dependencies and test limitations.
 
-Current Windows development/review version: 12.7.5. Latest verified Linux binary: 12.6.1; it has not been rebuilt for the latest changes. Read PROJECT_STATUS.md first for current verification, known issues and remaining release work.
+Current Windows development/review version: 12.7.8. Latest verified Linux binary: 12.6.1; it has not been rebuilt for the latest changes. Read PROJECT_STATUS.md first for current verification, known issues and remaining release work.
 
 The maintained development source is the established F: project directory. See DEVELOPMENT_WORKFLOW.md for complete verified snapshots, Git preparation, shared-source builds and preservation of older releases. The authoritative detailed English manual is docs/help/ENGLISH_MANUAL.md; Help completeness is checked before builds. See docs/RECOVERY_REPORT_2026-10-19.md for actual verification status.
 

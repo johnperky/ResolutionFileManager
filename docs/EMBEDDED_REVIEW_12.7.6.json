@@ -1,0 +1,11 @@
+{
+  "binary": "dist\\multilingual-review-12.7.6\\ResolutionFileManager-v12.7.6-Multilingual-Review.exe",
+  "sha256": "a7b7fca25e8172f3a882806654f465053f31425474da83455d89dd16f0a6d81f",
+  "exact_source_modules": [
+    "media_sorter",
+    "transfer_engine",
+    "transfer_ui"
+  ],
+  "embedded_locales": 43,
+  "english_help_matches_source": true
+}

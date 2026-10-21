@@ -1,0 +1,178 @@
+[
+  {
+    "language": "en",
+    "passed": true
+  },
+  {
+    "language": "zh-CN",
+    "passed": true
+  },
+  {
+    "language": "nl",
+    "passed": true
+  },
+  {
+    "language": "fr",
+    "passed": false,
+    "error": "Traceback (most recent call last):\n  File \"F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\tools\\review_inspector_layout.py\", line 46, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'ar')))\n                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\tools\\review_inspector_layout.py\", line 36, in check\n    assert bounds[0]<=bounds[1], f'Info action exceeds browser bottom: {bounds}'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Info action exceeds browser bottom: (783, 780)\n"
+  },
+  {
+    "language": "de",
+    "passed": true
+  },
+  {
+    "language": "ja",
+    "passed": false,
+    "error": "Traceback (most recent call last):\n  File \"F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\tools\\review_inspector_layout.py\", line 46, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'ar')))\n                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\tools\\review_inspector_layout.py\", line 36, in check\n    assert bounds[0]<=bounds[1], f'Info action exceeds browser bottom: {bounds}'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Info action exceeds browser bottom: (627, 624)\n"
+  },
+  {
+    "language": "ko",
+    "passed": true
+  },
+  {
+    "language": "ru",
+    "passed": true
+  },
+  {
+    "language": "es",
+    "passed": true
+  },
+  {
+    "language": "sv",
+    "passed": false,
+    "error": "Traceback (most recent call last):\n  File \"F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\tools\\review_inspector_layout.py\", line 46, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'ar')))\n                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\tools\\review_inspector_layout.py\", line 36, in check\n    assert bounds[0]<=bounds[1], f'Info action exceeds browser bottom: {bounds}'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Info action exceeds browser bottom: (601, 598)\n"
+  },
+  {
+    "language": "bg",
+    "passed": true
+  },
+  {
+    "language": "th",
+    "passed": true
+  },
+  {
+    "language": "id",
+    "passed": true
+  },
+  {
+    "language": "el",
+    "passed": true
+  },
+  {
+    "language": "fil",
+    "passed": true
+  },
+  {
+    "language": "hi",
+    "passed": true
+  },
+  {
+    "language": "pl",
+    "passed": true
+  },
+  {
+    "language": "it",
+    "passed": true
+  },
+  {
+    "language": "ar",
+    "passed": true
+  },
+  {
+    "language": "vi",
+    "passed": true
+  },
+  {
+    "language": "uk",
+    "passed": true
+  },
+  {
+    "language": "no",
+    "passed": true
+  },
+  {
+    "language": "fi",
+    "passed": true
+  },
+  {
+    "language": "da",
+    "passed": true
+  },
+  {
+    "language": "hu",
+    "passed": true
+  },
+  {
+    "language": "ro",
+    "passed": true
+  },
+  {
+    "language": "cs",
+    "passed": true
+  },
+  {
+    "language": "pt-PT",
+    "passed": true
+  },
+  {
+    "language": "pt-BR",
+    "passed": true
+  },
+  {
+    "language": "tr",
+    "passed": true
+  },
+  {
+    "language": "zh-TW",
+    "passed": true
+  },
+  {
+    "language": "ms",
+    "passed": true
+  },
+  {
+    "language": "he",
+    "passed": true
+  },
+  {
+    "language": "bn",
+    "passed": true
+  },
+  {
+    "language": "ur",
+    "passed": true
+  },
+  {
+    "language": "fa",
+    "passed": true
+  },
+  {
+    "language": "sk",
+    "passed": true
+  },
+  {
+    "language": "hr",
+    "passed": true
+  },
+  {
+    "language": "sr",
+    "passed": true
+  },
+  {
+    "language": "ca",
+    "passed": true
+  },
+  {
+    "language": "et",
+    "passed": true
+  },
+  {
+    "language": "lv",
+    "passed": false,
+    "error": "Traceback (most recent call last):\n  File \"F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\tools\\review_inspector_layout.py\", line 46, in <module>\n    print(json.dumps(check(sys.argv[1] if len(sys.argv)>1 else 'ar')))\n                     ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\tools\\review_inspector_layout.py\", line 36, in check\n    assert bounds[0]<=bounds[1], f'Info action exceeds browser bottom: {bounds}'\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError: Info action exceeds browser bottom: (679, 676)\n"
+  },
+  {
+    "language": "lt",
+    "passed": true
+  }
+]

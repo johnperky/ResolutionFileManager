@@ -26,8 +26,12 @@ export async function createCaptureSession(root, version='12.7.4') {
   async function act(method,args) {
     if(!state) throw Error('Observe the current window before acting');
     if(!['click','press_key','type_text','drag','scroll'].includes(method)) throw Error('Unsupported input');
-    const current=window;state=null;
-    await sky[method]({...args,window:current});
+    const current=window;
+    const screenshotId=state.screenshots?.[0]?.id;
+    state=null;
+    const coordinates=['click','drag','scroll'].includes(method);
+    if(coordinates && screenshotId==null) throw Error('Observe a fresh native screenshot before coordinate input');
+    await sky[method]({...args,window:current,...(coordinates?{screenshotId}:{})});
     return observe();
   }
   async function save(language,name,{reviewed=false}={}) {

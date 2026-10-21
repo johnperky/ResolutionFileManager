@@ -349,6 +349,11 @@ class UpgradePaneMixin:
 
     def fit_inspector_content(self,_event=None):
         available=max(80,self.inspector_frame.winfo_width()-16)
+        details=getattr(self,'inspector_details_text',None)
+        if details is not None:
+            style=ttk.Style(self)
+            details.configure(background=style.lookup('TLabel','background') or self.winfo_toplevel().cget('background'),
+                              foreground=style.lookup('TLabel','foreground') or 'black')
         for widget in self.inspector_frame.winfo_children():
             if isinstance(widget,ttk.Label): widget.configure(wraplength=available)
         x=y=row_height=0

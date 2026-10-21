@@ -1,0 +1,2033 @@
+[
+  {
+    "language": "en",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (compatible)",
+          "H.265 MP4 (smaller)",
+          "AV1 MKV (smallest)",
+          "720p H.264 proxy",
+          "Remux to MKV (no re-encoding)"
+        ],
+        "required": 199,
+        "actual": 209
+      },
+      {
+        "values": [
+          "Keep source resolution",
+          "1080p",
+          "720p"
+        ],
+        "required": 148,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automatic (recommended)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 173,
+        "actual": 173
+      },
+      {
+        "values": [
+          "Skip existing",
+          "Keep both"
+        ],
+        "required": 93,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "zh-CN",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4（兼容）",
+          "H.265 MP4（更小）",
+          "AV1 MKV（最小）",
+          "720p H.264 代理",
+          "重新封装为 MKV（不重新编码）"
+        ],
+        "required": 200,
+        "actual": 209
+      },
+      {
+        "values": [
+          "保持源分辨率",
+          "1080p",
+          "720p"
+        ],
+        "required": 100,
+        "actual": 167
+      },
+      {
+        "values": [
+          "自动（推荐）",
+          "软件 / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 113,
+        "actual": 167
+      },
+      {
+        "values": [
+          "跳过现有的",
+          "两者都保留"
+        ],
+        "required": 88,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "nl",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (compatibel)",
+          "H.265 MP4 (kleiner)",
+          "AV1 MKV (kleinst)",
+          "720p H.264-proxy",
+          "Remux naar MKV (zonder hercodering)"
+        ],
+        "required": 232,
+        "actual": 239
+      },
+      {
+        "values": [
+          "Bronresolutie behouden",
+          "1080p",
+          "720p"
+        ],
+        "required": 155,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automatisch (aanbevolen)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 168,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Bestaande overslaan",
+          "Bewaar beide"
+        ],
+        "required": 135,
+        "actual": 143
+      }
+    ]
+  },
+  {
+    "language": "fr",
+    "passed": false,
+    "failures": [
+      "choice clipped: 'Automatique (recommandé)': 179 < 180"
+    ],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "MP4 H.264 (compatible)",
+          "MP4 H.265 (plus petit)",
+          "MKV AV1 (le plus petit)",
+          "Proxy H.264 720p",
+          "Remuxer en MKV (sans réencodage)"
+        ],
+        "required": 217,
+        "actual": 227
+      },
+      {
+        "values": [
+          "Conserver la résolution source",
+          "1080p",
+          "720p"
+        ],
+        "required": 187,
+        "actual": 215
+      },
+      {
+        "values": [
+          "Automatique (recommandé)",
+          "Logiciel / processeur",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 180,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Ignorer l'existant",
+          "Gardez les deux"
+        ],
+        "required": 115,
+        "actual": 125
+      }
+    ]
+  },
+  {
+    "language": "de",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264-MP4 (kompatibel)",
+          "H.265-MP4 (kleiner)",
+          "AV1-MKV (kleinste Datei)",
+          "720p-H.264-Proxy",
+          "In MKV umpacken (ohne Neucodierung)"
+        ],
+        "required": 242,
+        "actual": 251
+      },
+      {
+        "values": [
+          "Quellauflösung beibehalten",
+          "1080p",
+          "720p"
+        ],
+        "required": 174,
+        "actual": 191
+      },
+      {
+        "values": [
+          "Automatisch (empfohlen)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 165,
+        "actual": 173
+      },
+      {
+        "values": [
+          "Vorhandenes überspringen",
+          "Behalte beides"
+        ],
+        "required": 170,
+        "actual": 179
+      }
+    ]
+  },
+  {
+    "language": "ja",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4（互換）",
+          "H.265 MP4（小容量）",
+          "AV1 MKV（最小容量）",
+          "720p H.264 プロキシ",
+          "MKVへリマックス（再エンコードなし）"
+        ],
+        "required": 245,
+        "actual": 257
+      },
+      {
+        "values": [
+          "元の解像度を維持",
+          "1080p",
+          "720p"
+        ],
+        "required": 124,
+        "actual": 167
+      },
+      {
+        "values": [
+          "自動（推奨）",
+          "ソフトウェア / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 134,
+        "actual": 167
+      },
+      {
+        "values": [
+          "既存をスキップする",
+          "両方とも保管しておいてください"
+        ],
+        "required": 208,
+        "actual": 215
+      }
+    ]
+  },
+  {
+    "language": "ko",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4(호환)",
+          "H.265 MP4(더 작게)",
+          "AV1 MKV(가장 작게)",
+          "720p H.264 프록시",
+          "MKV로 리먹스(재인코딩 없음)"
+        ],
+        "required": 187,
+        "actual": 203
+      },
+      {
+        "values": [
+          "원본 해상도 유지",
+          "1080p",
+          "720p"
+        ],
+        "required": 118,
+        "actual": 167
+      },
+      {
+        "values": [
+          "자동(권장)",
+          "소프트웨어 / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 122,
+        "actual": 167
+      },
+      {
+        "values": [
+          "기존 건너뛰기",
+          "둘 다 유지"
+        ],
+        "required": 103,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "ru",
+    "passed": false,
+    "failures": [
+      "choice clipped: 'Сохранить исходное разрешение': 209 < 211"
+    ],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (совместимый)",
+          "H.265 MP4 (меньше)",
+          "AV1 MKV (наименьший)",
+          "Прокси H.264 720p",
+          "Ремукс в MKV (без перекодирования)"
+        ],
+        "required": 235,
+        "actual": 245
+      },
+      {
+        "values": [
+          "Сохранить исходное разрешение",
+          "1080p",
+          "720p"
+        ],
+        "required": 211,
+        "actual": 209
+      },
+      {
+        "values": [
+          "Автоматически (рекомендуется)",
+          "Программно / ЦП",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 207,
+        "actual": 209
+      },
+      {
+        "values": [
+          "Пропустить существующие",
+          "Держите оба"
+        ],
+        "required": 182,
+        "actual": 191
+      }
+    ]
+  },
+  {
+    "language": "es",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "MP4 H.264 (compatible)",
+          "MP4 H.265 (más pequeño)",
+          "MKV AV1 (el más pequeño)",
+          "Proxy H.264 720p",
+          "Remultiplexar a MKV (sin recodificar)"
+        ],
+        "required": 222,
+        "actual": 233
+      },
+      {
+        "values": [
+          "Mantener la resolución de origen",
+          "1080p",
+          "720p"
+        ],
+        "required": 202,
+        "actual": 227
+      },
+      {
+        "values": [
+          "Automático (recomendado)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 176,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Saltar existente",
+          "Mantenga ambos"
+        ],
+        "required": 121,
+        "actual": 131
+      }
+    ]
+  },
+  {
+    "language": "sv",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (kompatibel)",
+          "H.265 MP4 (mindre)",
+          "AV1 MKV (minst)",
+          "720p H.264-proxy",
+          "Remuxa till MKV (utan omkodning)"
+        ],
+        "required": 214,
+        "actual": 221
+      },
+      {
+        "values": [
+          "Behåll källupplösning",
+          "1080p",
+          "720p"
+        ],
+        "required": 141,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automatiskt (rekommenderas)",
+          "Programvara / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 190,
+        "actual": 197
+      },
+      {
+        "values": [
+          "Hoppa över befintliga",
+          "Behåll båda"
+        ],
+        "required": 143,
+        "actual": 155
+      }
+    ]
+  },
+  {
+    "language": "bg",
+    "passed": false,
+    "failures": [
+      "choice clipped: 'Автоматично (препоръчително)': 203 < 207"
+    ],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (съвместим)",
+          "H.265 MP4 (по-малък)",
+          "AV1 MKV (най-малък)",
+          "720p H.264 прокси",
+          "Ремуксиране в MKV (без прекодиране)"
+        ],
+        "required": 242,
+        "actual": 251
+      },
+      {
+        "values": [
+          "Запазване на изходната резолюция",
+          "1080p",
+          "720p"
+        ],
+        "required": 222,
+        "actual": 227
+      },
+      {
+        "values": [
+          "Автоматично (препоръчително)",
+          "Софтуер / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 207,
+        "actual": 203
+      },
+      {
+        "values": [
+          "Пропусни съществуващите",
+          "Запази и двете"
+        ],
+        "required": 181,
+        "actual": 191
+      }
+    ]
+  },
+  {
+    "language": "th",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (เข้ากันได้)",
+          "H.265 MP4 (เล็กกว่า)",
+          "AV1 MKV (เล็กที่สุด)",
+          "พร็อกซี H.264 720p",
+          "รีมัคซ์เป็น MKV (ไม่เข้ารหัสใหม่)"
+        ],
+        "required": 174,
+        "actual": 203
+      },
+      {
+        "values": [
+          "คงความละเอียดต้นฉบับ",
+          "1080p",
+          "720p"
+        ],
+        "required": 131,
+        "actual": 167
+      },
+      {
+        "values": [
+          "อัตโนมัติ (แนะนำ)",
+          "ซอฟต์แวร์ / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 113,
+        "actual": 167
+      },
+      {
+        "values": [
+          "ข้ามไฟล์ที่มีอยู่แล้ว",
+          "เก็บทั้งสอง"
+        ],
+        "required": 109,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "id",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (kompatibel)",
+          "H.265 MP4 (lebih kecil)",
+          "AV1 MKV (paling kecil)",
+          "Proksi H.264 720p",
+          "Remux ke MKV (tanpa enkode ulang)"
+        ],
+        "required": 223,
+        "actual": 233
+      },
+      {
+        "values": [
+          "Pertahankan resolusi sumber",
+          "1080p",
+          "720p"
+        ],
+        "required": 180,
+        "actual": 197
+      },
+      {
+        "values": [
+          "Otomatis (disarankan)",
+          "Perangkat lunak / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 147,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Lewati yang sudah ada",
+          "Simpan keduanya"
+        ],
+        "required": 148,
+        "actual": 155
+      }
+    ]
+  },
+  {
+    "language": "el",
+    "passed": false,
+    "failures": [
+      "choice clipped: 'Διατήρηση ανάλυσης πηγής': 179 < 180"
+    ],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (συμβατό)",
+          "H.265 MP4 (μικρότερο)",
+          "AV1 MKV (μικρότερο)",
+          "Διαμεσολαβητής H.264 720p",
+          "Επαναποθήκευση σε MKV (χωρίς επανακωδικοποίηση)"
+        ],
+        "required": 325,
+        "actual": 335
+      },
+      {
+        "values": [
+          "Διατήρηση ανάλυσης πηγής",
+          "1080p",
+          "720p"
+        ],
+        "required": 180,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Αυτόματα (συνιστάται)",
+          "Λογισμικό / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 153,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Παράβλεψη υπαρχόντων",
+          "Διατήρηση και των δύο"
+        ],
+        "required": 166,
+        "actual": 173
+      }
+    ]
+  },
+  {
+    "language": "fil",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (compatible)",
+          "H.265 MP4 (mas maliit)",
+          "AV1 MKV (pinakamaliit)",
+          "720p H.264 proxy",
+          "I-remux sa MKV (walang muling pag-encode)"
+        ],
+        "required": 268,
+        "actual": 275
+      },
+      {
+        "values": [
+          "Panatilihin ang resolution ng source",
+          "1080p",
+          "720p"
+        ],
+        "required": 218,
+        "actual": 227
+      },
+      {
+        "values": [
+          "Awtomatiko (inirerekomenda)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 187,
+        "actual": 197
+      },
+      {
+        "values": [
+          "Laktawan ang umiiral na",
+          "Panatilihin ang dalawa"
+        ],
+        "required": 157,
+        "actual": 167
+      }
+    ]
+  },
+  {
+    "language": "hi",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (संगत)",
+          "H.265 MP4 (छोटा)",
+          "AV1 MKV (सबसे छोटा)",
+          "720p H.264 प्रॉक्सी",
+          "MKV में रीमक्स (पुनः एन्कोडिंग नहीं)"
+        ],
+        "required": 193,
+        "actual": 203
+      },
+      {
+        "values": [
+          "स्रोत रिज़ॉल्यूशन रखें",
+          "1080p",
+          "720p"
+        ],
+        "required": 119,
+        "actual": 167
+      },
+      {
+        "values": [
+          "स्वचालित (अनुशंसित)",
+          "सॉफ़्टवेयर / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 126,
+        "actual": 167
+      },
+      {
+        "values": [
+          "मौजूदा को छोड़ें",
+          "दोनों रखें"
+        ],
+        "required": 99,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "pl",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (zgodny)",
+          "H.265 MP4 (mniejszy)",
+          "AV1 MKV (najmniejszy)",
+          "Proxy H.264 720p",
+          "Remuksuj do MKV (bez ponownego kodowania)"
+        ],
+        "required": 282,
+        "actual": 293
+      },
+      {
+        "values": [
+          "Zachowaj rozdzielczość źródłową",
+          "1080p",
+          "720p"
+        ],
+        "required": 202,
+        "actual": 221
+      },
+      {
+        "values": [
+          "Automatycznie (zalecane)",
+          "Programowo / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 164,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Pomiń istniejące",
+          "Zachowaj oba"
+        ],
+        "required": 115,
+        "actual": 125
+      }
+    ]
+  },
+  {
+    "language": "it",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (compatibile)",
+          "H.265 MP4 (più piccolo)",
+          "AV1 MKV (il più piccolo)",
+          "Proxy H.264 720p",
+          "Remux in MKV (senza ricodifica)"
+        ],
+        "required": 197,
+        "actual": 209
+      },
+      {
+        "values": [
+          "Mantieni risoluzione sorgente",
+          "1080p",
+          "720p"
+        ],
+        "required": 184,
+        "actual": 209
+      },
+      {
+        "values": [
+          "Automatico (consigliato)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 160,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Salta esistenti",
+          "Mantieni entrambi"
+        ],
+        "required": 126,
+        "actual": 137
+      }
+    ]
+  },
+  {
+    "language": "ar",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (متوافق)",
+          "H.265 MP4 (أصغر)",
+          "AV1 MKV (الأصغر)",
+          "720p H.264 بروكسي",
+          "إعادة تحويل إلى MKV (بدون إعادة ترميز)"
+        ],
+        "required": 224,
+        "actual": 233
+      },
+      {
+        "values": [
+          "الحفاظ على دقة المصدر",
+          "1080p",
+          "720p"
+        ],
+        "required": 146,
+        "actual": 167
+      },
+      {
+        "values": [
+          "تلقائي (موصى به)",
+          "البرنامج / المعالج",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 115,
+        "actual": 167
+      },
+      {
+        "values": [
+          "تجاوز الموجود",
+          "الاحتفاظ بكليهما"
+        ],
+        "required": 105,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "vi",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (tương thích)",
+          "H.265 MP4 (nhỏ hơn)",
+          "AV1 MKV (nhỏ nhất)",
+          "720p H.264 proxy",
+          "Remux sang MKV (không mã hóa lại)"
+        ],
+        "required": 223,
+        "actual": 233
+      },
+      {
+        "values": [
+          "Giữ độ phân giải gốc",
+          "1080p",
+          "720p"
+        ],
+        "required": 138,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Tự động (khuyến nghị)",
+          "Phần mềm / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 150,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Bỏ qua các tệp đã tồn tại",
+          "Giữ cả hai"
+        ],
+        "required": 159,
+        "actual": 167
+      }
+    ]
+  },
+  {
+    "language": "uk",
+    "passed": false,
+    "failures": [
+      "choice clipped: 'Зберегти роздільну здатність джерела': 227 < 237"
+    ],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (сумісний)",
+          "H.265 MP4 (менший)",
+          "AV1 MKV (найменший)",
+          "720p H.264 proxy",
+          "Remux до MKV (без перекодування)"
+        ],
+        "required": 223,
+        "actual": 233
+      },
+      {
+        "values": [
+          "Зберегти роздільну здатність джерела",
+          "1080p",
+          "720p"
+        ],
+        "required": 237,
+        "actual": 227
+      },
+      {
+        "values": [
+          "Автоматично (рекомендовано)",
+          "Програмне забезпечення / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 203,
+        "actual": 203
+      },
+      {
+        "values": [
+          "Пропускати існуючі",
+          "Зберігати обидва"
+        ],
+        "required": 139,
+        "actual": 149
+      }
+    ]
+  },
+  {
+    "language": "no",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (kompatibel)",
+          "H.265 MP4 (mindre)",
+          "AV1 MKV (minste)",
+          "720p H.264 proxy",
+          "Remux til MKV (ingen re-koding)"
+        ],
+        "required": 201,
+        "actual": 209
+      },
+      {
+        "values": [
+          "Behold kildeoppløsning",
+          "1080p",
+          "720p"
+        ],
+        "required": 153,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automatisk (anbefalt)",
+          "Programvare / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 143,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Hopp over eksisterende",
+          "Behold begge"
+        ],
+        "required": 152,
+        "actual": 161
+      }
+    ]
+  },
+  {
+    "language": "fi",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (yhteensopiva)",
+          "H.265 MP4 (pienempi)",
+          "AV1 MKV (pienin)",
+          "720p H.264 proxy",
+          "Remux MKV:ksi (ei uudelleenkoodausta)"
+        ],
+        "required": 239,
+        "actual": 251
+      },
+      {
+        "values": [
+          "Pidä alkuperäinen resoluutio",
+          "1080p",
+          "720p"
+        ],
+        "required": 178,
+        "actual": 185
+      },
+      {
+        "values": [
+          "Automaattinen (suositeltu)",
+          "Ohjelmisto / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 170,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Ohita olemassa olevat",
+          "Pidä molemmat"
+        ],
+        "required": 144,
+        "actual": 155
+      }
+    ]
+  },
+  {
+    "language": "da",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (kompatibel)",
+          "H.265 MP4 (mindre)",
+          "AV1 MKV (mindste)",
+          "720p H.264 proxy",
+          "Remux til MKV (ingen genkodning)"
+        ],
+        "required": 213,
+        "actual": 221
+      },
+      {
+        "values": [
+          "Behold kildeopløsning",
+          "1080p",
+          "720p"
+        ],
+        "required": 146,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automatisk (anbefalet)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 149,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Spring eksisterende over",
+          "Behold begge"
+        ],
+        "required": 156,
+        "actual": 167
+      }
+    ]
+  },
+  {
+    "language": "hu",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (kompatibilis)",
+          "H.265 MP4 (kisebb)",
+          "AV1 MKV (legkisebb)",
+          "720p H.264 proxy",
+          "Átcsomagolás MKV-ba (újrakódolás nélkül)"
+        ],
+        "required": 256,
+        "actual": 263
+      },
+      {
+        "values": [
+          "Forrásfelbontás megtartása",
+          "1080p",
+          "720p"
+        ],
+        "required": 171,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Automatikus (ajánlott)",
+          "Szoftver / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 147,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Létezők kihagyása",
+          "Mindkettő megtartása"
+        ],
+        "required": 145,
+        "actual": 155
+      }
+    ]
+  },
+  {
+    "language": "ro",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (compatibil)",
+          "H.265 MP4 (mai mic)",
+          "AV1 MKV (cel mai mic)",
+          "Proxy H.264 720p",
+          "Remux în MKV (fără re-encodare)"
+        ],
+        "required": 203,
+        "actual": 215
+      },
+      {
+        "values": [
+          "Păstrează rezoluția sursă",
+          "1080p",
+          "720p"
+        ],
+        "required": 155,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automat (recomandat)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 150,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Sari peste cele existente",
+          "Păstrează ambele"
+        ],
+        "required": 151,
+        "actual": 161
+      }
+    ]
+  },
+  {
+    "language": "cs",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (kompatibilní)",
+          "H.265 MP4 (menší)",
+          "AV1 MKV (nejmenší)",
+          "720p H.264 proxy",
+          "Remux do MKV (bez překódování)"
+        ],
+        "required": 207,
+        "actual": 215
+      },
+      {
+        "values": [
+          "Zachovat původní rozlišení",
+          "1080p",
+          "720p"
+        ],
+        "required": 170,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Automaticky (doporučeno)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 172,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Přeskočit existující",
+          "Zachovat oba"
+        ],
+        "required": 124,
+        "actual": 131
+      }
+    ]
+  },
+  {
+    "language": "pt-PT",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (compatível)",
+          "H.265 MP4 (mais pequeno)",
+          "AV1 MKV (o mais pequeno)",
+          "Proxy 720p H.264",
+          "Remux para MKV (sem reencodificação)"
+        ],
+        "required": 238,
+        "actual": 245
+      },
+      {
+        "values": [
+          "Manter resolução de origem",
+          "1080p",
+          "720p"
+        ],
+        "required": 177,
+        "actual": 185
+      },
+      {
+        "values": [
+          "Automático (recomendado)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 176,
+        "actual": 185
+      },
+      {
+        "values": [
+          "Ignorar existentes",
+          "Manter ambos"
+        ],
+        "required": 120,
+        "actual": 131
+      }
+    ]
+  },
+  {
+    "language": "pt-BR",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (compatível)",
+          "H.265 MP4 (menor)",
+          "AV1 MKV (menor)",
+          "720p H.264 proxy",
+          "Remux para MKV (sem re-encoding)"
+        ],
+        "required": 219,
+        "actual": 227
+      },
+      {
+        "values": [
+          "Manter resolução original",
+          "1080p",
+          "720p"
+        ],
+        "required": 163,
+        "actual": 173
+      },
+      {
+        "values": [
+          "Automático (recomendado)",
+          "Software / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 176,
+        "actual": 185
+      },
+      {
+        "values": [
+          "Ignorar existentes",
+          "Manter ambos"
+        ],
+        "required": 120,
+        "actual": 131
+      }
+    ]
+  },
+  {
+    "language": "tr",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (uyumlu)",
+          "H.265 MP4 (daha küçük)",
+          "AV1 MKV (en küçük)",
+          "720p H.264 vekil",
+          "MKV'ye yeniden paketle (yeniden kodlama yok)"
+        ],
+        "required": 278,
+        "actual": 287
+      },
+      {
+        "values": [
+          "Kaynak çözünürlüğü koru",
+          "1080p",
+          "720p"
+        ],
+        "required": 163,
+        "actual": 173
+      },
+      {
+        "values": [
+          "Otomatik (önerilen)",
+          "Yazılım / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 132,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Mevcut olanları atla",
+          "İkisini de tut"
+        ],
+        "required": 132,
+        "actual": 143
+      }
+    ]
+  },
+  {
+    "language": "zh-TW",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4（兼容）",
+          "H.265 MP4（較小）",
+          "AV1 MKV（最小）",
+          "720p H.264 代理檔",
+          "重封裝為 MKV（不重新編碼）"
+        ],
+        "required": 188,
+        "actual": 203
+      },
+      {
+        "values": [
+          "保留原始解析度",
+          "1080p",
+          "720p"
+        ],
+        "required": 112,
+        "actual": 167
+      },
+      {
+        "values": [
+          "自動（推薦）",
+          "軟體 / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 113,
+        "actual": 167
+      },
+      {
+        "values": [
+          "跳過已存在的",
+          "保留兩者"
+        ],
+        "required": 100,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "ms",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (serasi)",
+          "H.265 MP4 (lebih kecil)",
+          "AV1 MKV (paling kecil)",
+          "720p H.264 proksi",
+          "Remux ke MKV (tanpa pengekodan semula)"
+        ],
+        "required": 258,
+        "actual": 269
+      },
+      {
+        "values": [
+          "Simpan resolusi sumber",
+          "1080p",
+          "720p"
+        ],
+        "required": 154,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automatik (disyorkan)",
+          "Perisian / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 146,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Langkau yang sedia ada",
+          "Simpan kedua-duanya"
+        ],
+        "required": 154,
+        "actual": 161
+      }
+    ]
+  },
+  {
+    "language": "he",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (תואם)",
+          "H.265 MP4 (קטן יותר)",
+          "AV1 MKV (הכי קטן)",
+          "720p H.264 proxy",
+          "Remux ל-MKV (ללא קידוד מחדש)"
+        ],
+        "required": 200,
+        "actual": 209
+      },
+      {
+        "values": [
+          "שמור על רזולוציית מקור",
+          "1080p",
+          "720p"
+        ],
+        "required": 150,
+        "actual": 167
+      },
+      {
+        "values": [
+          "אוטומטי (מומלץ)",
+          "תוכנה / מעבד",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 113,
+        "actual": 167
+      },
+      {
+        "values": [
+          "דלג על קיימים",
+          "שמור את שניהם"
+        ],
+        "required": 111,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "bn",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (সামঞ্জস্যপূর্ণ)",
+          "H.265 MP4 (ছোট)",
+          "AV1 MKV (সবচেয়ে ছোট)",
+          "720p H.264 প্রোক্সি",
+          "MKV তে রিমাক্স করুন (কোনও পুনঃএনকোডিং নেই)"
+        ],
+        "required": 288,
+        "actual": 299
+      },
+      {
+        "values": [
+          "উৎস রেজলিউশন বজায় রাখুন",
+          "1080p",
+          "720p"
+        ],
+        "required": 178,
+        "actual": 185
+      },
+      {
+        "values": [
+          "স্বয়ংক্রিয় (প্রস্তাবিত)",
+          "সফটওয়্যার / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 127,
+        "actual": 167
+      },
+      {
+        "values": [
+          "বর্তমান থাকলে বাদ দিন",
+          "দুটোই রাখুন"
+        ],
+        "required": 146,
+        "actual": 155
+      }
+    ]
+  },
+  {
+    "language": "ur",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (مطابقت پذیر)",
+          "H.265 MP4 (چھوٹا)",
+          "AV1 MKV (سب سے چھوٹا)",
+          "720p H.264 پروکسی",
+          "MKV میں ری مکس کریں (ری اینکوڈنگ کے بغیر)"
+        ],
+        "required": 255,
+        "actual": 263
+      },
+      {
+        "values": [
+          "ماخذ ریزولوشن کو برقرار رکھیں",
+          "1080p",
+          "720p"
+        ],
+        "required": 177,
+        "actual": 185
+      },
+      {
+        "values": [
+          "خودکار (تجویز کردہ)",
+          "سافٹ ویئر / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 124,
+        "actual": 167
+      },
+      {
+        "values": [
+          "موجودہ کو چھوڑ دیں",
+          "دونوں رکھیں"
+        ],
+        "required": 129,
+        "actual": 137
+      }
+    ]
+  },
+  {
+    "language": "fa",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (سازگار)",
+          "H.265 MP4 (کوچکتر)",
+          "AV1 MKV (کوچک‌ترین)",
+          "پراکسی 720p H.264",
+          "بازآرایی به MKV (بدون بازکدگذاری)"
+        ],
+        "required": 193,
+        "actual": 203
+      },
+      {
+        "values": [
+          "نگه داشتن وضوح منبع",
+          "1080p",
+          "720p"
+        ],
+        "required": 138,
+        "actual": 167
+      },
+      {
+        "values": [
+          "خودکار (توصیه شده)",
+          "نرم‌افزار / پردازنده",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 129,
+        "actual": 167
+      },
+      {
+        "values": [
+          "رد کردن موارد موجود",
+          "نگه داشتن هر دو"
+        ],
+        "required": 129,
+        "actual": 137
+      }
+    ]
+  },
+  {
+    "language": "sk",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (kompatibilné)",
+          "H.265 MP4 (menší)",
+          "AV1 MKV (najmenší)",
+          "720p H.264 proxy",
+          "Remux do MKV (bez prekódovania)"
+        ],
+        "required": 213,
+        "actual": 221
+      },
+      {
+        "values": [
+          "Zachovať zdrojové rozlíšenie",
+          "1080p",
+          "720p"
+        ],
+        "required": 178,
+        "actual": 185
+      },
+      {
+        "values": [
+          "Automaticky (odporúčané)",
+          "Softvér / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 171,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Preskočiť existujúce",
+          "Zachovať oba"
+        ],
+        "required": 132,
+        "actual": 143
+      }
+    ]
+  },
+  {
+    "language": "hr",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (kompatibilan)",
+          "H.265 MP4 (manje)",
+          "AV1 MKV (najmanje)",
+          "720p H.264 proxy",
+          "Remux u MKV (bez re-enkodiranja)"
+        ],
+        "required": 211,
+        "actual": 221
+      },
+      {
+        "values": [
+          "Zadrži izvornu rezoluciju",
+          "1080p",
+          "720p"
+        ],
+        "required": 156,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automatski (preporučeno)",
+          "Softver / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 168,
+        "actual": 179
+      },
+      {
+        "values": [
+          "Preskoči postojeće",
+          "Zadrži oba"
+        ],
+        "required": 126,
+        "actual": 137
+      }
+    ]
+  },
+  {
+    "language": "sr",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (компатибилан)",
+          "H.265 MP4 (мањи)",
+          "AV1 MKV (најмањи)",
+          "720p H.264 прокси",
+          "Ремукс у MKV (без ре-кодирања)"
+        ],
+        "required": 210,
+        "actual": 221
+      },
+      {
+        "values": [
+          "Задржи изворну резолуцију",
+          "1080p",
+          "720p"
+        ],
+        "required": 182,
+        "actual": 191
+      },
+      {
+        "values": [
+          "Аутоматски (препоручено)",
+          "Софтвер / ЦПУ",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 178,
+        "actual": 185
+      },
+      {
+        "values": [
+          "Прескочи постојеће",
+          "Задржи оба"
+        ],
+        "required": 140,
+        "actual": 149
+      }
+    ]
+  },
+  {
+    "language": "ca",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (compatible)",
+          "H.265 MP4 (més petit)",
+          "AV1 MKV (el més petit)",
+          "Proxy H.264 720p",
+          "Remux a MKV (sense re-encodificació)"
+        ],
+        "required": 230,
+        "actual": 239
+      },
+      {
+        "values": [
+          "Mantén la resolució de l'origen",
+          "1080p",
+          "720p"
+        ],
+        "required": 191,
+        "actual": 203
+      },
+      {
+        "values": [
+          "Automàtic (recomanat)",
+          "Programari / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 152,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Saltar existents",
+          "Mantenir ambdós"
+        ],
+        "required": 122,
+        "actual": 131
+      }
+    ]
+  },
+  {
+    "language": "et",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (ühilduv)",
+          "H.265 MP4 (väiksem)",
+          "AV1 MKV (kõige väiksem)",
+          "720p H.264 proxy",
+          "Remux MKV-ks (ilma ümberkodeerimiseta)"
+        ],
+        "required": 254,
+        "actual": 263
+      },
+      {
+        "values": [
+          "Hoia allika lahutusvõimet",
+          "1080p",
+          "720p"
+        ],
+        "required": 162,
+        "actual": 173
+      },
+      {
+        "values": [
+          "Automaatne (soovitatav)",
+          "Tarkvara / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 159,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Jäta olemasolevad vahele",
+          "Hoia mõlemad"
+        ],
+        "required": 161,
+        "actual": 173
+      }
+    ]
+  },
+  {
+    "language": "lv",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (saderīgs)",
+          "H.265 MP4 (mazāks)",
+          "AV1 MKV (mazākais)",
+          "720p H.264 starpniekfaila versija",
+          "Remux uz MKV (bez pārsaspiešanas)"
+        ],
+        "required": 217,
+        "actual": 227
+      },
+      {
+        "values": [
+          "Saglabāt avota izšķirtspēju",
+          "1080p",
+          "720p"
+        ],
+        "required": 166,
+        "actual": 173
+      },
+      {
+        "values": [
+          "Automātiski (ieteicams)",
+          "Programmatūra / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 153,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Izlaist esošos",
+          "Saglabāt abus"
+        ],
+        "required": 101,
+        "actual": 119
+      }
+    ]
+  },
+  {
+    "language": "lt",
+    "passed": true,
+    "failures": [],
+    "errors": [],
+    "comboboxes": [
+      {
+        "values": [
+          "H.264 MP4 (suderinamas)",
+          "H.265 MP4 (mažas)",
+          "AV1 MKV (mažiausias)",
+          "720p H.264 proxy",
+          "Perkelti į MKV (be perkodavimo)"
+        ],
+        "required": 198,
+        "actual": 209
+      },
+      {
+        "values": [
+          "Išlaikyti šaltinio raišką",
+          "1080p",
+          "720p"
+        ],
+        "required": 141,
+        "actual": 167
+      },
+      {
+        "values": [
+          "Automatinis (rekomenduojama)",
+          "Programinė įranga / CPU",
+          "NVIDIA NVENC",
+          "Intel Quick Sync",
+          "AMD AMF"
+        ],
+        "required": 198,
+        "actual": 209
+      },
+      {
+        "values": [
+          "Praleisti esamus",
+          "Išsaugoti abu"
+        ],
+        "required": 112,
+        "actual": 119
+      }
+    ]
+  }
+]

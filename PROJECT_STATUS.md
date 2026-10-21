@@ -4,7 +4,7 @@ Updated: 21 October 2026 (Europe/London). Read this first at the start of every 
 
 ## Current versions and verification
 
-- **Windows source/review build: 12.7.5.** `VERSION.txt`, release notes and build records agree. Versioned Desktop EXE exists; its SHA-256 matches the saved verification record: `3a06b1acde063400d51897908ac1a71fe00e45e75971ba5ef7295e568f590cf1`.
+- **Windows source/review build: 12.7.8.** Pixel-measured conversion selectors plus scrollable Info metadata/pinned actions for short browsers. Build and exact embedded-source/43-locale verification passed. Versioned Desktop EXE SHA-256: `5b2c1270038627adb0d1c0525e82269359d2bd02a0611172cafc11c2af2c2718`. Older 12.7.5/12.7.6/12.7.7 binaries retained.
 - **Linux binary: 12.6.1 x86_64**, present in `dist/linux`. Earlier records report successful Ubuntu build/smoke checks; 12.7.x changes have not been built or verified on Linux. Mint, laptop hardware, drivers, audio, desktop drag/drop and Trash remain unverified.
 - Latest local **Store package: 12.6.2.0**. Submission 8 is recorded as a draft with the package saved/Validated, not submitted. Current live/certification status was not checked in this inspection; consult Partner Center before acting. A historical Submission 7 certification screenshot is not evidence of today's status.
 - Fresh verification after the Serbian test correction on 21 October: **all 86 tests pass** (`python -m unittest discover -q`). Inspector and embedded-resource checks also have saved reports. No application rebuild was needed.
@@ -20,8 +20,9 @@ Updated: 21 October 2026 (Europe/London). Read this first at the start of every 
 ## Outstanding work and known problems
 
 - Serbian packaging-test mismatch resolved on 21 October: expectation now uses `sr-cyrl-rs`, matching the existing Cyrillic manifest and translation. All 86 tests pass. Live Store state remains unverified.
-- German conversion conflict selector clips its default text. Broader visual layout/RTL/typography review remains incomplete; automated language checks do not establish visual quality everywhere.
-- 12.7.5 Store screenshots: 12 native captures, four each for English, Arabic and German. **40 other language sets remain incomplete.** Capture tooling still needs inspected layout adjustments; it is not unattended.
+- German conversion conflict selector clipping fixed in 12.7.6, along with longer preset/resolution/engine choices. Final real-Tk conversion geometry and upgrade-control checks pass all 43 languages; 86 unit tests pass. Native new-binary German/Arabic main, Info and conversion views inspected. Broader native visual/scaling review remains incomplete; see `docs/LAYOUT_REVIEW_CHECKPOINT.md` for exact hashes and capture/release gates.
+- 12.7.5 Store screenshots: 12 native captures, four each for English/Arabic/German, preserved. The new Info/conversion UI invalidates their use as the final latest-build set: capture 43 updated sets under the new version, without overwriting old originals. Initial 12.7.6 capture has one selected Arabic Info image; a dual-preview image exposed clipped Info fields/actions and is excluded with originals retained. No complete latest-build screenshot set exists yet. Capture tooling requires inspected inputs and is not unattended.
+- Initial screenshot work found Info actions/metadata disappear when previews reduce browser height. 12.7.8 fixes this with a priority-reserved action row and read-only scrollable metadata. Fresh 86-test suite and mouse/selection/Info regression pass; final short-browser regression passes all 43 languages. Final native Arabic main/Info/scrolling/preview/conversion review passed; remaining native locale/view/scaling review is incomplete. Screenshot baseline is ready, release gate remains false. One final-version Arabic Info capture is validated; 171 views remain. Screenshot continuation requeued for 11:45 London time today.
 - README and PROJECT_CONTEXT version summaries were reconciled to 12.7.5 during the GitHub update.
 - Linux validation/release and Windows/Store release preparation for the current source remain outstanding. Older Store notes/keywords require reconciliation before reuse.
 - Unsaved editor buffers were not observable. Preserve local generated materials and older releases; do not reset, clean or overwrite this tree.
@@ -46,6 +47,7 @@ Serbian text is Cyrillic. `AppxManifest.template.xml`, listing-preparation mappi
 - Authoritative project: `F:/Resolution File Manager project/ResolutionFileManager-Project-v6`. Desktop project folder is a junction to it, not an independent backup.
 - Builds: `build_windows.ps1`, `build_windows_release.ps1`, `build_windows_english_review.ps1`, `build_windows_multilingual_review.ps1`, `build_linux.sh`; runtime helper `run_linux.sh`.
 - Current review binary: `dist/multilingual-review-12.7.5/ResolutionFileManager-v12.7.5-Multilingual-Review.exe`, with a versioned Desktop copy. Do not assume root-level or generic dist EXEs are current.
+- Current review binary: `dist/multilingual-review-12.7.8/ResolutionFileManager-v12.7.8-Multilingual-Review.exe`, plus versioned Desktop copy. The preceding 12.7.5 and 12.7.6 paths are retained for rollback only.
 - Releases: `release-output/12.6.1`; Linux handoff: `F:/ResolutionFileManager-Linux-Handoff-12.6.1`.
 - Backups: `F:/Resolution File Manager project/Recovery Backups/2026-10-21-before-inspector-localization/source` and `2026-10-21-12.7.5-inspector-verified/source`, with ZIPs. Hash comparison of 449 shared files found only a later screenshot-helper version-title correction; snapshot-only SOURCE_MANIFEST.json is expected. This handover and its AGENTS instructions postdate that snapshot.
 - Pre-GitHub-sync backup: `F:/Resolution File Manager project/Recovery Backups/2026-10-21-before-github-sync/source` plus ZIP; 451 files verified before documentation/ignore updates.
@@ -66,7 +68,7 @@ Serbian text is Cyrillic. `AppxManifest.template.xml`, listing-preparation mappi
 Scheduling and publication authorisation (21 October 2026, Europe/London): layout review at 10:40, followed by screenshots at 11:10 only when the exact source/binary has passed layout review. A conditional hourly follow-up at half past the hour checks release readiness quietly. User authorises publishing the newest Windows build to GitHub **after** review is complete, with validated screenshots, tests, matching release assets and checksums; do not publish the current review build prematurely. No Store or Linux publication is authorised. Record actual completion and release URL here; pause the publication follow-up after success.
 
 1. Read this file and current Git status; preserve the complete dirty/untracked source with a new verified snapshot before development.
-2. Fix German selector clipping; verify relevant regressions and record actual results here. Serbian test correction is complete; scheduled screenshot work must preserve it.
+2. German selector clipping and Serbian test correction are complete. Preserve these fixes; verify each remaining native language/view during screenshot capture and record any new issues.
 3. Finish visual language/RTL review and remaining screenshot sets without repeating completed captures.
 4. Keep GitHub source and this handover current after subsequent fixes; preserve older releases and local-only Store preparation materials.
 5. When authorised, build/validate current Windows and Linux releases and create versioned exports/backups.

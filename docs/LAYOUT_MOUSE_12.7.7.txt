@@ -1,0 +1,50 @@
+Inspector uses compact 180px default True
+Compact Info action buttons remain visible True
+Compact Info action buttons remain visible True
+Compact Info action buttons remain visible True
+Files remain visible with oversized saved inspector/folder widths True
+Dragging Info to edge cannot hide files after release True
+Files fill pane after hiding inspector True
+Info toggle does not squeeze top tick controls True
+Inspector width survives toggle True
+Info restore leaves selection toolbar width unchanged True
+Inspector uses compact 180px default True
+Compact Info action buttons remain visible True
+Compact Info action buttons remain visible True
+Compact Info action buttons remain visible True
+Files remain visible with oversized saved inspector/folder widths True
+Dragging Info to edge cannot hide files after release True
+Files fill pane after hiding inspector True
+Info toggle does not squeeze top tick controls True
+Inspector width survives toggle True
+Info restore leaves selection toolbar width unchanged True
+Rows available True
+Thumbnail slider is hidden in Details True
+Thumbnail slider is visible in Thumbnails 1
+View switching preserves thumbnail size without showing slider in Details True
+Visible deep branches shift left without wasted indentation True
+Scrolling back to ancestors resets horizontal alignment without clicking True
+Top selection controls fit the pane width True
+Top selection controls fit the pane width True
+Top selection controls fit the pane width True
+Top selection controls fit the pane width True
+Top selection controls fit the pane width True
+Rectangle highlights files without ticking True
+Existing ticks survive a new rectangle selection True
+Click beside checkbox does not tick the row True
+Checkbox does not toggle on mouse-down True
+Precise checkbox click toggles on release True
+Dragging from checkbox selects without toggling it True
+Release across other pane reliably ends rectangle without changing ticks True
+Row drag highlights without ticking True
+Tick selection adds to existing ticks True
+Untick selection removes only highlighted group True
+Basket is docked in main window 1
+Basket sits above browsers True
+Docked basket shows selected references True
+Basket can collapse True
+Thumbnail drag highlights without changing ticks True
+Thumbnail checkbox padding does not toggle True
+Thumbnail checkbox waits for release True
+Thumbnail checkbox centre toggles once True
+No callback exceptions True

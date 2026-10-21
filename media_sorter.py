@@ -48,7 +48,7 @@ except ImportError:  # Keep source startup graceful if optional dependencies are
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".webm", ".m4v", ".wmv", ".mpg", ".mpeg"}
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", ".gif", ".heic", ".heif", ".avif"}
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | IMAGE_EXTENSIONS
-APP_VERSION = "12.7.5"
+APP_VERSION = "12.7.8"
 
 
 def translated_combobox_width(labels, minimum=8, maximum=28):
@@ -1216,13 +1216,31 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
         self.inspector_path_var = tk.StringVar(value="")
         ttk.Label(self.inspector_frame, textvariable=self.inspector_path_var, wraplength=260, justify="left").pack(fill="x", anchor="w", pady=(3, 8))
         self.inspector_details_var = tk.StringVar(value=self.tr("inspector.select_file"))
-        ttk.Label(self.inspector_frame, textvariable=self.inspector_details_var, wraplength=260, justify="left").pack(fill="both", expand=True, anchor="nw")
-        inspector_buttons = ttk.Frame(self.inspector_frame); inspector_buttons.pack(fill="x", pady=(8, 0))
+        # Reserve the action row before allocating the flexible metadata area.
+        inspector_buttons = ttk.Frame(self.inspector_frame)
+        inspector_buttons.pack(side="bottom", fill="x", pady=(8, 0), before=self.inspector_frame.winfo_children()[0])
         self.inspector_buttons=inspector_buttons
         ttk.Button(inspector_buttons, text=self.tr("inspector.copy_path"), command=self.copy_inspector_path).pack(side="left")
         ttk.Button(inspector_buttons, text=self.tr("inspector.open"), command=self.open_selected).pack(side="left", padx=4)
         ttk.Button(inspector_buttons, text=self.tr("inspector.reveal"), command=self.reveal_selected).pack(side="left")
+        details_frame = ttk.Frame(self.inspector_frame)
+        details_frame.pack(fill="both", expand=True)
+        self.inspector_details_text = tk.Text(details_frame, wrap="word", height=1, width=1,
+            font="TkDefaultFont", relief="flat", borderwidth=0, highlightthickness=0,
+            state="disabled", cursor="arrow")
+        details_scroll = ttk.Scrollbar(details_frame, orient="vertical", command=self.inspector_details_text.yview)
+        self.inspector_details_text.configure(yscrollcommand=details_scroll.set)
+        details_scroll.pack(side="right", fill="y")
+        self.inspector_details_text.pack(fill="both", expand=True)
+        def refresh_inspector_details(*_args):
+            self.inspector_details_text.configure(state="normal")
+            self.inspector_details_text.delete("1.0", "end")
+            self.inspector_details_text.insert("1.0", self.inspector_details_var.get())
+            self.inspector_details_text.configure(state="disabled")
+        self.inspector_details_var.trace_add("write", refresh_inspector_details)
+        refresh_inspector_details()
         self.inspector_frame.bind('<Configure>',self.fit_inspector_content)
+        self.inspector_details_text.bind('<<ThemeChanged>>',self.fit_inspector_content)
         if self.inspector_enabled_var.get(): self.inspector_panes.add(self.inspector_frame, weight=0)
         if self.inspector_enabled_var.get(): self.after(150, self.restore_inspector_width)
 
@@ -4835,11 +4853,18 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         resolution_choices = LocalizedChoices(self.translator, TRANSCODE_RESOLUTION_LABEL_KEYS)
         engine_choices = LocalizedChoices(self.translator, TRANSCODE_ENGINE_LABEL_KEYS)
         status_choices = LocalizedChoices(self.translator, TRANSCODE_STATUS_LABEL_KEYS)
+        choice_font = tkfont.nametofont("TkTextFont")
+        def choice_width(labels, minimum):
+            # Tk widths count zero-character units; translated CJK and long
+            # options must be measured in pixels, not truncated by a fixed cap.
+            unit = max(1, choice_font.measure("0"))
+            pixels = max((choice_font.measure(label) for label in labels), default=0)
+            return max(minimum, (pixels + unit - 1) // unit + 2)
         preset_var = tk.StringVar(value=preset_choices.label("H.264 MP4 (compatible)")); crf_var = tk.IntVar(value=23); resolution_var = tk.StringVar(value=resolution_choices.label(TRANSCODE_SOURCE_RESOLUTION)); destination_var = tk.StringVar(value=str(other.current_path)); preserve_var = tk.BooleanVar(value=pane.recursive_var.get()); existing_var = tk.StringVar(value=existing_choices.label("Skip existing"))
         engine_var = tk.StringVar(value=engine_choices.label(TRANSCODE_AUTOMATIC)); hardware_decode_var = tk.BooleanVar(value=True); engine_status_var = tk.StringVar()
-        ttk.Label(settings, text=self.tr("convert.preset")).grid(row=0, column=0, sticky="w", pady=4); preset_box = ttk.Combobox(settings, textvariable=preset_var, state="readonly", values=preset_choices.labels, width=30); preset_box.grid(row=0, column=1, sticky="w", padx=5)
+        ttk.Label(settings, text=self.tr("convert.preset")).grid(row=0, column=0, sticky="w", pady=4); preset_box = ttk.Combobox(settings, textvariable=preset_var, state="readonly", values=preset_choices.labels, width=choice_width(preset_choices.labels, 30)); preset_box.grid(row=0, column=1, sticky="w", padx=5)
         ttk.Label(settings, text=self.tr("convert.quality")).grid(row=0, column=2, sticky="w", padx=(15, 0)); ttk.Spinbox(settings, from_=18, to=35, textvariable=crf_var, width=6).grid(row=0, column=3, sticky="w", padx=5)
-        ttk.Label(settings, text=self.tr("convert.resolution")).grid(row=1, column=0, sticky="w", pady=4); resolution_box = ttk.Combobox(settings, textvariable=resolution_var, state="readonly", values=resolution_choices.labels, width=translated_combobox_width(resolution_choices.labels, 24, 34)); resolution_box.grid(row=1, column=1, sticky="w", padx=5)
+        ttk.Label(settings, text=self.tr("convert.resolution")).grid(row=1, column=0, sticky="w", pady=4); resolution_box = ttk.Combobox(settings, textvariable=resolution_var, state="readonly", values=resolution_choices.labels, width=choice_width(resolution_choices.labels, 24)); resolution_box.grid(row=1, column=1, sticky="w", padx=5)
         ttk.Label(settings, text=self.tr("convert.resolution_help")).grid(row=1, column=2, columnspan=2, sticky="w", padx=(15, 0))
         ttk.Label(settings, text=self.tr("convert.quality_help")).grid(row=2, column=1, columnspan=3, sticky="w")
         ttk.Label(settings, text=self.tr("convert.engine")).grid(row=3, column=0, sticky="w", pady=(10, 4)); engine_box = ttk.Combobox(settings, textvariable=engine_var, state="readonly", width=24); engine_box.grid(row=3, column=1, sticky="w", padx=5, pady=(10, 4))
@@ -4847,7 +4872,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         hardware_decode_check.grid(row=3, column=2, columnspan=2, sticky="w", padx=(15, 0), pady=(10, 4))
         ttk.Label(settings, textvariable=engine_status_var, wraplength=780).grid(row=4, column=1, columnspan=3, sticky="w")
         ttk.Label(settings, text=self.tr("convert.output_folder")).grid(row=5, column=0, sticky="w", pady=(10, 4)); ttk.Entry(settings, textvariable=destination_var).grid(row=5, column=1, columnspan=2, sticky="ew", padx=5, pady=(10, 4)); ttk.Button(settings, text=self.tr("pane.browse"), command=lambda: destination_var.set(filedialog.askdirectory(parent=window, title=self.tr("convert.choose_output")) or destination_var.get())).grid(row=5, column=3, sticky="w", pady=(10, 4))
-        ttk.Checkbutton(settings, text=self.tr("convert.preserve_folders"), variable=preserve_var).grid(row=6, column=1, columnspan=2, sticky="w", pady=4); ttk.Combobox(settings, textvariable=existing_var, state="readonly", values=(self.tr("convert.skip_existing"), self.tr("convert.keep_both")), width=16).grid(row=6, column=3, sticky="w"); settings.columnconfigure(1, weight=1)
+        ttk.Checkbutton(settings, text=self.tr("convert.preserve_folders"), variable=preserve_var).grid(row=6, column=1, columnspan=2, sticky="w", pady=4); ttk.Combobox(settings, textvariable=existing_var, state="readonly", values=existing_choices.labels, width=choice_width(existing_choices.labels, 16)).grid(row=6, column=3, sticky="w"); settings.columnconfigure(1, weight=1)
         ttk.Label(window, text=self.tr("convert.originals_retained"), padding=(10, 0)).pack(fill="x")
         tree = ttk.Treeview(window, columns=("status", "source", "target", "result"), show="headings")
         for key, label_key, width in (("status", "convert.status", 110), ("source", "convert.source", 340), ("target", "convert.output", 430), ("result", "convert.result", 180)): tree.heading(key, text=self.tr(label_key)); tree.column(key, width=width)
@@ -4859,7 +4884,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             if selected_preset == "720p H.264 proxy" and previous_preset["value"] != selected_preset:
                 resolution_var.set(resolution_choices.label("720p"))
             previous_preset["value"] = selected_preset
-            values = self.available_transcode_engines(selected_preset); labels = tuple(engine_choices.label(value) for value in values); engine_box.configure(values=labels, width=translated_combobox_width(labels, 24, 34))
+            values = self.available_transcode_engines(selected_preset); labels = tuple(engine_choices.label(value) for value in values); engine_box.configure(values=labels, width=choice_width(labels, 24))
             if engine_choices.internal(engine_var.get()) not in values: engine_var.set(engine_choices.label(values[0]))
             encoders, accelerators, error = self.ffmpeg_capabilities()
             if TRANSCODE_PRESET_CODEC_FAMILY.get(selected_preset) is None:

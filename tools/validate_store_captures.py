@@ -6,6 +6,7 @@ import argparse
 import hashlib
 import html
 import json
+import re
 from pathlib import Path
 from PIL import Image
 
@@ -14,7 +15,8 @@ parser.add_argument('root',type=Path)
 args=parser.parse_args()
 root=args.root.resolve()
 project=Path(__file__).resolve().parents[1]
-version=(project/'VERSION.txt').read_text(encoding='utf-8').strip()
+folder_version=re.fullmatch(r'Store Preparation (\d+\.\d+\.\d+)',root.parent.name)
+version=folder_version.group(1) if folder_version else (project/'VERSION.txt').read_text(encoding='utf-8').strip()
 languages=sorted(p.stem for p in (project/'locales').glob('*.json'))
 layouts=['01-details-info','02-dual-previews','03-thumbnails','04-video-conversion']
 records=json.loads((root/'capture-progress.json').read_text(encoding='utf-8'))
