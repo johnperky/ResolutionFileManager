@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dynamický rozsah",
     "inspector.unknown": "Neznámy",
     "inspector.unrated": "Nehodnotené",
-    "inspector.unreadable": "Nečitateľné"
+    "inspector.unreadable": "Nečitateľné",
+    "menu.show_hidden_files": "Zobraziť skryté súbory"
   },
   "help": {
     "schema": 2,

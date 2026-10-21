@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "النطاق الديناميكي",
     "inspector.unknown": "غير معروف",
     "inspector.unrated": "غير مصنف",
-    "inspector.unreadable": "غير قابل للقراءة"
+    "inspector.unreadable": "غير قابل للقراءة",
+    "menu.show_hidden_files": "إظهار الملفات المخفية"
   },
   "help": {
     "schema": 2,

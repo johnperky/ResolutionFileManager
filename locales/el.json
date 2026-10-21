@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Δυναμικό εύρος",
     "inspector.unknown": "Άγνωστο",
     "inspector.unrated": "Χωρίς αξιολόγηση",
-    "inspector.unreadable": "Αδιάβαστο"
+    "inspector.unreadable": "Αδιάβαστο",
+    "menu.show_hidden_files": "Εμφάνιση κρυφών αρχείων"
   },
   "help": {
     "schema": 2,

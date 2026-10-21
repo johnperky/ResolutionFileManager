@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Interval dinàmic",
     "inspector.unknown": "Desconegut",
     "inspector.unrated": "Sense classificació",
-    "inspector.unreadable": "Il·legible"
+    "inspector.unreadable": "Il·legible",
+    "menu.show_hidden_files": "Mostra els fitxers ocults"
   },
   "help": {
     "schema": 2,

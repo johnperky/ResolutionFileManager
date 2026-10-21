@@ -1,0 +1,44 @@
+{
+  "states": 160,
+  "allPassed": true,
+  "reports": [
+    {
+      "language": "de",
+      "states": 40,
+      "report": "Store Preparation 12.7.10\\Release QA\\final\\de\\de-results.json",
+      "reportSha256": "bdb67a0ca53f8075d58fe129ed96e3dc198f1de95bf2aca8a45949b81f1720c8",
+      "scope": "before final fallback-font idle-settlement correction; unchanged controls reused"
+    },
+    {
+      "language": "en",
+      "states": 40,
+      "report": "Store Preparation 12.7.10\\Release QA\\final\\en\\en-results.json",
+      "reportSha256": "a0268f35c134a1457543ce0eae5f4177e62b166f962bf548e47c923fda2dd85f",
+      "scope": "before final fallback-font idle-settlement correction; unchanged controls reused"
+    },
+    {
+      "language": "ar",
+      "states": 40,
+      "report": "Store Preparation 12.7.10\\Release QA\\final\\ar\\ar-results.json",
+      "reportSha256": "496a6fd536061b040a803c3157f341c0c771958fb0ff441688b6e0e381542197",
+      "scope": "before final fallback-font idle-settlement correction; unchanged controls reused"
+    },
+    {
+      "language": "ja",
+      "states": 40,
+      "report": "Store Preparation 12.7.10\\Release QA\\final\\ja-font-settled\\ja-results.json",
+      "reportSha256": "4b6eb78ba3677595d3c52bee0d568f5afa0846ad7907f5a153a3f883f75a4e4f",
+      "scope": "final source"
+    }
+  ],
+  "limitation": "Representative four languages, four themes, five scales, two sizes; not every language/theme combination.",
+  "finalFooterRegression": {
+    "language": "en",
+    "states": 40,
+    "passed": true,
+    "sourceSha256": "734e15d520be3d08523b91118aa6cf91d845ffa8cf46430ca2462fcc25779fa6",
+    "report": "Store Preparation 12.7.10\\Release QA\\scan-footer-fixed\\en\\en-results.json",
+    "reportSha256": "565f6b84f52a2d0cdd4ca4d2c1b7d43c701506d3ea159d16838926ac5016e204",
+    "checks": "Top action sizes, scan Cancel visible/full width, row/heading metrics, readonly theme contrast, conversion settings/buttons, Appearance dialog; four themes \u00d7 five scales \u00d7 two sizes."
+  }
+}

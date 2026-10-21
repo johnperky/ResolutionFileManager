@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dynaaminen alue",
     "inspector.unknown": "Tuntematon",
     "inspector.unrated": "Luokittelematon",
-    "inspector.unreadable": "Lukematon"
+    "inspector.unreadable": "Lukematon",
+    "menu.show_hidden_files": "Näytä piilotetut tiedostot"
   },
   "help": {
     "schema": 2,

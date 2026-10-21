@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Rentang dinamis",
     "inspector.unknown": "Tidak diketahui",
     "inspector.unrated": "Belum diberi peringkat",
-    "inspector.unreadable": "Tidak dapat dibaca"
+    "inspector.unreadable": "Tidak dapat dibaca",
+    "menu.show_hidden_files": "Tampilkan file tersembunyi"
   },
   "help": {
     "schema": 2,

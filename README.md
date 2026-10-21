@@ -2,7 +2,7 @@
 
 A dual-pane media file manager with shared Windows/Linux source that scans images and videos, displays technical metadata, sorts and filters large collections, previews content, and performs reviewable file-management and conversion workflows. Linux binaries require a compatible Linux environment; see LINUX_INSTALL.txt for dependencies and test limitations.
 
-Current Windows development/review version: 12.7.8. Latest verified Linux binary: 12.6.1; it has not been rebuilt for the latest changes. Read PROJECT_STATUS.md first for current verification, known issues and remaining release work.
+Current Windows version: 12.7.10. Latest verified Linux binary: 12.6.1; it has not been rebuilt for the latest changes. Read PROJECT_STATUS.md first for current verification, release status and remaining work.
 
 The maintained development source is the established F: project directory. See DEVELOPMENT_WORKFLOW.md for complete verified snapshots, Git preparation, shared-source builds and preservation of older releases. The authoritative detailed English manual is docs/help/ENGLISH_MANUAL.md; Help completeness is checked before builds. See docs/RECOVERY_REPORT_2026-10-19.md for actual verification status.
 
@@ -15,6 +15,7 @@ Resolution File Manager is free software licensed under GNU GPL version 3 or lat
 ## Features
 
 - Dual folder panes
+- Persistent Tools > Show hidden files toggle for hidden media and folders
 - Automatic operating-system language detection with 43 complete interface/help choices, including separate European and Brazilian Portuguese packs, Simplified and Traditional Chinese, and broad European and Asian language coverage
 - Optional private local reminders for Microsoft Store ratings and Buy Me a Coffee support, with independent controls under Tools
 - Independent per-pane tick boxes that collect an action group while ordinary highlighting remains free for previewing

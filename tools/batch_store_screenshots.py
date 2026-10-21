@@ -121,7 +121,7 @@ def worker(args, proof, folder):
     data.mkdir(exist_ok=True)
     template = folder.parent/'Review Settings/ResolutionFileManager'
     settings = json.loads((template/'settings.json').read_text(encoding='utf-8-sig'))
-    settings.update(language=locale, geometry='1900x900+0+0', browser_split=960, preview_split=480)
+    settings.update(language=locale, geometry='1900x900+0+0', browser_split=960, preview_split=480, show_hidden_files=False)
     settings['reminders'].update(rating_disabled=True, support_disabled=True)
     sample = Path('E:/free to use videos')
     assert sample.is_dir()
@@ -252,7 +252,14 @@ def worker(args, proof, folder):
             preview.position_var.set(300/item.duration if item.duration else 0)
             preview.update_time(3)
             preview.render_still(3)
-        pump(until=lambda: app.left_preview.photo is not None and app.right_preview.photo is not None)
+        def paused_frames_ready():
+            # A playback photo can already exist while the requested still is
+            # decoding. Wait for the actual 3-second still cache entries.
+            return all(preview.photo is not None and not preview.still_processes and
+                       any(key[0] == str(preview.item.path) and key[3] == 3 and
+                           key[4:] == preview.last_preview_dimensions for key in preview.still_cache)
+                       for preview in (app.left_preview, app.right_preview))
+        pump(until=paused_frames_ready)
         app.preview_area.sash_place(0, app.browser_panes.sash_coord(0)[0], 0)
         capture(VIEWS[1])
         if set(VIEWS)-done == {VIEWS[1]}:
@@ -297,7 +304,7 @@ def main():
     parser.add_argument('--worker', help=argparse.SUPPRESS)
     args = parser.parse_args()
     proof = preflight()
-    folder = args.output or ROOT.parent/f'Store Preparation {proof["version"]}/Batch Candidates v2'
+    folder = args.output or ROOT.parent/f'Store Preparation {proof["version"]}/Batch Candidates v3'
     folder = folder.resolve()
     folder.mkdir(parents=True, exist_ok=True)
     if (folder/'provenance.json').exists():

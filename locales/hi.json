@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "गतिशील रेंज",
     "inspector.unknown": "अज्ञात",
     "inspector.unrated": "अनरेटेड",
-    "inspector.unreadable": "अपठनीय"
+    "inspector.unreadable": "अपठनीय",
+    "menu.show_hidden_files": "छिपी हुई फ़ाइलें दिखाएँ"
   },
   "help": {
     "schema": 2,

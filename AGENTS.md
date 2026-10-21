@@ -4,6 +4,10 @@
 
 At the beginning of every Work session, read `PROJECT_STATUS.md` before starting development. At the end of each substantial development task, update it with verified completed work, outstanding tasks, new bugs and released versions. Keep it concise, distinguish evidence from uncertainty, and keep its public GitHub copy free of private information or credentials. Preserve unrelated uncommitted work when committing or publishing documentation.
 
+## Efficiency
+
+Before substantial work, assess usage and runtime costs. Prefer local scripts/batches, reuse unchanged evidence, pilot a small representative sample, and reserve GUI/AI review for judgement or demonstrated issues. Combine independent operations and avoid repeated navigation, captures and testing without a new reason. Suggest materially cheaper approaches before proceeding, preserve correctness, and record proven methods in PROJECT_STATUS.md.
+
 ## Microsoft Store updates
 
 ### Screenshot capture preference

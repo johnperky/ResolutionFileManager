@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Gamma dinamica",
     "inspector.unknown": "Sconosciuto",
     "inspector.unrated": "Senza classificazione",
-    "inspector.unreadable": "Illeggibile"
+    "inspector.unreadable": "Illeggibile",
+    "menu.show_hidden_files": "Mostra file nascosti"
   },
   "help": {
     "schema": 2,

@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dynamiskt omfång",
     "inspector.unknown": "Okänd",
     "inspector.unrated": "Ej betygsatt",
-    "inspector.unreadable": "Oläsbar"
+    "inspector.unreadable": "Oläsbar",
+    "menu.show_hidden_files": "Visa dolda filer"
   },
   "help": {
     "schema": 2,

@@ -19,7 +19,11 @@ folder_version=re.fullmatch(r'Store Preparation (\d+\.\d+\.\d+)',root.parent.nam
 version=folder_version.group(1) if folder_version else (project/'VERSION.txt').read_text(encoding='utf-8').strip()
 languages=sorted(p.stem for p in (project/'locales').glob('*.json'))
 layouts=['01-details-info','02-dual-previews','03-thumbnails','04-video-conversion']
-records=json.loads((root/'capture-progress.json').read_text(encoding='utf-8'))
+batch_candidates=not (root/'capture-progress.json').exists()
+if batch_candidates:
+    records=[{**row,'path':str(root/row['file']),'name':row['view']} for row in json.loads((root/'candidate-progress.json').read_text(encoding='utf-8'))]
+else:
+    records=json.loads((root/'capture-progress.json').read_text(encoding='utf-8'))
 results=[]
 for record in records:
     source=Path(record['path'])
@@ -55,5 +59,7 @@ for code in languages:
     if not shots:continue
     images=''.join(f'<a href="{html.escape(Path(r["png"]).relative_to(root).as_posix())}"><img src="{html.escape(Path(r["png"]).relative_to(root).as_posix())}" alt="{html.escape(r["name"])}"></a>' for r in shots)
     sections.append(f'<section><h2>{html.escape(code)}</h2>{images}</section>')
-(root/'REVIEW.html').write_text('<!doctype html><meta charset="utf-8"><title>RFM '+html.escape(version)+' screenshots</title><style>body{font:16px system-ui;margin:30px}img{width:46%;margin:1%;border:1px solid #aaa}section{margin:30px 0}</style><h1>RFM '+html.escape(version)+' — genuine E: sample captures</h1><p>Maximized app, original 1920 × 1032 resolution, no taskbar. Nothing uploaded.</p>'+''.join(sections),encoding='utf-8')
+gallery_name='PNG_VALIDATION.html' if batch_candidates else 'REVIEW.html'
+scope='Verified-source native UI candidates; separate packaged-process checks still apply. ' if batch_candidates else ''
+(root/gallery_name).write_text('<!doctype html><meta charset="utf-8"><title>RFM '+html.escape(version)+' screenshots</title><style>body{font:16px system-ui;margin:30px}img{width:46%;margin:1%;border:1px solid #aaa}section{margin:30px 0}</style><h1>RFM '+html.escape(version)+' — genuine E: sample captures</h1><p>'+scope+'Maximized app, original 1920 × 1032 resolution, no taskbar. Nothing uploaded.</p>'+''.join(sections),encoding='utf-8')
 print(json.dumps({'captures':len(results),'completeLanguages':report['completeLanguages'],'expectedLanguages':len(languages),'pixelChecksPassed':len(results),'uploaded':False}))

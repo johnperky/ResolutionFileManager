@@ -23,6 +23,7 @@ $settingsPath=Join-Path $settingsFolder 'settings.json'
 $template=if(Test-Path -LiteralPath $settingsPath) {$settingsPath} else {Join-Path $previousData 'settings.json'}
 $prefs=Get-Content -Raw -LiteralPath $template | ConvertFrom-Json -AsHashtable
 $prefs.language=$Language
+$prefs.show_hidden_files=$false
 $prefs.geometry='1900x900+0+0'
 $prefs.browser_split=960
 $prefs.preview_split=480

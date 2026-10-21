@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "গতিশীল পরিসীমা",
     "inspector.unknown": "অজানা",
     "inspector.unrated": "মূল্যহীন",
-    "inspector.unreadable": "অপঠিত"
+    "inspector.unreadable": "অপঠিত",
+    "menu.show_hidden_files": "লুকানো ফাইল দেখান"
   },
   "help": {
     "schema": 2,

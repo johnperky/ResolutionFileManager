@@ -6,7 +6,7 @@ Run `Capture Store Screenshots.cmd` in the main project folder. It generates all
 
 For a smaller run: `python tools/batch_store_screenshots.py --languages en,de,ar`. Repeat the same command to resume. A Windows file lock prevents overlapping batches in the same output folder. Failures stop the batch and preserve completed images. Changed application source/build/resources require a new output folder (`--output`). Capture-only repairs can resume unchanged application provenance; earlier script provenance is preserved and new captures record their runner hash.
 
-Output: the project parent's `Store Preparation 12.7.8/Batch Candidates v2` folder. `REVIEW.html` provides a combined gallery; `candidate-progress.json`, per-language `captures.json`, `provenance.json` and `run-status.json` record progress and hashes. The double-click launcher's log is `%TEMP%/rfm-screenshot-batch.log`.
+Output: the project parent's `Store Preparation <current version>/Batch Candidates v3` folder. `REVIEW.html` provides a combined gallery; `candidate-progress.json`, per-language `captures.json`, `provenance.json` and `run-status.json` record progress and hashes. The double-click launcher's log is `%TEMP%/rfm-screenshot-batch.log`.
 
 The runner verifies maintained application modules and all 43 locales against the frozen review EXE, checks the saved layout gate/binary hash, then runs the matching source's real native Tk widgets in a separate process per locale. These are **verified-source native UI candidates, not captures of the packaged EXE process**. Runtime/packaging differences still require binary spot checks. Every candidate starts `reviewed: false`; no approved capture manifest or release gate is changed.
 
@@ -17,3 +17,5 @@ Focus loss is retried locally before each capture. Visible overlapping windows/n
 Paused preview staging synchronises the actual three-second frame, slider position and displayed time before saving. Earlier preview originals are retained under `rejected/preview-timing-originals`; a preview-only resume skips the unrelated thumbnail/conversion staging.
 
 Review the gallery together for clipped controls, empty media, dialogs and RTL typography. Approve only views actually inspected. Candidate completeness alone does not authorise Store import or release publication. No Store upload, build or release is performed by this tool.
+
+12.7.10: hidden files are forced off by the runner. Reuse a read-only SQLite backup of the existing sample-media metadata cache in the new version’s isolated Review Settings folder; do not re-probe unchanged media for each locale.

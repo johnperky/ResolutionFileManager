@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Interval dinamic",
     "inspector.unknown": "Necunoscut",
     "inspector.unrated": "Neevaluat",
-    "inspector.unreadable": "De necitit"
+    "inspector.unreadable": "De necitit",
+    "menu.show_hidden_files": "Afișează fișierele ascunse"
   },
   "help": {
     "schema": 2,

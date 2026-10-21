@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "다이내믹 레인지",
     "inspector.unknown": "알 수 없음",
     "inspector.unrated": "등급 없음",
-    "inspector.unreadable": "읽을 수 없음"
+    "inspector.unreadable": "읽을 수 없음",
+    "menu.show_hidden_files": "숨김 파일 표시"
   },
   "help": {
     "schema": 2,

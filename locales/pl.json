@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Zakres dynamiczny",
     "inspector.unknown": "Nieznany",
     "inspector.unrated": "Bez oceny",
-    "inspector.unreadable": "Nieczytelny"
+    "inspector.unreadable": "Nieczytelny",
+    "menu.show_hidden_files": "Pokaż ukryte pliki"
   },
   "help": {
     "schema": 2,

@@ -1,0 +1,38 @@
+[
+  {
+    "executable": "dist\\multilingual-review-12.7.10\\ResolutionFileManager-v12.7.10-Multilingual-Review.exe",
+    "sha256": "f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f",
+    "theme": "System",
+    "scale": 100,
+    "native_menu_toggle_persisted": true,
+    "native_appearance_opened": true,
+    "isolated_settings": true,
+    "PATH_system_only": true,
+    "passed": true,
+    "scope": "Current Windows host, isolated application environment; not a separate clean OS/Windows 10 machine."
+  },
+  {
+    "executable": "dist\\multilingual-review-12.7.10\\ResolutionFileManager-v12.7.10-Multilingual-Review.exe",
+    "sha256": "f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f",
+    "theme": "Dark",
+    "scale": 200,
+    "native_menu_toggle_persisted": true,
+    "native_appearance_opened": true,
+    "isolated_settings": true,
+    "PATH_system_only": true,
+    "passed": true,
+    "scope": "Current Windows host, isolated application environment; not a separate clean OS/Windows 10 machine."
+  },
+  {
+    "executable": "dist\\multilingual-review-12.7.10\\ResolutionFileManager-v12.7.10-Multilingual-Review.exe",
+    "sha256": "f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f",
+    "theme": "High contrast",
+    "scale": 150,
+    "native_menu_toggle_persisted": true,
+    "native_appearance_opened": true,
+    "isolated_settings": true,
+    "PATH_system_only": true,
+    "passed": true,
+    "scope": "Current Windows host, isolated application environment; not a separate clean OS/Windows 10 machine."
+  }
+]

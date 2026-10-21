@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "動態範圍",
     "inspector.unknown": "未知",
     "inspector.unrated": "未評級",
-    "inspector.unreadable": "無法閱讀"
+    "inspector.unreadable": "無法閱讀",
+    "menu.show_hidden_files": "顯示隱藏檔案"
   },
   "help": {
     "schema": 2,

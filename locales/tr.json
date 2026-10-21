@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dinamik aralık",
     "inspector.unknown": "Bilinmiyor",
     "inspector.unrated": "Derecelendirilmemiş",
-    "inspector.unreadable": "Okunamıyor"
+    "inspector.unreadable": "Okunamıyor",
+    "menu.show_hidden_files": "Gizli dosyaları göster"
   },
   "help": {
     "schema": 2,

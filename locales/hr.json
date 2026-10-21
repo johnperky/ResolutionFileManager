@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dinamički raspon",
     "inspector.unknown": "Nepoznato",
     "inspector.unrated": "Bez ocjene",
-    "inspector.unreadable": "Nečitljivo"
+    "inspector.unreadable": "Nečitljivo",
+    "menu.show_hidden_files": "Prikaži skrivene datoteke"
   },
   "help": {
     "schema": 2,

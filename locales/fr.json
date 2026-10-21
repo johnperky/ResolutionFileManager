@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Plage dynamique",
     "inspector.unknown": "Inconnu",
     "inspector.unrated": "Non classé",
-    "inspector.unreadable": "Illisible"
+    "inspector.unreadable": "Illisible",
+    "menu.show_hidden_files": "Afficher les fichiers cachés"
   },
   "help": {
     "schema": 2,

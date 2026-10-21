@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "متحرک رینج",
     "inspector.unknown": "نامعلوم",
     "inspector.unrated": "غیر درجہ بندی",
-    "inspector.unreadable": "ناقابل پڑھا۔"
+    "inspector.unreadable": "ناقابل پڑھا۔",
+    "menu.show_hidden_files": "پوشیدہ فائلیں دکھائیں"
   },
   "help": {
     "schema": 2,

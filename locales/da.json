@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dynamisk rækkevidde",
     "inspector.unknown": "Ukendt",
     "inspector.unrated": "Ikke bedømt",
-    "inspector.unreadable": "Ulæselig"
+    "inspector.unreadable": "Ulæselig",
+    "menu.show_hidden_files": "Vis skjulte filer"
   },
   "help": {
     "schema": 2,

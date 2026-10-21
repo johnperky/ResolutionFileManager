@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dinamiskais diapazons",
     "inspector.unknown": "Nezināms",
     "inspector.unrated": "Bez vērtējuma",
-    "inspector.unreadable": "Nelasāms"
+    "inspector.unreadable": "Nelasāms",
+    "menu.show_hidden_files": "Rādīt slēptos failus"
   },
   "help": {
     "schema": 2,

@@ -1,5 +1,6 @@
 param(
-    [switch]$SkipBuild
+    [switch]$SkipBuild,
+    [string]$ReviewedExecutable
 )
 
 $ErrorActionPreference = "Stop"
@@ -11,12 +12,19 @@ if ($Version -notmatch '^\d+\.\d+\.\d+$') { throw "VERSION.txt does not contain 
 $ReleaseNotes = Join-Path $ProjectDirectory "RELEASE_NOTES_$Version.md"
 if (-not (Test-Path -LiteralPath $ReleaseNotes)) { throw "Release notes were not found: $ReleaseNotes" }
 
+if ($ReviewedExecutable) {
+    # Package the exact reviewed bytes rather than silently rebuilding them.
+    $SkipBuild = $true
+    $ReviewedExecutable = (Resolve-Path -LiteralPath $ReviewedExecutable).Path
+    python (Join-Path $ProjectDirectory 'tools/verify_english_review.py') $ReviewedExecutable
+    if ($LASTEXITCODE -ne 0) { throw 'Reviewed executable does not match maintained source/resources.' }
+}
 if (-not $SkipBuild) {
     & (Join-Path $ProjectDirectory "build_windows.ps1")
     if ($LASTEXITCODE -ne 0) { throw "The Windows application build failed." }
 }
 
-$BuiltExe = Join-Path $ProjectDirectory "dist\ResolutionFileManager.exe"
+$BuiltExe = if ($ReviewedExecutable) { $ReviewedExecutable } else { Join-Path $ProjectDirectory "dist\ResolutionFileManager.exe" }
 if (-not (Test-Path -LiteralPath $BuiltExe)) { throw "The built executable was not found: $BuiltExe" }
 $ReleaseRoot = Join-Path $ProjectDirectory "release-output\$Version"
 $PortableName = "ResolutionFileManager-$Version-Windows-x64"
@@ -61,6 +69,9 @@ foreach ($Entry in $PythonLicenceMap.GetEnumerator()) {
     if (-not (Test-Path -LiteralPath $Source)) { throw "Missing third-party licence: $Source" }
     Copy-Item -LiteralPath $Source -Destination (Join-Path $PortableDirectory ("licenses\python-components\" + $Entry.Key + ".txt"))
 }
+$PythonRoot = python -c "import sys; print(sys.base_prefix)"
+Copy-Item -LiteralPath (Join-Path $PythonRoot 'LICENSE.txt') -Destination (Join-Path $PortableDirectory 'licenses/python-components/Python.txt')
+Copy-Item -LiteralPath (Join-Path $PythonRoot 'tcl/tk8.6/license.terms') -Destination (Join-Path $PortableDirectory 'licenses/python-components/Tcl-Tk.txt')
 
 $SourceDirectory = Join-Path $ReleaseRoot "ResolutionFileManager-$Version-Source"
 python (Join-Path $ProjectDirectory "tools\project_snapshot.py") create "$SourceDirectory"
@@ -71,6 +82,10 @@ $GeneratedPackagingDirectories = @(
 )
 foreach ($GeneratedDirectory in $GeneratedPackagingDirectories) {
     if (Test-Path -LiteralPath $GeneratedDirectory) {
+        $ResolvedSource = [System.IO.Path]::GetFullPath($SourceDirectory).TrimEnd('\') + '\'
+        if (-not ([System.IO.Path]::GetFullPath($GeneratedDirectory)).StartsWith($ResolvedSource, [System.StringComparison]::OrdinalIgnoreCase)) {
+            throw 'Refusing to remove generated packaging data outside the source export.'
+        }
         Remove-Item -LiteralPath $GeneratedDirectory -Recurse -Force
     }
 }

@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dynamic na hanay",
     "inspector.unknown": "Hindi alam",
     "inspector.unrated": "Walang rating",
-    "inspector.unreadable": "Hindi nababasa"
+    "inspector.unreadable": "Hindi nababasa",
+    "menu.show_hidden_files": "Ipakita ang mga nakatagong file"
   },
   "help": {
     "schema": 2,

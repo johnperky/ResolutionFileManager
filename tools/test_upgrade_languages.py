@@ -59,6 +59,12 @@ def check(code):
             buttons=[w for w in descendants(app.basket_panel) if isinstance(w,m.ttk.Button)]
             assert all(w.winfo_width()>=w.winfo_reqwidth()-2 for w in buttons), 'basket button clipping'
             assert all(w.winfo_x()+w.winfo_width()<=w.master.winfo_width()+2 for w in buttons),'basket buttons overflow'
+            # Scanning is asynchronous; a slow metadata reader must not turn
+            # an empty intermediate view into a false rename-layout failure.
+            ready_deadline=time.monotonic()+15
+            while time.monotonic()<ready_deadline and (app.left.scan_active or not app.left.tree.get_children()):
+                app.update();time.sleep(.02)
+            assert app.left.tree.get_children(),'fixture scan did not populate rename row'
             app.left.tree.selection_set(app.left.tree.get_children()[0]); app.left.rename_with_preview(); pump()
             window=next(w for w in descendants(app) if isinstance(w,m.tk.Toplevel))
             status=next(w for w in descendants(window) if isinstance(w,m.ttk.Label) and w.cget('textvariable'))

@@ -1,0 +1,3 @@
+Scan starting...
+Scan finished.
+Scanning F:\Resolution File Manager project\ResolutionFileManager-Project-v6\dist\multilingual-review-12.7.10\ResolutionFileManager-v12.7.10-Multilingual-Review.exe found no threats.

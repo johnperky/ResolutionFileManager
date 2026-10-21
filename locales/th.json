@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "ช่วงไดนามิก",
     "inspector.unknown": "ไม่ทราบ",
     "inspector.unrated": "ไม่ได้รับการจัดอันดับ",
-    "inspector.unreadable": "ไม่สามารถอ่านได้"
+    "inspector.unreadable": "ไม่สามารถอ่านได้",
+    "menu.show_hidden_files": "แสดงไฟล์ที่ซ่อนอยู่"
   },
   "help": {
     "schema": 2,

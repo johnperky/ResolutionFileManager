@@ -1,83 +1,50 @@
 # Resolution File Manager — project handover
 
-Updated: 21 October 2026 (Europe/London). Read this first at the start of every Work session. Update it after substantial development, a confirmed bug, or a release. Record actual results and remaining work; never infer success from an interrupted session.
+Updated: 21 October 2026 (Europe/London). Read this and AGENTS.md before development; update after significant changes. Record verified outcomes, preserve unrelated work, and keep public documentation free of secrets.
 
-## Screenshot workflow update
+## Current versions and release state
 
-- **Complete: 172 final 12.7.8 PNG candidates / 43 languages × four views**, integrity checked and visually reviewed through gallery/control/preview sheets plus targeted full-size checks. Exact scope and hashes: `docs/STORE_SCREENSHOT_REVIEW_12.7.8.md`; local gallery/progress: `Store Preparation 12.7.8/Batch Candidates v2`. No new visible app layout defect identified in these four views.
-- Default future method: retain/adapt `Capture Store Screenshots.cmd` and `tools/batch_store_screenshots.py`; review with `tools/review_batch_candidates.py`. Focus/notification handling and paused frame/time staging were repaired; six tool tests pass. Rejected/replaced originals are preserved. The old manual capture automation was deleted.
-- These are matching-source native UI captures, separately identified from packaged-process captures. Six modules/43 locales match the exact EXE; binary checks include the saved Arabic four-view set and a fresh English packaged-process capture. Broader native release QA and matching release/package assets remain outstanding: `readyForRelease: false`, `readyForStoreImport: false`. No application code/build, Store submission or binary release changed.
+- **Windows: 12.7.10, review complete, ready for Windows GitHub release.** Exact EXE: `dist/multilingual-review-12.7.10/ResolutionFileManager-v12.7.10-Multilingual-Review.exe`; SHA-256 `f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f`. Six modules and all 43 locales match source (`docs/EMBEDDED_REVIEW_12.7.10.json`). Older candidates/binaries preserved.
+- Final 89 unit tests and Defender custom scan pass. Complete Help validation has zero errors/review warnings. Native packaged checks pass System 100%, Dark 200% and High contrast 150%, with isolated settings and system-only PATH. Actual populated binary views inspected. A separate clean OS/Windows 10 was not tested; no claim of exhaustive device/scale/language coverage.
+- **Linux: 12.6.1 x86_64**, retained in `dist/linux`; current Windows changes have not been built/tested on Linux. Earlier Ubuntu checks do not establish Mint/laptop/driver/audio/drag/drop/Trash compatibility.
+- **Latest local Microsoft Store package: 12.6.2.0.** Submission 8 previously recorded as draft/package Validated, not submitted. Current live certification status remains unverified; no Store action in this release task.
+- GitHub's previous public Windows release is 12.3.0. Publication of 12.7.10 is authorised only after the exact candidate passes saved gates. Check `docs/LAYOUT_REVIEW_CHECKPOINT.md` and `docs/RELEASE_READINESS_12.7.10.json` when present; missing evidence means not ready.
 
-## Current versions and verification
+## Completed functionality and latest fixes
 
-- **Windows source/review build: 12.7.8.** Pixel-measured conversion selectors plus scrollable Info metadata/pinned actions for short browsers. Build and exact embedded-source/43-locale verification passed. Versioned Desktop EXE SHA-256: `5b2c1270038627adb0d1c0525e82269359d2bd02a0611172cafc11c2af2c2718`. Older 12.7.5/12.7.6/12.7.7 binaries retained.
-- **Linux binary: 12.6.1 x86_64**, present in `dist/linux`. Earlier records report successful Ubuntu build/smoke checks; 12.7.x changes have not been built or verified on Linux. Mint, laptop hardware, drivers, audio, desktop drag/drop and Trash remain unverified.
-- Latest local **Store package: 12.6.2.0**. Submission 8 is recorded as a draft with the package saved/Validated, not submitted. Current live/certification status was not checked in this inspection; consult Partner Center before acting. A historical Submission 7 certification screenshot is not evidence of today's status.
-- Fresh verification after the Serbian test correction on 21 October: **all 86 tests pass** (`python -m unittest discover -q`). Inspector and embedded-resource checks also have saved reports. No application rebuild was needed.
+- Dual-pane recursive media browsing, Details/thumbnails, sorting/filtering/search, folder trees, tick selections, selection basket, layouts/workspaces, metadata inspector, ratings/tags/labels and smart collections.
+- Image/video previews and comparison, frame export/contact sheets, duplicates/similar-image review, integrity/inventory/folder comparison and organisation rules.
+- Queued copy/move with conflict previews, pause/cancel/retry, safe deletion, rename/Undo and preview-first video conversion retaining originals; asynchronous resumable Undo coordinates background readers.
+- **Tools > Show hidden files** persists, defaults off and applies to both pane scans, folder trees and inventory. Recognises dot names and Windows hidden attributes; normal media filters still apply. Native toggle pilot covers recursion, Details/Thumbnails, saved preference and unchanged window geometry. Label translated in all 43 languages; capture runners explicitly keep it off.
+- Current layout fixes: measured conversion choices; scrollable Info metadata with reserved actions; scaled rows/headings and settled Japanese fallback fonts; readable dark/high-contrast dropdowns; scrollable enlarged conversion settings; preserved toolbar/scan Cancel actions; Appearance Cancel restores custom column widths.
+- Representative review includes 160 theme/scale/resize states with explicitly recorded earlier source scope, plus a final 40-state English scan-footer regression. Fresh exact-binary checks supplement matching-source native review. See `docs/APPEARANCE_REVIEW_12.7.10.json` and `docs/PACKAGED_REVIEW_12.7.10.json`.
 
-## Completed functionality
+## Languages and Serbian
 
-- Dual-pane recursive media browsing, Details/thumbnails, metadata sorting/filtering/search, persistent layouts/workspaces and independent tick selections.
-- Image/video previews and comparison, frame export/contact sheets, metadata inspector, ratings/tags/labels, smart collections and cache/performance controls.
-- Duplicate and similar-image review, integrity checks, inventory export, folder comparison/synchronisation previews and organisation rules.
-- Queued copy/move with conflict policies, pause/cancel/retry, safe deletion, batch rename and Undo; preview-first video conversion retaining originals.
-- Recent 12.7.x work: transfer/selection improvements; asynchronous resumable Undo coordinating background readers; translated Copy/Move/Cancel drop prompt; populated Info metadata localised in 12.7.5.
+43 locale packs: `ar, bg, bn, ca, cs, da, de, el, en, es, et, fa, fi, fil, fr, he, hi, hr, hu, id, it, ja, ko, lt, lv, ms, nl, no, pl, pt-BR, pt-PT, ro, ru, sk, sr, sv, th, tr, uk, ur, vi, zh-CN, zh-TW`.
 
-## Outstanding work and known problems
+All have interface translations and 22 Help chapters/134 paragraphs. Existing content was retained; completeness and native layout checks are not professional proofreading. Serbian is Cyrillic: manifest, listing mapping and packaging test consistently use `sr-cyrl-rs`. Earlier mismatch fixed/pushed as `83d1ad0`; no repeat translation/manifest change needed. Live Store acceptance remains unverified.
 
-- Serbian packaging-test mismatch resolved on 21 October: expectation now uses `sr-cyrl-rs`, matching the existing Cyrillic manifest and translation. All 86 tests pass. Live Store state remains unverified.
-- German conversion conflict selector clipping fixed in 12.7.6, along with longer preset/resolution/engine choices. Final real-Tk conversion geometry and upgrade-control checks pass all 43 languages; 86 unit tests pass. Native new-binary German/Arabic main, Info and conversion views inspected. Broader native visual/scaling review remains incomplete; see `docs/LAYOUT_REVIEW_CHECKPOINT.md` for exact hashes and capture/release gates.
-- Screenshot capture/review is complete for the four latest-version Store views in all 43 languages; see the current workflow summary above. Older 12.7.5/12.7.6 screenshots and excluded diagnostics remain preserved. Wider native release QA remains incomplete.
-- 12.7.8 Info metadata/action clipping fix passed all 43 short-browser regressions. Four-view image review is complete; resizing/dialog/theme/scaling coverage outside those views remains outstanding. Preserve existing app fixes and the exact reviewed binary.
-- README and PROJECT_CONTEXT version summaries were reconciled to 12.7.5 during the GitHub update.
-- Linux validation/release and Windows/Store release preparation for the current source remain outstanding. Older Store notes/keywords require reconciliation before reuse.
-- Unsaved editor buffers were not observable. Preserve local generated materials and older releases; do not reset, clean or overwrite this tree.
+## Screenshots and efficient automation
 
-## Languages
+- Default retained launcher: `Capture Store Screenshots.cmd`, runner `tools/batch_store_screenshots.py`; resume per-language manifests with isolated settings, E: sample media and read-only SQLite cache backup. No file operation or conversion is performed to stage UI.
+- **Final 12.7.10 capture/review is complete: 172 validated/reviewed PNGs in all43 languages** under `F:/Resolution File Manager project/Store Preparation 12.7.10/Batch Candidates v3`. Source-native candidates are distinguished from packaged-process checks; version/hash provenance is mandatory.
+- Preserve reviewed 12.7.8 172-image set and 12.7.10 pre-footer candidates in `Batch Candidates v2`; never relabel these as final. New final captures use the corrected source/binary.
+- Reuse exact unchanged reviewed regions through decoded-pixel equality (`tools/compare_capture_regions.py`); validate PNGs, dimensions, hashes, references, duplicates and media content in batches (`review_batch_candidates.py`). Review combined galleries/new action strips rather than repeating remote clicks or every unchanged translation. See `docs/BATCH_SCREENSHOTS.md`.
+- Pilot English/German/Arabic before all 43 languages; avoid concurrent native UI changes/capture batches. Reuse passing tests unless source changes or failures justify more. Do not trade correctness for lower usage.
 
-43 locale files exist: `ar, bg, bn, ca, cs, da, de, el, en, es, et, fa, fi, fil, fr, he, hi, hr, hu, id, it, ja, ko, lt, lv, ms, nl, no, pl, pt-BR, pt-PT, ro, ru, sk, sr, sv, th, tr, uk, ur, vi, zh-CN, zh-TW`.
+## GitHub, packaging and important files
 
-Saved checks report full interface/new-control translations and Help in all 43 languages (22 chapters, 134 paragraphs), with six additive inspector keys in 12.7.5. Existing Help/UI entries were preserved. Translation completeness is not professional human review of every language.
+- Repository: https://github.com/johnperky/ResolutionFileManager ; branch `main`. Last pushed checkpoint before this work: `980d4fa5b4c65942dc4e28a9d5f9ea9552f0bfee`. Reviewed source/evidence is being committed and frozen for the authorised Windows release; verify HEAD against origin/main before reporting synchronisation.
+- Main folder: `F:/Resolution File Manager project/ResolutionFileManager-Project-v6`; Desktop project is a junction, not an independent backup. Versioned Desktop review EXEs are retained.
+- Builds: `build_windows_multilingual_review.ps1`, `build_windows_release.ps1`, `build_linux.sh`, `run_linux.sh`. Release package: `release-output/12.7.10`; pre-footer package preserved separately. `-ReviewedExecutable` packages exact reviewed bytes without rebuilding and validates six modules/43 locales.
+- Finalise committed source/docs with `tools/finalize_release_archives.py`, verify ZIPs/licences/media tools/checksums with `verify_windows_package.py`, then publish with `publish_reviewed_release.py`. The external ignored release readiness gate binds all four asset hashes, the source commit and public review evidence; it avoids a self-referential source ZIP hash inside its own archive. Do not regenerate the binary after review.
+- Verified backups: project-parent `Recovery Backups/2026-10-21-before-release-gates/source` (+ZIP, 331 files) and `2026-10-21-before-toolbar-release-fix/source` (+ZIP, 345 files); earlier recovery/layout snapshots retained. Initial 12.7.10 candidate EXEs are preserved in their versioned dist subfolders.
+- Help master/manual: `docs/help/en.json`, `docs/help/ENGLISH_MANUAL.md`; app translations: `locales/`; Store manifest: `packaging/microsoft-store/AppxManifest.template.xml` (x64/full-trust desktop configuration, existing assigned identity supplied during packaging).
 
-Serbian text is Cyrillic. `AppxManifest.template.xml`, listing-preparation mapping and `test_packaging_assets.py` now consistently use `sr-cyrl-rs`. The stale Latin test expectation was corrected; translation and manifest needed no changes. No Store upload/submission was performed.
+## Prioritised remaining work
 
-## GitHub and source synchronisation
-
-- Repository: https://github.com/johnperky/ResolutionFileManager ; development branch: `main`.
-- GitHub update authorised on 21 October: publish the eight previously local commits through `105bd9c` (12.4.0), plus a source/handover checkpoint for 12.7.5 on `main`. Verify `git rev-parse HEAD` against `git ls-remote origin refs/heads/main` after publication; those commands identify the exact final commit without a self-referential hash in this document.
-- The checkpoint includes maintained source, 43 locale packs, Help, tests, builders and handover instructions. Generated packages/caches, local prepared Store materials and unreviewed evidence images remain local and are not part of source synchronisation. This is a source update, not a binary release or Store submission.
-- Earlier documentation-only branch `codex/project-status-handover` is historical; the current handover is now included directly in the main source checkpoint.
-
-## Important locations and evidence
-
-- Authoritative project: `F:/Resolution File Manager project/ResolutionFileManager-Project-v6`. Desktop project folder is a junction to it, not an independent backup.
-- Builds: `build_windows.ps1`, `build_windows_release.ps1`, `build_windows_english_review.ps1`, `build_windows_multilingual_review.ps1`, `build_linux.sh`; runtime helper `run_linux.sh`.
-- Earlier versioned review binaries remain available for rollback; use the exact 12.7.8 path below for current work.
-- Current review binary: `dist/multilingual-review-12.7.8/ResolutionFileManager-v12.7.8-Multilingual-Review.exe`, plus versioned Desktop copy. The preceding 12.7.5 and 12.7.6 paths are retained for rollback only.
-- Releases: `release-output/12.6.1`; Linux handoff: `F:/ResolutionFileManager-Linux-Handoff-12.6.1`.
-- Backups: `F:/Resolution File Manager project/Recovery Backups/2026-10-21-before-inspector-localization/source` and `2026-10-21-12.7.5-inspector-verified/source`, with ZIPs. Hash comparison of 449 shared files found only a later screenshot-helper version-title correction; snapshot-only SOURCE_MANIFEST.json is expected. This handover and its AGENTS instructions postdate that snapshot.
-- Pre-GitHub-sync backup: `F:/Resolution File Manager project/Recovery Backups/2026-10-21-before-github-sync/source` plus ZIP; 451 files verified before documentation/ignore updates.
-- Help master: `docs/help/en.json`; manual: `docs/help/ENGLISH_MANUAL.md`; locales: `locales/`.
-- Evidence: `docs/STORE_SCREENSHOTS_12.7.5_CHECKPOINT.md`, `docs/TEST_INSPECTOR_12.7.5_FINAL.txt`, `docs/EMBEDDED_REVIEW_12.7.5.json`, `docs/MULTILINGUAL_12.7.3_CHECKPOINT.md`, `docs/RECOVERY_EXPORT_VERIFICATION.json`, `DEVELOPMENT_WORKFLOW.md`.
-
-## Microsoft Store handover
-
-- Product ID: `9NZL6GF5JSJK`; package identity: `JohnPerky1.ResolutionFileManager`; Windows Desktop x64/full-trust, 43 manifest languages. Configuration lives in `packaging/microsoft-store/`; package builder is `Build-StorePackage.ps1`. Publisher configuration already exists; do not invent or replace it.
-- `output/ResolutionFileManager-12.6.2.0-x64.msix` exists. Staged manifest is 12.6.2.0. This package predates current 12.7.8 source and must not be presented as containing it.
-- `SUBMISSION-8-CHECKPOINT.md` records saved Arabic/Italian/Vietnamese listings and a prepared 45-column locale export incorporating 26 new-language entries; the bulk import was **not confirmed saved**. Ukrainian individual-save status was uncertain, although the later export contained two image URLs. Reinspect actual draft rather than repeat work blindly.
-- Current screenshot preparation: `F:/Resolution File Manager project/Store Preparation 12.7.8/Batch Candidates v2` (172 reviewed source-native candidates); `Screenshots E Drive` retains four packaged-process Arabic captures. Older preparation folders remain preserved.
-- Always use the microsoft-store-submission skill. Preserve current export, translations and asset URLs. Default imports: disjoint folders of 10–11 Store listings, maximum 11; validate actual PNG content/references together, import sequentially and verify each save. Older all-language import folder is a baseline, not the default future upload unit.
-- Before any authorised submission: reconcile package/version/text/screenshots, verify all intended listings Complete, package Validated and actual price/options. Publication requires current user authorisation. No Store changes were made for this handover.
-
-## Prioritised next steps
-
-Publication authorisation (21 October 2026): the manual screenshot/layout one-offs are finished/obsolete and deleted. The conditional hourly publication follow-up checks readiness quietly. User authorises the newest Windows GitHub release only after full review and release gates pass; four-view screenshot completion alone is insufficient. No Store or Linux publication is authorised.
-
-1. Read this file and current Git status; preserve the complete dirty/untracked source with a new verified snapshot before development.
-2. Preserve the completed German selector and Serbian Cyrillic/test fixes. Do not repeat the completed 172-image capture/review.
-3. Complete broader native release QA (resizing/dialogs/themes/scaling beyond the four Store views), then prepare matching release assets and final release checks.
-4. Keep GitHub source and this handover current after subsequent fixes; preserve older releases and local-only Store preparation materials.
-5. When authorised, build/validate current Windows and Linux releases and create versioned exports/backups.
-6. When authorised, inspect the current Store draft, prepare matching release materials, resume verified small-batch imports, and record the resulting actual submission status.
-
-Maintenance: keep this document concise and free of credentials, account email addresses, local settings and private data. Distinguish direct checks from historical logs and unknown live state on every update.
+1. Review is complete for the exact candidate: `readyForRelease: true` in the public review checkpoint. Freeze committed source/docs and require the external exact-asset gate before publication. See `docs/STORE_SCREENSHOT_REVIEW_12.7.10.md`; approval hash is recorded in the readiness JSON.
+2. Freeze and verify portable ZIP/EXE, committed source ZIP, licences/notices and checksums. Commit/push intended changes, tag matching source and publish authorised Windows GitHub release; verify downloads and Latest status. No Store or Linux publication is authorised here.
+3. For a future Store update, use the `microsoft-store-submission` skill: inspect/resume actual draft, package current approved binary, preserve existing languages/English (India), reconcile stale listing text, and import CSV/image batches of 10–11 listings (maximum 11), saving/verifying each. Current final screenshots have not been uploaded.
+4. Separately plan Linux rebuild/testing, Windows 10/clean-machine coverage, signing if a certificate becomes available, and wider human translation/device checks. Unsaved editor buffers cannot be established from disk inspection.

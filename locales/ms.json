@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Julat dinamik",
     "inspector.unknown": "Tidak diketahui",
     "inspector.unrated": "Tidak dinilai",
-    "inspector.unreadable": "Tidak boleh dibaca"
+    "inspector.unreadable": "Tidak boleh dibaca",
+    "menu.show_hidden_files": "Tunjukkan fail tersembunyi"
   },
   "help": {
     "schema": 2,

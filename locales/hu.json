@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dinamikus tartomány",
     "inspector.unknown": "Ismeretlen",
     "inspector.unrated": "Nem minősített",
-    "inspector.unreadable": "Olvashatatlan"
+    "inspector.unreadable": "Olvashatatlan",
+    "menu.show_hidden_files": "Rejtett fájlok megjelenítése"
   },
   "help": {
     "schema": 2,

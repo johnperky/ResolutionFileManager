@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dynamisch bereik",
     "inspector.unknown": "Onbekend",
     "inspector.unrated": "Niet beoordeeld",
-    "inspector.unreadable": "Onleesbaar"
+    "inspector.unreadable": "Onleesbaar",
+    "menu.show_hidden_files": "Verborgen bestanden tonen"
   },
   "help": {
     "schema": 2,

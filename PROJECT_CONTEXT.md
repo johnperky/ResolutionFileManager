@@ -1,6 +1,6 @@
 # Resolution File Manager project
 
-Current version: 12.7.8 (43-language multilingual review build; not published). Read PROJECT_STATUS.md first for current state. Conversion selector text sizing corrected; all 43 languages pass measured geometry checks. Info metadata is now scrollable and actions remain allocated when previews shorten the browser. Final review remains in progress; see docs/LAYOUT_REVIEW_CHECKPOINT.md. All 43 translations/Help retained; Linux remains 12.6.1. Serbian packaging-test expectation corrected to Cyrillic on 21 October; all 86 tests pass.
+Current version: 12.7.10 Windows review build (release verification in progress; read PROJECT_STATUS.md and docs/LAYOUT_REVIEW_CHECKPOINT.md). Includes the persistent Tools hidden-files toggle and scaled layout/theme corrections. All 43 translations and Help retained. Linux remains 12.6.1; no Store submission is authorised by this release task.
 
 21 October 2026: drag/drop prompt now has explicitly translated Copy, Move and Cancel buttons, reusing the existing action keys in all 43 languages. Cancel and closing the prompt do nothing; Copy/Move retain the existing transfer preview. Only the relevant transfer Help paragraph was updated across all 43 languages. See docs/DROP_BUTTON_FIX_12.7.4.md.
 

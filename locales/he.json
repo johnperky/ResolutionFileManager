@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "טווח דינמי",
     "inspector.unknown": "לא ידוע",
     "inspector.unrated": "לא מדורג",
-    "inspector.unreadable": "בלתי קריא"
+    "inspector.unreadable": "בלתי קריא",
+    "menu.show_hidden_files": "הצג קבצים מוסתרים"
   },
   "help": {
     "schema": 2,

@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "محدوده دینامیکی",
     "inspector.unknown": "ناشناس",
     "inspector.unrated": "بدون رتبه",
-    "inspector.unreadable": "ناخوانا"
+    "inspector.unreadable": "ناخوانا",
+    "menu.show_hidden_files": "نمایش فایل‌های مخفی"
   },
   "help": {
     "schema": 2,

@@ -1,0 +1,8 @@
+{
+  "binarySha256": "f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f",
+  "scanner": "Microsoft Defender current platform custom scan",
+  "signatureVersion": "1.461.135.0",
+  "result": "No threats found",
+  "date": "2026-10-21",
+  "log": "docs/DEFENDER_SCAN_12.7.10.txt"
+}

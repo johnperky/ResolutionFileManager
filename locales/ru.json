@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Динамический диапазон",
     "inspector.unknown": "Неизвестно",
     "inspector.unrated": "Без рейтинга",
-    "inspector.unreadable": "Нечитаемый"
+    "inspector.unreadable": "Нечитаемый",
+    "menu.show_hidden_files": "Показать скрытые файлы"
   },
   "help": {
     "schema": 2,

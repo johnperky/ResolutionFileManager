@@ -48,7 +48,7 @@ except ImportError:  # Keep source startup graceful if optional dependencies are
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".webm", ".m4v", ".wmv", ".mpg", ".mpeg"}
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", ".gif", ".heic", ".heif", ".avif"}
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | IMAGE_EXTENSIONS
-APP_VERSION = "12.7.8"
+APP_VERSION = "12.7.10"
 
 
 def translated_combobox_width(labels, minimum=8, maximum=28):
@@ -275,6 +275,33 @@ def application_data_directory() -> Path:
     path = base / "ResolutionFileManager"
     path.mkdir(parents=True, exist_ok=True)
     return path
+
+
+def is_hidden_path(path: Path) -> bool:
+    """Dot names and Windows HIDDEN attributes; never alter file attributes."""
+    if path.name.startswith("."):
+        return True
+    try:
+        return bool(getattr(path.stat(), "st_file_attributes", 0) & 2)
+    except OSError:
+        return False
+
+
+def iter_browser_files(root: Path, recursive: bool, show_hidden: bool):
+    """Prune hidden subtrees; an explicitly opened root remains accessible."""
+    if recursive:
+        for directory, folders, names in os.walk(root, followlinks=False):
+            parent = Path(directory)
+            if not show_hidden:
+                folders[:] = [name for name in folders if not is_hidden_path(parent / name)]
+            for name in names:
+                path = parent / name
+                if show_hidden or not is_hidden_path(path):
+                    yield path
+    else:
+        for path in root.iterdir():
+            if path.is_file() and (show_hidden or not is_hidden_path(path)):
+                yield path
 
 
 def load_json(path: Path, default):
@@ -1245,15 +1272,17 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
         if self.inspector_enabled_var.get(): self.after(150, self.restore_inspector_width)
 
         status_row = ttk.Frame(self)
-        status_row.pack(fill="x", pady=(5, 0))
+        status_row.pack(side="bottom", fill="x", pady=(5, 0), before=content)
         self.status_var = tk.StringVar(value=self.tr("status.ready"))
-        ttk.Label(status_row, textvariable=self.status_var).pack(side="left", fill="x", expand=True)
+        status_label = ttk.Label(status_row, textvariable=self.status_var)
         self.checked_label_var = tk.StringVar(value=self.tr("pane.checked", count=0))
-        ttk.Label(status_row, textvariable=self.checked_label_var).pack(side="left", padx=(6, 4))
+        checked_label = ttk.Label(status_row, textvariable=self.checked_label_var)
         self.scan_progress = ttk.Progressbar(status_row, mode="determinate", length=110)
-        self.scan_progress.pack(side="left", padx=5)
         self.cancel_button = ttk.Button(status_row, text=self.tr("pane.cancel"), width=7, command=self.cancel_scan, state="disabled")
         self.cancel_button.pack(side="right")
+        self.scan_progress.pack(side="right", padx=5)
+        checked_label.pack(side="right", padx=(6, 4))
+        status_label.pack(side="left", fill="x", expand=True)
         self.after(100, self.poll_results)
         self.build_folder_roots()
         self.navigate(start_path)
@@ -1307,7 +1336,7 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
             self.folder_tree.delete(*children)
             path = Path(tags[0])
             try:
-                folders = sorted((p for p in path.iterdir() if p.is_dir()), key=lambda p: p.name.lower())
+                folders = sorted((p for p in path.iterdir() if p.is_dir() and (self.app.show_hidden_files_var.get() or not is_hidden_path(p))), key=lambda p: p.name.lower())
                 for folder in folders:
                     child = self.folder_tree.insert(node, "end", text=folder.name, tags=(str(folder),))
                     self.add_folder_placeholder(child, folder)
@@ -1588,10 +1617,11 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
 
         scan_path = self.current_path
         recursive = self.recursive_var.get()
+        show_hidden = self.app.show_hidden_files_var.get()
 
         def worker():
             try:
-                candidates = scan_path.rglob("*") if recursive else scan_path.iterdir()
+                candidates = iter_browser_files(scan_path, recursive, show_hidden)
                 paths = []
                 for path in candidates:
                     if cancel_event.is_set():
@@ -3308,17 +3338,20 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         except (ValueError, TypeError): self.ui_scale = 100
         self.apply_appearance(self.appearance_theme, self.ui_scale)
         self.active_pane: FilePane | None = None
+        self.show_hidden_files_var = tk.BooleanVar(value=bool(self.settings.get("show_hidden_files", False)))
         self.create_menu_bar()
 
         toolbar = ttk.Frame(self, padding=(10, 8))
         toolbar.pack(fill="x")
         self.toolbar = toolbar
-        ttk.Label(toolbar, text=self.tr("toolbar.guide")).pack(side="left")
+        guide = ttk.Label(toolbar, text=self.tr("toolbar.guide"))
         ttk.Button(toolbar, text=self.tr("toolbar.undo"), command=self.undo_last).pack(side="right", padx=4)
         ttk.Button(toolbar, text=self.tr("toolbar.copy"), command=lambda: self.transfer(False)).pack(side="right", padx=4)
         ttk.Button(toolbar, text=self.tr("toolbar.move"), command=lambda: self.transfer(True)).pack(side="right", padx=4)
         ttk.Button(toolbar, text=self.tr("toolbar.refresh"), command=self.refresh).pack(side="right", padx=4)
         ttk.Button(toolbar, text="Selection basket", command=self.toggle_selection_basket).pack(side="right", padx=4)
+        guide.pack(side="left", fill="x", expand=True)
+        guide.bind("<Configure>", lambda event: guide.configure(wraplength=max(80, event.width)))
 
         workspace = tk.PanedWindow(
             self,
@@ -3429,6 +3462,8 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         menu_bar.add_cascade(label=self.tr("menu.view"), menu=view_menu)
 
         tools_menu = tk.Menu(menu_bar, tearoff=False)
+        tools_menu.add_checkbutton(label=self.tr("menu.show_hidden_files"), variable=self.show_hidden_files_var, command=self.toggle_hidden_files)
+        tools_menu.add_separator()
         tools_menu.add_command(label=self.tr("menu.verify"), command=self.verify_media_integrity)
         tools_menu.add_command(label=self.tr("menu.contact_sheet"), command=self.create_video_contact_sheet)
         tools_menu.add_command(label=self.tr("menu.export_report"), command=self.export_media_report)
@@ -3485,6 +3520,12 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         ttk.Label(support, text=SUPPORT_URL).pack(pady=(4, 0))
         ttk.Button(body, text=self.tr("common.close"), command=window.destroy).pack()
         window.bind("<Escape>", lambda _event: window.destroy())
+
+    def toggle_hidden_files(self):
+        self.settings["show_hidden_files"] = self.show_hidden_files_var.get()
+        self.save_local_preferences()
+        for pane in (self.left, self.right):
+            pane.refresh_browser()
 
     def save_local_preferences(self):
         self.settings = merge_application_settings(
@@ -3588,6 +3629,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         pane.render_thumbnail_grid()
 
     def apply_appearance(self, theme: str, scale: int):
+        previous_scale = getattr(self, "ui_scale", 100)
         theme = theme if theme in {"System", "Light", "Dark", "High contrast"} else "System"
         scale = scale if scale in {100, 125, 150, 175, 200} else 100
         self.appearance_theme, self.ui_scale = theme, scale
@@ -3618,6 +3660,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             for name in ("TFrame", "TLabel", "TCheckbutton", "TRadiobutton", "TLabelframe", "TLabelframe.Label"): style.configure(name, background=bg, foreground=fg)
             style.configure("TButton", background=muted, foreground=fg, padding=4); style.map("TButton", background=[("active", select)], foreground=[("active", selectfg)])
             style.configure("TEntry", fieldbackground=field, foreground=fg, insertcolor=fg); style.configure("TCombobox", fieldbackground=field, foreground=fg)
+            style.map("TCombobox", fieldbackground=[("readonly", field)], foreground=[("readonly", fg)], selectbackground=[("readonly", field)], selectforeground=[("readonly", fg)])
             style.configure("Treeview", background=field, fieldbackground=field, foreground=fg); style.map("Treeview", background=[("selected", select)], foreground=[("selected", selectfg)])
             style.configure("Treeview.Heading", background=muted, foreground=fg); style.map("Treeview.Heading", background=[("active", select)], foreground=[("active", selectfg)])
             style.configure("PaneTitle.TLabel", background=bg, foreground=fg, font=("Segoe UI", 12, "bold"))
@@ -3626,11 +3669,24 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             self.option_add("*Menu.background", bg); self.option_add("*Menu.foreground", fg); self.option_add("*Menu.activeBackground", select); self.option_add("*Menu.activeForeground", selectfg)
             self.option_add("*Text.background", field); self.option_add("*Text.foreground", fg); self.option_add("*Listbox.background", field); self.option_add("*Listbox.foreground", fg)
             self.configure(background=bg)
+        # Named fonts grow immediately, but ttk's default fixed row height does
+        # not. Keep every Treeview row tall enough for the active text size.
+        style.configure("Treeview", rowheight=max(20, tkfont.nametofont("TkDefaultFont", root=self).metrics("linespace") + 6))
+        # Tk resolves fallback fonts during idle layout (notably Japanese).
+        # Measure headings after that layout rather than using stale metrics.
+        self.update_idletasks()
+        heading_font = tkfont.nametofont("TkHeadingFont", root=self)
+        for pane in (getattr(self, "left", None), getattr(self, "right", None)):
+            if pane is None or scale == previous_scale: continue
+            for column in pane.tree["columns"]:
+                width = int(pane.tree.column(column, "width") * scale / max(1, previous_scale))
+                pane.tree.column(column, width=max(width, heading_font.measure(pane.tree.heading(column, "text")) + 24))
         try: self.update_idletasks()
         except tk.TclError: pass
 
     def appearance_controls(self):
         original = (self.appearance_theme, self.ui_scale)
+        original_widths = [(pane, {column: pane.tree.column(column, "width") for column in pane.tree["columns"]}) for pane in (self.left, self.right)]
         window = tk.Toplevel(self); window.title("Appearance and text size"); window.geometry("500x300"); window.transient(self)
         body = ttk.Frame(window, padding=14); body.pack(fill="both", expand=True)
         ttk.Label(body, text="Appearance and accessibility", font=("Segoe UI", 12, "bold")).grid(row=0, column=0, columnspan=2, sticky="w")
@@ -3640,15 +3696,27 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         ttk.Label(body, text="Theme:").grid(row=2, column=0, sticky="w", pady=6); ttk.Combobox(body, textvariable=theme_var, state="readonly", values=theme_choices.labels, width=translated_combobox_width(theme_choices.labels, 18)).grid(row=2, column=1, sticky="w")
         ttk.Label(body, text="Interface scale:").grid(row=3, column=0, sticky="w", pady=6); ttk.Combobox(body, textvariable=scale_var, state="readonly", values=("100%", "125%", "150%", "175%", "200%"), width=18).grid(row=3, column=1, sticky="w")
         sample = ttk.LabelFrame(body, text="Preview", padding=10); sample.grid(row=4, column=0, columnspan=2, sticky="ew", pady=12); ttk.Label(sample, text="Filename.jpg   1920 × 1080   H.265 / HEVC").pack(side="left"); ttk.Button(sample, text="Sample button").pack(side="right")
+        def fit():
+            if not window.winfo_exists(): return
+            window.update_idletasks()
+            width = min(self.winfo_screenwidth()-40, max(500, body.winfo_reqwidth()+28))
+            height = min(self.winfo_screenheight()-100, max(300, body.winfo_reqheight()+28))
+            window.geometry(f"{width}x{height}")
         def preview(*_args):
             try: scale = int(scale_var.get().rstrip("%"))
             except ValueError: scale = 100
             self.apply_appearance(theme_choices.internal(theme_var.get()), scale)
+            window.after_idle(fit)
         theme_var.trace_add("write", preview); scale_var.trace_add("write", preview)
         def save(): preview(); window.destroy()
-        def cancel(): self.apply_appearance(*original); window.destroy()
+        def cancel():
+            self.apply_appearance(*original)
+            for pane, widths in original_widths:
+                for column, width in widths.items(): pane.tree.column(column, width=width)
+            window.destroy()
         buttons = ttk.Frame(body); buttons.grid(row=5, column=0, columnspan=2, sticky="ew", pady=(8, 0)); ttk.Button(buttons, text="Save", command=save).pack(side="left"); ttk.Button(buttons, text="Restore system default", command=lambda: (theme_var.set(theme_choices.label("System")), scale_var.set("100%"))).pack(side="left", padx=6); ttk.Button(buttons, text="Cancel", command=cancel).pack(side="right")
         window.protocol("WM_DELETE_WINDOW", cancel)
+        window.after_idle(fit)
 
     def restore_layout(self):
         try:
@@ -3671,6 +3739,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
                 "thumbnail_cache_percent": self.thumbnail_cache_percent,
                 "appearance_theme": self.appearance_theme,
                 "ui_scale": self.ui_scale,
+                "show_hidden_files": self.show_hidden_files_var.get(),
                 "left": self.left.get_state(),
                 "right": self.right.get_state(),
             }
@@ -4847,7 +4916,27 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         if not items: messagebox.showinfo(self.tr("convert.select_first_title"), self.tr("convert.select_first")); return
         other = self.right if pane is self.left else self.left
         window = tk.Toplevel(self); window.title(self.tr("convert.title")); window.geometry("1060x690"); window.transient(self)
-        settings = ttk.LabelFrame(window, text=self.tr("convert.settings"), padding=10); settings.pack(fill="x", padx=10, pady=10)
+        settings_host = window
+        if self.ui_scale > 100:
+            # Preserve natural selector widths at enlarged text sizes. Settings
+            # can scroll in both directions; actions stay outside this viewport.
+            width = min(self.winfo_screenwidth()-40, int(1060*self.ui_scale/100))
+            height = min(self.winfo_screenheight()-100, int(690*self.ui_scale/100))
+            window.geometry(f"{width}x{height}")
+            settings_host = ttk.Frame(window); settings_host.pack(fill="x", padx=10, pady=10)
+            canvas = tk.Canvas(settings_host, height=min(420, height//2), highlightthickness=0)
+            horizontal = ttk.Scrollbar(settings_host, orient="horizontal", command=canvas.xview)
+            vertical = ttk.Scrollbar(settings_host, orient="vertical", command=canvas.yview)
+            canvas.configure(xscrollcommand=horizontal.set, yscrollcommand=vertical.set)
+            horizontal.pack(side="bottom", fill="x"); vertical.pack(side="right", fill="y"); canvas.pack(fill="both", expand=True)
+            settings = ttk.LabelFrame(canvas, text=self.tr("convert.settings"), padding=10)
+            settings_window = canvas.create_window(0, 0, window=settings, anchor="nw")
+            def fit_settings(_event=None):
+                canvas.itemconfigure(settings_window, width=max(canvas.winfo_width(), settings.winfo_reqwidth()))
+                canvas.configure(scrollregion=canvas.bbox("all"))
+            settings.bind("<Configure>", fit_settings); canvas.bind("<Configure>", fit_settings)
+        else:
+            settings = ttk.LabelFrame(window, text=self.tr("convert.settings"), padding=10); settings.pack(fill="x", padx=10, pady=10)
         existing_choices = LocalizedChoices(self.translator, {"Skip existing": "convert.skip_existing", "Keep both": "convert.keep_both"})
         preset_choices = LocalizedChoices(self.translator, TRANSCODE_PRESET_LABEL_KEYS)
         resolution_choices = LocalizedChoices(self.translator, TRANSCODE_RESOLUTION_LABEL_KEYS)
@@ -4941,7 +5030,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
                 self.post_ui(finished)
             threading.Thread(target=worker, daemon=True).start()
         def close(): cancel_event.set(); window.destroy()
-        buttons = ttk.Frame(window, padding=10); buttons.pack(fill="x"); refresh_button = ttk.Button(buttons, text=self.tr("convert.refresh"), command=refresh_preview); refresh_button.pack(side="left"); start_button = ttk.Button(buttons, text=self.tr("convert.start"), command=start); start_button.pack(side="left", padx=6); cancel_button = ttk.Button(buttons, text=self.tr("convert.cancel"), command=cancel_event.set, state="disabled"); cancel_button.pack(side="left"); ttk.Button(buttons, text=self.tr("common.close"), command=close).pack(side="right"); window.protocol("WM_DELETE_WINDOW", close)
+        buttons = ttk.Frame(window, padding=10); buttons.pack(side="bottom", fill="x", before=window.winfo_children()[0]); refresh_button = ttk.Button(buttons, text=self.tr("convert.refresh"), command=refresh_preview); refresh_button.pack(side="left"); start_button = ttk.Button(buttons, text=self.tr("convert.start"), command=start); start_button.pack(side="left", padx=6); cancel_button = ttk.Button(buttons, text=self.tr("convert.cancel"), command=cancel_event.set, state="disabled"); cancel_button.pack(side="left"); ttk.Button(buttons, text=self.tr("common.close"), command=close).pack(side="right"); window.protocol("WM_DELETE_WINDOW", close)
         preset_box.bind("<<ComboboxSelected>>", update_engine_choices); resolution_box.bind("<<ComboboxSelected>>", lambda _event: refresh_preview()); update_engine_choices()
 
     @staticmethod
@@ -5332,7 +5421,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
 
     @staticmethod
     def folder_inventory(pane: FilePane) -> dict[str, Path]:
-        iterator = pane.current_path.rglob("*") if pane.recursive_var.get() else pane.current_path.iterdir()
+        iterator = iter_browser_files(pane.current_path, pane.recursive_var.get(), pane.app.show_hidden_files_var.get())
         result = {}
         for path in iterator:
             try:

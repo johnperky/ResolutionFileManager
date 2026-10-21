@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dynamic range",
     "inspector.unknown": "Unknown",
     "inspector.unrated": "Unrated",
-    "inspector.unreadable": "Unreadable"
+    "inspector.unreadable": "Unreadable",
+    "menu.show_hidden_files": "Show hidden files"
   },
   "literals": {
     "Confirm": "Confirm",

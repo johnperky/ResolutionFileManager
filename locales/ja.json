@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "ダイナミックレンジ",
     "inspector.unknown": "不明",
     "inspector.unrated": "未評価",
-    "inspector.unreadable": "判読不能"
+    "inspector.unreadable": "判読不能",
+    "menu.show_hidden_files": "隠しファイルを表示"
   },
   "help": {
     "schema": 2,

@@ -1,41 +1,30 @@
-# Layout review checkpoint — 21 October 2026
+# Windows layout review — 21 October 2026
 
+Version: 12.7.10
 readyForScreenshots: true
-readyForRelease: false
+readyForRelease: true
 
-Screenshot update: **172 final candidates / 43 complete sets** now pass integrity checks and four-view visual review. See `STORE_SCREENSHOT_REVIEW_12.7.8.md` for exact hashes and scope. New captures use matching source native UI; packaged-binary checks include the existing Arabic four views and a fresh English process diagnostic. Broader native release QA beyond these four views remains incomplete, so `readyForRelease` stays false. The manual screenshot automation was deleted; retain the local batch workflow.
+## Exact final candidate
 
-Version: 12.7.8 Windows review build. Screenshot-view review is complete; exhaustive native resizing/dialog/theme/scaling review and release packaging remain outstanding.
+- Binary: `dist/multilingual-review-12.7.10/ResolutionFileManager-v12.7.10-Multilingual-Review.exe`
+- SHA-256: `f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f`
+- Six embedded application modules and all 43 locales match maintained source: `EMBEDDED_REVIEW_12.7.10.json`.
+- Earlier candidate binaries, portable packages and screenshots are preserved; final capture root is `Store Preparation 12.7.10/Batch Candidates v3`.
 
-## Exact reviewed baseline
+## Demonstrated fixes and evidence
 
-- Binary: `dist/multilingual-review-12.7.8/ResolutionFileManager-v12.7.8-Multilingual-Review.exe` (versioned Desktop copy also exists).
-- Binary SHA-256: `5b2c1270038627adb0d1c0525e82269359d2bd02a0611172cafc11c2af2c2718`.
-- `media_sorter.py`: `6f46e06c9ce89b4f7cf3bc26555bfbb33a37353a86b5be4ba4f010a1577b4998`.
-- `transfer_engine.py`: `b78097df216c7cae9cb89b072361289022dbfb561717e2e0900345ee7c856568`.
-- `transfer_ui.py`: `52809db9282d7b49fcef005a7682ff7e8421e6011bc606914a5de98cde6db04b`.
-- Exact embedded modules and all 43 locale files match source: `EMBEDDED_REVIEW_12.7.8.json`.
+- Scaled Treeview row heights/headings; Japanese fallback-font measurements settled before sizing.
+- Readable Dark/High contrast readonly dropdown colours; conversion settings scroll at enlarged text size, with action buttons reserved.
+- Top guide wraps to preserve toolbar actions. Scan status is reserved vertically and Cancel/progress/count before expandable status text horizontally. Regressions failed before fixes and pass after.
+- Appearance Cancel restores exact prior custom column widths; hidden-files toggle updates both panes/trees/inventory, persists and leaves geometry unchanged. Translated into 43 languages; screenshot setting forced off.
+- Current final source: English 40-state theme/scale/resize suite passes, including scan Cancel visibility/width. Japanese 40-state font suite passed immediately before the scan-footer-only correction. Earlier English/German/Arabic appearance matrices (120 states) are retained with their exact scope. Do not claim exhaustive every-language/theme/scale coverage.
+- Final packaged binary: System 100%, Dark 200%, High contrast 150% main/Appearance and menu-toggle persistence checks pass with isolated settings and system-only PATH. Actual populated binary views inspected, including corrected enlarged toolbar and scan footer.
+- Final 89 unit tests pass; complete Help validation has zero errors/review warnings. Earlier 43-language upgrade/Help checks are retained; unchanged logic evidence reused.
+- Defender scan of this exact binary reports no threats. `TEST_RELEASE_12.7.10.txt`, `DEFENDER_SCAN_12.7.10.txt`, `PACKAGED_REVIEW_12.7.10.json`, `APPEARANCE_REVIEW_12.7.10.json`.
 
-## Verified fixes and checks
+## Review complete and publication requirements
 
-- Native German 12.7.5 reproduced clipped conversion conflict text; real-Tk measurements also found clipped preset/resolution/engine options. Pixel-measured selector sizing passed all 43 languages in `CONVERSION_LAYOUT_REVIEW_12.7.6.json`. Conversion function remains AST-identical in 12.7.8. Native German/Arabic intermediate binaries confirmed visible controls; native final Arabic conversion dialog checked too.
-- Initial 12.7.6 screenshot work exposed Info metadata/action clipping when previews shorten browsers. Added read-only scrollable metadata and reserved the action row. Intermediate 12.7.7 tests found wrapped rows still exceeded the bottom in some locales; 12.7.8 reserves actions before variable-height headings.
-- Final short-browser Info regression: **43/43 pass**, `INSPECTOR_LAYOUT_REVIEW_12.7.8.json`. Earlier failing reports are diagnostic history, not final results.
-- Final unit suite: **86/86 pass**, `TEST_LAYOUT_12.7.8.txt`. Mouse/resizing/selection/Info/basket checks pass without callback errors: `LAYOUT_MOUSE_12.7.8.txt`.
-- Upgrade toolbar/Info/transfer/rename/basket checks passed all 43 languages before the final Info correction: `LAYOUT_UPGRADE_REVIEW.json`; full rerun of that broader suite after the correction has not been performed.
-- Complete Help validation passes. Existing locale/Help content was preserved. Serbian manifest/test correction remains intact. No media operation or conversion was executed.
-
-## Actual native coverage and remaining review
-
-- Final 12.7.8 Arabic main, populated Info, preview-shortened Info (actions visible), scroll to final metadata, and conversion dialog inspected through native UI. Intermediate 12.7.6 German main/Info/conversion inspected. This is not full native review of every language, screen, theme or scaling level.
-- Four-view screenshot review is complete for all 43 source-native locales; automated completeness was supplemented by actual image review. Professional translation proofreading and broader release QA are not implied. The separate packaged-process set contains four Arabic views.
-- Preserve all older native captures. 12.7.5 has 12 captures/three sets; 12.7.6 has one selected Info capture and an excluded dual-preview diagnostic original. Do not relabel old images as current.
-- Batch children have finished. The earlier isolated English packaged review app remains open; do not change personal settings or confuse it with a batch child.
-
-## Resume and publication gates
-
-- Final candidate root: `F:/Resolution File Manager project/Store Preparation 12.7.8/Batch Candidates v2`; exact reviewed images in `visual-review.json`, gallery in `REVIEW.html`.
-- Use `Capture Store Screenshots.cmd` / `batch_store_screenshots.py` and `review_batch_candidates.py`; preserve the older manual capture tools for binary spot checks. No remaining scheduled manual capture run.
-- All 172 screenshot candidates are captured and reviewed. Capture-tool failures and replacements are recorded in the screenshot review document; no application edits/rebuild were needed for that work.
-- No GitHub binary release, Store upload/submission, Linux build or publication. Conditional release follow-up must wait for finished native review, validated captures and matching release assets.
-- Verified pre-edit source snapshots/ZIPs: `Recovery Backups/2026-10-21-before-layout-review/source` (294 files) and `2026-10-21-before-info-height-fix/source` (307 files), beneath the F: project parent. Earlier versioned binaries retained.
+- **172/172 final PNGs across 43 languages pass validation and scoped visual review.** See `STORE_SCREENSHOT_REVIEW_12.7.10.md`; exact-image approval and pixel comparison are saved with the candidate root.
+- No unresolved release-blocking layout issue in the reviewed scope. Code/screenshot review is complete for this exact source/binary. Current 89 tests, full Help, source/embedded locales and Defender checks pass; initial package content checks pass.
+- `RELEASE_READINESS_12.7.10.json` records public review evidence. Before publication, freeze committed source/docs and require the external `release-output/12.7.10/RELEASE_READINESS.json` produced by `finalize_release_archives.py`; it binds final ZIP/EXE/checksum hashes, exact source commit and this review. Use `publish_reviewed_release.py`; never publish from a stale archive or unreviewed rebuild.
+- Tested on the current Windows11 host in isolated settings/system-only PATH; no separate clean-OS or Windows10 claim. Linux remains12.6.1, Store package/submission unchanged. No Store upload/submission or Linux release.

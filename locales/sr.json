@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Динамички опсег",
     "inspector.unknown": "Непознато",
     "inspector.unrated": "Унратед",
-    "inspector.unreadable": "Нечитљиво"
+    "inspector.unreadable": "Нечитљиво",
+    "menu.show_hidden_files": "Прикажи скривене датотеке"
   },
   "help": {
     "schema": 2,

@@ -1,5 +1,14 @@
 # Changelog
 
+## 12.7.10 — 21 October 2026
+
+- Added persistent Tools > Show hidden files in all 43 languages; capture settings keep it off.
+- Reserved enlarged toolbar and scan-status actions; settled fallback fonts before heading measurement.
+
+- Corrected enlarged file-row/heading metrics, Dark/High contrast dropdown colours and high-scale conversion/appearance dialog layout.
+- Retained the 12.7.8 translated selector and short-browser Info fixes, all 43 language/Help packs, and prior transfer/Undo improvements.
+- Added resumable local screenshot capture/review tooling and exact-source/binary release verification. See the current release notes and PROJECT_STATUS.md for actual release status.
+
 ## 12.6.2 — 20 October 2026
 
 - Use existing translated tick counters in both panes.

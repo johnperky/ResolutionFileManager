@@ -375,7 +375,8 @@
     "inspector.dynamic_range": "Dải động",
     "inspector.unknown": "Không xác định",
     "inspector.unrated": "Chưa được xếp hạng",
-    "inspector.unreadable": "Không thể đọc được"
+    "inspector.unreadable": "Không thể đọc được",
+    "menu.show_hidden_files": "Hiển thị tệp ẩn"
   },
   "help": {
     "schema": 2,
