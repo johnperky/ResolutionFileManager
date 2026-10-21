@@ -61,7 +61,7 @@ class PackagingAssetTests(unittest.TestCase):
         for language in (
             "ar-sa", "vi-vn", "uk-ua", "nb-no", "fi-fi", "da-dk", "hu-hu", "ro-ro",
             "cs-cz", "pt-pt", "pt-br", "tr-tr", "zh-tw", "ms-my", "he-il", "bn-bd", "ur-pk",
-            "fa-ir", "sk-sk", "hr-hr", "sr-latn-rs", "ca-es", "et-ee", "lv-lv", "lt-lt",
+            "fa-ir", "sk-sk", "hr-hr", "sr-cyrl-rs", "ca-es", "et-ee", "lv-lv", "lt-lt",
         ):
             with self.subTest(language=language):
                 self.assertIn(f'<Resource Language="{language}" />', manifest)

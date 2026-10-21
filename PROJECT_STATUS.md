@@ -7,7 +7,7 @@ Updated: 21 October 2026 (Europe/London). Read this first at the start of every 
 - **Windows source/review build: 12.7.5.** `VERSION.txt`, release notes and build records agree. Versioned Desktop EXE exists; its SHA-256 matches the saved verification record: `3a06b1acde063400d51897908ac1a71fe00e45e75971ba5ef7295e568f590cf1`.
 - **Linux binary: 12.6.1 x86_64**, present in `dist/linux`. Earlier records report successful Ubuntu build/smoke checks; 12.7.x changes have not been built or verified on Linux. Mint, laptop hardware, drivers, audio, desktop drag/drop and Trash remain unverified.
 - Latest local **Store package: 12.6.2.0**. Submission 8 is recorded as a draft with the package saved/Validated, not submitted. Current live/certification status was not checked in this inspection; consult Partner Center before acting. A historical Submission 7 certification screenshot is not evidence of today's status.
-- Fresh GitHub-sync verification on 21 October: 86 tests run, one known Serbian expectation failure (85 pass). Inspector and embedded-resource checks also have saved reports. No application build was performed for the GitHub update.
+- Fresh verification after the Serbian test correction on 21 October: **all 86 tests pass** (`python -m unittest discover -q`). Inspector and embedded-resource checks also have saved reports. No application rebuild was needed.
 
 ## Completed functionality
 
@@ -19,7 +19,7 @@ Updated: 21 October 2026 (Europe/London). Read this first at the start of every 
 
 ## Outstanding work and known problems
 
-- Correct the stale Serbian packaging-test expectation, then rerun appropriate checks. The manifest should remain Cyrillic to match the actual pack.
+- Serbian packaging-test mismatch resolved on 21 October: expectation now uses `sr-cyrl-rs`, matching the existing Cyrillic manifest and translation. All 86 tests pass. Live Store state remains unverified.
 - German conversion conflict selector clips its default text. Broader visual layout/RTL/typography review remains incomplete; automated language checks do not establish visual quality everywhere.
 - 12.7.5 Store screenshots: 12 native captures, four each for English, Arabic and German. **40 other language sets remain incomplete.** Capture tooling still needs inspected layout adjustments; it is not unattended.
 - README and PROJECT_CONTEXT version summaries were reconciled to 12.7.5 during the GitHub update.
@@ -32,7 +32,7 @@ Updated: 21 October 2026 (Europe/London). Read this first at the start of every 
 
 Saved checks report full interface/new-control translations and Help in all 43 languages (22 chapters, 134 paragraphs), with six additive inspector keys in 12.7.5. Existing Help/UI entries were preserved. Translation completeness is not professional human review of every language.
 
-Serbian text is Cyrillic. `AppxManifest.template.xml` correctly declares `sr-cyrl-rs`; `test_packaging_assets.py` still expects `sr-latn-rs`. This is a test mismatch, not evidence that the Serbian application translation is missing.
+Serbian text is Cyrillic. `AppxManifest.template.xml`, listing-preparation mapping and `test_packaging_assets.py` now consistently use `sr-cyrl-rs`. The stale Latin test expectation was corrected; translation and manifest needed no changes. No Store upload/submission was performed.
 
 ## GitHub and source synchronisation
 
@@ -64,7 +64,7 @@ Serbian text is Cyrillic. `AppxManifest.template.xml` correctly declares `sr-cyr
 ## Prioritised next steps
 
 1. Read this file and current Git status; preserve the complete dirty/untracked source with a new verified snapshot before development.
-2. Fix Serbian test expectation and German selector clipping; verify relevant regressions and record actual results here.
+2. Fix German selector clipping; verify relevant regressions and record actual results here. Serbian test correction is complete; scheduled screenshot work must preserve it.
 3. Finish visual language/RTL review and remaining screenshot sets without repeating completed captures.
 4. Keep GitHub source and this handover current after subsequent fixes; preserve older releases and local-only Store preparation materials.
 5. When authorised, build/validate current Windows and Linux releases and create versioned exports/backups.
