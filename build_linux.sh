@@ -51,4 +51,4 @@ OUTPUT_PATH="$PROJECT_DIR/dist/linux/$OUTPUT_NAME"
 test -f "$OUTPUT_PATH" || { echo "Build output was not created: $OUTPUT_PATH" >&2; exit 1; }
 chmod +x "$OUTPUT_PATH"
 echo "Portable Linux build complete: $OUTPUT_PATH"
-echo "Copy this one file to compatible Linux Mint PCs, make it executable, and run it."
+echo "See LINUX_INSTALL.txt for target system libraries, fonts and desktop validation requirements."

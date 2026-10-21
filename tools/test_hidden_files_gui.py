@@ -26,6 +26,10 @@ with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as directory:
         raise AssertionError(f'Expected {count} files in both panes')
     try:
         wait(1)
+        # The application restores its saved sash positions after 300ms.
+        # Fast Linux fixture scans can finish before that startup callback.
+        settled=time.monotonic()+.6
+        while time.monotonic()<settled:app.update();time.sleep(.02)
         geometry=app.geometry();split=app.browser_panes.sash_coord(0)
         menu=app.nametowidget(app.cget('menu'))
         tool_index=next(index for index in range(menu.index('end')+1) if menu.type(index)=='cascade' and menu.entrycget(index,'label')==app.tr('menu.tools'))

@@ -1,5 +1,11 @@
 # Changelog
 
+## 12.7.11 — Linux review candidate, 21 October 2026
+
+- Brings the current 43-language interface, Help and hidden-files toggle to Linux.
+- Wraps toolbar actions when enlarged Linux font metrics exceed available width; restores the compact layout at normal scale.
+- Adds cross-platform regression coverage and a retained Windows Sandbox test-kit generator. Windows release remains 12.7.10; Mint desktop checks remain outstanding.
+
 ## 12.7.10 — 21 October 2026
 
 - Added persistent Tools > Show hidden files in all 43 languages; capture settings keep it off.

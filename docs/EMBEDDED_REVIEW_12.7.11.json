@@ -1,0 +1,14 @@
+{
+  "binary": "dist/linux/ResolutionFileManager-v12.7.11-linux-x86_64",
+  "sha256": "a57a1d66d535870cb5f0ff8b6f852e6fdd762814961dc86cbb294785bd2f9a31",
+  "exact_source_modules": [
+    "media_sorter",
+    "transfer_engine",
+    "transfer_ui",
+    "localization",
+    "rtl_display",
+    "reminder_policy"
+  ],
+  "embedded_locales": 43,
+  "english_help_matches_source": true
+}

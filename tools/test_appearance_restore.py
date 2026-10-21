@@ -21,12 +21,15 @@ class AppearanceRestoreTests(unittest.TestCase):
                 until=time.monotonic()+.2
                 while time.monotonic()<until: app.update();time.sleep(.01)
             try:
+                if sys.platform.startswith('linux'):
+                    app.apply_appearance('System',200);pump()
+                    self.assertEqual(app.ui_scale,100,'Removed saved scale was not reset safely')
                 pump();app.left.tree.column('size',width=60)
                 app.appearance_controls();pump()
                 dialog=next(w for w in app.winfo_children() if isinstance(w,m.tk.Toplevel))
                 app.apply_appearance('Dark',100);pump()
                 self.assertEqual(app.left.tree.column('size','width'),60,'theme-only preview changed custom width')
-                app.apply_appearance('Dark',200);pump()
+                app.apply_appearance('Dark',max(m.interface_scales()));pump()
                 for widget in app.toolbar.winfo_children():
                     if isinstance(widget,m.ttk.Button):
                         self.assertGreaterEqual(widget.winfo_width(),widget.winfo_reqwidth()-2,f'Top action clipped: {widget.cget("text")}')
@@ -37,6 +40,7 @@ class AppearanceRestoreTests(unittest.TestCase):
                 cancel.invoke();pump()
                 self.assertEqual(app.left.tree.column('size','width'),60,'Cancel changed custom width')
                 self.assertEqual((app.appearance_theme,app.ui_scale),('System',100))
+                self.assertFalse(getattr(app,'toolbar_wrapped',False),'Toolbar stayed wrapped after restoring normal text size')
             finally:
                 app.close_app()
 

@@ -48,7 +48,12 @@ except ImportError:  # Keep source startup graceful if optional dependencies are
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".webm", ".m4v", ".wmv", ".mpg", ".mpeg"}
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", ".gif", ".heic", ".heif", ".avif"}
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | IMAGE_EXTENSIONS
-APP_VERSION = "12.7.10"
+APP_VERSION = "12.7.11"
+
+
+def interface_scales(platform=None):
+    """Linux font metrics make 200% unsuitable for the current pane layout."""
+    return (100, 125, 150, 175) if (platform or sys.platform).startswith("linux") else (100, 125, 150, 175, 200)
 
 
 def translated_combobox_width(labels, minimum=8, maximum=28):
@@ -3352,6 +3357,10 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         ttk.Button(toolbar, text="Selection basket", command=self.toggle_selection_basket).pack(side="right", padx=4)
         guide.pack(side="left", fill="x", expand=True)
         guide.bind("<Configure>", lambda event: guide.configure(wraplength=max(80, event.width)))
+        self.toolbar_guide = guide
+        self.toolbar_actions = [widget for widget in toolbar.winfo_children() if isinstance(widget, ttk.Button)]
+        self.toolbar.bind("<Configure>", self.reflow_main_toolbar)
+        self.after_idle(self.reflow_main_toolbar)
 
         workspace = tk.PanedWindow(
             self,
@@ -3423,6 +3432,33 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         except OSError:
             pass
         self.after(1800, self.schedule_startup_reminder)
+
+    def reflow_main_toolbar(self, _event=None):
+        available = max(1, self.toolbar.winfo_width() - 20)
+        actions = self.toolbar_actions
+        if sum(widget.winfo_reqwidth() + 8 for widget in actions) + 80 <= available:
+            if getattr(self, "toolbar_wrapped", False):
+                self.toolbar_wrapped = False
+                for widget in [self.toolbar_guide, *actions]: widget.place_forget()
+                self.toolbar.pack_propagate(True)
+                for widget in actions: widget.pack(side="right", padx=4)
+                self.toolbar_guide.pack(side="left", fill="x", expand=True)
+            return
+        self.toolbar_wrapped = True
+        for widget in [self.toolbar_guide, *actions]: widget.pack_forget()
+        self.toolbar.pack_propagate(False)
+        self.toolbar_guide.configure(wraplength=available)
+        guide_height = self.toolbar_guide.winfo_reqheight()
+        self.toolbar_guide.place(x=10, y=8, width=available, height=guide_height)
+        x, y, row_height = 10, guide_height + 16, 0
+        for widget in reversed(actions):
+            width, height = widget.winfo_reqwidth(), widget.winfo_reqheight()
+            if x > 10 and x + width > available + 10:
+                x, y, row_height = 10, y + row_height + 4, 0
+            widget.place(x=x, y=y, width=width, height=height)
+            x += width + 8
+            row_height = max(row_height, height)
+        self.toolbar.configure(height=y + row_height + 8)
 
     def create_menu_bar(self):
         menu_bar = tk.Menu(self)
@@ -3631,7 +3667,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
     def apply_appearance(self, theme: str, scale: int):
         previous_scale = getattr(self, "ui_scale", 100)
         theme = theme if theme in {"System", "Light", "Dark", "High contrast"} else "System"
-        scale = scale if scale in {100, 125, 150, 175, 200} else 100
+        scale = scale if scale in interface_scales() else 100
         self.appearance_theme, self.ui_scale = theme, scale
         self.tk.call("tk", "scaling", self.base_tk_scaling * scale / 100)
         # Reconfiguring named fonts forces existing widgets to recalculate their
@@ -3681,6 +3717,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             for column in pane.tree["columns"]:
                 width = int(pane.tree.column(column, "width") * scale / max(1, previous_scale))
                 pane.tree.column(column, width=max(width, heading_font.measure(pane.tree.heading(column, "text")) + 24))
+        if hasattr(self, "toolbar_actions"): self.reflow_main_toolbar()
         try: self.update_idletasks()
         except tk.TclError: pass
 
@@ -3694,7 +3731,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         theme_choices = LocalizedChoices(self.translator, APPEARANCE_THEME_LABEL_KEYS)
         theme_var = tk.StringVar(value=theme_choices.label(self.appearance_theme)); scale_var = tk.StringVar(value=f"{self.ui_scale}%")
         ttk.Label(body, text="Theme:").grid(row=2, column=0, sticky="w", pady=6); ttk.Combobox(body, textvariable=theme_var, state="readonly", values=theme_choices.labels, width=translated_combobox_width(theme_choices.labels, 18)).grid(row=2, column=1, sticky="w")
-        ttk.Label(body, text="Interface scale:").grid(row=3, column=0, sticky="w", pady=6); ttk.Combobox(body, textvariable=scale_var, state="readonly", values=("100%", "125%", "150%", "175%", "200%"), width=18).grid(row=3, column=1, sticky="w")
+        ttk.Label(body, text="Interface scale:").grid(row=3, column=0, sticky="w", pady=6); ttk.Combobox(body, textvariable=scale_var, state="readonly", values=tuple(f"{value}%" for value in interface_scales()), width=18).grid(row=3, column=1, sticky="w")
         sample = ttk.LabelFrame(body, text="Preview", padding=10); sample.grid(row=4, column=0, columnspan=2, sticky="ew", pady=12); ttk.Label(sample, text="Filename.jpg   1920 × 1080   H.265 / HEVC").pack(side="left"); ttk.Button(sample, text="Sample button").pack(side="right")
         def fit():
             if not window.winfo_exists(): return

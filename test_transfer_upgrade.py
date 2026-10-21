@@ -82,10 +82,19 @@ class TransferUpgradeTests(unittest.TestCase):
             root=Path(directory); source=root/'s'; target=root/'t'; source.write_bytes(b'new'); target.write_bytes(b'old')
             import os
             original=os.rename
+            original_link=os.link
+            original_open=Path.open
             def fail(src,dst,*args,**kwargs):
                 if Path(dst)==target and Path(src).name.startswith('.rfm-transfer-'): raise PermissionError('test')
                 return original(src,dst,*args,**kwargs)
-            with patch('transfer_engine.os.rename',fail),self.assertRaises(PermissionError):
+            def fail_link(src,dst,*args,**kwargs):
+                if Path(dst)==target and Path(src).name.startswith('.rfm-transfer-'): raise PermissionError('test')
+                return original_link(src,dst,*args,**kwargs)
+            def fail_open(path,*args,**kwargs):
+                mode=args[0] if args else kwargs.get('mode','r')
+                if path==target and mode=='xb': raise PermissionError('test')
+                return original_open(path,*args,**kwargs)
+            with patch('transfer_engine.os.rename',fail),patch('transfer_engine.os.link',fail_link),patch.object(Path,'open',fail_open),self.assertRaises(PermissionError):
                 transfer_file(source,target,True,'replace',root/'undo',threading.Event())
             self.assertEqual(source.read_bytes(),b'new'); self.assertEqual(target.read_bytes(),b'old')
 
