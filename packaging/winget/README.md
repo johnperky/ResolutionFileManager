@@ -1,15 +1,41 @@
-# WinGet submission template
+# WinGet package
 
-Create a public GitHub release first. Use the official Windows Package Manager manifest creator (`wingetcreate`) against the final release URL, identify the package as portable, and submit the generated manifests to `microsoft/winget-pkgs` using the maintainer's own Microsoft/GitHub account.
+This folder contains the multi-file WinGet manifest for Resolution File Manager.
 
-Do not submit a manifest containing a temporary URL or a checksum from an unsigned/replaced build. The installer URL and SHA-256 must describe the exact immutable public executable.
+## Package identity
 
-Suggested identity:
-
-- Package identifier: `JohnPerky.ResolutionFileManager`
-- Package name: `Resolution File Manager`
-- Publisher: `JohnPerky`
+- Identifier: `JohnPerky.ResolutionFileManager`
 - Version: `12.2.2`
-- Installer type: `portable`
-- Product code/command alias: `ResolutionFileManager`
-- Licence: `GPL-3.0-or-later`
+- Installer type: portable Windows x64 executable
+- Release asset: `ResolutionFileManager-12.2.2.exe`
+
+The installer URL is version-specific and the SHA-256 value matches the published
+`SHA256SUMS.txt` file in the GitHub v12.2.2 release.
+
+## Validate locally
+
+From an elevated PowerShell window, enable local manifests once:
+
+```powershell
+winget settings --enable LocalManifestFiles
+```
+
+Then validate and test the manifest:
+
+```powershell
+winget validate .\packaging\winget\manifests\j\JohnPerky\ResolutionFileManager\12.2.2
+winget install --manifest .\packaging\winget\manifests\j\JohnPerky\ResolutionFileManager\12.2.2
+```
+
+Run the install test in Windows Sandbox or another disposable Windows account so
+it does not disturb the normal desktop copy of the application.
+
+## Submit
+
+Copy the `manifests\j\JohnPerky\ResolutionFileManager\12.2.2` directory into a
+fork of `microsoft/winget-pkgs` at the same path. Validate it, commit it on a new
+branch, and open one pull request containing only this package version.
+
+The Store build should also become installable through WinGet's `msstore` source
+after Microsoft publishes it. The community manifest here covers the standalone
+portable GitHub release and can be maintained independently.

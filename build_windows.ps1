@@ -13,11 +13,14 @@ if (-not (Test-Path -LiteralPath $IconPath)) { throw "Application icon was not f
 if (-not (Test-Path -LiteralPath $IconPngPath)) { throw "Application icon PNG was not found: $IconPngPath" }
 python verify_release_assets.py "$ProjectDirectory"
 if ($LASTEXITCODE -ne 0) { throw "Language-pack validation failed with exit code $LASTEXITCODE" }
+python (Join-Path $ProjectDirectory "tools\validate_help.py")
+if ($LASTEXITCODE -ne 0) { throw "Complete Help validation failed." }
 
 $BuildStarted = Get-Date
 python -m PyInstaller `
     --noconfirm `
     --clean `
+    --workpath "$ProjectDirectory\build\windows" `
     --onefile `
     --windowed `
     --name ResolutionFileManager `
@@ -37,6 +40,10 @@ $Version = (Get-Content -LiteralPath (Join-Path $ProjectDirectory "VERSION.txt")
 if ($Version -notmatch '^\d+\.\d+\.\d+$') { throw "VERSION.txt does not contain a valid release version." }
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
 $DesktopExe = Join-Path $DesktopPath "ResolutionFileManager-v$Version.exe"
+if (Test-Path -LiteralPath $DesktopExe) {
+    $PreviousDesktopExe = Join-Path $DesktopPath "ResolutionFileManager-v$Version-previous-$(Get-Date -Format 'yyyyMMdd-HHmmss').exe"
+    Copy-Item -LiteralPath $DesktopExe -Destination $PreviousDesktopExe
+}
 Copy-Item -LiteralPath $OutputPath -Destination $DesktopExe -Force
 Write-Host "Build complete: $OutputPath"
 Write-Host "Desktop copy: $DesktopExe"

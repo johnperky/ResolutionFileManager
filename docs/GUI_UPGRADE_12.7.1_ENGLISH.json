@@ -1,0 +1,26 @@
+{
+  "version": "12.7.1",
+  "checks": [
+    "Image scan",
+    "Info opens without hiding file browser",
+    "Info remembers adjusted width after toggle",
+    "Info width saved in workspace state",
+    "Thumbnail slider dimensions",
+    "Basket contains selected references",
+    "Basket leaves originals unchanged",
+    "Single rename live preview",
+    "Batch rename automatically updates preview",
+    "Details rubber-band sets action ticks",
+    "Ordinary click collapses highlighted group",
+    "Internal drag retains selected group and opens preview",
+    "Pane New Folder creates destination",
+    "Thumbnail rubber-band sets action ticks",
+    "Transfer preview folder choices",
+    "Queue copied file and completed",
+    "Queue copy undo",
+    "Flattened duplicate replace move",
+    "Repeated replacement move undo restores every original",
+    "No Tk callback exceptions"
+  ],
+  "callback_errors": []
+}

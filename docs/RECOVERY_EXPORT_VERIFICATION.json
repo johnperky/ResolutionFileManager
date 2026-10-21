@@ -1,0 +1,39 @@
+{
+  "version": "12.6.1",
+  "authoritative_project": "F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6",
+  "source_exports": [
+    {
+      "path": "F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\release-output\\12.6.1\\ResolutionFileManager-12.6.1-Source",
+      "verified_files": 165,
+      "manifest_sha256": "9ac9d2908b24d0c1f7ed8b414559fefe2d196eed232f89f6bb35bb11b3ccf688"
+    },
+    {
+      "path": "F:\\ResolutionFileManager-Linux-Handoff-12.6.1",
+      "verified_files": 165,
+      "manifest_sha256": "9ac9d2908b24d0c1f7ed8b414559fefe2d196eed232f89f6bb35bb11b3ccf688"
+    },
+    {
+      "path": "F:\\Resolution File Manager project\\Recovery Backups\\2026-10-19-final-source-12.6.1",
+      "verified_files": 166,
+      "manifest_sha256": "e80feae186e80806fe9255c0ad70dfcb5ec97431625c01545a205649afa2f399"
+    },
+    {
+      "path": "F:\\Resolution File Manager project\\Recovery Backups\\2026-10-19-completed-source-12.6.1",
+      "verified_files": 167,
+      "manifest_sha256": "95811de6ef706012b2a6a24c546d78d9bbb9cb940aa43440049d1d79f0f932ab"
+    }
+  ],
+  "artifact_sha256": {
+    "F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\dist\\ResolutionFileManager.exe": "3e098402a965c8a071ec97fe99813a15b8a34028351fe7516589cd90d752aed1",
+    "F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\dist\\linux\\ResolutionFileManager-v12.6.1-linux-x86_64": "a291fc2eb208ffd56790f68c525fcc6bff7771af2be3e166f0a11dcfb393777f",
+    "C:\\Users\\johnp\\Desktop\\ResolutionFileManager-v12.6.1.exe": "3e098402a965c8a071ec97fe99813a15b8a34028351fe7516589cd90d752aed1",
+    "F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\release-output\\12.6.1\\ResolutionFileManager-12.6.1-Windows-x64.zip": "8f6db2bfdae34341f3a1f1bd593808402a9020f050e52a6d085298ef7157333b",
+    "F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\release-output\\12.6.1\\ResolutionFileManager-12.6.1-Source.zip": "aeafcc131bd83a33f531169094ce14e8ba377b4c6771da59565d425d27438f99",
+    "F:\\Resolution File Manager project\\Recovery Backups\\2026-10-19-current-git-history.bundle": "5a60df81c4bcffc97af2d1e2b83387e52acd0eb545f7f6a1d96009d033661afb",
+    "C:\\Users\\johnp\\Desktop\\project backup\\RFM-recovery-2026-10-19-v12.6.1\\2026-10-19-completed-source-12.6.1.zip": "0a496df6f363bb00dc2fe87d67d37d27e54030f480a1af3cb6258dca709dab83",
+    "C:\\Users\\johnp\\Desktop\\project backup\\RFM-recovery-2026-10-19-v12.6.1\\2026-10-19-current-git-history.bundle": "5a60df81c4bcffc97af2d1e2b83387e52acd0eb545f7f6a1d96009d033661afb"
+  },
+  "independent_backup": "C:\\Users\\johnp\\Desktop\\project backup\\RFM-recovery-2026-10-19-v12.6.1",
+  "history_bundle": "git bundle verify completed separately; includes committed history only",
+  "scope": "Every source-manifest entry verified. Current application/locales/builders matched explicitly. This later verification report is not part of the earlier export manifests."
+}

@@ -1,8 +1,8 @@
 # Microsoft Store submission kit
 
-This folder contains the repeatable MSIX build and prepared Store-listing material for Resolution File Manager 12.4.0.
+This folder contains the repeatable MSIX build and prepared Microsoft Store listings for Resolution File Manager 12.6.0. The base listing is English (United Kingdom), with additional multilingual Store listings maintained in Partner Center.
 
-Version 12.4.0 ships English, Simplified Chinese, Dutch, French, German, Japanese, Korean, Russian and Spanish interface/help packs. Store listing translations remain separate marketing assets and must continue to disclose English fallback where appropriate.
+Version 12.6.0 ships 43 complete interface and Help choices, including separate European and Brazilian Portuguese packs and separate Simplified and Traditional Chinese packs. Store-listing translations remain separate marketing assets.
 
 ## Before the final package can be built
 
@@ -24,7 +24,8 @@ The finished package is written under `output`. The fourth version component rem
 
 ## Submission material
 
-- `STORE_LISTING.md` contains the description, feature list, URLs, recommended questionnaire answers and certification notes.
+- `STORE_LISTING.md` contains the base English (United Kingdom) description, feature list, URLs, recommended questionnaire answers and certification notes.
+- `STORE_LISTING.<locale>.md` contains the localised customer-facing fields for each additional Store language. The brand name and URLs remain unchanged, and non-English listings disclose that the current application interface is in English.
 - `AppxManifest.template.xml` declares an x64 full-trust Windows desktop app.
 - `Build-StorePackage.ps1` creates all package tile assets and the MSIX using the Windows SDK.
 - At least one real in-app screenshot is still required by Partner Center; four or more are recommended.

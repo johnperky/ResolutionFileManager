@@ -32,8 +32,11 @@ from tkinter import filedialog, messagebox, simpledialog, ttk
 from tkinterdnd2 import ASK, COPY, DND_FILES, LINK, MOVE, REFUSE_DROP, TkinterDnD
 from send2trash import send2trash
 from PIL import ExifTags, Image, ImageDraw, ImageFont, ImageOps, ImageSequence
-from localization import LocalizedChoices, SUPPORTED_LANGUAGES, Translator, select_language
+from localization import LocalizedChoices, SUPPORTED_LANGUAGES, Translator, is_rtl_language, select_language
+from rtl_display import needs_visual_order, render_document, mapped_ranges
 from reminder_policy import apply_reminder_choice, eligible_reminder, normalise_state as normalise_reminder_state, record_successful_launch, set_reminder_enabled
+from transfer_engine import transfer_file, file_stamp, validate_undo_target, MEDIA_ACCESS, undo_transfer, retry_busy, move_without_replace
+from transfer_ui import UpgradeAppMixin, UpgradePaneMixin, open_folder
 try:
     from watchdog.events import FileSystemEventHandler
     from watchdog.observers import Observer
@@ -45,10 +48,37 @@ except ImportError:  # Keep source startup graceful if optional dependencies are
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".webm", ".m4v", ".wmv", ".mpg", ".mpeg"}
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", ".gif", ".heic", ".heif", ".avif"}
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | IMAGE_EXTENSIONS
-APP_VERSION = "12.4.0"
+APP_VERSION = "12.7.5"
+
+
+def translated_combobox_width(labels, minimum=8, maximum=28):
+    """Return a Tk character width that accommodates translated choices."""
+    longest = max((len(str(label)) for label in labels), default=0)
+    return max(minimum, min(maximum, longest + 2))
+
+
+def localized_column_width(default, saved, heading_pixels, same_language):
+    """Fit a new language's heading; retain later user sizing in that language."""
+    try:
+        width = int(saved)
+    except (ValueError, TypeError, OverflowError):
+        width = max(default, heading_pixels + 24)
+    else:
+        if not same_language:
+            width = max(width, heading_pixels + 24)
+    return max(55, min(2000, width))
+
+
+def filter_toolbar_groups():
+    """Keep long translated filter controls on two predictable rows."""
+    return (("resolution", "matching", "advanced"), ("outliers", "sensitivity"))
 
 
 _tk_messagebox = messagebox
+_tk_simpledialog = simpledialog
+_tk_filedialog = filedialog
+_active_ui_translator: Translator | None = None
+_ui_localization_installed = False
 
 
 class LocalizedMessageBox:
@@ -67,6 +97,102 @@ class LocalizedMessageBox:
             return original(self.translator.ui_text(title), self.translator.ui_text(message), *args, **kwargs)
 
         return translated
+
+
+class LocalizedSimpleDialog:
+    """Translate the title and prompt used by Tk's standard input dialogs."""
+
+    def __init__(self, module, translator: Translator):
+        self.module = module
+        self.translator = translator
+
+    def __getattr__(self, name):
+        original = getattr(self.module, name)
+        if name not in {"askstring", "askinteger", "askfloat"}:
+            return original
+
+        def translated(title, prompt, *args, **kwargs):
+            return original(self.translator.ui_text(title), self.translator.ui_text(prompt), *args, **kwargs)
+
+        return translated
+
+
+class LocalizedFileDialog:
+    """Translate titles on Tk's standard file and folder dialogs."""
+
+    def __init__(self, module, translator: Translator):
+        self.module = module
+        self.translator = translator
+
+    def __getattr__(self, name):
+        original = getattr(self.module, name)
+
+        def translated(*args, **kwargs):
+            if isinstance(kwargs.get("title"), str):
+                kwargs["title"] = self.translator.ui_text(kwargs["title"])
+            return original(*args, **kwargs)
+
+        return translated
+
+
+def install_widget_localization(translator: Translator) -> None:
+    """Translate legacy literal widget labels without changing saved values."""
+    global _active_ui_translator, _ui_localization_installed
+    _active_ui_translator = translator
+    if _ui_localization_installed:
+        return
+
+    def translated(value):
+        return _active_ui_translator.ui_text(value) if _active_ui_translator and isinstance(value, str) else value
+
+    for widget_class in (ttk.Label, ttk.Button, ttk.Checkbutton, ttk.Radiobutton, ttk.LabelFrame,
+                         tk.Label, tk.Button, tk.Checkbutton, tk.Radiobutton, tk.LabelFrame):
+        original_init = widget_class.__init__
+
+        def localized_init(self, *args, _original=original_init, **kwargs):
+            if "text" in kwargs:
+                kwargs["text"] = translated(kwargs["text"])
+            _original(self, *args, **kwargs)
+
+        widget_class.__init__ = localized_init
+
+    original_ttk_configure = ttk.Widget.configure
+    def localized_ttk_configure(self, cnf=None, **kwargs):
+        if "text" in kwargs:
+            kwargs["text"] = translated(kwargs["text"])
+        return original_ttk_configure(self, cnf, **kwargs)
+    ttk.Widget.configure = localized_ttk_configure
+    ttk.Widget.config = localized_ttk_configure
+
+    original_tk_configure = tk.Widget.configure
+    def localized_tk_configure(self, cnf=None, **kwargs):
+        if "text" in kwargs:
+            kwargs["text"] = translated(kwargs["text"])
+        return original_tk_configure(self, cnf, **kwargs)
+    tk.Widget.configure = localized_tk_configure
+    tk.Widget.config = localized_tk_configure
+
+    original_heading = ttk.Treeview.heading
+    def localized_heading(self, column, option=None, **kwargs):
+        if "text" in kwargs:
+            kwargs["text"] = translated(kwargs["text"])
+        return original_heading(self, column, option, **kwargs)
+    ttk.Treeview.heading = localized_heading
+
+    for method_name in ("add_command", "add_cascade", "add_checkbutton", "add_radiobutton"):
+        original_method = getattr(tk.Menu, method_name)
+        def localized_menu(self, *args, _original=original_method, **kwargs):
+            if "label" in kwargs:
+                kwargs["label"] = translated(kwargs["label"])
+            return _original(self, *args, **kwargs)
+        setattr(tk.Menu, method_name, localized_menu)
+
+    original_title = tk.Wm.wm_title
+    def localized_title(self, string=None):
+        return original_title(self, translated(string) if string is not None else None)
+    tk.Wm.wm_title = localized_title
+    tk.Wm.title = localized_title
+    _ui_localization_installed = True
 SUPPORT_URL = "https://buymeacoffee.com/johnperky"
 STORE_PRODUCT_ID = "9NZL6GF5JSJK"
 CODEC_LABELS = {"h264": "H.264", "hevc": "H.265 / HEVC", "av1": "AV1", "vp9": "VP9", "vp8": "VP8", "mpeg4": "MPEG-4", "mpeg2video": "MPEG-2", "mjpeg": "Motion JPEG"}
@@ -85,6 +211,13 @@ TRANSCODE_PRESET_CODEC_FAMILY = {
     "720p H.264 proxy": "h264",
     "Remux to MKV (no re-encoding)": None,
 }
+TRANSCODE_PRESET_LABEL_KEYS = {
+    "H.264 MP4 (compatible)": "convert.preset_h264",
+    "H.265 MP4 (smaller)": "convert.preset_h265",
+    "AV1 MKV (smallest)": "convert.preset_av1",
+    "720p H.264 proxy": "convert.preset_proxy",
+    "Remux to MKV (no re-encoding)": "convert.preset_remux",
+}
 TRANSCODE_ENGINE_ENCODERS = {
     "NVIDIA NVENC": {"h264": "h264_nvenc", "hevc": "hevc_nvenc", "av1": "av1_nvenc"},
     "Intel Quick Sync": {"h264": "h264_qsv", "hevc": "hevc_qsv", "av1": "av1_qsv"},
@@ -98,6 +231,39 @@ TRANSCODE_RESOLUTIONS = {
     TRANSCODE_SOURCE_RESOLUTION: None,
     "1080p": 1080,
     "720p": 720,
+}
+TRANSCODE_RESOLUTION_LABEL_KEYS = {
+    TRANSCODE_SOURCE_RESOLUTION: "convert.resolution_source",
+    "1080p": "convert.resolution_1080p",
+    "720p": "convert.resolution_720p",
+}
+TRANSCODE_ENGINE_LABEL_KEYS = {
+    TRANSCODE_AUTOMATIC: "convert.engine_automatic",
+    TRANSCODE_SOFTWARE: "convert.engine_software",
+}
+TRANSCODE_STATUS_LABEL_KEYS = {
+    "Ready": "convert.status_ready",
+    "Skipped": "convert.status_skipped",
+    "Unknown resolution": "convert.status_unknown_resolution",
+    "Converting": "convert.status_converting",
+    "Passed": "convert.status_passed",
+    "Cancelled": "convert.status_cancelled",
+    "Failed": "convert.status_failed",
+    "Skip existing": "convert.skip_existing",
+    "Same as source": "convert.status_same_source",
+    "Duplicate output": "convert.status_duplicate_output",
+}
+APPEARANCE_THEME_LABEL_KEYS = {
+    "System": "choice.system", "Light": "choice.light", "Dark": "choice.dark",
+    "High contrast": "choice.high_contrast",
+}
+SCOPE_LABEL_KEYS = {
+    "Selected": "choice.selected", "Visible": "choice.visible", "All scanned": "choice.all_scanned",
+}
+RULE_ACTION_LABEL_KEYS = {"Copy": "choice.copy", "Move": "choice.move"}
+MEDIA_KIND_LABEL_KEYS = {"Any": "choice.any", "Images": "choice.images", "Videos": "choice.videos"}
+PERFORMANCE_PROFILE_LABEL_KEYS = {
+    "Quiet": "choice.quiet", "Balanced": "choice.balanced", "Fast": "choice.fast",
 }
 
 
@@ -408,6 +574,7 @@ class MetadataCache:
             self.connection.execute("INSERT OR REPLACE INTO cache_state(key, value) VALUES ('legacy_json_migrated', '1')")
         return len(rows)
 
+    @MEDIA_ACCESS.reading
     def inspect(self, path: Path) -> tuple[MediaItem, bool]:
         stat = path.stat()
         key = str(path.resolve())
@@ -703,7 +870,7 @@ def compact_relative_path(path: Path, maximum: int) -> str:
     return f"{filename[:left]}…{filename[-(remaining-left):]}"
 
 
-class FilePane(ttk.Frame):
+class FilePane(UpgradePaneMixin, ttk.Frame):
     def __init__(self, master: tk.Misc, title: str, start_path: Path, active_callback, transfer_callback, preview_callback, preview_toggle_callback, metadata_cache: MetadataCache, saved_state: dict | None = None, tr=None):
         super().__init__(master, padding=8)
         saved_state = saved_state or {}
@@ -730,6 +897,7 @@ class FilePane(ttk.Frame):
         self.preview_toggle_callback = preview_toggle_callback
         self.preview_enabled_var = tk.BooleanVar(value=False)
         self.inspector_enabled_var = tk.BooleanVar(value=bool(saved_state.get("inspector_enabled", False)))
+        self.inspector_width = self.preferred_inspector_width(saved_state)
         self.live_updates_var = tk.BooleanVar(value=bool(saved_state.get("live_updates", False)))
         self.live_observer = None
         self.live_refresh_job: str | None = None
@@ -754,6 +922,15 @@ class FilePane(ttk.Frame):
         self.outlier_choices = LocalizedChoices(self.app.translator, {
             "Moderate (1.4×)": "outlier.moderate", "Large (1.75×)": "outlier.large",
             "Extreme (2.5×)": "outlier.extreme",
+        })
+        self.filter_orientation_choices = LocalizedChoices(self.app.translator, {
+            "Any": "filters.any", "Landscape": "filters.landscape",
+            "Portrait": "filters.portrait", "Square": "filters.square",
+        })
+        self.filter_colour_choices = LocalizedChoices(self.app.translator, {
+            "Any": "filters.any", "Unlabelled": "filters.unlabelled",
+            "Red": "context.red", "Yellow": "context.yellow", "Green": "context.green",
+            "Blue": "context.blue", "Purple": "context.purple",
         })
         self.view_mode_display_var = tk.StringVar(value=self.view_mode_choices.label(self.view_mode_var.get()))
         self.thumbnail_size_display_var = tk.StringVar(value=self.thumbnail_size_choices.label(self.thumbnail_size_var.get()))
@@ -799,9 +976,9 @@ class FilePane(ttk.Frame):
         view_box = ttk.Combobox(heading, textvariable=self.view_mode_display_var, state="readonly", width=14, values=self.view_mode_choices.labels)
         view_box.pack(side="left", padx=8)
         view_box.bind("<<ComboboxSelected>>", lambda _event: self.set_view_mode(self.view_mode_choices.internal(self.view_mode_display_var.get())))
-        size_box = ttk.Combobox(heading, textvariable=self.thumbnail_size_display_var, state="readonly", width=10, values=self.thumbnail_size_choices.labels)
-        size_box.pack(side="left")
-        size_box.bind("<<ComboboxSelected>>", self.change_thumbnail_size)
+        self.thumbnail_pixels = tk.DoubleVar(value=float(saved_state.get("thumbnail_pixels", {"Small":110,"Medium":160,"Large":230}.get(self.thumbnail_size_var.get(),160))))
+        self.thumbnail_slider=ttk.Scale(heading, from_=90, to=330, length=80, variable=self.thumbnail_pixels, command=self.thumbnail_slider_changed)
+        self.thumbnail_slider.pack(side="left", padx=5)
         ttk.Checkbutton(heading, text=f"▶ {self.tr('pane.preview')}", style="PaneToggle.Toolbutton", variable=self.preview_enabled_var, command=self.toggle_preview).pack(side="left", padx=(10, 0))
         ttk.Checkbutton(heading, text=f"ⓘ {self.tr('pane.info')}", style="PaneToggle.Toolbutton", variable=self.inspector_enabled_var, command=self.toggle_inspector).pack(side="left", padx=(7, 0))
         ttk.Button(heading, text=self.tr("pane.browse"), command=self.choose_folder).pack(side="right")
@@ -838,8 +1015,10 @@ class FilePane(ttk.Frame):
         search_entry.pack(side="left")
         search_entry.bind("<KeyRelease>", lambda _event: self.refresh_view())
 
-        filter_row = ttk.Frame(self)
-        filter_row.pack(fill="x", pady=(0, 6))
+        filter_area = ttk.Frame(self)
+        filter_area.pack(fill="x", pady=(0, 6))
+        filter_row = ttk.Frame(filter_area)
+        filter_row.pack(fill="x")
         ttk.Label(filter_row, text=self.tr("pane.resolution")).pack(side="left")
         self.filter_var = tk.StringVar(value=saved_state.get("resolution_filter", "All"))
         self.filter_display_var = tk.StringVar(value=self.tr("pane.all") if self.filter_var.get() == "All" else self.filter_var.get())
@@ -848,32 +1027,46 @@ class FilePane(ttk.Frame):
         self.filter_box.bind("<<ComboboxSelected>>", self.change_resolution_filter)
         ttk.Button(filter_row, text=self.tr("pane.select_matching"), command=self.select_matching).pack(side="left")
         ttk.Button(filter_row, text=self.tr("pane.more_filters"), command=self.edit_advanced_filters).pack(side="left", padx=(5, 0))
-        ttk.Button(filter_row, text=self.tr("pane.outliers"), command=self.select_size_outliers).pack(side="left", padx=5)
-        self.outlier_box = ttk.Combobox(filter_row, textvariable=self.outlier_display_var, state="readonly", width=18, values=self.outlier_choices.labels)
+        outlier_row = ttk.Frame(filter_area)
+        outlier_row.pack(fill="x", pady=(4, 0))
+        ttk.Button(outlier_row, text=self.tr("pane.outliers"), command=self.select_size_outliers).pack(side="left")
+        self.outlier_box = ttk.Combobox(outlier_row, textvariable=self.outlier_display_var, state="readonly", width=translated_combobox_width(self.outlier_choices.labels), values=self.outlier_choices.labels)
         self.outlier_box.pack(side="left")
         self.outlier_box.bind("<<ComboboxSelected>>", self.change_outlier_sensitivity)
 
         columns = ("name", "codec", "resolution", "duration", "size", "rate", "fps", "modified", "type", "bitrate", "audio", "hdr", "pixels", "color", "tags", "rating")
         content = ttk.Panedwindow(self, orient="horizontal")
         self.content_panes = content
+        content.bind("<Configure>", lambda _event: self.after_idle(self.clamp_folder_width), add="+")
         content.pack(fill="both", expand=True)
 
         folder_frame = ttk.Frame(content)
         self.folder_tree = ttk.Treeview(folder_frame, show="tree", selectmode="browse", height=10)
         folder_scroll = ttk.Scrollbar(folder_frame, orient="vertical", command=self.folder_tree.yview)
-        self.folder_tree.configure(yscrollcommand=folder_scroll.set)
+        self.folder_tree.configure(yscrollcommand=lambda first,last:self.folder_scroll_changed(folder_scroll,first,last))
+        self.folder_tree.bind('<<TreeviewClose>>',lambda _event:self.after_idle(self.align_folder_tree))
         folder_scroll.pack(side="right", fill="y")
+        folder_horizontal=ttk.Scrollbar(folder_frame,orient="horizontal",command=self.folder_tree.xview)
+        folder_horizontal.pack(side="bottom",fill="x")
+        self.folder_tree.configure(xscrollcommand=folder_horizontal.set)
+        self.folder_tree.bind("<Configure>",lambda _event:self.after_idle(self.align_folder_tree))
         self.folder_tree.pack(fill="both", expand=True)
         self.folder_tree.bind("<<TreeviewOpen>>", self.expand_folder)
         self.folder_tree.bind("<<TreeviewSelect>>", self.folder_selected)
         self.folder_tree.bind("<Button-3>", self.show_folder_context)
 
-        media_frame = ttk.Frame(content)
+        self.inspector_panes = ttk.Panedwindow(content, orient="horizontal")
+        self.inspector_panes.bind("<ButtonRelease-1>", self.remember_inspector_width, add="+")
+        self.inspector_panes.bind("<Configure>", lambda _event: self.after_idle(self.restore_inspector_width), add="+")
+        media_frame = ttk.Frame(self.inspector_panes)
         self.media_frame = media_frame
+        self.selection_toolbar=ttk.Frame(self)
+        self.selection_toolbar.pack(fill="x",before=content,pady=(0,3))
         details_frame = ttk.Frame(media_frame)
         self.details_frame = details_frame
         labels = {column: self.tr(f"column.{column}") for column in columns}
         widths = {"name": 230, "rating": 75, "color": 75, "tags": 170, "type": 60, "codec": 105, "resolution": 110, "pixels": 85, "size": 85, "rate": 75, "bitrate": 90, "fps": 60, "audio": 110, "hdr": 55, "modified": 135, "duration": 90}
+        self.default_column_widths = widths
         saved_widths = saved_state.get("column_widths", {})
         if isinstance(saved_widths, dict):
             valid_saved = [value for value in saved_widths.values() if isinstance(value, (int, float))]
@@ -892,9 +1085,8 @@ class FilePane(ttk.Frame):
         self.tree.column("#0", width=38, minwidth=38, stretch=False, anchor="center")
         for column in columns:
             self.tree.heading(column, text=labels[column], command=lambda c=column: self.set_sort(c))
-            try: saved_width = int(saved_widths.get(column, widths[column]))
-            except (ValueError, TypeError): saved_width = widths[column]
-            self.tree.column(column, width=max(55, min(2000, saved_width)), minwidth=55, stretch=False, anchor="w" if column == "name" else "center")
+            width = self.fitted_column_width(column, saved_widths.get(column), saved_state.get("column_width_language"))
+            self.tree.column(column, width=width, minwidth=55, stretch=False, anchor="w" if column == "name" else "center")
         scroll = ttk.Scrollbar(details_frame, orient="vertical", command=self.tree.yview)
         horizontal_scroll = ttk.Scrollbar(details_frame, orient="horizontal", command=self.tree.xview)
         self.tree.configure(yscrollcommand=scroll.set, xscrollcommand=horizontal_scroll.set)
@@ -925,12 +1117,18 @@ class FilePane(ttk.Frame):
         self.thumbnail_frame = ttk.Frame(media_frame)
         thumbnail_navigation = ttk.Frame(self.thumbnail_frame)
         thumbnail_navigation.pack(fill="x", pady=(0, 4))
-        self.thumbnail_sort_button = ttk.Menubutton(thumbnail_navigation, textvariable=self.sort_label_var)
+        self.thumbnail_sort_button = ttk.Menubutton(self.selection_toolbar, textvariable=self.sort_label_var)
         self.thumbnail_sort_menu = tk.Menu(self.thumbnail_sort_button, tearoff=False)
         self.thumbnail_sort_button.configure(menu=self.thumbnail_sort_menu)
         self.build_sort_menu()
-        self.thumbnail_sort_button.pack(side="left", padx=(0, 6))
-        ttk.Button(thumbnail_navigation, text=f"✓ {self.tr('menu.select_all')}", command=self.toggle_all_checks).pack(side="left", padx=(0, 6))
+        all_button=ttk.Button(self.selection_toolbar, text=f"✓ {self.tr('menu.select_all')}", command=self.toggle_all_checks)
+        tick_button=ttk.Button(self.selection_toolbar,text="Tick selection",command=self.tick_highlighted)
+        untick_button=ttk.Button(self.selection_toolbar,text="Untick selection",command=self.untick_highlighted)
+        clear_button=ttk.Button(self.selection_toolbar,text=self.tr("pane.clear_ticks"),command=self.clear_checks)
+        self.selection_toolbar_groups=(self.thumbnail_sort_button,all_button,tick_button,untick_button,clear_button)
+        self.selection_toolbar.bind("<Configure>",self.reflow_selection_toolbar)
+        self.sort_label_var.trace_add("write",lambda *_:self.after_idle(self.reflow_selection_toolbar))
+        self.after_idle(self.reflow_selection_toolbar)
         mode_box = ttk.Combobox(thumbnail_navigation, textvariable=self.thumbnail_browse_display_var, state="readonly", width=12, values=self.thumbnail_browse_choices.labels)
         mode_box.pack(side="left", padx=(0, 6)); mode_box.bind("<<ComboboxSelected>>", self.change_thumbnail_browse_mode)
         self.thumbnail_previous_button = ttk.Button(thumbnail_navigation, text="←", width=4, command=lambda: self.change_thumbnail_page(-1))
@@ -954,6 +1152,9 @@ class FilePane(ttk.Frame):
         self.thumbnail_grid.bind("<Configure>", self.thumbnail_grid_configured)
         self.thumbnail_canvas.bind("<Configure>", self.thumbnail_canvas_configured)
         for widget in (self.thumbnail_canvas, self.thumbnail_grid):
+            widget.bind("<ButtonPress-1>", self.rubber_start)
+            widget.bind("<B1-Motion>", self.rubber_motion)
+            widget.bind("<ButtonRelease-1>", self.rubber_end)
             widget.bind("<MouseWheel>", self.scroll_thumbnail_grid)
             widget.bind("<Button-4>", self.scroll_thumbnail_grid)
             widget.bind("<Button-5>", self.scroll_thumbnail_grid)
@@ -993,14 +1194,22 @@ class FilePane(ttk.Frame):
         self.folder_context_menu = tk.Menu(self, tearoff=False)
         self.folder_context_menu.add_command(label=self.tr("context.open_folder"), command=self.open_folder_context)
         self.folder_context_menu.add_command(label=self.tr("context.refresh_pane"), command=self.refresh_browser)
+        for menu in (self.context_menu, self.background_menu, self.folder_context_menu):
+            menu.add_separator()
+            menu.add_command(label="New folder…", command=self.new_folder)
+        self.context_menu.add_command(label="Add to selection basket", command=lambda: self.app.add_to_selection_basket(self))
+        for menu in (self.context_menu,self.background_menu):
+            menu.add_command(label="Tick selection",command=self.tick_highlighted)
+            menu.add_command(label="Untick selection",command=self.untick_highlighted)
         self.folder_context_path: Path | None = None
         self.header_menu = tk.Menu(self, tearoff=False)
         self.header_menu.add_command(label=self.tr("context.configure_columns"), command=self.configure_columns)
         self.header_menu.add_command(label=self.tr("context.reset_columns"), command=self.reset_column_widths)
         content.add(folder_frame, weight=0)
-        content.add(media_frame, weight=1)
+        content.add(self.inspector_panes, weight=1)
+        self.inspector_panes.add(media_frame, weight=1)
 
-        self.inspector_frame = ttk.Frame(content, padding=8)
+        self.inspector_frame = ttk.Frame(self.inspector_panes, padding=8)
         ttk.Label(self.inspector_frame, text=self.tr("inspector.title"), style="PaneTitle.TLabel").pack(anchor="w", pady=(0, 6))
         self.inspector_name_var = tk.StringVar(value=self.tr("inspector.no_file"))
         ttk.Label(self.inspector_frame, textvariable=self.inspector_name_var, font=("Segoe UI", 10, "bold"), wraplength=260, justify="left").pack(fill="x", anchor="w")
@@ -1009,18 +1218,20 @@ class FilePane(ttk.Frame):
         self.inspector_details_var = tk.StringVar(value=self.tr("inspector.select_file"))
         ttk.Label(self.inspector_frame, textvariable=self.inspector_details_var, wraplength=260, justify="left").pack(fill="both", expand=True, anchor="nw")
         inspector_buttons = ttk.Frame(self.inspector_frame); inspector_buttons.pack(fill="x", pady=(8, 0))
+        self.inspector_buttons=inspector_buttons
         ttk.Button(inspector_buttons, text=self.tr("inspector.copy_path"), command=self.copy_inspector_path).pack(side="left")
         ttk.Button(inspector_buttons, text=self.tr("inspector.open"), command=self.open_selected).pack(side="left", padx=4)
         ttk.Button(inspector_buttons, text=self.tr("inspector.reveal"), command=self.reveal_selected).pack(side="left")
-        if self.inspector_enabled_var.get(): content.add(self.inspector_frame, weight=0)
+        self.inspector_frame.bind('<Configure>',self.fit_inspector_content)
+        if self.inspector_enabled_var.get(): self.inspector_panes.add(self.inspector_frame, weight=0)
+        if self.inspector_enabled_var.get(): self.after(150, self.restore_inspector_width)
 
         status_row = ttk.Frame(self)
         status_row.pack(fill="x", pady=(5, 0))
         self.status_var = tk.StringVar(value=self.tr("status.ready"))
         ttk.Label(status_row, textvariable=self.status_var).pack(side="left", fill="x", expand=True)
-        self.checked_label_var = tk.StringVar(value="0 ticked")
+        self.checked_label_var = tk.StringVar(value=self.tr("pane.checked", count=0))
         ttk.Label(status_row, textvariable=self.checked_label_var).pack(side="left", padx=(6, 4))
-        ttk.Button(status_row, text=self.tr("pane.clear_ticks"), command=self.clear_checks).pack(side="left", padx=(0, 5))
         self.scan_progress = ttk.Progressbar(status_row, mode="determinate", length=110)
         self.scan_progress.pack(side="left", padx=5)
         self.cancel_button = ttk.Button(status_row, text=self.tr("pane.cancel"), width=7, command=self.cancel_scan, state="disabled")
@@ -1119,6 +1330,7 @@ class FilePane(ttk.Frame):
         self.folder_tree.selection_set(node)
         self.folder_tree.focus(node)
         self.folder_tree.see(node)
+        self.after_idle(self.align_folder_tree)
 
     def folder_selected(self, _event=None):
         selection = self.folder_tree.selection()
@@ -1185,11 +1397,12 @@ class FilePane(ttk.Frame):
     def restore_folder_width(self, width):
         if isinstance(width, int) and width > 50:
             try:
-                self.content_panes.sashpos(0, width)
+                self.content_panes.sashpos(0, min(width, max(90, self.content_panes.winfo_width() // 3)))
             except tk.TclError:
                 pass
 
     def get_state(self) -> dict:
+        self.remember_inspector_width()
         try:
             folder_width = self.content_panes.sashpos(0)
         except tk.TclError:
@@ -1199,6 +1412,9 @@ class FilePane(ttk.Frame):
             "recursive": self.recursive_var.get(),
             "live_updates": self.live_updates_var.get(),
             "inspector_enabled": self.inspector_enabled_var.get(),
+            "inspector_width": self.inspector_width,
+            "inspector_layout_version": 2,
+            "thumbnail_pixels": self.thumbnail_pixels.get(),
             "show_videos": self.show_videos_var.get(),
             "show_images": self.show_images_var.get(),
             "resolution_filter": self.filter_var.get(),
@@ -1214,6 +1430,7 @@ class FilePane(ttk.Frame):
             "sort_reverse": self.sort_reverse,
             "column_order": list(self.tree["displaycolumns"]),
             "column_widths": {column: self.tree.column(column, "width") for column in self.tree["columns"]},
+            "column_width_language": getattr(self.app, "language", "en"),
             "folder_width": folder_width,
         }
 
@@ -1221,6 +1438,8 @@ class FilePane(ttk.Frame):
         self.recursive_var.set(bool(state.get("recursive", False)))
         self.live_updates_var.set(bool(state.get("live_updates", False)))
         self.inspector_enabled_var.set(bool(state.get("inspector_enabled", False)))
+        self.inspector_width = self.preferred_inspector_width(state)
+        self.thumbnail_pixels.set(float(state.get("thumbnail_pixels", 160)))
         self.show_videos_var.set(bool(state.get("show_videos", True)))
         self.show_images_var.set(bool(state.get("show_images", True)))
         self.filter_var.set(state.get("resolution_filter", "All"))
@@ -1248,8 +1467,10 @@ class FilePane(ttk.Frame):
         order = [column for column in state.get("column_order", []) if column in columns]
         order.extend(column for column in columns if column not in order)
         self.tree.configure(displaycolumns=order)
-        for column, width in state.get("column_widths", {}).items():
-            if column in columns and isinstance(width, int): self.tree.column(column, width=width)
+        saved_widths = state.get("column_widths", {})
+        if not isinstance(saved_widths, dict): saved_widths = {}
+        for column in columns:
+            self.tree.column(column, width=self.fitted_column_width(column, saved_widths.get(column), state.get("column_width_language")))
         path = Path(state.get("path", self.current_path))
         self.navigate(path if path.is_dir() else self.current_path)
         self.set_view_mode(self.view_mode_var.get())
@@ -1605,6 +1826,13 @@ class FilePane(ttk.Frame):
         mode = mode if mode in {"Details", "Thumbnails"} else "Details"
         self.view_mode_var.set(mode)
         self.view_mode_display_var.set(self.view_mode_choices.label(mode))
+        self.thumbnail_slider.pack_forget()
+        if mode == "Thumbnails":
+            heading_widgets=self.thumbnail_slider.master.pack_slaves()
+            before=next((widget for widget in heading_widgets if isinstance(widget,ttk.Checkbutton)),None)
+            options={"side":"left","padx":5}
+            if before is not None: options["before"]=before
+            self.thumbnail_slider.pack(**options)
         self.details_frame.pack_forget(); self.thumbnail_frame.pack_forget()
         if mode == "Thumbnails":
             self.thumbnail_frame.pack(fill="both", expand=True); self.render_thumbnail_grid()
@@ -1625,6 +1853,7 @@ class FilePane(ttk.Frame):
         size = self.thumbnail_size_choices.internal(self.thumbnail_size_display_var.get())
         self.thumbnail_size_var.set(size if size in {"Small", "Medium", "Large"} else "Medium")
         self.thumbnail_size_display_var.set(self.thumbnail_size_choices.label(self.thumbnail_size_var.get()))
+        self.thumbnail_pixels.set({"Small":110,"Medium":160,"Large":230}[self.thumbnail_size_var.get()])
         self.render_thumbnail_grid()
 
     def render_thumbnail_grid(self):
@@ -1639,7 +1868,7 @@ class FilePane(ttk.Frame):
         for child in self.thumbnail_grid.winfo_children(): child.destroy()
         self.thumbnail_images.clear(); self.thumbnail_cells.clear()
         size_map = {"Small": (110, 75, 130), "Medium": (160, 110, 185), "Large": (230, 155, 255)}
-        width, height, cell_width = size_map.get(self.thumbnail_size_var.get(), size_map["Medium"])
+        width, height, cell_width = self.thumbnail_dimensions()
         columns = max(1, available // cell_width)
         self.thumbnail_columns = columns
         self.thumbnail_browse_mode = self.thumbnail_browse_mode_var.get() if self.thumbnail_browse_mode_var.get() in {"Continuous", "Paged"} else "Continuous"
@@ -1680,7 +1909,9 @@ class FilePane(ttk.Frame):
         image_label.pack(fill="both", expand=True, padx=3, pady=(3, 1))
         check_label = tk.Label(card, text="☑" if str(item.path) in self.checked_paths else "☐", font=("Segoe UI Symbol", 13, "bold"), bg="#202020", fg="#ffffff", cursor="hand2")
         check_label.place(x=7, y=6)
-        check_label.bind("<Button-1>", lambda _event, value=item: self.toggle_check(str(value.path)))
+        check_label.bind("<ButtonPress-1>",lambda event,value=item:self.checkbox_pressed(event,str(value.path)))
+        check_label.bind("<B1-Motion>",self.checkbox_motion)
+        check_label.bind("<ButtonRelease-1>",self.checkbox_released)
         card.check_label = check_label
         display_name = compact_relative_path(item.path.relative_to(self.current_path), max(20, int(cell_width / 7))) if self.recursive_var.get() else item.path.name
         label_details = ""
@@ -1816,7 +2047,7 @@ class FilePane(ttk.Frame):
             self.thumbnail_canvas.itemconfigure(self.thumbnail_window, width=event.width)
         if self.view_mode_var.get() != "Thumbnails" or event.width < 100:
             return
-        cell_width = {"Small": 130, "Medium": 185, "Large": 255}.get(self.thumbnail_size_var.get(), 185)
+        cell_width = self.thumbnail_dimensions()[2]
         if max(1, event.width // cell_width) != self.thumbnail_columns:
             if self.thumbnail_browse_mode == "Continuous" and self.virtual_row_height and self.thumbnail_columns:
                 self.virtual_resize_anchor = int(self.thumbnail_canvas.canvasy(0) // self.virtual_row_height) * self.thumbnail_columns
@@ -1866,18 +2097,19 @@ class FilePane(ttk.Frame):
             if selected: self.preview_callback(selected[0])
 
     def toggle_inspector(self):
-        shown = any(str(pane) == str(self.inspector_frame) for pane in self.content_panes.panes())
+        shown = any(str(pane) == str(self.inspector_frame) for pane in self.inspector_panes.panes())
         if self.inspector_enabled_var.get() and not shown:
             # Capture the selection before changing the paned-window layout.
             # On Windows that layout change can briefly disturb focus/events.
             selected = self.highlighted_items()
             item = selected[0] if selected else None
-            self.content_panes.add(self.inspector_frame, weight=0)
-            self.after_idle(lambda: self.content_panes.sashpos(1, max(300, self.content_panes.winfo_width() - 280)) if len(self.content_panes.panes()) > 2 else None)
+            self.inspector_panes.add(self.inspector_frame, weight=0)
+            self.after(40, self.restore_inspector_width)
             self.update_inspector(item)
             self.after_idle(lambda value=item: self.update_inspector(value))
         elif not self.inspector_enabled_var.get() and shown:
-            self.content_panes.forget(self.inspector_frame)
+            self.remember_inspector_width()
+            self.inspector_panes.forget(self.inspector_frame)
 
     def update_inspector(self, item: MediaItem | None = None):
         if item is None:
@@ -1890,25 +2122,27 @@ class FilePane(ttk.Frame):
             return
         self.inspector_name_var.set(item.path.name)
         self.inspector_path_var.set(str(item.path))
-        audio = f"{item.audio_codec} · {item.audio_channels} channel(s)" if item.audio_channels else item.audio_codec
+        audio = f"{item.audio_codec} · {self.tr('inspector.channels', count=item.audio_channels)}" if item.audio_channels else item.audio_codec
+        def detail(key, value):
+            return f"{self.tr(key)}: {value}"
         details = [
-            f"Type: {item.path.suffix[1:].upper() or 'Unknown'}",
-            f"Codec: {item.codec}",
-            f"Resolution: {item.resolution}",
-            f"File size: {human_size(item.size)}",
-            f"Modified: {datetime.fromtimestamp(item.modified).strftime('%Y-%m-%d %H:%M:%S')}",
-            f"Duration: {human_duration(item.duration)}",
-            f"Frame rate: {item.frame_rate:.3f} fps" if item.frame_rate else "Frame rate: —",
-            f"Bitrate: {item.bitrate / 1_000_000:.2f} Mbps" if item.bitrate else "Bitrate: —",
-            f"Pixel format: {item.pixel_format}",
-            f"Dynamic range: {item.hdr}",
-            f"Audio: {audio}",
+            detail('column.type', item.path.suffix[1:].upper() or self.tr('inspector.unknown')),
+            detail('column.codec', self.tr('inspector.unknown') if item.codec == 'Unknown' else item.codec),
+            detail('column.resolution', self.tr('inspector.unknown') if item.resolution == 'Unknown' else item.resolution),
+            detail('column.size', human_size(item.size)),
+            detail('column.modified', datetime.fromtimestamp(item.modified).strftime('%Y-%m-%d %H:%M:%S')),
+            detail('column.duration', human_duration(item.duration)),
+            detail('column.fps', f'{item.frame_rate:.3f}' if item.frame_rate else '—'),
+            detail('column.bitrate', f'{item.bitrate / 1_000_000:.2f} Mbps' if item.bitrate else '—'),
+            detail('inspector.pixel_format', item.pixel_format),
+            detail('inspector.dynamic_range', item.hdr),
+            detail('column.audio', audio),
             "",
-            f"Rating: {'★' * item.rating if item.rating else 'Unrated'}",
-            f"Colour label: {item.color_label or 'None'}",
-            f"Tags: {', '.join(item.tags) if item.tags else 'None'}",
+            detail('column.rating', '★' * item.rating if item.rating else self.tr('inspector.unrated')),
+            detail('context.colour', self.tr('context.' + item.color_label.lower()) if item.color_label else self.tr('context.none')),
+            detail('column.tags', ', '.join(item.tags) if item.tags else self.tr('context.none')),
         ]
-        if item.error: details.extend(("", f"Unreadable: {item.error}"))
+        if item.error: details.extend(("", detail('inspector.unreadable', item.error)))
         self.inspector_details_var.set("\n".join(details))
 
     def copy_inspector_path(self):
@@ -2042,25 +2276,35 @@ class FilePane(ttk.Frame):
         return True
 
     def edit_advanced_filters(self):
-        fields = (("orientation", "Orientation"), ("codec", "Codec contains"), ("tag", "Tag contains"), ("min_rating", "Minimum rating"), ("color", "Colour label"), ("min_width", "Minimum width (pixels)"), ("max_width", "Maximum width (pixels)"), ("min_height", "Minimum height (pixels)"), ("max_height", "Maximum height (pixels)"), ("min_size", "Minimum size (MB)"), ("max_size", "Maximum size (MB)"), ("min_duration", "Minimum duration (seconds)"), ("max_duration", "Maximum duration (seconds)"), ("date_from", "Modified from (YYYY-MM-DD)"), ("date_to", "Modified to (YYYY-MM-DD)"))
+        fields = (("orientation", "filters.orientation"), ("codec", "filters.codec"), ("tag", "filters.tag"), ("min_rating", "filters.min_rating"), ("color", "filters.color"), ("min_width", "filters.min_width"), ("max_width", "filters.max_width"), ("min_height", "filters.min_height"), ("max_height", "filters.max_height"), ("min_size", "filters.min_size"), ("max_size", "filters.max_size"), ("min_duration", "filters.min_duration"), ("max_duration", "filters.max_duration"), ("date_from", "filters.date_from"), ("date_to", "filters.date_to"))
         dialog = tk.Toplevel(self)
-        dialog.title("Advanced filters")
+        dialog.title(self.tr("filters.title"))
         dialog.transient(self.winfo_toplevel()); dialog.grab_set()
         variables = {}
-        for row, (key, label) in enumerate(fields):
-            ttk.Label(dialog, text=label).grid(row=row, column=0, sticky="w", padx=8, pady=4)
+        choice_maps = {}
+        for row, (key, label_key) in enumerate(fields):
+            ttk.Label(dialog, text=self.tr(label_key)).grid(row=row, column=0, sticky="w", padx=8, pady=4)
             default = "Any" if key in {"orientation", "min_rating", "color"} else ""
-            variable = tk.StringVar(value=self.advanced_filters.get(key, default)); variables[key] = variable
-            if key == "orientation": widget = ttk.Combobox(dialog, textvariable=variable, state="readonly", values=("Any", "Landscape", "Portrait", "Square"))
-            elif key == "min_rating": widget = ttk.Combobox(dialog, textvariable=variable, state="readonly", values=("Any", "1", "2", "3", "4", "5"))
-            elif key == "color": widget = ttk.Combobox(dialog, textvariable=variable, state="readonly", values=("Any", "Unlabelled", "Red", "Yellow", "Green", "Blue", "Purple"))
+            stored = self.advanced_filters.get(key, default)
+            choices = None
+            if key == "orientation": choices = self.filter_orientation_choices
+            elif key == "color": choices = self.filter_colour_choices
+            elif key == "min_rating": choices = LocalizedChoices(self.app.translator, {"Any": "filters.any", "1": "filters.rating_1", "2": "filters.rating_2", "3": "filters.rating_3", "4": "filters.rating_4", "5": "filters.rating_5"})
+            variable = tk.StringVar(value=choices.label(stored) if choices else stored); variables[key] = variable
+            if choices:
+                choice_maps[key] = choices
+                widget = ttk.Combobox(dialog, textvariable=variable, state="readonly", values=choices.labels, width=translated_combobox_width(choices.labels, minimum=18))
             else: widget = ttk.Entry(dialog, textvariable=variable)
             widget.grid(row=row, column=1, sticky="ew", padx=8, pady=4)
         def apply():
-            self.advanced_filters = {key: variable.get().strip() for key, variable in variables.items() if variable.get().strip() and variable.get() != "Any"}
+            values = {key: choice_maps[key].internal(variable.get().strip()) if key in choice_maps else variable.get().strip() for key, variable in variables.items()}
+            self.advanced_filters = {key: value for key, value in values.items() if value and value != "Any"}
             dialog.destroy(); self.refresh_view()
-        ttk.Button(dialog, text="Clear", command=lambda: [variable.set("Any" if key in {"orientation", "min_rating", "color"} else "") for key, variable in variables.items()]).grid(row=len(fields), column=0, padx=8, pady=8)
-        ttk.Button(dialog, text="Apply", command=apply).grid(row=len(fields), column=1, padx=8, pady=8, sticky="e")
+        def clear():
+            for key, variable in variables.items():
+                variable.set(choice_maps[key].label("Any") if key in choice_maps else "")
+        ttk.Button(dialog, text=self.tr("filters.clear"), command=clear).grid(row=len(fields), column=0, padx=8, pady=8)
+        ttk.Button(dialog, text=self.tr("filters.apply"), command=apply).grid(row=len(fields), column=1, padx=8, pady=8, sticky="e")
         dialog.columnconfigure(1, weight=1)
 
     def select_matching(self):
@@ -2092,7 +2336,7 @@ class FilePane(ttk.Frame):
 
     def update_checked_label(self):
         if hasattr(self, "checked_label_var"):
-            self.checked_label_var.set(f"{len(self.checked_paths)} ticked")
+            self.checked_label_var.set(self.tr("pane.checked", count=len(self.checked_paths)))
 
     def refresh_checks(self):
         for iid in self.tree.get_children():
@@ -2192,8 +2436,12 @@ class FilePane(ttk.Frame):
         files = [path for path in paths if path.is_file()]
         if not files or not destination.is_dir():
             return REFUSE_DROP
-        pairs = [(path, destination / path.name) for path in files if path.resolve() != (destination / path.name).resolve()]
-        self.app.enqueue_operation(pairs, False, f"Drop to {destination}")
+        choice = self.ask_drop_action()
+        if choice is None: return REFUSE_DROP
+        source_pane = next((pane for pane in (self.app.left,self.app.right) if pane is not self and all(str(path) in pane.items for path in files)),None)
+        try: root = source_pane.current_path if source_pane else Path(os.path.commonpath([str(path.parent) for path in files]))
+        except ValueError: root = Path('__multiple_drives__')
+        self.app.preview_transfer(files, root, destination, move=not choice)
         return COPY
 
     def drop_finished(self, copied: int, errors: list[str]):
@@ -2257,6 +2505,10 @@ class FilePane(ttk.Frame):
             messagebox.showerror("Could not reveal some files", "\n".join(errors[:10]))
 
     def rename_selected(self):
+        self.active_callback(self)
+        return self.rename_with_preview()
+
+    def legacy_rename_selected(self):
         selected = self.selected_items()
         if len(selected) != 1:
             messagebox.showinfo("Select one file", "Select exactly one file to rename.")
@@ -2289,11 +2541,21 @@ class FilePane(ttk.Frame):
         self.column_drag_moved = False
         self.resizing_column = None
         region = self.tree.identify_region(event.x, event.y)
+        self.internal_drag_origin = None
+        self.deferred_single_row = None
+        if region == "nothing" or (region in {"cell","tree"} and not self.tree.identify_row(event.y)):
+            return self.rubber_start(event)
+        if region == "cell":
+            self.internal_drag_origin = (event.x_root,event.y_root)
+            if self.tree.identify_row(event.y) in self.tree.selection() and not event.state & 5:
+                self.deferred_single_row=self.tree.identify_row(event.y)
+                return "break"
         if region == "tree" and self.tree.identify_column(event.x) == "#0":
             iid = self.tree.identify_row(event.y)
             tags = self.tree.item(iid, "tags") if iid else ()
             if tags:
-                self.tree.focus_set(); self.tree.focus(iid); self.toggle_check(tags[0])
+                self.tree.focus_set(); self.tree.focus(iid)
+                return self.checkbox_pressed(event,tags[0])
             return "break"
         if region == "separator":
             displayed_index = int(self.tree.identify_column(event.x)[1:]) - 1
@@ -2312,6 +2574,18 @@ class FilePane(ttk.Frame):
                 self.tree.configure(cursor="fleur")
 
     def media_button_dragged(self, event):
+        if getattr(self,"checkbox_pending",None): return self.checkbox_motion(event)
+        if getattr(self,"rubber_active",False): return self.rubber_motion(event)
+        if getattr(self,"internal_drag_origin",None):
+            x,y=self.internal_drag_origin
+            dx,dy=event.x_root-x,event.y_root-y
+            if abs(dy)>8 and abs(dy)>abs(dx) and self.tree.winfo_rootx()<=event.x_root<=self.tree.winfo_rootx()+self.tree.winfo_width():
+                from types import SimpleNamespace
+                self.rubber_start(SimpleNamespace(widget=self.tree,x_root=x,y_root=y,state=event.state))
+                self.internal_drag_origin=None
+                return self.rubber_motion(event)
+            if abs(event.x_root-x)+abs(event.y_root-y)>8: self.tree.configure(cursor="fleur")
+            return "break"
         if self.resizing_column:
             new_width = max(55, min(2000, self.resize_start_width + event.x - self.resize_start_x))
             self.tree.column(self.resizing_column, width=new_width, stretch=False)
@@ -2331,6 +2605,19 @@ class FilePane(ttk.Frame):
         return "break"
 
     def media_button_released(self, _event):
+        if getattr(self,"checkbox_pending",None): return self.checkbox_released(_event)
+        if getattr(self,"rubber_active",False): return self.rubber_end(_event)
+        origin=getattr(self,"internal_drag_origin",None); self.internal_drag_origin=None
+        if origin and abs(_event.x_root-origin[0])+abs(_event.y_root-origin[1])>8:
+            destination=self.app.right if self is self.app.left else self.app.left
+            x,y=_event.x_root,_event.y_root
+            self.tree.configure(cursor="")
+            if destination.winfo_rootx()<=x<destination.winfo_rootx()+destination.winfo_width() and destination.winfo_rooty()<=y<destination.winfo_rooty()+destination.winfo_height():
+                destination.copy_dropped_files([item.path for item in self.selected_items()],destination.current_path)
+            return "break"
+        deferred=getattr(self,"deferred_single_row",None); self.deferred_single_row=None
+        if deferred and self.tree.exists(deferred):
+            self.tree.selection_set(deferred); self.tree.focus(deferred)
         moved = self.column_drag_moved
         resized = self.resizing_column is not None
         self.dragged_column = None
@@ -2348,9 +2635,14 @@ class FilePane(ttk.Frame):
         region = self.tree.identify_region(event.x, event.y)
         self.tree.configure(cursor="sb_h_double_arrow" if region == "separator" else "")
 
+    def fitted_column_width(self, column, saved=None, language=None):
+        heading_font = tkfont.Font(root=self, font=ttk.Style(self).lookup("Treeview.Heading", "font") or "TkHeadingFont")
+        pixels = heading_font.measure(self.tree.heading(column, "text"))
+        return localized_column_width(self.default_column_widths[column], saved, pixels, language == getattr(self.app, "language", "en"))
+
     def reset_column_widths(self):
-        defaults = {"name": 230, "rating": 75, "color": 75, "tags": 170, "type": 60, "codec": 105, "resolution": 110, "pixels": 85, "size": 85, "rate": 75, "bitrate": 90, "fps": 60, "audio": 110, "hdr": 55, "modified": 135, "duration": 90}
-        for column, width in defaults.items(): self.tree.column(column, width=width, stretch=False)
+        for column in self.tree["columns"]:
+            self.tree.column(column, width=self.fitted_column_width(column), stretch=False)
         self.refresh_view()
 
     def configure_columns(self):
@@ -2512,6 +2804,7 @@ class PreviewPane(ttk.Frame):
             self.info_var.set(self.tr("preview.select_side"))
 
     def show_item(self, item: MediaItem):
+        if getattr(self, 'file_restore_active', False): return
         if self.item and self.item.path == item.path:
             return
         self.stop_playback()
@@ -2918,7 +3211,7 @@ class PreviewPane(ttk.Frame):
             self.preview_label.configure(image="", text=f"{self.tr('preview.unavailable')}\n{exc}")
 
 
-class MediaSorterApp(TkinterDnD.Tk):
+class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
     def __init__(self):
         super().__init__()
         self.data_directory = application_data_directory()
@@ -2926,10 +3219,20 @@ class MediaSorterApp(TkinterDnD.Tk):
         self.settings = load_json(self.settings_path, {})
         self.language_override = str(self.settings.get("language", "system"))
         self.language = select_language(self.language_override, system_display_locale())
+        self.is_rtl = is_rtl_language(self.language)
         self.translator = Translator(bundled_resource("locales"), self.language)
         self.tr = self.translator.text
-        global messagebox
+        install_widget_localization(self.translator)
+        global messagebox, simpledialog, filedialog
         messagebox = LocalizedMessageBox(_tk_messagebox, self.translator)
+        simpledialog = LocalizedSimpleDialog(_tk_simpledialog, self.translator)
+        filedialog = LocalizedFileDialog(_tk_filedialog, self.translator)
+        # The transfer/rename extension must use the same translated standard
+        # dialogs as the main module, not its original raw Tk imports.
+        import transfer_ui
+        transfer_ui.messagebox=messagebox
+        transfer_ui.simpledialog=simpledialog
+        transfer_ui.filedialog=filedialog
         self.reminder_state = normalise_reminder_state(self.settings.get("reminders", {}))
         self.reminder_shown_this_launch = False
         self.performance_profile = str(self.settings.get("performance_profile", "Balanced"))
@@ -2963,6 +3266,7 @@ class MediaSorterApp(TkinterDnD.Tk):
         self.thumbnail_workers = int(profile_defaults["thumbnail_workers"])
         self.thumbnail_executor = ThreadPoolExecutor(max_workers=self.thumbnail_workers, thread_name_prefix="thumbnail")
         self.undo_stack: list[tuple[str, list]] = []
+        self.undo_stamps = {}
         self.file_clipboard: tuple[list[Path], bool] = ([], False)
         self.operation_queue: queue.Queue = queue.Queue()
         self.ui_events: queue.Queue = queue.Queue()
@@ -2990,11 +3294,13 @@ class MediaSorterApp(TkinterDnD.Tk):
 
         toolbar = ttk.Frame(self, padding=(10, 8))
         toolbar.pack(fill="x")
+        self.toolbar = toolbar
         ttk.Label(toolbar, text=self.tr("toolbar.guide")).pack(side="left")
         ttk.Button(toolbar, text=self.tr("toolbar.undo"), command=self.undo_last).pack(side="right", padx=4)
         ttk.Button(toolbar, text=self.tr("toolbar.copy"), command=lambda: self.transfer(False)).pack(side="right", padx=4)
         ttk.Button(toolbar, text=self.tr("toolbar.move"), command=lambda: self.transfer(True)).pack(side="right", padx=4)
         ttk.Button(toolbar, text=self.tr("toolbar.refresh"), command=self.refresh).pack(side="right", padx=4)
+        ttk.Button(toolbar, text="Selection basket", command=self.toggle_selection_basket).pack(side="right", padx=4)
 
         workspace = tk.PanedWindow(
             self,
@@ -3053,6 +3359,7 @@ class MediaSorterApp(TkinterDnD.Tk):
         self.bind_all("<Control-x>", lambda _event: self.copy_to_clipboard(True))
         self.bind_all("<Control-v>", lambda _event: self.paste_clipboard())
         self.bind_all("<Control-z>", lambda _event: self.undo_last())
+        self.bind_all("<Control-Shift-N>", lambda _event: self.current_pane().new_folder())
         self.bind_all("<F5>", lambda _event: self.refresh())
         self.bind_all("<BackSpace>", self.keyboard_go_up)
         self.bind_all("<Delete>", self.keyboard_delete)
@@ -3071,6 +3378,8 @@ class MediaSorterApp(TkinterDnD.Tk):
         file_menu = tk.Menu(menu_bar, tearoff=False)
         file_menu.add_command(label=self.tr("menu.browse"), command=lambda: self.current_pane().choose_folder())
         file_menu.add_command(label=self.tr("menu.refresh"), accelerator="F5", command=self.refresh)
+        file_menu.add_command(label="New folder…", accelerator="Ctrl+Shift+N", command=lambda:self.current_pane().new_folder())
+        file_menu.add_command(label="Selection basket…", command=self.show_selection_basket)
         file_menu.add_separator(); file_menu.add_command(label=self.tr("menu.exit"), command=self.close_app)
         menu_bar.add_cascade(label=self.tr("menu.file"), menu=file_menu)
 
@@ -3257,6 +3566,7 @@ class MediaSorterApp(TkinterDnD.Tk):
         pane = self.current_pane()
         pane.thumbnail_size_var.set(size)
         pane.thumbnail_size_display_var.set(pane.thumbnail_size_choices.label(size))
+        pane.thumbnail_pixels.set({"Small":110,"Medium":160,"Large":230}[size])
         pane.render_thumbnail_grid()
 
     def apply_appearance(self, theme: str, scale: int):
@@ -3307,18 +3617,19 @@ class MediaSorterApp(TkinterDnD.Tk):
         body = ttk.Frame(window, padding=14); body.pack(fill="both", expand=True)
         ttk.Label(body, text="Appearance and accessibility", font=("Segoe UI", 12, "bold")).grid(row=0, column=0, columnspan=2, sticky="w")
         ttk.Label(body, text="Changes are previewed immediately. Cancel restores the previous appearance.", wraplength=460).grid(row=1, column=0, columnspan=2, sticky="w", pady=(3, 14))
-        theme_var = tk.StringVar(value=self.appearance_theme); scale_var = tk.StringVar(value=f"{self.ui_scale}%")
-        ttk.Label(body, text="Theme:").grid(row=2, column=0, sticky="w", pady=6); ttk.Combobox(body, textvariable=theme_var, state="readonly", values=("System", "Light", "Dark", "High contrast"), width=18).grid(row=2, column=1, sticky="w")
+        theme_choices = LocalizedChoices(self.translator, APPEARANCE_THEME_LABEL_KEYS)
+        theme_var = tk.StringVar(value=theme_choices.label(self.appearance_theme)); scale_var = tk.StringVar(value=f"{self.ui_scale}%")
+        ttk.Label(body, text="Theme:").grid(row=2, column=0, sticky="w", pady=6); ttk.Combobox(body, textvariable=theme_var, state="readonly", values=theme_choices.labels, width=translated_combobox_width(theme_choices.labels, 18)).grid(row=2, column=1, sticky="w")
         ttk.Label(body, text="Interface scale:").grid(row=3, column=0, sticky="w", pady=6); ttk.Combobox(body, textvariable=scale_var, state="readonly", values=("100%", "125%", "150%", "175%", "200%"), width=18).grid(row=3, column=1, sticky="w")
         sample = ttk.LabelFrame(body, text="Preview", padding=10); sample.grid(row=4, column=0, columnspan=2, sticky="ew", pady=12); ttk.Label(sample, text="Filename.jpg   1920 × 1080   H.265 / HEVC").pack(side="left"); ttk.Button(sample, text="Sample button").pack(side="right")
         def preview(*_args):
             try: scale = int(scale_var.get().rstrip("%"))
             except ValueError: scale = 100
-            self.apply_appearance(theme_var.get(), scale)
+            self.apply_appearance(theme_choices.internal(theme_var.get()), scale)
         theme_var.trace_add("write", preview); scale_var.trace_add("write", preview)
         def save(): preview(); window.destroy()
         def cancel(): self.apply_appearance(*original); window.destroy()
-        buttons = ttk.Frame(body); buttons.grid(row=5, column=0, columnspan=2, sticky="ew", pady=(8, 0)); ttk.Button(buttons, text="Save", command=save).pack(side="left"); ttk.Button(buttons, text="Restore system default", command=lambda: (theme_var.set("System"), scale_var.set("100%"))).pack(side="left", padx=6); ttk.Button(buttons, text="Cancel", command=cancel).pack(side="right")
+        buttons = ttk.Frame(body); buttons.grid(row=5, column=0, columnspan=2, sticky="ew", pady=(8, 0)); ttk.Button(buttons, text="Save", command=save).pack(side="left"); ttk.Button(buttons, text="Restore system default", command=lambda: (theme_var.set(theme_choices.label("System")), scale_var.set("100%"))).pack(side="left", padx=6); ttk.Button(buttons, text="Cancel", command=cancel).pack(side="right")
         window.protocol("WM_DELETE_WINDOW", cancel)
 
     def restore_layout(self):
@@ -3505,14 +3816,7 @@ class MediaSorterApp(TkinterDnD.Tk):
         if not selected:
             messagebox.showinfo("Nothing selected", "Select one or more files in the active pane first.")
             return
-        targets = [
-            (item, destination.current_path / (item.path.relative_to(source.current_path) if source.recursive_var.get() else item.path.name))
-            for item in selected
-        ]
-        verb = "move" if move else "copy"
-        if not messagebox.askyesno(f"Confirm {verb}", f"{verb.title()} {len(selected)} file(s) to:\n{destination.current_path}?"):
-            return
-        self.enqueue_operation([(item.path, target) for item, target in targets], move, f"{verb.title()} to {destination.current_path}")
+        self.preview_transfer([item.path for item in selected], source.current_path, destination.current_path, move)
 
     def transfer_finished(self, source: FilePane, destination: FilePane, errors: list[str], count: int, verb: str):
         source.scan()
@@ -3624,11 +3928,11 @@ class MediaSorterApp(TkinterDnD.Tk):
         current_plans = {"value": []}
         def refresh_preview():
             try: start = start_var.get(); padding = max(1, min(9, padding_var.get()))
-            except tk.TclError: status_var.set("Start and padding must be whole numbers."); apply_button.configure(state="disabled"); return
+            except tk.TclError: status_var.set(self.translator.ui_text("Start and padding must be whole numbers.")); apply_button.configure(state="disabled"); return
             plans = self.plan_batch_rename(items, template_var.get(), find_var.get(), replace_var.get(), case_var.get(), start, padding); current_plans["value"] = plans; tree.delete(*tree.get_children())
-            for plan in plans: tree.insert("", "end", values=(plan["status"], plan["item"].path.name, plan["target"].name))
+            for plan in plans: tree.insert("", "end", values=(self.translator.ui_text(plan["status"]), plan["item"].path.name, plan["target"].name))
             errors = [plan for plan in plans if plan["status"] not in {"Ready", "Unchanged"}]; changed = [plan for plan in plans if plan["status"] == "Ready"]
-            status_var.set(f"{len(changed)} file(s) ready · {len(plans)-len(changed)-len(errors)} unchanged · {len(errors)} problem(s)")
+            status_var.set(self.translator.ui_text(f"{len(changed)} file(s) ready · {len(plans)-len(changed)-len(errors)} unchanged · {len(errors)} problem(s)"))
             apply_button.configure(state="normal" if changed and not errors else "disabled")
         def apply():
             refresh_preview(); plans = current_plans["value"]
@@ -3647,14 +3951,24 @@ class MediaSorterApp(TkinterDnD.Tk):
         ttk.Button(buttons, text="Refresh preview", command=refresh_preview).pack(side="left")
         apply_button = ttk.Button(buttons, text="Apply rename", command=apply); apply_button.pack(side="left", padx=6)
         ttk.Button(buttons, text="Cancel", command=window.destroy).pack(side="right")
+        preview_job = [None]
+        def schedule_preview(*_):
+            if preview_job[0]: window.after_cancel(preview_job[0])
+            preview_job[0] = window.after(180, refresh_preview)
+        for variable in (template_var, find_var, replace_var, case_var, start_var, padding_var):
+            variable.trace_add("write", schedule_preview)
         refresh_preview()
 
-    def enqueue_operation(self, pairs: list[tuple[Path, Path]], move: bool, label: str):
-        pairs = [(Path(source), Path(target)) for source, target in pairs if Path(source).is_file()]
+    def enqueue_operation(self, pairs: list[tuple[Path, Path]], move: bool, label: str, policies=None, open_destination=None):
+        pairs = [(Path(source), Path(target)) for source, target in pairs]
         if not pairs: return
-        policy = self.conflict_policy(pairs)
-        if policy is None: return
-        self.operation_queue.put({"pairs": pairs, "move": move, "label": label, "policy": policy})
+        if policies is None:
+            planned = self.resolve_transfer_conflicts(pairs)
+            if planned is None: return
+            pairs = [(source,target) for source,target,policy in planned]
+            policies = [policy for source,target,policy in planned]
+        if not pairs: return
+        self.operation_queue.put({"pairs": pairs, "move": move, "label": label, "policy": "skip", "policies": policies, "open_destination":open_destination})
         self.show_operation_window()
         if not self.operation_running: self.after(0, self.start_next_operation)
 
@@ -3679,14 +3993,17 @@ class MediaSorterApp(TkinterDnD.Tk):
         if hasattr(self, "pause_button"): self.pause_button.configure(text="Resume" if self.operation_paused else "Pause")
 
     def start_next_operation(self):
-        if self.operation_running: return
+        if self.operation_running or getattr(self,'undo_recovery_pending',False): return
         try: job = self.operation_queue.get_nowait()
         except queue.Empty:
             if hasattr(self, "operation_status"): self.operation_status.set("Queue complete")
             return
         self.operation_running = True; self.operation_cancel.clear(); self.operation_paused = False
         pairs, move, policy = job["pairs"], job["move"], job["policy"]
-        total_bytes = sum(source.stat().st_size for source, _target in pairs if source.exists())
+        total_bytes = 0
+        for source, _target in pairs:
+            try: total_bytes += source.stat().st_size
+            except OSError: pass  # The worker reports missing/inaccessible sources.
         if hasattr(self, "operation_progress"): self.operation_progress.configure(maximum=max(1, total_bytes), value=0)
         if hasattr(self, "operation_status"): self.operation_status.set(job["label"])
 
@@ -3695,50 +4012,27 @@ class MediaSorterApp(TkinterDnD.Tk):
             for index, (source, original_target) in enumerate(pairs, 1):
                 if self.operation_cancel.is_set(): break
                 while self.operation_paused and not self.operation_cancel.is_set(): time.sleep(0.1)
-                target = original_target
-                backup = None
                 try:
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    if target.exists():
-                        if policy == "skip" or (policy == "newer" and source.stat().st_mtime <= target.stat().st_mtime):
-                            continue
-                        if policy == "keep both": target = self.unique_target(target)
-                    if target.exists():
-                        backup = self.undo_directory / f"{time.time_ns()}-{target.name}"
-                        shutil.move(target, backup)
-                    size = source.stat().st_size
-                    if move:
-                        shutil.move(source, target); completed_bytes += size
-                        self.metadata_cache.move_user_data(source, target)
-                        undo_records.append(("move", target, source, backup))
-                    else:
-                        with source.open("rb") as src, target.open("wb") as dst:
-                            while True:
-                                if self.operation_cancel.is_set(): raise InterruptedError("Cancelled")
-                                while self.operation_paused and not self.operation_cancel.is_set(): time.sleep(0.1)
-                                chunk = src.read(1024 * 1024)
-                                if not chunk: break
-                                dst.write(chunk); completed_bytes += len(chunk)
-                                elapsed = max(0.01, time.monotonic() - started); speed = completed_bytes / elapsed
-                                remaining = (total_bytes - completed_bytes) / speed if speed else 0
-                                self.post_ui(self.update_operation_progress, completed_bytes, total_bytes, speed, remaining, index, len(pairs))
-                        shutil.copystat(source, target)
-                        self.metadata_cache.copy_user_data(source, target)
-                        undo_records.append(("copy", target, source, backup))
+                    def progress(count):
+                        nonlocal completed_bytes
+                        completed_bytes += count
+                        speed=completed_bytes/max(.01,time.monotonic()-started)
+                        self.post_ui(self.update_operation_progress,completed_bytes,total_bytes,speed,max(0,total_bytes-completed_bytes)/max(1,speed),index,len(pairs))
+                    selected_policy=job.get("policies",[policy]*len(pairs))[index-1]
+                    record=transfer_file(source,original_target,move,selected_policy,self.undo_directory,self.operation_cancel,lambda:self.operation_paused,progress)
+                    if record is None: continue
+                    undo_records.append(record)
+                    target=record[1]
+                    self.undo_stamps[(id(undo_records),id(record))]=file_stamp(target)
+                    if move: self.metadata_cache.move_user_data(source,target)
+                    else: self.metadata_cache.copy_user_data(source,target)
                     self.post_ui(self.update_operation_progress, completed_bytes, total_bytes, completed_bytes / max(.01, time.monotonic()-started), 0, index, len(pairs))
                 except InterruptedError:
-                    try:
-                        if target.exists() and not move: target.unlink()
-                        if backup and backup.exists(): shutil.move(backup, target)
-                    except OSError: pass
                     break
-                except OSError as exc:
-                    try:
-                        if target.exists() and not move: target.unlink()
-                        if backup and backup.exists() and not target.exists(): shutil.move(backup, target)
-                    except OSError: pass
-                    errors.append(f"{source.name}: {exc}"); failed_pairs.append((source, original_target))
+                except (OSError,ValueError) as exc:
+                    errors.append(f"{source.name}: {self.translator.ui_text(str(exc))}"); failed_pairs.append((source, original_target))
             self.post_ui(self.finish_operation, undo_records, errors, self.operation_cancel.is_set(), failed_pairs, move, job["label"])
+            if job.get("open_destination") and not errors and not self.operation_cancel.is_set(): self.post_ui(open_folder,job["open_destination"])
         threading.Thread(target=worker, daemon=True).start()
 
     def update_operation_progress(self, done: int, total: int, speed: float, remaining: float, index: int, count: int):
@@ -3801,6 +4095,13 @@ class MediaSorterApp(TkinterDnD.Tk):
         self.enqueue_operation(job["pairs"], job["move"], job["label"])
 
     def record_undo(self, kind: str, records: list):
+        if kind == "operation":
+            if not hasattr(self,"undo_stamps"): self.undo_stamps={}
+            for record in records:
+                mode,target,source,backup=record
+                try:
+                    self.undo_stamps.setdefault((id(records),id(record)),file_stamp(target))
+                except OSError: pass
         self.undo_stack.append((kind, records))
         self.undo_stack = self.undo_stack[-20:]
 
@@ -3810,31 +4111,71 @@ class MediaSorterApp(TkinterDnD.Tk):
         if not self.undo_stack:
             messagebox.showinfo("Nothing to undo", "There are no recent copy, move, replacement, or rename actions."); return
         kind, records = self.undo_stack.pop()
+        self.operation_running = True
+        for preview in (self.left_preview,self.right_preview):
+            preview.file_restore_active=True
+            preview.disable()
+        self.left.status_var.set("Undo in progress…")
+        self.right.status_var.set("Undo in progress…")
+        threading.Thread(target=self.run_undo,args=(kind,records),daemon=True).start()
+
+    def run_undo(self,kind,records):
+        # Wait off the UI thread; no new metadata/thumbnail readers may start
+        # while restoring, but ordinary scans retain their concurrency otherwise.
+        try:
+            with MEDIA_ACCESS.exclusive():
+                errors=self.restore_undo_records(kind,records)
+        except Exception as exc:
+            errors=[str(exc)]
+        self.post_ui(self.finish_undo,kind,records,errors)
+
+    def restore_undo_records(self,kind,records):
         errors = []
         if kind == "batch_rename":
             success, error = self.perform_batch_rename(records)
             if success:
                 for current, old in records: self.metadata_cache.move_user_data(current, old)
             else: errors.append(error)
-            records = []
-        for record in reversed(records):
+            if success: records.clear()
+            return errors
+        while records:
+            record=records[-1]
             try:
                 if kind == "rename":
                     current, old = record
-                    if current.exists():
-                        current.rename(old); self.metadata_cache.move_user_data(current, old)
+                    retry_busy(lambda:move_without_replace(current,old))
+                    self.metadata_cache.move_user_data(current, old)
+                    records.pop()
                     continue
                 mode, target, source, backup = record
-                if mode == "move" and target.exists():
-                    source.parent.mkdir(parents=True, exist_ok=True); shutil.move(target, source); self.metadata_cache.move_user_data(target, source)
-                elif mode == "copy" and target.exists():
-                    target.unlink(); self.metadata_cache.delete_user_data(target)
-                if backup and backup.exists():
-                    target.parent.mkdir(parents=True, exist_ok=True); shutil.move(backup, target)
-            except OSError as exc: errors.append(str(exc))
+                def checkpoint(state):
+                    records[-1]=state
+                    if mode=='move': self.metadata_cache.move_user_data(target,source)
+                    elif mode=='copy': self.metadata_cache.delete_user_data(target)
+                undo_transfer(record,getattr(self,"undo_stamps",{}).get((id(records),id(record))),checkpoint)
+                if backup:
+                    # Restoring our own backup changes its file timestamps.
+                    # Earlier records for this same destination now expect it.
+                    stamp=file_stamp(target)
+                    for earlier in records:
+                        if earlier is record: break
+                        if earlier[1]==target: self.undo_stamps[(id(records),id(earlier))]=stamp
+                records.pop()
+            except OSError as exc:
+                errors.append(str(exc)); break
+        return errors
+
+    def finish_undo(self,kind,records,errors):
+        if records: self.undo_stack.append((kind,records))
+        self.undo_recovery_pending=bool(records)
+        self.operation_running=False
+        for preview in (self.left_preview,self.right_preview):
+            preview.file_restore_active=False
+            preview.enable()
         self.refresh()
-        if errors: messagebox.showerror("Undo incomplete", "\n".join(errors[:10]))
+        if errors: messagebox.showerror("Undo incomplete", "\n".join(self.translator.ui_text(error) for error in errors[:10])+self.translator.ui_text("\nUnfinished recovery steps and backups were retained. Close applications using these files, then press Undo again."))
         else: messagebox.showinfo("Undo complete", "The most recent file operation was undone.")
+        if not records: self.after(100,self.start_next_operation)
 
     def copy_to_clipboard(self, move: bool):
         items = self.current_pane().selected_items()
@@ -3846,7 +4187,9 @@ class MediaSorterApp(TkinterDnD.Tk):
         paths, move = self.file_clipboard
         if not paths: return
         destination = self.current_pane().current_path
-        self.enqueue_operation([(path, destination / path.name) for path in paths], move, f"Paste to {destination}")
+        try: root=Path(os.path.commonpath([str(path.parent) for path in paths]))
+        except ValueError: root=Path('__multiple_drives__')
+        self.preview_transfer(paths,root,destination,move)
         if move: self.file_clipboard = ([], False)
 
     def delete_selected(self, pane: FilePane | None = None):
@@ -3977,15 +4320,16 @@ class MediaSorterApp(TkinterDnD.Tk):
         body = ttk.Frame(window, padding=12); body.pack(fill="both", expand=True)
         ttk.Label(body, text="Media inventory report", font=("Segoe UI", 12, "bold")).grid(row=0, column=0, columnspan=2, sticky="w")
         ttk.Label(body, text="Exports technical details, annotations, file status, and a library summary without changing media.", wraplength=470).grid(row=1, column=0, columnspan=2, sticky="w", pady=(3, 12))
-        scope_var = tk.StringVar(value="Selected" if pane.selected_items() else "Visible"); format_var = tk.StringVar(value="CSV"); full_paths_var = tk.BooleanVar(value=True)
-        ttk.Label(body, text="Scope:").grid(row=2, column=0, sticky="w", pady=4); ttk.Combobox(body, textvariable=scope_var, state="readonly", values=("Selected", "Visible", "All scanned"), width=14).grid(row=2, column=1, sticky="w")
+        scope_choices = LocalizedChoices(self.translator, SCOPE_LABEL_KEYS)
+        scope_var = tk.StringVar(value=scope_choices.label("Selected" if pane.selected_items() else "Visible")); format_var = tk.StringVar(value="CSV"); full_paths_var = tk.BooleanVar(value=True)
+        ttk.Label(body, text="Scope:").grid(row=2, column=0, sticky="w", pady=4); ttk.Combobox(body, textvariable=scope_var, state="readonly", values=scope_choices.labels, width=translated_combobox_width(scope_choices.labels, 14)).grid(row=2, column=1, sticky="w")
         ttk.Label(body, text="Format:").grid(row=3, column=0, sticky="w", pady=4); ttk.Combobox(body, textvariable=format_var, state="readonly", values=("CSV", "JSON", "HTML"), width=14).grid(row=3, column=1, sticky="w")
         ttk.Checkbutton(body, text="Include full file paths", variable=full_paths_var).grid(row=4, column=0, columnspan=2, sticky="w", pady=5)
         status_var = tk.StringVar(value="Ready"); ttk.Label(body, textvariable=status_var, wraplength=470).grid(row=5, column=0, columnspan=2, sticky="w", pady=(8, 3))
         progress = ttk.Progressbar(body, mode="determinate"); progress.grid(row=6, column=0, columnspan=2, sticky="ew"); body.columnconfigure(0, weight=1)
         cancel_event = threading.Event()
         def start():
-            scope = scope_var.get(); items = pane.selected_items() if scope == "Selected" else list(pane.visible_items if scope == "Visible" else pane.items.values())
+            scope = scope_choices.internal(scope_var.get()); items = pane.selected_items() if scope == "Selected" else list(pane.visible_items if scope == "Visible" else pane.items.values())
             if not items: messagebox.showinfo("Nothing to export", "The chosen scope contains no media files.", parent=window); return
             report_format = format_var.get(); extension = "." + report_format.lower()
             chosen = filedialog.asksaveasfilename(parent=window, title="Save media report", initialfile=f"media-report{extension}", defaultextension=extension, filetypes=((f"{report_format} report", f"*{extension}"),))
@@ -4120,9 +4464,10 @@ class MediaSorterApp(TkinterDnD.Tk):
         window = tk.Toplevel(self); window.title("Verify media integrity"); window.geometry("980x620"); window.transient(self)
         heading = ttk.Frame(window, padding=10); heading.pack(fill="x")
         ttk.Label(heading, text="Media integrity verification", font=("Segoe UI", 12, "bold")).pack(side="left")
-        scope_var = tk.StringVar(value="Selected" if pane.selected_items() else "Visible")
+        scope_choices = LocalizedChoices(self.translator, SCOPE_LABEL_KEYS)
+        scope_var = tk.StringVar(value=scope_choices.label("Selected" if pane.selected_items() else "Visible"))
         ttk.Label(heading, text="Scope:").pack(side="left", padx=(20, 4))
-        scope_box = ttk.Combobox(heading, textvariable=scope_var, state="readonly", width=12, values=("Selected", "Visible", "All scanned")); scope_box.pack(side="left")
+        scope_box = ttk.Combobox(heading, textvariable=scope_var, state="readonly", width=translated_combobox_width(scope_choices.labels, 12), values=scope_choices.labels); scope_box.pack(side="left")
         force_var = tk.BooleanVar(value=False); ttk.Checkbutton(heading, text="Force recheck", variable=force_var).pack(side="left", padx=12)
         status_var = tk.StringVar(value="Choose a scope, then Start. Verification is read-only.")
         ttk.Label(window, textvariable=status_var, padding=(10, 0)).pack(fill="x")
@@ -4134,8 +4479,9 @@ class MediaSorterApp(TkinterDnD.Tk):
         scroll.pack(side="right", fill="y", padx=(0, 10)); tree.pack(fill="both", expand=True, padx=(10, 0))
         cancel_event = threading.Event(); results: list[dict] = []; running = {"value": False}
         def scope_items():
-            if scope_var.get() == "Selected": return pane.selected_items()
-            if scope_var.get() == "All scanned": return list(pane.items.values())
+            scope = scope_choices.internal(scope_var.get())
+            if scope == "Selected": return pane.selected_items()
+            if scope == "All scanned": return list(pane.items.values())
             return list(pane.visible_items)
         def add_result(result: dict, index: int, total: int):
             if not window.winfo_exists(): return
@@ -4437,7 +4783,8 @@ class MediaSorterApp(TkinterDnD.Tk):
                         lines: queue.Queue[str] = queue.Queue()
                         def reader(active_process=process):
                             if active_process.stdout:
-                                for line in active_process.stdout: lines.put(line.rstrip())
+                                with active_process.stdout:
+                                    for line in active_process.stdout: lines.put(line.rstrip())
                         threading.Thread(target=reader, daemon=True).start()
                         while process.poll() is None:
                             if cancel_event.wait(0.05):
@@ -4484,11 +4831,15 @@ class MediaSorterApp(TkinterDnD.Tk):
         window = tk.Toplevel(self); window.title(self.tr("convert.title")); window.geometry("1060x690"); window.transient(self)
         settings = ttk.LabelFrame(window, text=self.tr("convert.settings"), padding=10); settings.pack(fill="x", padx=10, pady=10)
         existing_choices = LocalizedChoices(self.translator, {"Skip existing": "convert.skip_existing", "Keep both": "convert.keep_both"})
-        preset_var = tk.StringVar(value="H.264 MP4 (compatible)"); crf_var = tk.IntVar(value=23); resolution_var = tk.StringVar(value=TRANSCODE_SOURCE_RESOLUTION); destination_var = tk.StringVar(value=str(other.current_path)); preserve_var = tk.BooleanVar(value=pane.recursive_var.get()); existing_var = tk.StringVar(value=existing_choices.label("Skip existing"))
-        engine_var = tk.StringVar(value=TRANSCODE_AUTOMATIC); hardware_decode_var = tk.BooleanVar(value=True); engine_status_var = tk.StringVar()
-        ttk.Label(settings, text=self.tr("convert.preset")).grid(row=0, column=0, sticky="w", pady=4); preset_box = ttk.Combobox(settings, textvariable=preset_var, state="readonly", values=tuple(TRANSCODE_PRESETS), width=30); preset_box.grid(row=0, column=1, sticky="w", padx=5)
+        preset_choices = LocalizedChoices(self.translator, TRANSCODE_PRESET_LABEL_KEYS)
+        resolution_choices = LocalizedChoices(self.translator, TRANSCODE_RESOLUTION_LABEL_KEYS)
+        engine_choices = LocalizedChoices(self.translator, TRANSCODE_ENGINE_LABEL_KEYS)
+        status_choices = LocalizedChoices(self.translator, TRANSCODE_STATUS_LABEL_KEYS)
+        preset_var = tk.StringVar(value=preset_choices.label("H.264 MP4 (compatible)")); crf_var = tk.IntVar(value=23); resolution_var = tk.StringVar(value=resolution_choices.label(TRANSCODE_SOURCE_RESOLUTION)); destination_var = tk.StringVar(value=str(other.current_path)); preserve_var = tk.BooleanVar(value=pane.recursive_var.get()); existing_var = tk.StringVar(value=existing_choices.label("Skip existing"))
+        engine_var = tk.StringVar(value=engine_choices.label(TRANSCODE_AUTOMATIC)); hardware_decode_var = tk.BooleanVar(value=True); engine_status_var = tk.StringVar()
+        ttk.Label(settings, text=self.tr("convert.preset")).grid(row=0, column=0, sticky="w", pady=4); preset_box = ttk.Combobox(settings, textvariable=preset_var, state="readonly", values=preset_choices.labels, width=30); preset_box.grid(row=0, column=1, sticky="w", padx=5)
         ttk.Label(settings, text=self.tr("convert.quality")).grid(row=0, column=2, sticky="w", padx=(15, 0)); ttk.Spinbox(settings, from_=18, to=35, textvariable=crf_var, width=6).grid(row=0, column=3, sticky="w", padx=5)
-        ttk.Label(settings, text=self.tr("convert.resolution")).grid(row=1, column=0, sticky="w", pady=4); resolution_box = ttk.Combobox(settings, textvariable=resolution_var, state="readonly", values=tuple(TRANSCODE_RESOLUTIONS), width=24); resolution_box.grid(row=1, column=1, sticky="w", padx=5)
+        ttk.Label(settings, text=self.tr("convert.resolution")).grid(row=1, column=0, sticky="w", pady=4); resolution_box = ttk.Combobox(settings, textvariable=resolution_var, state="readonly", values=resolution_choices.labels, width=translated_combobox_width(resolution_choices.labels, 24, 34)); resolution_box.grid(row=1, column=1, sticky="w", padx=5)
         ttk.Label(settings, text=self.tr("convert.resolution_help")).grid(row=1, column=2, columnspan=2, sticky="w", padx=(15, 0))
         ttk.Label(settings, text=self.tr("convert.quality_help")).grid(row=2, column=1, columnspan=3, sticky="w")
         ttk.Label(settings, text=self.tr("convert.engine")).grid(row=3, column=0, sticky="w", pady=(10, 4)); engine_box = ttk.Combobox(settings, textvariable=engine_var, state="readonly", width=24); engine_box.grid(row=3, column=1, sticky="w", padx=5, pady=(10, 4))
@@ -4502,20 +4853,20 @@ class MediaSorterApp(TkinterDnD.Tk):
         for key, label_key, width in (("status", "convert.status", 110), ("source", "convert.source", 340), ("target", "convert.output", 430), ("result", "convert.result", 180)): tree.heading(key, text=self.tr(label_key)); tree.column(key, width=width)
         scroll = ttk.Scrollbar(window, orient="vertical", command=tree.yview); tree.configure(yscrollcommand=scroll.set); scroll.pack(side="right", fill="y", padx=(0, 10)); tree.pack(fill="both", expand=True, padx=(10, 0), pady=8)
         progress = ttk.Progressbar(window, mode="determinate", maximum=100); progress.pack(fill="x", padx=10); status_var = tk.StringVar(); ttk.Label(window, textvariable=status_var, padding=(10, 4)).pack(fill="x")
-        current = {"plans": []}; cancel_event = threading.Event(); running = {"value": False}; previous_preset = {"value": preset_var.get()}
+        current = {"plans": []}; cancel_event = threading.Event(); running = {"value": False}; previous_preset = {"value": preset_choices.internal(preset_var.get())}
         def update_engine_choices(_event=None):
-            selected_preset = preset_var.get()
+            selected_preset = preset_choices.internal(preset_var.get())
             if selected_preset == "720p H.264 proxy" and previous_preset["value"] != selected_preset:
-                resolution_var.set("720p")
+                resolution_var.set(resolution_choices.label("720p"))
             previous_preset["value"] = selected_preset
-            values = self.available_transcode_engines(preset_var.get()); engine_box.configure(values=values)
-            if engine_var.get() not in values: engine_var.set(values[0])
+            values = self.available_transcode_engines(selected_preset); labels = tuple(engine_choices.label(value) for value in values); engine_box.configure(values=labels, width=translated_combobox_width(labels, 24, 34))
+            if engine_choices.internal(engine_var.get()) not in values: engine_var.set(engine_choices.label(values[0]))
             encoders, accelerators, error = self.ffmpeg_capabilities()
-            if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_var.get()) is None:
+            if TRANSCODE_PRESET_CODEC_FAMILY.get(selected_preset) is None:
                 engine_box.configure(state="disabled"); resolution_box.configure(state="disabled"); hardware_decode_check.configure(state="disabled"); engine_status_var.set(self.tr("convert.remux_help"))
             else:
                 engine_box.configure(state="readonly"); resolution_box.configure(state="readonly"); hardware_decode_check.configure(state="normal")
-                hardware = [value for value in values if value not in {TRANSCODE_AUTOMATIC, TRANSCODE_SOFTWARE}]
+                hardware = [engine_choices.label(value) for value in values if value not in {TRANSCODE_AUTOMATIC, TRANSCODE_SOFTWARE}]
                 acceleration = ", ".join(sorted(accelerators)) if accelerators else self.tr("convert.none_reported")
                 engine_status_var.set(self.tr("convert.capabilities", hardware=", ".join(hardware) if hardware else self.tr("convert.cpu_fallback"), decode=acceleration) if not error else self.tr("convert.capability_failed", error=error))
             refresh_preview()
@@ -4524,8 +4875,9 @@ class MediaSorterApp(TkinterDnD.Tk):
             destination_text = destination_var.get().strip()
             if not destination_text: current["plans"] = []; status_var.set(self.tr("convert.choose_folder")); start_button.configure(state="disabled"); return
             existing_mode = existing_choices.internal(existing_var.get())
-            plans = self.plan_video_conversions(items, preset_var.get(), Path(destination_text), pane.current_path, preserve_var.get(), existing_mode, resolution_var.get()); current["plans"] = plans; tree.delete(*tree.get_children())
-            for index, plan in enumerate(plans): tree.insert("", "end", iid=str(index), values=(plan["status"], str(plan["item"].path), str(plan["target"]), ""))
+            preset_name = preset_choices.internal(preset_var.get()); resolution_name = resolution_choices.internal(resolution_var.get())
+            plans = self.plan_video_conversions(items, preset_name, Path(destination_text), pane.current_path, preserve_var.get(), existing_mode, resolution_name); current["plans"] = plans; tree.delete(*tree.get_children())
+            for index, plan in enumerate(plans): tree.insert("", "end", iid=str(index), values=(status_choices.label(plan["status"]), str(plan["item"].path), str(plan["target"]), ""))
             ready = sum(plan["status"] == "Ready" for plan in plans); skipped = len(plans) - ready; source_size = sum(plan["item"].size for plan in plans if plan["status"] == "Ready")
             status_var.set(self.tr("convert.preview_summary", ready=ready, skipped=skipped, size=human_size(source_size))); start_button.configure(state="normal" if ready else "disabled")
         def start():
@@ -4533,13 +4885,13 @@ class MediaSorterApp(TkinterDnD.Tk):
             if not plans: return
             try: crf = max(18, min(35, crf_var.get()))
             except tk.TclError: messagebox.showerror(self.tr("convert.invalid_quality"), self.tr("convert.invalid_quality_body"), parent=window); return
-            preset_name = preset_var.get(); engine_name = engine_var.get(); use_hardware_decode = hardware_decode_var.get(); resolution_name = resolution_var.get()
+            preset_name = preset_choices.internal(preset_var.get()); engine_name = engine_choices.internal(engine_var.get()); use_hardware_decode = hardware_decode_var.get(); resolution_name = resolution_choices.internal(resolution_var.get())
             available_engines = self.available_transcode_engines(preset_name)
             if engine_name not in available_engines:
-                messagebox.showerror(self.tr("convert.engine_unavailable"), self.tr("convert.engine_unavailable_body", engine=engine_name, preset=preset_name), parent=window); return
-            resolution_summary = resolution_name if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is not None else self.tr("convert.unchanged")
+                messagebox.showerror(self.tr("convert.engine_unavailable"), self.tr("convert.engine_unavailable_body", engine=engine_choices.label(engine_name), preset=preset_choices.label(preset_name)), parent=window); return
+            resolution_summary = resolution_choices.label(resolution_name) if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is not None else self.tr("convert.unchanged")
             decode_summary = self.tr("convert.decode_unused") if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is None else (self.tr("convert.decode_fallback") if use_hardware_decode else self.tr("convert.off"))
-            if not messagebox.askyesno(self.tr("convert.confirm_title"), self.tr("convert.confirm_body", count=len(plans), engine=engine_name, resolution=resolution_summary, decode=decode_summary), parent=window): return
+            if not messagebox.askyesno(self.tr("convert.confirm_title"), self.tr("convert.confirm_body", count=len(plans), engine=engine_choices.label(engine_name), resolution=resolution_summary, decode=decode_summary), parent=window): return
             cancel_event.clear(); running["value"] = True; start_button.configure(state="disabled"); refresh_button.configure(state="disabled"); cancel_button.configure(state="normal"); progress.configure(value=0)
             def update(index, fraction):
                 if not window.winfo_exists(): return
@@ -4548,14 +4900,14 @@ class MediaSorterApp(TkinterDnD.Tk):
                 passed = failed = cancelled = 0
                 for index, plan in enumerate(plans):
                     if cancel_event.is_set(): cancelled += len(plans) - index; break
-                    self.post_ui(lambda iid=str(current["plans"].index(plan)): tree.set(iid, "status", "Converting"))
+                    self.post_ui(lambda iid=str(current["plans"].index(plan)): tree.set(iid, "status", status_choices.label("Converting")))
                     state, details = self.transcode_video_file(plan["item"], plan["target"], preset_name, crf, cancel_event, lambda fraction, i=index: self.post_ui(update, i, fraction), engine_name, use_hardware_decode, resolution_name)
                     if state == "Passed": passed += 1
                     elif state == "Cancelled": cancelled += len(plans) - index
                     else: failed += 1
                     def show_result(plan=plan, state=state, details=details):
                         if not window.winfo_exists(): return
-                        iid = str(current["plans"].index(plan)); tree.set(iid, "status", state); tree.set(iid, "result", details.split(" using ", 1)[1][:120] if state == "Passed" and " using " in details else details[:120])
+                        iid = str(current["plans"].index(plan)); tree.set(iid, "status", status_choices.label(state)); tree.set(iid, "result", details.split(" using ", 1)[1][:120] if state == "Passed" and " using " in details else details[:120])
                     self.post_ui(show_result)
                     if state == "Cancelled": break
                 def finished():
@@ -4615,8 +4967,9 @@ class MediaSorterApp(TkinterDnD.Tk):
         body = ttk.Frame(window, padding=12); body.pack(fill="both", expand=True)
         ttk.Label(body, text="Perceptual image matching", font=("Segoe UI", 12, "bold")).grid(row=0, column=0, columnspan=2, sticky="w")
         ttk.Label(body, text="Review-only: this tool never deletes or changes files.").grid(row=1, column=0, columnspan=2, sticky="w", pady=(2, 12))
-        scope_var = tk.StringVar(value="Visible"); threshold_var = tk.IntVar(value=6)
-        ttk.Label(body, text="Scope:").grid(row=2, column=0, sticky="w", pady=4); ttk.Combobox(body, textvariable=scope_var, state="readonly", values=("Visible", "All scanned"), width=14).grid(row=2, column=1, sticky="w")
+        scope_choices = LocalizedChoices(self.translator, {key: value for key, value in SCOPE_LABEL_KEYS.items() if key != "Selected"})
+        scope_var = tk.StringVar(value=scope_choices.label("Visible")); threshold_var = tk.IntVar(value=6)
+        ttk.Label(body, text="Scope:").grid(row=2, column=0, sticky="w", pady=4); ttk.Combobox(body, textvariable=scope_var, state="readonly", values=scope_choices.labels, width=translated_combobox_width(scope_choices.labels, 14)).grid(row=2, column=1, sticky="w")
         ttk.Label(body, text="Similarity tolerance (0–16):").grid(row=3, column=0, sticky="w", pady=4); ttk.Spinbox(body, from_=0, to=16, textvariable=threshold_var, width=8).grid(row=3, column=1, sticky="w")
         ttk.Label(body, text="Lower values are stricter. 6 is a useful starting point for resized or lightly recompressed copies.", wraplength=500).grid(row=4, column=0, columnspan=2, sticky="w", pady=(2, 8))
         status_var = tk.StringVar(value="Ready"); ttk.Label(body, textvariable=status_var).grid(row=5, column=0, columnspan=2, sticky="w")
@@ -4625,7 +4978,7 @@ class MediaSorterApp(TkinterDnD.Tk):
         def start():
             try: threshold = max(0, min(16, threshold_var.get()))
             except tk.TclError: messagebox.showerror("Invalid tolerance", "Enter a whole number from 0 to 16.", parent=window); return
-            source = list(pane.visible_items) if scope_var.get() == "Visible" else list(pane.items.values())
+            source = list(pane.visible_items) if scope_choices.internal(scope_var.get()) == "Visible" else list(pane.items.values())
             items = [item for item in source if item.path.suffix.lower() in IMAGE_EXTENSIONS]
             if len(items) < 2: messagebox.showinfo("Not enough images", "The chosen scope contains fewer than two images.", parent=window); return
             cancel_event.clear(); start_button.configure(state="disabled"); cancel_button.configure(state="normal"); progress.configure(maximum=len(items), value=0); status_var.set(f"Hashing {len(items)} images…")
@@ -4931,7 +5284,7 @@ class MediaSorterApp(TkinterDnD.Tk):
                 except OSError: pass
                 result_code = 1
             self.post_ui(self.finish_thumbnail, window, label, output, result_code)
-        self.thumbnail_executor.submit(worker)
+        self.thumbnail_executor.submit(MEDIA_ACCESS.read_call,worker)
 
     @staticmethod
     def valid_thumbnail_png(path: Path) -> bool:
@@ -5207,12 +5560,16 @@ class MediaSorterApp(TkinterDnD.Tk):
         rule = dict(existing or {"name": "New rule", "enabled": True, "action": "Move", "destination": "", "kind": "Any", "extensions": "", "filename": "", "codec": "", "min_rating": 0, "tag": ""})
         window = tk.Toplevel(parent); window.title("Edit folder rule" if existing else "Add folder rule"); window.geometry("620x500"); window.transient(parent); window.grab_set()
         body = ttk.Frame(window, padding=12); body.pack(fill="both", expand=True)
+        action_choices = LocalizedChoices(self.translator, RULE_ACTION_LABEL_KEYS)
+        kind_choices = LocalizedChoices(self.translator, MEDIA_KIND_LABEL_KEYS)
         variables = {key: tk.StringVar(value=str(rule.get(key, ""))) for key in ("name", "action", "destination", "kind", "extensions", "filename", "codec", "min_rating", "tag")}; enabled_var = tk.BooleanVar(value=bool(rule.get("enabled", True)))
+        variables["action"].set(action_choices.label(str(rule.get("action", "Move"))))
+        variables["kind"].set(kind_choices.label(str(rule.get("kind", "Any"))))
         rows = (("Rule name:", "name"), ("Action:", "action"), ("Destination folder:", "destination"), ("Media kind:", "kind"), ("Extensions (comma separated):", "extensions"), ("Filename contains:", "filename"), ("Codec contains:", "codec"), ("Minimum rating (0–5):", "min_rating"), ("Required exact tag:", "tag"))
         for row, (label, key) in enumerate(rows):
             ttk.Label(body, text=label).grid(row=row, column=0, sticky="w", pady=4)
-            if key == "action": widget = ttk.Combobox(body, textvariable=variables[key], state="readonly", values=("Copy", "Move"), width=18)
-            elif key == "kind": widget = ttk.Combobox(body, textvariable=variables[key], state="readonly", values=("Any", "Images", "Videos"), width=18)
+            if key == "action": widget = ttk.Combobox(body, textvariable=variables[key], state="readonly", values=action_choices.labels, width=translated_combobox_width(action_choices.labels, 18))
+            elif key == "kind": widget = ttk.Combobox(body, textvariable=variables[key], state="readonly", values=kind_choices.labels, width=translated_combobox_width(kind_choices.labels, 18))
             else: widget = ttk.Entry(body, textvariable=variables[key])
             widget.grid(row=row, column=1, sticky="ew", padx=(8, 4), pady=4)
             if key == "destination": ttk.Button(body, text="Browse…", command=lambda: variables["destination"].set(filedialog.askdirectory(parent=window, title="Choose rule destination") or variables["destination"].get())).grid(row=row, column=2, sticky="w")
@@ -5224,20 +5581,21 @@ class MediaSorterApp(TkinterDnD.Tk):
             if not destination: messagebox.showerror("Invalid rule", "Choose a destination folder.", parent=window); return
             try: rating = max(0, min(5, int(variables["min_rating"].get())))
             except ValueError: messagebox.showerror("Invalid rating", "Minimum rating must be a whole number from 0 to 5.", parent=window); return
-            result = {key: variables[key].get().strip() for key in variables}; result["enabled"] = enabled_var.get(); result["min_rating"] = rating; callback(result); window.destroy()
+            result = {key: variables[key].get().strip() for key in variables}; result["action"] = action_choices.internal(result["action"]); result["kind"] = kind_choices.internal(result["kind"]); result["enabled"] = enabled_var.get(); result["min_rating"] = rating; callback(result); window.destroy()
         buttons = ttk.Frame(body); buttons.grid(row=len(rows)+2, column=0, columnspan=3, sticky="ew", pady=(12, 0)); ttk.Button(buttons, text="Save rule", command=save).pack(side="left"); ttk.Button(buttons, text="Cancel", command=window.destroy).pack(side="right")
 
     def preview_folder_rules(self, parent: tk.Misc):
         pane = self.current_pane(); window = tk.Toplevel(parent); window.title("Preview folder organization rules"); window.geometry("1100x680"); window.transient(parent)
-        controls = ttk.Frame(window, padding=10); controls.pack(fill="x"); scope_var = tk.StringVar(value="Visible"); preserve_var = tk.BooleanVar(value=True)
-        ttk.Label(controls, text="Scope:").pack(side="left"); ttk.Combobox(controls, textvariable=scope_var, state="readonly", values=("Visible", "All scanned"), width=14).pack(side="left", padx=5); ttk.Checkbutton(controls, text="Preserve folders relative to the active pane", variable=preserve_var).pack(side="left", padx=12)
+        scope_choices = LocalizedChoices(self.translator, {key: value for key, value in SCOPE_LABEL_KEYS.items() if key != "Selected"})
+        controls = ttk.Frame(window, padding=10); controls.pack(fill="x"); scope_var = tk.StringVar(value=scope_choices.label("Visible")); preserve_var = tk.BooleanVar(value=True)
+        ttk.Label(controls, text="Scope:").pack(side="left"); ttk.Combobox(controls, textvariable=scope_var, state="readonly", values=scope_choices.labels, width=translated_combobox_width(scope_choices.labels, 14)).pack(side="left", padx=5); ttk.Checkbutton(controls, text="Preserve folders relative to the active pane", variable=preserve_var).pack(side="left", padx=12)
         ttk.Label(window, text="Preview only until Apply is confirmed. The first enabled matching rule wins.", padding=(10, 0)).pack(fill="x")
         tree = ttk.Treeview(window, columns=("status", "rule", "action", "source", "target"), show="headings")
         for key, label, width in (("status", "Status", 130), ("rule", "Rule", 150), ("action", "Action", 65), ("source", "Source", 350), ("target", "Destination", 390)): tree.heading(key, text=label); tree.column(key, width=width)
         scroll = ttk.Scrollbar(window, orient="vertical", command=tree.yview); tree.configure(yscrollcommand=scroll.set); scroll.pack(side="right", fill="y", padx=(0, 10)); tree.pack(fill="both", expand=True, padx=(10, 0), pady=8)
         status_var = tk.StringVar(); ttk.Label(window, textvariable=status_var, padding=(10, 0)).pack(fill="x"); current = {"plans": []}
         def refresh():
-            items = list(pane.visible_items if scope_var.get() == "Visible" else pane.items.values()); plans = self.plan_folder_rules(items, self.folder_rules, pane.current_path, preserve_var.get()); current["plans"] = plans; tree.delete(*tree.get_children())
+            items = list(pane.visible_items if scope_choices.internal(scope_var.get()) == "Visible" else pane.items.values()); plans = self.plan_folder_rules(items, self.folder_rules, pane.current_path, preserve_var.get()); current["plans"] = plans; tree.delete(*tree.get_children())
             for plan in plans: tree.insert("", "end", values=(plan["status"], plan["rule"].get("name", "Unnamed"), plan["action"], str(plan["item"].path), str(plan["target"])))
             actionable = sum(plan["status"] in {"Ready", "Target exists"} for plan in plans); problems = sum(plan["status"] not in {"Ready", "Target exists", "Already in destination"} for plan in plans); status_var.set(f"{actionable} planned action(s) · {len(items)-len(plans)} unmatched file(s) · {problems} problem(s)"); apply_button.configure(state="normal" if actionable and not problems else "disabled")
         def apply():
@@ -5290,13 +5648,15 @@ class MediaSorterApp(TkinterDnD.Tk):
         window = tk.Toplevel(self); window.title("Cache and scanning"); window.geometry("540x520"); window.transient(self)
         status = tk.StringVar()
         workers_var = tk.IntVar(value=self.scan_workers)
-        profile_var = tk.StringVar(value=self.performance_profile)
+        profile_choices = LocalizedChoices(self.translator, PERFORMANCE_PROFILE_LABEL_KEYS)
+        profile_var = tk.StringVar(value=profile_choices.label(self.performance_profile))
         profile_description = tk.StringVar()
         thumbnail_percent_var = tk.DoubleVar(value=self.thumbnail_cache_percent)
         thumbnail_limit_var = tk.StringVar()
         exclusions_var = tk.StringVar(value="; ".join(self.excluded_patterns))
         def profile_selected(_event=None):
-            profile = profile_var.get() if profile_var.get() in PERFORMANCE_PROFILES else "Balanced"
+            profile = profile_choices.internal(profile_var.get())
+            profile = profile if profile in PERFORMANCE_PROFILES else "Balanced"
             defaults = PERFORMANCE_PROFILES[profile]
             workers_var.set(defaults["scan_workers"])
             profile_description.set(
@@ -5331,7 +5691,7 @@ class MediaSorterApp(TkinterDnD.Tk):
                 removed, removed_bytes = self.clear_thumbnail_cache()
                 refresh_status(); messagebox.showinfo("Thumbnail cache cleared", f"Deleted {removed} thumbnail(s) and freed {human_size(removed_bytes)}.", parent=window)
         def apply_scanning():
-            self.apply_performance_profile(profile_var.get(), workers_var.get())
+            self.apply_performance_profile(profile_choices.internal(profile_var.get()), workers_var.get())
             self.excluded_patterns = [value.strip() for value in exclusions_var.get().split(";") if value.strip()]
             try: self.thumbnail_cache_percent = max(0.1, min(10.0, float(thumbnail_percent_var.get())))
             except (ValueError, tk.TclError): self.thumbnail_cache_percent = 1.0
@@ -5364,7 +5724,7 @@ class MediaSorterApp(TkinterDnD.Tk):
         thumbnail_frame.columnconfigure(0, weight=1)
         settings_frame = ttk.LabelFrame(window, text="Scan settings", padding=8); settings_frame.pack(fill="x", padx=12, pady=4)
         ttk.Label(settings_frame, text="Performance profile:").grid(row=0, column=0, sticky="w")
-        profile_box = ttk.Combobox(settings_frame, textvariable=profile_var, state="readonly", values=tuple(PERFORMANCE_PROFILES), width=12)
+        profile_box = ttk.Combobox(settings_frame, textvariable=profile_var, state="readonly", values=profile_choices.labels, width=translated_combobox_width(profile_choices.labels, 12))
         profile_box.grid(row=0, column=1, sticky="w"); profile_box.bind("<<ComboboxSelected>>", profile_selected)
         ttk.Label(settings_frame, textvariable=profile_description).grid(row=1, column=0, columnspan=2, sticky="w", pady=(3, 5))
         ttk.Label(settings_frame, text="Parallel metadata workers (1–16):").grid(row=2, column=0, sticky="w")
@@ -5382,16 +5742,22 @@ class MediaSorterApp(TkinterDnD.Tk):
         window = tk.Toplevel(self); window.title(self.tr("help.title", version=APP_VERSION)); window.geometry("1100x740"); window.minsize(820, 540)
         window.transient(self)
         header = ttk.Frame(window, padding=(12, 10)); header.pack(fill="x")
-        ttk.Label(header, text=self.tr("help.title", version=APP_VERSION), font=("Segoe UI", 15, "bold")).pack(side="left")
-        search_var = tk.StringVar(); search_entry = ttk.Entry(header, textvariable=search_var, width=34)
+        ttk.Label(header, text=self.tr("help.title", version=APP_VERSION), font=("Segoe UI", 15, "bold")).pack(side="right" if self.is_rtl else "left")
+        search_var = tk.StringVar(); search_entry = ttk.Entry(header, textvariable=search_var, width=34, justify="right" if self.is_rtl else "left")
         search_button = ttk.Button(header, text=self.tr("pane.find").rstrip(":"))
         search_button.pack(side="right", padx=(5, 0)); search_entry.pack(side="right", padx=(6, 0)); ttk.Label(header, text=self.tr("help.search")).pack(side="right")
         body = ttk.Panedwindow(window, orient="horizontal"); body.pack(fill="both", expand=True, padx=12)
         contents_frame = ttk.Frame(body, padding=(0, 0, 8, 0)); reader_frame = ttk.Frame(body)
-        body.add(contents_frame, weight=0); body.add(reader_frame, weight=1)
-        ttk.Label(contents_frame, text="Contents", font=("Segoe UI", 11, "bold")).pack(anchor="w", pady=(0, 5))
+        if self.is_rtl:
+            body.add(reader_frame, weight=1); body.add(contents_frame, weight=0)
+        else:
+            body.add(contents_frame, weight=0); body.add(reader_frame, weight=1)
+        ttk.Label(contents_frame, text="Contents", font=("Segoe UI", 11, "bold")).pack(anchor="e" if self.is_rtl else "w", pady=(0, 5))
         chapter_list = tk.Listbox(contents_frame, width=31, exportselection=False, activestyle="dotbox")
         chapter_scroll = ttk.Scrollbar(contents_frame, orient="vertical", command=chapter_list.yview); chapter_list.configure(yscrollcommand=chapter_scroll.set)
+        chapter_xscroll = ttk.Scrollbar(contents_frame, orient="horizontal", command=chapter_list.xview)
+        chapter_list.configure(xscrollcommand=chapter_xscroll.set)
+        chapter_xscroll.pack(side="bottom", fill="x")
         chapter_scroll.pack(side="right", fill="y"); chapter_list.pack(side="left", fill="both", expand=True)
         text = tk.Text(reader_frame, wrap="word", padx=18, pady=14, font=("Segoe UI", 10), relief="flat", spacing1=2, spacing3=5)
         scroll = ttk.Scrollbar(reader_frame, orient="vertical", command=text.yview); text.configure(yscrollcommand=scroll.set)
@@ -5561,19 +5927,75 @@ Smart Collection: A saved view definition containing a location, filters, sortin
             chapters.append((title, guide[match.end():end].strip()))
         chapters = self.translator.help_chapters() or chapters
         visible_chapters = list(range(len(chapters))); current = {"chapter": 0, "match": 0}
-        status_var = tk.StringVar(value=f"{len(chapters)} chapters · Resolution File Manager {APP_VERSION}")
+        status_var = tk.StringVar(value=f"{len(chapters)} · Resolution File Manager {APP_VERSION}")
 
-        text.tag_configure("chapter", font=("Segoe UI", 17, "bold"), spacing3=14)
+        text.tag_configure("chapter", font=("Segoe UI", 17, "bold"), spacing3=14, justify="right" if self.is_rtl else "left")
+        text.tag_configure("body", justify="right" if self.is_rtl else "left")
         text.tag_configure("search_hit", background="#ffe08a", foreground="#202020")
         text.tag_configure("search_current", background="#ffad42", foreground="#101010")
+        chapter_ids = [entry[0] for entry in self.translator._chapter_map(self.translator._english)]
+        visual_rtl = needs_visual_order(self.language)
+        rendered = {"logical": "", "lines": [], "width": 0, "matches": []}
+
+        def add_logical_tag(tag, start, end):
+            for row,left,right in mapped_ranges(rendered["lines"],start,end):
+                line=rendered["lines"][row-1].text
+                a=int(text.tk.call("string","length",line[:left]))
+                b=int(text.tk.call("string","length",line[:right]))
+                text.tag_add(tag,f"{row}.{a}",f"{row}.{b}")
+
+        def render_linux_rtl():
+            window.update_idletasks()
+            logical=text.get("1.0","end-1c")
+            preserved=[]
+            for tag in text.tag_names():
+                if tag=="chapter" or tag.startswith("link_"):
+                    ranges=text.tag_ranges(tag)
+                    for offset in range(0,len(ranges),2):
+                        preserved.append((tag,len(text.get("1.0",ranges[offset])),len(text.get("1.0",ranges[offset+1]))))
+            width=max(200,text.winfo_width()-40)
+            font=tkfont.Font(font=text.cget("font"))
+            visual,lines=render_document(logical,width,font.measure)
+            rendered.update(logical=logical,lines=lines,width=width)
+            text.delete("1.0","end"); text.insert("1.0",visual,"body")
+            for tag,start,end in preserved: add_logical_tag(tag,start,end)
+
+        def insert_help_links():
+            position = "1.0"
+            while True:
+                start = text.search("[chapter:", position, stopindex="end", exact=True)
+                if not start:
+                    break
+                end = text.search("]", start, stopindex=f"{start} lineend", exact=True)
+                if not end:
+                    break
+                marker = text.get(start, f"{end}+1c")
+                chapter_id = marker[len("[chapter:"):-1]
+                if chapter_id in chapter_ids:
+                    target = chapter_ids.index(chapter_id)
+                    label = chapters[target][0]
+                    text.delete(start, f"{end}+1c")
+                    text.insert(start, label, "body")
+                    tag = "link_" + chapter_id
+                    text.tag_add(tag, start, f"{start}+{len(label)}c")
+                    text.tag_configure(tag, underline=True, foreground="#2475c7")
+                    text.tag_bind(tag, "<Button-1>", lambda _event, index=target: show_chapter(index))
+                    position = f"{start}+{len(label)}c"
+                else:
+                    position = f"{end}+1c"
 
         def fill_contents(labels=None):
             chapter_list.delete(0, "end")
-            for label in ([chapters[index][0] for index in visible_chapters] if labels is None else labels): chapter_list.insert("end", label)
+            for label in ([chapters[index][0] for index in visible_chapters] if labels is None else labels): chapter_list.insert("end", self.translator.display(label))
 
         def highlight_query(query: str):
             text.tag_remove("search_hit", "1.0", "end"); text.tag_remove("search_current", "1.0", "end")
+            rendered["matches"]=[]
             if not query: return 0
+            if visual_rtl:
+                rendered["matches"]=list(re.finditer(re.escape(query),rendered["logical"],re.I))
+                for match in rendered["matches"]: add_logical_tag("search_hit",match.start(),match.end())
+                return len(rendered["matches"])
             count = 0; position = "1.0"
             while True:
                 position = text.search(query, position, stopindex="end", nocase=True)
@@ -5585,11 +6007,13 @@ Smart Collection: A saved view definition containing a location, filters, sortin
             if not 0 <= chapter_index < len(chapters): return
             current["chapter"] = chapter_index; current["match"] = 0
             title, content = chapters[chapter_index]
-            text.configure(state="normal"); text.delete("1.0", "end"); text.insert("end", title + "\n", "chapter"); text.insert("end", content); text.configure(state="disabled")
+            text.configure(state="normal"); text.delete("1.0", "end"); text.insert("end", title + "\n", "chapter"); text.insert("end", content.replace("{version}", APP_VERSION), "body"); insert_help_links()
+            if visual_rtl: render_linux_rtl()
+            text.configure(state="disabled")
             count = highlight_query(search_var.get().strip())
             if select_contents and chapter_index in visible_chapters:
                 position = visible_chapters.index(chapter_index); chapter_list.selection_clear(0, "end"); chapter_list.selection_set(position); chapter_list.activate(position); chapter_list.see(position)
-            status_var.set(f"Chapter {chapter_index + 1} of {len(chapters)} · {title}" + (f" · {count} match(es)" if search_var.get().strip() else ""))
+            status_var.set(self.translator.display(f"{chapter_index + 1}/{len(chapters)} · {title}" + (f" · {count}" if search_var.get().strip() else "")))
             text.yview_moveto(0)
 
         def chapter_selected(_event=None):
@@ -5604,9 +6028,10 @@ Smart Collection: A saved view definition containing a location, filters, sortin
                 if count: visible_chapters.append(index); labels.append(f"{title}  ({count})" if query else title)
             fill_contents(labels)
             if visible_chapters:
-                show_chapter(visible_chapters[0]); status_var.set(f"{len(visible_chapters)} chapter(s) match “{query}”" if query else f"{len(chapters)} chapters")
+                show_chapter(visible_chapters[0]); status_var.set(f"{len(visible_chapters)}/{len(chapters)} · {query}" if query else str(len(chapters)))
             else:
-                text.configure(state="normal"); text.delete("1.0", "end"); text.insert("end", "No results\n", "chapter"); text.insert("end", f"No help chapter contains “{query}”.\n\nTry a shorter term such as thumbnails, codec, delete, scan, preview, Linux, or shortcut."); text.configure(state="disabled"); status_var.set(f"No matches for “{query}”")
+                rendered["matches"]=[]
+                text.configure(state="normal"); text.delete("1.0", "end"); text.insert("end", self.tr("help.no_results") + "\n", "chapter"); text.insert("end", self.tr("help.no_results_body", query=query), "body"); text.configure(state="disabled"); status_var.set(f"0/{len(chapters)} · {query}")
 
         def clear_search(): search_var.set(""); search_help(); search_entry.focus_set()
         def step_chapter(delta: int):
@@ -5615,11 +6040,22 @@ Smart Collection: A saved view definition containing a location, filters, sortin
             except ValueError: position = 0
             show_chapter(visible_chapters[(position + delta) % len(visible_chapters)])
         def next_match():
+            if visual_rtl:
+                matches=rendered["matches"]
+                if not matches: return
+                pair=current["match"] % len(matches); current["match"]=pair+1
+                match=matches[pair]
+                text.tag_remove("search_current","1.0","end")
+                add_logical_tag("search_current",match.start(),match.end())
+                ranges=text.tag_ranges("search_current")
+                if ranges: text.see(ranges[0])
+                status_var.set(f"{pair+1}/{len(matches)} · {self.translator.display(chapters[current['chapter']][0])}")
+                return
             ranges = text.tag_ranges("search_hit")
             if not ranges: return
             pair_count = len(ranges) // 2; pair = current["match"] % pair_count; current["match"] = pair + 1
             text.configure(state="normal"); text.tag_remove("search_current", "1.0", "end"); text.tag_add("search_current", ranges[pair * 2], ranges[pair * 2 + 1]); text.configure(state="disabled"); text.see(ranges[pair * 2])
-            status_var.set(f"Match {pair + 1} of {pair_count} in {chapters[current['chapter']][0]}")
+            status_var.set(f"{pair + 1}/{pair_count} · {chapters[current['chapter']][0]}")
 
         search_button.configure(command=search_help)
         chapter_list.bind("<<ListboxSelect>>", chapter_selected); search_entry.bind("<Return>", search_help); window.bind("<F3>", lambda _event: next_match()); window.bind("<Escape>", lambda _event: window.destroy())
@@ -5631,6 +6067,13 @@ Smart Collection: A saved view definition containing a location, filters, sortin
         ttk.Button(controls, text=self.tr("help.clear"), command=clear_search).pack(side="left", padx=3)
         ttk.Button(controls, text=self.tr("common.close"), command=window.destroy).pack(side="left", padx=(8, 0))
         fill_contents(); show_chapter(0); search_entry.focus_set()
+        if visual_rtl:
+            def resize_help(event):
+                if abs(event.width-40-rendered["width"])>8:
+                    position=text.yview()[0]
+                    show_chapter(current["chapter"])
+                    text.yview_moveto(position)
+            text.bind("<Configure>",resize_help)
 
 
 if __name__ == "__main__":

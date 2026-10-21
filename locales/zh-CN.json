@@ -1,26 +1,1561 @@
-{"meta":{"language":"简体中文"},"strings":{
-"app.title":"Resolution File Manager {version}","menu.file":"文件","menu.edit":"编辑","menu.view":"查看","menu.tools":"工具","menu.help":"帮助","menu.language":"语言","menu.reminders":"提醒…","menu.how_to":"Resolution File Manager 使用指南","menu.about":"关于",
-"duplicates.title":"重复项","duplicates.none_candidates":"没有发现相同大小的重复候选者。","duplicates.quick_start":"快速检查 {count} 重复候选人...","duplicates.quick_progress":"快速检查 {total} 的重复 {current}...","duplicates.verify_progress":"验证 {current} 与 {total} 完全匹配...","duplicates.complete_title":"重复搜索完成","duplicates.none":"没有找到完全相同的重复项。","duplicates.none_status":"未找到完全相同的重复项 · {cached} 缓存的指纹","duplicates.groups_status":"{groups} 精确重复组 · {cached} 缓存指纹","duplicates.first":"第一","duplicates.newest":"最新","duplicates.oldest":"最古老的","duplicates.smallest":"最小","duplicates.largest":"最大","duplicates.review_title":"查看精确的重复项","duplicates.found":"找到 {count} 完全相同的重复组。选择一行以在同一组中的另一个副本旁边预览它。","duplicates.explanation":"精确的重复项具有相同的内容和文件大小，因此最小和最大通常会并列。日期和地点仍可能有所不同。","duplicates.preview":"预览 {number}","duplicates.select":"选择重复项","duplicates.group":"集团","duplicates.filename":"文件名","duplicates.folder":"文件夹","duplicates.size":"尺寸","duplicates.modified":"修改","duplicates.reason":"为什么可以保留","duplicates.loading":"正在加载预览...","duplicates.keep_one":"每组保留一个：","duplicates.clear":"明确的提案","duplicates.close":"关闭而不进行任何更改","duplicates.proposal_status":"重复提案：保留 {strategy} · 选择 {count} 冗余文件以供审核","duplicates.applied_title":"应用了重复提案","duplicates.applied_body":"每组中的 {strategy} 副本均保持未选中状态。\n\n在主窗格中选择 {count} 冗余文件。在移动或删除任何内容之前先查看它们。",
-"convert.title":"转换选定的视频","convert.select_first_title":"转换视频","convert.select_first":"首先选择一个或多个视频文件。","convert.settings":"转换设置","convert.preset":"预设：","convert.quality":"质量（CRF）：","convert.resolution":"分辨率：","convert.resolution_help":"1080p 和 720p 设置输出高度，同时保留宽高比。","convert.quality_help":"较低的质量值要求较高的质量；硬件引擎将此值映射到它们自己的控制。 Remux 忽略质量和分辨率。","convert.engine":"编码引擎：","convert.hardware_decode":"如果可用，请使用硬件解码","convert.output_folder":"输出文件夹：","convert.choose_output":"选择转换输出文件夹","convert.preserve_folders":"保留相对于活动窗格的文件夹","convert.skip_existing":"跳过现有的","convert.keep_both":"两者都保留","convert.originals_retained":"始终保留原始视频。开始之前检查每个输出路径。","convert.status":"状态","convert.source":"来源","convert.output":"输出","convert.result":"结果","convert.remux_help":"Remux直接复制流；不使用编码、调整大小和硬件解码。","convert.none_reported":"没有报道","convert.cpu_fallback":"没有任何;自动将使用CPU","convert.capabilities":"FFmpeg 硬件编码器支持：{hardware} · 解码方法：{decode}","convert.capability_failed":"能力检查失败：{error} · 软件编码仍然可用","convert.choose_folder":"选择一个输出文件夹。","convert.preview_summary":"{ready} 已准备好 · {skipped} 已跳过/出现问题 · 源大小 {size}","convert.invalid_quality":"质量无效","convert.invalid_quality_body":"CRF 必须是 18 到 35 之间的整数。","convert.engine_unavailable":"编码引擎不可用","convert.engine_unavailable_body":"{engine} 不适用于 {preset}。选择另一个引擎。","convert.unchanged":"不变（流复制）","convert.decode_unused":"未使用（流复制）","convert.decode_fallback":"请求安全后备","convert.off":"关闭","convert.confirm_title":"开始视频转换","convert.confirm_body":"创建 {count} 新视频文件？\n\n编码：{engine}\n分辨率：{resolution}\n硬件解码：{decode}\n\n原始文件将被保留。取消将删除当前的部分输出并停止剩余的队列。","convert.progress":"正在转换文件 {current} 或 {total} · {percent}%","convert.complete":"完成 · {created} 创建 · {failed} 失败 · {cancelled} 取消","convert.refresh":"刷新预览","convert.start":"开始转换...","convert.cancel":"取消转换",
-"context.configure_columns":"配置列...","context.reset_columns":"重置列宽","context.files_suffix":" （{count} 个文件）",
-"status.cancelling":"正在取消扫描...","status.live_on":"实时更新","status.live_off":"实时更新已关闭","status.loading":"加载中...","outlier.moderate":"中等（1.4×）","outlier.large":"大 (1.75×)","outlier.extreme":"极限 (2.5×)","inspector.title":"督察","inspector.no_file":"未选择文件","inspector.select_file":"选择一个媒体文件以查看其详细信息。","inspector.copy_path":"复制路径","inspector.open":"打开","inspector.reveal":"揭示","preview.off":"预览关闭","preview.is_off":"预览已关闭","preview.select":"选择要预览的文件","preview.select_side":"选择这一侧的图像或视频","preview.play":"玩","preview.pause":"暂停","preview.skim":"略读：","preview.speed":"速度：","preview.muted":"静音","preview.unmuted":"声音打开","preview.still":"静止图像","preview.unavailable":"预览不可用","preview.read_failed":"无法读取帧","browse.page_summary":"第 {page} 页，共 {pages} · {count} 个文件{automatic}","browse.auto_suffix":" · 自动 {count}/页","browse.continuous_summary":"{count} 个文件 · {mode} · 仅限可见卡","browse.all_shown":"全部显示","status.folder_missing":"找不到文件夹","status.select_files":"首先在活动窗格中选择一个或多个文件。","status.finished":"完成","status.error":"错误",
-"menu.browse":"浏览活动窗格...","menu.refresh":"刷新","menu.exit":"退出","menu.copy":"复制","menu.cut":"切","menu.paste":"粘贴","menu.undo":"撤消","menu.rename":"重命名...","menu.batch_rename":"批量重命名所选...","menu.delete":"移至回收站/垃圾箱","menu.select_all":"选择所有显示的","menu.details":"活动窗格中的详细信息","menu.thumbnails":"活动窗格中的缩略图","menu.thumbnail_size":"缩略图尺寸","menu.columns":"配置列...","menu.appearance":"外观和文字大小...","menu.refresh_active":"刷新活动窗格","menu.refresh_both":"刷新两个窗格","menu.go_up":"上去","menu.verify":"验证介质完整性...","menu.contact_sheet":"创建视频联系表...","menu.export_report":"出口媒体报道...","menu.metadata":"查看嵌入的元数据...","menu.convert":"转换选定的视频...","menu.duplicates":"查找重复项...","menu.similar":"查找视觉上相似的图像...","menu.compare":"比较所选...","menu.sync":"比较/同步文件夹...","menu.save_workspace":"保存工作区...","menu.load_workspace":"加载工作区...","menu.save_collection":"保存活动的智能收藏...","menu.manage_collections":"管理智能馆藏...","menu.folder_rules":"文件夹组织规则...","menu.cache":"缓存和扫描...","menu.queue":"传输队列...","menu.shortcuts":"键盘快捷键","menu.coffee":"☕ 如果你喜欢这个，请给约翰买杯咖啡……","context.copy_other":"复制到其他窗格","context.move_other":"移至其他窗格","context.open":"打开","context.reveal":"在文件资源管理器中显示","context.rename":"重命名...","context.clear_rating":"明确评级","context.rating":"评级","context.none":"无","context.colour":"彩色标签","context.edit_tags":"编辑标签...","context.recycle":"移至回收站","context.select_all":"选择所有显示的","context.clear_ticks":"清除刻度线","context.find_duplicates":"查找重复项","context.compare":"比较所选的","context.refresh_pane":"刷新此窗格","context.refresh_both":"刷新两个窗格","context.open_folder":"打开文件夹","context.red":"红色","context.yellow":"黄色","context.green":"绿色","context.blue":"蓝色","context.purple":"紫色","sort.sort":"排序","sort.name":"名称","sort.modified":"修改日期","sort.size":"文件大小","sort.duration":"长度","sort.codec":"编解码器","sort.resolution":"分辨率","sort.type":"类型","sort.bitrate":"比特率","sort.fps":"帧率","sort.rating":"评级","sort.a_z":"从头到尾","sort.z_a":"Z 到 A","sort.oldest":"最老的在前","sort.newest":"最新的优先","sort.smallest":"最小的在前","sort.largest":"最大的在前","sort.shortest":"最短的优先","sort.longest":"最长的优先","sort.ascending":"升序","sort.descending":"降序",
-"toolbar.guide":"在任一窗格中选择文件，然后将其发送到另一个窗格。","toolbar.refresh":"刷新","toolbar.move":"移动所选项 → 另一窗格","toolbar.copy":"复制所选项 → 另一窗格","toolbar.undo":"撤销",
-"pane.left":"左窗格","pane.right":"右窗格","pane.preview":"预览","pane.info":"信息","pane.browse":"浏览…","pane.drag":"↗ 拖动所选文件","pane.show":"显示：","pane.videos":"视频","pane.images":"图像","pane.find":"查找：","pane.live":"实时","pane.subfolders":"包括子文件夹","pane.resolution":"分辨率：","pane.all":"全部","pane.select_matching":"选择匹配项","pane.more_filters":"更多筛选器…","pane.outliers":"选择大小异常项","pane.scanning":"正在扫描媒体…","pane.cancel":"取消","pane.no_files":"没有匹配的媒体文件","pane.checked":"已勾选 {count} 个","pane.clear_ticks":"清除勾选",
-"view.details":"详细信息","view.thumbnails":"缩略图","size.small":"小","size.medium":"中","size.large":"大","browse.continuous":"连续","browse.paged":"分页","browse.auto":"自动","browse.per_page":"每页：",
-"column.name":"名称 / 相对路径","column.codec":"编解码器","column.resolution":"分辨率","column.duration":"视频长度","column.size":"文件大小","column.rate":"MB/分钟","column.fps":"帧率","column.modified":"修改日期","column.type":"类型","column.bitrate":"比特率","column.audio":"音频","column.hdr":"HDR","column.pixels":"百万像素","column.color":"标签","column.tags":"标记","column.rating":"评分",
-"status.ready":"就绪","status.scanning_progress":"正在扫描第 {current} 个，共 {total} 个… · {cached} 个来自缓存","status.scan_complete_folder":"此文件夹中有 {count} 个媒体文件","status.scan_complete_subfolders":"包括子文件夹共 {count} 个媒体文件","status.unreadable":"{count} 个无法读取","status.from_cache":"{count} 个来自缓存","status.scan_cancelled":"扫描在 {count} 个文件后取消","status.skipped_file":"已跳过文件：{error}","status.scan_failed":"无法扫描：{error}",
-"common.system_default":"系统默认","common.restart_required":"需要重新启动","common.close":"关闭","common.save":"保存",
-"language.title":"语言","language.message":"语言设置已保存。请重新启动 Resolution File Manager 以在整个应用中应用。",
-"reminders.title":"提醒设置","reminders.rating":"Microsoft Store 评分提醒","reminders.support":"Buy Me a Coffee 提醒",
-"rating.title":"喜欢 Resolution File Manager 吗？","rating.body":"如果 Resolution File Manager 对您有帮助，是否愿意在 Microsoft Store 中评分？评分能帮助其他人发现它。","rating.rate":"在 Microsoft Store 中评分","rating.later":"稍后","rating.never":"不再询问",
-"support.title":"支持 Resolution File Manager","support.body":"如果本程序对您有用，欢迎请 John 喝杯咖啡。支持完全自愿。","support.open":"请我喝咖啡","support.later":"以后再说","support.never":"不再询问",
-"link.error_title":"无法打开页面","link.error_body":"请在浏览器中打开此地址：\n\n{url}\n\n{error}","help.title":"Resolution File Manager 帮助 — {version}","help.search":"搜索完整指南：","help.previous":"上一章","help.next":"下一章"},
-"literals":{"Confirm":"确认","Move {field0} to the Recycle Bin / Trash?":"将 {field0} 移至回收站/垃圾箱？","Synchronize preview":"同步预览","Queue {field0} file(s) for copying to the {field1} pane?":"将 {field0} 文件放入队列以复制到 {field1} 窗格？","Keyboard shortcuts":"键盘快捷键","Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file":"Ctrl+A 选择所有显示的内容\nCtrl+C 复制所选内容\nCtrl+X 剪切所选内容\nCtrl+V 粘贴到活动窗格\nCtrl+Z 撤消上次文件操作\n删除 将选定的文件移至回收站/垃圾箱\nF2 重命名所选文件\nF5 刷新两个窗格\nBackspace 向上一个文件夹\n,（逗号）活动预览后退 10%\n。 （句号）主动预览向前 10%\n双击打开文件","Folder not found":"找不到文件夹","This folder does not exist:\n{field0}":"该文件夹不存在：\n{field0}","Not enough videos":"视频不够多","At least two visible videos with readable durations are needed for comparison.":"至少需要两个具有可读持续时间的可见视频进行比较。","No size outliers":"无尺寸异常值","No visible video is at least {field0}× the average data rate of {field1} MB/min.":"没有可见视频的平均数据速率至少为 {field0}× {field1} MB/分钟。","Some dropped files failed":"一些删除的文件失败","Could not reveal some files":"无法透露某些文件","Select one file":"选择一个文件","Select exactly one file to rename.":"仅选择一个文件进行重命名。","Invalid filename":"文件名无效","Enter a filename without folder separators.":"输入不带文件夹分隔符的文件名。","File already exists":"文件已存在","A file named {field0} already exists.":"名为 {field0} 的文件已存在。","Nothing selected":"未选择任何内容","Select one or more files in the active pane first.":"首先在活动窗格中选择一个或多个文件。","Confirm {field0}":"确认{field0}","{field0} {field1} file(s) to:\n{field2}?":"{field0} {field1} 文件发送至：\n{field2}？","Some files failed":"部分文件失败","Finished":"完成","Successfully {field0} {field1} file(s).":"成功 {field0} {field1} 文件。","Unknown choice":"未知的选择","Use replace, skip, keep both, or newer.":"使用替换、跳过、保留两者或更新。","Batch rename":"批量重命名","Select one or more files first.":"首先选择一个或多个文件。","Batch rename complete":"批量重命名完成","Renamed {field0} file(s). Use Ctrl+Z to undo the batch.":"重命名 {field0} 文件。使用 Ctrl+Z 撤消批处理。","Nothing to retry":"没有什么可重试的","The last transfer had no failed files.":"上次传输没有失败的文件。","Transfer active":"转移活跃","Wait for the current transfer to finish before undoing.":"等待当前传输完成后再撤消。","Nothing to undo":"没有什么可撤消的","There are no recent copy, move, replacement, or rename actions.":"最近没有复制、移动、替换或重命名操作。","Undo incomplete":"撤消不完整","Undo complete":"撤消完成","The most recent file operation was undone.":"最近的文件操作已撤消。","Move to Recycle Bin":"移至回收站","Move {field0} selected file(s) to the Recycle Bin / Trash?":"将 {field0} 选定的文件移至回收站/垃圾箱？","Some files could not be removed":"某些文件无法删除","Embedded metadata":"嵌入元数据","Select exactly one image or video first.":"首先选择一个图像或视频。","Create video contact sheet":"创建视频联系表","Select exactly one video first.":"首先选择一个视频。","Similar image search":"相似图片搜索","No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).":"在公差 {field0} 下未发现视觉上相似的组。\n\n{field1} 缓存哈希； {field2} 无法读取图像。","Select two files":"选择两个文件","Select exactly two files to compare.":"仅选择两个文件进行比较。","Nothing to synchronize":"没有什么需要同步的","No selected files need copying in that direction.":"没有选定的文件需要沿该方向复制。","No workspaces":"没有工作空间","Save a workspace first.":"首先保存一个工作区。","Collection folder unavailable":"收藏夹不可用","The saved folder does not currently exist:\n{field0}":"保存的文件夹当前不存在：\n{field0}","Cache pruned":"缓存修剪","Removed {field0} stale entry/entries.":"删除了 {field0} 过时的条目。","Clear cache":"清除缓存","Clear all cached metadata? Files will be rescanned next time.":"清除所有缓存的元数据？下次将重新扫描文件。","Clear thumbnail cache":"清除缩略图缓存","Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.":"使用 {field1} 删除 {field0} 存储的缩略图？\n\n原始媒体文件和元数据不会更改。","Settings":"设置","{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.":"{field0} 性能设置、扫描选项和缩略图缓存限制已保存。缓存限制在后台强制执行。","Live updates unavailable":"无法实时更新","The folder-monitoring component is not installed.":"未安装文件夹监视组件。","Reveal many files?":"显示很多文件？","{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.":"选择 {field0} 文件。显示所有这些可能会打开大量文件管理器窗口。\n\n选择“是”显示每个选定的文件，或选择“否”仅显示第一个文件。","Rename failed":"重命名失败","Confirm batch rename":"确认批量重命名","Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.":"完全按照预览的方式重命名 {field0} 文件吗？\n\n可以使用 Ctrl+Z 撤消整个批次。","Batch rename failed":"批量重命名失败","No completed rename was kept where rollback was possible.\n\n{field0}":"在可能回滚的地方不保留已完成的重命名。\n\n{field0}","Nothing to export":"没有什么可导出的","The chosen scope contains no media files.":"所选范围不包含媒体文件。","Nothing to verify":"没有什么可验证的","Not enough images":"图片不足","The chosen scope contains fewer than two images.":"所选范围包含少于两个图像。","Could not save workspace":"无法保存工作区","Replace smart collection":"更换智能收藏","Replace the existing collection named {field0}?":"替换名为 {field0} 的现有集合？","Could not save collection":"无法保存收藏","Invalid rule":"规则无效","Enter a rule name.":"输入规则名称。","Choose a destination folder.":"选择目标文件夹。","Apply folder rules":"应用文件夹规则","Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.":"队列 {field0} 计划的复制/移动操作？\n\n现有目标将使用正常的冲突选择。移动和替换仍然不可撤销。","Delete rule":"删除规则","Delete rule '{field0}'?":"删除规则“{field0}”？","Cache cleared":"缓存已清除","Removed {field0} metadata entries and cached thumbnails.":"删除了 {field0} 元数据条目和缓存的缩略图。","Thumbnail cache":"缩略图缓存","The thumbnail cache is already empty.":"缩略图缓存已为空。","Thumbnail cache cleared":"缩略图缓存已清除","Deleted {field0} thumbnail(s) and freed {field1}.":"已删除 {field0} 缩略图并释放 {field1}。","Could not monitor folder":"无法监控文件夹","Live updates could not be enabled for:\n{field0}\n\n{field1}":"无法启用实时更新：\n{field0}\n\n{field1}","Could not open file":"无法打开文件","Frame exported":"帧导出","Metadata exported":"导出的元数据","Saved {field0} field(s).":"已保存 {field0} 字段。","Metadata unavailable":"元数据不可用","Report exported":"报告导出","Saved {field0} result(s).":"已保存 {field0} 结果。","Invalid settings":"无效设置","Use whole numbers for frames, columns, and width.":"使用整数表示框架、列和宽度。","Invalid tolerance":"无效容忍","Enter a whole number from 0 to 16.":"输入 0 到 16 之间的整数。","Replace collection":"替换集合","Replace {field0}?":"替换{field0}？","Delete smart collection":"删除智能收藏","Delete {field0}?\n\nNo media files or annotations will be changed.":"删除{field0}？\n\n不会更改任何媒体文件或注释。","Invalid rating":"无效评级","Minimum rating must be a whole number from 0 to 5.":"最低评分必须是 0 到 5 之间的整数。","Frame export failed":"帧导出失败","Could not export metadata":"无法导出元数据","Could not export report":"无法导出报告","Contact sheet complete":"联系表完整","Report export failed":"报告导出失败","Contact sheet failed":"联系表失败","Removed {field0} least-recently-used thumbnail(s).":"删除了 {field0} 最近最少使用的缩略图。"},
-"help":{"chapters":[
-{"id":"quick_start","title":"快速开始","body":"在任一窗格中选择文件夹。按需启用视频、图像和包括子文件夹。使用详细信息或缩略图，勾选文件，然后对整组执行复制、移动、分析或转换。普通高亮仍可用于浏览和预览。"},
-{"id":"browsing","title":"浏览与预览","body":"每个窗格都有独立的历史记录、筛选、排序、缩略图、信息和预览。视频默认以 4× 播放。逗号和句点可后退或前进百分之十。"},
-{"id":"organising","title":"整理与转换","body":"可复制、移动、重命名、检查重复项、设置标签和评分以及导出报告。支持使用兼容硬件加速转换为 H.264、H.265 和 AV1。源文件始终保留。"},
-{"id":"language","title":"语言","body":"首次启动时，应用会在支持的情况下使用操作系统语言。通过“工具 > 语言”可覆盖或恢复系统默认。更改后请重新启动。缺失的翻译会安全回退到英语。"},
-{"id":"reminders","title":"评分与自愿支持","body":"在至少三个日期启动五次后，应用可能邀请您评分。选择稍后会推迟十次启动。咖啡提醒从第 11 次启动开始，仅在选择以后再说后每 11 次启动再次出现。两种提醒都可禁用并重新启用。"},
-{"id":"privacy","title":"隐私与故障排除","body":"扫描、预览、元数据、提醒和文件操作均保留在本机。应用无账户、广告或分析，也不会上传媒体或启动记录。扫描较慢时可关闭未使用的预览、选择安静配置或缩小文件夹范围。"}]}}
+{
+  "meta": {
+    "language": "简体中文"
+  },
+  "strings": {
+    "app.title": "Resolution File Manager {version}",
+    "menu.file": "文件",
+    "menu.edit": "编辑",
+    "menu.view": "查看",
+    "menu.tools": "工具",
+    "menu.help": "帮助",
+    "menu.language": "语言",
+    "menu.reminders": "提醒…",
+    "menu.how_to": "Resolution File Manager 使用指南",
+    "menu.about": "关于",
+    "duplicates.title": "重复项",
+    "duplicates.none_candidates": "没有发现相同大小的重复候选者。",
+    "duplicates.quick_start": "快速检查 {count} 重复候选人...",
+    "duplicates.quick_progress": "快速检查 {total} 的重复 {current}...",
+    "duplicates.verify_progress": "验证 {current} 与 {total} 完全匹配...",
+    "duplicates.complete_title": "重复搜索完成",
+    "duplicates.none": "没有找到完全相同的重复项。",
+    "duplicates.none_status": "未找到完全相同的重复项 · {cached} 缓存的指纹",
+    "duplicates.groups_status": "{groups} 精确重复组 · {cached} 缓存指纹",
+    "duplicates.first": "第一",
+    "duplicates.newest": "最新",
+    "duplicates.oldest": "最古老的",
+    "duplicates.smallest": "最小",
+    "duplicates.largest": "最大",
+    "duplicates.review_title": "查看精确的重复项",
+    "duplicates.found": "找到 {count} 完全相同的重复组。选择一行以在同一组中的另一个副本旁边预览它。",
+    "duplicates.explanation": "精确的重复项具有相同的内容和文件大小，因此最小和最大通常会并列。日期和地点仍可能有所不同。",
+    "duplicates.preview": "预览 {number}",
+    "duplicates.select": "选择重复项",
+    "duplicates.group": "集团",
+    "duplicates.filename": "文件名",
+    "duplicates.folder": "文件夹",
+    "duplicates.size": "尺寸",
+    "duplicates.modified": "修改",
+    "duplicates.reason": "为什么可以保留",
+    "duplicates.loading": "正在加载预览...",
+    "duplicates.keep_one": "每组保留一个：",
+    "duplicates.clear": "明确的提案",
+    "duplicates.close": "关闭而不进行任何更改",
+    "duplicates.proposal_status": "重复提案：保留 {strategy} · 选择 {count} 冗余文件以供审核",
+    "duplicates.applied_title": "应用了重复提案",
+    "duplicates.applied_body": "每组中的 {strategy} 副本均保持未选中状态。\n\n在主窗格中选择 {count} 冗余文件。在移动或删除任何内容之前先查看它们。",
+    "convert.title": "转换选定的视频",
+    "convert.select_first_title": "转换视频",
+    "convert.select_first": "首先选择一个或多个视频文件。",
+    "convert.settings": "转换设置",
+    "convert.preset": "预设：",
+    "convert.quality": "质量（CRF）：",
+    "convert.resolution": "分辨率：",
+    "convert.resolution_help": "1080p 和 720p 设置输出高度，同时保留宽高比。",
+    "convert.quality_help": "较低的质量值要求较高的质量；硬件引擎将此值映射到它们自己的控制。 Remux 忽略质量和分辨率。",
+    "convert.engine": "编码引擎：",
+    "convert.hardware_decode": "如果可用，请使用硬件解码",
+    "convert.output_folder": "输出文件夹：",
+    "convert.choose_output": "选择转换输出文件夹",
+    "convert.preserve_folders": "保留相对于活动窗格的文件夹",
+    "convert.skip_existing": "跳过现有的",
+    "convert.keep_both": "两者都保留",
+    "convert.originals_retained": "始终保留原始视频。开始之前检查每个输出路径。",
+    "convert.status": "状态",
+    "convert.source": "来源",
+    "convert.output": "输出",
+    "convert.result": "结果",
+    "convert.remux_help": "Remux直接复制流；不使用编码、调整大小和硬件解码。",
+    "convert.none_reported": "没有报道",
+    "convert.cpu_fallback": "没有任何;自动将使用CPU",
+    "convert.capabilities": "FFmpeg 硬件编码器支持：{hardware} · 解码方法：{decode}",
+    "convert.capability_failed": "能力检查失败：{error} · 软件编码仍然可用",
+    "convert.choose_folder": "选择一个输出文件夹。",
+    "convert.preview_summary": "{ready} 已准备好 · {skipped} 已跳过/出现问题 · 源大小 {size}",
+    "convert.invalid_quality": "质量无效",
+    "convert.invalid_quality_body": "CRF 必须是 18 到 35 之间的整数。",
+    "convert.engine_unavailable": "编码引擎不可用",
+    "convert.engine_unavailable_body": "{engine} 不适用于 {preset}。选择另一个引擎。",
+    "convert.unchanged": "不变（流复制）",
+    "convert.decode_unused": "未使用（流复制）",
+    "convert.decode_fallback": "请求安全后备",
+    "convert.off": "关闭",
+    "convert.confirm_title": "开始视频转换",
+    "convert.confirm_body": "创建 {count} 新视频文件？\n\n编码：{engine}\n分辨率：{resolution}\n硬件解码：{decode}\n\n原始文件将被保留。取消将删除当前的部分输出并停止剩余的队列。",
+    "convert.progress": "正在转换文件 {current} 或 {total} · {percent}%",
+    "convert.complete": "完成 · {created} 创建 · {failed} 失败 · {cancelled} 取消",
+    "convert.refresh": "刷新预览",
+    "convert.start": "开始转换...",
+    "convert.cancel": "取消转换",
+    "context.configure_columns": "配置列...",
+    "context.reset_columns": "重置列宽",
+    "context.files_suffix": " （{count} 个文件）",
+    "status.cancelling": "正在取消扫描...",
+    "status.live_on": "实时更新",
+    "status.live_off": "实时更新已关闭",
+    "status.loading": "加载中...",
+    "outlier.moderate": "中等（1.4×）",
+    "outlier.large": "大 (1.75×)",
+    "outlier.extreme": "极限 (2.5×)",
+    "inspector.title": "督察",
+    "inspector.no_file": "未选择文件",
+    "inspector.select_file": "选择一个媒体文件以查看其详细信息。",
+    "inspector.copy_path": "复制路径",
+    "inspector.open": "打开",
+    "inspector.reveal": "揭示",
+    "preview.off": "预览关闭",
+    "preview.is_off": "预览已关闭",
+    "preview.select": "选择要预览的文件",
+    "preview.select_side": "选择这一侧的图像或视频",
+    "preview.play": "玩",
+    "preview.pause": "暂停",
+    "preview.skim": "略读：",
+    "preview.speed": "速度：",
+    "preview.muted": "静音",
+    "preview.unmuted": "声音打开",
+    "preview.still": "静止图像",
+    "preview.unavailable": "预览不可用",
+    "preview.read_failed": "无法读取帧",
+    "browse.page_summary": "第 {page} 页，共 {pages} · {count} 个文件{automatic}",
+    "browse.auto_suffix": " · 自动 {count}/页",
+    "browse.continuous_summary": "{count} 个文件 · {mode} · 仅限可见卡",
+    "browse.all_shown": "全部显示",
+    "status.folder_missing": "找不到文件夹",
+    "status.select_files": "首先在活动窗格中选择一个或多个文件。",
+    "status.finished": "完成",
+    "status.error": "错误",
+    "menu.browse": "浏览活动窗格...",
+    "menu.refresh": "刷新",
+    "menu.exit": "退出",
+    "menu.copy": "复制",
+    "menu.cut": "切",
+    "menu.paste": "粘贴",
+    "menu.undo": "撤消",
+    "menu.rename": "重命名...",
+    "menu.batch_rename": "批量重命名所选...",
+    "menu.delete": "移至回收站/垃圾箱",
+    "menu.select_all": "选择所有显示的",
+    "menu.details": "活动窗格中的详细信息",
+    "menu.thumbnails": "活动窗格中的缩略图",
+    "menu.thumbnail_size": "缩略图尺寸",
+    "menu.columns": "配置列...",
+    "menu.appearance": "外观和文字大小...",
+    "menu.refresh_active": "刷新活动窗格",
+    "menu.refresh_both": "刷新两个窗格",
+    "menu.go_up": "上去",
+    "menu.verify": "验证介质完整性...",
+    "menu.contact_sheet": "创建视频联系表...",
+    "menu.export_report": "出口媒体报道...",
+    "menu.metadata": "查看嵌入的元数据...",
+    "menu.convert": "转换选定的视频...",
+    "menu.duplicates": "查找重复项...",
+    "menu.similar": "查找视觉上相似的图像...",
+    "menu.compare": "比较所选...",
+    "menu.sync": "比较/同步文件夹...",
+    "menu.save_workspace": "保存工作区...",
+    "menu.load_workspace": "加载工作区...",
+    "menu.save_collection": "保存活动的智能收藏...",
+    "menu.manage_collections": "管理智能馆藏...",
+    "menu.folder_rules": "文件夹组织规则...",
+    "menu.cache": "缓存和扫描...",
+    "menu.queue": "传输队列...",
+    "menu.shortcuts": "键盘快捷键",
+    "menu.coffee": "☕ 如果你喜欢这个，请给约翰买杯咖啡……",
+    "context.copy_other": "复制到其他窗格",
+    "context.move_other": "移至其他窗格",
+    "context.open": "打开",
+    "context.reveal": "在文件资源管理器中显示",
+    "context.rename": "重命名...",
+    "context.clear_rating": "明确评级",
+    "context.rating": "评级",
+    "context.none": "无",
+    "context.colour": "彩色标签",
+    "context.edit_tags": "编辑标签...",
+    "context.recycle": "移至回收站",
+    "context.select_all": "选择所有显示的",
+    "context.clear_ticks": "清除刻度线",
+    "context.find_duplicates": "查找重复项",
+    "context.compare": "比较所选的",
+    "context.refresh_pane": "刷新此窗格",
+    "context.refresh_both": "刷新两个窗格",
+    "context.open_folder": "打开文件夹",
+    "context.red": "红色",
+    "context.yellow": "黄色",
+    "context.green": "绿色",
+    "context.blue": "蓝色",
+    "context.purple": "紫色",
+    "sort.sort": "排序",
+    "sort.name": "名称",
+    "sort.modified": "修改日期",
+    "sort.size": "文件大小",
+    "sort.duration": "长度",
+    "sort.codec": "编解码器",
+    "sort.resolution": "分辨率",
+    "sort.type": "类型",
+    "sort.bitrate": "比特率",
+    "sort.fps": "帧率",
+    "sort.rating": "评级",
+    "sort.a_z": "从头到尾",
+    "sort.z_a": "Z 到 A",
+    "sort.oldest": "最老的在前",
+    "sort.newest": "最新的优先",
+    "sort.smallest": "最小的在前",
+    "sort.largest": "最大的在前",
+    "sort.shortest": "最短的优先",
+    "sort.longest": "最长的优先",
+    "sort.ascending": "升序",
+    "sort.descending": "降序",
+    "toolbar.guide": "在任一窗格中选择文件，然后将其发送到另一个窗格。",
+    "toolbar.refresh": "刷新",
+    "toolbar.move": "移动所选项 → 另一窗格",
+    "toolbar.copy": "复制所选项 → 另一窗格",
+    "toolbar.undo": "撤销",
+    "pane.left": "左窗格",
+    "pane.right": "右窗格",
+    "pane.preview": "预览",
+    "pane.info": "信息",
+    "pane.browse": "浏览…",
+    "pane.drag": "↗ 拖动所选文件",
+    "pane.show": "显示：",
+    "pane.videos": "视频",
+    "pane.images": "图像",
+    "pane.find": "查找：",
+    "pane.live": "实时",
+    "pane.subfolders": "包括子文件夹",
+    "pane.resolution": "分辨率：",
+    "pane.all": "全部",
+    "pane.select_matching": "选择匹配项",
+    "pane.more_filters": "更多筛选器…",
+    "pane.outliers": "选择大小异常项",
+    "pane.scanning": "正在扫描媒体…",
+    "pane.cancel": "取消",
+    "pane.no_files": "没有匹配的媒体文件",
+    "pane.checked": "已勾选 {count} 个",
+    "pane.clear_ticks": "清除勾选",
+    "view.details": "详细信息",
+    "view.thumbnails": "缩略图",
+    "size.small": "小",
+    "size.medium": "中",
+    "size.large": "大",
+    "browse.continuous": "连续",
+    "browse.paged": "分页",
+    "browse.auto": "自动",
+    "browse.per_page": "每页：",
+    "column.name": "名称 / 相对路径",
+    "column.codec": "编解码器",
+    "column.resolution": "分辨率",
+    "column.duration": "视频长度",
+    "column.size": "文件大小",
+    "column.rate": "MB/分钟",
+    "column.fps": "帧率",
+    "column.modified": "修改日期",
+    "column.type": "类型",
+    "column.bitrate": "比特率",
+    "column.audio": "音频",
+    "column.hdr": "HDR",
+    "column.pixels": "百万像素",
+    "column.color": "标签",
+    "column.tags": "标记",
+    "column.rating": "评分",
+    "status.ready": "就绪",
+    "status.scanning_progress": "正在扫描第 {current} 个，共 {total} 个… · {cached} 个来自缓存",
+    "status.scan_complete_folder": "此文件夹中有 {count} 个媒体文件",
+    "status.scan_complete_subfolders": "包括子文件夹共 {count} 个媒体文件",
+    "status.unreadable": "{count} 个无法读取",
+    "status.from_cache": "{count} 个来自缓存",
+    "status.scan_cancelled": "扫描在 {count} 个文件后取消",
+    "status.skipped_file": "已跳过文件：{error}",
+    "status.scan_failed": "无法扫描：{error}",
+    "common.system_default": "系统默认",
+    "common.restart_required": "需要重新启动",
+    "common.close": "关闭",
+    "common.save": "保存",
+    "language.title": "语言",
+    "language.message": "语言设置已保存。请重新启动 Resolution File Manager 以在整个应用中应用。",
+    "reminders.title": "提醒设置",
+    "reminders.rating": "Microsoft Store 评分提醒",
+    "reminders.support": "Buy Me a Coffee 提醒",
+    "rating.title": "喜欢 Resolution File Manager 吗？",
+    "rating.body": "如果 Resolution File Manager 对您有帮助，是否愿意在 Microsoft Store 中评分？评分能帮助其他人发现它。",
+    "rating.rate": "在 Microsoft Store 中评分",
+    "rating.later": "稍后",
+    "rating.never": "不再询问",
+    "support.title": "支持 Resolution File Manager",
+    "support.body": "如果本程序对您有用，欢迎请 John 喝杯咖啡。支持完全自愿。",
+    "support.open": "请我喝咖啡",
+    "support.later": "以后再说",
+    "support.never": "不再询问",
+    "link.error_title": "无法打开页面",
+    "link.error_body": "请在浏览器中打开此地址：\n\n{url}\n\n{error}",
+    "help.title": "Resolution File Manager 帮助 — {version}",
+    "help.search": "搜索完整指南：",
+    "help.previous": "上一章",
+    "help.next": "下一章",
+    "filters.title": "高级筛选",
+    "filters.orientation": "方向",
+    "filters.codec": "编解码器包含",
+    "filters.tag": "标签包含",
+    "filters.min_rating": "最低评分",
+    "filters.color": "颜色标签",
+    "filters.min_width": "最小宽度（像素）",
+    "filters.max_width": "最大宽度（像素）",
+    "filters.min_height": "最小高度（像素）",
+    "filters.max_height": "最大高度（像素）",
+    "filters.min_size": "最小大小（MB）",
+    "filters.max_size": "最大大小（MB）",
+    "filters.min_duration": "最短时长（秒）",
+    "filters.max_duration": "最长时长（秒）",
+    "filters.date_from": "修改日期起（YYYY-MM-DD）",
+    "filters.date_to": "修改日期止（YYYY-MM-DD）",
+    "filters.any": "任意",
+    "filters.landscape": "横向",
+    "filters.portrait": "纵向",
+    "filters.square": "正方形",
+    "filters.unlabelled": "无标签",
+    "filters.clear": "清除",
+    "filters.apply": "应用",
+    "filters.rating_1": "1",
+    "filters.rating_2": "2",
+    "filters.rating_3": "3",
+    "filters.rating_4": "4",
+    "filters.rating_5": "5",
+    "convert.preset_h264": "H.264 MP4（兼容）",
+    "convert.preset_h265": "H.265 MP4（更小）",
+    "convert.preset_av1": "AV1 MKV（最小）",
+    "convert.preset_proxy": "720p H.264 代理",
+    "convert.preset_remux": "重新封装为 MKV（不重新编码）",
+    "convert.resolution_source": "保持源分辨率",
+    "convert.resolution_1080p": "1080p",
+    "convert.resolution_720p": "720p",
+    "convert.engine_automatic": "自动（推荐）",
+    "convert.engine_software": "软件 / CPU",
+    "convert.status_ready": "就绪",
+    "convert.status_skipped": "已跳过",
+    "convert.status_unknown_resolution": "未知分辨率",
+    "convert.status_converting": "正在转换",
+    "convert.status_passed": "已完成",
+    "convert.status_cancelled": "已取消",
+    "convert.status_failed": "失败",
+    "choice.system": "系统",
+    "choice.light": "浅色",
+    "choice.dark": "深色",
+    "choice.high_contrast": "高对比度",
+    "choice.selected": "已选择",
+    "choice.visible": "可见",
+    "choice.all_scanned": "全部已扫描",
+    "choice.copy": "复制",
+    "choice.move": "移动",
+    "choice.any": "任意",
+    "choice.images": "图像",
+    "choice.videos": "视频",
+    "choice.quiet": "安静",
+    "choice.balanced": "均衡",
+    "choice.fast": "快速",
+    "common.ok": "确定",
+    "common.cancel": "取消",
+    "common.enable": "启用",
+    "common.disable": "禁用",
+    "common.never": "从不",
+    "common.launch": "启动 {count}",
+    "reminders.next": "下一个可用: {value}",
+    "reminders.saved": "提醒设置已保存。",
+    "about.title": "关于分辨率文件管理器",
+    "about.description": "一个跨平台的双窗格应用程序，用于浏览、预览、分析和整理图像及视频收藏。",
+    "about.support": "支持开发",
+    "about.optional": "如果 Resolution 文件管理器对您有帮助，您可以请 John 喝咖啡。支持完全是自愿的。",
+    "help.next_match": "下一个匹配项 (F3)",
+    "help.clear": "清除搜索",
+    "help.no_results": "无结果",
+    "help.no_results_body": "没有帮助章节包含“{query}”。尝试使用更短的词。",
+    "convert.status_duplicate_output": "输出文件名重复",
+    "convert.status_same_source": "与源文件相同",
+    "inspector.channels": "{count} 通道",
+    "inspector.pixel_format": "像素格式",
+    "inspector.dynamic_range": "动态范围",
+    "inspector.unknown": "未知",
+    "inspector.unrated": "未评级",
+    "inspector.unreadable": "无法阅读"
+  },
+  "help": {
+    "schema": 2,
+    "master_sha256": "bd7b7615b744101897e361e188e64bd95e7d6173d11a1121a797d9d8cf6df279",
+    "direction": "ltr",
+    "translation_method": "machine translation with existing UI glossary; human linguistic review pending",
+    "chapters": [
+      {
+        "id": "quick_start",
+        "title": "快速 开始",
+        "paragraphs": [
+          {
+            "id": "quick_start.p001",
+            "source_sha256": "960121a7b5ea76c266026469e9fb06e35da0a7256799d3736a5fffadc23a744a",
+            "text": "1. 使用浏览、文件夹树或路径框在每个窗格中独立选择一个文件夹。\n2. 仅当您想要扫描该文件夹下的完整树时才打开 包括子文件夹。\n3. 使用 详细信息 进行可排序的技术信息或使用 缩略图 进行可视化浏览。\n4. 在一个窗格中选择文件。复制和移动使用另一个窗格中显示的文件夹作为目标。\n5. 仅在需要的窗格中打开 预览 或信息。两者默认关闭以节省处理能力。\n6. 文件更改操作在适当的情况下显示确认或预览。 删除 使用回收站/垃圾箱，并且 Ctrl+Z 反转支持的最近操作。"
+          },
+          {
+            "id": "quick_start.p002",
+            "source_sha256": "e826944984faca1d9ef2ae01fac89df96998673ffbcb18c1a6dc76906714d5f9",
+            "text": "左边的章节解释了程序的每个部分。在“搜索所有章节”中输入任意单词或短语，然后按 Enter。匹配的章节和匹配的数量出现在内容列表中；使用下一个匹配单步执行每个突出显示的匹配项。"
+          },
+          {
+            "id": "quick_start.p003",
+            "source_sha256": "939c9b2348d95e362c7a750296c26c65e72efb3c8fd71071cf751214de3accaf",
+            "text": "在任一窗格中选择一个文件夹。根据需要 启用 视频、图像 和 包括子文件夹。使用 详细信息 或 缩略图，选择或勾选文件，预览它们，然后复制、移动、分析或转换它们。勾选的文件构成操作组；突出显示仍然可用于浏览和预览。"
+          }
+        ],
+        "body": "1. 使用浏览、文件夹树或路径框在每个窗格中独立选择一个文件夹。\n2. 仅当您想要扫描该文件夹下的完整树时才打开 包括子文件夹。\n3. 使用 详细信息 进行可排序的技术信息或使用 缩略图 进行可视化浏览。\n4. 在一个窗格中选择文件。复制和移动使用另一个窗格中显示的文件夹作为目标。\n5. 仅在需要的窗格中打开 预览 或信息。两者默认关闭以节省处理能力。\n6. 文件更改操作在适当的情况下显示确认或预览。 删除 使用回收站/垃圾箱，并且 Ctrl+Z 反转支持的最近操作。\n\n左边的章节解释了程序的每个部分。在“搜索所有章节”中输入任意单词或短语，然后按 Enter。匹配的章节和匹配的数量出现在内容列表中；使用下一个匹配单步执行每个突出显示的匹配项。\n\n在任一窗格中选择一个文件夹。根据需要 启用 视频、图像 和 包括子文件夹。使用 详细信息 或 缩略图，选择或勾选文件，预览它们，然后复制、移动、分析或转换它们。勾选的文件构成操作组；突出显示仍然可用于浏览和预览。"
+      },
+      {
+        "id": "topic_index",
+        "title": "主题索引和章节链接",
+        "paragraphs": [
+          {
+            "id": "topic_index.quick_start",
+            "source_sha256": "b69a25b79b167c5a7e40d38d5814f094716600a942de0f3ec6218b07b27489ca",
+            "text": "快速 开始 — [chapter:quick_start]"
+          },
+          {
+            "id": "topic_index.getting_started",
+            "source_sha256": "9ac44a658d4ae090bae2481dfb1b5e9df78322e4632b50bacb4e99ccb098f22e",
+            "text": "获取 开始ed — [chapter:getting_started]"
+          },
+          {
+            "id": "topic_index.details_and_thumbnails",
+            "source_sha256": "84d1aca1a733a359aa903a64b7b96947cc10eba572194f604180ee279e080f20",
+            "text": "详细信息 和 缩略图 — [chapter:details_and_thumbnails]"
+          },
+          {
+            "id": "topic_index.scanning_and_filtering",
+            "source_sha256": "addcb00612695126e1840e75947c51d82d93657985581b6946e2e9058895aa52",
+            "text": "扫描和过滤 — [chapter:scanning_and_filtering]"
+          },
+          {
+            "id": "topic_index.selecting_and_previewing",
+            "source_sha256": "dcaa1afa4caf83d3fb5359c1d384469e2f0bb809a48dcce645893f93a174d545",
+            "text": "选择并 预览ing — [chapter:selecting_and_previewing]"
+          },
+          {
+            "id": "topic_index.copying_and_moving",
+            "source_sha256": "d439134119d88ce4d1728bbf520f1855578ba9e0e85bbaf480a60a626344f26c",
+            "text": "复制和移动 — [chapter:copying_and_moving]"
+          },
+          {
+            "id": "topic_index.smart_collections",
+            "source_sha256": "497f5371f88656a6629fdab4f4a433d4d9f4bc360680765c65bac19426e50cad",
+            "text": "智能收藏：已保存的搜索 — [chapter:smart_collections]"
+          },
+          {
+            "id": "topic_index.duplicates_and_comparison",
+            "source_sha256": "bc7a386de1f53414fd714586f4309ed4082731697a1928637001ad61f6b93657",
+            "text": "重复项 和比较 — [chapter:duplicates_and_comparison]"
+          },
+          {
+            "id": "topic_index.video_conversion",
+            "source_sha256": "87541c8126b7efe82872889b78979b23a37056c7a88de8c8847df6a8d172d292",
+            "text": "视频转换 - [chapter:video_conversion]"
+          },
+          {
+            "id": "topic_index.media_reports",
+            "source_sha256": "88f5be9c7f544bd30958395250596ef1e6d7269236323741b0d581860c896994",
+            "text": "导出媒体报告 ÔÇö [chapter:media_reports]"
+          },
+          {
+            "id": "topic_index.embedded_metadata",
+            "source_sha256": "c43d4127a8b410091566783a394e9819305712159510d96c02ddbb7ee7bc0352",
+            "text": "查看嵌入的元数据 ÔÇö [chapter:embedded_metadata]"
+          },
+          {
+            "id": "topic_index.media_integrity",
+            "source_sha256": "a9696b3a52d78f01ec30371ab6e369b1b794257eada141cd26b7fcbc28def24e",
+            "text": "正在检查媒体完整性 – [chapter:media_integrity]"
+          },
+          {
+            "id": "topic_index.video_contact_sheets",
+            "source_sha256": "d8c3d3d7bfb6f6240bd2dff740e17dea7096558eed8132d688fce5b8a7d38f73",
+            "text": "创建视频联系表 ÔÇö [chapter:video_contact_sheets]"
+          },
+          {
+            "id": "topic_index.folder_synchronization",
+            "source_sha256": "c5ffb5dcb3df4777df924d496bf92af4c0c309f7dc6571a8f95f2c8efb528e08",
+            "text": "文件夹 同步 — [chapter:folder_synchronization]"
+          },
+          {
+            "id": "topic_index.folder_organization_rules",
+            "source_sha256": "1306acd5de57ef19675cac113a607091b30225a064b0b38a632584586670cbad",
+            "text": "文件夹 组织规则 – [chapter:folder_organization_rules]"
+          },
+          {
+            "id": "topic_index.transfer_queue",
+            "source_sha256": "6c218104ba617d50d4666bcf2e5e70b9635d64f83ea5e74719da6042dc1c5851",
+            "text": "管理传输队列 ÔÇö [chapter:transfer_queue]"
+          },
+          {
+            "id": "topic_index.safe_file_actions",
+            "source_sha256": "5ddc3613ad7b87ccfee060d77a71fadb05a457f0de7ac987a4405385b7803b59",
+            "text": "安全文件操作 — [chapter:safe_file_actions]"
+          },
+          {
+            "id": "topic_index.workspaces_and_cache",
+            "source_sha256": "9bedfb9cdb5f7f673cb6f702accaf18c7be93438596d081884e6616cbb751195",
+            "text": "工作区和缓存 — [chapter:workspaces_and_cache]"
+          },
+          {
+            "id": "topic_index.language",
+            "source_sha256": "57d2d6a2b519f2d4a908f2c480625bc9d06f02a72c79d74aae29f6de3818a779",
+            "text": "语言 — [chapter:language]"
+          },
+          {
+            "id": "topic_index.glossary",
+            "source_sha256": "c7a062c88b48c29ae512bf610ce2700dd67290004652c38e6af6dce5c9f29f8b",
+            "text": "术语表 — [chapter:glossary]"
+          },
+          {
+            "id": "topic_index.support_the_project",
+            "source_sha256": "01ccc57e26166b3a3a356d1ef2192f8c832175b4c003038bb1692f5f94473ebe",
+            "text": "支持项目 — [chapter:support_the_project]"
+          }
+        ],
+        "body": "快速 开始 — [chapter:quick_start]\n\n获取 开始ed — [chapter:getting_started]\n\n详细信息 和 缩略图 — [chapter:details_and_thumbnails]\n\n扫描和过滤 — [chapter:scanning_and_filtering]\n\n选择并 预览ing — [chapter:selecting_and_previewing]\n\n复制和移动 — [chapter:copying_and_moving]\n\n智能收藏：已保存的搜索 — [chapter:smart_collections]\n\n重复项 和比较 — [chapter:duplicates_and_comparison]\n\n视频转换 - [chapter:video_conversion]\n\n导出媒体报告 ÔÇö [chapter:media_reports]\n\n查看嵌入的元数据 ÔÇö [chapter:embedded_metadata]\n\n正在检查媒体完整性 – [chapter:media_integrity]\n\n创建视频联系表 ÔÇö [chapter:video_contact_sheets]\n\n文件夹 同步 — [chapter:folder_synchronization]\n\n文件夹 组织规则 – [chapter:folder_organization_rules]\n\n管理传输队列 ÔÇö [chapter:transfer_queue]\n\n安全文件操作 — [chapter:safe_file_actions]\n\n工作区和缓存 — [chapter:workspaces_and_cache]\n\n语言 — [chapter:language]\n\n术语表 — [chapter:glossary]\n\n支持项目 — [chapter:support_the_project]"
+      },
+      {
+        "id": "getting_started",
+        "title": "获取 开始ed",
+        "paragraphs": [
+          {
+            "id": "getting_started.p001",
+            "source_sha256": "5f188741bf38dafbb6803c0d32c5c55281c418b27b6b6204c2b4b9470484371b",
+            "text": "窗口的每一面都是一个独立的文件夹浏览器。使用浏览、文件夹树、路径框或向上选择文件夹。在窗格内部单击以将其激活。"
+          },
+          {
+            "id": "getting_started.p002",
+            "source_sha256": "5c862d90858ec952be55c182a8161ba52748f10b89bab70f8f5f595c38c95370",
+            "text": "查看 > 外观和文字大小 提供 系统、浅色、深色 和 高对比度 主题以及 100%、125%、150%、175% 和 200% 界面缩放。立即更改整个现有控件的预览。保存保留以后启动的选择，取消或关闭窗口恢复之前的设置，恢复系统默认返回100%操作系统主题。这些设置仅更改演示文稿，而不会更改媒体或库数据。"
+          },
+          {
+            "id": "getting_started.p003",
+            "source_sha256": "716b38f3fc587aa8c148a51715d481a35d5c135e6211016faa710ce34b4bf55a",
+            "text": "每个窗格都有自己紧凑的资源管理器式导航条：← 返回，→ 前进，↑ 打开父文件夹，↻ 刷新 显示文件夹树和当前扫描。返回后打开另一个文件夹会从该点开始新的转发历史记录。"
+          },
+          {
+            "id": "getting_started.p004",
+            "source_sha256": "b34bc532ebe9785101efd80988074ed03a0c0fbf0e349d6133d31620e8a8ad3f",
+            "text": "文件夹树始终遵循窗格的当前位置：它展开父文件夹，选择确切的扫描起始文件夹，并将该文件夹滚动到视图中。当前文件夹将保持关闭状态，直到您将其展开，从而防止显示临时的“正在加载”占位符。恢复工作区或键入路径后也会发生这种情况，因此在扫描更深的文件夹时驱动器根不会突出显示。 包括子文件夹 从该窗格中显示的选定/当前文件夹开始，而不是从其上方的驱动器根目录开始。"
+          },
+          {
+            "id": "getting_started.p005",
+            "source_sha256": "90fbbedebb973bad42d26e8534c1fdab61604a30d9ead7a4ce4c88ea2cc4012a",
+            "text": "每个窗格都有独立的后退、前进、向上和 刷新 控件、过滤器、排序、缩略图、信息和 预览。视频预览以 4 倍速开始。逗号和句号向后或向前移动百分之十。 预览 和 信息 保持关闭状态，直到启用以减少后台工作。"
+          },
+          {
+            "id": "getting_started.tree_alignment_1272",
+            "source_sha256": "04feb6a3e71761ee4884be7564bb8832204338d93939bf1fdd67aa20f7e62380",
+            "text": "文件夹树会自动对当前可见的分支进行对齐，以避免浪费的缩进。当你向下滚动到更深的分支时，它会水平移动；向上滚动回到上级分支时，会将其移回左侧，无需点击。完整的层级结构仍然可用，树下的水平滚动条允许手动水平查看。"
+          }
+        ],
+        "body": "窗口的每一面都是一个独立的文件夹浏览器。使用浏览、文件夹树、路径框或向上选择文件夹。在窗格内部单击以将其激活。\n\n查看 > 外观和文字大小 提供 系统、浅色、深色 和 高对比度 主题以及 100%、125%、150%、175% 和 200% 界面缩放。立即更改整个现有控件的预览。保存保留以后启动的选择，取消或关闭窗口恢复之前的设置，恢复系统默认返回100%操作系统主题。这些设置仅更改演示文稿，而不会更改媒体或库数据。\n\n每个窗格都有自己紧凑的资源管理器式导航条：← 返回，→ 前进，↑ 打开父文件夹，↻ 刷新 显示文件夹树和当前扫描。返回后打开另一个文件夹会从该点开始新的转发历史记录。\n\n文件夹树始终遵循窗格的当前位置：它展开父文件夹，选择确切的扫描起始文件夹，并将该文件夹滚动到视图中。当前文件夹将保持关闭状态，直到您将其展开，从而防止显示临时的“正在加载”占位符。恢复工作区或键入路径后也会发生这种情况，因此在扫描更深的文件夹时驱动器根不会突出显示。 包括子文件夹 从该窗格中显示的选定/当前文件夹开始，而不是从其上方的驱动器根目录开始。\n\n每个窗格都有独立的后退、前进、向上和 刷新 控件、过滤器、排序、缩略图、信息和 预览。视频预览以 4 倍速开始。逗号和句号向后或向前移动百分之十。 预览 和 信息 保持关闭状态，直到启用以减少后台工作。\n\n文件夹树会自动对当前可见的分支进行对齐，以避免浪费的缩进。当你向下滚动到更深的分支时，它会水平移动；向上滚动回到上级分支时，会将其移回左侧，无需点击。完整的层级结构仍然可用，树下的水平滚动条允许手动水平查看。"
+      },
+      {
+        "id": "details_and_thumbnails",
+        "title": "详细信息 和 缩略图",
+        "paragraphs": [
+          {
+            "id": "details_and_thumbnails.p001",
+            "source_sha256": "0d7fe0d7d10b204c166baf479099c908e17fbe87952b9f9f35dd9cf1de776edb",
+            "text": "使用任一窗格顶部的视图选择器，或使用“视图”菜单，在该窗格之间切换详细信息和缩略图. 两种视图都显示相同的文件并共享它们的选择。缩略图模式遵循 包括子文件夹、媒体切换、搜索、分辨率、高级筛选和排序。其排序菜单提供按名称的确切方向（A-ÔÇôZ/Z-ÔÇôA）,修改日期（最旧/最新），文件大小, 长度, 编解码器, 分辨率，类型，比特率, 帧率，和评级每个窗格独立排序，按钮显示当前的排序顺序，保存的工作区和智能集合会恢复这一排序。详细信息标题保持可点击以便快速排序。相对路径在递归扫描期间，s 会出现在缩略图下方。使用视图选择器旁边的缩略图大小滑块。命名的大小预设仍然位于“视图 >”下。缩略图尺寸. 连续是默认的缩略图浏览器：一个滚动条覆盖整个过滤后的集合，而程序只创建可见的卡片加上一个小缓冲区，并在滚动过程中回收它们。这可以在非常大的库中保持小部件和图像内存的有限使用。选择分页随时在它旁边恢复已建立的页面网格；选择每页自动、200、500 或 1,000 张卡片，并使用紧凑的 ÔåÉ 和 ÔåÆ 控件。当视频占过滤结果的一半以上时，自动使用 200 张卡片，当图片为大多数时使用 500 张卡片。每个窗格和已保存的工作区都会记住其浏览器选择。"
+          },
+          {
+            "id": "details_and_thumbnails.p002",
+            "source_sha256": "f88d676b4ba78ef8e5f3064d34755f67ce646a0965745c31f8a74570a37bd2d4",
+            "text": "缩略图网格在首次渲染之前测量实际的浏览器宽度，并在调整窗格或文件夹/浏览器分隔线大小时自动重排。因此，在 分页 模式下，对于给定的窗格宽度和缩略图大小，第 1 页使用与后续页面相同的列数。在 连续 模式下，调整大小会重新计算虚拟行，而不构建整个集合。在缩略图窗格上的任意位置滚动鼠标滚轮（包括在卡片、图像或文件名上）可上下滚动该窗格；两个窗格独立滚动。"
+          },
+          {
+            "id": "details_and_thumbnails.p003",
+            "source_sha256": "878f1f9405d3cda5132d953b07e64ce5639125896f32cdb19341e4c2156fd898",
+            "text": "详细信息模式下，默认顺序为Name、编解码器、分辨率、视频长度、文件大小、MB/分钟、FPS、修改日期、类型、 比特率、音频、HDR、百万像素、标签、标签和 评级。拖动标题之间的分隔线可以任意调整列的大小；当分隔线准备就绪时，会显示水平调整大小光标。拖动标题本身即可对其重新排序 - 无需键盘修饰符。简单的标题点击仍然可以排序。列保持其选择的宽度，水平滚动条到达窗格外的字段。要精确控制，请选择“视图”>“配置列”或右键单击标题；列窗口可以移动字段、设置精确宽度以及恢复默认值。现有的个人排列和保存的列顺序将被保留。长递归路径在中间被缩短，因此文件名仍然可见。"
+          },
+          {
+            "id": "details_and_thumbnails.p004",
+            "source_sha256": "88415a6236cebbf0ce6211ef333a7271672023a2bdae6ccdc38584b6cce810d6",
+            "text": "视频缩略图以 15% 的比例采样到剪辑中，以避免出现不具有代表性的开场帧。如果持续时间元数据不可用，应用程序将使用一秒回退。生成的缩略图会被缓存，以便更快地重复浏览。"
+          },
+          {
+            "id": "details_and_thumbnails.p005",
+            "source_sha256": "7a726d60e44b6a6ccdb5c196cf1f81af226094ce2b8f43f72c1bf065feb34ad5",
+            "text": "普通图像缩略图可通过 Pillow 进行高效解码； FFmpeg 用于视频帧并作为不常见图像格式的后备。缩略图解码使用小型工作池，因此大型文件夹无法启动过多的解码器。缓存图像以原子方式写入并在显示前进行检查；不完整或损坏的缓存缩略图将被忽略并重新生成，而属于旧网格的结果将被安全丢弃。"
+          },
+          {
+            "id": "details_and_thumbnails.p006",
+            "source_sha256": "ea382833a32b1bb5c8dac172f29751f48d27aead08969ef699cca6142fddc69f",
+            "text": "生成的缩略图在程序关闭后仍然可用，因此重新访问未更改的文件通常会立即使用其缓存的图像。 工具 > 缓存与扫描 以操作系统驱动器的百分比形式控制最大缩略图缓存大小；默认值为 1%。重复使用的缩略图被标记为最近的，并且当超过限制时，首先删除最近最少使用的条目。该限制可以设置为 0.1% 到 10% 并立即强制执行。 清除缩略图 在确认前报告当前数量和大小，然后仅删除生成的缩略图，而不删除原始媒体或缓存的技术元数据。 清除所有缓存 删除缩略图和元数据。"
+          },
+          {
+            "id": "details_and_thumbnails.size_slider_1272",
+            "source_sha256": "f73fba2585edabe7710a59372a59bce3e3509092c20423aeed2583c4bc430100",
+            "text": "缩略图大小滑块仅出现在 缩略图 中；详细信息 将其隐藏。移动滑块会连续调整缩略图大小，切换视图时会保留其设置。暂停 在拖动后会短暂刷新网格；较大的图像保持其纵横比，并且当前大小会随窗格设置保存。在“查看”菜单中仍可使用命名大小预设；窗格标题中没有重复的大小下拉菜单。"
+          }
+        ],
+        "body": "使用任一窗格顶部的视图选择器，或使用“视图”菜单，在该窗格之间切换详细信息和缩略图. 两种视图都显示相同的文件并共享它们的选择。缩略图模式遵循 包括子文件夹、媒体切换、搜索、分辨率、高级筛选和排序。其排序菜单提供按名称的确切方向（A-ÔÇôZ/Z-ÔÇôA）,修改日期（最旧/最新），文件大小, 长度, 编解码器, 分辨率，类型，比特率, 帧率，和评级每个窗格独立排序，按钮显示当前的排序顺序，保存的工作区和智能集合会恢复这一排序。详细信息标题保持可点击以便快速排序。相对路径在递归扫描期间，s 会出现在缩略图下方。使用视图选择器旁边的缩略图大小滑块。命名的大小预设仍然位于“视图 >”下。缩略图尺寸. 连续是默认的缩略图浏览器：一个滚动条覆盖整个过滤后的集合，而程序只创建可见的卡片加上一个小缓冲区，并在滚动过程中回收它们。这可以在非常大的库中保持小部件和图像内存的有限使用。选择分页随时在它旁边恢复已建立的页面网格；选择每页自动、200、500 或 1,000 张卡片，并使用紧凑的 ÔåÉ 和 ÔåÆ 控件。当视频占过滤结果的一半以上时，自动使用 200 张卡片，当图片为大多数时使用 500 张卡片。每个窗格和已保存的工作区都会记住其浏览器选择。\n\n缩略图网格在首次渲染之前测量实际的浏览器宽度，并在调整窗格或文件夹/浏览器分隔线大小时自动重排。因此，在 分页 模式下，对于给定的窗格宽度和缩略图大小，第 1 页使用与后续页面相同的列数。在 连续 模式下，调整大小会重新计算虚拟行，而不构建整个集合。在缩略图窗格上的任意位置滚动鼠标滚轮（包括在卡片、图像或文件名上）可上下滚动该窗格；两个窗格独立滚动。\n\n详细信息模式下，默认顺序为Name、编解码器、分辨率、视频长度、文件大小、MB/分钟、FPS、修改日期、类型、 比特率、音频、HDR、百万像素、标签、标签和 评级。拖动标题之间的分隔线可以任意调整列的大小；当分隔线准备就绪时，会显示水平调整大小光标。拖动标题本身即可对其重新排序 - 无需键盘修饰符。简单的标题点击仍然可以排序。列保持其选择的宽度，水平滚动条到达窗格外的字段。要精确控制，请选择“视图”>“配置列”或右键单击标题；列窗口可以移动字段、设置精确宽度以及恢复默认值。现有的个人排列和保存的列顺序将被保留。长递归路径在中间被缩短，因此文件名仍然可见。\n\n视频缩略图以 15% 的比例采样到剪辑中，以避免出现不具有代表性的开场帧。如果持续时间元数据不可用，应用程序将使用一秒回退。生成的缩略图会被缓存，以便更快地重复浏览。\n\n普通图像缩略图可通过 Pillow 进行高效解码； FFmpeg 用于视频帧并作为不常见图像格式的后备。缩略图解码使用小型工作池，因此大型文件夹无法启动过多的解码器。缓存图像以原子方式写入并在显示前进行检查；不完整或损坏的缓存缩略图将被忽略并重新生成，而属于旧网格的结果将被安全丢弃。\n\n生成的缩略图在程序关闭后仍然可用，因此重新访问未更改的文件通常会立即使用其缓存的图像。 工具 > 缓存与扫描 以操作系统驱动器的百分比形式控制最大缩略图缓存大小；默认值为 1%。重复使用的缩略图被标记为最近的，并且当超过限制时，首先删除最近最少使用的条目。该限制可以设置为 0.1% 到 10% 并立即强制执行。 清除缩略图 在确认前报告当前数量和大小，然后仅删除生成的缩略图，而不删除原始媒体或缓存的技术元数据。 清除所有缓存 删除缩略图和元数据。\n\n缩略图大小滑块仅出现在 缩略图 中；详细信息 将其隐藏。移动滑块会连续调整缩略图大小，切换视图时会保留其设置。暂停 在拖动后会短暂刷新网格；较大的图像保持其纵横比，并且当前大小会随窗格设置保存。在“查看”菜单中仍可使用命名大小预设；窗格标题中没有重复的大小下拉菜单。"
+      },
+      {
+        "id": "scanning_and_filtering",
+        "title": "扫描和过滤",
+        "paragraphs": [
+          {
+            "id": "scanning_and_filtering.p001",
+            "source_sha256": "c4712ae8d144d44f4ec6a47e8ad4b477c14275c9c493ace31eef65a7a8b9168d",
+            "text": "启用 包括子文件夹 递归扫描。使用“查找”查找文件名，使用“分辨率”查找精确分辨率，使用“更多”过滤器查找尺寸、文件大小、持续时间、编解码器、方向和日期。 取消 停止长扫描。 工具 下的 缓存与扫描 设置控制并行工作程序和排除模式。"
+          },
+          {
+            "id": "scanning_and_filtering.p002",
+            "source_sha256": "5f55a7b5ecdce4426e11fdc93539a0e0a436839a62d94bc8019a50af3c1deae6",
+            "text": "要将扫描结果保存为电子表格或文档，请参阅 [chapter:media_reports]。"
+          },
+          {
+            "id": "scanning_and_filtering.p003",
+            "source_sha256": "6296398bb5bd08c4d57ca8f2606a7b6164825f670f0bfa1fd408f26fca05c53e",
+            "text": "大 递归扫描收集结果，而无需重复重建不断增长的浏览器。扫描完成后，会小批量添加 详细信息 行，以便 Play/暂停、导航、绘画和窗口控件保持响应。缩略图网格同样会在扫描完成时更新。成功的复制、移动和删除命令现在仅更新受影响的内存中条目，而不是重新扫描这两个文件夹；从应用程序外部删除的不熟悉的文件仍然只会在受影响的窗格中触发安全扫描。元数据缓存保存在后台运行，并停止 FFmpeg 预览进程被及时清理。 工具 > 缓存与扫描 提供 安静、均衡 和快速性能配置文件。 均衡 保留既定行为。 安静 减少扫描和缩略图并发性，目标为每秒 8 预览帧； 快速 提高了并发性，目标是每秒 15 帧。 安静 和 均衡 在预览播放或搜索时调整新的未缓存探测和缩略图解码，从而优先考虑交互式工作。 已缓存 结果绝不会故意延迟。选择配置文件后，元数据工作人员字段保持可调。"
+          },
+          {
+            "id": "scanning_and_filtering.p004",
+            "source_sha256": "cfc2a88e50877f4251ec58b90265b0c4485c3899666c8cdd2dcd43cc0541aa04",
+            "text": "每一侧都有独立的播放、时间线、速度、音频/静音、帧缓存和解码器进程。 Scratch 视频播放故意以每秒 12 帧的速度实时播放。这样可以保持预览流畅，同时避免因解码剪辑的其余部分的速度比预览显示剪辑的速度而导致 CPU 使用率过高，尤其是在运行大型文件夹扫描时。"
+          },
+          {
+            "id": "scanning_and_filtering.p005",
+            "source_sha256": "6d2351f7d55b8f5bf804e7ab66908fd915359b92794340ef24a0429900443a62",
+            "text": "单击任一预览时间轴上的任意位置，将其标记直接移动到该位置并在那里恢复播放。您还可以按住并拖动标记以进行连续擦洗。一旦请求更新的位置，清理就会取消旧的帧请求，从而防止多个 FFmpeg 解码器在后台竞争。最近访问的位置以四分之一秒的步长进行缓存，因此可以立即返回到这些位置。释放滑块可从所选位置恢复播放。"
+          },
+          {
+            "id": "scanning_and_filtering.p006",
+            "source_sha256": "fe8d26dfc3bcebb327cad49202bcc0288ca9ad0b75babe71c0d04dfab8ac9fea",
+            "text": "视频预览默认为 4 倍速，以便更快地查看。使用时间线下方的 1×、2×、4×、6×、8× 和 16× 按钮更改播放速度。活动速度按钮被禁用以使当前设置清晰。 音频 默认静音；选择 🔇 静音 启用同步声音，然后选择 🔊 音频 再次静音。播放时更改速度会在当前时间线位置重新启动视频和音频。"
+          },
+          {
+            "id": "scanning_and_filtering.p007",
+            "source_sha256": "3214a4d4fd458bb76deb51ff30947b215ded0ce500221cb3511bf25da94d6a74",
+            "text": "使用 |◀ 和 ▶|音频按钮旁边可向后或向前移动一帧。该应用程序使用视频报告的帧速率（当元数据不可用时回退 25 fps），并对生成的静态图像执行精确搜索。选择 ⤓ PNG 将当前视频位置导出为全源分辨率 PNG；播放在该确切位置暂停，输出通过临时文件写入，并且视频永远不会改变。"
+          },
+          {
+            "id": "scanning_and_filtering.p008",
+            "source_sha256": "2427ebd091d494c4bd3cbf71c48a081ab4ee23a5f549571ceeb7c12ea2c351d6",
+            "text": "将焦点置于键入字段之外时，按逗号 (,) 可将活动窗格的视频预览向后跳转其总持续时间的 10%，或按句号/句号 (.) 可向前跳转 10%。活动窗格是最近单击的一侧。播放预览从新位置继续播放；暂停的预览保持暂停并显示确切的目标帧。这些键通常在路径、搜索、过滤器和对话框字段中键入。"
+          },
+          {
+            "id": "scanning_and_filtering.p009",
+            "source_sha256": "decded439831addc29ee74040e8bfff01524b194d15c0468751e96d11df67309",
+            "text": "在文件资源管理器或其他应用程序中更改文件夹或文件后，“查看”下的 刷新活动窗格 或 刷新两个窗格。 刷新 重建文件夹树并重新扫描媒体。还可以通过 F5、工具栏以及浏览器和文件夹树中的右键单击菜单来使用它。或者，在任一窗格中启用独立直播以自动观看其当前文件夹。 实时 遵循导航并使用与 包括子文件夹 相同的范围。在刷新之前合并创建、修改、重命名和删除的突发；文件夹更改也会更新树。已完成扫描状态中会出现实时标记。 实时 默认关闭，清除其复选框会立即恢复手动刷新行为。"
+          }
+        ],
+        "body": "启用 包括子文件夹 递归扫描。使用“查找”查找文件名，使用“分辨率”查找精确分辨率，使用“更多”过滤器查找尺寸、文件大小、持续时间、编解码器、方向和日期。 取消 停止长扫描。 工具 下的 缓存与扫描 设置控制并行工作程序和排除模式。\n\n要将扫描结果保存为电子表格或文档，请参阅 [chapter:media_reports]。\n\n大 递归扫描收集结果，而无需重复重建不断增长的浏览器。扫描完成后，会小批量添加 详细信息 行，以便 Play/暂停、导航、绘画和窗口控件保持响应。缩略图网格同样会在扫描完成时更新。成功的复制、移动和删除命令现在仅更新受影响的内存中条目，而不是重新扫描这两个文件夹；从应用程序外部删除的不熟悉的文件仍然只会在受影响的窗格中触发安全扫描。元数据缓存保存在后台运行，并停止 FFmpeg 预览进程被及时清理。 工具 > 缓存与扫描 提供 安静、均衡 和快速性能配置文件。 均衡 保留既定行为。 安静 减少扫描和缩略图并发性，目标为每秒 8 预览帧； 快速 提高了并发性，目标是每秒 15 帧。 安静 和 均衡 在预览播放或搜索时调整新的未缓存探测和缩略图解码，从而优先考虑交互式工作。 已缓存 结果绝不会故意延迟。选择配置文件后，元数据工作人员字段保持可调。\n\n每一侧都有独立的播放、时间线、速度、音频/静音、帧缓存和解码器进程。 Scratch 视频播放故意以每秒 12 帧的速度实时播放。这样可以保持预览流畅，同时避免因解码剪辑的其余部分的速度比预览显示剪辑的速度而导致 CPU 使用率过高，尤其是在运行大型文件夹扫描时。\n\n单击任一预览时间轴上的任意位置，将其标记直接移动到该位置并在那里恢复播放。您还可以按住并拖动标记以进行连续擦洗。一旦请求更新的位置，清理就会取消旧的帧请求，从而防止多个 FFmpeg 解码器在后台竞争。最近访问的位置以四分之一秒的步长进行缓存，因此可以立即返回到这些位置。释放滑块可从所选位置恢复播放。\n\n视频预览默认为 4 倍速，以便更快地查看。使用时间线下方的 1×、2×、4×、6×、8× 和 16× 按钮更改播放速度。活动速度按钮被禁用以使当前设置清晰。 音频 默认静音；选择 🔇 静音 启用同步声音，然后选择 🔊 音频 再次静音。播放时更改速度会在当前时间线位置重新启动视频和音频。\n\n使用 |◀ 和 ▶|音频按钮旁边可向后或向前移动一帧。该应用程序使用视频报告的帧速率（当元数据不可用时回退 25 fps），并对生成的静态图像执行精确搜索。选择 ⤓ PNG 将当前视频位置导出为全源分辨率 PNG；播放在该确切位置暂停，输出通过临时文件写入，并且视频永远不会改变。\n\n将焦点置于键入字段之外时，按逗号 (,) 可将活动窗格的视频预览向后跳转其总持续时间的 10%，或按句号/句号 (.) 可向前跳转 10%。活动窗格是最近单击的一侧。播放预览从新位置继续播放；暂停的预览保持暂停并显示确切的目标帧。这些键通常在路径、搜索、过滤器和对话框字段中键入。\n\n在文件资源管理器或其他应用程序中更改文件夹或文件后，“查看”下的 刷新活动窗格 或 刷新两个窗格。 刷新 重建文件夹树并重新扫描媒体。还可以通过 F5、工具栏以及浏览器和文件夹树中的右键单击菜单来使用它。或者，在任一窗格中启用独立直播以自动观看其当前文件夹。 实时 遵循导航并使用与 包括子文件夹 相同的范围。在刷新之前合并创建、修改、重命名和删除的突发；文件夹更改也会更新树。已完成扫描状态中会出现实时标记。 实时 默认关闭，清除其复选框会立即恢复手动刷新行为。"
+      },
+      {
+        "id": "selecting_and_previewing",
+        "title": "选择并 预览ing",
+        "paragraphs": [
+          {
+            "id": "selecting_and_previewing.p001",
+            "source_sha256": "3cb30411bb6f6a0807c08da889783687297f5427e72f356e38a6f0de5a9fedf2",
+            "text": "每个窗格都有一个独立的复选框操作组。单击 详细信息 行旁边或缩略图卡上的 ☐/☑ 框，或者聚焦 详细信息 行并按 Space。当您突出显示和预览其他文件、对窗格进行排序或更改过滤器时，刻度仍然会收集。浏览器下方的计数器显示总数，包括当前被过滤器隐藏的勾选文件。点击缩略图中的✓详细信息标题或✓全部显示，勾选当前显示的每个文件；重复此操作以取消选中显示的组。 清除刻度线 删除整个组。复制、移动、拖动、删除、重命名、评级、标记、比较、完整性和转换操作使用所有勾选的文件（如果存在）；没有勾号，他们使用普通的突出显示行。将该窗格更改为其他文件夹或驱动器会清除其刻度，并且关闭应用程序后不会保存刻度。"
+          },
+          {
+            "id": "selecting_and_previewing.checkbox_accuracy_1272",
+            "source_sha256": "ec45605bac64df9520c7b16b9f54eb0ff1645c2f120d0e06da004d853d0a3acc",
+            "text": "复选框仅在您点击并释放框时更改，而不拖动。框旁的空白区域不属于可点击区域。移动超过几像素会启动高亮选择，而不会改变勾选状态，即使拖动始于复选框。使用明确的 勾选选择 和 取消勾选选择 控件更改整个高亮组。"
+          },
+          {
+            "id": "selecting_and_previewing.p007",
+            "source_sha256": "fe2df6bc40914fca7346780d043258bca3ac75b0c0da69d7d7c7af1921420d95",
+            "text": "从空白浏览器区域跨行或缩略图卡片拖动，以使用轮廓选择矩形突出显示一组。这不会勾选或取消勾选任何文件。普通拖动会开始一个新的突出显示组；在开始拖动时按住 Ctrl 可将其添加到现有的突出显示中。开始在空缩略图空间上，而不是图片或文件名上，因为拖动缩略图文件会启动传输。 在详细信息你也可以沿行垂直拖动以突出显示一个组；向另一侧窗格拖动以进行传输。标题保留其正常的调整大小和重新排序手势。使用勾选选择将高亮显示的文件添加到现有的选中操作组中。使用取消勾选选择仅从该组中删除那些被高亮显示的文件。两个按钮都位于每个浏览器顶部，排序旁边。选择所有显示的和清除刻度线；控制在较窄窗格上的换行。这两个命令也可以在右键菜单中使用。其他勾选项，包括被过滤器隐藏的文件，会被保留。文件操作在存在任何勾选时仍然优先使用所有勾选项，因此如果您想更改操作组，请在复制或移动之前使用这些显式控件。"
+          },
+          {
+            "id": "selecting_and_previewing.p002",
+            "source_sha256": "7f32ecf04dddbc0b538a4d33856b7ca37e281994235e853d6806e565759f3fb5",
+            "text": "每个浏览器窗格都有自己的大 ▶ 预览 开关，默认关闭以避免不必要的解码。 启用 预览 位于左侧、右侧或两侧，可在浏览器下方打开单独的对齐预览面板。该按钮具有明显的选定状态，因此很容易发现启用的预览。当两个开关都关闭时，预览区域完全折叠，浏览器使用整个窗口高度。单击文件可在其自身一侧进行预览。突出显示与刻度无关，因此您可以检查或预览另一个文件而不会丢失操作组。按住 Ctrl 键的同时单击缩略图或详细信息行可突出显示多个文件。 选择匹配项 突出显示当前显示的每个结果。双击在正常应用程序中打开突出显示的文件。"
+          },
+          {
+            "id": "selecting_and_previewing.p006",
+            "source_sha256": "ea7ee844c5a71c70be45874efacd2698bc3f2f6056cb1188f3f135038fbcd31c",
+            "text": "图像 和视频帧自动使用适合自己预览面板的最大尺寸，同时保持原始宽高比。调整主窗口或预览分隔线的大小会在短暂延迟后更新图像，从而避免在拖动分隔线时重复重新启动解码器。"
+          },
+          {
+            "id": "selecting_and_previewing.p003",
+            "source_sha256": "6da9585bae76a4d0447bfa50948712331a0b66f7d19639b6472395a5337a1281",
+            "text": "每个窗格也有一个大型独立的Ôôÿ 信息切换按钮。默认情况下为关闭，并在该窗格的右边缘添加一个可折叠的检查器。如果文件已经被选中，启用信息将立即显示它——无需再次选择它。检查器会跟随后续选择详细信息, 连续缩略图，和 分页缩略图并显示完整路径、尺寸、大小、日期、时长、编解码器、帧率、比特率、像素格式、HDR、音频、不可读取原因、评分、颜色和标签。复制路径将完整路径放到剪贴板；打开并揭示使用常规的文件操作。关闭信息会完全移除检查器，已保存的工作区会记住其状态。信息面板以大约180像素的紧凑起始宽度打开。顶部的排序和选择控件独立于信息分割栏，因此打开信息不会压缩这些按钮。拖动检查器旁的分割栏可以改变其宽度；关闭再打开信息会恢复该宽度，已保存的面板/工作区设置也会保留它。在窄窗口中，宽度有限，以留出一些浏览空间。"
+          },
+          {
+            "id": "selecting_and_previewing.p004",
+            "source_sha256": "f69ab2d999168d40676e34589ed911761ef8a4e8e683955ccaa9c471fc373e01",
+            "text": "在文件资源管理器中显示/揭示 可与完整的选择配合使用。对于最多五个选定的文件，它会为每个路径发送单独的显示请求。超过五个时，警告会显示确切的计数，因为该操作可能会打开许多​​文件管理器窗口。选择“是”显示每个选定的文件，或选择“否”仅显示第一个文件。 Windows 和 macOS 选择每个确切的文件； Linux 通过系统文件管理器打开每个文件所在的文件夹。"
+          },
+          {
+            "id": "selecting_and_previewing.p005",
+            "source_sha256": "78c83927ab22cd560e580cbf1dbe270da8c554ef8357eb67fdc828600c7f856a",
+            "text": "有关相机信息、EXIF 字段或视频容器/流标签，请参阅 [chapter:embedded_metadata]。"
+          }
+        ],
+        "body": "每个窗格都有一个独立的复选框操作组。单击 详细信息 行旁边或缩略图卡上的 ☐/☑ 框，或者聚焦 详细信息 行并按 Space。当您突出显示和预览其他文件、对窗格进行排序或更改过滤器时，刻度仍然会收集。浏览器下方的计数器显示总数，包括当前被过滤器隐藏的勾选文件。点击缩略图中的✓详细信息标题或✓全部显示，勾选当前显示的每个文件；重复此操作以取消选中显示的组。 清除刻度线 删除整个组。复制、移动、拖动、删除、重命名、评级、标记、比较、完整性和转换操作使用所有勾选的文件（如果存在）；没有勾号，他们使用普通的突出显示行。将该窗格更改为其他文件夹或驱动器会清除其刻度，并且关闭应用程序后不会保存刻度。\n\n复选框仅在您点击并释放框时更改，而不拖动。框旁的空白区域不属于可点击区域。移动超过几像素会启动高亮选择，而不会改变勾选状态，即使拖动始于复选框。使用明确的 勾选选择 和 取消勾选选择 控件更改整个高亮组。\n\n从空白浏览器区域跨行或缩略图卡片拖动，以使用轮廓选择矩形突出显示一组。这不会勾选或取消勾选任何文件。普通拖动会开始一个新的突出显示组；在开始拖动时按住 Ctrl 可将其添加到现有的突出显示中。开始在空缩略图空间上，而不是图片或文件名上，因为拖动缩略图文件会启动传输。 在详细信息你也可以沿行垂直拖动以突出显示一个组；向另一侧窗格拖动以进行传输。标题保留其正常的调整大小和重新排序手势。使用勾选选择将高亮显示的文件添加到现有的选中操作组中。使用取消勾选选择仅从该组中删除那些被高亮显示的文件。两个按钮都位于每个浏览器顶部，排序旁边。选择所有显示的和清除刻度线；控制在较窄窗格上的换行。这两个命令也可以在右键菜单中使用。其他勾选项，包括被过滤器隐藏的文件，会被保留。文件操作在存在任何勾选时仍然优先使用所有勾选项，因此如果您想更改操作组，请在复制或移动之前使用这些显式控件。\n\n每个浏览器窗格都有自己的大 ▶ 预览 开关，默认关闭以避免不必要的解码。 启用 预览 位于左侧、右侧或两侧，可在浏览器下方打开单独的对齐预览面板。该按钮具有明显的选定状态，因此很容易发现启用的预览。当两个开关都关闭时，预览区域完全折叠，浏览器使用整个窗口高度。单击文件可在其自身一侧进行预览。突出显示与刻度无关，因此您可以检查或预览另一个文件而不会丢失操作组。按住 Ctrl 键的同时单击缩略图或详细信息行可突出显示多个文件。 选择匹配项 突出显示当前显示的每个结果。双击在正常应用程序中打开突出显示的文件。\n\n图像 和视频帧自动使用适合自己预览面板的最大尺寸，同时保持原始宽高比。调整主窗口或预览分隔线的大小会在短暂延迟后更新图像，从而避免在拖动分隔线时重复重新启动解码器。\n\n每个窗格也有一个大型独立的Ôôÿ 信息切换按钮。默认情况下为关闭，并在该窗格的右边缘添加一个可折叠的检查器。如果文件已经被选中，启用信息将立即显示它——无需再次选择它。检查器会跟随后续选择详细信息, 连续缩略图，和 分页缩略图并显示完整路径、尺寸、大小、日期、时长、编解码器、帧率、比特率、像素格式、HDR、音频、不可读取原因、评分、颜色和标签。复制路径将完整路径放到剪贴板；打开并揭示使用常规的文件操作。关闭信息会完全移除检查器，已保存的工作区会记住其状态。信息面板以大约180像素的紧凑起始宽度打开。顶部的排序和选择控件独立于信息分割栏，因此打开信息不会压缩这些按钮。拖动检查器旁的分割栏可以改变其宽度；关闭再打开信息会恢复该宽度，已保存的面板/工作区设置也会保留它。在窄窗口中，宽度有限，以留出一些浏览空间。\n\n在文件资源管理器中显示/揭示 可与完整的选择配合使用。对于最多五个选定的文件，它会为每个路径发送单独的显示请求。超过五个时，警告会显示确切的计数，因为该操作可能会打开许多​​文件管理器窗口。选择“是”显示每个选定的文件，或选择“否”仅显示第一个文件。 Windows 和 macOS 选择每个确切的文件； Linux 通过系统文件管理器打开每个文件所在的文件夹。\n\n有关相机信息、EXIF 字段或视频容器/流标签，请参阅 [chapter:embedded_metadata]。"
+      },
+      {
+        "id": "copying_and_moving",
+        "title": "复制和移动",
+        "paragraphs": [
+          {
+            "id": "copying_and_moving.p001",
+            "source_sha256": "74a10eb18d51cae10f7fdd8931b1ad7feb8157e134c2e2f50071b7b2d30f5f1b",
+            "text": "在一个窗格中选择文件，然后使用工具栏、编辑菜单、右键菜单、键盘快捷键或拖放操作。要将多个选定文件发送到另一个应用程序（例如 Shutter），请用左键拖动该窗格导航控件旁的大 ↗ 拖动所选文件 控件。它使用正常的操作系统文件列表格式导出完整的选择，并且在 详细信息 和 缩略图 中都能工作，而不会影响列大小调整。另一个窗格是应用内传输的目标。传输进入队列，显示进度、速度、剩余时间，并提供暂停、取消、重试和冲突处理选项。窗格传输允许你选择是保留相对文件夹还是仅复制文件。"
+          },
+          {
+            "id": "copying_and_moving.p002",
+            "source_sha256": "a438870a1a1fa7c4edc46d8f19aa10034df90810c0e6118e2c2f94828359328d",
+            "text": "编辑 > 批量重命名选中后会在更改任何名称之前显示完整预览。更改模式、查找/替换文本、大小写敏感性、起始编号或填充后，预览会自动更新；刷新预览也可用。使用构建名称与{name}对于原始茎，{n}用于填充的序列号，{ext}对于没有点的扩展名，以及{dotext}包括其点的扩展名。可选的查找/替换可以区分大小写或不区分大小写，编号具有可调的起始值和填充。无效的 Windows 名称、重复的输出以及与未选择文件的冲突将被禁用应用已确认的批次在内部使用临时名称，因此交换和循环不会互相覆盖；中断的批次在可能的情况下会回滚。成功的批次是一个Ctrl+Z撤销操作，包括评分和标签。F2或重命名在一个文件上打开时会显示实时文件名预览；重命名仅针对有效且可用的新名称启用。"
+          },
+          {
+            "id": "copying_and_moving.p003",
+            "source_sha256": "dc2923a823a7109741512e0c6e1a2302310ba36b9dbfaa6379ae5acf0c73c9e9",
+            "text": "有关在应用前进行审核的可重复复制/移动条件，请参见 [chapter:folder_organization_rules]。要暂停、取消或重试排队的传输，请参见 [chapter:transfer_queue]。"
+          },
+          {
+            "id": "copying_and_moving.p004",
+            "source_sha256": "2c1a1fe656902fb987c4f1a88cd0f8d6ec8ead7edc9b2cf0817ce2b6e82f724b",
+            "text": "右键单击一个或多个选定的文件可分配零到五星级的评级、红色/黄色/绿色/蓝色/紫色 颜色标签或逗号分隔的标签。 明确评级、无和空标签列表会反转这些更改。这些注释仅存储在应用程序数据库中；原始媒体和嵌入的元数据永远不会改变。 详细信息 模式提供可排序的 评级、标签 和标签列。缩略图标题显示评级/标签，并使用颜色标签作为其未选择的轮廓。更多过滤器可能需要最低评级、颜色（包括 无标签）或标签文本。内部重命名、复制、移动和撤消操作将注释携带到结果路径中。 清除所有缓存 删除技术​​缓存数据，但故意保留用户注释。"
+          },
+          {
+            "id": "copying_and_moving.p005",
+            "source_sha256": "4ea753522d03bb48eab43c172373c00d21303828abeacab783fb94f7d41faa41",
+            "text": "在 详细信息 模式下，单行仍然保留右键文件拖动功能；正常的右键点击仍会打开上下文菜单。你也可以使用左键将行或选定组拖到对侧窗格中。放下时会提供清晰标注的复制、移动和 取消 按钮。复制或移动会打开传输预览；取消 或关闭提示框时文件保持不变。标题调整大小和重新排序仍独立进行。对于传统的左键拖动到其他程序，请使用 ↗ 拖动所选文件。缩略图卡同样支持普通的左键文件拖动。"
+          },
+          {
+            "id": "copying_and_moving.p006",
+            "source_sha256": "c09e896f93f4539ea5e39ce1ef9cf109147040645409d8f026ce228b0ae864d8",
+            "text": "复制、移动、重命名文件、将文件发送到回收站或垃圾箱、查看重复项、应用标签和评级、导出报告以及创建联系表。转换支持 H.264、H.265 和 AV1，并具有兼容的硬件加速。 来源 文件被保留，部分失败的输出被删除。"
+          },
+          {
+            "id": "copying_and_moving.p007",
+            "source_sha256": "88a277d5f920b679b295acc60e5e72f6b72f48d3630880924c349e271f7ab3aa",
+            "text": "新建文件夹 s：选择 文件 > 新建文件夹…，按 Ctrl+Shift+N，或在窗格中右键单击并选择 新建文件夹…。输入一个新的单个文件夹的名称。该文件夹将在活动窗格的当前文件夹内创建，并且浏览器会刷新；这不会移动你选中的文件。空的、保留的和无效的名称会被拒绝，并且现有文件夹永远不会被替换。"
+          },
+          {
+            "id": "copying_and_moving.p008",
+            "source_sha256": "cfa3700591ec389ae4438a32b015736c27e74632cc56284e786898fee744198b",
+            "text": "复制/移动示例：在源面板中启用 包括子文件夹，勾选几个子文件夹中的文件，然后点击 复制所选项 → 另一窗格 或 移动所选项 → 另一窗格。在预览中选择 保留文件夹结构 以保留源文件夹下的路径，或选择 文件仅限文件（不包括子文件夹） 将文件直接放入目标位置。第一次默认保留文件夹；之后的传输会记住你上次的选择。在排队之前，请阅读 来源、目标 和 状态 列。浏览… 更改目标；新建文件夹… 创建并选择一个文件夹而不放弃预览。打开完成时的目标 仅在传输成功且未取消后打开该文件夹。点击 队列复制 或 队列移动 继续，或点击 取消 保持文件不变。粘贴 和拖放的文件也使用此预览。"
+          },
+          {
+            "id": "copying_and_moving.p009",
+            "source_sha256": "6f5fea1b68edde18db0247441f47c2ad2c00ad93e2b1f52f9b191e04d8ccde05",
+            "text": "冲突：请求每个冲突 提供 两者都保留、替换、跳过 和 取消，与 应用对所有剩余的冲突 一起。或者在排队前在预览中选择策略。两者都保留 会找到可用的编号文件名，例如 clip (2).mp4，包括不同子文件夹中选择文件的冲突。替换 明确允许替换，并将之前的目标保存在会话撤销区域中。跳过会保持现有目标不变。目标如果是已选择的源文件之一，则被阻止：请选择其他文件夹。队列会重新检查目标，因此文件在预览后出现时不会被静默覆盖。撤销仅限于本会话中最后 20 个支持的操作，并非永久备份。在使用撤销之前不要编辑已传输的文件；撤销复制会删除已复制的文件。"
+          },
+          {
+            "id": "copying_and_moving.p010",
+            "source_sha256": "fd0ec5c6b05d49ff78891f64ea627a2fe1d7435cbdf0008018ace12f664e8341",
+            "text": "选择篮：使用 选择篮 工具栏按钮、文件 > 选择篮…，或右键单击选定文件并选择 添加到选择篮。篮子是位于两个浏览器上方的可折叠面板，而不是单独的窗口。隐藏篮子 或工具栏按钮可以隐藏它而不清除其引用。添加窗格选择 会收集面板中已勾选的操作组，或者在没有勾选时收集突出显示的文件。访问其他文件夹并添加更多文件；每个原始路径只出现一次。篮子包含的是引用，而不是副本，并且在应用程序关闭时会清空。移除引用 或 清除篮子 不会删除原始文件。选择篮子行并选择 复制到活动窗格 或 移动到活动窗格；当没有选择篮子行时，将使用所有条目。查看普通传输预览。没有共享浏览根的篮子文件使用其文件名，而不是组合的文件夹树。缺失的原始文件被标记为 [缺失]，且在可用之前无法传输。"
+          }
+        ],
+        "body": "在一个窗格中选择文件，然后使用工具栏、编辑菜单、右键菜单、键盘快捷键或拖放操作。要将多个选定文件发送到另一个应用程序（例如 Shutter），请用左键拖动该窗格导航控件旁的大 ↗ 拖动所选文件 控件。它使用正常的操作系统文件列表格式导出完整的选择，并且在 详细信息 和 缩略图 中都能工作，而不会影响列大小调整。另一个窗格是应用内传输的目标。传输进入队列，显示进度、速度、剩余时间，并提供暂停、取消、重试和冲突处理选项。窗格传输允许你选择是保留相对文件夹还是仅复制文件。\n\n编辑 > 批量重命名选中后会在更改任何名称之前显示完整预览。更改模式、查找/替换文本、大小写敏感性、起始编号或填充后，预览会自动更新；刷新预览也可用。使用构建名称与{name}对于原始茎，{n}用于填充的序列号，{ext}对于没有点的扩展名，以及{dotext}包括其点的扩展名。可选的查找/替换可以区分大小写或不区分大小写，编号具有可调的起始值和填充。无效的 Windows 名称、重复的输出以及与未选择文件的冲突将被禁用应用已确认的批次在内部使用临时名称，因此交换和循环不会互相覆盖；中断的批次在可能的情况下会回滚。成功的批次是一个Ctrl+Z撤销操作，包括评分和标签。F2或重命名在一个文件上打开时会显示实时文件名预览；重命名仅针对有效且可用的新名称启用。\n\n有关在应用前进行审核的可重复复制/移动条件，请参见 [chapter:folder_organization_rules]。要暂停、取消或重试排队的传输，请参见 [chapter:transfer_queue]。\n\n右键单击一个或多个选定的文件可分配零到五星级的评级、红色/黄色/绿色/蓝色/紫色 颜色标签或逗号分隔的标签。 明确评级、无和空标签列表会反转这些更改。这些注释仅存储在应用程序数据库中；原始媒体和嵌入的元数据永远不会改变。 详细信息 模式提供可排序的 评级、标签 和标签列。缩略图标题显示评级/标签，并使用颜色标签作为其未选择的轮廓。更多过滤器可能需要最低评级、颜色（包括 无标签）或标签文本。内部重命名、复制、移动和撤消操作将注释携带到结果路径中。 清除所有缓存 删除技术​​缓存数据，但故意保留用户注释。\n\n在 详细信息 模式下，单行仍然保留右键文件拖动功能；正常的右键点击仍会打开上下文菜单。你也可以使用左键将行或选定组拖到对侧窗格中。放下时会提供清晰标注的复制、移动和 取消 按钮。复制或移动会打开传输预览；取消 或关闭提示框时文件保持不变。标题调整大小和重新排序仍独立进行。对于传统的左键拖动到其他程序，请使用 ↗ 拖动所选文件。缩略图卡同样支持普通的左键文件拖动。\n\n复制、移动、重命名文件、将文件发送到回收站或垃圾箱、查看重复项、应用标签和评级、导出报告以及创建联系表。转换支持 H.264、H.265 和 AV1，并具有兼容的硬件加速。 来源 文件被保留，部分失败的输出被删除。\n\n新建文件夹 s：选择 文件 > 新建文件夹…，按 Ctrl+Shift+N，或在窗格中右键单击并选择 新建文件夹…。输入一个新的单个文件夹的名称。该文件夹将在活动窗格的当前文件夹内创建，并且浏览器会刷新；这不会移动你选中的文件。空的、保留的和无效的名称会被拒绝，并且现有文件夹永远不会被替换。\n\n复制/移动示例：在源面板中启用 包括子文件夹，勾选几个子文件夹中的文件，然后点击 复制所选项 → 另一窗格 或 移动所选项 → 另一窗格。在预览中选择 保留文件夹结构 以保留源文件夹下的路径，或选择 文件仅限文件（不包括子文件夹） 将文件直接放入目标位置。第一次默认保留文件夹；之后的传输会记住你上次的选择。在排队之前，请阅读 来源、目标 和 状态 列。浏览… 更改目标；新建文件夹… 创建并选择一个文件夹而不放弃预览。打开完成时的目标 仅在传输成功且未取消后打开该文件夹。点击 队列复制 或 队列移动 继续，或点击 取消 保持文件不变。粘贴 和拖放的文件也使用此预览。\n\n冲突：请求每个冲突 提供 两者都保留、替换、跳过 和 取消，与 应用对所有剩余的冲突 一起。或者在排队前在预览中选择策略。两者都保留 会找到可用的编号文件名，例如 clip (2).mp4，包括不同子文件夹中选择文件的冲突。替换 明确允许替换，并将之前的目标保存在会话撤销区域中。跳过会保持现有目标不变。目标如果是已选择的源文件之一，则被阻止：请选择其他文件夹。队列会重新检查目标，因此文件在预览后出现时不会被静默覆盖。撤销仅限于本会话中最后 20 个支持的操作，并非永久备份。在使用撤销之前不要编辑已传输的文件；撤销复制会删除已复制的文件。\n\n选择篮：使用 选择篮 工具栏按钮、文件 > 选择篮…，或右键单击选定文件并选择 添加到选择篮。篮子是位于两个浏览器上方的可折叠面板，而不是单独的窗口。隐藏篮子 或工具栏按钮可以隐藏它而不清除其引用。添加窗格选择 会收集面板中已勾选的操作组，或者在没有勾选时收集突出显示的文件。访问其他文件夹并添加更多文件；每个原始路径只出现一次。篮子包含的是引用，而不是副本，并且在应用程序关闭时会清空。移除引用 或 清除篮子 不会删除原始文件。选择篮子行并选择 复制到活动窗格 或 移动到活动窗格；当没有选择篮子行时，将使用所有条目。查看普通传输预览。没有共享浏览根的篮子文件使用其文件名，而不是组合的文件夹树。缺失的原始文件被标记为 [缺失]，且在可用之前无法传输。"
+      },
+      {
+        "id": "smart_collections",
+        "title": "智能收藏：保存的搜索",
+        "paragraphs": [
+          {
+            "id": "smart_collections.p001",
+            "source_sha256": "c8a00acd2ba2c17799572b74c47c2659ecb5a65fb4782693cbe786544ac1e764",
+            "text": "智能收藏可以节省什么"
+          },
+          {
+            "id": "smart_collections.p002",
+            "source_sha256": "d366ab29cfd1f77bae1f8b286cca63d76a5e46d73bdbf4329d2cfb31a1b3694a",
+            "text": "智能收藏是一个浏览器窗格的命名、保存的搜索和视图。它记住如何在源文件夹中查找和显示文件。它引用了原始文件；创建、打开、重命名或删除收藏集不会复制、移动、重命名、删除或注释这些媒体文件。当您使用特定过滤器和排序重复查看同一库时，可以使用它，而不是在每次访问时重新输入这些设置。保存的工作区会恢复两个窗格及其布局；智能收藏仅更改活动窗格。"
+          },
+          {
+            "id": "smart_collections.p003",
+            "source_sha256": "006322e9c7ac283bd37b6dbb958c936304cc5977a4803b31ea4c4da238a217f2",
+            "text": "每个集合都有一个起始文件夹。 包括子文件夹 搜索该根目录下的所有文件夹。它无法将任意不相关的文件夹、单独的驱动器或多个起始根合并到一个集合中。在可行的情况下选择最近的共同父级，或者保存单独的集合并在两个窗格中打开它们。使用包括子文件夹选择驱动器根目录可以扫描整个驱动器；选择最窄的有用父文件夹。"
+          },
+          {
+            "id": "smart_collections.p004",
+            "source_sha256": "20491128f8f22d658bb8601b6511411ea9d469ce4a9681d99090382d74cfc3cf",
+            "text": "保存的设置包括文件夹路径、包括子文件夹、视频 和 图像 开关、查找文本、分辨率 选择、每个更多过滤器值、排序字段和方向、详细信息 或 缩略图、缩略图大小以及连续 或 分页 模式。它不保存勾选的文件、突出显示的选择、预览播放、实时监控、其他窗格、列宽/顺序、窗格分隔符或缩略图页面容量。这些仍然是独立的设置。集合本地存储在应用程序设置目录中的 smart_collections.json 中。"
+          },
+          {
+            "id": "smart_collections.p005",
+            "source_sha256": "b11ace0b241e6cfceeaf8409069c6872f849fb89e4d9c2acab35996a93e19059",
+            "text": "创建一个集合"
+          },
+          {
+            "id": "smart_collections.p006",
+            "source_sha256": "83c8a710973dcf1308b8fd867f872bf84624f939b91047eea47405238718426e",
+            "text": "1. 在要配置的窗格内单击。这使其成为 工具 命令的活动窗格。\n2. 使用浏览… 或路径框打开所需的源文件夹。 启用 包括子文件夹 如果嵌套文件夹属于搜索。\n3. 勾选 视频、图像 或两者。将“查找”设置为不区分大小写的文件名或相对路径子字符串，并根据需要选择“分辨率”以获得精确的宽度 × 高度。当未应用精确的分辨率限制时，显示屏显示 分辨率： 全部。\n4. 打开 更多筛选器… 查看方向、编解码器子字符串、标签子字符串、最小评级、颜色标签、最小/最大宽度和高度、文件大小、持续时间和修改日期。空白字段没有限制；所有非空限制必须匹配。输入 应用 以使用过滤器。 清除 重置高级过滤器值。这不是一个单独的任意扩展过滤器；使用 视频/图像 开关，并在合适的情况下使用文件名子字符串，例如 .mp4。\n5. 等待扫描并选择所需订单。在详细信息中，单击列标题；再次单击可反转方向。在 缩略图 中，使用排序及其字段/方向子菜单。两个视图都使用相同的过滤媒体和顺序。\n6. 选择 工具 > 保存活动的智能收藏... 并输入描述性集合名称。保存现有名称询问 更换智能收藏；仅当当前窗格应替换已保存的定义时才同意。保存会创建预设，而不是显示文件的副本。"
+          },
+          {
+            "id": "smart_collections.p007",
+            "source_sha256": "cc9c90b0168ad0ec1cefb3b33388495dd4c350d67628c7413d8a0ee240b4ae7b",
+            "text": "打开和更新集合"
+          },
+          {
+            "id": "smart_collections.p008",
+            "source_sha256": "89904bdaa8286ca4ca8546e5136bc9ff5b7688ac0147d82ee8a66fd4caa61afa",
+            "text": "首先选择目标窗格。打开 工具 > 管理智能馆藏...，选择已保存的条目，然后单击 应用 或双击该行。活动窗格导航到保存的起始文件夹，恢复保存的过滤器、排序和演示文稿，然后对其进行扫描。对面的窗格没有变化。如果文件夹断开、移动或不再存在，则 收藏夹不可用 解释保存的路径；重新连接或使用有效文件夹保存替换。"
+          },
+          {
+            "id": "smart_collections.p009",
+            "source_sha256": "1668c49611305d33e2b5780a8b4c6910237f09146c4967272ffd9cf9df5477ae",
+            "text": "结果 反映窗格扫描时当前找到的文件，而不是保存预设时捕获的冻结列表。外部文件更改后，对两个窗格使用窗格的 ↻ 按钮“视图”>“刷新活动窗格”或“F5”。 实时 可以观看当前文件夹，但 实时 不属于已保存的集合。对过滤或排序的更改会立即影响当前视图；对源范围的更改需要相应的扫描。 取消 停止扫描。 大 递归集合使用与普通浏览相同的元数据缓存和性能配置文件。"
+          },
+          {
+            "id": "smart_collections.p010",
+            "source_sha256": "5d0ba8ba1b4e449868d9118559c323b524f2ed494ba01573aee4d4176bc9d605",
+            "text": "没有单独的集合编辑按钮。要更改现有集合，请使用 应用，调整该窗格中的文件夹、范围、筛选器或排序，然后选择具有相同名称的 工具 > 保存活动的智能收藏... 并确认替换。在管理器中，保存当前 保存当前活动窗格设置并要求输入名称；它不会自动编辑选定的行。重命名不会保存对窗格过滤器所做的任何更改。"
+          },
+          {
+            "id": "smart_collections.p011",
+            "source_sha256": "6e88b549b05defa2d24fa8d186b6ba7aea252c5d474f37b1bb4d2e876fbcdbfd",
+            "text": "重命名、删除和恢复"
+          },
+          {
+            "id": "smart_collections.p012",
+            "source_sha256": "2a100ef5ff5e82d9b023158669f5f05a1ef343719fe452c2e74a2589cd33091a",
+            "text": "在“工具 > 管理智能馆藏...”中，选择一条条目，然后单击“重命名”。输入 新名称： 并确认替换（如果另一个集合已具有该名称）。 删除 要求确认并仅删除预设。 撤销删除 在此管理器窗口保持打开状态时恢复最新删除的预设。关闭管理器会丢失这个临时撤消堆栈。如果随后创建了同名集合，则恢复已删除的条目会替换该名称的预设，因此在保留两者时请使用不同的名称。 关闭 退出而不应用所选行。 Ctrl+Z 用于文件操作，而不是集合管理器删除。"
+          },
+          {
+            "id": "smart_collections.p013",
+            "source_sha256": "fc23ad3b8bc9134b6679c107990040938242a050929d015a037c6128ec0433d6",
+            "text": "示例：按分辨率对子文件夹中的图像进行排序"
+          },
+          {
+            "id": "smart_collections.p014",
+            "source_sha256": "71fd063332ef48d1b7ce3c83f9cdbc8f08084a1965687f4f382f46399b47cc96",
+            "text": "1. 在左侧窗格中，将 浏览… 添加到“图片”父文件夹，启用 包括子文件夹 和 图像，然后关闭 视频。\n2. 清除 如果要比较所有维度，请查找 分辨率 并将其设置为全部。如果要删除旧的限制，请打开 更多筛选器… 和 清除/应用。\n3. 在详细信息中，单击分辨率，直到出现所需的升序或降序。或者选择 缩略图 并排序 > 分辨率 > 最小的在前 或 最大的在前。 分辨率排序使用像素面积（宽×高），宽度和高度打破等面积平局；它不是简单的仅宽度排序。相反，精确的 分辨率 过滤器限制为一个特定的维度对。\n4. 按分辨率将活动窗格另存为 图像。 稍后 应用 此条目在任一窗格中重复搜索，包括扫描后新添加的匹配文件。"
+          },
+          {
+            "id": "smart_collections.p015",
+            "source_sha256": "ff3bb0c443412ace673aef6b3b1dd606e3214fe0e515419f44b8de1c6e8f7ee7",
+            "text": "示例：查看高分辨率视频"
+          },
+          {
+            "id": "smart_collections.p016",
+            "source_sha256": "58ddf88adee5ea950a3c3cc66a1975d861ac600276d297a9190c5cd96961d30b",
+            "text": "1. 浏览…到一个视频父文件夹，启用包括子文件夹和视频，并转图像关闭。\n2. 在更多筛选器…，设置 最小宽度（像素）到1920年和最小高度（像素）如果你希望视频满足两个尺寸，就设置为1080。这不包括宽度小于1920的纵向视频，即使它们的像素数量很高；请调整限制或使用方向根据你的目标。\n3. 保留分辨率包括不同的限定维度。可选择设置编解码器包含转换为 HEVC 以匹配存储的 HEVC 编解码器标签，或 H.264 对于 H.264。过滤器会逐字匹配显示的编解码器标签，忽略字母大小写；不带点的 h264 与 H.264 不匹配。如果过滤器未找到任何内容，请使用“信息”查看文件的实际编解码器。\n4. 排序方式 分辨率在详细信息或缩略图. 其他支持的排序字段包括名称，修改日期, 文件大小, 长度, 编解码器，类型，比特率, 帧率和评级. 另存为高分辨率视频。使用预览或在需要时查看个别结果时提供信息；启用它们与集合定义是独立的。"
+          },
+          {
+            "id": "smart_collections.p017",
+            "source_sha256": "582f628c0fa7f236fedaf4a03501cc2af09cc29bf57550102597d7d8e626b747",
+            "text": "限制和文件操作"
+          },
+          {
+            "id": "smart_collections.p018",
+            "source_sha256": "9722f0d4824f0d75e2aa03fd474ccaa99cbe4abb11cf0728857e688af3d85f7a",
+            "text": "集合是可访问文件的预设，而不是跨越断开连接的驱动器的索引库、后台自动规则、播放列表、重复组或物理文件夹。更改预设永远不会自动重新组织文件。您故意对其结果运行的文件复制/移动/删除命令仍然会作用于原始媒体。现有的刻度优先于突出显示，并且可以包含被过滤器隐藏的文件；在对非预期组进行操作之前，请检查滴答计数器和 清除刻度线。导航到其他文件夹会清除该窗格的勾号。当起始文件夹保持不变时，收集应用程序可能会留下现有的勾号，因此请务必在文件操作之前查看它们。"
+          },
+          {
+            "id": "smart_collections.p019",
+            "source_sha256": "07532ce67ddc2c2b72a425c349151e1bfee9bb68f725bc867be341fef82f1f29",
+            "text": "另请参见：[chapter:scanning_and_filtering]·[chapter:details_and_thumbnails]·[chapter:workspaces_and_cache]·[chapter:safe_file_actions]"
+          }
+        ],
+        "body": "智能收藏可以节省什么\n\n智能收藏是一个浏览器窗格的命名、保存的搜索和视图。它记住如何在源文件夹中查找和显示文件。它引用了原始文件；创建、打开、重命名或删除收藏集不会复制、移动、重命名、删除或注释这些媒体文件。当您使用特定过滤器和排序重复查看同一库时，可以使用它，而不是在每次访问时重新输入这些设置。保存的工作区会恢复两个窗格及其布局；智能收藏仅更改活动窗格。\n\n每个集合都有一个起始文件夹。 包括子文件夹 搜索该根目录下的所有文件夹。它无法将任意不相关的文件夹、单独的驱动器或多个起始根合并到一个集合中。在可行的情况下选择最近的共同父级，或者保存单独的集合并在两个窗格中打开它们。使用包括子文件夹选择驱动器根目录可以扫描整个驱动器；选择最窄的有用父文件夹。\n\n保存的设置包括文件夹路径、包括子文件夹、视频 和 图像 开关、查找文本、分辨率 选择、每个更多过滤器值、排序字段和方向、详细信息 或 缩略图、缩略图大小以及连续 或 分页 模式。它不保存勾选的文件、突出显示的选择、预览播放、实时监控、其他窗格、列宽/顺序、窗格分隔符或缩略图页面容量。这些仍然是独立的设置。集合本地存储在应用程序设置目录中的 smart_collections.json 中。\n\n创建一个集合\n\n1. 在要配置的窗格内单击。这使其成为 工具 命令的活动窗格。\n2. 使用浏览… 或路径框打开所需的源文件夹。 启用 包括子文件夹 如果嵌套文件夹属于搜索。\n3. 勾选 视频、图像 或两者。将“查找”设置为不区分大小写的文件名或相对路径子字符串，并根据需要选择“分辨率”以获得精确的宽度 × 高度。当未应用精确的分辨率限制时，显示屏显示 分辨率： 全部。\n4. 打开 更多筛选器… 查看方向、编解码器子字符串、标签子字符串、最小评级、颜色标签、最小/最大宽度和高度、文件大小、持续时间和修改日期。空白字段没有限制；所有非空限制必须匹配。输入 应用 以使用过滤器。 清除 重置高级过滤器值。这不是一个单独的任意扩展过滤器；使用 视频/图像 开关，并在合适的情况下使用文件名子字符串，例如 .mp4。\n5. 等待扫描并选择所需订单。在详细信息中，单击列标题；再次单击可反转方向。在 缩略图 中，使用排序及其字段/方向子菜单。两个视图都使用相同的过滤媒体和顺序。\n6. 选择 工具 > 保存活动的智能收藏... 并输入描述性集合名称。保存现有名称询问 更换智能收藏；仅当当前窗格应替换已保存的定义时才同意。保存会创建预设，而不是显示文件的副本。\n\n打开和更新集合\n\n首先选择目标窗格。打开 工具 > 管理智能馆藏...，选择已保存的条目，然后单击 应用 或双击该行。活动窗格导航到保存的起始文件夹，恢复保存的过滤器、排序和演示文稿，然后对其进行扫描。对面的窗格没有变化。如果文件夹断开、移动或不再存在，则 收藏夹不可用 解释保存的路径；重新连接或使用有效文件夹保存替换。\n\n结果 反映窗格扫描时当前找到的文件，而不是保存预设时捕获的冻结列表。外部文件更改后，对两个窗格使用窗格的 ↻ 按钮“视图”>“刷新活动窗格”或“F5”。 实时 可以观看当前文件夹，但 实时 不属于已保存的集合。对过滤或排序的更改会立即影响当前视图；对源范围的更改需要相应的扫描。 取消 停止扫描。 大 递归集合使用与普通浏览相同的元数据缓存和性能配置文件。\n\n没有单独的集合编辑按钮。要更改现有集合，请使用 应用，调整该窗格中的文件夹、范围、筛选器或排序，然后选择具有相同名称的 工具 > 保存活动的智能收藏... 并确认替换。在管理器中，保存当前 保存当前活动窗格设置并要求输入名称；它不会自动编辑选定的行。重命名不会保存对窗格过滤器所做的任何更改。\n\n重命名、删除和恢复\n\n在“工具 > 管理智能馆藏...”中，选择一条条目，然后单击“重命名”。输入 新名称： 并确认替换（如果另一个集合已具有该名称）。 删除 要求确认并仅删除预设。 撤销删除 在此管理器窗口保持打开状态时恢复最新删除的预设。关闭管理器会丢失这个临时撤消堆栈。如果随后创建了同名集合，则恢复已删除的条目会替换该名称的预设，因此在保留两者时请使用不同的名称。 关闭 退出而不应用所选行。 Ctrl+Z 用于文件操作，而不是集合管理器删除。\n\n示例：按分辨率对子文件夹中的图像进行排序\n\n1. 在左侧窗格中，将 浏览… 添加到“图片”父文件夹，启用 包括子文件夹 和 图像，然后关闭 视频。\n2. 清除 如果要比较所有维度，请查找 分辨率 并将其设置为全部。如果要删除旧的限制，请打开 更多筛选器… 和 清除/应用。\n3. 在详细信息中，单击分辨率，直到出现所需的升序或降序。或者选择 缩略图 并排序 > 分辨率 > 最小的在前 或 最大的在前。 分辨率排序使用像素面积（宽×高），宽度和高度打破等面积平局；它不是简单的仅宽度排序。相反，精确的 分辨率 过滤器限制为一个特定的维度对。\n4. 按分辨率将活动窗格另存为 图像。 稍后 应用 此条目在任一窗格中重复搜索，包括扫描后新添加的匹配文件。\n\n示例：查看高分辨率视频\n\n1. 浏览…到一个视频父文件夹，启用包括子文件夹和视频，并转图像关闭。\n2. 在更多筛选器…，设置 最小宽度（像素）到1920年和最小高度（像素）如果你希望视频满足两个尺寸，就设置为1080。这不包括宽度小于1920的纵向视频，即使它们的像素数量很高；请调整限制或使用方向根据你的目标。\n3. 保留分辨率包括不同的限定维度。可选择设置编解码器包含转换为 HEVC 以匹配存储的 HEVC 编解码器标签，或 H.264 对于 H.264。过滤器会逐字匹配显示的编解码器标签，忽略字母大小写；不带点的 h264 与 H.264 不匹配。如果过滤器未找到任何内容，请使用“信息”查看文件的实际编解码器。\n4. 排序方式 分辨率在详细信息或缩略图. 其他支持的排序字段包括名称，修改日期, 文件大小, 长度, 编解码器，类型，比特率, 帧率和评级. 另存为高分辨率视频。使用预览或在需要时查看个别结果时提供信息；启用它们与集合定义是独立的。\n\n限制和文件操作\n\n集合是可访问文件的预设，而不是跨越断开连接的驱动器的索引库、后台自动规则、播放列表、重复组或物理文件夹。更改预设永远不会自动重新组织文件。您故意对其结果运行的文件复制/移动/删除命令仍然会作用于原始媒体。现有的刻度优先于突出显示，并且可以包含被过滤器隐藏的文件；在对非预期组进行操作之前，请检查滴答计数器和 清除刻度线。导航到其他文件夹会清除该窗格的勾号。当起始文件夹保持不变时，收集应用程序可能会留下现有的勾号，因此请务必在文件操作之前查看它们。\n\n另请参见：[chapter:scanning_and_filtering]·[chapter:details_and_thumbnails]·[chapter:workspaces_and_cache]·[chapter:safe_file_actions]"
+      },
+      {
+        "id": "duplicates_and_comparison",
+        "title": "重复项 与比较",
+        "paragraphs": [
+          {
+            "id": "duplicates_and_comparison.p001",
+            "source_sha256": "0782926d2c4bf15b6bc6546a84700657d47e97dec140144e01570bb40c129af6",
+            "text": "工具 > 查找重复项 分阶段查找精确匹配。相同大小的文件会收到从开头、中间和结尾采样的快速指纹；然后，只有匹配的候选者才会被完全读取并使用 SHA-256 进行验证。两个指纹都保留在 SQLite 缓存中，而路径、大小和修改时间保持不变，使得以后的搜索速度更快。 Progress appears in the active pane status line.查看窗口并排显示两个副本，并带有路径、日期和保留标签。策略仅选择建议的冗余文件 - 它永远不会自动删除它们。 比较所选的 显示两个选定的文件及其技术元数据。"
+          },
+          {
+            "id": "duplicates_and_comparison.p002",
+            "source_sha256": "db002d92b3f1a118d7bb8aa101af8c1ae262721f09af95713962ae48eac85a4e",
+            "text": "工具 > 查找视觉上相似的图像 检测调整大小、轻微重新压缩以及其他视觉上接近的图像，即使它们的文件并非逐字节相同。选择 可见 或 全部已扫描 以及 0–16 的容差；值越低越严格，默认值为 6。 64 位差异哈希值根据路径、大小和修改日期进行缓存，并且 BK 树在大型集合上保持实用匹配。 结果 是估计值，并在仅供审阅的窗口中打开，其中包含预览和“选择此组”操作。该工具永远不会删除或更改文件；在使用正常文件操作之前检查每个建议的组。"
+          },
+          {
+            "id": "duplicates_and_comparison.usage",
+            "source_sha256": "ff37fdb3497ad945d44131286606d3efc34ef09526591ecd559e63aaa9b6e4ca",
+            "text": "使用审阅工具\n\n对于完全重复的内容，打开源文件夹，启用包括子文件夹如有需要，请等待扫描并选择工具 > 查找重复项...它会检查该窗格中扫描的所有媒体，而不仅仅是高亮或过滤可见的文件。查看分组路径和并排预览，然后选择保留策略，以在源窗格中突出显示建议的冗余副本。这不会删除它们。清除在运行文件操作之前，检查现有的勾选项并审查建议的高亮内容。\n\n对于视觉上相似的图像，请选择工具 > 查找视觉上相似的图像...，选择 范围： 可见或全部已扫描，设置相似度容差（0–16），然后点击开始从6开始；数值越低约束越严格。选择一个结果以预览它；在源窗格中选择此组强调了该组，包括参考图像。这并不是仅自动选择不需要的副本。\n\n要直接比较一对文件，请清除不需要的勾选，在一个窗格中选择正好两个文件，然后选择工具 > 比较所选...检查它们的预览、路径和属性。靠左（右回收）和靠右（左回收）在将另一个文件发送到回收站/垃圾箱之前请求确认。若关闭而不执行任何操作，则两个文件都保持不变。"
+          }
+        ],
+        "body": "工具 > 查找重复项 分阶段查找精确匹配。相同大小的文件会收到从开头、中间和结尾采样的快速指纹；然后，只有匹配的候选者才会被完全读取并使用 SHA-256 进行验证。两个指纹都保留在 SQLite 缓存中，而路径、大小和修改时间保持不变，使得以后的搜索速度更快。 Progress appears in the active pane status line.查看窗口并排显示两个副本，并带有路径、日期和保留标签。策略仅选择建议的冗余文件 - 它永远不会自动删除它们。 比较所选的 显示两个选定的文件及其技术元数据。\n\n工具 > 查找视觉上相似的图像 检测调整大小、轻微重新压缩以及其他视觉上接近的图像，即使它们的文件并非逐字节相同。选择 可见 或 全部已扫描 以及 0–16 的容差；值越低越严格，默认值为 6。 64 位差异哈希值根据路径、大小和修改日期进行缓存，并且 BK 树在大型集合上保持实用匹配。 结果 是估计值，并在仅供审阅的窗口中打开，其中包含预览和“选择此组”操作。该工具永远不会删除或更改文件；在使用正常文件操作之前检查每个建议的组。\n\n使用审阅工具\n\n对于完全重复的内容，打开源文件夹，启用包括子文件夹如有需要，请等待扫描并选择工具 > 查找重复项...它会检查该窗格中扫描的所有媒体，而不仅仅是高亮或过滤可见的文件。查看分组路径和并排预览，然后选择保留策略，以在源窗格中突出显示建议的冗余副本。这不会删除它们。清除在运行文件操作之前，检查现有的勾选项并审查建议的高亮内容。\n\n对于视觉上相似的图像，请选择工具 > 查找视觉上相似的图像...，选择 范围： 可见或全部已扫描，设置相似度容差（0–16），然后点击开始从6开始；数值越低约束越严格。选择一个结果以预览它；在源窗格中选择此组强调了该组，包括参考图像。这并不是仅自动选择不需要的副本。\n\n要直接比较一对文件，请清除不需要的勾选，在一个窗格中选择正好两个文件，然后选择工具 > 比较所选...检查它们的预览、路径和属性。靠左（右回收）和靠右（左回收）在将另一个文件发送到回收站/垃圾箱之前请求确认。若关闭而不执行任何操作，则两个文件都保持不变。"
+      },
+      {
+        "id": "video_conversion",
+        "title": "视频转换",
+        "paragraphs": [
+          {
+            "id": "video_conversion.p001",
+            "source_sha256": "b2ee9f6d3dced7fd286ca5ee1d093029d40566fbc9e29e283a2a3058d9c37b85",
+            "text": "使用 工具 > 转换选定的视频... 来创建使用不同编解码器、容器或分辨率的新视频文件。原始文件将被保留。首先选择一个小样本，这样你可以在处理大量文件之前比较其质量、播放兼容性、文件大小和转换时间。"
+          },
+          {
+            "id": "video_conversion.p002",
+            "source_sha256": "d51cf66e935232f9f87c8254590a1e53247ff73d6b9a122efcfcfe2a026f48d9",
+            "text": "转换一个或多个视频\n\n1. 在任一窗格中打开源文件夹。启用 包括子文件夹如果视频分布在其子文件夹中，请等待扫描完成。\n2. 勾选要转换的视频。如果没有勾选，命令将使用高亮显示的文件。清除首先是不需要的勾选：被过滤器隐藏的勾选文件仍然属于操作组。图像组中的成员会被此命令忽略。\n3. 选择 工具 > 转换选定的视频...\n4. 选择预设分辨率，质量（CRF）和编码引擎如下面所述。\n5. 检查输出文件夹。它最初指向另一个窗格的文件夹；使用 浏览…或在需要时输入不同的目的地。检查保留相对于活动窗格的文件夹保留该目标下的源子文件夹结构。\n6. 选择 跳过现有的或两者都保留. 点击 刷新预览在更改目的地、文件夹保留或现有文件策略之后。请仔细阅读每一项来源和输出路径并检查状态 列。仅就绪行将运行。\n7. 点击 开始转换...并在同意之前查看确认。监控进度和每个文件结果完成后，打开已转换的文件并检查它，然后再决定如何处理原始文件。"
+          },
+          {
+            "id": "video_conversion.p003",
+            "source_sha256": "13dffb3d18a13839d2bb6145a7313a3ee2144bcdd5305808500659c8a434c0a8",
+            "text": "选择预设\n\nH.264 MP4（兼容）：当需要广泛的播放器/设备兼容性时，这是一个实用的选择。\nH.265 MP4（更小）：HEVC 编码，可以减小文件大小，但需要兼容的播放器。\nAV1 MKV（最小）：在 MKV 容器中的 AV1 编码；请在电脑上检查播放支持和转换速度。\n720p H.264 代理：低分辨率的 H.264 复制版本，适用于更快的浏览或审查。选择此预设会将 分辨率 设置为 720p；您可以在开始前更改它。\n重新封装为 MKV（不重新编码）：将现有流复制到 MKV。它不会改变视频编码、分辨率或质量，并且不是将 H.264 转换为 H.265 的方法。重新编码的预设名称并不能保证每个输出文件都会比源文件小。"
+          },
+          {
+            "id": "video_conversion.p004",
+            "source_sha256": "31fe0e232d02cd89058578e2fccde72f21ae8fd0074c94698407be72fccf86ed",
+            "text": "分辨率与质量\n\n保持源分辨率 在重新编码时保留原始帧尺寸。1080p 和 720p 设置输出高度为 1080 或 720 像素，同时保持纵横比；它们不是最大宽度或仅自动缩小设置。例如，3840 × 2160 视频在 1080p 下会变为 1920 × 1080。较小的源可以放大，但不能恢复缺失的细节。纵向 视频保持其比例，而不会变为横向。\n\n质量（CRF）接受 18 到 35 的整数值；默认值为 23。较小的数字意味着请求更高质量，通常文件也更大。硬件引擎会将该值映射到其自己的质量控制，因此相同的数值在不同引擎上的结果不一定相同。请尝试样本。Remux 忽略质量、尺寸调整和加速。"
+          },
+          {
+            "id": "video_conversion.p005",
+            "source_sha256": "2d17a4384e7cc6ceb233a92096824f99dc79d0d11c5f43d2c552d545e166b856",
+            "text": "编码和解码\n\n自动（推荐） 会尝试可用的硬件编码选项，如有必要会回退至 软件 / CPU 作为备选。软件 / CPU 使用处理器。在所选预设支持的情况下，提供 NVIDIA NVENC、Intel Quick Sync、AMD AMF 和 Linux VA-API。检测摘要报告 FFmpeg 支持；所选硬件和驱动也必须可用。明确选择的硬件引擎会报告失败，而不是静默切换到其他编码器。\n\n如果可用，请使用硬件解码 控制独立于输出编码器的源读取。如果请求的硬件解码器无法启动，将在保持所选编码器的情况下重试软件解码。想使用软件解码时请取消选中。此设置不会更改原始文件。"
+          },
+          {
+            "id": "video_conversion.p006",
+            "source_sha256": "06ea5ef5426b40dc040f7227353e00d7437b8fc335a4e6ad48d27d5bbdcf8834",
+            "text": "输出名称、进度和取消\n\n新文件名包括预设后缀，并在选择时包含输出分辨率。跳过现有的 保留现有目标不变。两者都保留 使用编号文件名而不是覆盖它。开始之前，请检查预览以查看跳过的文件、重复的输出名称或其他问题。\n\n视频 一次处理一个文件。取消转换 停止当前转换，删除未完成的输出，并停止剩余队列。已完成的输出将保留。关闭此转换窗口也会请求取消。其队列独立于 工具 > 传输队列...，后者管理复制和移动。"
+          },
+          {
+            "id": "video_conversion.p007",
+            "source_sha256": "2305a1598d67013bd4f756c6d91dec721660a38e61ab32c2435ab8a104a9ee5b",
+            "text": "示例：在 1080p 将 H.264 转为 H.265\n\n勾选一些 H.264 视频，打开 工具 > 转换选定的视频...，选择 H.265 MP4（更小），将 分辨率 设置为 1080p，初次试验将质量 (CRF) 保持在23，并选择 自动（推荐）。选择输出文件夹，点击 刷新预览，检查路径，然后点击 开始转换...。将完成的副本与原始文件进行比较；如有需要，可调整质量或分辨率并再次测试。"
+          }
+        ],
+        "body": "使用 工具 > 转换选定的视频... 来创建使用不同编解码器、容器或分辨率的新视频文件。原始文件将被保留。首先选择一个小样本，这样你可以在处理大量文件之前比较其质量、播放兼容性、文件大小和转换时间。\n\n转换一个或多个视频\n\n1. 在任一窗格中打开源文件夹。启用 包括子文件夹如果视频分布在其子文件夹中，请等待扫描完成。\n2. 勾选要转换的视频。如果没有勾选，命令将使用高亮显示的文件。清除首先是不需要的勾选：被过滤器隐藏的勾选文件仍然属于操作组。图像组中的成员会被此命令忽略。\n3. 选择 工具 > 转换选定的视频...\n4. 选择预设分辨率，质量（CRF）和编码引擎如下面所述。\n5. 检查输出文件夹。它最初指向另一个窗格的文件夹；使用 浏览…或在需要时输入不同的目的地。检查保留相对于活动窗格的文件夹保留该目标下的源子文件夹结构。\n6. 选择 跳过现有的或两者都保留. 点击 刷新预览在更改目的地、文件夹保留或现有文件策略之后。请仔细阅读每一项来源和输出路径并检查状态 列。仅就绪行将运行。\n7. 点击 开始转换...并在同意之前查看确认。监控进度和每个文件结果完成后，打开已转换的文件并检查它，然后再决定如何处理原始文件。\n\n选择预设\n\nH.264 MP4（兼容）：当需要广泛的播放器/设备兼容性时，这是一个实用的选择。\nH.265 MP4（更小）：HEVC 编码，可以减小文件大小，但需要兼容的播放器。\nAV1 MKV（最小）：在 MKV 容器中的 AV1 编码；请在电脑上检查播放支持和转换速度。\n720p H.264 代理：低分辨率的 H.264 复制版本，适用于更快的浏览或审查。选择此预设会将 分辨率 设置为 720p；您可以在开始前更改它。\n重新封装为 MKV（不重新编码）：将现有流复制到 MKV。它不会改变视频编码、分辨率或质量，并且不是将 H.264 转换为 H.265 的方法。重新编码的预设名称并不能保证每个输出文件都会比源文件小。\n\n分辨率与质量\n\n保持源分辨率 在重新编码时保留原始帧尺寸。1080p 和 720p 设置输出高度为 1080 或 720 像素，同时保持纵横比；它们不是最大宽度或仅自动缩小设置。例如，3840 × 2160 视频在 1080p 下会变为 1920 × 1080。较小的源可以放大，但不能恢复缺失的细节。纵向 视频保持其比例，而不会变为横向。\n\n质量（CRF）接受 18 到 35 的整数值；默认值为 23。较小的数字意味着请求更高质量，通常文件也更大。硬件引擎会将该值映射到其自己的质量控制，因此相同的数值在不同引擎上的结果不一定相同。请尝试样本。Remux 忽略质量、尺寸调整和加速。\n\n编码和解码\n\n自动（推荐） 会尝试可用的硬件编码选项，如有必要会回退至 软件 / CPU 作为备选。软件 / CPU 使用处理器。在所选预设支持的情况下，提供 NVIDIA NVENC、Intel Quick Sync、AMD AMF 和 Linux VA-API。检测摘要报告 FFmpeg 支持；所选硬件和驱动也必须可用。明确选择的硬件引擎会报告失败，而不是静默切换到其他编码器。\n\n如果可用，请使用硬件解码 控制独立于输出编码器的源读取。如果请求的硬件解码器无法启动，将在保持所选编码器的情况下重试软件解码。想使用软件解码时请取消选中。此设置不会更改原始文件。\n\n输出名称、进度和取消\n\n新文件名包括预设后缀，并在选择时包含输出分辨率。跳过现有的 保留现有目标不变。两者都保留 使用编号文件名而不是覆盖它。开始之前，请检查预览以查看跳过的文件、重复的输出名称或其他问题。\n\n视频 一次处理一个文件。取消转换 停止当前转换，删除未完成的输出，并停止剩余队列。已完成的输出将保留。关闭此转换窗口也会请求取消。其队列独立于 工具 > 传输队列...，后者管理复制和移动。\n\n示例：在 1080p 将 H.264 转为 H.265\n\n勾选一些 H.264 视频，打开 工具 > 转换选定的视频...，选择 H.265 MP4（更小），将 分辨率 设置为 1080p，初次试验将质量 (CRF) 保持在23，并选择 自动（推荐）。选择输出文件夹，点击 刷新预览，检查路径，然后点击 开始转换...。将完成的副本与原始文件进行比较；如有需要，可调整质量或分辨率并再次测试。"
+      },
+      {
+        "id": "media_reports",
+        "title": "导出媒体报告",
+        "paragraphs": [
+          {
+            "id": "media_reports.p001",
+            "source_sha256": "e5820c2e78ffa8b3b9ff09b57d59bc2adc0b1d92bf570493c0d4aa52c3ab7f5d",
+            "text": "工具 > 出口媒体报道... 会保存已在活动窗格中扫描的文件清单。它不会复制、转换或修改这些媒体文件。使用 CSV 用于电子表格，使用 JSON 用于结构化数据，或使用 HTML 用于可以在网页浏览器中打开的报告。"
+          },
+          {
+            "id": "media_reports.p002",
+            "source_sha256": "94aceb1c124b99d41385988a2d8951dbf25dd5178e8759add72a545ebfbfd828",
+            "text": "创建报告\n\n1. 打开您想要编目的文件夹。如有需要，打开 启用 包括子文件夹 并等待扫描完成。\n2. 如果您想要某个特定组的报告，例如 H.265 视频或高分辨率图像，请使用 应用 筛选器。点击该窗格内使其处于活动状态。\n3. 选择 工具 > 出口媒体报道...。\n4. 设置范围为 已选择、可见 或 全部已扫描。\n5. 选择 格式： CSV、JSON 或 HTML。\n6. 保持 包含完整文件路径 勾选以记录完整位置，或取消勾选以尽可能使用相对于活动文件夹的路径。\n7. 点击 导出…，选择报告的文件名和保存位置，然后保存。等待 报告导出。使用相应的电子表格、浏览器或数据查看器打开保存的文件。"
+          },
+          {
+            "id": "media_reports.p003",
+            "source_sha256": "5537e045dec5259f000dbdf42606d0124a95734ebcc8c6f57073576f0b3bcd6d",
+            "text": "范围的含义\n\n已选择 在存在勾选时使用窗格中被勾选的文件；否则它使用高亮显示的文件。因此，隐藏的勾选也可以被包括在内。可见 意味着匹配当前窗格过滤条件的所有文件，而不仅仅是当前屏幕上的行或缩略图，或者当前的缩略图页面。全部已扫描 包括窗格中扫描的媒体，即使当前过滤器隐藏了它们。这些选项都不会自动扫描其他驱动器或文件夹。"
+          },
+          {
+            "id": "media_reports.p004",
+            "source_sha256": "5741554f0d983a0f0b711b553b0139e6d53ee97d55ac8ee048ac36b006cc85f4",
+            "text": "报告包含内容\n\n每个项目包括其名称和路径、媒体类型和扩展名、尺寸/分辨率、大小、修改日期、时长、视频编码、比特率、帧率、音频编码/声道、像素格式、HDR、评分、颜色标签、标签以及可用的可读/错误状态。缺失的信息仍然缺失；导出不会执行完整的完整性检查。JSON 包含摘要和项目列表。HTML 包含摘要和表格。CSV 包含每个文件的表格。"
+          },
+          {
+            "id": "media_reports.p005",
+            "source_sha256": "0c1aff0372dd91ebb6e6b1344e7ca59216b6cbc2432e03f36f180b7b9bd7118f",
+            "text": "示例与取消\n\n要列出子文件夹中的大型视频，请打开它们的公共父文件夹，启用 视频 和 包括子文件夹，在 更多筛选器… 中设置大小限制，然后使用 范围： 可见 和 格式： CSV 导出。在电子表格中打开 CSV 并查看大小和路径。\n\n取消导出 会停止正在进行的导出；关闭 也会请求取消。只有在写入完成时，报告才会放在其最终文件名下，因此取消不会留下部分写入的最终报告。在共享报告之前，请检查路径：完整的文件路径可能会泄露文件夹名称。"
+          }
+        ],
+        "body": "工具 > 出口媒体报道... 会保存已在活动窗格中扫描的文件清单。它不会复制、转换或修改这些媒体文件。使用 CSV 用于电子表格，使用 JSON 用于结构化数据，或使用 HTML 用于可以在网页浏览器中打开的报告。\n\n创建报告\n\n1. 打开您想要编目的文件夹。如有需要，打开 启用 包括子文件夹 并等待扫描完成。\n2. 如果您想要某个特定组的报告，例如 H.265 视频或高分辨率图像，请使用 应用 筛选器。点击该窗格内使其处于活动状态。\n3. 选择 工具 > 出口媒体报道...。\n4. 设置范围为 已选择、可见 或 全部已扫描。\n5. 选择 格式： CSV、JSON 或 HTML。\n6. 保持 包含完整文件路径 勾选以记录完整位置，或取消勾选以尽可能使用相对于活动文件夹的路径。\n7. 点击 导出…，选择报告的文件名和保存位置，然后保存。等待 报告导出。使用相应的电子表格、浏览器或数据查看器打开保存的文件。\n\n范围的含义\n\n已选择 在存在勾选时使用窗格中被勾选的文件；否则它使用高亮显示的文件。因此，隐藏的勾选也可以被包括在内。可见 意味着匹配当前窗格过滤条件的所有文件，而不仅仅是当前屏幕上的行或缩略图，或者当前的缩略图页面。全部已扫描 包括窗格中扫描的媒体，即使当前过滤器隐藏了它们。这些选项都不会自动扫描其他驱动器或文件夹。\n\n报告包含内容\n\n每个项目包括其名称和路径、媒体类型和扩展名、尺寸/分辨率、大小、修改日期、时长、视频编码、比特率、帧率、音频编码/声道、像素格式、HDR、评分、颜色标签、标签以及可用的可读/错误状态。缺失的信息仍然缺失；导出不会执行完整的完整性检查。JSON 包含摘要和项目列表。HTML 包含摘要和表格。CSV 包含每个文件的表格。\n\n示例与取消\n\n要列出子文件夹中的大型视频，请打开它们的公共父文件夹，启用 视频 和 包括子文件夹，在 更多筛选器… 中设置大小限制，然后使用 范围： 可见 和 格式： CSV 导出。在电子表格中打开 CSV 并查看大小和路径。\n\n取消导出 会停止正在进行的导出；关闭 也会请求取消。只有在写入完成时，报告才会放在其最终文件名下，因此取消不会留下部分写入的最终报告。在共享报告之前，请检查路径：完整的文件路径可能会泄露文件夹名称。"
+      },
+      {
+        "id": "embedded_metadata",
+        "title": "查看嵌入的元数据",
+        "paragraphs": [
+          {
+            "id": "embedded_metadata.p001",
+            "source_sha256": "de02fc927d80ae28a81ef73fc00493e9dc09ed4f5766dfd6f65805e4b99c9abd",
+            "text": "工具 > 查看嵌入的元数据... 读取存储在图像或视频中的信息。这不同于应用程序自身的评分、颜色标签和标签，这些不会改变媒体文件。"
+          },
+          {
+            "id": "embedded_metadata.p002",
+            "source_sha256": "84dddde141e5b461ca97772fda91dd9488b49ce2db3f0100540c7e90cefcf078",
+            "text": "1. 取消不需要的 清除 复选框，然后在活动窗格中精确选择一张图像或视频。\n2. 选择 工具 > 查看嵌入的元数据... 并等待字段出现。\n3. 阅读“部分”、“字段”和“值”列。图像 可能会在存在时包含相机/日期 EXIF 信息和 GPS 字段；视频可能包含容器和流标记。并非每个文件都包含这些字段。\n4. 输入“查找”以按部分、字段或值缩小显示的行。\n5. 选择行并点击 复制选定/全部 以复制它们。如果未选择行，则会复制所有当前显示的行。\n6. 点击 导出 JSON… 保存所有提取的元数据，包括被“查找”隐藏的行。选择文件名然后保存。\n7. 完成后 关闭 窗口。查看、复制和导出元数据不会编辑原文件中嵌入的信息。"
+          }
+        ],
+        "body": "工具 > 查看嵌入的元数据... 读取存储在图像或视频中的信息。这不同于应用程序自身的评分、颜色标签和标签，这些不会改变媒体文件。\n\n1. 取消不需要的 清除 复选框，然后在活动窗格中精确选择一张图像或视频。\n2. 选择 工具 > 查看嵌入的元数据... 并等待字段出现。\n3. 阅读“部分”、“字段”和“值”列。图像 可能会在存在时包含相机/日期 EXIF 信息和 GPS 字段；视频可能包含容器和流标记。并非每个文件都包含这些字段。\n4. 输入“查找”以按部分、字段或值缩小显示的行。\n5. 选择行并点击 复制选定/全部 以复制它们。如果未选择行，则会复制所有当前显示的行。\n6. 点击 导出 JSON… 保存所有提取的元数据，包括被“查找”隐藏的行。选择文件名然后保存。\n7. 完成后 关闭 窗口。查看、复制和导出元数据不会编辑原文件中嵌入的信息。"
+      },
+      {
+        "id": "media_integrity",
+        "title": "检查媒体完整性",
+        "paragraphs": [
+          {
+            "id": "media_integrity.p001",
+            "source_sha256": "97deea524f7dd0dcdc0cd44429f4c4d29e3e5d71f7a4e9ca6240aaad7b295631",
+            "text": "工具 > 验证介质完整性... 检查媒体是否可以解码，而不仅仅依赖其文件名或技术头。可用它来调查无法读取的文件或在归档前检查一批文件。读取整个视频可能需要相当长的时间。它从不修复或更改原始文件。"
+          },
+          {
+            "id": "media_integrity.p002",
+            "source_sha256": "e788bb47cbc4c2ead78a958e6e1e23990943c61731afbfeeb2cda9b82c34fd3c",
+            "text": "1. 打开源文件夹，设置包括子文件夹根据需要，并让扫描完成。\n2. 选择工具 > 验证介质完整性...\n3. 设置范围： 已选择对于选中的/高亮的文件，可见对于所有符合过滤条件的文件，或全部已扫描包括被筛选器隐藏的文件。\n4. 勾选 强制重新检查如果你想要新的检查，即使之前的结果已被缓存。\n5. 点击 开始。审查状态, 已缓存，路径和详细信息随着结果的到来。已完成意味着解码器完成了它的检查；失败记录了解码或访问问题。这并不能保证视觉质量、内容正确性或没有恶意软件。\n6. 使用取消停止进一步检查。结果已经收集的仍然可用。\n7. 点击 导出 CSV…保存收集的结果，包括支票被取消的情况。选择失败在源窗格中突出显示失败的文件并关闭结果窗口；它不会删除它们。"
+          },
+          {
+            "id": "media_integrity.p003",
+            "source_sha256": "1ae255df200b724240135bb169ad32364b4431dd787322cf203b44e9ce3e8323",
+            "text": "在对突出显示的失败采取行动之前，请检查其详细信息并查看 清除刻度线：现有的勾选项仍然对后续的文件命令优先。失败可能反映权限、缺失的驱动器或解码器支持以及损坏的数据。不要仅因为某一检查失败就删除文件。"
+          }
+        ],
+        "body": "工具 > 验证介质完整性... 检查媒体是否可以解码，而不仅仅依赖其文件名或技术头。可用它来调查无法读取的文件或在归档前检查一批文件。读取整个视频可能需要相当长的时间。它从不修复或更改原始文件。\n\n1. 打开源文件夹，设置包括子文件夹根据需要，并让扫描完成。\n2. 选择工具 > 验证介质完整性...\n3. 设置范围： 已选择对于选中的/高亮的文件，可见对于所有符合过滤条件的文件，或全部已扫描包括被筛选器隐藏的文件。\n4. 勾选 强制重新检查如果你想要新的检查，即使之前的结果已被缓存。\n5. 点击 开始。审查状态, 已缓存，路径和详细信息随着结果的到来。已完成意味着解码器完成了它的检查；失败记录了解码或访问问题。这并不能保证视觉质量、内容正确性或没有恶意软件。\n6. 使用取消停止进一步检查。结果已经收集的仍然可用。\n7. 点击 导出 CSV…保存收集的结果，包括支票被取消的情况。选择失败在源窗格中突出显示失败的文件并关闭结果窗口；它不会删除它们。\n\n在对突出显示的失败采取行动之前，请检查其详细信息并查看 清除刻度线：现有的勾选项仍然对后续的文件命令优先。失败可能反映权限、缺失的驱动器或解码器支持以及损坏的数据。不要仅因为某一检查失败就删除文件。"
+      },
+      {
+        "id": "video_contact_sheets",
+        "title": "创建视频联系人表",
+        "paragraphs": [
+          {
+            "id": "video_contact_sheets.p001",
+            "source_sha256": "dfbcc6d5b6648c41111ac2cc655dcf84740fdf1c9bdd8173582892799fbf4a42",
+            "text": "联系表是一张 PNG 图片，包含视频中静态帧的网格。它可以在不播放整个片段的情况下提供概览。工具 > 创建视频联系表... 不会更改源视频。"
+          },
+          {
+            "id": "video_contact_sheets.p002",
+            "source_sha256": "fe5c1944466bf890d4109983ffb85dd4dd70b26b039fb244122ff3be4f7462b1",
+            "text": "1. 取消 清除 不需要的复选标记，并在活动窗格中选择一个视频。\n2. 选择 工具 > 创建视频联系表...。\n3. 设置帧数（4–48）、列数（2–8）和帧宽（像素）（160–640）。默认值为 12 帧、4 列和 320 像素。\n4. 如果希望在帧下显示字幕，请保持 显示帧编号和时间戳 已选。\n5. 点击 创建…，选择 PNG 文件名和保存位置，然后保存。\n6. 等待 联系表完整，然后在图像查看器中打开已保存的 PNG。取消 停止提取；关闭 也会请求取消。"
+          },
+          {
+            "id": "video_contact_sheets.p003",
+            "source_sha256": "f7a7ce26c0b8bef736351a923a83f5889983daaf7968b4a4afe9f42a47d89af6",
+            "text": "帧在视频片段中均匀抽取，避免抽取准确的第一帧和最后一帧。这并不是场景检测，并且该工具需要可读取的视频时长。大r 网格和帧处理时间更长，并生成更大的图像。为了快速概览，可从默认的 12 帧表开始。"
+          }
+        ],
+        "body": "联系表是一张 PNG 图片，包含视频中静态帧的网格。它可以在不播放整个片段的情况下提供概览。工具 > 创建视频联系表... 不会更改源视频。\n\n1. 取消 清除 不需要的复选标记，并在活动窗格中选择一个视频。\n2. 选择 工具 > 创建视频联系表...。\n3. 设置帧数（4–48）、列数（2–8）和帧宽（像素）（160–640）。默认值为 12 帧、4 列和 320 像素。\n4. 如果希望在帧下显示字幕，请保持 显示帧编号和时间戳 已选。\n5. 点击 创建…，选择 PNG 文件名和保存位置，然后保存。\n6. 等待 联系表完整，然后在图像查看器中打开已保存的 PNG。取消 停止提取；关闭 也会请求取消。\n\n帧在视频片段中均匀抽取，避免抽取准确的第一帧和最后一帧。这并不是场景检测，并且该工具需要可读取的视频时长。大r 网格和帧处理时间更长，并生成更大的图像。为了快速概览，可从默认的 12 帧表开始。"
+      },
+      {
+        "id": "folder_synchronization",
+        "title": "文件夹 同步",
+        "paragraphs": [
+          {
+            "id": "folder_synchronization.p001",
+            "source_sha256": "6a5c3c71a212781f6a6c74fac70303224fcbeac3c7d2b4e7c00e810e71cdd110",
+            "text": "在左右窗格中打开要比较的文件夹，然后选择“工具”>“比较/同步文件夹”。在对单向同步进行排队之前，请检查“仅左”、“仅右”、“较新”和“不同”条目。"
+          },
+          {
+            "id": "folder_synchronization.steps",
+            "source_sha256": "cf1597a5ccfc3cc7b73f8f7e2f000fa029816c676a9967854c22cd7d39862515",
+            "text": "1. 在左侧和右侧窗格中打开两个文件夹。设置包括子文件夹如果需要，为每一边独立操作。\n2. 选择工具 > 比较/同步文件夹...\n3. 审查相对路径和状态：仅左边，仅右边，相同，左边更新，右边更新或不同。此比较使用支持的媒体文件、文件大小和修改时间；相同并不是完整内容的哈希检查。它独立于窗格的查找/媒体显示过滤器清点文件夹。\n4. 高亮特定行以限制操作。如果没有高亮行，方向按钮将考虑整个比较。\n5. 点击复制缺失/更新的 → 右或复制缺失/更新的 → 左. 仅建议在该方向上缺失的、新的或不同的文件。在排队之前，请阅读并确认文件数量。\n6. 跟踪进度于 工具 > 传输队列...这会将文件单向复制；不会删除多余的目标文件或执行自动双向同步。如果您想要更新的结果列表，请在复制后再次运行比较。"
+          }
+        ],
+        "body": "在左右窗格中打开要比较的文件夹，然后选择“工具”>“比较/同步文件夹”。在对单向同步进行排队之前，请检查“仅左”、“仅右”、“较新”和“不同”条目。\n\n1. 在左侧和右侧窗格中打开两个文件夹。设置包括子文件夹如果需要，为每一边独立操作。\n2. 选择工具 > 比较/同步文件夹...\n3. 审查相对路径和状态：仅左边，仅右边，相同，左边更新，右边更新或不同。此比较使用支持的媒体文件、文件大小和修改时间；相同并不是完整内容的哈希检查。它独立于窗格的查找/媒体显示过滤器清点文件夹。\n4. 高亮特定行以限制操作。如果没有高亮行，方向按钮将考虑整个比较。\n5. 点击复制缺失/更新的 → 右或复制缺失/更新的 → 左. 仅建议在该方向上缺失的、新的或不同的文件。在排队之前，请阅读并确认文件数量。\n6. 跟踪进度于 工具 > 传输队列...这会将文件单向复制；不会删除多余的目标文件或执行自动双向同步。如果您想要更新的结果列表，请在复制后再次运行比较。"
+      },
+      {
+        "id": "folder_organization_rules",
+        "title": "文件夹 组织规则",
+        "paragraphs": [
+          {
+            "id": "folder_organization_rules.p001",
+            "source_sha256": "0bafa187b865c37f918aac231d07f9cd0755fcf9049ab3d6462fd49cfa5b59dd",
+            "text": "工具 > 文件夹组织规则... 保存可重复的复制或移动规则。与智能集合不同，应用这些规则会真正更改文件位置或创建副本。这些规则不会在后台自动运行：请每次审查预览并确认 应用…。"
+          },
+          {
+            "id": "folder_organization_rules.p002",
+            "source_sha256": "45964b262f5d8c5b49ac1274b9996e504d695e52fbadd425b9ecb861df577756",
+            "text": "创建或编辑规则\n\n1. 点击包含你想要整理的文件的窗格，然后选择工具 > 文件夹组织规则...\n2. 点击添加。输入规则名称，选择操作：复制或移动，并使用设置目标文件夹浏览…如果需要。仔细检查操作：新规则最初使用移动。\n3. 将媒体类型设置为任何。图像或视频. 可选条件是扩展（用逗号分隔）,文件名包含，编解码器包含, 最低评分（0–5），并且需要精确标签。未使用的条件保持为空；0 表示不限制最低评分。输入的所有条件必须匹配。文件名和编解码器匹配忽略字母大小写；标签必须与整个已分配的标签匹配，而不能只匹配其中的一部分。\n4. 保留 规则已启用如果规则应参与，则勾选，然后点击保存规则\n5. 选择一个现有规则并编辑以更改它。使用 ↑ 和 ↓ 来更改优先级：第一个启用的匹配规则获胜。删除在确认后删除规则，而不是其媒体；撤销删除在此管理器保持打开时可用。"
+          },
+          {
+            "id": "folder_organization_rules.p003",
+            "source_sha256": "c7c9d8a141f4adb1d8ac99b1211bd67950395855319313f7bcc29474683eae6c",
+            "text": "预览并应用\n\n1. 如果您想限制考虑的文件，请设置源窗格的筛选器。\n2. 在规则管理器中，点击 预览活动窗格…。\n3. 对于窗格的筛选匹配文件，选择 范围： 可见；对于其完整扫描集，选择 全部已扫描。本工具没有 已选择 范围。\n4. 选择是否 保留相对于活动窗格的文件夹。选中时保持每个规则目标下的相对子文件夹；未选中时仅使用文件名。\n5. 更改这些控件后，点击 刷新预览。审查规则、操作、来源、目标和 状态。未匹配的文件不会进入队列。在应用前解决诸如重复目标等问题。\n6. 点击 应用… 并确认拟议的操作数量。复制/移动工作将进入正常传输队列；现有目标使用正常的冲突处理方式。关闭 将离开预览而不应用。"
+          },
+          {
+            "id": "folder_organization_rules.p004",
+            "source_sha256": "f28b27db9fb710652715db25a211de3d6a9cef8f4fd15378e38e9f06d8fd4343",
+            "text": "示例\n\n要将 MP4 视频复制到审阅文件夹中，请添加一个名为 MP4 审阅副本的规则，选择复制，选择审阅目的地，将媒体类型设置为 视频，并将扩展名设置为 mp4，然后 保存规则。预览活动窗格… 与 范围： 可见，检查路径和 应用…。这样会创建副本；仅当您打算移动原件时选择移动。"
+          }
+        ],
+        "body": "工具 > 文件夹组织规则... 保存可重复的复制或移动规则。与智能集合不同，应用这些规则会真正更改文件位置或创建副本。这些规则不会在后台自动运行：请每次审查预览并确认 应用…。\n\n创建或编辑规则\n\n1. 点击包含你想要整理的文件的窗格，然后选择工具 > 文件夹组织规则...\n2. 点击添加。输入规则名称，选择操作：复制或移动，并使用设置目标文件夹浏览…如果需要。仔细检查操作：新规则最初使用移动。\n3. 将媒体类型设置为任何。图像或视频. 可选条件是扩展（用逗号分隔）,文件名包含，编解码器包含, 最低评分（0–5），并且需要精确标签。未使用的条件保持为空；0 表示不限制最低评分。输入的所有条件必须匹配。文件名和编解码器匹配忽略字母大小写；标签必须与整个已分配的标签匹配，而不能只匹配其中的一部分。\n4. 保留 规则已启用如果规则应参与，则勾选，然后点击保存规则\n5. 选择一个现有规则并编辑以更改它。使用 ↑ 和 ↓ 来更改优先级：第一个启用的匹配规则获胜。删除在确认后删除规则，而不是其媒体；撤销删除在此管理器保持打开时可用。\n\n预览并应用\n\n1. 如果您想限制考虑的文件，请设置源窗格的筛选器。\n2. 在规则管理器中，点击 预览活动窗格…。\n3. 对于窗格的筛选匹配文件，选择 范围： 可见；对于其完整扫描集，选择 全部已扫描。本工具没有 已选择 范围。\n4. 选择是否 保留相对于活动窗格的文件夹。选中时保持每个规则目标下的相对子文件夹；未选中时仅使用文件名。\n5. 更改这些控件后，点击 刷新预览。审查规则、操作、来源、目标和 状态。未匹配的文件不会进入队列。在应用前解决诸如重复目标等问题。\n6. 点击 应用… 并确认拟议的操作数量。复制/移动工作将进入正常传输队列；现有目标使用正常的冲突处理方式。关闭 将离开预览而不应用。\n\n示例\n\n要将 MP4 视频复制到审阅文件夹中，请添加一个名为 MP4 审阅副本的规则，选择复制，选择审阅目的地，将媒体类型设置为 视频，并将扩展名设置为 mp4，然后 保存规则。预览活动窗格… 与 范围： 可见，检查路径和 应用…。这样会创建副本；仅当您打算移动原件时选择移动。"
+      },
+      {
+        "id": "transfer_queue",
+        "title": "管理传输队列",
+        "paragraphs": [
+          {
+            "id": "transfer_queue.p001",
+            "source_sha256": "4c74b2e240612a64b07641c0bd71035726be26f6a6731e266ba7363531a03670",
+            "text": "工具 > 传输队列... 显示排队复制和移动工作的进度，包括由文件夹同步和组织规则启动的传输。视频转换有其自己的独立进度窗口。"
+          },
+          {
+            "id": "transfer_queue.p002",
+            "source_sha256": "28ed18a8e1ee5a8d11f642e0b6267d950ad0adcf8efa7da73b9228138757b48c",
+            "text": "1. 使用窗格控件或文件命令复制或移动 开始。如果其进度窗口尚未显示，请打开 工具 > 传输队列...。\n2. 查看当前操作、进度、排队数量和传输详细信息。\n3. 点击 暂停 可在安全点暂停复制；按钮会变为“恢复”。点击“恢复”可继续传输。已经执行的移动操作可能需要完成后才能响应。\n4. 取消当前 请求停止活动作业。但它不会清除所有待处理作业，并且已成功完成的文件不会自动撤销。\n5. 重试失败 会重新排队最近传输失败的文件。请先检查报告的错误和目标位置。\n6. 关闭 隐藏进度窗口；它不会取消复制或移动操作。从 工具 重新打开以检查进度。使用 Ctrl+Z 单独撤销受支持的已完成文件操作。"
+          }
+        ],
+        "body": "工具 > 传输队列... 显示排队复制和移动工作的进度，包括由文件夹同步和组织规则启动的传输。视频转换有其自己的独立进度窗口。\n\n1. 使用窗格控件或文件命令复制或移动 开始。如果其进度窗口尚未显示，请打开 工具 > 传输队列...。\n2. 查看当前操作、进度、排队数量和传输详细信息。\n3. 点击 暂停 可在安全点暂停复制；按钮会变为“恢复”。点击“恢复”可继续传输。已经执行的移动操作可能需要完成后才能响应。\n4. 取消当前 请求停止活动作业。但它不会清除所有待处理作业，并且已成功完成的文件不会自动撤销。\n5. 重试失败 会重新排队最近传输失败的文件。请先检查报告的错误和目标位置。\n6. 关闭 隐藏进度窗口；它不会取消复制或移动操作。从 工具 重新打开以检查进度。使用 Ctrl+Z 单独撤销受支持的已完成文件操作。"
+      },
+      {
+        "id": "safe_file_actions",
+        "title": "安全文件操作",
+        "paragraphs": [
+          {
+            "id": "safe_file_actions.p001",
+            "source_sha256": "4ed845375e5d90b2ef4791690f07c1a09210904cf1686aec2715d733a377226d",
+            "text": "删除 会将文件发送到操作系统的回收站或垃圾箱。在删除或移动后，活动排序顺序中紧跟被移除选择项的文件会自动被选中并显示；如果被移除的文件位于末尾，则会选择新的最后一个文件。重命名 和刷新也会保留一个有用的当前文件，这种行为在 详细信息 和 缩略图 中也适用。撤销可以恢复最近的复制、移动、替换、单个重命名和完整批量重命名。替换 的冲突提供 替换、“跳过”或 两者都保留，并可以选择将答案应用于所有剩余的冲突。"
+          },
+          {
+            "id": "safe_file_actions.undo_busy_1273",
+            "source_sha256": "ff2548c8d5b9c336f23e02624d99be111f63b741dd5e9d8d94c87c038febd3a8",
+            "text": "Undo在后台运行，因此窗口保持响应。它会暂时停止预览，并在现有读取完成时暂停新的元数据和缩略图文件读取，然后恢复文件。您无需先等待文件夹扫描完成。短暂的Windows文件共享锁会自动重试。如果另一个程序仍然占用文件，或者恢复的源文件会替换新创建的文件，Undo会停止并报告问题，而不是覆盖它。已完成的恢复步骤会保留；未完成的步骤和原始替换备份仍然可用。关闭 使用受影响文件的应用程序或解决所报告的冲突，然后再次按Undo以继续。队列中的传输在恢复未完成时会等待。恢复未完成时，请勿删除恢复备份或编辑受影响的文件。预览 切换保持为所选状态；恢复后再次选择文件以继续预览。"
+          }
+        ],
+        "body": "删除 会将文件发送到操作系统的回收站或垃圾箱。在删除或移动后，活动排序顺序中紧跟被移除选择项的文件会自动被选中并显示；如果被移除的文件位于末尾，则会选择新的最后一个文件。重命名 和刷新也会保留一个有用的当前文件，这种行为在 详细信息 和 缩略图 中也适用。撤销可以恢复最近的复制、移动、替换、单个重命名和完整批量重命名。替换 的冲突提供 替换、“跳过”或 两者都保留，并可以选择将答案应用于所有剩余的冲突。\n\nUndo在后台运行，因此窗口保持响应。它会暂时停止预览，并在现有读取完成时暂停新的元数据和缩略图文件读取，然后恢复文件。您无需先等待文件夹扫描完成。短暂的Windows文件共享锁会自动重试。如果另一个程序仍然占用文件，或者恢复的源文件会替换新创建的文件，Undo会停止并报告问题，而不是覆盖它。已完成的恢复步骤会保留；未完成的步骤和原始替换备份仍然可用。关闭 使用受影响文件的应用程序或解决所报告的冲突，然后再次按Undo以继续。队列中的传输在恢复未完成时会等待。恢复未完成时，请勿删除恢复备份或编辑受影响的文件。预览 切换保持为所选状态；恢复后再次选择文件以继续预览。"
+      },
+      {
+        "id": "workspaces_and_cache",
+        "title": "工作区和缓存",
+        "paragraphs": [
+          {
+            "id": "workspaces_and_cache.p001",
+            "source_sha256": "9546017780aef5e7077c76d71f514132c6cabc5dd92f56a8dc2863641361fe9f",
+            "text": "已保存的工作区会记住文件夹、过滤器、视图模式、列、检查器和布局。工具 下的智能集合是较小的单窗格预设：它们会保存文件夹、包括子文件夹 和媒体切换、文件名和高级过滤器、分辨率、排序、详细信息/缩略图 视图、缩略图大小，以及 连续/分页 选择。应用 一次只影响活动窗格。管理器可以重命名或删除预设；删除需要确认，而 撤销删除 在管理器保持打开时恢复它。智能集合从不移动、删除或注释媒体。已缓存 元数据和缩略图加快未来的访问速度；工具 > 缓存与扫描 可以检查、修剪或清除它们。"
+          },
+          {
+            "id": "workspaces_and_cache.workspace_steps",
+            "source_sha256": "dff5cc601aa1e01667f72fd065cd8e4b55ae77974639503d66c69592dd802aa7",
+            "text": "保存和加载工作区\n\n1. 将两个窗格排列好，包括你希望重复使用的文件夹、筛选器、视图和布局。\n2. 选择 工具 > 保存工作区... 并输入工作区名称。重复使用现有名称将直接替换该工作区而不会有单独的替换提示；使用新名称可保留之前的布局。\n3. 稍后 选择 工具 > 加载工作区...。提示会列出已保存的名称。输入显示的确切名称并确认以恢复两个窗格。取消 保留当前工作区不变。\n\n当你只想恢复一个窗格的搜索和视图时，请使用 [chapter:smart_collections]。"
+          },
+          {
+            "id": "workspaces_and_cache.cache_steps",
+            "source_sha256": "db9e5a5210a5fdc95458f3dd3a9b9cd62b82de37c69b195a47a3e595ebe17bc3",
+            "text": "缓存和扫描控制\n\n打开工具 > 缓存和扫描...查看元数据条目和缩略图存储。在扫描设置，选择性能概况： 安静用于较低的背景负载，均衡用于普通使用，或选择快速以获得更高的吞吐量。如有需要，可调整并行元数据工作线程（1-16）。排除模式（以分号分隔）可以省略匹配的路径；窗口中显示的示例包括 *.tmp；proxy/*；@eaDir/*. 点击 应用保存设置。刷新使用已更改的排除项运行扫描的窗格。\n\n在缩略图存储操作系统驱动器的最大百分比默认为1%，并接受0.1%–10%.应用保存限制；立即执行限制删除最近最少使用的缓存缩略图，直到达到限制。删除过期条目修剪过时的元数据条目。清除缩略图请求确认，然后仅删除生成的缩略图；它们将在需要时重新生成。清除所有缓存确认已删除技术缓存数据和缩略图，因此将来的访问需要重新扫描/解码。这些缓存控制不会删除原始媒体或用户评分、颜色标签和标签。"
+          }
+        ],
+        "body": "已保存的工作区会记住文件夹、过滤器、视图模式、列、检查器和布局。工具 下的智能集合是较小的单窗格预设：它们会保存文件夹、包括子文件夹 和媒体切换、文件名和高级过滤器、分辨率、排序、详细信息/缩略图 视图、缩略图大小，以及 连续/分页 选择。应用 一次只影响活动窗格。管理器可以重命名或删除预设；删除需要确认，而 撤销删除 在管理器保持打开时恢复它。智能集合从不移动、删除或注释媒体。已缓存 元数据和缩略图加快未来的访问速度；工具 > 缓存与扫描 可以检查、修剪或清除它们。\n\n保存和加载工作区\n\n1. 将两个窗格排列好，包括你希望重复使用的文件夹、筛选器、视图和布局。\n2. 选择 工具 > 保存工作区... 并输入工作区名称。重复使用现有名称将直接替换该工作区而不会有单独的替换提示；使用新名称可保留之前的布局。\n3. 稍后 选择 工具 > 加载工作区...。提示会列出已保存的名称。输入显示的确切名称并确认以恢复两个窗格。取消 保留当前工作区不变。\n\n当你只想恢复一个窗格的搜索和视图时，请使用 [chapter:smart_collections]。\n\n缓存和扫描控制\n\n打开工具 > 缓存和扫描...查看元数据条目和缩略图存储。在扫描设置，选择性能概况： 安静用于较低的背景负载，均衡用于普通使用，或选择快速以获得更高的吞吐量。如有需要，可调整并行元数据工作线程（1-16）。排除模式（以分号分隔）可以省略匹配的路径；窗口中显示的示例包括 *.tmp；proxy/*；@eaDir/*. 点击 应用保存设置。刷新使用已更改的排除项运行扫描的窗格。\n\n在缩略图存储操作系统驱动器的最大百分比默认为1%，并接受0.1%–10%.应用保存限制；立即执行限制删除最近最少使用的缓存缩略图，直到达到限制。删除过期条目修剪过时的元数据条目。清除缩略图请求确认，然后仅删除生成的缩略图；它们将在需要时重新生成。清除所有缓存确认已删除技术缓存数据和缩略图，因此将来的访问需要重新扫描/解码。这些缓存控制不会删除原始媒体或用户评分、颜色标签和标签。"
+      },
+      {
+        "id": "language",
+        "title": "语言",
+        "paragraphs": [
+          {
+            "id": "language.p001",
+            "source_sha256": "76d36cb87d53e68bd8a17b59b3d7bf1868001f1323f01fa67c901dda96cf4779",
+            "text": "在首次启动时，如果操作系统支持，应用程序将遵循操作系统的语言。选择 工具 > 语言 来覆盖它，或者返回到 系统默认。更改语言后请重新启动应用程序。"
+          }
+        ],
+        "body": "在首次启动时，如果操作系统支持，应用程序将遵循操作系统的语言。选择 工具 > 语言 来覆盖它，或者返回到 系统默认。更改语言后请重新启动应用程序。"
+      },
+      {
+        "id": "glossary",
+        "title": "词汇表",
+        "paragraphs": [
+          {
+            "id": "glossary.p001",
+            "source_sha256": "de56ad1538a95954142a64a6faf297c48d96564544c6f1ea1947a5a7a1974bf5",
+            "text": "活动窗格：最近收到点击的左侧或右侧浏览器。菜单和键盘操作通常适用于此处。"
+          },
+          {
+            "id": "glossary.p002",
+            "source_sha256": "9e944202497daf57a892e77418fbcd6ddd948febb6e71fdac6b8f66941692f17",
+            "text": "编解码器：用​​于编码视频或音频的方法，例如 H.264、H.265/HEVC、AV1、AAC 或 Opus。 MP4 或 MKV 等容器可以容纳一个或多个编码流。"
+          },
+          {
+            "id": "glossary.p003",
+            "source_sha256": "672c8a727345c58eb445fec2a58768fb80215d8aa50e1aedf274abd854620d39",
+            "text": "Remux：将现有视频/音频流复制到另一个容器中，无需重新编码。它快速且无损，但不会更改编解码器。"
+          },
+          {
+            "id": "glossary.p004",
+            "source_sha256": "5b4c2520b2fcb4ed201a6f159e1d6042244f198a9d54ca2e7e50b21b6430ad98",
+            "text": "CRF/质量：重新编码的恒定质量目标。较低的数字要求更高的质量和更大的文件。硬件编码器将其转换为最接近的质量控制。"
+          },
+          {
+            "id": "glossary.p005",
+            "source_sha256": "57f6a48371b1e7d33ef4389ca76d13c11dc500afbed5245024c4eb6695646f8c",
+            "text": "元数据缓存：存储技术结果，避免重复探测未更改的文件。它与评级、标签和标记是分开的。"
+          },
+          {
+            "id": "glossary.p006",
+            "source_sha256": "a1bb6a1d6960bc4e1441baca24dc3ae68ea222ac01e819b3e083fcd1a166e6f7",
+            "text": "缩略图缓存：生成的预览图片保留在磁盘上，以便将来更快地访问，并通过 工具 > 缓存与扫描 进行限制。"
+          },
+          {
+            "id": "glossary.p007",
+            "source_sha256": "fa7be14671267800c9e3a8d8f85ceaf1d75c18d830685a91819c692490061aab",
+            "text": "Recursive/包括子文件夹：扫描选定的文件夹及其下面的每个文件夹。它绝不意味着整个驱动器，除非选择了驱动器根目录本身。"
+          },
+          {
+            "id": "glossary.p008",
+            "source_sha256": "97af76d3a80e273362782d714bf88bcdcc83ab072222a8994eb06977af0de44c",
+            "text": "智能集合：保存的视图定义，包含位置、过滤器、排序和演示设置。它不复制或移动文件。"
+          }
+        ],
+        "body": "活动窗格：最近收到点击的左侧或右侧浏览器。菜单和键盘操作通常适用于此处。\n\n编解码器：用​​于编码视频或音频的方法，例如 H.264、H.265/HEVC、AV1、AAC 或 Opus。 MP4 或 MKV 等容器可以容纳一个或多个编码流。\n\nRemux：将现有视频/音频流复制到另一个容器中，无需重新编码。它快速且无损，但不会更改编解码器。\n\nCRF/质量：重新编码的恒定质量目标。较低的数字要求更高的质量和更大的文件。硬件编码器将其转换为最接近的质量控制。\n\n元数据缓存：存储技术结果，避免重复探测未更改的文件。它与评级、标签和标记是分开的。\n\n缩略图缓存：生成的预览图片保留在磁盘上，以便将来更快地访问，并通过 工具 > 缓存与扫描 进行限制。\n\nRecursive/包括子文件夹：扫描选定的文件夹及其下面的每个文件夹。它绝不意味着整个驱动器，除非选择了驱动器根目录本身。\n\n智能集合：保存的视图定义，包含位置、过滤器、排序和演示设置。它不复制或移动文件。"
+      },
+      {
+        "id": "support_the_project",
+        "title": "支持该项目",
+        "paragraphs": [
+          {
+            "id": "support_the_project.p001",
+            "source_sha256": "62b207421228680770777e66598c8ce79ee121aaee8cd232e847e65dd28e2122",
+            "text": "分辨率文件管理器 作为独立应用程序提供，无需订阅。如果您发现它有用并且愿意支持持续开发，请选择“帮助”>“如果您喜欢这个，请给约翰买杯咖啡”。相同的可选支持按钮出现在帮助 > 关于 中，并在普通 Web 浏览器中打开公共 JohnPerky 页面："
+          },
+          {
+            "id": "support_the_project.p002",
+            "source_sha256": "f625bc04cc8dea0548e7e06bf6f5a1bf75532166728133d0f26049dc60b5f0ee",
+            "text": "https://buymeacoffee.com/johnperky"
+          },
+          {
+            "id": "support_the_project.p003",
+            "source_sha256": "f3433f015e63332b4aeaca246443618a7f7f6614bafc5941d7509c71ca191619",
+            "text": "支持该项目完全是可选的。该应用程序不会自动打开页面、收集付款信息、跟踪您是否访问它或根据支持更改任何功能。"
+          },
+          {
+            "id": "support_the_project.p004",
+            "source_sha256": "fb8e1f1b4be83a666d0f808238dffefa4cc8b5369dc8b4d25aa74a5d499c5f7a",
+            "text": "评分和可选提醒"
+          },
+          {
+            "id": "support_the_project.reminder_timing",
+            "source_sha256": "b00a39416f2e0c07132850cca60bde12e893c16cbfd085f4b8a29fe722bf6d8e",
+            "text": "在至少三天内启动五次后，该应用可能会邀请你在 Microsoft Store 中对其进行评分。 稍后 将请求推迟十次发射。可选的咖啡提醒从启动 11 次开始，并且仅在 以后再说 之后每 11 次启动重复一次。 不再询问 禁用任一提醒； 工具 > 提醒可以重新启用。仅当您按下页面的明确按钮后，页面才会打开。"
+          },
+          {
+            "id": "support_the_project.reminder_settings",
+            "source_sha256": "aeec7ca97a52107645156aa31a220d7a33d6f136fde87d37a08a2729e511a24e",
+            "text": "选择 工具 > 提醒… 来分别控制评分和支持提示。勾选提示以启用，取消勾选以禁用，然后保存。取消 保持当前选择不变。"
+          }
+        ],
+        "body": "分辨率文件管理器 作为独立应用程序提供，无需订阅。如果您发现它有用并且愿意支持持续开发，请选择“帮助”>“如果您喜欢这个，请给约翰买杯咖啡”。相同的可选支持按钮出现在帮助 > 关于 中，并在普通 Web 浏览器中打开公共 JohnPerky 页面：\n\nhttps://buymeacoffee.com/johnperky\n\n支持该项目完全是可选的。该应用程序不会自动打开页面、收集付款信息、跟踪您是否访问它或根据支持更改任何功能。\n\n评分和可选提醒\n\n在至少三天内启动五次后，该应用可能会邀请你在 Microsoft Store 中对其进行评分。 稍后 将请求推迟十次发射。可选的咖啡提醒从启动 11 次开始，并且仅在 以后再说 之后每 11 次启动重复一次。 不再询问 禁用任一提醒； 工具 > 提醒可以重新启用。仅当您按下页面的明确按钮后，页面才会打开。\n\n选择 工具 > 提醒… 来分别控制评分和支持提示。勾选提示以启用，取消勾选以禁用，然后保存。取消 保持当前选择不变。"
+      }
+    ]
+  },
+  "literals": {
+    "Confirm": "确认",
+    "Move {field0} to the Recycle Bin / Trash?": "将 {field0} 移至回收站/垃圾箱？",
+    "Synchronize preview": "同步预览",
+    "Queue {field0} file(s) for copying to the {field1} pane?": "将 {field0} 文件放入队列以复制到 {field1} 窗格？",
+    "Keyboard shortcuts": "键盘快捷键",
+    "Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file": "Ctrl+A 选择所有显示的内容\nCtrl+C 复制所选内容\nCtrl+X 剪切所选内容\nCtrl+V 粘贴到活动窗格\nCtrl+Z 撤消上次文件操作\n删除 将选定的文件移至回收站/垃圾箱\nF2 重命名所选文件\nF5 刷新两个窗格\nBackspace 向上一个文件夹\n,（逗号）活动预览后退 10%\n。 （句号）主动预览向前 10%\n双击打开文件",
+    "Folder not found": "找不到文件夹",
+    "This folder does not exist:\n{field0}": "该文件夹不存在：\n{field0}",
+    "Not enough videos": "视频不够多",
+    "At least two visible videos with readable durations are needed for comparison.": "至少需要两个具有可读持续时间的可见视频进行比较。",
+    "No size outliers": "无尺寸异常值",
+    "No visible video is at least {field0}× the average data rate of {field1} MB/min.": "没有可见视频的平均数据速率至少为 {field0}× {field1} MB/分钟。",
+    "Some dropped files failed": "一些删除的文件失败",
+    "Could not reveal some files": "无法透露某些文件",
+    "Select one file": "选择一个文件",
+    "Select exactly one file to rename.": "仅选择一个文件进行重命名。",
+    "Invalid filename": "文件名无效",
+    "Enter a filename without folder separators.": "输入不带文件夹分隔符的文件名。",
+    "File already exists": "文件已存在",
+    "A file named {field0} already exists.": "名为 {field0} 的文件已存在。",
+    "Nothing selected": "未选择任何内容",
+    "Select one or more files in the active pane first.": "首先在活动窗格中选择一个或多个文件。",
+    "Confirm {field0}": "确认{field0}",
+    "{field0} {field1} file(s) to:\n{field2}?": "{field0} {field1} 文件发送至：\n{field2}？",
+    "Some files failed": "部分文件失败",
+    "Finished": "完成",
+    "Successfully {field0} {field1} file(s).": "成功 {field0} {field1} 文件。",
+    "Unknown choice": "未知的选择",
+    "Use replace, skip, keep both, or newer.": "使用替换、跳过、保留两者或更新。",
+    "Batch rename": "批量重命名",
+    "Select one or more files first.": "首先选择一个或多个文件。",
+    "Batch rename complete": "批量重命名完成",
+    "Renamed {field0} file(s). Use Ctrl+Z to undo the batch.": "重命名 {field0} 文件。使用 Ctrl+Z 撤消批处理。",
+    "Nothing to retry": "没有什么可重试的",
+    "The last transfer had no failed files.": "上次传输没有失败的文件。",
+    "Transfer active": "转移活跃",
+    "Wait for the current transfer to finish before undoing.": "等待当前传输完成后再撤消。",
+    "Nothing to undo": "没有什么可撤消的",
+    "There are no recent copy, move, replacement, or rename actions.": "最近没有复制、移动、替换或重命名操作。",
+    "Undo incomplete": "撤消不完整",
+    "Undo complete": "撤消完成",
+    "The most recent file operation was undone.": "最近的文件操作已撤消。",
+    "Move to Recycle Bin": "移至回收站",
+    "Move {field0} selected file(s) to the Recycle Bin / Trash?": "将 {field0} 选定的文件移至回收站/垃圾箱？",
+    "Some files could not be removed": "某些文件无法删除",
+    "Embedded metadata": "嵌入元数据",
+    "Select exactly one image or video first.": "首先选择一个图像或视频。",
+    "Create video contact sheet": "创建视频联系表",
+    "Select exactly one video first.": "首先选择一个视频。",
+    "Similar image search": "相似图片搜索",
+    "No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).": "在公差 {field0} 下未发现视觉上相似的组。\n\n{field1} 缓存哈希； {field2} 无法读取图像。",
+    "Select two files": "选择两个文件",
+    "Select exactly two files to compare.": "仅选择两个文件进行比较。",
+    "Nothing to synchronize": "没有什么需要同步的",
+    "No selected files need copying in that direction.": "没有选定的文件需要沿该方向复制。",
+    "No workspaces": "没有工作空间",
+    "Save a workspace first.": "首先保存一个工作区。",
+    "Collection folder unavailable": "收藏夹不可用",
+    "The saved folder does not currently exist:\n{field0}": "保存的文件夹当前不存在：\n{field0}",
+    "Cache pruned": "缓存修剪",
+    "Removed {field0} stale entry/entries.": "删除了 {field0} 过时的条目。",
+    "Clear cache": "清除缓存",
+    "Clear all cached metadata? Files will be rescanned next time.": "清除所有缓存的元数据？下次将重新扫描文件。",
+    "Clear thumbnail cache": "清除缩略图缓存",
+    "Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.": "使用 {field1} 删除 {field0} 存储的缩略图？\n\n原始媒体文件和元数据不会更改。",
+    "Settings": "设置",
+    "{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.": "{field0} 性能设置、扫描选项和缩略图缓存限制已保存。缓存限制在后台强制执行。",
+    "Live updates unavailable": "无法实时更新",
+    "The folder-monitoring component is not installed.": "未安装文件夹监视组件。",
+    "Reveal many files?": "显示很多文件？",
+    "{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.": "选择 {field0} 文件。显示所有这些可能会打开大量文件管理器窗口。\n\n选择“是”显示每个选定的文件，或选择“否”仅显示第一个文件。",
+    "Rename failed": "重命名失败",
+    "Confirm batch rename": "确认批量重命名",
+    "Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.": "完全按照预览的方式重命名 {field0} 文件吗？\n\n可以使用 Ctrl+Z 撤消整个批次。",
+    "Batch rename failed": "批量重命名失败",
+    "No completed rename was kept where rollback was possible.\n\n{field0}": "在可能回滚的地方不保留已完成的重命名。\n\n{field0}",
+    "Nothing to export": "没有什么可导出的",
+    "The chosen scope contains no media files.": "所选范围不包含媒体文件。",
+    "Nothing to verify": "没有什么可验证的",
+    "Not enough images": "图片不足",
+    "The chosen scope contains fewer than two images.": "所选范围包含少于两个图像。",
+    "Could not save workspace": "无法保存工作区",
+    "Replace smart collection": "更换智能收藏",
+    "Replace the existing collection named {field0}?": "替换名为 {field0} 的现有集合？",
+    "Could not save collection": "无法保存收藏",
+    "Invalid rule": "规则无效",
+    "Enter a rule name.": "输入规则名称。",
+    "Choose a destination folder.": "选择目标文件夹。",
+    "Apply folder rules": "应用文件夹规则",
+    "Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.": "队列 {field0} 计划的复制/移动操作？\n\n现有目标将使用正常的冲突选择。移动和替换仍然不可撤销。",
+    "Delete rule": "删除规则",
+    "Delete rule '{field0}'?": "删除规则“{field0}”？",
+    "Cache cleared": "缓存已清除",
+    "Removed {field0} metadata entries and cached thumbnails.": "删除了 {field0} 元数据条目和缓存的缩略图。",
+    "Thumbnail cache": "缩略图缓存",
+    "The thumbnail cache is already empty.": "缩略图缓存已为空。",
+    "Thumbnail cache cleared": "缩略图缓存已清除",
+    "Deleted {field0} thumbnail(s) and freed {field1}.": "已删除 {field0} 缩略图并释放 {field1}。",
+    "Could not monitor folder": "无法监控文件夹",
+    "Live updates could not be enabled for:\n{field0}\n\n{field1}": "无法启用实时更新：\n{field0}\n\n{field1}",
+    "Could not open file": "无法打开文件",
+    "Frame exported": "帧导出",
+    "Metadata exported": "导出的元数据",
+    "Saved {field0} field(s).": "已保存 {field0} 字段。",
+    "Metadata unavailable": "元数据不可用",
+    "Report exported": "报告导出",
+    "Saved {field0} result(s).": "已保存 {field0} 结果。",
+    "Invalid settings": "无效设置",
+    "Use whole numbers for frames, columns, and width.": "使用整数表示框架、列和宽度。",
+    "Invalid tolerance": "无效容忍",
+    "Enter a whole number from 0 to 16.": "输入 0 到 16 之间的整数。",
+    "Replace collection": "替换集合",
+    "Replace {field0}?": "替换{field0}？",
+    "Delete smart collection": "删除智能收藏",
+    "Delete {field0}?\n\nNo media files or annotations will be changed.": "删除{field0}？\n\n不会更改任何媒体文件或注释。",
+    "Invalid rating": "无效评级",
+    "Minimum rating must be a whole number from 0 to 5.": "最低评分必须是 0 到 5 之间的整数。",
+    "Frame export failed": "帧导出失败",
+    "Could not export metadata": "无法导出元数据",
+    "Could not export report": "无法导出报告",
+    "Contact sheet complete": "联系表完整",
+    "Report export failed": "报告导出失败",
+    "Contact sheet failed": "联系表失败",
+    "Removed {field0} least-recently-used thumbnail(s).": "删除了 {field0} 最近最少使用的缩略图。",
+    "Add": "添加",
+    "All non-empty conditions must match. Rules are checked from top to bottom; the first match wins.": "所有非空条件必须匹配。规则从上到下检查；第一个匹配项获胜。",
+    "Appearance and accessibility": "外观和可访问性",
+    "Appearance and text size": "外观和文字大小",
+    "Apply": "应用",
+    "Apply rename": "应用重命名",
+    "Applying a collection changes only the active pane's folder, filters, sorting, and view.": "应用集合只会更改活动窗格的文件夹、筛选器、排序和视图。",
+    "Apply…": "应用…",
+    "Batch rename selected files": "批量重命名所选文件",
+    "Browse…": "浏览…",
+    "Cache and scanning": "缓存与扫描",
+    "Cached": "已缓存",
+    "Cancel": "取消",
+    "Cancel current": "取消当前",
+    "Cancel export": "取消导出",
+    "Case sensitive": "区分大小写",
+    "Changes are previewed immediately. Cancel restores the previous appearance.": "更改会立即预览。取消将恢复之前的外观。",
+    "Choose rule destination": "选择规则目标",
+    "Clear all cache": "清除所有缓存",
+    "Clear thumbnails": "清除缩略图",
+    "Close": "关闭",
+    "Collection name:": "收藏名称：",
+    "Compare files": "比较文件",
+    "Contents": "内容",
+    "Copy missing/newer → left": "复制缺失/更新的 → 左",
+    "Copy missing/newer → right": "复制缺失/更新的 → 右",
+    "Copy selected/all": "复制选定/全部",
+    "Create…": "创建…",
+    "Current name": "当前名称",
+    "Delete": "删除",
+    "Details": "详情",
+    "Edit": "编辑",
+    "Edit tags": "编辑标签",
+    "Enforce limit now": "立即执行限制",
+    "Examples: *.tmp; proxy/*; @eaDir/*": "示例：*.tmp; proxy/*; @eaDir/*",
+    "Exclude patterns (semicolon separated):": "排除模式（以分号分隔）：",
+    "Export CSV…": "导出 CSV…",
+    "Export current video frame": "导出当前视频帧",
+    "Export embedded metadata": "导出嵌入的元数据",
+    "Export integrity report": "导出完整性报告",
+    "Export JSON…": "导出 JSON…",
+    "Export media report": "导出媒体报告",
+    "Exports technical details, annotations, file status, and a library summary without changing media.": "导出技术细节、注释、文件状态和库摘要而不更改媒体。",
+    "Export…": "导出…",
+    "File conflicts": "文件冲突",
+    "Filename.jpg   1920 × 1080   H.265 / HEVC": "Filename.jpg   1920 × 1080   H.265 / HEVC",
+    "Find visually similar images": "查找视觉上相似的图像",
+    "Find:": "查找：",
+    "Folder": "文件夹",
+    "Folder comparison and synchronization": "文件夹比较和同步",
+    "Folder organization rules": "文件夹组织规则",
+    "Force recheck": "强制重新检查",
+    "Format:": "格式：",
+    "Include full file paths": "包含完整文件路径",
+    "Interface scale:": "界面缩放：",
+    "Keep left (recycle right)": "靠左（右回收）",
+    "Keep right (recycle left)": "靠右（左回收）",
+    "Load workspace": "加载工作区",
+    "Loading preview…": "正在加载预览…",
+    "Lower values are stricter. 6 is a useful starting point for resized or lightly recompressed copies.": "数值越低限制越严格。6 是调整大小或轻度重新压缩副本的一个有用起点。",
+    "Maximum percentage of operating-system drive:": "操作系统驱动器的最大百分比：",
+    "Media integrity verification": "媒体完整性验证",
+    "Media inventory report": "媒体库存报告",
+    "Move left": "向左移动",
+    "Move right": "向右移动",
+    "Name": "名称",
+    "New filename:": "新文件名：",
+    "New name": "新名称",
+    "New name:": "新名称：",
+    "Number padding:": "数字填充：",
+    "Parallel metadata workers (1–16):": "并行元数据工作线程（1–16）：",
+    "Path": "路径",
+    "Pause": "暂停",
+    "Perceptual image matching": "感知图像匹配",
+    "Performance profile:": "性能概况：",
+    "Preserve folders relative to the active pane": "保留相对于活动窗格的文件夹",
+    "Preview": "预览",
+    "Preview active pane…": "预览活动窗格…",
+    "Preview folder organization rules": "预览文件夹组织规则",
+    "Preview only until Apply is confirmed. The first enabled matching rule wins.": "仅在确认应用之前预览。第一个启用的匹配规则优先。",
+    "Query": "查询",
+    "Refresh preview": "刷新预览",
+    "Relative path": "相对路径",
+    "Remove stale entries": "删除过期条目",
+    "Rename": "重命名",
+    "Rename file": "重命名文件",
+    "Rename pattern": "重命名模式",
+    "Rename smart collection": "重命名智能集合",
+    "Replace:": "替换：",
+    "Reset widths": "重置宽度",
+    "Resolution File Manager": "分辨率文件管理器",
+    "Restore system default": "恢复系统默认",
+    "Retry failed": "重试失败",
+    "Review visually similar images": "审核视觉上相似的图像",
+    "Review-only: this tool never deletes or changes files.": "仅供审核：此工具从不删除或更改文件。",
+    "Rule enabled": "规则已启用",
+    "Rules are evaluated from top to bottom. Files are never changed until a preview is reviewed and Apply is confirmed.": "规则从上到下依次评估。在预览审核并确认应用之前，文件不会被更改。",
+    "Sample button": "示例按钮",
+    "Save": "保存",
+    "Save contact sheet": "保存联系人表",
+    "Save current": "保存当前",
+    "Save media report": "保存媒体报告",
+    "Save rule": "保存规则",
+    "Save smart collection": "保存智能收藏",
+    "Save workspace": "保存工作区",
+    "Saved one-pane searches": "已保存单窗格搜索",
+    "Scan settings": "扫描设置",
+    "Scope:": "范围：",
+    "Select a column, then move it or set its width.": "选择一列，然后移动它或设置其宽度。",
+    "Select an image": "选择一张图片",
+    "Select failed": "选择失败",
+    "Select this group in source pane": "在源窗格中选择此组",
+    "Set width": "设置宽度",
+    "Show frame numbers and timestamps": "显示帧编号和时间戳",
+    "Similarity is an estimate. Review files before taking any action; this window cannot delete them.": "相似度是估计值。在采取任何操作之前请检查文件；此窗口无法删除它们。",
+    "Similarity tolerance (0–16):": "相似度容差（0–16）：",
+    "Smart collections": "智能集合",
+    "Some files already exist. Enter: replace, skip, keep both, or newer": "有些文件已存在。请输入：替换、跳过、保留两个或较新",
+    "Start": "开始",
+    "Start number:": "起始编号：",
+    "Status": "状态",
+    "Template:": "模板：",
+    "Theme:": "主题：",
+    "Thumbnail storage": "缩略图存储",
+    "Tokens: {name} original name, {n} number, {ext} extension, {dotext} extension including dot": "标记：{name} 原始名称, {n} 编号, {ext} 扩展名, {dotext} 包含点的扩展名",
+    "Transfer queue": "传输队列",
+    "Undo delete": "撤销删除",
+    "Verify media integrity": "验证媒体完整性",
+    "Width:": "宽度:",
+    "Workspace name:": "工作区名称:",
+    "⤓ PNG": "⤓ PNG",
+    "🔇 Unavailable": "🔇 不可用",
+    "Thumbnails": "缩略图",
+    "Ready": "就绪",
+    "Keep both": "两者都保留",
+    "Filename": "文件名",
+    "Move": "移动",
+    "Copy": "复制",
+    "Cancelled": "已取消",
+    "Add to selection basket": "添加到选择篮",
+    "New folder…": "新建文件夹…",
+    "Selection basket…": "选择篮…",
+    "Selection basket": "选择篮",
+    "Highlighted files:": "高亮文件：",
+    "Tick selection": "勾选选择",
+    "Untick selection": "取消勾选选择",
+    "Undo in progress…": "撤销进行中…",
+    "\nUnfinished recovery steps and backups were retained. Close applications using these files, then press Undo again.": "\n未完成的恢复步骤和备份已保留。关闭使用这些文件的应用程序，然后按撤销再次。",
+    "Undo would overwrite an existing file: {target}. Both files were retained.": "撤销将覆盖现有文件：{target}. 两个文件都被保留。",
+    "Undo target is missing; recovery retained: {target}": "撤销目标缺失；已保留恢复：{target}",
+    "Undo backup is missing: {backup}": "撤销备份丢失：{backup}",
+    "New folder": "新建文件夹",
+    "Folder name:": "文件夹名称：",
+    "Filename conflict": "文件名冲突",
+    "Rename file — live preview": "重命名文件－ 实时预览",
+    "Could not create folder": "无法创建文件夹",
+    "Select or tick files first.": "请先选择或勾选文件。",
+    "Move files": "移动文件",
+    "Copy files": "复制 文件",
+    "Ask for each conflict": "请求每个冲突",
+    "keep both": "保留两者",
+    "Replace": "替换",
+    "Skip": "跳过",
+    "Selection basket — temporary references": "选择篮 — 临时引用",
+    "Original location": "原始位置",
+    "Add pane selection": "添加窗格选择",
+    "Remove references": "移除引用",
+    "Clear basket": "清除篮子",
+    "Copy to active pane": "复制到活动窗格",
+    "Move to active pane": "移动到活动窗格",
+    "Source missing": "来源 缺失",
+    " files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "文件。在排队前会审查冲突。替换会为本次会话保留撤销备份。",
+    "Queue move": "队列移动",
+    "Queue copy": "队列复制",
+    "Unsafe destination": "不安全的目的地",
+    "A destination is one of the selected source files. Choose another folder.": "目的地是所选的源文件之一。请选择其他文件夹。",
+    "New filename: ": "新文件名：",
+    "Destination now exists. Choose another name.": "目标已存在。请选择另一个名称。",
+    "Destination folder:": "目标文件夹：",
+    "Preserve folder structure": "保留文件夹结构",
+    "Files only (no subfolders)": "文件仅限文件（不包括子文件夹）",
+    "If a destination filename already exists:": "如果目标文件名已存在：",
+    "Open destination when complete": "打开完成时的目标",
+    "Destination is a selected source": "目标是所选的来源",
+    "Apply to all remaining conflicts": "应用对所有剩余的冲突",
+    "Hide basket": "隐藏篮子",
+    "Treeview": "树视图",
+    "Destination is a folder": "目标是一个文件夹",
+    " to ": "至",
+    "Source: ": "来源:",
+    "\n\nDestination: ": "\n目的地：",
+    "\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "\n两者都保留创建一个带编号的文件名。Replace 会备份会话的目标文件撤销",
+    "Current filename: ": "当前文件名：",
+    "Duplicate destination name": "重复的目标名称",
+    " [missing]": "[缺失]",
+    "Existing destination": "已存在的目标",
+    "Enter a valid folder name without slashes, reserved names or trailing spaces/dots.": "请输入一个有效的文件夹名称，不包含斜杠、保留名称或尾随的空格/点。",
+    "Source and destination are the same file; nothing was changed.": "来源源文件和目标文件是同一个；没有任何更改。",
+    "Undo would overwrite an existing file: ": "撤销将覆盖现有文件：",
+    "Undo stopped because this file changed after transfer: ": "撤销因传输后此文件已更改而停止：",
+    "Source changed during transfer; retained original. Retry after writing finishes.": "来源在传输过程中已更改；保留原始内容。写入完成后重试。",
+    "Undo target is missing; recovery retained: ": "撤销目标缺失；恢复已保留：",
+    "Undo backup is missing: ": "撤销备份丢失：",
+    "Destination changed; retry: ": "目标已更改；重试：",
+    "{count} files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "{count}文件。在排队之前会先审查冲突。替换会为此会话保留一个撤销备份。",
+    "Source: {source}\n\nDestination: {target}\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "来源: {source}目的地：{target}\n\n两者都保留创建一个带编号的文件名。Replace 会备份会话的目标文件撤销",
+    "Current filename: {name}": "当前文件名：{name}",
+    "New filename: {name}\n{status}": "新文件名： {name}\n{status}",
+    "Source": "来源",
+    "Destination": "目标",
+    "[missing]": "[缺失]",
+    "Unchanged": "未更改",
+    "Name cannot be empty": "名称 不能为空",
+    "Name contains a forbidden character": "名称 包含禁止字符",
+    "Name cannot end with a space or dot": "名称 不能以空格或点结尾",
+    "Reserved Windows filename": "保留的 Windows 文件名",
+    "Duplicate output name": "输出文件名重复 名称",
+    "A file with this name already exists": "具有此名称的文件已存在",
+    "Invalid template: {error}": "无效模板：{error}",
+    "Undo stopped because this file changed after transfer: {path}. The file was retained.": "撤销因传输后此文件已更改而停止：{path}。该文件已被保留。",
+    "Destination changed; retry: {target}": "目标已更改；重试：{target}",
+    "{ready} file(s) ready · {unchanged} unchanged · {problems} problem(s)": "{ready} 文件已准备 ┬À {unchanged} 未更改 ┬À {problems} 问题",
+    "Start and padding must be whole numbers.": "开始 和填充必须是整数。"
+  }
+}

@@ -1,0 +1,1561 @@
+{
+  "meta": {
+    "language": "Čeština"
+  },
+  "strings": {
+    "app.title": "Správce souborů Resolution {version}",
+    "menu.file": "Soubor",
+    "menu.edit": "Upravit",
+    "menu.view": "Zobrazit",
+    "menu.tools": "Nástroje",
+    "menu.help": "Nápověda",
+    "menu.browse": "Procházet aktivní panel…",
+    "menu.refresh": "Obnovit",
+    "menu.exit": "Ukončit",
+    "menu.copy": "Kopírovat",
+    "menu.cut": "Vyjmout",
+    "menu.paste": "Vložit",
+    "menu.undo": "Zpět",
+    "menu.rename": "Přejmenovat…",
+    "menu.batch_rename": "Hromadně přejmenovat vybrané…",
+    "menu.delete": "Přesunout do koše",
+    "menu.select_all": "Vybrat vše zobrazené",
+    "menu.details": "Podrobnosti v aktivním panelu",
+    "menu.thumbnails": "Miniatury v aktivním panelu",
+    "menu.thumbnail_size": "Velikost miniatur",
+    "menu.columns": "Nastavit sloupce…",
+    "menu.appearance": "Vzhled a velikost textu…",
+    "menu.refresh_active": "Obnovit aktivní panel",
+    "menu.refresh_both": "Obnovit oba panely",
+    "menu.go_up": "Jít nahoru",
+    "menu.verify": "Ověřit integritu médií…",
+    "menu.contact_sheet": "Vytvořit kontaktní list videa…",
+    "menu.export_report": "Exportovat zprávu o médiích…",
+    "menu.metadata": "Zobrazit vložené metadata…",
+    "menu.convert": "Převést vybraná videa…",
+    "menu.duplicates": "Najít duplicitní soubory…",
+    "menu.similar": "Najít vizuálně podobné obrázky…",
+    "menu.compare": "Porovnat vybrané…",
+    "menu.sync": "Porovnat / synchronizovat složky…",
+    "menu.save_workspace": "Uložit pracovní prostor…",
+    "menu.load_workspace": "Načíst pracovní prostor…",
+    "menu.save_collection": "Uložit aktivní inteligentní kolekci…",
+    "menu.manage_collections": "Spravovat inteligentní kolekce…",
+    "menu.folder_rules": "Pravidla organizace složek…",
+    "menu.cache": "Cache a skenování…",
+    "menu.queue": "Fronta přenosu…",
+    "menu.language": "Jazyk",
+    "menu.reminders": "Připomenutí…",
+    "menu.how_to": "Jak používat Resolution File Manager",
+    "menu.shortcuts": "Klávesové zkratky",
+    "menu.coffee": "☕ Pokud se vám to líbí, kupte Johnovi kávu…",
+    "menu.about": "O aplikaci",
+    "context.copy_other": "Kopírovat do druhého panelu",
+    "context.move_other": "Přesunout do druhého panelu",
+    "context.open": "Otevřít",
+    "context.reveal": "Zobrazit ve File Exploreru",
+    "context.rename": "Přejmenovat…",
+    "context.clear_rating": "Vymazat hodnocení",
+    "context.rating": "Hodnocení",
+    "context.none": "Žádné",
+    "context.colour": "Barevná značka",
+    "context.edit_tags": "Upravit štítky…",
+    "context.recycle": "Přesunout do koše",
+    "context.select_all": "Vybrat vše zobrazené",
+    "context.clear_ticks": "Vymazat zaškrtnutí",
+    "context.find_duplicates": "Najít duplicity",
+    "context.compare": "Porovnat vybrané",
+    "context.refresh_pane": "Obnovit tento panel",
+    "context.refresh_both": "Obnovit oba panely",
+    "context.open_folder": "Otevřít složku",
+    "context.red": "Červená",
+    "context.yellow": "Žlutá",
+    "context.green": "Zelená",
+    "context.blue": "Modrá",
+    "context.purple": "Fialová",
+    "context.configure_columns": "Konfigurovat sloupce…",
+    "context.reset_columns": "Obnovit šířky sloupců",
+    "context.files_suffix": "({count} souborů)",
+    "sort.sort": "Seřadit",
+    "sort.name": "Název",
+    "sort.modified": "Datum poslední úpravy",
+    "sort.size": "Velikost souboru",
+    "sort.duration": "Délka",
+    "sort.codec": "Kodek",
+    "sort.resolution": "Rozlišení",
+    "sort.type": "Typ",
+    "sort.bitrate": "Bitrate",
+    "sort.fps": "Snímková frekvence",
+    "sort.rating": "Hodnocení",
+    "sort.a_z": "A až Z",
+    "sort.z_a": "Z až A",
+    "sort.oldest": "Nejstarší nejdříve",
+    "sort.newest": "Nejnovější nahoře",
+    "sort.smallest": "Nejmenší nahoře",
+    "sort.largest": "Největší nahoře",
+    "sort.shortest": "Nejkratší nahoře",
+    "sort.longest": "Nejdelší nahoře",
+    "sort.ascending": "Vzestupně",
+    "sort.descending": "Sestupně",
+    "toolbar.guide": "Vyberte soubory v libovolném panelu a poté je pošlete do druhého panelu.",
+    "toolbar.refresh": "Obnovit",
+    "toolbar.move": "Přesunout vybrané → druhý panel",
+    "toolbar.copy": "Kopírovat vybrané → do jiného panelu",
+    "toolbar.undo": "Zpět",
+    "pane.left": "Levý panel",
+    "pane.right": "Pravý panel",
+    "pane.preview": "Náhled",
+    "pane.info": "Informace",
+    "pane.browse": "Procházet…",
+    "pane.drag": "↗ Přetáhnout vybrané",
+    "pane.show": "Zobrazit:",
+    "pane.videos": "Videa",
+    "pane.images": "Obrázky",
+    "pane.find": "Najít:",
+    "pane.live": "Živé",
+    "pane.subfolders": "Zahrnout podsložky",
+    "pane.resolution": "Rozlišení:",
+    "pane.all": "Vše",
+    "pane.select_matching": "Vybrat odpovídající",
+    "pane.more_filters": "Více filtrů…",
+    "pane.outliers": "Vybrat velikostní odlehlé hodnoty",
+    "pane.scanning": "Prohledávání médií…",
+    "pane.cancel": "Zrušit",
+    "pane.no_files": "Žádné odpovídající mediální soubory",
+    "pane.checked": "{count} zaškrtnuto",
+    "pane.clear_ticks": "Vymazat zaškrtnutí",
+    "view.details": "Detaily",
+    "view.thumbnails": "Miniatury",
+    "size.small": "Malé",
+    "size.medium": "Střední",
+    "size.large": "Velké",
+    "browse.continuous": "Nepřetržité",
+    "browse.paged": "Stránkované",
+    "browse.auto": "Automaticky",
+    "browse.per_page": "Na stránku:",
+    "column.name": "Název / relativní cesta",
+    "column.codec": "Kodek",
+    "column.resolution": "Rozlišení",
+    "column.duration": "Délka videa",
+    "column.size": "Velikost souboru",
+    "column.rate": "MB/min",
+    "column.fps": "FPS",
+    "column.modified": "Datum úpravy",
+    "column.type": "Typ",
+    "column.bitrate": "Bitrate",
+    "column.audio": "Audio",
+    "column.hdr": "HDR",
+    "column.pixels": "Megapixely",
+    "column.color": "Štítek",
+    "column.tags": "Tagy",
+    "column.rating": "Hodnocení",
+    "status.ready": "Připraveno",
+    "status.scanning_progress": "Prohledávání {current} z {total}… · {cached} z mezipaměti",
+    "status.scan_complete_folder": "{count} mediální soubor(y) v této složce",
+    "status.scan_complete_subfolders": "{count} mediální soubor(y) včetně podsložek",
+    "status.unreadable": "{count} nepřečteno",
+    "status.from_cache": "{count} z mezipaměti",
+    "status.scan_cancelled": "Prohledávání zrušeno po {count} soubor(ů)",
+    "status.skipped_file": "Přeskočený soubor: {error}",
+    "status.scan_failed": "Nelze skenovat: {error}",
+    "status.cancelling": "Rušení skenování…",
+    "status.live_on": "Živé aktualizace zapnuto",
+    "status.live_off": "Živé aktualizace vypnuto",
+    "status.loading": "Načítání…",
+    "outlier.moderate": "Střední (1,4×)",
+    "outlier.large": "Velké (1,75×)",
+    "outlier.extreme": "Extrémní (2,5×)",
+    "inspector.title": "Inspektor",
+    "inspector.no_file": "Žádný soubor nebyl vybrán",
+    "inspector.select_file": "Vyberte mediální soubor a zobrazí se jeho podrobnosti.",
+    "inspector.copy_path": "Kopírovat cestu",
+    "inspector.open": "Otevřeno",
+    "inspector.reveal": "Odhalení",
+    "preview.off": "Náhled vypnut",
+    "preview.is_off": "Náhled je zrušen",
+    "preview.select": "Vyberte soubor pro náhled",
+    "preview.select_side": "Vyberte obrázek nebo video na této straně",
+    "preview.play": "Hra",
+    "preview.pause": "Pauza",
+    "preview.skim": "Skim:",
+    "preview.speed": "Rychlost:",
+    "preview.muted": "Ztlumeno",
+    "preview.unmuted": "Zvuk zapnut",
+    "preview.still": "Stále obrázek",
+    "preview.unavailable": "Náhled není k dispozici",
+    "preview.read_failed": "Nelze přečíst snímek",
+    "convert.title": "Převést vybraná videa",
+    "convert.select_first_title": "Převést videa",
+    "convert.select_first": "Nejprve vyberte jeden nebo více video souborů.",
+    "convert.settings": "Nastavení převodu",
+    "convert.preset": "Přednastavení:",
+    "convert.quality": "Kvalita (CRF):",
+    "convert.resolution": "Rozlišení:",
+    "convert.resolution_help": "1080p a 720p nastavují výšku výstupu při zachování poměru stran.",
+    "convert.quality_help": "Nižší hodnoty kvality žádají vyšší kvalitu; hardwarové enginy mapují tuto hodnotu na vlastní kontrolu. Remux ignoruje kvalitu a rozlišení.",
+    "convert.engine": "Kódovací engine:",
+    "convert.hardware_decode": "Používejte hardwarové dekódování, pokud je k dispozici",
+    "convert.output_folder": "Výstupní složka:",
+    "convert.choose_output": "Vyberte výstupní složku pro převod",
+    "convert.preserve_folders": "Zachovat složky vzhledem k aktivnímu panelu",
+    "convert.skip_existing": "Přeskočit existující",
+    "convert.keep_both": "Zachovat oba",
+    "convert.originals_retained": "Původní videa jsou vždy zachována. Před spuštěním zkontrolujte každou výstupní cestu.",
+    "convert.status": "Stav",
+    "convert.source": "Zdroj",
+    "convert.output": "Výstup",
+    "convert.result": "Výsledek",
+    "convert.remux_help": "Remux kopíruje proudy přímo; kódování, změna velikosti a hardwarové dekódování nejsou používány.",
+    "convert.none_reported": "není hlášeno",
+    "convert.cpu_fallback": "žádné; Automatické bude používat CPU",
+    "convert.capabilities": "Podpora hardwarového kodéru FFmpeg: {hardware} · Metody dekódování: {decode}",
+    "convert.capability_failed": "Kontrola schopností selhala: {error} · Softwarové kódování zůstává k dispozici",
+    "convert.choose_folder": "Vyberte výstupní složku.",
+    "convert.preview_summary": "{ready} připraveno · {skipped} přeskočeno/problém · velikost zdroje {size}",
+    "convert.invalid_quality": "Neplatná kvalita",
+    "convert.invalid_quality_body": "CRF musí být celé číslo od 18 do 35.",
+    "convert.engine_unavailable": "Kódovací engine není k dispozici",
+    "convert.engine_unavailable_body": "{engine} není k dispozici pro {preset}. Vyberte jiný engine.",
+    "convert.unchanged": "Beze změny (kopie streamu)",
+    "convert.decode_unused": "nepoužito (kopírování streamu)",
+    "convert.decode_fallback": "požadováno s bezpečným záložním řešením",
+    "convert.off": "vypnuto",
+    "convert.confirm_title": "Spustit konverzi videa",
+    "convert.confirm_body": "Vytvořit {count} nový(é) video soubor(y)?\n\nKódování: {engine}\nRozlišení: {resolution}\nHardwarové dekódování: {decode}\n\nPůvodní soubory budou zachovány. Zrušení odstraní aktuální částečný výstup a zastaví zbytek fronty.",
+    "convert.progress": "Konvertuji soubor {current} z {total} · {percent}%",
+    "convert.complete": "Dokončeno · {created} vytvořeno · {failed} selhalo · {cancelled} zrušeno",
+    "convert.refresh": "Obnovit náhled",
+    "convert.start": "Spustit konverzi…",
+    "convert.cancel": "Zrušit konverzi",
+    "duplicates.title": "Duplikáty",
+    "duplicates.none_candidates": "Nebyly nalezeny žádné kandidáti na duplikáty stejné velikosti.",
+    "duplicates.quick_start": "Rychlá kontrola {count} kandidátů na duplicity…",
+    "duplicates.quick_progress": "Rychlá kontrola duplicit {current} z {total}…",
+    "duplicates.verify_progress": "Ověřování přesných shod {current} z {total}…",
+    "duplicates.complete_title": "Hledání duplicit dokončeno",
+    "duplicates.none": "Nebyla nalezena žádná přesná duplicita.",
+    "duplicates.none_status": "Žádné přesné duplicity nenalezeny · {cached} uložených otisků",
+    "duplicates.groups_status": "{groups} přesná duplicita skupiny · {cached} uložený otisk prstu",
+    "duplicates.first": "Nejprve",
+    "duplicates.newest": "Nejnovější",
+    "duplicates.oldest": "Nejstarší",
+    "duplicates.smallest": "Nejmenší",
+    "duplicates.largest": "Největší",
+    "duplicates.review_title": "Prohlédnout přesné duplicity",
+    "duplicates.found": "Nalezeno {count} přesných duplicitních skupin. Vyberte řádek pro náhled vedle jiné kopie ze stejné skupiny.",
+    "duplicates.explanation": "Přesné duplikáty mají identický obsah a velikost souboru, takže Nejmenší a Největší budou obvykle shodné. Data a umístění se mohou stále lišit.",
+    "duplicates.preview": "Náhled {number}",
+    "duplicates.select": "Vybrat duplikát",
+    "duplicates.group": "Skupina",
+    "duplicates.filename": "Název souboru",
+    "duplicates.folder": "Složka",
+    "duplicates.size": "Velikost",
+    "duplicates.modified": "Upraveno",
+    "duplicates.reason": "Proč může být zachován",
+    "duplicates.loading": "Načítání náhledu…",
+    "duplicates.keep_one": "Ponechte jeden na skupinu:",
+    "duplicates.clear": "Vymazat návrh",
+    "duplicates.close": "Zavřít bez změn",
+    "duplicates.proposal_status": "Duplicitní návrh: ponechat {strategy} · vybráno {count} nadbytečných souborů k přezkoumání",
+    "duplicates.applied_title": "Duplicitní návrh použit",
+    "duplicates.applied_body": "Kopie {strategy} v každé skupině byla ponechána nevybraná.\n\n{count} nadbytečný(é) soubor(y) je/je vybrán(a) v hlavním panelu. Přezkoumejte je tam před přesunutím nebo smazáním čehokoli.",
+    "browse.page_summary": "Strana {page} z {pages} · {count} souborů{automatic}",
+    "browse.auto_suffix": "· Automaticky {count}/strana",
+    "browse.continuous_summary": "{count} souborů · {mode} · pouze viditelné karty",
+    "browse.all_shown": "Zobrazeno vše",
+    "common.system_default": "Výchozí nastavení systému",
+    "common.restart_required": "Vyžaduje se restart",
+    "common.ok": "OK",
+    "common.cancel": "Zrušit",
+    "common.close": "Zavřít",
+    "common.save": "Uložit",
+    "common.enable": "Povolit",
+    "common.disable": "Zakázat",
+    "common.never": "Nikdy",
+    "common.launch": "spustit {count}",
+    "language.title": "Jazyk",
+    "language.message": "Nastavení jazyka bylo uloženo. Restartujte správce souborů Resolution, aby se změna projevila všude.",
+    "reminders.title": "Nastavení připomenutí",
+    "reminders.rating": "Připomenutí hodnocení v Microsoft Store",
+    "reminders.support": "Připomenutí \"Kup mi kávu\"",
+    "reminders.next": "Další způsobilé: {value}",
+    "reminders.saved": "Nastavení připomenutí uloženo.",
+    "rating.title": "Užíváte si Resolution File Manager?",
+    "rating.body": "Pokud byl Resolution File Manager užitečný, chtěli byste jej ohodnotit v Microsoft Store? Hodnocení pomáhají ostatním lidem jej objevit.",
+    "rating.rate": "Ohodnoťte v Microsoft Store",
+    "rating.later": "Později",
+    "rating.never": "Neptejte se znovu",
+    "support.title": "Podpora Správce souborů",
+    "support.body": "Pokud je vám program užitečný, můžete Johna koupit kávu. Podpora je zcela dobrovolná.",
+    "support.open": "Kup mi kávu",
+    "support.later": "Možná později",
+    "support.never": "Neptejte se znovu",
+    "link.error_title": "Stránku se nepodařilo otevřít",
+    "link.error_body": "Otevřete tuto adresu ve svém webovém prohlížeči:\n\n{url}\n\n{error}",
+    "about.title": "O aplikaci Resolution File Manager",
+    "about.description": "Víceplatformní aplikace s dvojitým panelem pro prohlížení, náhled, analýzu a organizaci sbírek obrázků a videí.",
+    "about.support": "Podpořit vývoj",
+    "about.optional": "Pokud je vám Resolution File Manager užitečný, můžete Johnovi koupit kávu. Podpora je zcela dobrovolná.",
+    "help.title": "Nápověda Správce souborů Resolution — {version}",
+    "help.search": "Prohledejte kompletní příručku:",
+    "help.previous": "Předchozí kapitola",
+    "help.next": "Další kapitola",
+    "help.next_match": "Další shoda (F3)",
+    "help.clear": "Vymazat hledání",
+    "help.no_results": "Žádné výsledky",
+    "help.no_results_body": "Žádná kapitola nápovědy neobsahuje „{query}“. Zkuste kratší výraz.",
+    "status.folder_missing": "Složka nenalezena",
+    "status.select_files": "Nejprve vyberte jeden nebo více souborů v aktivním panelu.",
+    "status.finished": "Dokončeno",
+    "status.error": "Chyba",
+    "filters.title": "Pokročilé filtry",
+    "filters.orientation": "Orientace",
+    "filters.codec": "Kodek obsahuje",
+    "filters.tag": "Značka obsahuje",
+    "filters.min_rating": "Minimální hodnocení",
+    "filters.color": "Barevná značka",
+    "filters.min_width": "Minimální šířka (pixely)",
+    "filters.max_width": "Maximální šířka (pixely)",
+    "filters.min_height": "Minimální výška (pixely)",
+    "filters.max_height": "Maximální výška (pixely)",
+    "filters.min_size": "Minimální velikost (MB)",
+    "filters.max_size": "Maximální velikost (MB)",
+    "filters.min_duration": "Minimální délka (sekundy)",
+    "filters.max_duration": "Maximální délka (sekundy)",
+    "filters.date_from": "Upraveno od (RRRR-MM-DD)",
+    "filters.date_to": "Upraveno do (RRRR-MM-DD)",
+    "filters.any": "Jakýkoli",
+    "filters.landscape": "Na šířku",
+    "filters.portrait": "Na výšku",
+    "filters.square": "Čtverec",
+    "filters.unlabelled": "Bez označení",
+    "filters.clear": "Vymazat",
+    "filters.apply": "Použít",
+    "filters.rating_1": "1",
+    "filters.rating_2": "2",
+    "filters.rating_3": "3",
+    "filters.rating_4": "4",
+    "filters.rating_5": "5",
+    "convert.preset_h264": "H.264 MP4 (kompatibilní)",
+    "convert.preset_h265": "H.265 MP4 (menší)",
+    "convert.preset_av1": "AV1 MKV (nejmenší)",
+    "convert.preset_proxy": "720p H.264 proxy",
+    "convert.preset_remux": "Remux do MKV (bez překódování)",
+    "convert.resolution_source": "Zachovat původní rozlišení",
+    "convert.resolution_1080p": "1080p",
+    "convert.resolution_720p": "720p",
+    "convert.engine_automatic": "Automaticky (doporučeno)",
+    "convert.engine_software": "Software / CPU",
+    "convert.status_ready": "Připraveno",
+    "convert.status_skipped": "Přeskočeno",
+    "convert.status_unknown_resolution": "Neznámé řešení",
+    "convert.status_converting": "Převádění",
+    "convert.status_passed": "Úspěšné",
+    "convert.status_cancelled": "Zrušeno",
+    "convert.status_failed": "Neúspěšné",
+    "choice.system": "Systém",
+    "choice.light": "Světlé",
+    "choice.dark": "Tmavé",
+    "choice.high_contrast": "Vysoký kontrast",
+    "choice.selected": "Vybrané",
+    "choice.visible": "Viditelné",
+    "choice.all_scanned": "Vše prohledáno",
+    "choice.copy": "Kopírovat",
+    "choice.move": "Přesunout",
+    "choice.any": "Jakýkoli",
+    "choice.images": "Obrázky",
+    "choice.videos": "Videa",
+    "choice.quiet": "Tiché",
+    "choice.balanced": "Vyvážené",
+    "choice.fast": "Rychlé",
+    "convert.status_duplicate_output": "Duplicitní název výstupu",
+    "convert.status_same_source": "Shodné se zdrojovým souborem",
+    "inspector.channels": "Kanál(y) {count}",
+    "inspector.pixel_format": "Formát pixelů",
+    "inspector.dynamic_range": "Dynamický rozsah",
+    "inspector.unknown": "Neznámý",
+    "inspector.unrated": "Nehodnoceno",
+    "inspector.unreadable": "Nečitelné"
+  },
+  "help": {
+    "schema": 2,
+    "master_sha256": "bd7b7615b744101897e361e188e64bd95e7d6173d11a1121a797d9d8cf6df279",
+    "direction": "ltr",
+    "translation_method": "machine translation with existing UI glossary; human linguistic review pending",
+    "chapters": [
+      {
+        "id": "quick_start",
+        "title": "Rychlý Spustit",
+        "paragraphs": [
+          {
+            "id": "quick_start.p001",
+            "source_sha256": "960121a7b5ea76c266026469e9fb06e35da0a7256799d3736a5fffadc23a744a",
+            "text": "1. Vyberte složku nezávisle v každém panelu pomocí Procházet, stromu složek nebo pole cesty.\n2. Zapněte Zahrnout podsložky pouze tehdy, když chcete skenovat celý strom pod touto složkou.\n3. Použijte Detaily pro třiditelné technické informace nebo Miniatury pro vizuální prohlížení.\n4. Vyberte soubory v jednom panelu. Kopírování a Přesun využívají složku zobrazenou v druhém panelu jako cílovou.\n5. Zapněte Náhled nebo Informace pouze v panelu, kde je potřebujete. Oba jsou ve výchozím nastavení vypnuté, aby se šetřila výpočetní síla.\n6. Akce měnící soubory zobrazují potvrzení nebo náhled tam, kde je to vhodné. Odstranit využívá Koše/Trash a Ctrl+Z vrací podporované nedávné akce."
+          },
+          {
+            "id": "quick_start.p002",
+            "source_sha256": "e826944984faca1d9ef2ae01fac89df96998673ffbcb18c1a6dc76906714d5f9",
+            "text": "Kapitoly vlevo vysvětlují každý díl programu. Zadejte libovolné slovo nebo frázi do vyhledávání ve všech kapitolách a stiskněte Enter. Shodující se kapitoly a počet shod se zobrazí v seznamu obsahu; použijte Další shoda k postupnému procházení každého zvýrazněného výskytu."
+          },
+          {
+            "id": "quick_start.p003",
+            "source_sha256": "939c9b2348d95e362c7a750296c26c65e72efb3c8fd71071cf751214de3accaf",
+            "text": "Vyberte složku v kterémkoli panelu. Povolit, Videa, Obrázky a Zahrnout podsložky podle potřeby. Použijte Detaily nebo Miniatury, vyberte nebo zaškrtněte soubory, prohlédněte si je, poté je zkopírujte, přesuňte, analyzujte nebo konvertujte. Zaškrtnuté soubory tvoří skupinu pro akce; zvýraznění zůstává k dispozici pro prohlížení a náhled."
+          }
+        ],
+        "body": "1. Vyberte složku nezávisle v každém panelu pomocí Procházet, stromu složek nebo pole cesty.\n2. Zapněte Zahrnout podsložky pouze tehdy, když chcete skenovat celý strom pod touto složkou.\n3. Použijte Detaily pro třiditelné technické informace nebo Miniatury pro vizuální prohlížení.\n4. Vyberte soubory v jednom panelu. Kopírování a Přesun využívají složku zobrazenou v druhém panelu jako cílovou.\n5. Zapněte Náhled nebo Informace pouze v panelu, kde je potřebujete. Oba jsou ve výchozím nastavení vypnuté, aby se šetřila výpočetní síla.\n6. Akce měnící soubory zobrazují potvrzení nebo náhled tam, kde je to vhodné. Odstranit využívá Koše/Trash a Ctrl+Z vrací podporované nedávné akce.\n\nKapitoly vlevo vysvětlují každý díl programu. Zadejte libovolné slovo nebo frázi do vyhledávání ve všech kapitolách a stiskněte Enter. Shodující se kapitoly a počet shod se zobrazí v seznamu obsahu; použijte Další shoda k postupnému procházení každého zvýrazněného výskytu.\n\nVyberte složku v kterémkoli panelu. Povolit, Videa, Obrázky a Zahrnout podsložky podle potřeby. Použijte Detaily nebo Miniatury, vyberte nebo zaškrtněte soubory, prohlédněte si je, poté je zkopírujte, přesuňte, analyzujte nebo konvertujte. Zaškrtnuté soubory tvoří skupinu pro akce; zvýraznění zůstává k dispozici pro prohlížení a náhled."
+      },
+      {
+        "id": "topic_index",
+        "title": "Index témat a odkazy na kapitoly",
+        "paragraphs": [
+          {
+            "id": "topic_index.quick_start",
+            "source_sha256": "b69a25b79b167c5a7e40d38d5814f094716600a942de0f3ec6218b07b27489ca",
+            "text": "Rychlý Spustit – [chapter:quick_start]"
+          },
+          {
+            "id": "topic_index.getting_started",
+            "source_sha256": "9ac44a658d4ae090bae2481dfb1b5e9df78322e4632b50bacb4e99ccb098f22e",
+            "text": "Získání Spustit Ø– [chapter:getting_started]"
+          },
+          {
+            "id": "topic_index.details_and_thumbnails",
+            "source_sha256": "84d1aca1a733a359aa903a64b7b96947cc10eba572194f604180ee279e080f20",
+            "text": "Detaily A Miniatury – [chapter:details_and_thumbnails]"
+          },
+          {
+            "id": "topic_index.scanning_and_filtering",
+            "source_sha256": "addcb00612695126e1840e75947c51d82d93657985581b6946e2e9058895aa52",
+            "text": "Skenování a filtrování ÔÇö [chapter:scanning_and_filtering]"
+          },
+          {
+            "id": "topic_index.selecting_and_previewing",
+            "source_sha256": "dcaa1afa4caf83d3fb5359c1d384469e2f0bb809a48dcce645893f93a174d545",
+            "text": "Výběr a Náhleding – [chapter:selecting_and_previewing]"
+          },
+          {
+            "id": "topic_index.copying_and_moving",
+            "source_sha256": "d439134119d88ce4d1728bbf520f1855578ba9e0e85bbaf480a60a626344f26c",
+            "text": "Kopírování a přesun ÔÇö [chapter:copying_and_moving]"
+          },
+          {
+            "id": "topic_index.smart_collections",
+            "source_sha256": "497f5371f88656a6629fdab4f4a433d4d9f4bc360680765c65bac19426e50cad",
+            "text": "Chytré kolekce: Uložené vyhledávání ÔÇö [chapter:smart_collections]"
+          },
+          {
+            "id": "topic_index.duplicates_and_comparison",
+            "source_sha256": "bc7a386de1f53414fd714586f4309ed4082731697a1928637001ad61f6b93657",
+            "text": "Duplikáty A porovnání – [chapter:duplicates_and_comparison]"
+          },
+          {
+            "id": "topic_index.video_conversion",
+            "source_sha256": "87541c8126b7efe82872889b78979b23a37056c7a88de8c8847df6a8d172d292",
+            "text": "Konverze videa ÔÇö [chapter:video_conversion]"
+          },
+          {
+            "id": "topic_index.media_reports",
+            "source_sha256": "88f5be9c7f544bd30958395250596ef1e6d7269236323741b0d581860c896994",
+            "text": "Exportování mediální zprávy ÔÇö [chapter:media_reports]"
+          },
+          {
+            "id": "topic_index.embedded_metadata",
+            "source_sha256": "c43d4127a8b410091566783a394e9819305712159510d96c02ddbb7ee7bc0352",
+            "text": "Zobrazení vložených metadat ÔÇö [chapter:embedded_metadata]"
+          },
+          {
+            "id": "topic_index.media_integrity",
+            "source_sha256": "a9696b3a52d78f01ec30371ab6e369b1b794257eada141cd26b7fcbc28def24e",
+            "text": "Kontrola integrity médií ÔÇö [chapter:media_integrity]"
+          },
+          {
+            "id": "topic_index.video_contact_sheets",
+            "source_sha256": "d8c3d3d7bfb6f6240bd2dff740e17dea7096558eed8132d688fce5b8a7d38f73",
+            "text": "Vytváření video kontaktního listu ÔÇö [chapter:video_contact_sheets]"
+          },
+          {
+            "id": "topic_index.folder_synchronization",
+            "source_sha256": "c5ffb5dcb3df4777df924d496bf92af4c0c309f7dc6571a8f95f2c8efb528e08",
+            "text": "Složka Synchronizace – [chapter:folder_synchronization]"
+          },
+          {
+            "id": "topic_index.folder_organization_rules",
+            "source_sha256": "1306acd5de57ef19675cac113a607091b30225a064b0b38a632584586670cbad",
+            "text": "Pravidla organizace Složka – [chapter:folder_organization_rules]"
+          },
+          {
+            "id": "topic_index.transfer_queue",
+            "source_sha256": "6c218104ba617d50d4666bcf2e5e70b9635d64f83ea5e74719da6042dc1c5851",
+            "text": "Správa fronty přenosu – [chapter:transfer_queue]"
+          },
+          {
+            "id": "topic_index.safe_file_actions",
+            "source_sha256": "5ddc3613ad7b87ccfee060d77a71fadb05a457f0de7ac987a4405385b7803b59",
+            "text": "Bezpečné akce souboru ÔÇö [chapter:safe_file_actions]"
+          },
+          {
+            "id": "topic_index.workspaces_and_cache",
+            "source_sha256": "9bedfb9cdb5f7f673cb6f702accaf18c7be93438596d081884e6616cbb751195",
+            "text": "Pracovní prostory a mezipaměť ÔÇö [chapter:workspaces_and_cache]"
+          },
+          {
+            "id": "topic_index.language",
+            "source_sha256": "57d2d6a2b519f2d4a908f2c480625bc9d06f02a72c79d74aae29f6de3818a779",
+            "text": "Jazyk – [chapter:language]"
+          },
+          {
+            "id": "topic_index.glossary",
+            "source_sha256": "c7a062c88b48c29ae512bf610ce2700dd67290004652c38e6af6dce5c9f29f8b",
+            "text": "Slovník – [chapter:glossary]"
+          },
+          {
+            "id": "topic_index.support_the_project",
+            "source_sha256": "01ccc57e26166b3a3a356d1ef2192f8c832175b4c003038bb1692f5f94473ebe",
+            "text": "Podpořte projekt – [chapter:support_the_project]"
+          }
+        ],
+        "body": "Rychlý Spustit – [chapter:quick_start]\n\nZískání Spustit Ø– [chapter:getting_started]\n\nDetaily A Miniatury – [chapter:details_and_thumbnails]\n\nSkenování a filtrování ÔÇö [chapter:scanning_and_filtering]\n\nVýběr a Náhleding – [chapter:selecting_and_previewing]\n\nKopírování a přesun ÔÇö [chapter:copying_and_moving]\n\nChytré kolekce: Uložené vyhledávání ÔÇö [chapter:smart_collections]\n\nDuplikáty A porovnání – [chapter:duplicates_and_comparison]\n\nKonverze videa ÔÇö [chapter:video_conversion]\n\nExportování mediální zprávy ÔÇö [chapter:media_reports]\n\nZobrazení vložených metadat ÔÇö [chapter:embedded_metadata]\n\nKontrola integrity médií ÔÇö [chapter:media_integrity]\n\nVytváření video kontaktního listu ÔÇö [chapter:video_contact_sheets]\n\nSložka Synchronizace – [chapter:folder_synchronization]\n\nPravidla organizace Složka – [chapter:folder_organization_rules]\n\nSpráva fronty přenosu – [chapter:transfer_queue]\n\nBezpečné akce souboru ÔÇö [chapter:safe_file_actions]\n\nPracovní prostory a mezipaměť ÔÇö [chapter:workspaces_and_cache]\n\nJazyk – [chapter:language]\n\nSlovník – [chapter:glossary]\n\nPodpořte projekt – [chapter:support_the_project]"
+      },
+      {
+        "id": "getting_started",
+        "title": "Získávání Spustited",
+        "paragraphs": [
+          {
+            "id": "getting_started.p001",
+            "source_sha256": "5f188741bf38dafbb6803c0d32c5c55281c418b27b6b6204c2b4b9470484371b",
+            "text": "Každá strana okna je samostatný prohlížeč složek. Použijte Procházet, strom složek, pole cesty nebo Nahoru k výběru složek. Klikněte uvnitř panelu, aby se stal aktivním."
+          },
+          {
+            "id": "getting_started.p002",
+            "source_sha256": "5c862d90858ec952be55c182a8161ba52748f10b89bab70f8f5f595c38c95370",
+            "text": "Zobrazení > Vzhled a velikost textu nabízí motivy Systém, Světlé, Tmavé a Vysoký kontrast a také měřítko rozhraní 100 %, 125 %, 150 %, 175 % a 200 %. Změny se okamžitě projevují ve všech existujících ovládacích prvcích. Uložení zachová výběr pro budoucí spuštění, Zrušit nebo zavření okna obnoví předchozí nastavení a Obnovit výchozí nastavení systému se vrátí k motivu operačního systému na 100 %. Tato nastavení mění pouze vzhled, nikdy data médií nebo knihovny."
+          },
+          {
+            "id": "getting_started.p003",
+            "source_sha256": "716b38f3fc587aa8c148a51715d481a35d5c135e6211016faa710ce34b4bf55a",
+            "text": "Každý panel má svůj vlastní kompaktní navigační pruh ve stylu Průzkumníka: ÔåÉ jde zpět, ÔåÆ jde vpřed, ↑ otevře nadřazenou složku a Ôå╗ Obnovit aktualizuje strom složek a aktuální sken. Otevření jiné složky po použití zpět spustí novou historii vpřed od tohoto místa."
+          },
+          {
+            "id": "getting_started.p004",
+            "source_sha256": "b34bc532ebe9785101efd80988074ed03a0c0fbf0e349d6133d31620e8a8ad3f",
+            "text": "Strom složek vždy sleduje aktuální umístění panelu: rozbalí nadřazené složky, vybere přesně počáteční složku pro skenování a posune tuto složku do zobrazení. Aktuální složka zůstává zavřená, dokud ji neotevřete, čímž se zabrání zobrazení dočasného zástupného symbolu Načítání. To se také stane po obnovení pracovní plochy nebo zadání cesty, takže kořen jednotky není zvýrazněn, zatímco se skenuje hlubší složka. Zahrnout podsložky začíná ve vybrané/aktuální složce zobrazené v tom panelu, nikoli v kořenové složce jednotky nad ní."
+          },
+          {
+            "id": "getting_started.p005",
+            "source_sha256": "90fbbedebb973bad42d26e8534c1fdab61604a30d9ead7a4ce4c88ea2cc4012a",
+            "text": "Každé okno má nezávislé ovládací prvky Zpět, Vpřed, Nahoru a Obnovit, filtry, třídění, náhledy, Informace a Náhled. Náhled videa začíná rychlostí 4├ù. Čárka a tečka posunují zpět nebo vpřed o deset procent. Náhled a Informace zůstávají vypnuté, dokud nejsou povoleny, aby se snížila zátěž na pozadí."
+          },
+          {
+            "id": "getting_started.tree_alignment_1272",
+            "source_sha256": "04feb6a3e71761ee4884be7564bb8832204338d93939bf1fdd67aa20f7e62380",
+            "text": "Strom složek automaticky zarovnává aktuálně viditelné větve, aby se zabránilo zbytečnému odsazení. Když posouváte dolů do hlubších větví, posune se horizontálně; při posunu zpět nahoru k předkům se vrátí vlevo, aniž by bylo potřeba kliknout. Celá hierarchie zůstává dostupná a horizontální posuvník pod stromem umožňuje ruční horizontální prohlížení."
+          }
+        ],
+        "body": "Každá strana okna je samostatný prohlížeč složek. Použijte Procházet, strom složek, pole cesty nebo Nahoru k výběru složek. Klikněte uvnitř panelu, aby se stal aktivním.\n\nZobrazení > Vzhled a velikost textu nabízí motivy Systém, Světlé, Tmavé a Vysoký kontrast a také měřítko rozhraní 100 %, 125 %, 150 %, 175 % a 200 %. Změny se okamžitě projevují ve všech existujících ovládacích prvcích. Uložení zachová výběr pro budoucí spuštění, Zrušit nebo zavření okna obnoví předchozí nastavení a Obnovit výchozí nastavení systému se vrátí k motivu operačního systému na 100 %. Tato nastavení mění pouze vzhled, nikdy data médií nebo knihovny.\n\nKaždý panel má svůj vlastní kompaktní navigační pruh ve stylu Průzkumníka: ÔåÉ jde zpět, ÔåÆ jde vpřed, ↑ otevře nadřazenou složku a Ôå╗ Obnovit aktualizuje strom složek a aktuální sken. Otevření jiné složky po použití zpět spustí novou historii vpřed od tohoto místa.\n\nStrom složek vždy sleduje aktuální umístění panelu: rozbalí nadřazené složky, vybere přesně počáteční složku pro skenování a posune tuto složku do zobrazení. Aktuální složka zůstává zavřená, dokud ji neotevřete, čímž se zabrání zobrazení dočasného zástupného symbolu Načítání. To se také stane po obnovení pracovní plochy nebo zadání cesty, takže kořen jednotky není zvýrazněn, zatímco se skenuje hlubší složka. Zahrnout podsložky začíná ve vybrané/aktuální složce zobrazené v tom panelu, nikoli v kořenové složce jednotky nad ní.\n\nKaždé okno má nezávislé ovládací prvky Zpět, Vpřed, Nahoru a Obnovit, filtry, třídění, náhledy, Informace a Náhled. Náhled videa začíná rychlostí 4├ù. Čárka a tečka posunují zpět nebo vpřed o deset procent. Náhled a Informace zůstávají vypnuté, dokud nejsou povoleny, aby se snížila zátěž na pozadí.\n\nStrom složek automaticky zarovnává aktuálně viditelné větve, aby se zabránilo zbytečnému odsazení. Když posouváte dolů do hlubších větví, posune se horizontálně; při posunu zpět nahoru k předkům se vrátí vlevo, aniž by bylo potřeba kliknout. Celá hierarchie zůstává dostupná a horizontální posuvník pod stromem umožňuje ruční horizontální prohlížení."
+      },
+      {
+        "id": "details_and_thumbnails",
+        "title": "Detaily A Miniatury",
+        "paragraphs": [
+          {
+            "id": "details_and_thumbnails.p001",
+            "source_sha256": "0d7fe0d7d10b204c166baf479099c908e17fbe87952b9f9f35dd9cf1de776edb",
+            "text": "Použijte volič zobrazení v horní části libovolného panelu, nebo nabídku Zobrazení, pro přepnutí toho panelu mezi Detaily a Miniatury. Oba pohledy zobrazují stejné soubory a sdílejí jejich výběr. Režim miniatur respektuje Zahrnout podsložky, přepínače médií, vyhledávání, rozlišení, pokročilé filtry a třídění. Jeho nabídka Třídit nabízí přesný směr pro Jméno (A–Z/Z–A), Datum poslední úpravy(nejstarší/nejnovější), Velikost souboru, Délka, Kodek, Rozlišení, Typ, Bitrate, Snímková frekvence, a Hodnocení. Každá tabule se třídí nezávisle, tlačítko zobrazuje aktivní pořadí a uložené pracovní plochy a Chytré kolekce ho obnovují.Detaily Nadpisy zůstávají klikatelné pro rychlé třídění.Relativní cestas se zobrazují pod miniaturami během rekurzivních skenů. Použijte posuvník velikosti miniatur vedle voliče zobrazení. Přednastavené velikosti zůstávají pod Zobrazení >Velikost miniatur. Nepřetržitéje výchozí prohlížeč miniatur: jeden posuvník pokrývá celou filtrovanou kolekci, zatímco program vytváří pouze viditelné karty plus malý buffer a při rolování je recykluje. To udržuje paměť pro widgety a obrázky omezenou i u velmi velkých knihoven. Vyberte Stránkovanévedle toho kdykoli obnovit zvolenou mřížku stránky; vyberte Automaticky, 200, 500 nebo 1 000 karet na stránku a použijte kompaktní ovládací prvky ÔåÉ a ÔåÆ. Automaticky používá 200, když videa tvoří alespoň polovinu filtrovaných výsledků, a 500, když převládají obrázky. Každá oblast a uložené pracovní prostředí si pamatují volbu prohlížeče."
+          },
+          {
+            "id": "details_and_thumbnails.p002",
+            "source_sha256": "f88d676b4ba78ef8e5f3064d34755f67ce646a0965745c31f8a74570a37bd2d4",
+            "text": "Mřížka náhledů měří skutečnou šířku prohlížeče před prvním vykreslením a automaticky se přeuspořádává, když je změněna velikost panelu nebo dělicí lišty složky/prohlížeče. V režimu Stránkované používá stránka 1 proto pro danou šířku panelu a velikost náhledu stejný počet sloupců jako pozdější stránky. V režimu Nepřetržité přepočítává změna velikosti virtuální řádky, aniž by se konstruovala celá kolekce. Pro rolování panelu nahoru a dolů přetočte kolečkem myši kdekoli nad panelem náhledů—včetně karty, obrázku nebo názvu souboru; oba panely se rolují nezávisle."
+          },
+          {
+            "id": "details_and_thumbnails.p003",
+            "source_sha256": "878f1f9405d3cda5132d953b07e64ce5639125896f32cdb19341e4c2156fd898",
+            "text": "V režimu Detaily je výchozí pořadí: Název, Kodek, Rozlišení, Délka videa, Velikost souboru, MB/min, FPS, Datum poslední úpravy, Typ, Bitrate, Audio, HDR, Megapixely, Štítek, Štítky a Hodnocení. Přetáhněte dělicí čáru mezi záhlavími pro změnu velikosti sloupce o libovolnou hodnotu; kurzor pro horizontální změnu velikosti se zobrazí, když je dělicí čára připravena. Přetáhněte samotné záhlaví pro jeho přeuspořádání — není potřeba žádná klávesová modifikace. Jednoduché kliknutí na záhlaví stále třídí sloupce. Sloupce si zachovávají zvolené šířky a horizontální posuvník dosahuje až k polím mimo panel. Pro přesné nastavení vyberte Zobrazit > Nastavit sloupce nebo klikněte pravým tlačítkem na záhlaví; okno Sloupce umožňuje přesunout pole, nastavit přesné šířky a obnovit výchozí hodnoty. Stávající osobně uspořádané a uložené pořadí sloupců se zachovává. Dlouhé rekurzivní cesty jsou skráceny uprostřed, aby bylo vidět název souboru."
+          },
+          {
+            "id": "details_and_thumbnails.p004",
+            "source_sha256": "88415a6236cebbf0ce6211ef333a7271672023a2bdae6ccdc38584b6cce810d6",
+            "text": "Miniatury videa jsou vybírány 15 % do klipu, aby se předešlo nereprezentativním úvodním snímkům. Pokud metadata o délce nejsou k dispozici, aplikace používá jedno-sekundovou náhradní hodnotu. Generované miniatury jsou ukládány do mezipaměti pro rychlejší opakované prohlížení."
+          },
+          {
+            "id": "details_and_thumbnails.p005",
+            "source_sha256": "7a726d60e44b6a6ccdb5c196cf1f81af226094ce2b8f43f72c1bf065feb34ad5",
+            "text": "Běžné miniatury obrázků jsou efektivně dekódovány přímo v procesu pomocí Pillow; FFmpeg se používá pro video snímky a jako záložní možnost pro neobvyklé formáty obrázků. Dekódování miniatur využívá malý pracovní pool, takže velká složka nemůže spustit nadměrný počet dekodérů. Cache obrázky jsou zapisovány atomicky a kontrolovány před zobrazením; neúplné nebo poškozené uložené miniatury jsou ignorovány a znovu generovány, zatímco výsledky patřící ke starší mřížce jsou bezpečně vyřazeny."
+          },
+          {
+            "id": "details_and_thumbnails.p006",
+            "source_sha256": "ea382833a32b1bb5c8dac172f29751f48d27aead08969ef699cca6142fddc69f",
+            "text": "Generované miniatury zůstávají dostupné po zavření programu, takže při opětovném otevření nezměněného souboru je obvykle okamžitě použita jeho uložená miniatura. Nástroje > Mezipaměť a skenování řídí maximální velikost mezipaměti miniatur jako procento disku operačního systému; výchozí hodnota je 1 %. Znovu použitým miniaturám je přiřazena značka „nedávné“ a když je limit překročen, jsou nejméně nedávno použité položky odstraněny jako první. Limit lze nastavit od 0,1 % do 10 % a uplatní se okamžitě. Vymazat miniatury hlásí aktuální počet a velikost před potvrzením a poté odstraňuje pouze generované miniatury – nikoli původní média nebo uložené technické metadata. Vymazat všechny mezipaměti odstraňuje jak miniatury, tak metadata."
+          },
+          {
+            "id": "details_and_thumbnails.size_slider_1272",
+            "source_sha256": "f73fba2585edabe7710a59372a59bce3e3509092c20423aeed2583c4bc430100",
+            "text": "Posuvník velikosti miniatur se zobrazuje pouze ve Miniatury; Detaily jej skrývá. Jeho posouváním se velikost miniatur mění plynule a při přepínání zobrazení se jeho nastavení zachovává. Pauza krátce po jeho tažení, aby se mřížka znovu přeuspořádala; větší obrázky si zachovávají poměr stran a aktuální velikost se ukládá spolu s nastavením panelu. Pojmenované přednastavené velikosti zůstávají k dispozici v nabídce Zobrazení; v záhlaví panelu není žádný duplikát rozbalovacího seznamu velikosti."
+          }
+        ],
+        "body": "Použijte volič zobrazení v horní části libovolného panelu, nebo nabídku Zobrazení, pro přepnutí toho panelu mezi Detaily a Miniatury. Oba pohledy zobrazují stejné soubory a sdílejí jejich výběr. Režim miniatur respektuje Zahrnout podsložky, přepínače médií, vyhledávání, rozlišení, pokročilé filtry a třídění. Jeho nabídka Třídit nabízí přesný směr pro Jméno (A–Z/Z–A), Datum poslední úpravy(nejstarší/nejnovější), Velikost souboru, Délka, Kodek, Rozlišení, Typ, Bitrate, Snímková frekvence, a Hodnocení. Každá tabule se třídí nezávisle, tlačítko zobrazuje aktivní pořadí a uložené pracovní plochy a Chytré kolekce ho obnovují.Detaily Nadpisy zůstávají klikatelné pro rychlé třídění.Relativní cestas se zobrazují pod miniaturami během rekurzivních skenů. Použijte posuvník velikosti miniatur vedle voliče zobrazení. Přednastavené velikosti zůstávají pod Zobrazení >Velikost miniatur. Nepřetržitéje výchozí prohlížeč miniatur: jeden posuvník pokrývá celou filtrovanou kolekci, zatímco program vytváří pouze viditelné karty plus malý buffer a při rolování je recykluje. To udržuje paměť pro widgety a obrázky omezenou i u velmi velkých knihoven. Vyberte Stránkovanévedle toho kdykoli obnovit zvolenou mřížku stránky; vyberte Automaticky, 200, 500 nebo 1 000 karet na stránku a použijte kompaktní ovládací prvky ÔåÉ a ÔåÆ. Automaticky používá 200, když videa tvoří alespoň polovinu filtrovaných výsledků, a 500, když převládají obrázky. Každá oblast a uložené pracovní prostředí si pamatují volbu prohlížeče.\n\nMřížka náhledů měří skutečnou šířku prohlížeče před prvním vykreslením a automaticky se přeuspořádává, když je změněna velikost panelu nebo dělicí lišty složky/prohlížeče. V režimu Stránkované používá stránka 1 proto pro danou šířku panelu a velikost náhledu stejný počet sloupců jako pozdější stránky. V režimu Nepřetržité přepočítává změna velikosti virtuální řádky, aniž by se konstruovala celá kolekce. Pro rolování panelu nahoru a dolů přetočte kolečkem myši kdekoli nad panelem náhledů—včetně karty, obrázku nebo názvu souboru; oba panely se rolují nezávisle.\n\nV režimu Detaily je výchozí pořadí: Název, Kodek, Rozlišení, Délka videa, Velikost souboru, MB/min, FPS, Datum poslední úpravy, Typ, Bitrate, Audio, HDR, Megapixely, Štítek, Štítky a Hodnocení. Přetáhněte dělicí čáru mezi záhlavími pro změnu velikosti sloupce o libovolnou hodnotu; kurzor pro horizontální změnu velikosti se zobrazí, když je dělicí čára připravena. Přetáhněte samotné záhlaví pro jeho přeuspořádání — není potřeba žádná klávesová modifikace. Jednoduché kliknutí na záhlaví stále třídí sloupce. Sloupce si zachovávají zvolené šířky a horizontální posuvník dosahuje až k polím mimo panel. Pro přesné nastavení vyberte Zobrazit > Nastavit sloupce nebo klikněte pravým tlačítkem na záhlaví; okno Sloupce umožňuje přesunout pole, nastavit přesné šířky a obnovit výchozí hodnoty. Stávající osobně uspořádané a uložené pořadí sloupců se zachovává. Dlouhé rekurzivní cesty jsou skráceny uprostřed, aby bylo vidět název souboru.\n\nMiniatury videa jsou vybírány 15 % do klipu, aby se předešlo nereprezentativním úvodním snímkům. Pokud metadata o délce nejsou k dispozici, aplikace používá jedno-sekundovou náhradní hodnotu. Generované miniatury jsou ukládány do mezipaměti pro rychlejší opakované prohlížení.\n\nBěžné miniatury obrázků jsou efektivně dekódovány přímo v procesu pomocí Pillow; FFmpeg se používá pro video snímky a jako záložní možnost pro neobvyklé formáty obrázků. Dekódování miniatur využívá malý pracovní pool, takže velká složka nemůže spustit nadměrný počet dekodérů. Cache obrázky jsou zapisovány atomicky a kontrolovány před zobrazením; neúplné nebo poškozené uložené miniatury jsou ignorovány a znovu generovány, zatímco výsledky patřící ke starší mřížce jsou bezpečně vyřazeny.\n\nGenerované miniatury zůstávají dostupné po zavření programu, takže při opětovném otevření nezměněného souboru je obvykle okamžitě použita jeho uložená miniatura. Nástroje > Mezipaměť a skenování řídí maximální velikost mezipaměti miniatur jako procento disku operačního systému; výchozí hodnota je 1 %. Znovu použitým miniaturám je přiřazena značka „nedávné“ a když je limit překročen, jsou nejméně nedávno použité položky odstraněny jako první. Limit lze nastavit od 0,1 % do 10 % a uplatní se okamžitě. Vymazat miniatury hlásí aktuální počet a velikost před potvrzením a poté odstraňuje pouze generované miniatury – nikoli původní média nebo uložené technické metadata. Vymazat všechny mezipaměti odstraňuje jak miniatury, tak metadata.\n\nPosuvník velikosti miniatur se zobrazuje pouze ve Miniatury; Detaily jej skrývá. Jeho posouváním se velikost miniatur mění plynule a při přepínání zobrazení se jeho nastavení zachovává. Pauza krátce po jeho tažení, aby se mřížka znovu přeuspořádala; větší obrázky si zachovávají poměr stran a aktuální velikost se ukládá spolu s nastavením panelu. Pojmenované přednastavené velikosti zůstávají k dispozici v nabídce Zobrazení; v záhlaví panelu není žádný duplikát rozbalovacího seznamu velikosti."
+      },
+      {
+        "id": "scanning_and_filtering",
+        "title": "Skenování a filtrování",
+        "paragraphs": [
+          {
+            "id": "scanning_and_filtering.p001",
+            "source_sha256": "c4712ae8d144d44f4ec6a47e8ad4b477c14275c9c493ace31eef65a7a8b9168d",
+            "text": "Povolit Zahrnout podsložky pro rekurzivní skenování. Použijte Najít pro názvy souborů, Rozlišení pro přesné rozlišení a More filtry pro rozměry, velikost souboru, délku, kodek, orientaci a datum. Zrušit zastaví dlouhé skenování. Nastavení Mezipaměť a skenování pod Nástroje řídí paralelní pracovníky a vyloučené vzory."
+          },
+          {
+            "id": "scanning_and_filtering.p002",
+            "source_sha256": "5f55a7b5ecdce4426e11fdc93539a0e0a436839a62d94bc8019a50af3c1deae6",
+            "text": "Chcete-li uložit výsledky skenování jako tabulku nebo dokument, viz [chapter:media_reports]."
+          },
+          {
+            "id": "scanning_and_filtering.p003",
+            "source_sha256": "6296398bb5bd08c4d57ca8f2606a7b6164825f670f0bfa1fd408f26fca05c53e",
+            "text": "Velkérekurzivní skenování shromažďuje výsledky, aniž by opakovaně přestavovalo rostoucí prohlížeč. Když skenování skončí,Detailyřádky jsou přidávány v krátkých dávkách, takže Přehrát/Pauza, navigace, malování a ovládací prvky okna zůstávají citlivé na reakce. Náhledové mřížky se také aktualizují po dokončení skenování. Úspěšné příkazy kopírování, přesunu a smazání nyní aktualizují pouze dotčené položky v paměti místo opětovného skenování obou složek; neznámé soubory přetažené zvenčí aplikace stále vyvolávají bezpečnostní sken pouze v dotčeném panelu. Ukládání mezipaměti metadat probíhá na pozadí a zastavené FFmpegNáhledové procesy jsou ihned vyčištěny.Nástroje > Mezipaměť a skenováníposkytuje Tiché, Vyvážené, a rychlé výkonnostní profily.Vyváženézachovává zavedené chování.Tichésnižuje současnost skenování a miniatur a cílí na 8 náhledových snímků za sekundu; Rychlé zvyšuje současnost a cílí na 15 snímků za sekundu.Tiché a Vyváženénastavovat nové neukládané sondy a dekódování miniatur, zatímco se přehrává nebo vyhledává náhled, přičemž je upřednostněna interaktivní práce.Uloženo do mezipaměti Výsledky nejsou nikdy úmyslně zpožďovány. Pole metadata-worker zůstává nastavitelné i po výběru profilu."
+          },
+          {
+            "id": "scanning_and_filtering.p004",
+            "source_sha256": "cfc2a88e50877f4251ec58b90265b0c4485c3899666c8cdd2dcd43cc0541aa04",
+            "text": "Každá strana má nezávislé přehrávání, časovou osu, rychlost, audio/mute, rámcový cache a dekódovací procesy. Přehrávání náhledu videa je úmyslně nastaveno na reálný čas při 12 snímcích za sekundu. To udržuje náhledy plynulé a zároveň se vyhýbá vysoké zátěži CPU způsobené dekódováním zbytku klipu rychleji, než jak to náhled dokáže zobrazit, zejména při běhu rozsáhlého skenování složky."
+          },
+          {
+            "id": "scanning_and_filtering.p005",
+            "source_sha256": "6d2351f7d55b8f5bf804e7ab66908fd915359b92794340ef24a0429900443a62",
+            "text": "Klikněte kdekoli na libovolnou časovou osu ukázky, aby se její ukazatel přímo přesunul na tuto pozici a pokračovalo se přehráváním odtud. Můžete také stisknout a táhnout ukazatel pro nepřetržité přehrávání. Přehrávání zruší starší požadavek na snímek, jakmile je požadována nová pozice, což zabraňuje soutěžení několika dekodérů FFmpeg na pozadí. Nedávno navštívené pozice jsou ukládány do mezipaměti po čtvrtsekundových krocích, takže návrat k nim je okamžitý. Uvolněte posuvník pro pokračování přehrávání z vybrané pozice."
+          },
+          {
+            "id": "scanning_and_filtering.p006",
+            "source_sha256": "fe8d26dfc3bcebb327cad49202bcc0288ca9ad0b75babe71c0d04dfab8ac9fea",
+            "text": "Náhled videa má výchozí rychlost 4× pro rychlejší prohlížení. K změně rychlosti přehrávání použijte tlačítka 1×, 2×, 4×, 6×, 8× a 16× pod časovou osou. Aktivní tlačítko rychlosti je vypnuto, aby bylo jasné, jaké nastavení je právě zvoleno. Audio je ve výchozím nastavení ztlumený; vyberte Ztlumeno pro zapnutí synchronizovaného zvuku a vyberte Audio pro jeho opětovné ztlumení. Změna rychlosti během přehrávání restartuje video a zvuk společně na aktuální pozici na časové ose."
+          },
+          {
+            "id": "scanning_and_filtering.p007",
+            "source_sha256": "3214a4d4fd458bb76deb51ff30947b215ded0ce500221cb3511bf25da94d6a74",
+            "text": "Použijte |ÔùÇ a ÔûÂ| vedle tlačítka pro zvuk k pohybu zpět nebo vpřed o jeden snímek. Aplikace používá hlášenou snímkovou frekvenci videa, s náhradní hodnotou 25 fps, pokud nejsou tyto metadata k dispozici, a provádí přesné vyhledání pro výsledný statický snímek. Vyberte ⤓ PNG pro export aktuální pozice videa jako PNG s plným rozlišením zdroje; přehrávání se zastaví na této přesné pozici, výstup je zapisován přes dočasný soubor a video nikdy není upraveno."
+          },
+          {
+            "id": "scanning_and_filtering.p008",
+            "source_sha256": "2427ebd091d494c4bd3cbf71c48a081ab4ee23a5f549571ceeb7c12ea2c351d6",
+            "text": "Pokud je fokus mimo pole pro psaní, stiskněte čárku (,) pro přeskočení náhledu videa aktivního panelu o 10 % jeho celkové délky zpět, nebo tečku (.) pro přeskočení o 10 % vpřed. Aktivní panel je strana, na kterou bylo naposledy kliknuto. Přehrávající se náhled pokračuje v přehrávání z nové pozice; pozastavený náhled zůstává pozastaven a zobrazuje přesný cílový snímek. Klávesy se normálně píší v polích pro cestu, vyhledávání, filtr a dialog."
+          },
+          {
+            "id": "scanning_and_filtering.p009",
+            "source_sha256": "decded439831addc29ee74040e8bfff01524b194d15c0468751e96d11df67309",
+            "text": "Obnovit aktivní panel nebo Obnovit oba panely pod Zobrazením po změně složek nebo souborů ve Soubor Exploreru nebo jiné aplikaci. Obnovit obnovuje strom složek a zároveň znovu skenuje média. Je také dostupný přes F5, panel nástrojů a kontextové nabídky v prohlížeči a stromu složek. Alternativně lze funkci Živé povolit nezávisle v kterékoliv části, aby se aktuální složka automaticky sledovala. Živé sleduje navigaci a používá stejný rozsah jako Zahrnout podsložky. Vzplanutí vytváření, úprav, přejmenování a mazání jsou sloučena před aktualizací; změny složek také aktualizují strom. Marker Živé se zobrazí ve stavu dokončeného skenování. Živé je ve výchozím nastavení vypnutý a zrušení zaškrtnutí jeho políčka okamžitě obnoví chování manuálního obnovení."
+          }
+        ],
+        "body": "Povolit Zahrnout podsložky pro rekurzivní skenování. Použijte Najít pro názvy souborů, Rozlišení pro přesné rozlišení a More filtry pro rozměry, velikost souboru, délku, kodek, orientaci a datum. Zrušit zastaví dlouhé skenování. Nastavení Mezipaměť a skenování pod Nástroje řídí paralelní pracovníky a vyloučené vzory.\n\nChcete-li uložit výsledky skenování jako tabulku nebo dokument, viz [chapter:media_reports].\n\nVelkérekurzivní skenování shromažďuje výsledky, aniž by opakovaně přestavovalo rostoucí prohlížeč. Když skenování skončí,Detailyřádky jsou přidávány v krátkých dávkách, takže Přehrát/Pauza, navigace, malování a ovládací prvky okna zůstávají citlivé na reakce. Náhledové mřížky se také aktualizují po dokončení skenování. Úspěšné příkazy kopírování, přesunu a smazání nyní aktualizují pouze dotčené položky v paměti místo opětovného skenování obou složek; neznámé soubory přetažené zvenčí aplikace stále vyvolávají bezpečnostní sken pouze v dotčeném panelu. Ukládání mezipaměti metadat probíhá na pozadí a zastavené FFmpegNáhledové procesy jsou ihned vyčištěny.Nástroje > Mezipaměť a skenováníposkytuje Tiché, Vyvážené, a rychlé výkonnostní profily.Vyváženézachovává zavedené chování.Tichésnižuje současnost skenování a miniatur a cílí na 8 náhledových snímků za sekundu; Rychlé zvyšuje současnost a cílí na 15 snímků za sekundu.Tiché a Vyváženénastavovat nové neukládané sondy a dekódování miniatur, zatímco se přehrává nebo vyhledává náhled, přičemž je upřednostněna interaktivní práce.Uloženo do mezipaměti Výsledky nejsou nikdy úmyslně zpožďovány. Pole metadata-worker zůstává nastavitelné i po výběru profilu.\n\nKaždá strana má nezávislé přehrávání, časovou osu, rychlost, audio/mute, rámcový cache a dekódovací procesy. Přehrávání náhledu videa je úmyslně nastaveno na reálný čas při 12 snímcích za sekundu. To udržuje náhledy plynulé a zároveň se vyhýbá vysoké zátěži CPU způsobené dekódováním zbytku klipu rychleji, než jak to náhled dokáže zobrazit, zejména při běhu rozsáhlého skenování složky.\n\nKlikněte kdekoli na libovolnou časovou osu ukázky, aby se její ukazatel přímo přesunul na tuto pozici a pokračovalo se přehráváním odtud. Můžete také stisknout a táhnout ukazatel pro nepřetržité přehrávání. Přehrávání zruší starší požadavek na snímek, jakmile je požadována nová pozice, což zabraňuje soutěžení několika dekodérů FFmpeg na pozadí. Nedávno navštívené pozice jsou ukládány do mezipaměti po čtvrtsekundových krocích, takže návrat k nim je okamžitý. Uvolněte posuvník pro pokračování přehrávání z vybrané pozice.\n\nNáhled videa má výchozí rychlost 4× pro rychlejší prohlížení. K změně rychlosti přehrávání použijte tlačítka 1×, 2×, 4×, 6×, 8× a 16× pod časovou osou. Aktivní tlačítko rychlosti je vypnuto, aby bylo jasné, jaké nastavení je právě zvoleno. Audio je ve výchozím nastavení ztlumený; vyberte Ztlumeno pro zapnutí synchronizovaného zvuku a vyberte Audio pro jeho opětovné ztlumení. Změna rychlosti během přehrávání restartuje video a zvuk společně na aktuální pozici na časové ose.\n\nPoužijte |ÔùÇ a ÔûÂ| vedle tlačítka pro zvuk k pohybu zpět nebo vpřed o jeden snímek. Aplikace používá hlášenou snímkovou frekvenci videa, s náhradní hodnotou 25 fps, pokud nejsou tyto metadata k dispozici, a provádí přesné vyhledání pro výsledný statický snímek. Vyberte ⤓ PNG pro export aktuální pozice videa jako PNG s plným rozlišením zdroje; přehrávání se zastaví na této přesné pozici, výstup je zapisován přes dočasný soubor a video nikdy není upraveno.\n\nPokud je fokus mimo pole pro psaní, stiskněte čárku (,) pro přeskočení náhledu videa aktivního panelu o 10 % jeho celkové délky zpět, nebo tečku (.) pro přeskočení o 10 % vpřed. Aktivní panel je strana, na kterou bylo naposledy kliknuto. Přehrávající se náhled pokračuje v přehrávání z nové pozice; pozastavený náhled zůstává pozastaven a zobrazuje přesný cílový snímek. Klávesy se normálně píší v polích pro cestu, vyhledávání, filtr a dialog.\n\nObnovit aktivní panel nebo Obnovit oba panely pod Zobrazením po změně složek nebo souborů ve Soubor Exploreru nebo jiné aplikaci. Obnovit obnovuje strom složek a zároveň znovu skenuje média. Je také dostupný přes F5, panel nástrojů a kontextové nabídky v prohlížeči a stromu složek. Alternativně lze funkci Živé povolit nezávisle v kterékoliv části, aby se aktuální složka automaticky sledovala. Živé sleduje navigaci a používá stejný rozsah jako Zahrnout podsložky. Vzplanutí vytváření, úprav, přejmenování a mazání jsou sloučena před aktualizací; změny složek také aktualizují strom. Marker Živé se zobrazí ve stavu dokončeného skenování. Živé je ve výchozím nastavení vypnutý a zrušení zaškrtnutí jeho políčka okamžitě obnoví chování manuálního obnovení."
+      },
+      {
+        "id": "selecting_and_previewing",
+        "title": "Výběr a Náhledování",
+        "paragraphs": [
+          {
+            "id": "selecting_and_previewing.p001",
+            "source_sha256": "3cb30411bb6f6a0807c08da889783687297f5427e72f356e38a6f0de5a9fedf2",
+            "text": "Každá oblast (pane) má nezávislou skupinu akcí s políčkem zaškrtnutí. Klikněte na políčko ÔÿÉ/Ôÿæ vedle řádku Detaily nebo na náhledovou kartu, nebo se zaměřte na řádek Detaily a stiskněte Mezerník. Zaškrtnutí zůstává uchováno, zatímco zvýrazňujete a náhledáváte jiné soubory, řadíte oblast nebo měníte filtry. Čítač pod prohlížečem ukazuje celkový počet, včetně zaškrtnutých souborů aktuálně skrytých filtrem. Klikněte na nadpis Ô£ô Detaily nebo Ô£ô Zobrazeno vše v Miniatury pro zaškrtnutí všech aktuálně zobrazených souborů; opakujte to pro odečtení zaškrtnutí této zobrazené skupiny. Vymazat zaškrtnutí odstraní celou skupinu. Akce kopírování, přesunu, přetažení, odstranění, přejmenování, hodnocení, označování, porovnávání, integrity a konverze používají všechny zaškrtnuté soubory, pokud nějaké existují; pokud nejsou žádné zaškrtnuté, používají běžně zvýrazněné řádky. Změna této oblasti na jinou složku nebo disk vymaže její zaškrtnutí a zaškrtnutí se neuloží po zavření aplikace."
+          },
+          {
+            "id": "selecting_and_previewing.checkbox_accuracy_1272",
+            "source_sha256": "ec45605bac64df9520c7b16b9f54eb0ff1645c2f120d0e06da004d853d0a3acc",
+            "text": "Zaškrtávací políčka se mění pouze tehdy, když na políčko kliknete a uvolníte bez tažení. Prázdné místo vedle políčka není součástí jeho klikatelné oblasti. Pokud se pohnete o více než několik pixelů, spustí se výběr zvýrazněním a zaškrtnutí zůstávají nezměněna, i když tažení začalo na zaškrtávacím políčku. Použijte explicitní ovládací prvky Zaškrtnout výběr a Zrušit zaškrtnutí výběru pro změnu celé zvýrazněné skupiny."
+          },
+          {
+            "id": "selecting_and_previewing.p007",
+            "source_sha256": "fe2df6bc40914fca7346780d043258bca3ac75b0c0da69d7d7c7af1921420d95",
+            "text": "Táhněte z prázdného prostoru prohlížeče přes řádky nebo náhledové karty, abyste zvýraznili skupinu pomocí obdélníku výběru. Tím se žádné soubory nezatrhávají ani nezruší zatržení. Samotné tažení zahájí novou zvýrazněnou skupinu; podržením klávesy Ctrl při zahájení tažení přidáte k existujícím zvýrazněním.Spustitna prázdném místě náhledu, ne na obrázku nebo názvu souboru, protože přetažením souboru náhledu se místo toho spustí přenos. V Detailymůžete také táhnout vertikálně přes řádky pro zvýraznění skupiny; táhněte směrem k druhému panelu pro přenos. Hlavičky si zachovávají své běžné gesta pro změnu velikosti a přeuspořádání. Použijte Zaškrtnout výběrpřidat označené soubory do existující vybrané skupiny akcí. Použijte Zrušit zaškrtnutí výběruodstranit pouze ty zvýrazněné soubory z té skupiny. Obě tlačítka jsou nahoře u každého prohlížeče vedle Třídit,Vybrat vše zobrazené a Vymazat zaškrtnutí; ovládá zalamování na užších panelech. Oba příkazy jsou také k dispozici v kontextových nabídkách po kliknutí pravým tlačítkem. Ostatní zaškrtávací políčka, včetně souborů skrytých filtry, zůstanou zachována. Akce se soubory stále upřednostňují všechna zaškrtnutí, pokud nějaká existují, takže použijte tyto explicitní ovládací prvky před kopírováním nebo přesunem, pokud chcete změnit skupinu akcí."
+          },
+          {
+            "id": "selecting_and_previewing.p002",
+            "source_sha256": "7f32ecf04dddbc0b538a4d33856b7ca37e281994235e853d6806e565759f3fb5",
+            "text": "Každé okno prohlížeče má svůj vlastní velký přepínač ÔûÂ Náhled, který je standardně vypnutý, aby se zabránilo zbytečnému dekódování. Povolit Náhled vlevo, vpravo nebo na obou stranách otevřete samostatné zarovnané náhledové panely pod prohlížeči. Tlačítko má výrazný vybraný stav, takže povolené náhledy jsou snadno rozpoznatelné. Když jsou oba přepínače vypnuté, oblast náhledu se úplně zhroutí a prohlížeče využívají celou výšku okna. Klikněte na soubor pro jeho náhled na vlastní straně. Zvýraznění je nezávislé na zatržítkách, takže můžete prohlížet nebo náhledovat jiný soubor, aniž byste ztratili akční skupinu. Podržte Ctrl při klikání na miniatury nebo řádky s detaily, abyste mohli zvýraznit několik souborů. Vybrat odpovídající zvýrazní každý aktuálně zobrazený výsledek. Dvojklikem otevřete zvýrazněný soubor v jeho normální aplikaci."
+          },
+          {
+            "id": "selecting_and_previewing.p006",
+            "source_sha256": "ea7ee844c5a71c70be45874efacd2698bc3f2f6056cb1188f3f135038fbcd31c",
+            "text": "Obrázky a video snímky automaticky používají největší velikost, která se vejde do jejich vlastního náhledového panelu, přičemž zachovávají původní poměr šířky k výšce. Změna velikosti hlavního okna nebo jakéhokoli náhledového děliče aktualizuje obraz po krátkém zpoždění, čímž se zabrání opakovanému restartování dekodéru během táhnutí děliče."
+          },
+          {
+            "id": "selecting_and_previewing.p003",
+            "source_sha256": "6da9585bae76a4d0447bfa50948712331a0b66f7d19639b6472395a5337a1281",
+            "text": "Každá záložka má také velký nezávislý přepínač Informace. Ve výchozím nastavení je vypnutý a přidává rozbalovací inspektor na pravý okraj dané záložky. Pokud je soubor již vybrán, zapnutí Informací jej zobrazí okamžitě – není třeba jej vybírat znovu. Inspektor sleduje pozdější výběr v Detaily, Nepřetržitéminiatury a Stránkovanéminiatury a zobrazuje úplnou cestu, rozměry, velikost, data, délku, kodek, snímkovou frekvenci, datový tok, formát pixelů, HDR, zvuk, důvod nečitelnosti, hodnocení, barvu a značky.Kopírovat cestuumístí úplnou cestu do schránky; Otevřít a Odhalenípoužívejte běžné akce se soubory. Vypnutí informací úplně odstraní inspektor a uložená pracovní prostředí si pamatují jeho stav. Informace se otevírají s počáteční kompaktní šířkou přibližně 180 pixelů. Horní ovládací prvky třídění a výběru jsou nezávislé na dělicí liště Informací, takže otevření informací tyto tlačítka nestlačí. Přetáhněte dělicí lištu vedle inspektora pro změnu jeho šířky; vypnutí a zapnutí informací obnoví tuto šířku a uložená nastavení panelu/pracovního prostředí ji zachovají. Na úzkých oknech je šířka omezena, aby zůstalo místo pro procházení."
+          },
+          {
+            "id": "selecting_and_previewing.p004",
+            "source_sha256": "f69ab2d999168d40676e34589ed911761ef8a4e8e683955ccaa9c471fc373e01",
+            "text": "Zobrazit ve Soubor Exploreru/Odhalení pracuje s celým výběrem. Při výběru až pěti souborů odesílá samostatný požadavek na zobrazení pro každou cestu. Při výběru více než pěti souborů se zobrazí varování s přesným počtem, protože operace může otevřít mnoho oken správce souborů. Zvolte Ano pro zobrazení všech vybraných souborů nebo Ne pro zobrazení pouze prvního. Windows a macOS vyberou každý konkrétní soubor; Linux otevře složku každého souboru přes systémového správce souborů."
+          },
+          {
+            "id": "selecting_and_previewing.p005",
+            "source_sha256": "78c83927ab22cd560e580cbf1dbe270da8c554ef8357eb67fdc828600c7f856a",
+            "text": "Pro informace o fotoaparátu, EXIF polích nebo značkách video kontejneru/streamu viz [chapter:embedded_metadata]."
+          }
+        ],
+        "body": "Každá oblast (pane) má nezávislou skupinu akcí s políčkem zaškrtnutí. Klikněte na políčko ÔÿÉ/Ôÿæ vedle řádku Detaily nebo na náhledovou kartu, nebo se zaměřte na řádek Detaily a stiskněte Mezerník. Zaškrtnutí zůstává uchováno, zatímco zvýrazňujete a náhledáváte jiné soubory, řadíte oblast nebo měníte filtry. Čítač pod prohlížečem ukazuje celkový počet, včetně zaškrtnutých souborů aktuálně skrytých filtrem. Klikněte na nadpis Ô£ô Detaily nebo Ô£ô Zobrazeno vše v Miniatury pro zaškrtnutí všech aktuálně zobrazených souborů; opakujte to pro odečtení zaškrtnutí této zobrazené skupiny. Vymazat zaškrtnutí odstraní celou skupinu. Akce kopírování, přesunu, přetažení, odstranění, přejmenování, hodnocení, označování, porovnávání, integrity a konverze používají všechny zaškrtnuté soubory, pokud nějaké existují; pokud nejsou žádné zaškrtnuté, používají běžně zvýrazněné řádky. Změna této oblasti na jinou složku nebo disk vymaže její zaškrtnutí a zaškrtnutí se neuloží po zavření aplikace.\n\nZaškrtávací políčka se mění pouze tehdy, když na políčko kliknete a uvolníte bez tažení. Prázdné místo vedle políčka není součástí jeho klikatelné oblasti. Pokud se pohnete o více než několik pixelů, spustí se výběr zvýrazněním a zaškrtnutí zůstávají nezměněna, i když tažení začalo na zaškrtávacím políčku. Použijte explicitní ovládací prvky Zaškrtnout výběr a Zrušit zaškrtnutí výběru pro změnu celé zvýrazněné skupiny.\n\nTáhněte z prázdného prostoru prohlížeče přes řádky nebo náhledové karty, abyste zvýraznili skupinu pomocí obdélníku výběru. Tím se žádné soubory nezatrhávají ani nezruší zatržení. Samotné tažení zahájí novou zvýrazněnou skupinu; podržením klávesy Ctrl při zahájení tažení přidáte k existujícím zvýrazněním.Spustitna prázdném místě náhledu, ne na obrázku nebo názvu souboru, protože přetažením souboru náhledu se místo toho spustí přenos. V Detailymůžete také táhnout vertikálně přes řádky pro zvýraznění skupiny; táhněte směrem k druhému panelu pro přenos. Hlavičky si zachovávají své běžné gesta pro změnu velikosti a přeuspořádání. Použijte Zaškrtnout výběrpřidat označené soubory do existující vybrané skupiny akcí. Použijte Zrušit zaškrtnutí výběruodstranit pouze ty zvýrazněné soubory z té skupiny. Obě tlačítka jsou nahoře u každého prohlížeče vedle Třídit,Vybrat vše zobrazené a Vymazat zaškrtnutí; ovládá zalamování na užších panelech. Oba příkazy jsou také k dispozici v kontextových nabídkách po kliknutí pravým tlačítkem. Ostatní zaškrtávací políčka, včetně souborů skrytých filtry, zůstanou zachována. Akce se soubory stále upřednostňují všechna zaškrtnutí, pokud nějaká existují, takže použijte tyto explicitní ovládací prvky před kopírováním nebo přesunem, pokud chcete změnit skupinu akcí.\n\nKaždé okno prohlížeče má svůj vlastní velký přepínač ÔûÂ Náhled, který je standardně vypnutý, aby se zabránilo zbytečnému dekódování. Povolit Náhled vlevo, vpravo nebo na obou stranách otevřete samostatné zarovnané náhledové panely pod prohlížeči. Tlačítko má výrazný vybraný stav, takže povolené náhledy jsou snadno rozpoznatelné. Když jsou oba přepínače vypnuté, oblast náhledu se úplně zhroutí a prohlížeče využívají celou výšku okna. Klikněte na soubor pro jeho náhled na vlastní straně. Zvýraznění je nezávislé na zatržítkách, takže můžete prohlížet nebo náhledovat jiný soubor, aniž byste ztratili akční skupinu. Podržte Ctrl při klikání na miniatury nebo řádky s detaily, abyste mohli zvýraznit několik souborů. Vybrat odpovídající zvýrazní každý aktuálně zobrazený výsledek. Dvojklikem otevřete zvýrazněný soubor v jeho normální aplikaci.\n\nObrázky a video snímky automaticky používají největší velikost, která se vejde do jejich vlastního náhledového panelu, přičemž zachovávají původní poměr šířky k výšce. Změna velikosti hlavního okna nebo jakéhokoli náhledového děliče aktualizuje obraz po krátkém zpoždění, čímž se zabrání opakovanému restartování dekodéru během táhnutí děliče.\n\nKaždá záložka má také velký nezávislý přepínač Informace. Ve výchozím nastavení je vypnutý a přidává rozbalovací inspektor na pravý okraj dané záložky. Pokud je soubor již vybrán, zapnutí Informací jej zobrazí okamžitě – není třeba jej vybírat znovu. Inspektor sleduje pozdější výběr v Detaily, Nepřetržitéminiatury a Stránkovanéminiatury a zobrazuje úplnou cestu, rozměry, velikost, data, délku, kodek, snímkovou frekvenci, datový tok, formát pixelů, HDR, zvuk, důvod nečitelnosti, hodnocení, barvu a značky.Kopírovat cestuumístí úplnou cestu do schránky; Otevřít a Odhalenípoužívejte běžné akce se soubory. Vypnutí informací úplně odstraní inspektor a uložená pracovní prostředí si pamatují jeho stav. Informace se otevírají s počáteční kompaktní šířkou přibližně 180 pixelů. Horní ovládací prvky třídění a výběru jsou nezávislé na dělicí liště Informací, takže otevření informací tyto tlačítka nestlačí. Přetáhněte dělicí lištu vedle inspektora pro změnu jeho šířky; vypnutí a zapnutí informací obnoví tuto šířku a uložená nastavení panelu/pracovního prostředí ji zachovají. Na úzkých oknech je šířka omezena, aby zůstalo místo pro procházení.\n\nZobrazit ve Soubor Exploreru/Odhalení pracuje s celým výběrem. Při výběru až pěti souborů odesílá samostatný požadavek na zobrazení pro každou cestu. Při výběru více než pěti souborů se zobrazí varování s přesným počtem, protože operace může otevřít mnoho oken správce souborů. Zvolte Ano pro zobrazení všech vybraných souborů nebo Ne pro zobrazení pouze prvního. Windows a macOS vyberou každý konkrétní soubor; Linux otevře složku každého souboru přes systémového správce souborů.\n\nPro informace o fotoaparátu, EXIF polích nebo značkách video kontejneru/streamu viz [chapter:embedded_metadata]."
+      },
+      {
+        "id": "copying_and_moving",
+        "title": "Kopírování a přesouvání",
+        "paragraphs": [
+          {
+            "id": "copying_and_moving.p001",
+            "source_sha256": "74a10eb18d51cae10f7fdd8931b1ad7feb8157e134c2e2f50071b7b2d30f5f1b",
+            "text": "Vyberte soubory v jednom panelu a použijte panel nástrojů, nabídku Úpravy, kontextovou nabídku (kliknutím pravým tlačítkem), klávesové zkratky nebo přetažení myší. Chcete-li odeslat několik vybraných souborů do jiné aplikace, například Shutter, přetáhněte velký ovladač ↗ Přetáhnout vybrané vedle navigačních ovládacích prvků toho panelu levým tlačítkem myši. Exportuje celou vybranou sadu pomocí běžného formátu seznamu souborů operačního systému a funguje jak v Detaily, tak v Miniatury, aniž by zasahoval do změny velikosti sloupců. Druhý panel je cílem pro přenosy uvnitř aplikace. Přenosy vstupují do fronty s informacemi o průběhu, rychlosti, zbývajícím čase, možnostmi pozastavení, zrušení, opakování a řešení konfliktů. Přenosy mezi panely umožňují zvolit, zda zachovat relativní složky, nebo kopírovat pouze soubory."
+          },
+          {
+            "id": "copying_and_moving.p002",
+            "source_sha256": "a438870a1a1fa7c4edc46d8f19aa10034df90810c0e6118e2c2f94828359328d",
+            "text": "Upravit > Hromadné přejmenovánívybráno otevře úplnou náhledovou ukázku před změnou jakýchkoli jmen. Náhled se automaticky aktualizuje po změně vzoru, textu pro hledání/nahrazení, rozlišování velikosti písmen, počátečního čísla nebo vycpávky;Obnovit náhledje také k dispozici. Sestavujte jména s{name}pro původní kmen,{n}pro číslovanou sekvenci s vycpávkou,{ext}pro příponu bez tečky, a{dotext}pro příponu včetně její tečky. Volitelná funkce hledání/nahrazování může být citlivá nebo necitlivá na velká písmena a číslování má nastavitelný počáteční bod a počet nul. Neplatná jména ve Windows, duplicitní výstupy a konflikty s nevybranými soubory způsobují deaktivaci Použít. Potvrzená dávka používá interně dočasná jména, takže výměny a cykly se nemohou navzájem přepsat; přerušená dávka je, kde je to možné, vrácena zpět. Úspěšná dávka je taCtrl+Zzpět akci, včetně hodnocení a štítků.F2 nebo Přejmenovatna jednom souboru otevírá živý náhled názvu souboru; Přejmenovatje povoleno pouze pro platný, dostupný nový název."
+          },
+          {
+            "id": "copying_and_moving.p003",
+            "source_sha256": "dc2923a823a7109741512e0c6e1a2302310ba36b9dbfaa6379ae5acf0c73c9e9",
+            "text": "Pro opakovatelné podmínky kopírování/přesunu s kontrolou před provedením, viz [chapter:folder_organization_rules]. Pro pozastavení, zrušení nebo opětovné spuštění zařazených přenosů, viz [chapter:transfer_queue]."
+          },
+          {
+            "id": "copying_and_moving.p004",
+            "source_sha256": "2c1a1fe656902fb987c4f1a88cd0f8d6ec8ead7edc9b2cf0817ce2b6e82f724b",
+            "text": "Klikněte pravým tlačítkem myši na jeden nebo více vybraných souborů, abyste přiřadili hodnocení od nuly do pěti hvězdiček, červenou/Žlutá/Zelená/modrou/Fialová barevnou značku nebo čárkou oddělené štítky. Vymazat hodnocení, Nic a prázdný seznam štítků tyto změny zruší. Tyto anotace jsou uložené pouze v databázi aplikace; původní média a vložená metadata nejsou nikdy změněna. Režim Detaily poskytuje řaditelné sloupce Hodnocení, Štítek a Štítky. Popisky miniatur zobrazují hodnocení/štítky a používají barevnou značku jako jejich nevybraný obrys. Další filtry mohou vyžadovat minimální hodnocení, barvu (včetně Bez označení) nebo text štítku. Vnitřní operace přejmenování, kopírování, přesunu a zrušení provedené změny přenášejí anotace na výslednou cestu. Vymazat všechny mezipaměti odstraní technická cache data, ale záměrně zachovává uživatelské anotace."
+          },
+          {
+            "id": "copying_and_moving.p005",
+            "source_sha256": "4ea753522d03bb48eab43c172373c00d21303828abeacab783fb94f7d41faa41",
+            "text": "V režimu Detaily si jednotlivé řádky zachovávají přetahování souborů pravým tlačítkem; běžné kliknutí pravým tlačítkem stále otevře kontextovou nabídku. Můžete také přetáhnout řádek nebo vybranou skupinu levým tlačítkem do opačného panelu. Při přetažení se zobrazí jasně označená tlačítka Kopírovat, Přesunout a Zrušit. Kopírovat nebo Přesunout otevře náhled přenosu; Zrušit nebo zavření výzvy nechá soubory nezměněné. Změna velikosti a přeuspořádání záhlaví zůstávají nezávislé. Pro konvenční přetahování levým tlačítkem do jiného programu použijte ↗ Přetáhnout vybrané. Náhledové karty také podporují běžné přetahování souborů levým tlačítkem."
+          },
+          {
+            "id": "copying_and_moving.p006",
+            "source_sha256": "c09e896f93f4539ea5e39ce1ef9cf109147040645409d8f026ce228b0ae864d8",
+            "text": "Kopírujte, přesouvejte, přejmenovávejte, odesílejte soubory do Koše nebo Trash, kontrolujte duplicity, používejte tagy a hodnocení, exportujte zprávy a vytvářejte kontaktní listy. Konverze podporuje H.264, H.265 a AV1 s kompatibilním hardwarovým zrychlením. Soubory Zdroj jsou uchovávány a částečně neúspěšné výstupy jsou odstraněny."
+          },
+          {
+            "id": "copying_and_moving.p007",
+            "source_sha256": "88a277d5f920b679b295acc60e5e72f6b72f48d3630880924c349e271f7ab3aa",
+            "text": "Nová složka s: vyberte Soubor > Nová složka…, stiskněte Ctrl+Shift+N nebo klikněte pravým tlačítkem myši v podokně a vyberte Nová složka…. Zadejte název jediného nového složky. Složka je vytvořena uvnitř aktuální složky aktivního podokna a prohlížeč se obnoví; tím nedojde k přesunu vybraných souborů. Prázdné, rezervované a neplatné názvy jsou odmítnuty a existující složka nikdy není nahrazena."
+          },
+          {
+            "id": "copying_and_moving.p008",
+            "source_sha256": "cfa3700591ec389ae4438a32b015736c27e74632cc56284e786898fee744198b",
+            "text": "Příklad kopírování/přesunu: v panelu zdroje povolte Zahrnout podsložky, zaškrtněte soubory v několika podsložkách a klikněte na Kopírovat vybrané → do jiného panelu nebo Přesunout vybrané → druhý panel. V náhledu vyberte Zachovat strukturu složek pro zachování cest pod složkou zdroje, nebo Souborjen (žádné podsložky) pro umístění souborů přímo do cíle. První výchozí možnost zachovává složky; následující přesuny si pamatují vaši poslední volbu. Před zařazením do fronty si přečtěte sloupce Zdroj, Cíl a Stav. Procházet… mění cílové umístění; Nová složka… vytvoří a vybere složku, aniž by opustil náhled. Otevřenocíl po dokončení otevře tuto složku až po úspěšném, nezrušeném přesunu. Klikněte na Kopírovat do fronty nebo Přenést do fronty pro pokračování, nebo Zrušit pro ponechání souborů beze změny. Vložit a přetažené soubory také používají tento náhled."
+          },
+          {
+            "id": "copying_and_moving.p009",
+            "source_sha256": "6f5fea1b68edde18db0247441f47c2ad2c00ad93e2b1f52f9b191e04d8ccde05",
+            "text": "Konflikty: Zeptejte se u každého konfliktu nabízí Zachovat oba, Nahradit, Přeskočit a Zrušit, s Použítke všem zbývajícím konfliktům. Alternativně vyberte zásadu v náhledu před zařazením do fronty. Zachovat oba najde dostupný číslovaný název souboru, například clip (2).mp4, včetně kolizí mezi vybranými soubory z různých podsložek. Nahradit výslovně umožňuje nahrazení a uchovává předchozí cílovou položku v oblasti návratu relace. Přeskočit nechá stávající cíl beze změny. Cíl, který je jedním z vybraných zdrojových souborů, je zablokován: vyberte jinou složku. Fronta znovu kontroluje cíle, takže soubor, který se objeví po náhledu, není potichu přepsán. Vrácení zpět je omezeno na posledních 20 podporovaných akcí v této relaci a není trvalou zálohou. Needitujte převedené soubory před použitím Vrácení zpět; vrácením kopie se odstraní zkopírovaný soubor."
+          },
+          {
+            "id": "copying_and_moving.p010",
+            "source_sha256": "fd0ec5c6b05d49ff78891f64ea627a2fe1d7435cbdf0008018ace12f664e8341",
+            "text": "Výběrový košík: použijte tlačítko na panelu nástrojů Výběrový košík, Soubor > Výběrový košík…, nebo klikněte pravým tlačítkem myši na vybrané soubory a zvolte Přidat do výběrového košíku. Košík je sbalitelný panel nad oběma prohlížeči, nikoli samostatné okno. Skrýt košík nebo tlačítko na panelu nástrojů jej skryje, aniž by vymazalo jeho odkazy. Přidat výběr panelu shromáždí zaškrtnutou skupinu akcí panelu, nebo jeho zvýrazněné soubory, když nejsou žádné zaškrtnuty. Navštivte jiné složky a přidejte další soubory; každá původní cesta se zobrazí pouze jednou. Košík obsahuje odkazy, nikoli kopie, a vymaže se při zavření aplikace. Odstranit odkazy nebo Vymazatkoš neodstraní originály. Vyberte řádky v košíku a zvolte Kopírovatdo aktivního panelu nebo Přesunoutdo aktivního panelu; když nejsou vybrány žádné řádky v košíku, použijí se všechny položky. Zkontrolujte normální náhled přenosu. Soubory v košíku bez sdíleného prohlížecího kořene používají své názvy souborů namísto kombinovaného stromu složek. Chybějící originály jsou označeny [chybí] a nemohou být přeneseny, dokud nejsou k dispozici."
+          }
+        ],
+        "body": "Vyberte soubory v jednom panelu a použijte panel nástrojů, nabídku Úpravy, kontextovou nabídku (kliknutím pravým tlačítkem), klávesové zkratky nebo přetažení myší. Chcete-li odeslat několik vybraných souborů do jiné aplikace, například Shutter, přetáhněte velký ovladač ↗ Přetáhnout vybrané vedle navigačních ovládacích prvků toho panelu levým tlačítkem myši. Exportuje celou vybranou sadu pomocí běžného formátu seznamu souborů operačního systému a funguje jak v Detaily, tak v Miniatury, aniž by zasahoval do změny velikosti sloupců. Druhý panel je cílem pro přenosy uvnitř aplikace. Přenosy vstupují do fronty s informacemi o průběhu, rychlosti, zbývajícím čase, možnostmi pozastavení, zrušení, opakování a řešení konfliktů. Přenosy mezi panely umožňují zvolit, zda zachovat relativní složky, nebo kopírovat pouze soubory.\n\nUpravit > Hromadné přejmenovánívybráno otevře úplnou náhledovou ukázku před změnou jakýchkoli jmen. Náhled se automaticky aktualizuje po změně vzoru, textu pro hledání/nahrazení, rozlišování velikosti písmen, počátečního čísla nebo vycpávky;Obnovit náhledje také k dispozici. Sestavujte jména s{name}pro původní kmen,{n}pro číslovanou sekvenci s vycpávkou,{ext}pro příponu bez tečky, a{dotext}pro příponu včetně její tečky. Volitelná funkce hledání/nahrazování může být citlivá nebo necitlivá na velká písmena a číslování má nastavitelný počáteční bod a počet nul. Neplatná jména ve Windows, duplicitní výstupy a konflikty s nevybranými soubory způsobují deaktivaci Použít. Potvrzená dávka používá interně dočasná jména, takže výměny a cykly se nemohou navzájem přepsat; přerušená dávka je, kde je to možné, vrácena zpět. Úspěšná dávka je taCtrl+Zzpět akci, včetně hodnocení a štítků.F2 nebo Přejmenovatna jednom souboru otevírá živý náhled názvu souboru; Přejmenovatje povoleno pouze pro platný, dostupný nový název.\n\nPro opakovatelné podmínky kopírování/přesunu s kontrolou před provedením, viz [chapter:folder_organization_rules]. Pro pozastavení, zrušení nebo opětovné spuštění zařazených přenosů, viz [chapter:transfer_queue].\n\nKlikněte pravým tlačítkem myši na jeden nebo více vybraných souborů, abyste přiřadili hodnocení od nuly do pěti hvězdiček, červenou/Žlutá/Zelená/modrou/Fialová barevnou značku nebo čárkou oddělené štítky. Vymazat hodnocení, Nic a prázdný seznam štítků tyto změny zruší. Tyto anotace jsou uložené pouze v databázi aplikace; původní média a vložená metadata nejsou nikdy změněna. Režim Detaily poskytuje řaditelné sloupce Hodnocení, Štítek a Štítky. Popisky miniatur zobrazují hodnocení/štítky a používají barevnou značku jako jejich nevybraný obrys. Další filtry mohou vyžadovat minimální hodnocení, barvu (včetně Bez označení) nebo text štítku. Vnitřní operace přejmenování, kopírování, přesunu a zrušení provedené změny přenášejí anotace na výslednou cestu. Vymazat všechny mezipaměti odstraní technická cache data, ale záměrně zachovává uživatelské anotace.\n\nV režimu Detaily si jednotlivé řádky zachovávají přetahování souborů pravým tlačítkem; běžné kliknutí pravým tlačítkem stále otevře kontextovou nabídku. Můžete také přetáhnout řádek nebo vybranou skupinu levým tlačítkem do opačného panelu. Při přetažení se zobrazí jasně označená tlačítka Kopírovat, Přesunout a Zrušit. Kopírovat nebo Přesunout otevře náhled přenosu; Zrušit nebo zavření výzvy nechá soubory nezměněné. Změna velikosti a přeuspořádání záhlaví zůstávají nezávislé. Pro konvenční přetahování levým tlačítkem do jiného programu použijte ↗ Přetáhnout vybrané. Náhledové karty také podporují běžné přetahování souborů levým tlačítkem.\n\nKopírujte, přesouvejte, přejmenovávejte, odesílejte soubory do Koše nebo Trash, kontrolujte duplicity, používejte tagy a hodnocení, exportujte zprávy a vytvářejte kontaktní listy. Konverze podporuje H.264, H.265 a AV1 s kompatibilním hardwarovým zrychlením. Soubory Zdroj jsou uchovávány a částečně neúspěšné výstupy jsou odstraněny.\n\nNová složka s: vyberte Soubor > Nová složka…, stiskněte Ctrl+Shift+N nebo klikněte pravým tlačítkem myši v podokně a vyberte Nová složka…. Zadejte název jediného nového složky. Složka je vytvořena uvnitř aktuální složky aktivního podokna a prohlížeč se obnoví; tím nedojde k přesunu vybraných souborů. Prázdné, rezervované a neplatné názvy jsou odmítnuty a existující složka nikdy není nahrazena.\n\nPříklad kopírování/přesunu: v panelu zdroje povolte Zahrnout podsložky, zaškrtněte soubory v několika podsložkách a klikněte na Kopírovat vybrané → do jiného panelu nebo Přesunout vybrané → druhý panel. V náhledu vyberte Zachovat strukturu složek pro zachování cest pod složkou zdroje, nebo Souborjen (žádné podsložky) pro umístění souborů přímo do cíle. První výchozí možnost zachovává složky; následující přesuny si pamatují vaši poslední volbu. Před zařazením do fronty si přečtěte sloupce Zdroj, Cíl a Stav. Procházet… mění cílové umístění; Nová složka… vytvoří a vybere složku, aniž by opustil náhled. Otevřenocíl po dokončení otevře tuto složku až po úspěšném, nezrušeném přesunu. Klikněte na Kopírovat do fronty nebo Přenést do fronty pro pokračování, nebo Zrušit pro ponechání souborů beze změny. Vložit a přetažené soubory také používají tento náhled.\n\nKonflikty: Zeptejte se u každého konfliktu nabízí Zachovat oba, Nahradit, Přeskočit a Zrušit, s Použítke všem zbývajícím konfliktům. Alternativně vyberte zásadu v náhledu před zařazením do fronty. Zachovat oba najde dostupný číslovaný název souboru, například clip (2).mp4, včetně kolizí mezi vybranými soubory z různých podsložek. Nahradit výslovně umožňuje nahrazení a uchovává předchozí cílovou položku v oblasti návratu relace. Přeskočit nechá stávající cíl beze změny. Cíl, který je jedním z vybraných zdrojových souborů, je zablokován: vyberte jinou složku. Fronta znovu kontroluje cíle, takže soubor, který se objeví po náhledu, není potichu přepsán. Vrácení zpět je omezeno na posledních 20 podporovaných akcí v této relaci a není trvalou zálohou. Needitujte převedené soubory před použitím Vrácení zpět; vrácením kopie se odstraní zkopírovaný soubor.\n\nVýběrový košík: použijte tlačítko na panelu nástrojů Výběrový košík, Soubor > Výběrový košík…, nebo klikněte pravým tlačítkem myši na vybrané soubory a zvolte Přidat do výběrového košíku. Košík je sbalitelný panel nad oběma prohlížeči, nikoli samostatné okno. Skrýt košík nebo tlačítko na panelu nástrojů jej skryje, aniž by vymazalo jeho odkazy. Přidat výběr panelu shromáždí zaškrtnutou skupinu akcí panelu, nebo jeho zvýrazněné soubory, když nejsou žádné zaškrtnuty. Navštivte jiné složky a přidejte další soubory; každá původní cesta se zobrazí pouze jednou. Košík obsahuje odkazy, nikoli kopie, a vymaže se při zavření aplikace. Odstranit odkazy nebo Vymazatkoš neodstraní originály. Vyberte řádky v košíku a zvolte Kopírovatdo aktivního panelu nebo Přesunoutdo aktivního panelu; když nejsou vybrány žádné řádky v košíku, použijí se všechny položky. Zkontrolujte normální náhled přenosu. Soubory v košíku bez sdíleného prohlížecího kořene používají své názvy souborů namísto kombinovaného stromu složek. Chybějící originály jsou označeny [chybí] a nemohou být přeneseny, dokud nejsou k dispozici."
+      },
+      {
+        "id": "smart_collections",
+        "title": "Chytré kolekce: Uložené vyhledávání",
+        "paragraphs": [
+          {
+            "id": "smart_collections.p001",
+            "source_sha256": "c8a00acd2ba2c17799572b74c47c2659ecb5a65fb4782693cbe786544ac1e764",
+            "text": "CO ULOŽÍCH CHYTRÉ KOLEKCE"
+          },
+          {
+            "id": "smart_collections.p002",
+            "source_sha256": "d366ab29cfd1f77bae1f8b286cca63d76a5e46d73bdbf4329d2cfb31a1b3694a",
+            "text": "Chytrá kolekce je pojmenované, uložené vyhledávání a zobrazení pro jedno okno prohlížeče. Pamatuje si, jak najít a zobrazit soubory ve zdrojové složce. Odkazuje na původní soubory; vytváření, otevírání, přejmenovávání nebo mazání kolekce nekopíruje, nepřesouvá, nepřejmenovává, nemaže ani neanotuje tyto mediální soubory. Použijte jej, když opakovaně prohlížíte stejnou knihovnu s konkrétními filtry a řazením, místo toho, abyste při každé návštěvě znovu zadávali tato nastavení. Uložené pracovní prostředí obnoví obě okna a jejich rozložení; Chytrá kolekce změní pouze aktivní okno."
+          },
+          {
+            "id": "smart_collections.p003",
+            "source_sha256": "006322e9c7ac283bd37b6dbb958c936304cc5977a4803b31ea4c4da238a217f2",
+            "text": "Každá kolekce má přesně jednu počáteční složku. Zahrnout podsložky prohledává všechny složky pod tímto kořenem. Nemůže kombinovat libovolné nesouvisející složky, samostatné jednotky nebo více počátečních kořenů do jedné kolekce. Vyberte jejich nejbližší společný nadřazený adresář, pokud je to možné, nebo uložte samostatné kolekce a otevřete je ve dvou panelech. Výběr kořene jednotky s Zahrnout podsložky může prohledat celý disk; vyberte nejužší užitečný nadřazený adresář."
+          },
+          {
+            "id": "smart_collections.p004",
+            "source_sha256": "20491128f8f22d658bb8601b6511411ea9d469ce4a9681d99090382d74cfc3cf",
+            "text": "Uložená nastavení jsou cesta složky, přepínače Zahrnout podsložky, Videa a Obrázky, Hledat text, výběr Rozlišení, každá hodnota Další filtry, pole a směr řazení, Detaily nebo Miniatury, velikost miniatur a režim Nepřetržité nebo Stránkované. Neuchovávají se zaškrtnuté soubory, zvýrazněné výběry, náhled přehrávání, živé sledování, druhý panel, šířky/pořadí sloupců, děliče panelů ani kapacita stránek miniatur. Tyto zůstanou samostatná nastavení. Kolekce jsou uloženy lokálně v smart_collections.json v adresáři nastavení aplikace."
+          },
+          {
+            "id": "smart_collections.p005",
+            "source_sha256": "b11ace0b241e6cfceeaf8409069c6872f849fb89e4d9c2acab35996a93e19059",
+            "text": "VYTVOŘIT KOLEKCI"
+          },
+          {
+            "id": "smart_collections.p006",
+            "source_sha256": "83c8a710973dcf1308b8fd867f872bf84624f939b91047eea47405238718426e",
+            "text": "1. Klikněte dovnitř podokna, které chcete nakonfigurovat. Tím se stane aktivním podoknem pro Nástrojepříkazy.\n2. Použij Procházet…nebo pole cesty pro otevření zamýšlené zdrojové složky.Povolit Zahrnout podsložkyjestliže v hledání patří vnořené složky.\n3. Zaškrtněte Videa, Obrázky, nebo obojí. Nastavte Hledat pro název souboru nebo podřetězec relativní cesty bez rozlišení velikosti písmen a vyberte Rozlišenípro přesnou šířku × výšku, kde je požadováno. Displej ukazuje Rozlišení:Vše, když není uplatněno žádné přesné omezení rozlišení.\n4. Otevřít Více filtrů…pro orientaci, podřetězec kodeku, podřetězec značky, minimální hodnocení, barevná značka, minimální/maximální šířka a výška, velikost souboru, délka a data úprav. Prázdná pole nepředstavují žádné omezení; všechny ne-prázdné omezení musí odpovídat. Zadejte Použít použít filtry.Vymazat resetuje hodnoty pokročilého filtru. Toto není samostatný filtr libovolného rozšíření; použijte Videa/Obrázkypřepínače a tam, kde je to vhodné, část názvu souboru, například .mp4.\n5. Počkejte na skenování a vyberte požadované pořadí. V Detaily, klikněte na záhlaví sloupce; klikněte znovu pro obrácení směru. V Miniatury, použijte možnost Třídit a její submenu pro pole/směr. Obě zobrazení používají stejná filtrovaná média a pořadí.\n6. Vyberte Nástroje > Uložit aktivní inteligentní kolekci…a zadejte popisný název sbírky. Uložení existujícího názvu vyžaduje Nahradit chytrou kolekci; souhlasíte pouze, pokud by aktuální panel měl nahradit uloženou definici. Uložením se vytvoří přednastavení, nikoli kopie zobrazovaných souborů."
+          },
+          {
+            "id": "smart_collections.p007",
+            "source_sha256": "cc9c90b0168ad0ec1cefb3b33388495dd4c350d67628c7413d8a0ee240b4ae7b",
+            "text": "OTEVŘÍT A AKTUALIZOVAT KOLEKCI"
+          },
+          {
+            "id": "smart_collections.p008",
+            "source_sha256": "89904bdaa8286ca4ca8546e5136bc9ff5b7688ac0147d82ee8a66fd4caa61afa",
+            "text": "Nejprve vyberte cílovou oblast. Otevřete Nástroje > Spravovat inteligentní kolekce…, vyberte uložený záznam a klikněte na Použít nebo dvakrát klikněte na řádek. Aktivní oblast přejde do uložené výchozí složky, obnoví uložené filtry, řazení a prezentaci a poté ji prohledá. Protikladná oblast zůstává nezměněna. Pokud je složka odpojena, přesunuta nebo již neexistuje, Složka kolekce není dostupná vysvětluje uloženou cestu; znovu ji připojte nebo uložte náhradu pomocí platné složky."
+          },
+          {
+            "id": "smart_collections.p009",
+            "source_sha256": "1668c49611305d33e2b5780a8b4c6910237f09146c4967272ffd9cf9df5477ae",
+            "text": "Výsledeks zobrazují soubory aktuálně nalezené při skenování panelu, nikoli zmrazený seznam pořízený při uložení přednastavení. Použijte tlačítko panelu Ôå╗, Zobrazit > Obnovit aktivní panel, nebo F5 pro oba panely po změnách externích souborů. Živé může sledovat aktuální složku, ale Živé není součástí uložené sbírky. Změny filtrace nebo řazení ovlivňují aktuální zobrazení okamžitě; změny rozsahu zdroje vyžadují odpovídající sken. Zrušit zastaví skenování. Rekurzivní kolekce Velké používají stejnou mezipaměť metadat a výkonnostní profily jako běžné prohlížení."
+          },
+          {
+            "id": "smart_collections.p010",
+            "source_sha256": "5d0ba8ba1b4e449868d9118559c323b524f2ed494ba01573aee4d4176bc9d605",
+            "text": "Neexistuje samostatné tlačítko Upravit sbírku. Chcete-li změnit existující sbírku, Použít ji, upravte složku, rozsah, filtry nebo řazení v tomto panelu, poté zvolte Nástroje > Uložit aktivní inteligentní kolekci… se stejným názvem a potvrďte nahrazení. V správci Uložit aktuální uloží aktuální nastavení aktivního panelu a požádá o jméno; automaticky neupravuje vybraný řádek. Přejmenování neuchovává žádné změny provedené ve filtrech panelu."
+          },
+          {
+            "id": "smart_collections.p011",
+            "source_sha256": "6e88b549b05defa2d24fa8d186b6ba7aea252c5d474f37b1bb4d2e876fbcdbfd",
+            "text": "PŘEJMENOVAT, ODSTRANIT A OBNOVIT"
+          },
+          {
+            "id": "smart_collections.p012",
+            "source_sha256": "2a100ef5ff5e82d9b023158669f5f05a1ef343719fe452c2e74a2589cd33091a",
+            "text": "V Nástroje > Spravovat inteligentní kolekce… vyberte položku a klikněte na Přejmenovat. Zadejte Nové jméno: a potvrďte nahrazení, pokud již kolekce s tímto názvem existuje. Odstranit vyžaduje potvrzení a odstraní pouze přednastavení. Zrušit smazání obnoví naposledy smazané přednastavení, dokud je toto okno správce otevřené. Zavřením správce se ztratí tento dočasný zásobník zpět. Pokud byla následně vytvořena kolekce se stejným názvem, obnovení smazané položky nahradí přednastavení tohoto názvu, proto používejte odlišné názvy při zachování obou. Zavřít ukončí bez použití vybraného řádku. Ctrl+Z je určeno pro operace se soubory, ne pro mazání ve správci kolekcí."
+          },
+          {
+            "id": "smart_collections.p013",
+            "source_sha256": "fc23ad3b8bc9134b6679c107990040938242a050929d015a037c6128ec0433d6",
+            "text": "PŘÍKLAD: TŘÍDĚNÍ OBRÁZKŮ NAPŘÍČ PODSLOŽKAMI PODLE ROZLIŠENÍ"
+          },
+          {
+            "id": "smart_collections.p014",
+            "source_sha256": "71fd063332ef48d1b7ce3c83f9cdbc8f08084a1965687f4f382f46399b47cc96",
+            "text": "1. V levém panelu,Procházet…do složky rodiče vašich Obrázků, povolit Zahrnout podsložky a Obrázky, a otočit Videa vypnuto.\n2. Vymazat  Najít a nastavit Rozlišenívšem, pokud chcete porovnat všechny rozměry. Otevřít Více filtrů… a Vymazat/Použít pokud by měla být stará omezení odstraněna.\n3. V Detaily, klikněte Rozlišenídokud se nezobrazí požadované vzestupné nebo sestupné pořadí. Nebo vyberte Miniatury a Řadit > Rozlišení > Nejmenší nahoře nebo Největší nahoře. Rozlišenítřídění používá plochu pixelů (šířka × výška), přičemž šířka a výška rozhodují v případě shody plochy; nejde o jednoduché třídění pouze podle šířky. Přesný Rozlišenífiltr omezuje pouze na jeden konkrétní pár dimenzí.\n4. Uložte aktivní podokno jako Obrázkyusnesením.Později Použít tento záznam v libovolném panelu k opakování hledání, včetně nově přidaných odpovídajících souborů po skenování."
+          },
+          {
+            "id": "smart_collections.p015",
+            "source_sha256": "ff3bb0c443412ace673aef6b3b1dd606e3214fe0e515419f44b8de1c6e8f7ee7",
+            "text": "PŘÍKLAD: PROHLÍŽET VIDEA VE VYSOKÉM ROZLIŠENÍ"
+          },
+          {
+            "id": "smart_collections.p016",
+            "source_sha256": "58ddf88adee5ea950a3c3cc66a1975d861ac600276d297a9190c5cd96961d30b",
+            "text": "1. Procházet…k Videanadřazená složka, povolit Zahrnout podsložky a Videa, a otočit Obrázky vypnuto.\n2. V Více filtrů…, nastavit Minimální šířka (pixely) do roku 1920 a Minimální výška (pixely) na 1080, pokud chcete videa splňující OBA rozměry. To vylučuje portrétní videa užší než 1920, i když mají vysoký počet pixelů; upravte limity nebo použijte Orientacepodle vašeho cíle.\n3. Nechte Rozlišenízahrnout různé kvalifikační rozměry. Volitelně nastavit Kodek obsahujena HEVC, aby odpovídal uloženému štítku kodeku HEVC, nebo H.264 pro H.264. Filtr se doslovně shoduje se zobrazeným štítkem kodeku, bez ohledu na velikost písmen; h264 bez tečky se neshoduje s H.264. Použijte Informace pro zobrazení skutečného kodeku souboru, pokud filtr nic nenajde.\n4. Třídit podle Rozlišení v Detaily nebo Miniatury. Mezi další podporovaná pole třídění patří Název, Datum poslední úpravy, Velikost souboru, Délka, Kodek, Typ, Bitrate, Snímková frekvence a Hodnocení. Uložit jako videa s vysokým rozlišením. Použijte Náhled nebo informace, když je potřeba zkontrolovat jednotlivé výsledky; jejich povolení je nezávislé na definici sbírky."
+          },
+          {
+            "id": "smart_collections.p017",
+            "source_sha256": "582f628c0fa7f236fedaf4a03501cc2af09cc29bf57550102597d7d8e626b747",
+            "text": "OMEZENÍ A AKCE SE SOUBORY"
+          },
+          {
+            "id": "smart_collections.p018",
+            "source_sha256": "9722f0d4824f0d75e2aa03fd474ccaa99cbe4abb11cf0728857e688af3d85f7a",
+            "text": "Kolekce je přednastavení nad dostupnými soubory, nikoli indexovaná knihovna pokrývající odpojené disky, automatické pozadí pravidla, seznam skladeb, skupina duplicit nebo fyzická složka. Změna přednastavení nikdy automaticky neorganizuje soubory. Příkazy kopírování/přesunu/odstranění souborů, které spustíte úmyslně na výsledcích, stále působí na původní média. Existující zaškrtnutí mají přednost před zvýrazněním a mohou zahrnovat soubory skryté filtry; před akcí na nechtěnou skupinu zkontrolujte počítadlo zaškrtnutí a Vymazat zaškrtnutí. Navigace do jiné složky vymaže zaškrtnutí v daném panelu. Aplikace kolekce může ponechat existující zaškrtnutí, pokud zůstává výchozí složka stejná, proto je vždy před akcemi se soubory zkontrolujte."
+          },
+          {
+            "id": "smart_collections.p019",
+            "source_sha256": "07532ce67ddc2c2b72a425c349151e1bfee9bb68f725bc867be341fef82f1f29",
+            "text": "Viz také: [chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+          }
+        ],
+        "body": "CO ULOŽÍCH CHYTRÉ KOLEKCE\n\nChytrá kolekce je pojmenované, uložené vyhledávání a zobrazení pro jedno okno prohlížeče. Pamatuje si, jak najít a zobrazit soubory ve zdrojové složce. Odkazuje na původní soubory; vytváření, otevírání, přejmenovávání nebo mazání kolekce nekopíruje, nepřesouvá, nepřejmenovává, nemaže ani neanotuje tyto mediální soubory. Použijte jej, když opakovaně prohlížíte stejnou knihovnu s konkrétními filtry a řazením, místo toho, abyste při každé návštěvě znovu zadávali tato nastavení. Uložené pracovní prostředí obnoví obě okna a jejich rozložení; Chytrá kolekce změní pouze aktivní okno.\n\nKaždá kolekce má přesně jednu počáteční složku. Zahrnout podsložky prohledává všechny složky pod tímto kořenem. Nemůže kombinovat libovolné nesouvisející složky, samostatné jednotky nebo více počátečních kořenů do jedné kolekce. Vyberte jejich nejbližší společný nadřazený adresář, pokud je to možné, nebo uložte samostatné kolekce a otevřete je ve dvou panelech. Výběr kořene jednotky s Zahrnout podsložky může prohledat celý disk; vyberte nejužší užitečný nadřazený adresář.\n\nUložená nastavení jsou cesta složky, přepínače Zahrnout podsložky, Videa a Obrázky, Hledat text, výběr Rozlišení, každá hodnota Další filtry, pole a směr řazení, Detaily nebo Miniatury, velikost miniatur a režim Nepřetržité nebo Stránkované. Neuchovávají se zaškrtnuté soubory, zvýrazněné výběry, náhled přehrávání, živé sledování, druhý panel, šířky/pořadí sloupců, děliče panelů ani kapacita stránek miniatur. Tyto zůstanou samostatná nastavení. Kolekce jsou uloženy lokálně v smart_collections.json v adresáři nastavení aplikace.\n\nVYTVOŘIT KOLEKCI\n\n1. Klikněte dovnitř podokna, které chcete nakonfigurovat. Tím se stane aktivním podoknem pro Nástrojepříkazy.\n2. Použij Procházet…nebo pole cesty pro otevření zamýšlené zdrojové složky.Povolit Zahrnout podsložkyjestliže v hledání patří vnořené složky.\n3. Zaškrtněte Videa, Obrázky, nebo obojí. Nastavte Hledat pro název souboru nebo podřetězec relativní cesty bez rozlišení velikosti písmen a vyberte Rozlišenípro přesnou šířku × výšku, kde je požadováno. Displej ukazuje Rozlišení:Vše, když není uplatněno žádné přesné omezení rozlišení.\n4. Otevřít Více filtrů…pro orientaci, podřetězec kodeku, podřetězec značky, minimální hodnocení, barevná značka, minimální/maximální šířka a výška, velikost souboru, délka a data úprav. Prázdná pole nepředstavují žádné omezení; všechny ne-prázdné omezení musí odpovídat. Zadejte Použít použít filtry.Vymazat resetuje hodnoty pokročilého filtru. Toto není samostatný filtr libovolného rozšíření; použijte Videa/Obrázkypřepínače a tam, kde je to vhodné, část názvu souboru, například .mp4.\n5. Počkejte na skenování a vyberte požadované pořadí. V Detaily, klikněte na záhlaví sloupce; klikněte znovu pro obrácení směru. V Miniatury, použijte možnost Třídit a její submenu pro pole/směr. Obě zobrazení používají stejná filtrovaná média a pořadí.\n6. Vyberte Nástroje > Uložit aktivní inteligentní kolekci…a zadejte popisný název sbírky. Uložení existujícího názvu vyžaduje Nahradit chytrou kolekci; souhlasíte pouze, pokud by aktuální panel měl nahradit uloženou definici. Uložením se vytvoří přednastavení, nikoli kopie zobrazovaných souborů.\n\nOTEVŘÍT A AKTUALIZOVAT KOLEKCI\n\nNejprve vyberte cílovou oblast. Otevřete Nástroje > Spravovat inteligentní kolekce…, vyberte uložený záznam a klikněte na Použít nebo dvakrát klikněte na řádek. Aktivní oblast přejde do uložené výchozí složky, obnoví uložené filtry, řazení a prezentaci a poté ji prohledá. Protikladná oblast zůstává nezměněna. Pokud je složka odpojena, přesunuta nebo již neexistuje, Složka kolekce není dostupná vysvětluje uloženou cestu; znovu ji připojte nebo uložte náhradu pomocí platné složky.\n\nVýsledeks zobrazují soubory aktuálně nalezené při skenování panelu, nikoli zmrazený seznam pořízený při uložení přednastavení. Použijte tlačítko panelu Ôå╗, Zobrazit > Obnovit aktivní panel, nebo F5 pro oba panely po změnách externích souborů. Živé může sledovat aktuální složku, ale Živé není součástí uložené sbírky. Změny filtrace nebo řazení ovlivňují aktuální zobrazení okamžitě; změny rozsahu zdroje vyžadují odpovídající sken. Zrušit zastaví skenování. Rekurzivní kolekce Velké používají stejnou mezipaměť metadat a výkonnostní profily jako běžné prohlížení.\n\nNeexistuje samostatné tlačítko Upravit sbírku. Chcete-li změnit existující sbírku, Použít ji, upravte složku, rozsah, filtry nebo řazení v tomto panelu, poté zvolte Nástroje > Uložit aktivní inteligentní kolekci… se stejným názvem a potvrďte nahrazení. V správci Uložit aktuální uloží aktuální nastavení aktivního panelu a požádá o jméno; automaticky neupravuje vybraný řádek. Přejmenování neuchovává žádné změny provedené ve filtrech panelu.\n\nPŘEJMENOVAT, ODSTRANIT A OBNOVIT\n\nV Nástroje > Spravovat inteligentní kolekce… vyberte položku a klikněte na Přejmenovat. Zadejte Nové jméno: a potvrďte nahrazení, pokud již kolekce s tímto názvem existuje. Odstranit vyžaduje potvrzení a odstraní pouze přednastavení. Zrušit smazání obnoví naposledy smazané přednastavení, dokud je toto okno správce otevřené. Zavřením správce se ztratí tento dočasný zásobník zpět. Pokud byla následně vytvořena kolekce se stejným názvem, obnovení smazané položky nahradí přednastavení tohoto názvu, proto používejte odlišné názvy při zachování obou. Zavřít ukončí bez použití vybraného řádku. Ctrl+Z je určeno pro operace se soubory, ne pro mazání ve správci kolekcí.\n\nPŘÍKLAD: TŘÍDĚNÍ OBRÁZKŮ NAPŘÍČ PODSLOŽKAMI PODLE ROZLIŠENÍ\n\n1. V levém panelu,Procházet…do složky rodiče vašich Obrázků, povolit Zahrnout podsložky a Obrázky, a otočit Videa vypnuto.\n2. Vymazat  Najít a nastavit Rozlišenívšem, pokud chcete porovnat všechny rozměry. Otevřít Více filtrů… a Vymazat/Použít pokud by měla být stará omezení odstraněna.\n3. V Detaily, klikněte Rozlišenídokud se nezobrazí požadované vzestupné nebo sestupné pořadí. Nebo vyberte Miniatury a Řadit > Rozlišení > Nejmenší nahoře nebo Největší nahoře. Rozlišenítřídění používá plochu pixelů (šířka × výška), přičemž šířka a výška rozhodují v případě shody plochy; nejde o jednoduché třídění pouze podle šířky. Přesný Rozlišenífiltr omezuje pouze na jeden konkrétní pár dimenzí.\n4. Uložte aktivní podokno jako Obrázkyusnesením.Později Použít tento záznam v libovolném panelu k opakování hledání, včetně nově přidaných odpovídajících souborů po skenování.\n\nPŘÍKLAD: PROHLÍŽET VIDEA VE VYSOKÉM ROZLIŠENÍ\n\n1. Procházet…k Videanadřazená složka, povolit Zahrnout podsložky a Videa, a otočit Obrázky vypnuto.\n2. V Více filtrů…, nastavit Minimální šířka (pixely) do roku 1920 a Minimální výška (pixely) na 1080, pokud chcete videa splňující OBA rozměry. To vylučuje portrétní videa užší než 1920, i když mají vysoký počet pixelů; upravte limity nebo použijte Orientacepodle vašeho cíle.\n3. Nechte Rozlišenízahrnout různé kvalifikační rozměry. Volitelně nastavit Kodek obsahujena HEVC, aby odpovídal uloženému štítku kodeku HEVC, nebo H.264 pro H.264. Filtr se doslovně shoduje se zobrazeným štítkem kodeku, bez ohledu na velikost písmen; h264 bez tečky se neshoduje s H.264. Použijte Informace pro zobrazení skutečného kodeku souboru, pokud filtr nic nenajde.\n4. Třídit podle Rozlišení v Detaily nebo Miniatury. Mezi další podporovaná pole třídění patří Název, Datum poslední úpravy, Velikost souboru, Délka, Kodek, Typ, Bitrate, Snímková frekvence a Hodnocení. Uložit jako videa s vysokým rozlišením. Použijte Náhled nebo informace, když je potřeba zkontrolovat jednotlivé výsledky; jejich povolení je nezávislé na definici sbírky.\n\nOMEZENÍ A AKCE SE SOUBORY\n\nKolekce je přednastavení nad dostupnými soubory, nikoli indexovaná knihovna pokrývající odpojené disky, automatické pozadí pravidla, seznam skladeb, skupina duplicit nebo fyzická složka. Změna přednastavení nikdy automaticky neorganizuje soubory. Příkazy kopírování/přesunu/odstranění souborů, které spustíte úmyslně na výsledcích, stále působí na původní média. Existující zaškrtnutí mají přednost před zvýrazněním a mohou zahrnovat soubory skryté filtry; před akcí na nechtěnou skupinu zkontrolujte počítadlo zaškrtnutí a Vymazat zaškrtnutí. Navigace do jiné složky vymaže zaškrtnutí v daném panelu. Aplikace kolekce může ponechat existující zaškrtnutí, pokud zůstává výchozí složka stejná, proto je vždy před akcemi se soubory zkontrolujte.\n\nViz také: [chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+      },
+      {
+        "id": "duplicates_and_comparison",
+        "title": "Duplikáty A srovnání",
+        "paragraphs": [
+          {
+            "id": "duplicates_and_comparison.p001",
+            "source_sha256": "0782926d2c4bf15b6bc6546a84700657d47e97dec140144e01570bb40c129af6",
+            "text": "Nástroje > Najít duplicity nachází přesné shody ve fázích. Souborům stejné velikosti je přiřazena rychlá otisková známka vzorkovaná z začátku, středu a konce; pouze odpovídající kandidáti jsou poté úplně přečteni a ověřeni pomocí SHA-256. Oba otisky jsou uchovávány v keši SQLite, zatímco cesta, velikost a čas poslední úpravy zůstávají beze změny, což zrychluje pozdější vyhledávání. Průběh se zobrazuje v řádku stavu aktivního panelu. Režim prohlížení zobrazuje dvě kopie vedle sebe s cestami, daty a štítky uchování. Strategie vybírá pouze navrhované nadbytečné soubory – nikdy je automaticky nemaže. Porovnat vybrané zobrazuje dva vybrané soubory a jejich technické metadata."
+          },
+          {
+            "id": "duplicates_and_comparison.p002",
+            "source_sha256": "db002d92b3f1a118d7bb8aa101af8c1ae262721f09af95713962ae48eac85a4e",
+            "text": "Nástroje > Najít vizuálně podobné obrázky detekuje zmenšené, lehce znovukompresované a jinak vizuálně podobné obrázky, i když jejich soubory nejsou identické po bajtech. Vyberte Viditelné nebo Vše prohledáno a toleranci od 0 do 16; nižší hodnoty jsou přísnější a výchozí je 6. 64bitové hash hodnoty rozdílů jsou ukládány do mezipaměti podle cesty, velikosti a data úpravy a BK-strom udržuje shodu efektivní pro velké sbírky. Výsledek jsou odhady a otevírají se v okně jen pro kontrolu s náhledy a možností vybrat tuto skupinu. Nástroj nikdy nesmaže ani nezmění soubory; před použitím běžných akcí se ujistěte, že zkontrolujete každou navrhovanou skupinu."
+          },
+          {
+            "id": "duplicates_and_comparison.usage",
+            "source_sha256": "ff37fdb3497ad945d44131286606d3efc34ef09526591ecd559e63aaa9b6e4ca",
+            "text": "POUŽITÍ NÁSTROJŮ PRO REVIZI\n\nU přesných duplikátů otevřete zdrojovou složku, povolte Zahrnout podsložkypokud je to nutné, počkejte na skenování a vyberte Nástroje > Najít duplicitní soubory…. Zkoumá všechna média prohledaná v tomto panelu, nejen zvýrazněné nebo viditelné podle filtru soubory. Prohlédněte si seskupené cesty a náhledy vedle sebe, a poté zvolte strategii uchování, aby byly v panelu zdroje zvýrazněny navrhované duplicitní kopie. To je nesmaže.Vymazat existující značky a zkontrolujte navržené zvýraznění před spuštěním akce souboru.\n\nU vizuálně podobných obrázků vyberte Nástroje > Najít vizuálně podobné obrázky…, vyberte Rozsah: Viditelné nebo Vše prohledáno, nastavte toleranci podobnosti (0–16) a klikněte Spustit. Začněte s 6; nižší je přísnější. Vyberte výsledek pro jeho náhled; Vyberte tuto skupinu v panelu zdrojůzvýrazňuje skupinu, včetně referenčního obrázku. Není to automatické vybírání pouze nežádoucích kopií.\n\nPro přímé porovnání dvojice zrušte nežádoucí značky, vyberte přesně dva soubory v jednom panelu a zvolte Nástroje > Porovnat vybrané…Zkontrolujte jejich náhledy, cesty a vlastnosti.Držte se vlevo (recyklujte vpravo) a Držte se vpravo (recyklujte vlevo) požádat o potvrzení před odesláním druhého souboru do Koše / Koše na odpadky. Zavření bez provedení kterékoliv akce ponechá oba soubory beze změny."
+          }
+        ],
+        "body": "Nástroje > Najít duplicity nachází přesné shody ve fázích. Souborům stejné velikosti je přiřazena rychlá otisková známka vzorkovaná z začátku, středu a konce; pouze odpovídající kandidáti jsou poté úplně přečteni a ověřeni pomocí SHA-256. Oba otisky jsou uchovávány v keši SQLite, zatímco cesta, velikost a čas poslední úpravy zůstávají beze změny, což zrychluje pozdější vyhledávání. Průběh se zobrazuje v řádku stavu aktivního panelu. Režim prohlížení zobrazuje dvě kopie vedle sebe s cestami, daty a štítky uchování. Strategie vybírá pouze navrhované nadbytečné soubory – nikdy je automaticky nemaže. Porovnat vybrané zobrazuje dva vybrané soubory a jejich technické metadata.\n\nNástroje > Najít vizuálně podobné obrázky detekuje zmenšené, lehce znovukompresované a jinak vizuálně podobné obrázky, i když jejich soubory nejsou identické po bajtech. Vyberte Viditelné nebo Vše prohledáno a toleranci od 0 do 16; nižší hodnoty jsou přísnější a výchozí je 6. 64bitové hash hodnoty rozdílů jsou ukládány do mezipaměti podle cesty, velikosti a data úpravy a BK-strom udržuje shodu efektivní pro velké sbírky. Výsledek jsou odhady a otevírají se v okně jen pro kontrolu s náhledy a možností vybrat tuto skupinu. Nástroj nikdy nesmaže ani nezmění soubory; před použitím běžných akcí se ujistěte, že zkontrolujete každou navrhovanou skupinu.\n\nPOUŽITÍ NÁSTROJŮ PRO REVIZI\n\nU přesných duplikátů otevřete zdrojovou složku, povolte Zahrnout podsložkypokud je to nutné, počkejte na skenování a vyberte Nástroje > Najít duplicitní soubory…. Zkoumá všechna média prohledaná v tomto panelu, nejen zvýrazněné nebo viditelné podle filtru soubory. Prohlédněte si seskupené cesty a náhledy vedle sebe, a poté zvolte strategii uchování, aby byly v panelu zdroje zvýrazněny navrhované duplicitní kopie. To je nesmaže.Vymazat existující značky a zkontrolujte navržené zvýraznění před spuštěním akce souboru.\n\nU vizuálně podobných obrázků vyberte Nástroje > Najít vizuálně podobné obrázky…, vyberte Rozsah: Viditelné nebo Vše prohledáno, nastavte toleranci podobnosti (0–16) a klikněte Spustit. Začněte s 6; nižší je přísnější. Vyberte výsledek pro jeho náhled; Vyberte tuto skupinu v panelu zdrojůzvýrazňuje skupinu, včetně referenčního obrázku. Není to automatické vybírání pouze nežádoucích kopií.\n\nPro přímé porovnání dvojice zrušte nežádoucí značky, vyberte přesně dva soubory v jednom panelu a zvolte Nástroje > Porovnat vybrané…Zkontrolujte jejich náhledy, cesty a vlastnosti.Držte se vlevo (recyklujte vpravo) a Držte se vpravo (recyklujte vlevo) požádat o potvrzení před odesláním druhého souboru do Koše / Koše na odpadky. Zavření bez provedení kterékoliv akce ponechá oba soubory beze změny."
+      },
+      {
+        "id": "video_conversion",
+        "title": "Konverze videa",
+        "paragraphs": [
+          {
+            "id": "video_conversion.p001",
+            "source_sha256": "b2ee9f6d3dced7fd286ca5ee1d093029d40566fbc9e29e283a2a3058d9c37b85",
+            "text": "Použijte Nástroje > Převést vybraná videa… k vytvoření nových video souborů s jiným kodekem, kontejnerem nebo rozlišením. Původní soubory jsou zachovány. Nejdříve vyberte malý vzorek, abyste mohli porovnat jeho kvalitu, kompatibilitu při přehrávání, velikost souboru a čas převodu před zpracováním velké skupiny."
+          },
+          {
+            "id": "video_conversion.p002",
+            "source_sha256": "d51cf66e935232f9f87c8254590a1e53247ff73d6b9a122efcfcfe2a026f48d9",
+            "text": "PŘEVÉST JEDNO NEBO VÍCE VIDEÍ\n\n1. Otevřete zdrojovou složku v kterémkoli panelu.Povolit Zahrnout podsložkypokud jsou videa rozložena do jeho podsložek, a počkejte na dokončení skenování.\n2. Zaškrtněte videa k převodu. Pokud nejsou žádné zaškrtnuté, příkaz použije místo toho zvýrazněné soubory.Vymazat nežádoucí zatržítka nejdříve: soubor s zatržítkem skrytý filtrem stále patří do akční skupiny.Obrázkyve skupině jsou tímto příkazem ignorovány.\n3. Zvolte Nástroje > Převést vybraná videa…\n4. Vyberte přednastavení Rozlišení, Kvalita (CRF) a kódovací engine jak je popsáno níže.\n5. Zkontrolujte Výstupsložka. Nejprve ukazuje na složku v druhém panelu; použijte Procházet…nebo zadejte jiné cílové místo, pokud je to nutné. Zkontrolujte Zachovat složky vzhledem k aktivnímu paneluuchovat strukturu podsložek zdroje pod touto destinací.\n6. Vyberte Přeskočit existující nebo Zachovat oba. Klikněte Obnovit náhledpo změně cíle, zachování složky nebo politiky existujících souborů. Přečtěte si každý Zdroj a Výstupcestu a zkontrolujte Stavsloupec. Pouze Připravenořádky poběží.\n7. Klikněte Spustit konverzi…a přezkoumejte potvrzení před tím, než souhlasíte. Sledujte pokrok a jednotlivé soubory Výsledek. Po dokončení otevřete převedený soubor a zkontrolujte ho, než se rozhodnete, co udělat s originálem."
+          },
+          {
+            "id": "video_conversion.p003",
+            "source_sha256": "13dffb3d18a13839d2bb6145a7313a3ee2144bcdd5305808500659c8a434c0a8",
+            "text": "VÝBĚR PŘEDNASTAVENÉHO REŽIMU\n\nH.264 MP4 (kompatibilní): užitečná volba, pokud je důležitá široká kompatibilita s přehrávači/zařízeními.\nH.265 MP4 (menší): kódování HEVC, které může snížit velikost souboru, ale vyžaduje kompatibilní přehrávač.\nAV1 MKV (nejmenší): kódování AV1 v kontejneru MKV; zkontrolujte podporu přehrávání a rychlost konverze na vašem počítači.\n720p H.264 proxy: kopie H.264 s nižším rozlišením, užitečná pro rychlejší prohlížení nebo kontrolu. Výběrem této přednastavené možnosti se Rozlišení nastaví na 720p; můžete ji změnit před spuštěním.\nRemux do MKV (bez překódování): kopíruje existující streamy do MKV. Nemění video kodek, rozlišení ani kvalitu a není to způsob, jak převést H.264 na H.265. Přednastavené názvy kódování neznamenají záruku, že každý výstup bude menší než jeho zdroj."
+          },
+          {
+            "id": "video_conversion.p004",
+            "source_sha256": "31fe0e232d02cd89058578e2fccde72f21ae8fd0074c94698407be72fccf86ed",
+            "text": "ROZLIŠENÍ A KVALITA\n\nZachovat původní rozlišení zachovává původní rozměry snímků při přeenkódování. 1080p a 720p nastavují výstupní VÝŠKU na 1080 nebo 720 pixelů při zachování poměru stran; nejsou to nastavení maximální šířky nebo pouze automatického zmenšení. Například video 3840 × 2160 se stane 1920 × 1080 při 1080p. Menší zdroj lze zvětšit, což neobnovuje chybějící detaily. Videa Na výšku si zachovávají své proporce, místo aby se stala na šířku.\n\nKvalita (CRF) přijímá celá čísla od 18 do 35; výchozí hodnota je 23. Nižší čísla znamenají vyšší kvalitu a obvykle větší soubory. Hardwarové enginy mapují tuto hodnotu do svého vlastního řízení kvality, takže stejné hodnoty nemusí znamenat shodné výsledky napříč enginy. Vyzkoušejte vzorek. Remux kvalitu ignoruje, stejně jako změnu velikosti a akceleraci."
+          },
+          {
+            "id": "video_conversion.p005",
+            "source_sha256": "2d17a4384e7cc6ceb233a92096824f99dc79d0d11c5f43d2c552d545e166b856",
+            "text": "KODOVÁNÍ A DEKÓDOVÁNÍ\n\nAutomaticky (doporučeno) zkouší dostupné možnosti hardwarového kódování a v případě potřeby přechází na alternativy Software / CPU. Software / CPU využívá procesor. NVIDIA NVENC, Intel Quick Sync, AMD AMF a Linux VA-API jsou nabízeny, pokud jsou podporovány pro zvolený přednastavený režim. Souhrn detekce uvádí podporu FFmpeg; vybraný hardware a ovladače musí rovněž fungovat. Explicitně vybraný hardwarový engine hlásí selhání místo toho, aby tiše přepínal na jiný kódovač.\n\nPoužívejte hardwarové dekódování, pokud je k dispozici řídí čtení zdroje nezávisle na výstupním kódovači. Pokud nelze spustit požadovaný hardwarový dekodér, dekódování se opakuje softwarově při zachování zvoleného kódovače. Zrušte zaškrtnutí, pokud chcete softwarové dekódování. Tato nastavení nemění původní soubor."
+          },
+          {
+            "id": "video_conversion.p006",
+            "source_sha256": "06ea5ef5426b40dc040f7227353e00d7437b8fc335a4e6ad48d27d5bbdcf8834",
+            "text": "VÝSTUPNÍ NÁZVY, PROGRESS A ZRUŠENÍ\n\nNové názvy souborů obsahují přednastavený příponu a, pokud je to zvoleno, výstupní rozlišení. Přeskočit existující ponechá stávající cíl beze změny. Zachovat oba použije číslovaný název souboru místo jeho nahrazení. Před spuštěním zkontrolujte náhled kvůli přeskočeným souborům, duplicitním výstupním názvům nebo jiným problémům.\n\nVidea se zpracovávají jeden po druhém. Zrušit konverzi zastaví aktuální konverzi, odstraní její nedokončený výstup a zastaví zbývající frontu. Dokončené výstupy zůstanou. Zavření tohoto okna konverze také vyžaduje zrušení. Jeho fronta je oddělená od Nástroje > Fronta přenosu…, která spravuje kopírování a přesouvání."
+          },
+          {
+            "id": "video_conversion.p007",
+            "source_sha256": "2305a1598d67013bd4f756c6d91dec721660a38e61ab32c2435ab8a104a9ee5b",
+            "text": "PŘÍKLAD: H.264 NA H.265 NA 1080p\n\nOznačte několik videí H.264, otevřete Nástroje > Převést vybraná videa…, vyberte H.265 MP4 (menší), nastavte Rozlišení na 1080p, ponechte Kvalitu (CRF) na 23 pro první test a vyberte Automaticky (doporučeno). Zvolte výstupní složku, klikněte na Obnovit náhled, zkontrolujte cesty a pak Spustit konverzi…. Porovnejte hotové kopie s originály; případně upravte kvalitu nebo rozlišení a test zopakujte."
+          }
+        ],
+        "body": "Použijte Nástroje > Převést vybraná videa… k vytvoření nových video souborů s jiným kodekem, kontejnerem nebo rozlišením. Původní soubory jsou zachovány. Nejdříve vyberte malý vzorek, abyste mohli porovnat jeho kvalitu, kompatibilitu při přehrávání, velikost souboru a čas převodu před zpracováním velké skupiny.\n\nPŘEVÉST JEDNO NEBO VÍCE VIDEÍ\n\n1. Otevřete zdrojovou složku v kterémkoli panelu.Povolit Zahrnout podsložkypokud jsou videa rozložena do jeho podsložek, a počkejte na dokončení skenování.\n2. Zaškrtněte videa k převodu. Pokud nejsou žádné zaškrtnuté, příkaz použije místo toho zvýrazněné soubory.Vymazat nežádoucí zatržítka nejdříve: soubor s zatržítkem skrytý filtrem stále patří do akční skupiny.Obrázkyve skupině jsou tímto příkazem ignorovány.\n3. Zvolte Nástroje > Převést vybraná videa…\n4. Vyberte přednastavení Rozlišení, Kvalita (CRF) a kódovací engine jak je popsáno níže.\n5. Zkontrolujte Výstupsložka. Nejprve ukazuje na složku v druhém panelu; použijte Procházet…nebo zadejte jiné cílové místo, pokud je to nutné. Zkontrolujte Zachovat složky vzhledem k aktivnímu paneluuchovat strukturu podsložek zdroje pod touto destinací.\n6. Vyberte Přeskočit existující nebo Zachovat oba. Klikněte Obnovit náhledpo změně cíle, zachování složky nebo politiky existujících souborů. Přečtěte si každý Zdroj a Výstupcestu a zkontrolujte Stavsloupec. Pouze Připravenořádky poběží.\n7. Klikněte Spustit konverzi…a přezkoumejte potvrzení před tím, než souhlasíte. Sledujte pokrok a jednotlivé soubory Výsledek. Po dokončení otevřete převedený soubor a zkontrolujte ho, než se rozhodnete, co udělat s originálem.\n\nVÝBĚR PŘEDNASTAVENÉHO REŽIMU\n\nH.264 MP4 (kompatibilní): užitečná volba, pokud je důležitá široká kompatibilita s přehrávači/zařízeními.\nH.265 MP4 (menší): kódování HEVC, které může snížit velikost souboru, ale vyžaduje kompatibilní přehrávač.\nAV1 MKV (nejmenší): kódování AV1 v kontejneru MKV; zkontrolujte podporu přehrávání a rychlost konverze na vašem počítači.\n720p H.264 proxy: kopie H.264 s nižším rozlišením, užitečná pro rychlejší prohlížení nebo kontrolu. Výběrem této přednastavené možnosti se Rozlišení nastaví na 720p; můžete ji změnit před spuštěním.\nRemux do MKV (bez překódování): kopíruje existující streamy do MKV. Nemění video kodek, rozlišení ani kvalitu a není to způsob, jak převést H.264 na H.265. Přednastavené názvy kódování neznamenají záruku, že každý výstup bude menší než jeho zdroj.\n\nROZLIŠENÍ A KVALITA\n\nZachovat původní rozlišení zachovává původní rozměry snímků při přeenkódování. 1080p a 720p nastavují výstupní VÝŠKU na 1080 nebo 720 pixelů při zachování poměru stran; nejsou to nastavení maximální šířky nebo pouze automatického zmenšení. Například video 3840 × 2160 se stane 1920 × 1080 při 1080p. Menší zdroj lze zvětšit, což neobnovuje chybějící detaily. Videa Na výšku si zachovávají své proporce, místo aby se stala na šířku.\n\nKvalita (CRF) přijímá celá čísla od 18 do 35; výchozí hodnota je 23. Nižší čísla znamenají vyšší kvalitu a obvykle větší soubory. Hardwarové enginy mapují tuto hodnotu do svého vlastního řízení kvality, takže stejné hodnoty nemusí znamenat shodné výsledky napříč enginy. Vyzkoušejte vzorek. Remux kvalitu ignoruje, stejně jako změnu velikosti a akceleraci.\n\nKODOVÁNÍ A DEKÓDOVÁNÍ\n\nAutomaticky (doporučeno) zkouší dostupné možnosti hardwarového kódování a v případě potřeby přechází na alternativy Software / CPU. Software / CPU využívá procesor. NVIDIA NVENC, Intel Quick Sync, AMD AMF a Linux VA-API jsou nabízeny, pokud jsou podporovány pro zvolený přednastavený režim. Souhrn detekce uvádí podporu FFmpeg; vybraný hardware a ovladače musí rovněž fungovat. Explicitně vybraný hardwarový engine hlásí selhání místo toho, aby tiše přepínal na jiný kódovač.\n\nPoužívejte hardwarové dekódování, pokud je k dispozici řídí čtení zdroje nezávisle na výstupním kódovači. Pokud nelze spustit požadovaný hardwarový dekodér, dekódování se opakuje softwarově při zachování zvoleného kódovače. Zrušte zaškrtnutí, pokud chcete softwarové dekódování. Tato nastavení nemění původní soubor.\n\nVÝSTUPNÍ NÁZVY, PROGRESS A ZRUŠENÍ\n\nNové názvy souborů obsahují přednastavený příponu a, pokud je to zvoleno, výstupní rozlišení. Přeskočit existující ponechá stávající cíl beze změny. Zachovat oba použije číslovaný název souboru místo jeho nahrazení. Před spuštěním zkontrolujte náhled kvůli přeskočeným souborům, duplicitním výstupním názvům nebo jiným problémům.\n\nVidea se zpracovávají jeden po druhém. Zrušit konverzi zastaví aktuální konverzi, odstraní její nedokončený výstup a zastaví zbývající frontu. Dokončené výstupy zůstanou. Zavření tohoto okna konverze také vyžaduje zrušení. Jeho fronta je oddělená od Nástroje > Fronta přenosu…, která spravuje kopírování a přesouvání.\n\nPŘÍKLAD: H.264 NA H.265 NA 1080p\n\nOznačte několik videí H.264, otevřete Nástroje > Převést vybraná videa…, vyberte H.265 MP4 (menší), nastavte Rozlišení na 1080p, ponechte Kvalitu (CRF) na 23 pro první test a vyberte Automaticky (doporučeno). Zvolte výstupní složku, klikněte na Obnovit náhled, zkontrolujte cesty a pak Spustit konverzi…. Porovnejte hotové kopie s originály; případně upravte kvalitu nebo rozlišení a test zopakujte."
+      },
+      {
+        "id": "media_reports",
+        "title": "Exportování mediální zprávy",
+        "paragraphs": [
+          {
+            "id": "media_reports.p001",
+            "source_sha256": "e5820c2e78ffa8b3b9ff09b57d59bc2adc0b1d92bf570493c0d4aa52c3ab7f5d",
+            "text": "Nástroje > Exportovat zprávu o médiích… ukládá inventář souborů již prohledaných v aktivním panelu. Tyto mediální soubory nekopíruje, nepřevádí ani nemodifikuje. Použijte CSV pro tabulku, JSON pro strukturovaná data nebo HTML pro zprávu, kterou můžete otevřít v webovém prohlížeči."
+          },
+          {
+            "id": "media_reports.p002",
+            "source_sha256": "94aceb1c124b99d41385988a2d8951dbf25dd5178e8759add72a545ebfbfd828",
+            "text": "VYTVOŘIT ZPRÁVU\n\n1. Otevřete složku, kterou chcete katalogizovat. Povolit Zahrnout podsložky, pokud je to nutné, a nechte dokončit skenování.\n2. Použít filtry, pokud chcete zprávu pro konkrétní skupinu, například H.265 videa nebo obrázky ve vysokém rozlišení. Klikněte uvnitř tohoto panelu, aby byl aktivní.\n3. Zvolte Nástroje > Exportovat zprávu o médiích….\n4. Nastavte Rozsah na Vybrané, Viditelné nebo Vše prohledáno.\n5. Vyberte Formát: CSV, JSON nebo HTML.\n6. Nechte zaškrtnuto Zahrnout úplné cesty k souborům pro zaznamenání kompletních umístění, nebo zrušte zaškrtnutí pro použití cest relativních k aktivní složce, pokud je to možné.\n7. Klikněte na Export…, vyberte název souboru zprávy a cílové umístění, poté klikněte na Uložit. Počkejte na Zpráva exportována. Otevřete uložený soubor ve vhodném tabulkovém procesoru, prohlížeči nebo datovém prohlížeči."
+          },
+          {
+            "id": "media_reports.p003",
+            "source_sha256": "5537e045dec5259f000dbdf42606d0124a95734ebcc8c6f57073576f0b3bcd6d",
+            "text": "CO ZNAMENÁ ROZSAH\n\nVybrané používá zaškrtnuté soubory v panelu, pokud jsou zaškrtnuty; jinak používá zvýrazněné soubory. Skryté zaškrtnutí tedy může být zahrnuto. Viditelné znamená VŠECHNY soubory odpovídající aktuálním filtrům panelu, nejen řádky nebo miniatury aktuálně na obrazovce nebo aktuální stránce miniatur. Vše prohledáno zahrnuje prohledaná média panelu, i když je aktuální filtr skryje. Žádná z těchto možností automaticky neprohledává jiný disk nebo složku."
+          },
+          {
+            "id": "media_reports.p004",
+            "source_sha256": "5741554f0d983a0f0b711b553b0139e6d53ee97d55ac8ee048ac36b006cc85f4",
+            "text": "CO ZPRÁVA OBSAHUJE\n\nKaždá položka zahrnuje svůj název a cestu, druh média a příponu, rozměry/rozlišení, velikost, datum úpravy, délku, video kodek, bitrate, snímkovou frekvenci, audio kodek/kanály, pixelový formát, HDR, hodnocení, barevnou značku, štítky a stav čitelnosti/chyby, pokud je dostupný. Chybějící informace zůstávají chybějící; export neprovádí úplnou kontrolu integrity. JSON zahrnuje souhrn a seznam položek. HTML obsahuje souhrn a tabulku. CSV obsahuje tabulku pro každý soubor."
+          },
+          {
+            "id": "media_reports.p005",
+            "source_sha256": "0c1aff0372dd91ebb6e6b1344e7ca59216b6cbc2432e03f36f180b7b9bd7118f",
+            "text": "PŘÍKLAD A ZRUŠENÍ\n\nChcete-li zobrazit velká videa napříč podsložkami, otevřete jejich společnou nadřazenou složku, povolte Videa a Zahrnout podsložky, nastavte omezení velikosti v Více filtrů…, a pak exportujte pomocí Rozsah: Viditelné a Formát: CSV. Otevřete CSV ve svém tabulkovém procesoru a zkontrolujte velikosti a cesty.\n\nZrušit export zastaví probíhající export; Zavřít také požaduje zrušení. Zpráva je umístěna na své konečné jméno souboru pouze po dokončení zápisu, takže zrušení nezanechá částečně napsanou konečnou zprávu. Zkontrolujte cesty před sdílením zprávy: úplné cesty k souborům mohou odhalit názvy složek."
+          }
+        ],
+        "body": "Nástroje > Exportovat zprávu o médiích… ukládá inventář souborů již prohledaných v aktivním panelu. Tyto mediální soubory nekopíruje, nepřevádí ani nemodifikuje. Použijte CSV pro tabulku, JSON pro strukturovaná data nebo HTML pro zprávu, kterou můžete otevřít v webovém prohlížeči.\n\nVYTVOŘIT ZPRÁVU\n\n1. Otevřete složku, kterou chcete katalogizovat. Povolit Zahrnout podsložky, pokud je to nutné, a nechte dokončit skenování.\n2. Použít filtry, pokud chcete zprávu pro konkrétní skupinu, například H.265 videa nebo obrázky ve vysokém rozlišení. Klikněte uvnitř tohoto panelu, aby byl aktivní.\n3. Zvolte Nástroje > Exportovat zprávu o médiích….\n4. Nastavte Rozsah na Vybrané, Viditelné nebo Vše prohledáno.\n5. Vyberte Formát: CSV, JSON nebo HTML.\n6. Nechte zaškrtnuto Zahrnout úplné cesty k souborům pro zaznamenání kompletních umístění, nebo zrušte zaškrtnutí pro použití cest relativních k aktivní složce, pokud je to možné.\n7. Klikněte na Export…, vyberte název souboru zprávy a cílové umístění, poté klikněte na Uložit. Počkejte na Zpráva exportována. Otevřete uložený soubor ve vhodném tabulkovém procesoru, prohlížeči nebo datovém prohlížeči.\n\nCO ZNAMENÁ ROZSAH\n\nVybrané používá zaškrtnuté soubory v panelu, pokud jsou zaškrtnuty; jinak používá zvýrazněné soubory. Skryté zaškrtnutí tedy může být zahrnuto. Viditelné znamená VŠECHNY soubory odpovídající aktuálním filtrům panelu, nejen řádky nebo miniatury aktuálně na obrazovce nebo aktuální stránce miniatur. Vše prohledáno zahrnuje prohledaná média panelu, i když je aktuální filtr skryje. Žádná z těchto možností automaticky neprohledává jiný disk nebo složku.\n\nCO ZPRÁVA OBSAHUJE\n\nKaždá položka zahrnuje svůj název a cestu, druh média a příponu, rozměry/rozlišení, velikost, datum úpravy, délku, video kodek, bitrate, snímkovou frekvenci, audio kodek/kanály, pixelový formát, HDR, hodnocení, barevnou značku, štítky a stav čitelnosti/chyby, pokud je dostupný. Chybějící informace zůstávají chybějící; export neprovádí úplnou kontrolu integrity. JSON zahrnuje souhrn a seznam položek. HTML obsahuje souhrn a tabulku. CSV obsahuje tabulku pro každý soubor.\n\nPŘÍKLAD A ZRUŠENÍ\n\nChcete-li zobrazit velká videa napříč podsložkami, otevřete jejich společnou nadřazenou složku, povolte Videa a Zahrnout podsložky, nastavte omezení velikosti v Více filtrů…, a pak exportujte pomocí Rozsah: Viditelné a Formát: CSV. Otevřete CSV ve svém tabulkovém procesoru a zkontrolujte velikosti a cesty.\n\nZrušit export zastaví probíhající export; Zavřít také požaduje zrušení. Zpráva je umístěna na své konečné jméno souboru pouze po dokončení zápisu, takže zrušení nezanechá částečně napsanou konečnou zprávu. Zkontrolujte cesty před sdílením zprávy: úplné cesty k souborům mohou odhalit názvy složek."
+      },
+      {
+        "id": "embedded_metadata",
+        "title": "Zobrazení vložených metadat",
+        "paragraphs": [
+          {
+            "id": "embedded_metadata.p001",
+            "source_sha256": "de02fc927d80ae28a81ef73fc00493e9dc09ed4f5766dfd6f65805e4b99c9abd",
+            "text": "Nástroje > Zobrazit vložené metadata… čte informace uložené uvnitř jednoho obrázku nebo videa. To se liší od vlastních hodnocení, barevných označení a štítků aplikace, které nemění mediální soubor."
+          },
+          {
+            "id": "embedded_metadata.p002",
+            "source_sha256": "84dddde141e5b461ca97772fda91dd9488b49ce2db3f0100540c7e90cefcf078",
+            "text": "1. Vymazat nežádoucí zaškrtávací políčka, poté vyberte právě jeden obrázek nebo video v aktivním panelu.\n2. Zvolte Nástroje > Zobrazit vložené metadata… a počkejte, až se pole objeví.\n3. Přečtěte si sloupce Sekce, Pole a Hodnota. Obrázky může obsahovat informace EXIF z fotoaparátu/data a GPS, pokud jsou přítomny; videa mohou obsahovat značky kontejneru a streamu. Ne každý soubor tyto informace obsahuje.\n4. Zadejte do Najít, abyste zúžili zobrazené řádky podle jejich sekce, pole nebo hodnoty.\n5. Vyberte řádky a klikněte na Kopírovat vybrané/vše pro jejich kopírování. Pokud není vybrán žádný řádek, kopírují se všechny aktuálně zobrazené řádky.\n6. Klikněte na Exportovat JSON… pro uložení všech extrahovaných metadat, včetně řádků skrytých nástrojem Najít. Zvolte název souboru a Uložit.\n7. Zavřít okno po dokončení. Prohlížení, kopírování a export metadat nemění vložené informace v původním souboru."
+          }
+        ],
+        "body": "Nástroje > Zobrazit vložené metadata… čte informace uložené uvnitř jednoho obrázku nebo videa. To se liší od vlastních hodnocení, barevných označení a štítků aplikace, které nemění mediální soubor.\n\n1. Vymazat nežádoucí zaškrtávací políčka, poté vyberte právě jeden obrázek nebo video v aktivním panelu.\n2. Zvolte Nástroje > Zobrazit vložené metadata… a počkejte, až se pole objeví.\n3. Přečtěte si sloupce Sekce, Pole a Hodnota. Obrázky může obsahovat informace EXIF z fotoaparátu/data a GPS, pokud jsou přítomny; videa mohou obsahovat značky kontejneru a streamu. Ne každý soubor tyto informace obsahuje.\n4. Zadejte do Najít, abyste zúžili zobrazené řádky podle jejich sekce, pole nebo hodnoty.\n5. Vyberte řádky a klikněte na Kopírovat vybrané/vše pro jejich kopírování. Pokud není vybrán žádný řádek, kopírují se všechny aktuálně zobrazené řádky.\n6. Klikněte na Exportovat JSON… pro uložení všech extrahovaných metadat, včetně řádků skrytých nástrojem Najít. Zvolte název souboru a Uložit.\n7. Zavřít okno po dokončení. Prohlížení, kopírování a export metadat nemění vložené informace v původním souboru."
+      },
+      {
+        "id": "media_integrity",
+        "title": "Kontrola integrity médií",
+        "paragraphs": [
+          {
+            "id": "media_integrity.p001",
+            "source_sha256": "97deea524f7dd0dcdc0cd44429f4c4d29e3e5d71f7a4e9ca6240aaad7b295631",
+            "text": "Nástroje > Ověřit integritu médií… kontroluje, zda lze média dekódovat, namísto spoléhání se pouze na jejich název souboru nebo technický záhlaví. Použijte jej k prozkoumání nepřečtených souborů nebo ke kontrole dávky před archivací. Čtení celých videí může zabrat značný čas. Nikdy neopravuje ani nemění originály."
+          },
+          {
+            "id": "media_integrity.p002",
+            "source_sha256": "e788bb47cbc4c2ead78a958e6e1e23990943c61731afbfeeb2cda9b82c34fd3c",
+            "text": "1. Otevřete zdrojovou složku, nastavte Zahrnout podsložkypodle potřeby a nechte skenování dokončit.\n2. Vyberte Nástroje > Ověřit integritu médií….\n3. Nastavit Rozsah: Vybranépro zaškrtnuté/ zvýrazněné soubory,Viditelnépro všechny soubory odpovídající filtru, nebo Vše prohledáno zahrnout soubory skryté filtry.\n4. Zaškrtněte Vynutit opětovnou kontrolupokud chcete novou kontrolu i tehdy, když je předchozí výsledek uložen v mezipaměti.\n5. Klikněte Spustit. Recenze Stav, Uloženo do mezipaměti, Cesta a Detailyjakmile dorazí výsledky.Úspěšnéznamená, že dekodér dokončil svou kontrolu;Neúspěšnézaznamenává problém s dekódováním nebo přístupem. Není to záruka vizuální kvality, správného obsahu nebo absence malwaru.\n6. Používejte Zrušit zastavit další kontrolu.Výsledekjiž shromážděné zůstávají k dispozici.\n7. Klikněte Exportovat CSV…uložit shromážděné výsledky, včetně případů, kdy byla kontrola zrušena.Výběr selhalzvýrazní neúspěšné soubory zpět v panelu zdrojů a zavře okno výsledků; nesmaže je."
+          },
+          {
+            "id": "media_integrity.p003",
+            "source_sha256": "1ae255df200b724240135bb169ad32364b4431dd787322cf203b44e9ce3e8323",
+            "text": "Než budete jednat podle zvýrazněných chyb, zkontrolujte jejich podrobnosti a ověřte Vymazat zaškrtnutí: stávající značky mají stále prioritu pro následující příkazy souborů. Chyba může odrážet oprávnění, chybějící jednotky nebo podporu dekodéru stejně jako poškozená data. Nesmažte soubory pouze proto, že jedna kontrola selhala."
+          }
+        ],
+        "body": "Nástroje > Ověřit integritu médií… kontroluje, zda lze média dekódovat, namísto spoléhání se pouze na jejich název souboru nebo technický záhlaví. Použijte jej k prozkoumání nepřečtených souborů nebo ke kontrole dávky před archivací. Čtení celých videí může zabrat značný čas. Nikdy neopravuje ani nemění originály.\n\n1. Otevřete zdrojovou složku, nastavte Zahrnout podsložkypodle potřeby a nechte skenování dokončit.\n2. Vyberte Nástroje > Ověřit integritu médií….\n3. Nastavit Rozsah: Vybranépro zaškrtnuté/ zvýrazněné soubory,Viditelnépro všechny soubory odpovídající filtru, nebo Vše prohledáno zahrnout soubory skryté filtry.\n4. Zaškrtněte Vynutit opětovnou kontrolupokud chcete novou kontrolu i tehdy, když je předchozí výsledek uložen v mezipaměti.\n5. Klikněte Spustit. Recenze Stav, Uloženo do mezipaměti, Cesta a Detailyjakmile dorazí výsledky.Úspěšnéznamená, že dekodér dokončil svou kontrolu;Neúspěšnézaznamenává problém s dekódováním nebo přístupem. Není to záruka vizuální kvality, správného obsahu nebo absence malwaru.\n6. Používejte Zrušit zastavit další kontrolu.Výsledekjiž shromážděné zůstávají k dispozici.\n7. Klikněte Exportovat CSV…uložit shromážděné výsledky, včetně případů, kdy byla kontrola zrušena.Výběr selhalzvýrazní neúspěšné soubory zpět v panelu zdrojů a zavře okno výsledků; nesmaže je.\n\nNež budete jednat podle zvýrazněných chyb, zkontrolujte jejich podrobnosti a ověřte Vymazat zaškrtnutí: stávající značky mají stále prioritu pro následující příkazy souborů. Chyba může odrážet oprávnění, chybějící jednotky nebo podporu dekodéru stejně jako poškozená data. Nesmažte soubory pouze proto, že jedna kontrola selhala."
+      },
+      {
+        "id": "video_contact_sheets",
+        "title": "Vytváření videonáhledového listu",
+        "paragraphs": [
+          {
+            "id": "video_contact_sheets.p001",
+            "source_sha256": "dfbcc6d5b6648c41111ac2cc655dcf84740fdf1c9bdd8173582892799fbf4a42",
+            "text": "Kontaktní list je jeden PNG obsahující mřížku statických snímků z videa. Poskytuje přehled, aniž by se přehrával celý klip. Nástroje > Vytvořit kontaktní list videa… nemění zdrojové video."
+          },
+          {
+            "id": "video_contact_sheets.p002",
+            "source_sha256": "fe5c1944466bf890d4109983ffb85dd4dd70b26b039fb244122ff3be4f7462b1",
+            "text": "1. Vymazat zrušte nepotřebné zaškrtnutí a vyberte jedno video v aktivním panelu.\n2. Zvolte Nástroje > Vytvořit kontaktní list videa….\n3. Nastavte Počet snímků (4–48), Sloupce (2–8) a Šířku snímku (pixely) (160–640). Výchozí hodnoty jsou 12 snímků, 4 sloupce a 320 pixelů.\n4. Nechte Zobrazit čísla snímků a časové značky zaškrtnuté, pokud chcete popisky pod snímky.\n5. Klikněte na Vytvořit…, vyberte název souboru PNG a umístění, a Uložit.\n6. Počkejte na Kontaktní list dokončen, poté otevřete uložený PNG v prohlížeči obrázků. Zrušit zastaví extrakci; Zavřít také vyžaduje zrušení."
+          },
+          {
+            "id": "video_contact_sheets.p003",
+            "source_sha256": "f7a7ce26c0b8bef736351a923a83f5889983daaf7968b4a4afe9f42a47d89af6",
+            "text": "Snímky jsou odebírány rovnoměrně během klipu, přičemž jsou vynechány přesné první a poslední snímky. Toto není detekce scén a nástroj potřebuje čitelnou délku videa. Mřížky a snímky Velkér trvají déle a vytvářejí větší obrázek. Pro rychlý přehled začněte s výchozím snímkovým listem o 12 snímcích."
+          }
+        ],
+        "body": "Kontaktní list je jeden PNG obsahující mřížku statických snímků z videa. Poskytuje přehled, aniž by se přehrával celý klip. Nástroje > Vytvořit kontaktní list videa… nemění zdrojové video.\n\n1. Vymazat zrušte nepotřebné zaškrtnutí a vyberte jedno video v aktivním panelu.\n2. Zvolte Nástroje > Vytvořit kontaktní list videa….\n3. Nastavte Počet snímků (4–48), Sloupce (2–8) a Šířku snímku (pixely) (160–640). Výchozí hodnoty jsou 12 snímků, 4 sloupce a 320 pixelů.\n4. Nechte Zobrazit čísla snímků a časové značky zaškrtnuté, pokud chcete popisky pod snímky.\n5. Klikněte na Vytvořit…, vyberte název souboru PNG a umístění, a Uložit.\n6. Počkejte na Kontaktní list dokončen, poté otevřete uložený PNG v prohlížeči obrázků. Zrušit zastaví extrakci; Zavřít také vyžaduje zrušení.\n\nSnímky jsou odebírány rovnoměrně během klipu, přičemž jsou vynechány přesné první a poslední snímky. Toto není detekce scén a nástroj potřebuje čitelnou délku videa. Mřížky a snímky Velkér trvají déle a vytvářejí větší obrázek. Pro rychlý přehled začněte s výchozím snímkovým listem o 12 snímcích."
+      },
+      {
+        "id": "folder_synchronization",
+        "title": "Složka Synchronizace",
+        "paragraphs": [
+          {
+            "id": "folder_synchronization.p001",
+            "source_sha256": "6a5c3c71a212781f6a6c74fac70303224fcbeac3c7d2b4e7c00e810e71cdd110",
+            "text": "Otevřete složky k porovnání v levém a pravém panelu, poté vyberte Nástroje > Porovnat / synchronizovat složky. Před zařazením jednosměrné synchronizace do fronty zkontrolujte položky pouze vlevo, pouze vpravo, novější a odlišné."
+          },
+          {
+            "id": "folder_synchronization.steps",
+            "source_sha256": "cf1597a5ccfc3cc7b73f8f7e2f000fa029816c676a9967854c22cd7d39862515",
+            "text": "1. Otevřete dvě složky v levém a pravém panelu. Nastavte Zahrnout podsložkynezávisle pro každou stranu, pokud je to nutné.\n2. Zvolte Nástroje > Porovnat / synchronizovat složky…\n3. Přezkoumání Relativní cesta a Stav: Jen vlevo, Jen vpravo, Stejné, Novější vlevo, Novější vpravo nebo Různé. Toto porovnání používá podporované mediální soubory, velikosti souborů a časy úprav; Stejné není kontrola úplného obsahu pomocí hashe. Inventarizuje složky nezávisle na filtrech zobrazení Najít/mediální soubory v panelu.\n4. Zvýrazněte konkrétní řádky, abyste omezili operaci. Pokud nejsou žádné řádky zvýrazněny, směrová tlačítka zvažují celé porovnání.\n5. Klikněte Kopírovat chybějící/novější → vpravo nebo Kopírovat chybějící/novější → vlevo. Jsou navrženy pouze chybějící, novější nebo odlišné soubory v tomto směru. Přečtěte si a potvrďte počet souborů před zařazením do fronty.\n6. Sledujte postup v Nástroje > Fronta přenosu…. Toto kopíruje soubory jedním směrem; neodstraňuje nadbytečné soubory na cílovém umístění ani neprovádí automatické oboustranné zrcadlení. Spusťte porovnání znovu po kopírování, pokud chcete aktualizovaný seznam výsledků."
+          }
+        ],
+        "body": "Otevřete složky k porovnání v levém a pravém panelu, poté vyberte Nástroje > Porovnat / synchronizovat složky. Před zařazením jednosměrné synchronizace do fronty zkontrolujte položky pouze vlevo, pouze vpravo, novější a odlišné.\n\n1. Otevřete dvě složky v levém a pravém panelu. Nastavte Zahrnout podsložkynezávisle pro každou stranu, pokud je to nutné.\n2. Zvolte Nástroje > Porovnat / synchronizovat složky…\n3. Přezkoumání Relativní cesta a Stav: Jen vlevo, Jen vpravo, Stejné, Novější vlevo, Novější vpravo nebo Různé. Toto porovnání používá podporované mediální soubory, velikosti souborů a časy úprav; Stejné není kontrola úplného obsahu pomocí hashe. Inventarizuje složky nezávisle na filtrech zobrazení Najít/mediální soubory v panelu.\n4. Zvýrazněte konkrétní řádky, abyste omezili operaci. Pokud nejsou žádné řádky zvýrazněny, směrová tlačítka zvažují celé porovnání.\n5. Klikněte Kopírovat chybějící/novější → vpravo nebo Kopírovat chybějící/novější → vlevo. Jsou navrženy pouze chybějící, novější nebo odlišné soubory v tomto směru. Přečtěte si a potvrďte počet souborů před zařazením do fronty.\n6. Sledujte postup v Nástroje > Fronta přenosu…. Toto kopíruje soubory jedním směrem; neodstraňuje nadbytečné soubory na cílovém umístění ani neprovádí automatické oboustranné zrcadlení. Spusťte porovnání znovu po kopírování, pokud chcete aktualizovaný seznam výsledků."
+      },
+      {
+        "id": "folder_organization_rules",
+        "title": "Pravidla organizace Složka",
+        "paragraphs": [
+          {
+            "id": "folder_organization_rules.p001",
+            "source_sha256": "0bafa187b865c37f918aac231d07f9cd0755fcf9049ab3d6462fd49cfa5b59dd",
+            "text": "Nástroje > Pravidla organizace složek… ukládá opakovatelné pravidla Kopírovat nebo Přesunout. Na rozdíl od Chytrých kolekcí, aplikace těchto pravidel skutečně mění umístění souborů nebo vytváří kopie. Pravidla se nespouštějí automaticky na pozadí: pokaždé zkontrolujte náhled a potvrďte Použít…."
+          },
+          {
+            "id": "folder_organization_rules.p002",
+            "source_sha256": "45964b262f5d8c5b49ac1274b9996e504d695e52fbadd425b9ecb861df577756",
+            "text": "VYTVOŘIT NEBO UPRAVIT PRAVIDLO\n\n1. Klikněte na panel obsahující soubory, které chcete uspořádat, a poté vyberte Nástroje > Pravidla organizace složek…\n2. Klikněte na Přidat. Zadejte název pravidla, vyberte akci: Kopírovat nebo Přesunout, a nastavte cílovou složku pomocí Procházet…pokud je to nutné. Pečlivě zkontrolujte Akci: nové pravidlo zpočátku používá Přesun.\n3. Nastavte druh média na Jakýkoli,Obrázky nebo Videa. Volitelné podmínky jsou rozšíření (oddělená čárkou), Název souboruobsahuje,Kodek obsahuje, Minimální hodnocení (0–5) a požadovaný přesný štítek. Nevyužité podmínky nechte prázdné; 0 nepředepisuje žádné omezení minimálního hodnocení. Všechny zadané podmínky musí souhlasit.Název souborua shoda kodeku ignoruje velikost písmen; štítek musí odpovídat celému přiřazenému štítku, ne jeho části.\n4. Nechte Pravidlo povolenozaškrtnuto, pokud by pravidlo mělo účastnit, pak klikněte Uložit pravidlo\n5. Vyberte existující pravidlo a upravte ho. Použijte ↑ a ↓ ke změně priority: první povolené shodující se pravidlo vyhrává.Odstranit odstraňuje pravidlo po potvrzení, ne jeho média;Zrušit smazáníje k dispozici, dokud je tento správce otevřen."
+          },
+          {
+            "id": "folder_organization_rules.p003",
+            "source_sha256": "c7c9d8a141f4adb1d8ac99b1211bd67950395855319313f7bcc29474683eae6c",
+            "text": "NÁHLED A POUŽITÍ\n\n1. Nastavte filtry v podokně zdroje, pokud chcete omezit soubory, které budou zvažovány.\n2. V správci pravidel klikněte na Náhled aktivního panelu….\n3. Vyberte Rozsah: Viditelné pro soubory odpovídající filtrům podokna nebo Vše prohledáno pro celé jeho skenované množství. Tento nástroj nemá rozsah Vybrané.\n4. Zvolte, zda chcete Zachovat složky vzhledem k aktivnímu panelu. Zaškrtnutí zachovává relativní podsložky pod cílem každého pravidla; nezaškrtnutí použije pouze název souboru.\n5. Po změně těchto nastavení klikněte na Obnovit náhled. Zkontrolujte Pravidlo, Akci, Zdroj, Cíl a Stav. Soubory, které nesedí, nejsou zařazeny do fronty. Řešte problémy, jako jsou duplicitní cíle, před použitím.\n6. Klikněte na Použít… a potvrďte navrhovaný počet akcí. Kopírování/přesouvání vstupuje do normální přenosové fronty; existující cíle používají běžná nastavení konfliktů. Zavřít opustí náhled bez jeho použití."
+          },
+          {
+            "id": "folder_organization_rules.p004",
+            "source_sha256": "f28b27db9fb710652715db25a211de3d6a9cef8f4fd15378e38e9f06d8fd4343",
+            "text": "PŘÍKLAD\n\nChcete-li zkopírovat videa MP4 do složky pro kontrolu, přidejte pravidlo s názvem Kopie pro kontrolu MP4, vyberte Kopírovat, zvolte cílovou složku pro kontrolu, nastavte Druh média na Videa a Přípony na mp4, poté Uložit pravidlo. Náhled aktivního panelu… s Rozsah: Viditelné, zkontrolujte cesty a Použít…. Tím se vytvoří kopie; vyberte Pouze přesun, pouze pokud hodláte přesunout originály."
+          }
+        ],
+        "body": "Nástroje > Pravidla organizace složek… ukládá opakovatelné pravidla Kopírovat nebo Přesunout. Na rozdíl od Chytrých kolekcí, aplikace těchto pravidel skutečně mění umístění souborů nebo vytváří kopie. Pravidla se nespouštějí automaticky na pozadí: pokaždé zkontrolujte náhled a potvrďte Použít….\n\nVYTVOŘIT NEBO UPRAVIT PRAVIDLO\n\n1. Klikněte na panel obsahující soubory, které chcete uspořádat, a poté vyberte Nástroje > Pravidla organizace složek…\n2. Klikněte na Přidat. Zadejte název pravidla, vyberte akci: Kopírovat nebo Přesunout, a nastavte cílovou složku pomocí Procházet…pokud je to nutné. Pečlivě zkontrolujte Akci: nové pravidlo zpočátku používá Přesun.\n3. Nastavte druh média na Jakýkoli,Obrázky nebo Videa. Volitelné podmínky jsou rozšíření (oddělená čárkou), Název souboruobsahuje,Kodek obsahuje, Minimální hodnocení (0–5) a požadovaný přesný štítek. Nevyužité podmínky nechte prázdné; 0 nepředepisuje žádné omezení minimálního hodnocení. Všechny zadané podmínky musí souhlasit.Název souborua shoda kodeku ignoruje velikost písmen; štítek musí odpovídat celému přiřazenému štítku, ne jeho části.\n4. Nechte Pravidlo povolenozaškrtnuto, pokud by pravidlo mělo účastnit, pak klikněte Uložit pravidlo\n5. Vyberte existující pravidlo a upravte ho. Použijte ↑ a ↓ ke změně priority: první povolené shodující se pravidlo vyhrává.Odstranit odstraňuje pravidlo po potvrzení, ne jeho média;Zrušit smazáníje k dispozici, dokud je tento správce otevřen.\n\nNÁHLED A POUŽITÍ\n\n1. Nastavte filtry v podokně zdroje, pokud chcete omezit soubory, které budou zvažovány.\n2. V správci pravidel klikněte na Náhled aktivního panelu….\n3. Vyberte Rozsah: Viditelné pro soubory odpovídající filtrům podokna nebo Vše prohledáno pro celé jeho skenované množství. Tento nástroj nemá rozsah Vybrané.\n4. Zvolte, zda chcete Zachovat složky vzhledem k aktivnímu panelu. Zaškrtnutí zachovává relativní podsložky pod cílem každého pravidla; nezaškrtnutí použije pouze název souboru.\n5. Po změně těchto nastavení klikněte na Obnovit náhled. Zkontrolujte Pravidlo, Akci, Zdroj, Cíl a Stav. Soubory, které nesedí, nejsou zařazeny do fronty. Řešte problémy, jako jsou duplicitní cíle, před použitím.\n6. Klikněte na Použít… a potvrďte navrhovaný počet akcí. Kopírování/přesouvání vstupuje do normální přenosové fronty; existující cíle používají běžná nastavení konfliktů. Zavřít opustí náhled bez jeho použití.\n\nPŘÍKLAD\n\nChcete-li zkopírovat videa MP4 do složky pro kontrolu, přidejte pravidlo s názvem Kopie pro kontrolu MP4, vyberte Kopírovat, zvolte cílovou složku pro kontrolu, nastavte Druh média na Videa a Přípony na mp4, poté Uložit pravidlo. Náhled aktivního panelu… s Rozsah: Viditelné, zkontrolujte cesty a Použít…. Tím se vytvoří kopie; vyberte Pouze přesun, pouze pokud hodláte přesunout originály."
+      },
+      {
+        "id": "transfer_queue",
+        "title": "Správa fronty přenosů",
+        "paragraphs": [
+          {
+            "id": "transfer_queue.p001",
+            "source_sha256": "4c74b2e240612a64b07641c0bd71035726be26f6a6731e266ba7363531a03670",
+            "text": "Nástroje > Fronta přenosu… ukazuje průběh práce s kopírováním a přesouváním ve frontě, včetně přenosů zahájených synchronizací složek a pravidly organizace. Video konverze má vlastní samostatné okno průběhu."
+          },
+          {
+            "id": "transfer_queue.p002",
+            "source_sha256": "28ed18a8e1ee5a8d11f642e0b6267d950ad0adcf8efa7da73b9228138757b48c",
+            "text": "1. Spustit zkopírujte nebo přesuňte pomocí ovládacích prvků panelu nebo příkazů souboru. Otevřete Nástroje > Fronta přenosu…, pokud jeho okno průběhu není již viditelné.\n2. Přečtěte si aktuální operaci, průběh, počet čekajících úloh a podrobnosti přenosu.\n3. Klikněte na Pauza pro pozastavení kopírování v bezpečném bodě; tlačítko se změní na Pokračovat. Pokračovat pokračuje v přenosu. Přesun, který se již provádí, může potřebovat dokončit, než bude možné reagovat.\n4. Zrušit aktuální požaduje, aby aktivní úloha byla zastavena. Nevymaže všechny čekající úlohy a úspěšně dokončené soubory nejsou automaticky vráceny.\n5. Opakovat neúspěšné znovu zařadí soubory, které selhaly při nejnovějším neúspěšném přenosu. Nejprve zkontrolujte hlášenou chybu a cílové umístění.\n6. Zavřít skryje okno průběhu; kopírování nebo přesun nezruší. Znovu jej otevřete z Nástroje pro kontrolu průběhu. Použijte Ctrl+Z samostatně k vrácení podporované dokončené operace se souborem."
+          }
+        ],
+        "body": "Nástroje > Fronta přenosu… ukazuje průběh práce s kopírováním a přesouváním ve frontě, včetně přenosů zahájených synchronizací složek a pravidly organizace. Video konverze má vlastní samostatné okno průběhu.\n\n1. Spustit zkopírujte nebo přesuňte pomocí ovládacích prvků panelu nebo příkazů souboru. Otevřete Nástroje > Fronta přenosu…, pokud jeho okno průběhu není již viditelné.\n2. Přečtěte si aktuální operaci, průběh, počet čekajících úloh a podrobnosti přenosu.\n3. Klikněte na Pauza pro pozastavení kopírování v bezpečném bodě; tlačítko se změní na Pokračovat. Pokračovat pokračuje v přenosu. Přesun, který se již provádí, může potřebovat dokončit, než bude možné reagovat.\n4. Zrušit aktuální požaduje, aby aktivní úloha byla zastavena. Nevymaže všechny čekající úlohy a úspěšně dokončené soubory nejsou automaticky vráceny.\n5. Opakovat neúspěšné znovu zařadí soubory, které selhaly při nejnovějším neúspěšném přenosu. Nejprve zkontrolujte hlášenou chybu a cílové umístění.\n6. Zavřít skryje okno průběhu; kopírování nebo přesun nezruší. Znovu jej otevřete z Nástroje pro kontrolu průběhu. Použijte Ctrl+Z samostatně k vrácení podporované dokončené operace se souborem."
+      },
+      {
+        "id": "safe_file_actions",
+        "title": "Bezpečné akce se soubory",
+        "paragraphs": [
+          {
+            "id": "safe_file_actions.p001",
+            "source_sha256": "4ed845375e5d90b2ef4791690f07c1a09210904cf1686aec2715d733a377226d",
+            "text": "Odstranit odesílá soubory do koše operačního systému. Po odstranění nebo přesunutí je automaticky vybrán a zobrazen soubor, který následuje za odstraněnou položkou v aktuálním třídění; pokud byly odstraněné soubory na konci, je vybrán nový poslední soubor. Přejmenovat a obnovení také zachovávají užitečný aktuální soubor, a toto chování sdílejí Detaily a Miniatury. Zpět opačně provádí nedávné kopírování, přesuny, nahrazení, jednotlivé přejmenování a kompletní hromadné přejmenování. Konflikty Nahradit ment nabízejí Nahradit, Přeskočit nebo Zachovat oba, s možností použít odpověď na všechny zbývající konflikty."
+          },
+          {
+            "id": "safe_file_actions.undo_busy_1273",
+            "source_sha256": "ff2548c8d5b9c336f23e02624d99be111f63b741dd5e9d8d94c87c038febd3a8",
+            "text": "Zpět běží na pozadí, takže okno zůstává responzivní. Dočasně zastaví náhledy a pozastaví čtení nových souborů metadat a miniatur, zatímco dokončuje stávající čtení, a poté obnoví soubory. Není třeba čekat, až se dokončí skenování složky. Krátké blokace sdílení souborů ve Windows se automaticky opakují. Pokud jiný program stále drží soubor, nebo by obnovený zdroj nahradil nově vytvořený soubor, Zpět se zastaví a nahlásí problém, místo aby jej přepsal. Dokončené kroky obnovy jsou uchovány; nedokončené kroky a původní zálohy náhrad zůstávají k dispozici. Zavřít aplikace používající postižený soubor nebo vyřešte nahlášený konflikt, a poté znovu stiskněte Zpět pro obnovení. Fronty přenosů čekají, zatímco je obnova nedokončená. Neodstraňujte zálohy obnovy ani neupravujte postižené soubory, dokud obnova není dokončena. Nastavení přepínačů Náhled zůstává podle výběru; po obnově znovu vyberte soubor pro obnovení náhledu."
+          }
+        ],
+        "body": "Odstranit odesílá soubory do koše operačního systému. Po odstranění nebo přesunutí je automaticky vybrán a zobrazen soubor, který následuje za odstraněnou položkou v aktuálním třídění; pokud byly odstraněné soubory na konci, je vybrán nový poslední soubor. Přejmenovat a obnovení také zachovávají užitečný aktuální soubor, a toto chování sdílejí Detaily a Miniatury. Zpět opačně provádí nedávné kopírování, přesuny, nahrazení, jednotlivé přejmenování a kompletní hromadné přejmenování. Konflikty Nahradit ment nabízejí Nahradit, Přeskočit nebo Zachovat oba, s možností použít odpověď na všechny zbývající konflikty.\n\nZpět běží na pozadí, takže okno zůstává responzivní. Dočasně zastaví náhledy a pozastaví čtení nových souborů metadat a miniatur, zatímco dokončuje stávající čtení, a poté obnoví soubory. Není třeba čekat, až se dokončí skenování složky. Krátké blokace sdílení souborů ve Windows se automaticky opakují. Pokud jiný program stále drží soubor, nebo by obnovený zdroj nahradil nově vytvořený soubor, Zpět se zastaví a nahlásí problém, místo aby jej přepsal. Dokončené kroky obnovy jsou uchovány; nedokončené kroky a původní zálohy náhrad zůstávají k dispozici. Zavřít aplikace používající postižený soubor nebo vyřešte nahlášený konflikt, a poté znovu stiskněte Zpět pro obnovení. Fronty přenosů čekají, zatímco je obnova nedokončená. Neodstraňujte zálohy obnovy ani neupravujte postižené soubory, dokud obnova není dokončena. Nastavení přepínačů Náhled zůstává podle výběru; po obnově znovu vyberte soubor pro obnovení náhledu."
+      },
+      {
+        "id": "workspaces_and_cache",
+        "title": "Pracovní prostory a cache",
+        "paragraphs": [
+          {
+            "id": "workspaces_and_cache.p001",
+            "source_sha256": "9546017780aef5e7077c76d71f514132c6cabc5dd92f56a8dc2863641361fe9f",
+            "text": "Uložené pracovní prostředí si pamatuje složky, filtry, režimy zobrazení, sloupce, inspektory a rozvržení. Chytré kolekce pod Nástroje jsou menší přednastavené jednopanelové sady: ukládají složku, přepínače Zahrnout podsložky a média, název souboru a pokročilé filtry, rozlišení, třídění, zobrazení Detaily/Miniatury, velikost miniatur a volbu Nepřetržité/Stránkované. Použít ovlivňuje pouze aktivní panel. Správce může přejmenovat nebo smazat přednastavení; smazání vyžaduje potvrzení a Zrušit smazání jej obnoví, zatímco správce zůstává otevřený. Chytré kolekce nikdy nepřesouvají, nemažou ani neanotují média. Uloženo do mezipaměti metadata a miniatury urychlují další návštěvy; Nástroje > Mezipaměť a skenování může je kontrolovat, zkrátit nebo vymazat."
+          },
+          {
+            "id": "workspaces_and_cache.workspace_steps",
+            "source_sha256": "dff5cc601aa1e01667f72fd065cd8e4b55ae77974639503d66c69592dd802aa7",
+            "text": "ULOŽENÍ A NAČTENÍ PRACOVNÍHO PROSTORU\n\n1. Uspořádejte oba panely s složkami, filtry, zobrazeními a rozvržením, které chcete znovu použít.\n2. Zvolte Nástroje > Uložit pracovní prostor… a zadejte název pracovního prostoru. Použití existujícího názvu nahradí tento pracovní prostor bez samostatného potvrzovacího okna; použijte nový název, pokud chcete zachovat předchozí rozvržení.\n3. Později zvolte Nástroje > Načíst pracovní prostor…. Výzva uvede uložené názvy. Zadejte přesně zobrazený název a potvrďte, aby se obnovily oba panely. Zrušit ponechá aktuální pracovní prostor beze změny.\n\nPoužijte místo toho [chapter:smart_collections], když chcete obnovit pouze vyhledávání a zobrazení jednoho panelu."
+          },
+          {
+            "id": "workspaces_and_cache.cache_steps",
+            "source_sha256": "db9e5a5210a5fdc95458f3dd3a9b9cd62b82de37c69b195a47a3e595ebe17bc3",
+            "text": "OVLÁDACÍ PRVKY MEZIPAMĚTI A SKENOVÁNÍ\n\nOtevřít Nástroje > Cache a skenování… k zobrazení položek metadat a ukládání miniatur. V Nastavení skenování, vyberte Výkonový profil: Tichépro nižší zátěž na pozadí,Vyváženépro běžné použití, nebo Rychle pro vyšší propustnost. Pokud je potřeba, upravte Paralelní zpracovatele metadat (1–16). Vyloučené vzory (oddělené středníkem) mohou vynechat odpovídající cesty; příklady zobrazené v okně zahrnují *.tmp; proxy/*; @eaDir/*. Klikněte Použít uložit nastavení.Obnovitpanel pro spuštění skenování s použitím změněných výjimek.\n\nV Úložiště náhledů, Maximální procento jednotky operačního systému je ve výchozím nastavení 1 % a přijímá hodnoty 0,1 %–10 %.Použít ukládá limit;Vynutit limit nyníodstraňuje nejméně nedávno používané uložené miniatury, dokud není dosaženo limitu.Odstranit zastaralé položkyodstraňuje zastaralé položky metadat.Vymazat miniaturypožaduje potvrzení, poté smaže pouze vygenerované miniatury; budou přebudovány podle potřeby.Vymazat všechny mezipamětipotvrzuje odstranění technických dat cache a miniatur, takže budoucí návštěvy vyžadují nové skenování/dekódování. Tyto kontroly cache neodstraňují původní média ani uživatelská hodnocení, barevné štítky a tagy."
+          }
+        ],
+        "body": "Uložené pracovní prostředí si pamatuje složky, filtry, režimy zobrazení, sloupce, inspektory a rozvržení. Chytré kolekce pod Nástroje jsou menší přednastavené jednopanelové sady: ukládají složku, přepínače Zahrnout podsložky a média, název souboru a pokročilé filtry, rozlišení, třídění, zobrazení Detaily/Miniatury, velikost miniatur a volbu Nepřetržité/Stránkované. Použít ovlivňuje pouze aktivní panel. Správce může přejmenovat nebo smazat přednastavení; smazání vyžaduje potvrzení a Zrušit smazání jej obnoví, zatímco správce zůstává otevřený. Chytré kolekce nikdy nepřesouvají, nemažou ani neanotují média. Uloženo do mezipaměti metadata a miniatury urychlují další návštěvy; Nástroje > Mezipaměť a skenování může je kontrolovat, zkrátit nebo vymazat.\n\nULOŽENÍ A NAČTENÍ PRACOVNÍHO PROSTORU\n\n1. Uspořádejte oba panely s složkami, filtry, zobrazeními a rozvržením, které chcete znovu použít.\n2. Zvolte Nástroje > Uložit pracovní prostor… a zadejte název pracovního prostoru. Použití existujícího názvu nahradí tento pracovní prostor bez samostatného potvrzovacího okna; použijte nový název, pokud chcete zachovat předchozí rozvržení.\n3. Později zvolte Nástroje > Načíst pracovní prostor…. Výzva uvede uložené názvy. Zadejte přesně zobrazený název a potvrďte, aby se obnovily oba panely. Zrušit ponechá aktuální pracovní prostor beze změny.\n\nPoužijte místo toho [chapter:smart_collections], když chcete obnovit pouze vyhledávání a zobrazení jednoho panelu.\n\nOVLÁDACÍ PRVKY MEZIPAMĚTI A SKENOVÁNÍ\n\nOtevřít Nástroje > Cache a skenování… k zobrazení položek metadat a ukládání miniatur. V Nastavení skenování, vyberte Výkonový profil: Tichépro nižší zátěž na pozadí,Vyváženépro běžné použití, nebo Rychle pro vyšší propustnost. Pokud je potřeba, upravte Paralelní zpracovatele metadat (1–16). Vyloučené vzory (oddělené středníkem) mohou vynechat odpovídající cesty; příklady zobrazené v okně zahrnují *.tmp; proxy/*; @eaDir/*. Klikněte Použít uložit nastavení.Obnovitpanel pro spuštění skenování s použitím změněných výjimek.\n\nV Úložiště náhledů, Maximální procento jednotky operačního systému je ve výchozím nastavení 1 % a přijímá hodnoty 0,1 %–10 %.Použít ukládá limit;Vynutit limit nyníodstraňuje nejméně nedávno používané uložené miniatury, dokud není dosaženo limitu.Odstranit zastaralé položkyodstraňuje zastaralé položky metadat.Vymazat miniaturypožaduje potvrzení, poté smaže pouze vygenerované miniatury; budou přebudovány podle potřeby.Vymazat všechny mezipamětipotvrzuje odstranění technických dat cache a miniatur, takže budoucí návštěvy vyžadují nové skenování/dekódování. Tyto kontroly cache neodstraňují původní média ani uživatelská hodnocení, barevné štítky a tagy."
+      },
+      {
+        "id": "language",
+        "title": "Jazyk",
+        "paragraphs": [
+          {
+            "id": "language.p001",
+            "source_sha256": "76d36cb87d53e68bd8a17b59b3d7bf1868001f1323f01fa67c901dda96cf4779",
+            "text": "Při prvním spuštění aplikace následuje jazyk operačního systému, pokud je podporován. Vyberte Nástroje > Jazyk pro jeho přepsání nebo návrat k Výchozí nastavení systému. Po změně jazyka aplikaci restartujte."
+          }
+        ],
+        "body": "Při prvním spuštění aplikace následuje jazyk operačního systému, pokud je podporován. Vyberte Nástroje > Jazyk pro jeho přepsání nebo návrat k Výchozí nastavení systému. Po změně jazyka aplikaci restartujte."
+      },
+      {
+        "id": "glossary",
+        "title": "Slovník",
+        "paragraphs": [
+          {
+            "id": "glossary.p001",
+            "source_sha256": "de56ad1538a95954142a64a6faf297c48d96564544c6f1ea1947a5a7a1974bf5",
+            "text": "Aktivní panel: Levý nebo pravý prohlížeč, který naposledy obdržel kliknutí. Akce z menu a klávesnice se obvykle aplikují tam."
+          },
+          {
+            "id": "glossary.p002",
+            "source_sha256": "9e944202497daf57a892e77418fbcd6ddd948febb6e71fdac6b8f66941692f17",
+            "text": "Kodek: Metoda použitá k zakódování videa nebo zvuku, například H.264, H.265/HEVC, AV1, AAC nebo Opus. Kontejner, jako je MP4 nebo MKV, může obsahovat jeden nebo více zakódovaných proudů."
+          },
+          {
+            "id": "glossary.p003",
+            "source_sha256": "672c8a727345c58eb445fec2a58768fb80215d8aa50e1aedf274abd854620d39",
+            "text": "Remux: Kopírování existujících video/audio stop do jiného kontejneru bez pře-kódování. Je to rychlé a bezztrátové, ale nemění to kodek."
+          },
+          {
+            "id": "glossary.p004",
+            "source_sha256": "5b4c2520b2fcb4ed201a6f159e1d6042244f198a9d54ca2e7e50b21b6430ad98",
+            "text": "CRF/kvalita: Cíl pro kódování s konstantní kvalitou. Nižší čísla znamenají vyšší kvalitu a větší soubory. Hardwarové enkodéry to přeloží na své nejbližší řízení kvality."
+          },
+          {
+            "id": "glossary.p005",
+            "source_sha256": "57f6a48371b1e7d33ef4389ca76d13c11dc500afbed5245024c4eb6695646f8c",
+            "text": "Mezipaměť metadat: Uložené technické výsledky, které zabraňují opakovanému zkoumání nezměněných souborů. Je oddělena od hodnocení, štítků a tagů."
+          },
+          {
+            "id": "glossary.p006",
+            "source_sha256": "a1bb6a1d6960bc4e1441baca24dc3ae68ea222ac01e819b3e083fcd1a166e6f7",
+            "text": "Cache miniatur: Generované náhledové obrázky uchované na disku pro rychlejší budoucí návštěvy a omezené prostřednictvím Nástroje > Mezipaměť a skenování."
+          },
+          {
+            "id": "glossary.p007",
+            "source_sha256": "fa7be14671267800c9e3a8d8f85ceaf1d75c18d830685a91819c692490061aab",
+            "text": "Rekurzivní/Zahrnout podsložky: Skenujte vybranou složku a všechny složky pod ní. Nepoznamenává to nikdy celý disk, pokud není vybrána samotná kořenová složka disku."
+          },
+          {
+            "id": "glossary.p008",
+            "source_sha256": "97af76d3a80e273362782d714bf88bcdcc83ab072222a8994eb06977af0de44c",
+            "text": "Chytrá kolekce: Uložená definice zobrazení obsahující umístění, filtry, řazení a nastavení prezentace. Neposkytuje kopírování ani přesun souborů."
+          }
+        ],
+        "body": "Aktivní panel: Levý nebo pravý prohlížeč, který naposledy obdržel kliknutí. Akce z menu a klávesnice se obvykle aplikují tam.\n\nKodek: Metoda použitá k zakódování videa nebo zvuku, například H.264, H.265/HEVC, AV1, AAC nebo Opus. Kontejner, jako je MP4 nebo MKV, může obsahovat jeden nebo více zakódovaných proudů.\n\nRemux: Kopírování existujících video/audio stop do jiného kontejneru bez pře-kódování. Je to rychlé a bezztrátové, ale nemění to kodek.\n\nCRF/kvalita: Cíl pro kódování s konstantní kvalitou. Nižší čísla znamenají vyšší kvalitu a větší soubory. Hardwarové enkodéry to přeloží na své nejbližší řízení kvality.\n\nMezipaměť metadat: Uložené technické výsledky, které zabraňují opakovanému zkoumání nezměněných souborů. Je oddělena od hodnocení, štítků a tagů.\n\nCache miniatur: Generované náhledové obrázky uchované na disku pro rychlejší budoucí návštěvy a omezené prostřednictvím Nástroje > Mezipaměť a skenování.\n\nRekurzivní/Zahrnout podsložky: Skenujte vybranou složku a všechny složky pod ní. Nepoznamenává to nikdy celý disk, pokud není vybrána samotná kořenová složka disku.\n\nChytrá kolekce: Uložená definice zobrazení obsahující umístění, filtry, řazení a nastavení prezentace. Neposkytuje kopírování ani přesun souborů."
+      },
+      {
+        "id": "support_the_project",
+        "title": "Podpořte projekt",
+        "paragraphs": [
+          {
+            "id": "support_the_project.p001",
+            "source_sha256": "62b207421228680770777e66598c8ce79ee121aaee8cd232e847e65dd28e2122",
+            "text": "Správce souborů Rozlišení je poskytován jako samostatná aplikace, která nevyžaduje předplatné. Pokud ji považujete za užitečnou a chtěli byste podpořit její další vývoj, vyberte Nápověda > Pokud se vám to líbí, kupte Johnovi kávu. Stejné volitelné tlačítko podpory se objeví v Nápověda > O aplikaci a otevře veřejnou stránku JohnPerky ve vašem běžném webovém prohlížeči:"
+          },
+          {
+            "id": "support_the_project.p002",
+            "source_sha256": "f625bc04cc8dea0548e7e06bf6f5a1bf75532166728133d0f26049dc60b5f0ee",
+            "text": "https://buymeacoffee.com/johnperky"
+          },
+          {
+            "id": "support_the_project.p003",
+            "source_sha256": "f3433f015e63332b4aeaca246443618a7f7f6614bafc5941d7509c71ca191619",
+            "text": "Podpora projektu je zcela dobrovolná. Aplikace automaticky neotevírá stránku, nesbírá platební údaje, nesleduje, zda ji navštívíte, ani nemění žádnou funkci na základě podpory."
+          },
+          {
+            "id": "support_the_project.p004",
+            "source_sha256": "fb8e1f1b4be83a666d0f808238dffefa4cc8b5369dc8b4d25aa74a5d499c5f7a",
+            "text": "HODNOCENÍ A VOLITELNÁ PŘIPOMENUTÍ"
+          },
+          {
+            "id": "support_the_project.reminder_timing",
+            "source_sha256": "b00a39416f2e0c07132850cca60bde12e893c16cbfd085f4b8a29fe722bf6d8e",
+            "text": "Po pěti spuštěních během alespoň tří dnů vás aplikace může vyzvat k jejímu ohodnocení v Microsoft Storu. Později odkládá tuto výzvu o deset spuštění. Volitelné připomenutí kávy začíná při 11. spuštění a opakuje se každých 11 spuštění, pouze po Možná později. Neptejte se znovu zakazuje kterékoliv připomenutí; Nástroje > Připomenutí je může znovu povolit. Stránka se otevře pouze po stisknutí jejího explicitního tlačítka."
+          },
+          {
+            "id": "support_the_project.reminder_settings",
+            "source_sha256": "aeec7ca97a52107645156aa31a220d7a33d6f136fde87d37a08a2729e511a24e",
+            "text": "Vyberte Nástroje > Připomenutí… pro samostatné ovládání výzev k hodnocení a podpory. Zaškrtněte výzvu pro její povolení nebo zrušte zaškrtnutí pro její zakázání, poté uložte. Zrušit ponechá aktuální volby beze změny."
+          }
+        ],
+        "body": "Správce souborů Rozlišení je poskytován jako samostatná aplikace, která nevyžaduje předplatné. Pokud ji považujete za užitečnou a chtěli byste podpořit její další vývoj, vyberte Nápověda > Pokud se vám to líbí, kupte Johnovi kávu. Stejné volitelné tlačítko podpory se objeví v Nápověda > O aplikaci a otevře veřejnou stránku JohnPerky ve vašem běžném webovém prohlížeči:\n\nhttps://buymeacoffee.com/johnperky\n\nPodpora projektu je zcela dobrovolná. Aplikace automaticky neotevírá stránku, nesbírá platební údaje, nesleduje, zda ji navštívíte, ani nemění žádnou funkci na základě podpory.\n\nHODNOCENÍ A VOLITELNÁ PŘIPOMENUTÍ\n\nPo pěti spuštěních během alespoň tří dnů vás aplikace může vyzvat k jejímu ohodnocení v Microsoft Storu. Později odkládá tuto výzvu o deset spuštění. Volitelné připomenutí kávy začíná při 11. spuštění a opakuje se každých 11 spuštění, pouze po Možná později. Neptejte se znovu zakazuje kterékoliv připomenutí; Nástroje > Připomenutí je může znovu povolit. Stránka se otevře pouze po stisknutí jejího explicitního tlačítka.\n\nVyberte Nástroje > Připomenutí… pro samostatné ovládání výzev k hodnocení a podpory. Zaškrtněte výzvu pro její povolení nebo zrušte zaškrtnutí pro její zakázání, poté uložte. Zrušit ponechá aktuální volby beze změny."
+      }
+    ]
+  },
+  "literals": {
+    "Confirm": "Potvrdit",
+    "Move {field0} to the Recycle Bin / Trash?": "Přesunout {field0} do koše / koše na odpadky?",
+    "Synchronize preview": "Synchronizovat náhled",
+    "Queue {field0} file(s) for copying to the {field1} pane?": "Zařadit {field0} soubor(y) do fronty pro kopírování do panelu {field1}?",
+    "Keyboard shortcuts": "Klávesové zkratky",
+    "Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file": "Ctrl+A   Vybrat vše zobrazené\nCtrl+C   Kopírovat vybrané\nCtrl+X   Vyjmout vybrané\nCtrl+V   Vložit do aktivního panelu\nCtrl+Z   Zpět poslední operace se souborem\nDelete   Přesunout vybrané soubory do Koše\nF2       Přejmenovat vybraný soubor\nF5       Obnovit oba panely\nBackspace   Přesunout se o jednu složku výš\n, (čárka)   Aktivní náhled zpět o 10 %\n. (tečka)   Aktivní náhled vpřed o 10 %\nDvojklik   Otevřít soubor",
+    "Folder not found": "Složka nenalezena",
+    "This folder does not exist:\n{field0}": "Tato složka neexistuje:\n{field0}",
+    "Not enough videos": "Nedostatek videí",
+    "At least two visible videos with readable durations are needed for comparison.": "Pro srovnání jsou potřeba alespoň dvě viditelná videa s čitelnou délkou.",
+    "No size outliers": "Žádné odlehlé velikosti",
+    "No visible video is at least {field0}× the average data rate of {field1} MB/min.": "Žádné viditelné video nemá alespoň {field0}× průměrnou datovou rychlost {field1} MB/min.",
+    "Some dropped files failed": "Některé vyřazené soubory selhaly",
+    "Could not reveal some files": "Některé soubory nebylo možné odhalit",
+    "Select one file": "Vyberte jeden soubor",
+    "Select exactly one file to rename.": "Vyberte přesně jeden soubor k přejmenování.",
+    "Invalid filename": "Neplatný název souboru",
+    "Enter a filename without folder separators.": "Zadejte název souboru bez oddělovačů složek.",
+    "File already exists": "Soubor již existuje",
+    "A file named {field0} already exists.": "Soubor s názvem {field0} již existuje.",
+    "Nothing selected": "Nic nebylo vybráno",
+    "Select one or more files in the active pane first.": "Nejprve vyberte jeden nebo více souborů v aktivním panelu.",
+    "Confirm {field0}": "Potvrdit {field0}",
+    "{field0} {field1} file(s) to:\n{field2}?": "{field0} {field1} soubor(y) do:\n{field2}?",
+    "Some files failed": "Některé soubory selhaly",
+    "Finished": "Dokončeno",
+    "Successfully {field0} {field1} file(s).": "Úspěšně {field0} {field1} soubor(y).",
+    "Unknown choice": "Neznámá volba",
+    "Use replace, skip, keep both, or newer.": "Použijte nahradit, přeskočit, zachovat oba nebo novější.",
+    "Batch rename": "Hromadné přejmenování",
+    "Select one or more files first.": "Nejprve vyberte jeden nebo více souborů.",
+    "Batch rename complete": "Hromadné přejmenování dokončeno",
+    "Renamed {field0} file(s). Use Ctrl+Z to undo the batch.": "Přejmenováno {field0} souborů. Použijte Ctrl+Z pro vrácení hromadné operace.",
+    "Nothing to retry": "Není nic k opakování",
+    "The last transfer had no failed files.": "Poslední přenos neměl žádné selhané soubory.",
+    "Transfer active": "Přenos aktivní",
+    "Wait for the current transfer to finish before undoing.": "Počkejte, až aktuální přenos skončí, než provedete vrácení.",
+    "Nothing to undo": "Není nic k vrácení",
+    "There are no recent copy, move, replacement, or rename actions.": "Neexistují žádné nedávné akce kopírování, přesouvání, nahrazování nebo přejmenovávání.",
+    "Undo incomplete": "Zrušení nedokončeno",
+    "Undo complete": "Zrušení dokončeno",
+    "The most recent file operation was undone.": "Nejnovější operace se souborem byla zrušena.",
+    "Move to Recycle Bin": "Přesunout do koše",
+    "Move {field0} selected file(s) to the Recycle Bin / Trash?": "Přesunout {field0} vybraný(é) soubor(y) do koše / odpadkového koše?",
+    "Some files could not be removed": "Některé soubory nelze odstranit",
+    "Embedded metadata": "Vložená metadata",
+    "Select exactly one image or video first.": "Nejprve vyberte přesně jeden obrázek nebo video.",
+    "Create video contact sheet": "Vytvořit video kontakt sheet",
+    "Select exactly one video first.": "Nejprve vyberte přesně jedno video.",
+    "Similar image search": "Vyhledávání podobných obrázků",
+    "No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).": "Nebyla nalezena žádná vizuálně podobná skupina při toleranci {field0}.\n\n{field1} uložený(é) hash(e); {field2} nečitelný(é) obrázek(y).",
+    "Select two files": "Vyberte dva soubory",
+    "Select exactly two files to compare.": "Vyberte přesně dva soubory k porovnání.",
+    "Nothing to synchronize": "Nic k synchronizaci",
+    "No selected files need copying in that direction.": "Žádné vybrané soubory nepotřebují kopírování tímto směrem.",
+    "No workspaces": "Žádné pracovní prostory",
+    "Save a workspace first.": "Nejprve uložte pracovní prostor.",
+    "Collection folder unavailable": "Složka kolekce není dostupná",
+    "The saved folder does not currently exist:\n{field0}": "Uložená složka momentálně neexistuje:\n{field0}",
+    "Cache pruned": "Cache vyčištěna",
+    "Removed {field0} stale entry/entries.": "Odebráno {field0} zastaralých položek.",
+    "Clear cache": "Vymazat mezipaměť",
+    "Clear all cached metadata? Files will be rescanned next time.": "Vymazat všechny uložené metadata? Soubory budou příště znovu prohledány.",
+    "Clear thumbnail cache": "Vymazat mezipaměť miniatur",
+    "Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.": "Smazat {field0} uloženou miniaturu(y) pomocí {field1}?\n\nPůvodní mediální soubory a metadata nebudou změněna.",
+    "Settings": "Nastavení",
+    "{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.": "Nastavení výkonu {field0}, možnosti skenování a limit mezipaměti miniatur byly uloženy. Limit mezipaměti je v pozadí vynucován.",
+    "Live updates unavailable": "Živé aktualizace nejsou k dispozici",
+    "The folder-monitoring component is not installed.": "Komponenta sledování složky není nainstalována.",
+    "Reveal many files?": "Odhalit mnoho souborů?",
+    "{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.": "{field0} souborů je vybráno. Zobrazení všech může otevřít velké množství oken správce souborů.\n\nZvolte Ano pro zobrazení všech vybraných souborů, nebo Ne pro zobrazení pouze prvního.",
+    "Rename failed": "Přejmenování selhalo",
+    "Confirm batch rename": "Potvrdit hromadné přejmenování",
+    "Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.": "Přejmenovat {field0} soubor(y) přesně podle náhledu?\n\nCelé hromadné přejmenování lze vrátit pomocí Ctrl+Z.",
+    "Batch rename failed": "Hromadné přejmenování selhalo",
+    "No completed rename was kept where rollback was possible.\n\n{field0}": "Neuskutečnilo se žádné dokončené přejmenování tam, kde bylo možné provést vrácení zpět.\n\n{field0}",
+    "Nothing to export": "Není co exportovat",
+    "The chosen scope contains no media files.": "Vybraný rozsah neobsahuje žádné mediální soubory.",
+    "Nothing to verify": "Není co ověřovat",
+    "Not enough images": "Nedostatek obrázků",
+    "The chosen scope contains fewer than two images.": "Vybraný rozsah obsahuje méně než dva obrázky.",
+    "Could not save workspace": "Nelze uložit pracovní prostor",
+    "Replace smart collection": "Nahradit chytrou kolekci",
+    "Replace the existing collection named {field0}?": "Nahradit existující sbírku s názvem {field0}?",
+    "Could not save collection": "Nepodařilo se uložit sbírku",
+    "Invalid rule": "Neplatné pravidlo",
+    "Enter a rule name.": "Zadejte název pravidla.",
+    "Choose a destination folder.": "Vyberte cílovou složku.",
+    "Apply folder rules": "Použít pravidla složky",
+    "Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.": "Zařadit {field0} plánovanou akci kopírování/přesunu?\n\nExistující cíle použijí běžné možnosti řešení konfliktů. Přesuny a nahrazení zůstávají vrátitelné.",
+    "Delete rule": "Smazat pravidlo",
+    "Delete rule '{field0}'?": "Smazat pravidlo '{field0}'?",
+    "Cache cleared": "Cache vymazána",
+    "Removed {field0} metadata entries and cached thumbnails.": "Odebrány {field0} metadatové záznamy a vyrovnávací miniatury.",
+    "Thumbnail cache": "Cache miniatur",
+    "The thumbnail cache is already empty.": "Cache miniatur je již prázdná.",
+    "Thumbnail cache cleared": "Cache miniatur vymazána",
+    "Deleted {field0} thumbnail(s) and freed {field1}.": "Smazáno {field0} miniatur a uvolněno {field1}.",
+    "Could not monitor folder": "Nepodařilo se sledovat složku",
+    "Live updates could not be enabled for:\n{field0}\n\n{field1}": "Živé aktualizace nemohly být povoleny pro:\n{field0}\n\n{field1}",
+    "Could not open file": "Nepodařilo se otevřít soubor",
+    "Frame exported": "Rámeček exportován",
+    "Metadata exported": "Metadata exportována",
+    "Saved {field0} field(s).": "Uloženo {field0} pole/pól.",
+    "Metadata unavailable": "Metadata nedostupná",
+    "Report exported": "Zpráva exportována",
+    "Saved {field0} result(s).": "Uloženo {field0} výsledků.",
+    "Invalid settings": "Neplatná nastavení",
+    "Use whole numbers for frames, columns, and width.": "Používejte celá čísla pro snímky, sloupce a šířku.",
+    "Invalid tolerance": "Neplatná tolerance",
+    "Enter a whole number from 0 to 16.": "Zadejte celé číslo od 0 do 16.",
+    "Replace collection": "Nahradit kolekci",
+    "Replace {field0}?": "Nahradit {field0}?",
+    "Delete smart collection": "Smazat chytrou kolekci",
+    "Delete {field0}?\n\nNo media files or annotations will be changed.": "Smazat {field0}?\n\nŽádné mediální soubory ani poznámky nebudou změněny.",
+    "Invalid rating": "Neplatné hodnocení",
+    "Minimum rating must be a whole number from 0 to 5.": "Minimální hodnocení musí být celé číslo od 0 do 5.",
+    "Frame export failed": "Export rámce selhal",
+    "Could not export metadata": "Nepodařilo se exportovat metadata",
+    "Could not export report": "Nepodařilo se exportovat zprávu",
+    "Contact sheet complete": "Kontaktní list dokončen",
+    "Report export failed": "Export zprávy selhal",
+    "Contact sheet failed": "Kontaktní list selhal",
+    "Removed {field0} least-recently-used thumbnail(s).": "Odstraněn(a) {field0} nejméně používaný(é) miniatura(y).",
+    "Add": "Přidat",
+    "All non-empty conditions must match. Rules are checked from top to bottom; the first match wins.": "Všechny neprazdné podmínky musí být splněny. Pravidla se kontrolují shora dolů; první shoda vyhrává.",
+    "Appearance and accessibility": "Vzhled a přístupnost",
+    "Appearance and text size": "Vzhled a velikost textu",
+    "Apply": "Použít",
+    "Apply rename": "Použít přejmenování",
+    "Applying a collection changes only the active pane's folder, filters, sorting, and view.": "Použití sbírky mění pouze složku, filtry, řazení a zobrazení aktivního panelu.",
+    "Apply…": "Použít…",
+    "Batch rename selected files": "Hromadně přejmenovat vybrané soubory",
+    "Browse…": "Procházet…",
+    "Cache and scanning": "Mezipaměť a skenování",
+    "Cached": "Uloženo do mezipaměti",
+    "Cancel": "Zrušit",
+    "Cancel current": "Zrušit aktuální",
+    "Cancel export": "Zrušit export",
+    "Case sensitive": "Rozlišování velkých a malých písmen",
+    "Changes are previewed immediately. Cancel restores the previous appearance.": "Změny jsou okamžitě náhledovány. Zrušení obnoví předchozí vzhled.",
+    "Choose rule destination": "Vyberte cílové umístění pravidla",
+    "Clear all cache": "Vymazat všechny mezipaměti",
+    "Clear thumbnails": "Vymazat miniatury",
+    "Close": "Zavřít",
+    "Collection name:": "Název sbírky:",
+    "Compare files": "Porovnat soubory",
+    "Contents": "Obsah",
+    "Copy missing/newer → left": "Kopírovat chybějící/novější → vlevo",
+    "Copy missing/newer → right": "Kopírovat chybějící/novější → vpravo",
+    "Copy selected/all": "Kopírovat vybrané/vše",
+    "Create…": "Vytvořit…",
+    "Current name": "Aktuální název",
+    "Delete": "Odstranit",
+    "Details": "Podrobnosti",
+    "Edit": "Upravit",
+    "Edit tags": "Upravit štítky",
+    "Enforce limit now": "Vynutit limit nyní",
+    "Examples: *.tmp; proxy/*; @eaDir/*": "Příklady: *.tmp; proxy/*; @eaDir/*",
+    "Exclude patterns (semicolon separated):": "Vyloučit vzory (oddělené středníkem):",
+    "Export CSV…": "Exportovat CSV…",
+    "Export current video frame": "Exportovat aktuální snímek videa",
+    "Export embedded metadata": "Exportovat vložená metadata",
+    "Export integrity report": "Exportovat zprávu o integritě",
+    "Export JSON…": "Exportovat JSON…",
+    "Export media report": "Export reportu médií",
+    "Exports technical details, annotations, file status, and a library summary without changing media.": "Exportuje technické detaily, poznámky, stav souboru a souhrn knihovny, aniž by došlo ke změně médií.",
+    "Export…": "Export…",
+    "File conflicts": "Konflikty souborů",
+    "Filename.jpg   1920 × 1080   H.265 / HEVC": "Filename.jpg   1920 × 1080   H.265 / HEVC",
+    "Find visually similar images": "Najít vizuálně podobné obrázky",
+    "Find:": "Najít:",
+    "Folder": "Složka",
+    "Folder comparison and synchronization": "Porovnání a synchronizace složek",
+    "Folder organization rules": "Pravidla organizace složek",
+    "Force recheck": "Vynutit opětovnou kontrolu",
+    "Format:": "Formát:",
+    "Include full file paths": "Zahrnout úplné cesty k souborům",
+    "Interface scale:": "Měřítko rozhraní:",
+    "Keep left (recycle right)": "Držte se vlevo (recyklujte vpravo)",
+    "Keep right (recycle left)": "Držte se vpravo (recyklujte vlevo)",
+    "Load workspace": "Načíst pracovní prostor",
+    "Loading preview…": "Načítání náhledu…",
+    "Lower values are stricter. 6 is a useful starting point for resized or lightly recompressed copies.": "Nižší hodnoty jsou přísnější. 6 je užitečný výchozí bod pro zmenšené nebo lehce znovu komprimované kopie.",
+    "Maximum percentage of operating-system drive:": "Maximální procento jednotky operačního systému:",
+    "Media integrity verification": "Ověření integrity médií",
+    "Media inventory report": "Přehled mediálního inventáře",
+    "Move left": "Pohyb vlevo",
+    "Move right": "Pohyb vpravo",
+    "Name": "Jméno",
+    "New filename:": "Nové jméno souboru:",
+    "New name": "Nové jméno",
+    "New name:": "Nové jméno:",
+    "Number padding:": "Číselné doplňování:",
+    "Parallel metadata workers (1–16):": "Paralelní metadatové pracovníky (1–16):",
+    "Path": "Cesta",
+    "Pause": "Pauza",
+    "Perceptual image matching": "Percepční porovnávání obrázků",
+    "Performance profile:": "Výkonový profil:",
+    "Preserve folders relative to the active pane": "Zachovat složky vzhledem k aktivnímu panelu",
+    "Preview": "Náhled",
+    "Preview active pane…": "Náhled aktivního panelu…",
+    "Preview folder organization rules": "Náhled pravidel organizace složek",
+    "Preview only until Apply is confirmed. The first enabled matching rule wins.": "Náhled pouze dokud není potvrzeno Použít. První povolené odpovídající pravidlo vyhrává.",
+    "Query": "Dotaz",
+    "Refresh preview": "Obnovit náhled",
+    "Relative path": "Relativní cesta",
+    "Remove stale entries": "Odstranit zastaralé položky",
+    "Rename": "Přejmenovat",
+    "Rename file": "Přejmenovat soubor",
+    "Rename pattern": "Přejmenovat vzor",
+    "Rename smart collection": "Přejmenovat chytrou sbírku",
+    "Replace:": "Nahradit:",
+    "Reset widths": "Obnovit šířky",
+    "Resolution File Manager": "Správce souborů Resolution",
+    "Restore system default": "Obnovit výchozí nastavení systému",
+    "Retry failed": "Opakovat neúspěšné",
+    "Review visually similar images": "Prohlédnout vizuálně podobné obrázky",
+    "Review-only: this tool never deletes or changes files.": "Pouze pro kontrolu: tento nástroj nikdy nesmaže ani nezmění soubory.",
+    "Rule enabled": "Pravidlo povoleno",
+    "Rules are evaluated from top to bottom. Files are never changed until a preview is reviewed and Apply is confirmed.": "Pravidla jsou vyhodnocována odshora dolů. Soubory se nikdy nezmění, dokud není zkontrolován náhled a potvrzeno použití.",
+    "Sample button": "Vzorkové tlačítko",
+    "Save": "Uložit",
+    "Save contact sheet": "Uložit kontaktní list",
+    "Save current": "Uložit aktuální",
+    "Save media report": "Uložit zprávu o médiích",
+    "Save rule": "Uložit pravidlo",
+    "Save smart collection": "Uložit chytrou sbírku",
+    "Save workspace": "Uložit pracovní prostor",
+    "Saved one-pane searches": "Uložené jednoplátnové vyhledávání",
+    "Scan settings": "Nastavení skenování",
+    "Scope:": "Rozsah:",
+    "Select a column, then move it or set its width.": "Vyberte sloupec, poté jej přesuňte nebo nastavte jeho šířku.",
+    "Select an image": "Vyberte obrázek",
+    "Select failed": "Výběr selhal",
+    "Select this group in source pane": "Vyberte tuto skupinu v panelu zdrojů",
+    "Set width": "Nastavit šířku",
+    "Show frame numbers and timestamps": "Zobrazit čísla snímků a časové značky",
+    "Similarity is an estimate. Review files before taking any action; this window cannot delete them.": "Podobnost je odhad. Před provedením jakéhokoli opatření zkontrolujte soubory; toto okno je nemůže smazat.",
+    "Similarity tolerance (0–16):": "Tolerance podobnosti (0–16):",
+    "Smart collections": "Chytré kolekce",
+    "Some files already exist. Enter: replace, skip, keep both, or newer": "Některé soubory již existují. Zadejte: nahradit, přeskočit, ponechat oba nebo novější",
+    "Start": "Spustit",
+    "Start number:": "Počáteční číslo:",
+    "Status": "Stav",
+    "Template:": "Šablona:",
+    "Theme:": "Téma:",
+    "Thumbnail storage": "Úložiště náhledů",
+    "Tokens: {name} original name, {n} number, {ext} extension, {dotext} extension including dot": "Tokeny: {name} původní název, {n} číslo, {ext} přípona, {dotext} přípona včetně tečky",
+    "Transfer queue": "Přenosová fronta",
+    "Undo delete": "Zrušit smazání",
+    "Verify media integrity": "Ověřit integritu médií",
+    "Width:": "Šířka:",
+    "Workspace name:": "Název pracovní plochy:",
+    "⤓ PNG": "⤓ PNG",
+    "🔇 Unavailable": "🔇 Nedostupné",
+    "Thumbnails": "Miniatury",
+    "Ready": "Připraveno",
+    "Keep both": "Zachovat oba",
+    "Filename": "Název souboru",
+    "Move": "Přesunout",
+    "Copy": "Kopírovat",
+    "Cancelled": "Zrušeno",
+    "Add to selection basket": "Přidat do výběrového košíku",
+    "New folder…": "Nová složka…",
+    "Selection basket…": "Výběrový košík…",
+    "Selection basket": "Výběrový košík",
+    "Highlighted files:": "Zvýrazněné soubory:",
+    "Tick selection": "Zaškrtnout výběr",
+    "Untick selection": "Zrušit zaškrtnutí výběru",
+    "Undo in progress…": "Zpětprobíhá…",
+    "\nUnfinished recovery steps and backups were retained. Close applications using these files, then press Undo again.": "\nNedokončené kroky obnovy a zálohy byly zachovány.Zavřítaplikace používající tyto soubory, pak stiskněteZpětznovu.",
+    "Undo would overwrite an existing file: {target}. Both files were retained.": "Zpětpřepsal by existující soubor: {target}. Oba soubory byly zachovány.",
+    "Undo target is missing; recovery retained: {target}": "Zpětcíl chybí; zotavení zachováno: {target}",
+    "Undo backup is missing: {backup}": "Zpětzáloha chybí: {backup}",
+    "New folder": "Nová složka",
+    "Folder name:": "Složkajméno:",
+    "Filename conflict": "Název souborukonflikt",
+    "Rename file — live preview": "Přejmenovat soubor— živý náhled",
+    "Could not create folder": "Nepodařilo se vytvořit složku",
+    "Select or tick files first.": "Nejprve vyberte nebo zaškrtněte soubory.",
+    "Move files": "Přesunoutsoubory",
+    "Copy files": "Kopírovatsoubory",
+    "Ask for each conflict": "Zeptejte se u každého konfliktu",
+    "keep both": "ponechat oba",
+    "Replace": "Nahradit",
+    "Skip": "Přeskočit",
+    "Selection basket — temporary references": "Výběrový košík – dočasné odkazy",
+    "Original location": "Původní umístění",
+    "Add pane selection": "Přidat výběr panelu",
+    "Remove references": "Odstranit odkazy",
+    "Clear basket": "Vymazatkoš",
+    "Copy to active pane": "Kopírovatdo aktivního panelu",
+    "Move to active pane": "Přesunoutdo aktivního panelu",
+    "Source missing": "Zdrojchybějící",
+    " files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "soubory. Konflikty jsou zkontrolovány před zařazením do fronty. Nahrazení uchovává zálohu pro obnovení pro tuto relaci.",
+    "Queue move": "Přenést do fronty",
+    "Queue copy": "Kopírovat do fronty",
+    "Unsafe destination": "Nezabezpečená cílová složka",
+    "A destination is one of the selected source files. Choose another folder.": "Cílová složka je jedním z vybraných zdrojových souborů. Vyberte jinou složku.",
+    "New filename: ": "Nové jméno souboru:",
+    "Destination now exists. Choose another name.": "Cíl již existuje. Zvolte jiné jméno.",
+    "Destination folder:": "Cílová složka:",
+    "Preserve folder structure": "Zachovat strukturu složek",
+    "Files only (no subfolders)": "Souborjen (žádné podsložky)",
+    "If a destination filename already exists:": "Pokud cílový soubor již existuje:",
+    "Open destination when complete": "Otevřenocíl po dokončení",
+    "Destination is a selected source": "Cílem je vybraný zdroj",
+    "Apply to all remaining conflicts": "Použítke všem zbývajícím konfliktům",
+    "Hide basket": "Skrýt košík",
+    "Treeview": "Zobrazit stromovou strukturu",
+    "Destination is a folder": "Cílové umístění je složka",
+    " to ": "na",
+    "Source: ": "Zdroj:",
+    "\n\nDestination: ": "\nCíl:",
+    "\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "\nZachovat obavytváří očíslované jméno souboru. Nahrazení zálohuje cílový soubor pro relaciZpět",
+    "Current filename: ": "Aktuální název souboru:",
+    "Duplicate destination name": "Duplicitní název cíle",
+    " [missing]": "[chybí]",
+    "Existing destination": "Existující cíl",
+    "Enter a valid folder name without slashes, reserved names or trailing spaces/dots.": "Zadejte platný název složky bez lomítek, rezervovaných názvů nebo závěrečných mezer/teček.",
+    "Source and destination are the same file; nothing was changed.": "Zdroja cílový soubor je stejný soubor; nic nebylo změněno.",
+    "Undo would overwrite an existing file: ": "Zpět by přepsal existující soubor:",
+    "Undo stopped because this file changed after transfer: ": "Zpětzastaveno, protože tento soubor se po přenosu změnil:",
+    "Source changed during transfer; retained original. Retry after writing finishes.": "Zdrojzměněno během přenosu; původní zachováno. Zkuste znovu po dokončení zápisu.",
+    "Undo target is missing; recovery retained: ": "Zpětcíl chybí; obnovení zachováno:",
+    "Undo backup is missing: ": "Zpětzáloha chybí:",
+    "Destination changed; retry: ": "Cíl změněn; zkuste to znovu:",
+    "{count} files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "{count}soubory. Konflikty jsou před zařazením do fronty zkontrolovány. Funkce Replace uchovává zálohu pro obnovení během této relace.",
+    "Source: {source}\n\nDestination: {target}\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "Zdroj: {source}Cíl: {target}\n\nZachovat obavytváří očíslované jméno souboru. Nahrazení zálohuje cílový soubor pro relaciZpět.",
+    "Current filename: {name}": "Aktuální název souboru: {name}",
+    "New filename: {name}\n{status}": "Nové jméno souboru: {name}\n{status}",
+    "Source": "Zdroj",
+    "Destination": "Cíl",
+    "[missing]": "[chybí]",
+    "Unchanged": "Beze změny",
+    "Name cannot be empty": "Jméno nesmí být prázdné",
+    "Name contains a forbidden character": "Jméno obsahuje zakázaný znak",
+    "Name cannot end with a space or dot": "Jméno nesmí končit mezerou nebo tečkou",
+    "Reserved Windows filename": "Rezervovaný název souboru Windows",
+    "Duplicate output name": "Duplicitní název výstupu název",
+    "A file with this name already exists": "Soubor s tímto názvem již existuje",
+    "Invalid template: {error}": "Neplatná šablona: {error}",
+    "Undo stopped because this file changed after transfer: {path}. The file was retained.": "Zpětzastaveno, protože tento soubor se po přenosu změnil:{path}. Soubor byl zachován.",
+    "Destination changed; retry: {target}": "Cíl změněn; zkuste to znovu:{target}",
+    "{ready} file(s) ready · {unchanged} unchanged · {problems} problem(s)": "{ready} soubor(y) připravený ┬À {unchanged} beze změny ┬À {problems} problém(y)",
+    "Start and padding must be whole numbers.": "Spustit a vycpávky musí být celá čísla."
+  }
+}

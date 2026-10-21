@@ -1,0 +1,252 @@
+de: 4/15 paragraphs/titles
+fr: 4/15 paragraphs/titles
+nl: 4/15 paragraphs/titles
+ko: 4/15 paragraphs/titles
+zh-CN: 4/15 paragraphs/titles
+ja: 4/15 paragraphs/titles
+de: 6/15 paragraphs/titles
+nl: 6/15 paragraphs/titles
+fr: 6/15 paragraphs/titles
+zh-CN: 6/15 paragraphs/titles
+ko: 6/15 paragraphs/titles
+ja: 6/15 paragraphs/titles
+de: 10/15 paragraphs/titles
+fr: 10/15 paragraphs/titles
+nl: 10/15 paragraphs/titles
+zh-CN: 10/15 paragraphs/titles
+de: 13/15 paragraphs/titles
+ko: 10/15 paragraphs/titles
+fr: 13/15 paragraphs/titles
+zh-CN: 13/15 paragraphs/titles
+nl: 13/15 paragraphs/titles
+fr: 15/15 paragraphs/titles
+COMPLETE fr: 22 chapters, UI unchanged
+de: 15/15 paragraphs/titles
+COMPLETE de: 22 chapters, UI unchanged
+ja: 10/15 paragraphs/titles
+ko: 13/15 paragraphs/titles
+nl: 15/15 paragraphs/titles
+COMPLETE nl: 22 chapters, UI unchanged
+zh-CN: 15/15 paragraphs/titles
+COMPLETE zh-CN: 22 chapters, UI unchanged
+ko: 15/15 paragraphs/titles
+COMPLETE ko: 22 chapters, UI unchanged
+ja: 13/15 paragraphs/titles
+ja: 15/15 paragraphs/titles
+COMPLETE ja: 22 chapters, UI unchanged
+es: 4/15 paragraphs/titles
+ru: 4/15 paragraphs/titles
+sv: 4/15 paragraphs/titles
+bg: 4/15 paragraphs/titles
+th: 4/15 paragraphs/titles
+es: 6/15 paragraphs/titles
+id: 4/15 paragraphs/titles
+sv: 6/15 paragraphs/titles
+ru: 6/15 paragraphs/titles
+bg: 6/15 paragraphs/titles
+id: 6/15 paragraphs/titles
+th: 6/15 paragraphs/titles
+es: 10/15 paragraphs/titles
+sv: 10/15 paragraphs/titles
+es: 13/15 paragraphs/titles
+ru: 10/15 paragraphs/titles
+es: 15/15 paragraphs/titles
+COMPLETE es: 22 chapters, UI unchanged
+sv: 13/15 paragraphs/titles
+ru: 13/15 paragraphs/titles
+id: 10/15 paragraphs/titles
+bg: 10/15 paragraphs/titles
+sv: 15/15 paragraphs/titles
+COMPLETE sv: 22 chapters, UI unchanged
+ru: 15/15 paragraphs/titles
+COMPLETE ru: 22 chapters, UI unchanged
+id: 13/15 paragraphs/titles
+th: 10/15 paragraphs/titles
+id: 15/15 paragraphs/titles
+COMPLETE id: 22 chapters, UI unchanged
+bg: 13/15 paragraphs/titles
+bg: 15/15 paragraphs/titles
+COMPLETE bg: 22 chapters, UI unchanged
+th: 13/15 paragraphs/titles
+el: 4/15 paragraphs/titles
+fil: 4/15 paragraphs/titles
+hi: 4/15 paragraphs/titles
+th: 15/15 paragraphs/titles
+COMPLETE th: 22 chapters, UI unchanged
+pl: 4/15 paragraphs/titles
+fil: 6/15 paragraphs/titles
+it: 4/15 paragraphs/titles
+el: 6/15 paragraphs/titles
+hi: 6/15 paragraphs/titles
+ar: 4/15 paragraphs/titles
+pl: 6/15 paragraphs/titles
+it: 6/15 paragraphs/titles
+fil: 10/15 paragraphs/titles
+ar: 6/15 paragraphs/titles
+hi: 10/15 paragraphs/titles
+fil: 13/15 paragraphs/titles
+pl: 10/15 paragraphs/titles
+el: 10/15 paragraphs/titles
+fil: 15/15 paragraphs/titles
+COMPLETE fil: 22 chapters, UI unchanged
+hi: 13/15 paragraphs/titles
+it: 10/15 paragraphs/titles
+pl: 13/15 paragraphs/titles
+el: 13/15 paragraphs/titles
+ar: 10/15 paragraphs/titles
+pl: 15/15 paragraphs/titles
+COMPLETE pl: 22 chapters, UI unchanged
+it: 13/15 paragraphs/titles
+hi: 15/15 paragraphs/titles
+COMPLETE hi: 22 chapters, UI unchanged
+el: 15/15 paragraphs/titles
+COMPLETE el: 22 chapters, UI unchanged
+it: 15/15 paragraphs/titles
+COMPLETE it: 22 chapters, UI unchanged
+vi: 4/15 paragraphs/titles
+ar: 13/15 paragraphs/titles
+ar: 15/15 paragraphs/titles
+COMPLETE ar: 22 chapters, UI unchanged
+no: 4/15 paragraphs/titles
+fi: 4/15 paragraphs/titles
+vi: 6/15 paragraphs/titles
+da: 4/15 paragraphs/titles
+uk: 4/15 paragraphs/titles
+hu: 4/15 paragraphs/titles
+no: 6/15 paragraphs/titles
+fi: 6/15 paragraphs/titles
+da: 6/15 paragraphs/titles
+vi: 10/15 paragraphs/titles
+uk: 6/15 paragraphs/titles
+hu: 6/15 paragraphs/titles
+vi: 13/15 paragraphs/titles
+no: 10/15 paragraphs/titles
+vi: 15/15 paragraphs/titles
+COMPLETE vi: 22 chapters, UI unchanged
+fi: 10/15 paragraphs/titles
+da: 10/15 paragraphs/titles
+no: 13/15 paragraphs/titles
+fi: 13/15 paragraphs/titles
+uk: 10/15 paragraphs/titles
+no: 15/15 paragraphs/titles
+COMPLETE no: 22 chapters, UI unchanged
+da: 13/15 paragraphs/titles
+fi: 15/15 paragraphs/titles
+COMPLETE fi: 22 chapters, UI unchanged
+da: 15/15 paragraphs/titles
+COMPLETE da: 22 chapters, UI unchanged
+hu: 10/15 paragraphs/titles
+uk: 13/15 paragraphs/titles
+ro: 4/15 paragraphs/titles
+hu: 13/15 paragraphs/titles
+uk: 15/15 paragraphs/titles
+COMPLETE uk: 22 chapters, UI unchanged
+cs: 4/15 paragraphs/titles
+hu: 15/15 paragraphs/titles
+COMPLETE hu: 22 chapters, UI unchanged
+pt-PT: 4/15 paragraphs/titles
+pt-BR: 4/15 paragraphs/titles
+ro: 6/15 paragraphs/titles
+pt-PT: 6/15 paragraphs/titles
+tr: 4/15 paragraphs/titles
+cs: 6/15 paragraphs/titles
+pt-BR: 6/15 paragraphs/titles
+zh-TW: 4/15 paragraphs/titles
+ro: 10/15 paragraphs/titles
+tr: 6/15 paragraphs/titles
+pt-PT: 10/15 paragraphs/titles
+ro: 13/15 paragraphs/titles
+cs: 10/15 paragraphs/titles
+pt-BR: 10/15 paragraphs/titles
+pt-PT: 13/15 paragraphs/titles
+zh-TW: 6/15 paragraphs/titles
+ro: 15/15 paragraphs/titles
+COMPLETE ro: 22 chapters, UI unchanged
+pt-PT: 15/15 paragraphs/titles
+COMPLETE pt-PT: 22 chapters, UI unchanged
+pt-BR: 13/15 paragraphs/titles
+cs: 13/15 paragraphs/titles
+pt-BR: 15/15 paragraphs/titles
+COMPLETE pt-BR: 22 chapters, UI unchanged
+tr: 10/15 paragraphs/titles
+cs: 15/15 paragraphs/titles
+COMPLETE cs: 22 chapters, UI unchanged
+tr: 13/15 paragraphs/titles
+zh-TW: 10/15 paragraphs/titles
+ms: 4/15 paragraphs/titles
+tr: 15/15 paragraphs/titles
+COMPLETE tr: 22 chapters, UI unchanged
+he: 4/15 paragraphs/titles
+zh-TW: 13/15 paragraphs/titles
+bn: 4/15 paragraphs/titles
+ur: 4/15 paragraphs/titles
+zh-TW: 15/15 paragraphs/titles
+COMPLETE zh-TW: 22 chapters, UI unchanged
+ms: 6/15 paragraphs/titles
+he: 6/15 paragraphs/titles
+fa: 4/15 paragraphs/titles
+bn: 6/15 paragraphs/titles
+ur: 6/15 paragraphs/titles
+sk: 4/15 paragraphs/titles
+ms: 10/15 paragraphs/titles
+ms: 13/15 paragraphs/titles
+he: 10/15 paragraphs/titles
+fa: 6/15 paragraphs/titles
+ms: 15/15 paragraphs/titles
+COMPLETE ms: 22 chapters, UI unchanged
+sk: 6/15 paragraphs/titles
+he: 13/15 paragraphs/titles
+bn: 10/15 paragraphs/titles
+ur: 10/15 paragraphs/titles
+he: 15/15 paragraphs/titles
+COMPLETE he: 22 chapters, UI unchanged
+ur: 13/15 paragraphs/titles
+bn: 13/15 paragraphs/titles
+fa: 10/15 paragraphs/titles
+hr: 4/15 paragraphs/titles
+sk: 10/15 paragraphs/titles
+bn: 15/15 paragraphs/titles
+COMPLETE bn: 22 chapters, UI unchanged
+fa: 13/15 paragraphs/titles
+ur: 15/15 paragraphs/titles
+COMPLETE ur: 22 chapters, UI unchanged
+sk: 13/15 paragraphs/titles
+sr: 4/15 paragraphs/titles
+fa: 15/15 paragraphs/titles
+COMPLETE fa: 22 chapters, UI unchanged
+sk: 15/15 paragraphs/titles
+COMPLETE sk: 22 chapters, UI unchanged
+hr: 6/15 paragraphs/titles
+ca: 4/15 paragraphs/titles
+et: 4/15 paragraphs/titles
+sr: 6/15 paragraphs/titles
+lv: 4/15 paragraphs/titles
+lt: 4/15 paragraphs/titles
+hr: 10/15 paragraphs/titles
+ca: 6/15 paragraphs/titles
+et: 6/15 paragraphs/titles
+hr: 13/15 paragraphs/titles
+lv: 6/15 paragraphs/titles
+hr: 15/15 paragraphs/titles
+COMPLETE hr: 22 chapters, UI unchanged
+sr: 10/15 paragraphs/titles
+lt: 6/15 paragraphs/titles
+ca: 10/15 paragraphs/titles
+et: 10/15 paragraphs/titles
+sr: 13/15 paragraphs/titles
+ca: 13/15 paragraphs/titles
+lv: 10/15 paragraphs/titles
+sr: 15/15 paragraphs/titles
+COMPLETE sr: 22 chapters, UI unchanged
+et: 13/15 paragraphs/titles
+ca: 15/15 paragraphs/titles
+COMPLETE ca: 22 chapters, UI unchanged
+lt: 10/15 paragraphs/titles
+et: 15/15 paragraphs/titles
+COMPLETE et: 22 chapters, UI unchanged
+lv: 13/15 paragraphs/titles
+lt: 13/15 paragraphs/titles
+lv: 15/15 paragraphs/titles
+COMPLETE lv: 22 chapters, UI unchanged
+lt: 15/15 paragraphs/titles
+COMPLETE lt: 22 chapters, UI unchanged

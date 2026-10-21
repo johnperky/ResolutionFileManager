@@ -1,0 +1,9 @@
+{
+  "executable": "/mnt/f/Resolution File Manager project/ResolutionFileManager-Project-v6/dist/linux/ResolutionFileManager-v12.6.1-linux-x86_64",
+  "sha256": "a291fc2eb208ffd56790f68c525fcc6bff7771af2be3e166f0a11dcfb393777f",
+  "language": "ar",
+  "startup_liveness_passed": true,
+  "observation_seconds": 120,
+  "stderr": "",
+  "scope": "Startup/liveness only; visual and feature checks reported separately."
+}

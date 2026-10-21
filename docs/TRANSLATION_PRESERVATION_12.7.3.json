@@ -1,0 +1,222 @@
+{
+  "baseline": "F:\\Resolution File Manager project\\Recovery Backups\\2026-10-21-0001-before-multilingual-12.7.3\\source",
+  "approved_english_master_manual_and_runtime_help_preserved": true,
+  "languages": [
+    {
+      "language": "ar",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "bg",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "bn",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "ca",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "cs",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "da",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "de",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "el",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "en",
+      "original_ui_preserved": true,
+      "added_entries": 79
+    },
+    {
+      "language": "es",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "et",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "fa",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "fi",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "fil",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "fr",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "he",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "hi",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "hr",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "hu",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "id",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "it",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "ja",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "ko",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "lt",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "lv",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "ms",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "nl",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "no",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "pl",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "pt-BR",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "pt-PT",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "ro",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "ru",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "sk",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "sr",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "sv",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "th",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "tr",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "uk",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "ur",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "vi",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "zh-CN",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    },
+    {
+      "language": "zh-TW",
+      "original_ui_preserved": true,
+      "added_entries": 91
+    }
+  ],
+  "new_ui_english_review_flags": []
+}

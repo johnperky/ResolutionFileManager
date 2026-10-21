@@ -1,0 +1,1561 @@
+{
+  "meta": {
+    "language": "繁體中文"
+  },
+  "strings": {
+    "app.title": "Resolution 檔案管理器 {version}",
+    "menu.file": "檔案",
+    "menu.edit": "編輯",
+    "menu.view": "檢視",
+    "menu.tools": "工具",
+    "menu.help": "說明",
+    "menu.browse": "瀏覽活動窗格…",
+    "menu.refresh": "重新整理",
+    "menu.exit": "離開",
+    "menu.copy": "複製",
+    "menu.cut": "剪下",
+    "menu.paste": "貼上",
+    "menu.undo": "復原",
+    "menu.rename": "重新命名…",
+    "menu.batch_rename": "批次重新命名選取項目…",
+    "menu.delete": "移至回收筒 / 垃圾桶",
+    "menu.select_all": "選取所有顯示項目",
+    "menu.details": "在活動窗格中顯示詳細資訊",
+    "menu.thumbnails": "在活動窗格中顯示縮圖",
+    "menu.thumbnail_size": "縮圖大小",
+    "menu.columns": "設定欄位…",
+    "menu.appearance": "外觀與文字大小…",
+    "menu.refresh_active": "重新整理活動窗格",
+    "menu.refresh_both": "刷新兩個窗格",
+    "menu.go_up": "向上",
+    "menu.verify": "驗證媒體完整性…",
+    "menu.contact_sheet": "建立影片聯絡表…",
+    "menu.export_report": "匯出媒體報告…",
+    "menu.metadata": "檢視嵌入的元資料…",
+    "menu.convert": "轉換所選影片…",
+    "menu.duplicates": "尋找重複項…",
+    "menu.similar": "尋找視覺上相似的圖片…",
+    "menu.compare": "比較已選取的…",
+    "menu.sync": "比較 / 同步資料夾…",
+    "menu.save_workspace": "儲存工作區…",
+    "menu.load_workspace": "載入工作區…",
+    "menu.save_collection": "儲存目前使用的智慧收藏…",
+    "menu.manage_collections": "管理智慧收藏…",
+    "menu.folder_rules": "資料夾組織規則…",
+    "menu.cache": "快取及掃描…",
+    "menu.queue": "傳輸佇列…",
+    "menu.language": "語言",
+    "menu.reminders": "提醒事項…",
+    "menu.how_to": "如何使用 Resolution File Manager",
+    "menu.shortcuts": "鍵盤快捷鍵",
+    "menu.coffee": "☕ 如果你喜歡這個，請請 John 喝杯咖啡…",
+    "menu.about": "關於",
+    "context.copy_other": "複製到另一個窗格",
+    "context.move_other": "移動到另一個窗格",
+    "context.open": "打開",
+    "context.reveal": "在檔案總管中顯示",
+    "context.rename": "重新命名…",
+    "context.clear_rating": "清除評級",
+    "context.rating": "評級",
+    "context.none": "無",
+    "context.colour": "顏色標籤",
+    "context.edit_tags": "編輯標籤…",
+    "context.recycle": "移至資源回收筒",
+    "context.select_all": "選取所有顯示項目",
+    "context.clear_ticks": "清除勾選",
+    "context.find_duplicates": "尋找重複項",
+    "context.compare": "比較所選項目",
+    "context.refresh_pane": "重新整理此窗格",
+    "context.refresh_both": "重新整理兩個窗格",
+    "context.open_folder": "打開資料夾",
+    "context.red": "紅色",
+    "context.yellow": "黃色",
+    "context.green": "綠色",
+    "context.blue": "藍色",
+    "context.purple": "紫色",
+    "context.configure_columns": "配置欄位…",
+    "context.reset_columns": "重設欄寬",
+    "context.files_suffix": "（{count} 個檔案）",
+    "sort.sort": "排序",
+    "sort.name": "名稱",
+    "sort.modified": "修改日期",
+    "sort.size": "檔案大小",
+    "sort.duration": "長度",
+    "sort.codec": "編解碼器",
+    "sort.resolution": "解析度",
+    "sort.type": "類型",
+    "sort.bitrate": "比特率",
+    "sort.fps": "幀率",
+    "sort.rating": "評分",
+    "sort.a_z": "由 A 到 Z",
+    "sort.z_a": "由 Z 到 A",
+    "sort.oldest": "最舊優先",
+    "sort.newest": "最新的在前",
+    "sort.smallest": "最小的在前",
+    "sort.largest": "最大的在前",
+    "sort.shortest": "最短的在前",
+    "sort.longest": "最長的在前",
+    "sort.ascending": "升序",
+    "sort.descending": "降序",
+    "toolbar.guide": "在任一面板中選擇檔案，然後傳送到另一個面板。",
+    "toolbar.refresh": "重新整理",
+    "toolbar.move": "將選中的移動 → 到另一個面板",
+    "toolbar.copy": "複製選取 → 其他窗格",
+    "toolbar.undo": "復原",
+    "pane.left": "左窗格",
+    "pane.right": "右窗格",
+    "pane.preview": "預覽",
+    "pane.info": "資訊",
+    "pane.browse": "瀏覽…",
+    "pane.drag": "↗ 拖動選取",
+    "pane.show": "顯示：",
+    "pane.videos": "影片",
+    "pane.images": "圖片",
+    "pane.find": "搜尋：",
+    "pane.live": "即時",
+    "pane.subfolders": "包含子資料夾",
+    "pane.resolution": "解析度：",
+    "pane.all": "全部",
+    "pane.select_matching": "選擇匹配",
+    "pane.more_filters": "更多篩選…",
+    "pane.outliers": "選擇尺寸異常",
+    "pane.scanning": "正在掃描媒體…",
+    "pane.cancel": "取消",
+    "pane.no_files": "無匹配的媒體檔案",
+    "pane.checked": "{count} 項已勾選",
+    "pane.clear_ticks": "清除勾選",
+    "view.details": "詳細資料",
+    "view.thumbnails": "縮圖",
+    "size.small": "小",
+    "size.medium": "中",
+    "size.large": "大",
+    "browse.continuous": "連續",
+    "browse.paged": "分頁",
+    "browse.auto": "自動",
+    "browse.per_page": "每頁：",
+    "column.name": "名稱 / 相對路徑",
+    "column.codec": "編解碼器",
+    "column.resolution": "解析度",
+    "column.duration": "影片長度",
+    "column.size": "檔案大小",
+    "column.rate": "每分鐘 MB",
+    "column.fps": "幀率 (FPS)",
+    "column.modified": "修改日期",
+    "column.type": "類型",
+    "column.bitrate": "位元率",
+    "column.audio": "音訊",
+    "column.hdr": "HDR",
+    "column.pixels": "百萬像素",
+    "column.color": "標籤",
+    "column.tags": "標籤",
+    "column.rating": "評分",
+    "status.ready": "準備就緒",
+    "status.scanning_progress": "掃描 {current} 的 {total}… · {cached} 從快取",
+    "status.scan_complete_folder": "此資料夾中有 {count} 個媒體檔案",
+    "status.scan_complete_subfolders": "包含子資料夾共 {count} 個媒體檔案",
+    "status.unreadable": "{count} 無法讀取",
+    "status.from_cache": "{count} 來自快取",
+    "status.scan_cancelled": "掃描在 {count} 個檔案後取消",
+    "status.skipped_file": "略過檔案：{error}",
+    "status.scan_failed": "無法掃描：{error}",
+    "status.cancelling": "正在取消掃描…",
+    "status.live_on": "即時更新開啟",
+    "status.live_off": "即時更新關閉",
+    "status.loading": "載入中…",
+    "outlier.moderate": "中等 (1.4×)",
+    "outlier.large": "大 (1.75×)",
+    "outlier.extreme": "極大 (2.5×)",
+    "inspector.title": "檢視器",
+    "inspector.no_file": "未選擇檔案",
+    "inspector.select_file": "選擇媒體文件以查看其詳細資訊。",
+    "inspector.copy_path": "複製路徑",
+    "inspector.open": "打開",
+    "inspector.reveal": "顯示",
+    "preview.off": "預覽關閉",
+    "preview.is_off": "預覽已關閉",
+    "preview.select": "選擇文件以預覽",
+    "preview.select_side": "在這邊選擇圖片或影片",
+    "preview.play": "播放",
+    "preview.pause": "暫停",
+    "preview.skim": "略讀：",
+    "preview.speed": "速度：",
+    "preview.muted": "已靜音",
+    "preview.unmuted": "開啟聲音",
+    "preview.still": "靜態影像",
+    "preview.unavailable": "預覽不可用",
+    "preview.read_failed": "無法讀取影格",
+    "convert.title": "轉換所選影片",
+    "convert.select_first_title": "轉換影片",
+    "convert.select_first": "請先選擇一個或多個影片檔案。",
+    "convert.settings": "轉換設定",
+    "convert.preset": "預設值：",
+    "convert.quality": "品質（CRF）：",
+    "convert.resolution": "解析度：",
+    "convert.resolution_help": "1080p 和 720p 設定輸出高度，同時保持縱橫比。",
+    "convert.quality_help": "較低的品質值表示請求較高品質；硬體引擎會將此值映射到其自己的控制。Remux 忽略品質和解析度。",
+    "convert.engine": "編碼引擎：",
+    "convert.hardware_decode": "當可用時使用硬體解碼",
+    "convert.output_folder": "輸出資料夾：",
+    "convert.choose_output": "選擇轉換輸出資料夾",
+    "convert.preserve_folders": "保留相對於活動窗格的資料夾",
+    "convert.skip_existing": "跳過已存在的",
+    "convert.keep_both": "保留兩者",
+    "convert.originals_retained": "原始影片將始終保留。開始前請檢查每個輸出路徑。",
+    "convert.status": "狀態",
+    "convert.source": "來源",
+    "convert.output": "輸出",
+    "convert.result": "結果",
+    "convert.remux_help": "Remux 直接複製串流；不使用編碼、調整大小或硬體解碼。",
+    "convert.none_reported": "無報告",
+    "convert.cpu_fallback": "無；自動將使用 CPU",
+    "convert.capabilities": "FFmpeg 硬體編碼器支援：{hardware} · 解碼方法：{decode}",
+    "convert.capability_failed": "能力檢查失敗：{error} · 軟體編碼仍可用",
+    "convert.choose_folder": "選擇輸出資料夾。",
+    "convert.preview_summary": "{ready} 已準備 · {skipped} 已跳過/出現問題 · 原始大小 {size}",
+    "convert.invalid_quality": "無效的品質",
+    "convert.invalid_quality_body": "CRF 必須是 18 到 35 之間的整數。",
+    "convert.engine_unavailable": "編碼引擎不可用",
+    "convert.engine_unavailable_body": "{engine} 對於 {preset} 無法使用。請選擇其他引擎。",
+    "convert.unchanged": "未更改（串流複製）",
+    "convert.decode_unused": "未使用（串流複製）",
+    "convert.decode_fallback": "請求安全備援",
+    "convert.off": "關閉",
+    "convert.confirm_title": "開始影片轉換",
+    "convert.confirm_body": "要建立 {count} 個新的影片檔案嗎？\n\n編碼：{engine}\n解析度：{resolution}\n硬體解碼：{decode}\n\n原始檔案將保留。取消會移除目前的部分輸出並停止其餘的佇列。",
+    "convert.progress": "正在轉換檔案 {current} / {total} · {percent}%",
+    "convert.complete": "完成 · 已建立 {created} · 失敗 {failed} · 已取消 {cancelled}",
+    "convert.refresh": "重新整理預覽",
+    "convert.start": "開始轉換…",
+    "convert.cancel": "取消轉換",
+    "duplicates.title": "重複項",
+    "duplicates.none_candidates": "未找到相同大小的重複候選項。",
+    "duplicates.quick_start": "快速檢查 {count} 個重複候選項…",
+    "duplicates.quick_progress": "快速檢查重複項 {current} / {total}…",
+    "duplicates.verify_progress": "驗證精確匹配 {current} / {total}…",
+    "duplicates.complete_title": "重複搜尋完成",
+    "duplicates.none": "未發現精確重複項。",
+    "duplicates.none_status": "未發現精確重複項 · {cached} 個已緩存指紋",
+    "duplicates.groups_status": "{groups} 個完全重複的群組 · {cached} 個已快取的指紋",
+    "duplicates.first": "最先",
+    "duplicates.newest": "最新",
+    "duplicates.oldest": "最舊",
+    "duplicates.smallest": "最小",
+    "duplicates.largest": "最大",
+    "duplicates.review_title": "檢視完全重複",
+    "duplicates.found": "找到 {count} 個完全重複的群組。選擇一行，以便與同一群組的另一份副本一起預覽。",
+    "duplicates.explanation": "完全重複的檔案內容和檔案大小相同，因此最小和最大通常會相同。日期和位置仍可能不同。",
+    "duplicates.preview": "預覽 {number}",
+    "duplicates.select": "選擇一個重複項",
+    "duplicates.group": "群組",
+    "duplicates.filename": "檔案名稱",
+    "duplicates.folder": "資料夾",
+    "duplicates.size": "大小",
+    "duplicates.modified": "修改日期",
+    "duplicates.reason": "可能保留的原因",
+    "duplicates.loading": "正在載入預覽…",
+    "duplicates.keep_one": "每組保留一個：",
+    "duplicates.clear": "清除提案",
+    "duplicates.close": "關閉且不更改",
+    "duplicates.proposal_status": "重複提案：保留 {strategy} · 已選 {count} 個多餘檔案以供審查",
+    "duplicates.applied_title": "已套用重複提案",
+    "duplicates.applied_body": "{strategy} 的副本在每個群組中保持未選取。\n\n主視窗中已選取 {count} 個冗餘檔案。請在移動或刪除之前先在此處檢查它們。",
+    "browse.page_summary": "第 {page} 頁，共 {pages} 頁 · {count} 個檔案{automatic}",
+    "browse.auto_suffix": "· 每頁自動 {count}",
+    "browse.continuous_summary": "{count} 個檔案 · {mode} · 僅顯示可見卡片",
+    "browse.all_shown": "全部顯示",
+    "common.system_default": "系統預設",
+    "common.restart_required": "需要重新啟動",
+    "common.ok": "確定",
+    "common.cancel": "取消",
+    "common.close": "關閉",
+    "common.save": "儲存",
+    "common.enable": "啟用",
+    "common.disable": "停用",
+    "common.never": "從不",
+    "common.launch": "啟動 {count}",
+    "language.title": "語言",
+    "language.message": "語言設定已儲存。請重新啟動 Resolution File Manager 以在所有地方套用。",
+    "reminders.title": "提醒設定",
+    "reminders.rating": "Microsoft 商店評分提醒",
+    "reminders.support": "請我喝咖啡提醒",
+    "reminders.next": "下次可用：{value}",
+    "reminders.saved": "提醒設定已儲存。",
+    "rating.title": "喜歡 Resolution File Manager 嗎？",
+    "rating.body": "如果 Resolution File Manager 對您有幫助，是否願意在 Microsoft 商店評分它？評分可以幫助其他人發現它。",
+    "rating.rate": "在 Microsoft Store 評分",
+    "rating.later": "稍後",
+    "rating.never": "不再詢問",
+    "support.title": "支援解析檔案管理器",
+    "support.body": "如果這個程式對你有幫助，隨時可以請 John 喝咖啡。支援完全自願。",
+    "support.open": "請我喝咖啡",
+    "support.later": "也許稍後",
+    "support.never": "不再詢問",
+    "link.error_title": "無法開啟頁面",
+    "link.error_body": "在您的網頁瀏覽器中打開此地址：\n\n{url}\n\n{error}",
+    "about.title": "關於 Resolution 文件管理器",
+    "about.description": "一款跨平台雙窗格應用程式，用於瀏覽、預覽、分析和整理圖像及影片收藏。",
+    "about.support": "支援開發",
+    "about.optional": "如果 Resolution 文件管理器對您有用，您可以請 John 喝杯咖啡。支援完全是自願的。",
+    "help.title": "解析檔案管理器說明 — {version}",
+    "help.search": "搜尋完整指南：",
+    "help.previous": "上一章",
+    "help.next": "下一章",
+    "help.next_match": "下一個匹配項 (F3)",
+    "help.clear": "清除搜尋",
+    "help.no_results": "無結果",
+    "help.no_results_body": "沒有說明章節包含「{query}」。請嘗試使用更短的詞。",
+    "status.folder_missing": "找不到資料夾",
+    "status.select_files": "先在活動窗格中選擇一個或多個檔案。",
+    "status.finished": "完成",
+    "status.error": "錯誤",
+    "filters.title": "進階篩選",
+    "filters.orientation": "方向",
+    "filters.codec": "編解碼器包含",
+    "filters.tag": "標籤包含",
+    "filters.min_rating": "最低評分",
+    "filters.color": "顏色標籤",
+    "filters.min_width": "最小寬度（像素）",
+    "filters.max_width": "最大寬度（像素）",
+    "filters.min_height": "最小高度（像素）",
+    "filters.max_height": "最大高度（像素）",
+    "filters.min_size": "最小尺寸（MB）",
+    "filters.max_size": "最大尺寸（MB）",
+    "filters.min_duration": "最短時間（秒）",
+    "filters.max_duration": "最長時間（秒）",
+    "filters.date_from": "修改日期從（YYYY-MM-DD）",
+    "filters.date_to": "修改日期至（YYYY-MM-DD）",
+    "filters.any": "任何",
+    "filters.landscape": "橫向",
+    "filters.portrait": "縱向",
+    "filters.square": "方形",
+    "filters.unlabelled": "未標記",
+    "filters.clear": "清除",
+    "filters.apply": "套用",
+    "filters.rating_1": "1",
+    "filters.rating_2": "2",
+    "filters.rating_3": "3",
+    "filters.rating_4": "4",
+    "filters.rating_5": "5",
+    "convert.preset_h264": "H.264 MP4（兼容）",
+    "convert.preset_h265": "H.265 MP4（較小）",
+    "convert.preset_av1": "AV1 MKV（最小）",
+    "convert.preset_proxy": "720p H.264 代理檔",
+    "convert.preset_remux": "重封裝為 MKV（不重新編碼）",
+    "convert.resolution_source": "保留原始解析度",
+    "convert.resolution_1080p": "1080p",
+    "convert.resolution_720p": "720p",
+    "convert.engine_automatic": "自動（推薦）",
+    "convert.engine_software": "軟體 / CPU",
+    "convert.status_ready": "準備就緒",
+    "convert.status_skipped": "已跳過",
+    "convert.status_unknown_resolution": "未知解析度",
+    "convert.status_converting": "轉換中",
+    "convert.status_passed": "通過",
+    "convert.status_cancelled": "已取消",
+    "convert.status_failed": "失敗",
+    "choice.system": "系統",
+    "choice.light": "淺色",
+    "choice.dark": "深色",
+    "choice.high_contrast": "高對比",
+    "choice.selected": "已選取",
+    "choice.visible": "可見",
+    "choice.all_scanned": "掃描全部",
+    "choice.copy": "複製",
+    "choice.move": "移動",
+    "choice.any": "任何",
+    "choice.images": "圖片",
+    "choice.videos": "影片",
+    "choice.quiet": "安靜",
+    "choice.balanced": "平衡",
+    "choice.fast": "快速",
+    "convert.status_duplicate_output": "輸出檔名重複",
+    "convert.status_same_source": "與來源檔案相同",
+    "inspector.channels": "{count} 通道",
+    "inspector.pixel_format": "像素格式",
+    "inspector.dynamic_range": "動態範圍",
+    "inspector.unknown": "未知",
+    "inspector.unrated": "未評級",
+    "inspector.unreadable": "無法閱讀"
+  },
+  "help": {
+    "schema": 2,
+    "master_sha256": "bd7b7615b744101897e361e188e64bd95e7d6173d11a1121a797d9d8cf6df279",
+    "direction": "ltr",
+    "translation_method": "machine translation with existing UI glossary; human linguistic review pending",
+    "chapters": [
+      {
+        "id": "quick_start",
+        "title": "快速 開始",
+        "paragraphs": [
+          {
+            "id": "quick_start.p001",
+            "source_sha256": "960121a7b5ea76c266026469e9fb06e35da0a7256799d3736a5fffadc23a744a",
+            "text": "1. 在每個窗格中，使用瀏覽、資料夾樹或路徑框獨立選擇資料夾。\n2. 只有在想要掃描該資料夾下完整樹狀結構時，才打開 包含子資料夾。\n3. 使用 詳細資料 以獲取可排序的技術資訊，或使用 縮圖 以進行視覺瀏覽。\n4. 在一個窗格中選擇檔案。複製和移動操作將以另一個窗格中顯示的資料夾作為目的地。\n5. 只在需要的窗格中打開 預覽 或資訊功能。兩者預設關閉以節省處理資源。\n6. 檔案變更操作會在適當情況下顯示確認或預覽。刪除 使用資源回收筒/垃圾箱，Ctrl+Z 可逆轉支援的最近操作。"
+          },
+          {
+            "id": "quick_start.p002",
+            "source_sha256": "e826944984faca1d9ef2ae01fac89df96998673ffbcb18c1a6dc76906714d5f9",
+            "text": "左側的章節說明程式的每個部分。在「搜尋所有章節」中輸入任何字詞或片語，然後按 Enter。符合條件的章節及其出現次數會顯示在目錄列表中；使用「下一個符合項目」逐一瀏覽每個高亮顯示的出現位置。"
+          },
+          {
+            "id": "quick_start.p003",
+            "source_sha256": "939c9b2348d95e362c7a750296c26c65e72efb3c8fd71071cf751214de3accaf",
+            "text": "在任一窗格中選擇一個資料夾。根據需要使用 啟用、影片、圖片 和 包含子資料夾。使用 詳細資料 或 縮圖，選擇或勾選檔案，預覽它們，然後複製、移動、分析或轉換它們。被勾選的檔案會形成操作群組；高亮顯示仍可用於瀏覽和預覽。"
+          }
+        ],
+        "body": "1. 在每個窗格中，使用瀏覽、資料夾樹或路徑框獨立選擇資料夾。\n2. 只有在想要掃描該資料夾下完整樹狀結構時，才打開 包含子資料夾。\n3. 使用 詳細資料 以獲取可排序的技術資訊，或使用 縮圖 以進行視覺瀏覽。\n4. 在一個窗格中選擇檔案。複製和移動操作將以另一個窗格中顯示的資料夾作為目的地。\n5. 只在需要的窗格中打開 預覽 或資訊功能。兩者預設關閉以節省處理資源。\n6. 檔案變更操作會在適當情況下顯示確認或預覽。刪除 使用資源回收筒/垃圾箱，Ctrl+Z 可逆轉支援的最近操作。\n\n左側的章節說明程式的每個部分。在「搜尋所有章節」中輸入任何字詞或片語，然後按 Enter。符合條件的章節及其出現次數會顯示在目錄列表中；使用「下一個符合項目」逐一瀏覽每個高亮顯示的出現位置。\n\n在任一窗格中選擇一個資料夾。根據需要使用 啟用、影片、圖片 和 包含子資料夾。使用 詳細資料 或 縮圖，選擇或勾選檔案，預覽它們，然後複製、移動、分析或轉換它們。被勾選的檔案會形成操作群組；高亮顯示仍可用於瀏覽和預覽。"
+      },
+      {
+        "id": "topic_index",
+        "title": "主題索引與章節連結",
+        "paragraphs": [
+          {
+            "id": "topic_index.quick_start",
+            "source_sha256": "b69a25b79b167c5a7e40d38d5814f094716600a942de0f3ec6218b07b27489ca",
+            "text": "快速 開始 – [chapter:quick_start]"
+          },
+          {
+            "id": "topic_index.getting_started",
+            "source_sha256": "9ac44a658d4ae090bae2481dfb1b5e9df78322e4632b50bacb4e99ccb098f22e",
+            "text": "取得 開始ed – [chapter:getting_started]"
+          },
+          {
+            "id": "topic_index.details_and_thumbnails",
+            "source_sha256": "84d1aca1a733a359aa903a64b7b96947cc10eba572194f604180ee279e080f20",
+            "text": "詳細資料 和 縮圖 – [chapter:details_and_thumbnails]"
+          },
+          {
+            "id": "topic_index.scanning_and_filtering",
+            "source_sha256": "addcb00612695126e1840e75947c51d82d93657985581b6946e2e9058895aa52",
+            "text": "掃描與過濾 ÔÇö [chapter:scanning_and_filtering]"
+          },
+          {
+            "id": "topic_index.selecting_and_previewing",
+            "source_sha256": "dcaa1afa4caf83d3fb5359c1d384469e2f0bb809a48dcce645893f93a174d545",
+            "text": "選擇與 預覽ing – [chapter:selecting_and_previewing]"
+          },
+          {
+            "id": "topic_index.copying_and_moving",
+            "source_sha256": "d439134119d88ce4d1728bbf520f1855578ba9e0e85bbaf480a60a626344f26c",
+            "text": "複製和移動 ÔÇö [chapter:copying_and_moving]"
+          },
+          {
+            "id": "topic_index.smart_collections",
+            "source_sha256": "497f5371f88656a6629fdab4f4a433d4d9f4bc360680765c65bac19426e50cad",
+            "text": "智慧收藏：已儲存的搜尋 ÔÇö [chapter:smart_collections]"
+          },
+          {
+            "id": "topic_index.duplicates_and_comparison",
+            "source_sha256": "bc7a386de1f53414fd714586f4309ed4082731697a1928637001ad61f6b93657",
+            "text": "重複項 與比較 – [chapter:duplicates_and_comparison]"
+          },
+          {
+            "id": "topic_index.video_conversion",
+            "source_sha256": "87541c8126b7efe82872889b78979b23a37056c7a88de8c8847df6a8d172d292",
+            "text": "影片轉換 – [chapter:video_conversion]"
+          },
+          {
+            "id": "topic_index.media_reports",
+            "source_sha256": "88f5be9c7f544bd30958395250596ef1e6d7269236323741b0d581860c896994",
+            "text": "匯出媒體報告 ÔÇö [chapter:media_reports]"
+          },
+          {
+            "id": "topic_index.embedded_metadata",
+            "source_sha256": "c43d4127a8b410091566783a394e9819305712159510d96c02ddbb7ee7bc0352",
+            "text": "查看嵌入式元數據 ÔÇö [chapter:embedded_metadata]"
+          },
+          {
+            "id": "topic_index.media_integrity",
+            "source_sha256": "a9696b3a52d78f01ec30371ab6e369b1b794257eada141cd26b7fcbc28def24e",
+            "text": "檢查媒體完整性 – [chapter:media_integrity]"
+          },
+          {
+            "id": "topic_index.video_contact_sheets",
+            "source_sha256": "d8c3d3d7bfb6f6240bd2dff740e17dea7096558eed8132d688fce5b8a7d38f73",
+            "text": "建立影片聯絡單 – [chapter:video_contact_sheets]"
+          },
+          {
+            "id": "topic_index.folder_synchronization",
+            "source_sha256": "c5ffb5dcb3df4777df924d496bf92af4c0c309f7dc6571a8f95f2c8efb528e08",
+            "text": "資料夾 同步 – [chapter:folder_synchronization]"
+          },
+          {
+            "id": "topic_index.folder_organization_rules",
+            "source_sha256": "1306acd5de57ef19675cac113a607091b30225a064b0b38a632584586670cbad",
+            "text": "資料夾 組織規則 – [chapter:folder_organization_rules]"
+          },
+          {
+            "id": "topic_index.transfer_queue",
+            "source_sha256": "6c218104ba617d50d4666bcf2e5e70b9635d64f83ea5e74719da6042dc1c5851",
+            "text": "管理轉移佇列 ÔÇö [chapter:transfer_queue]"
+          },
+          {
+            "id": "topic_index.safe_file_actions",
+            "source_sha256": "5ddc3613ad7b87ccfee060d77a71fadb05a457f0de7ac987a4405385b7803b59",
+            "text": "安全檔案操作 ÔÇö [chapter:safe_file_actions]"
+          },
+          {
+            "id": "topic_index.workspaces_and_cache",
+            "source_sha256": "9bedfb9cdb5f7f673cb6f702accaf18c7be93438596d081884e6616cbb751195",
+            "text": "工作區和快取 ÔÇö [chapter:workspaces_and_cache]"
+          },
+          {
+            "id": "topic_index.language",
+            "source_sha256": "57d2d6a2b519f2d4a908f2c480625bc9d06f02a72c79d74aae29f6de3818a779",
+            "text": "語言 – [chapter:language]"
+          },
+          {
+            "id": "topic_index.glossary",
+            "source_sha256": "c7a062c88b48c29ae512bf610ce2700dd67290004652c38e6af6dce5c9f29f8b",
+            "text": "詞彙表 – [chapter:glossary]"
+          },
+          {
+            "id": "topic_index.support_the_project",
+            "source_sha256": "01ccc57e26166b3a3a356d1ef2192f8c832175b4c003038bb1692f5f94473ebe",
+            "text": "支持該項目 ÔÇö [chapter:support_the_project]"
+          }
+        ],
+        "body": "快速 開始 – [chapter:quick_start]\n\n取得 開始ed – [chapter:getting_started]\n\n詳細資料 和 縮圖 – [chapter:details_and_thumbnails]\n\n掃描與過濾 ÔÇö [chapter:scanning_and_filtering]\n\n選擇與 預覽ing – [chapter:selecting_and_previewing]\n\n複製和移動 ÔÇö [chapter:copying_and_moving]\n\n智慧收藏：已儲存的搜尋 ÔÇö [chapter:smart_collections]\n\n重複項 與比較 – [chapter:duplicates_and_comparison]\n\n影片轉換 – [chapter:video_conversion]\n\n匯出媒體報告 ÔÇö [chapter:media_reports]\n\n查看嵌入式元數據 ÔÇö [chapter:embedded_metadata]\n\n檢查媒體完整性 – [chapter:media_integrity]\n\n建立影片聯絡單 – [chapter:video_contact_sheets]\n\n資料夾 同步 – [chapter:folder_synchronization]\n\n資料夾 組織規則 – [chapter:folder_organization_rules]\n\n管理轉移佇列 ÔÇö [chapter:transfer_queue]\n\n安全檔案操作 ÔÇö [chapter:safe_file_actions]\n\n工作區和快取 ÔÇö [chapter:workspaces_and_cache]\n\n語言 – [chapter:language]\n\n詞彙表 – [chapter:glossary]\n\n支持該項目 ÔÇö [chapter:support_the_project]"
+      },
+      {
+        "id": "getting_started",
+        "title": "正在 開始 處理",
+        "paragraphs": [
+          {
+            "id": "getting_started.p001",
+            "source_sha256": "5f188741bf38dafbb6803c0d32c5c55281c418b27b6b6204c2b4b9470484371b",
+            "text": "視窗的每一側都是獨立的資料夾瀏覽器。使用「瀏覽」、資料夾樹、路徑框或「上移」來選擇資料夾。點擊窗格內即可使其成為活動狀態。"
+          },
+          {
+            "id": "getting_started.p002",
+            "source_sha256": "5c862d90858ec952be55c182a8161ba52748f10b89bab70f8f5f595c38c95370",
+            "text": "檢視 > 外觀與文字大小 提供 系統、淺色、黑暗，以及 高對比 主題，另外提供 100%、125%、150%、175% 和 200% 介面縮放。更改會立即在現有控制項中預覽。儲存會保留選擇以供未來啟動使用，取消 或關閉視窗會還原先前設定，而 還原系統預設 則返回作業系統主題並設為 100%。這些設定只會改變呈現方式，從不影響媒體或資料庫資料。"
+          },
+          {
+            "id": "getting_started.p003",
+            "source_sha256": "716b38f3fc587aa8c148a51715d481a35d5c135e6211016faa710ce34b4bf55a",
+            "text": "每個窗格都有其獨立的精簡版 Explorer 風格導航條：ÔåÉ 返回，ÔåÆ 前進，↑ 打開上層資料夾，Ôå╗ 重新整理 顯示資料夾樹和當前掃描。返回後打開不同的資料夾會從該點開始新的前進歷史。"
+          },
+          {
+            "id": "getting_started.p004",
+            "source_sha256": "b34bc532ebe9785101efd80988074ed03a0c0fbf0e349d6133d31620e8a8ad3f",
+            "text": "資料夾樹總是遵循窗格的當前位置：它會展開父資料夾，選擇精確的掃描起始資料夾，並將該資料夾捲動至可視範圍內。當前資料夾保持關閉，直到您展開它，防止顯示臨時的載入佔位符。這種情況也會發生在還原工作區或輸入路徑之後，因此在掃描較深層資料夾時，不會留下驅動器根目錄被選中的狀態。包含子資料夾 從該窗格中顯示的選擇/當前資料夾開始，而不是從上方的驅動器根目錄開始。"
+          },
+          {
+            "id": "getting_started.p005",
+            "source_sha256": "90fbbedebb973bad42d26e8534c1fdab61604a30d9ead7a4ce4c88ea2cc4012a",
+            "text": "每個窗格都有獨立的返回、前進、向上和 重新整理 控制、篩選、排序、縮略圖、資訊和 預覽。影片預覽從 4├ù 速度開始。逗號和句號向後或向前移動百分之十。預覽 和資訊保持關閉狀態，直到啟用以減少背景工作。"
+          },
+          {
+            "id": "getting_started.tree_alignment_1272",
+            "source_sha256": "04feb6a3e71761ee4884be7564bb8832204338d93939bf1fdd67aa20f7e62380",
+            "text": "資料夾樹會自動對齊目前可見的分支，以避免浪費的縮排。當你向下滾動進入較深的分支時，它會水平移動；向上滾動回到上層分支時，它會自動回到左側，無需點擊。完整的層級結構仍然可用，而樹狀圖下方的水平滾動條允許手動水平查看。"
+          }
+        ],
+        "body": "視窗的每一側都是獨立的資料夾瀏覽器。使用「瀏覽」、資料夾樹、路徑框或「上移」來選擇資料夾。點擊窗格內即可使其成為活動狀態。\n\n檢視 > 外觀與文字大小 提供 系統、淺色、黑暗，以及 高對比 主題，另外提供 100%、125%、150%、175% 和 200% 介面縮放。更改會立即在現有控制項中預覽。儲存會保留選擇以供未來啟動使用，取消 或關閉視窗會還原先前設定，而 還原系統預設 則返回作業系統主題並設為 100%。這些設定只會改變呈現方式，從不影響媒體或資料庫資料。\n\n每個窗格都有其獨立的精簡版 Explorer 風格導航條：ÔåÉ 返回，ÔåÆ 前進，↑ 打開上層資料夾，Ôå╗ 重新整理 顯示資料夾樹和當前掃描。返回後打開不同的資料夾會從該點開始新的前進歷史。\n\n資料夾樹總是遵循窗格的當前位置：它會展開父資料夾，選擇精確的掃描起始資料夾，並將該資料夾捲動至可視範圍內。當前資料夾保持關閉，直到您展開它，防止顯示臨時的載入佔位符。這種情況也會發生在還原工作區或輸入路徑之後，因此在掃描較深層資料夾時，不會留下驅動器根目錄被選中的狀態。包含子資料夾 從該窗格中顯示的選擇/當前資料夾開始，而不是從上方的驅動器根目錄開始。\n\n每個窗格都有獨立的返回、前進、向上和 重新整理 控制、篩選、排序、縮略圖、資訊和 預覽。影片預覽從 4├ù 速度開始。逗號和句號向後或向前移動百分之十。預覽 和資訊保持關閉狀態，直到啟用以減少背景工作。\n\n資料夾樹會自動對齊目前可見的分支，以避免浪費的縮排。當你向下滾動進入較深的分支時，它會水平移動；向上滾動回到上層分支時，它會自動回到左側，無需點擊。完整的層級結構仍然可用，而樹狀圖下方的水平滾動條允許手動水平查看。"
+      },
+      {
+        "id": "details_and_thumbnails",
+        "title": "詳細資料 和 縮圖",
+        "paragraphs": [
+          {
+            "id": "details_and_thumbnails.p001",
+            "source_sha256": "0d7fe0d7d10b204c166baf479099c908e17fbe87952b9f9f35dd9cf1de776edb",
+            "text": "使用任一窗格頂部的檢視選擇器，或使用「檢視」選單，來切換該窗格之間詳細資料和縮圖兩種視圖都顯示相同的文件並共享它們的選擇。縮圖模式會遵循包含子資料夾、媒體切換、搜尋、解析度、高級篩選和排序。其排序菜單提供名稱的精確方向（A－Z / Z－A），修改日期（最舊/最新），檔案大小, 長度, 編解碼器, 解析度, 類型, 比特率, 幀率，以及評級每個窗格獨立排序，按鈕顯示當前排序方式，已保存的工作區和智慧收藏集會恢復它。詳細資料標題仍然可點擊以快速排序。相對路徑s 在遞歸掃描期間出現在縮圖下方。使用視圖選擇器旁的縮圖大小滑桿。命名的大小預設仍保留在「檢視」>縮圖大小. 連續是預設的縮圖瀏覽器：一個捲軸涵蓋完整的篩選後集合，而程式僅建立可見的卡片加上一個小緩衝區，並在捲動時重複使用它們。這可讓非常大的資料庫的元件和圖像記憶體保持有界。選擇分頁隨時在旁邊使用它以恢復已建立的頁面網格；選擇自動、每頁 200、500 或 1,000 張卡片，並使用緊湊的 ÔåÉ 和 ÔåÆ 控制。當影片佔篩選結果至少一半時，自動使用 200；當圖片為多數時，使用 500。每個窗格和已保存的工作區會記住其瀏覽選擇。"
+          },
+          {
+            "id": "details_and_thumbnails.p002",
+            "source_sha256": "f88d676b4ba78ef8e5f3064d34755f67ce646a0965745c31f8a74570a37bd2d4",
+            "text": "縮圖網格在首次渲染之前測量實際瀏覽器寬度，並在窗格或資料夾/瀏覽器分隔線調整大小時自動重新排版。在 分頁 模式下，因此第 1 頁對於給定的窗格寬度和縮圖大小使用與後續頁面相同的列數。在 連續 模式下，調整大小會重新計算虛擬行，而不構建整個集合。在縮圖窗格的任何位置滾動滑鼠滾輪——包括卡片、圖片或檔案名上——即可上下滾動該窗格；兩個窗格可獨立滾動。"
+          },
+          {
+            "id": "details_and_thumbnails.p003",
+            "source_sha256": "878f1f9405d3cda5132d953b07e64ce5639125896f32cdb19341e4c2156fd898",
+            "text": "在 詳細資料 模式下，預設順序為 名稱、編解碼器、解析度、影片長度、檔案大小、每分鐘 MB、FPS、修改日期、類型、比特率、音訊、HDR、百萬像素、標籤、Tags，以及 評級。拖動標題之間的分隔線可以任意調整欄位寬度；當分隔線準備好時，會顯示水平調整游標。直接拖動標題本身即可重新排序—不需要鍵盤修飾鍵。簡單點擊標題仍可進行排序。欄位會保持選定的寬度，水平捲軸可到達窗格之外的欄位。為了精確控制，可選擇「檢視 > 配置欄位」或右鍵點擊標題；欄位視窗可以移動欄位、設定精確寬度，並恢復預設值。現有個人安排並保存的欄位順序會被保留。長遞迴路徑會在中間縮短，以便檔名保持可見。"
+          },
+          {
+            "id": "details_and_thumbnails.p004",
+            "source_sha256": "88415a6236cebbf0ce6211ef333a7271672023a2bdae6ccdc38584b6cce810d6",
+            "text": "影片縮圖會在剪輯的15%處取樣，以避免不具代表性的開頭畫面。如果無法取得時長的元資料，應用程式會使用一秒作為備用。生成的縮圖會被快取，以加快重複瀏覽的速度。"
+          },
+          {
+            "id": "details_and_thumbnails.p005",
+            "source_sha256": "7a726d60e44b6a6ccdb5c196cf1f81af226094ce2b8f43f72c1bf065feb34ad5",
+            "text": "普通的圖像縮略圖使用 Pillow 在進程中高效解碼；FFmpeg 用於視頻幀以及作為異常圖像格式的後備。縮略圖解碼使用小型工作池，因此大型資料夾不會啟動過多的解碼器。快取圖像以原子方式寫入並在顯示前檢查；不完整或損壞的快取縮略圖將被忽略並重新生成，而屬於舊網格的結果會被安全地捨棄。"
+          },
+          {
+            "id": "details_and_thumbnails.p006",
+            "source_sha256": "ea382833a32b1bb5c8dac172f29751f48d27aead08969ef699cca6142fddc69f",
+            "text": "生成的縮圖在程式關閉後仍然可用，因此重新打開未更改的檔案時通常會立即使用其快取圖像。工具 > 緩存與掃描 控制最大縮圖快取大小，作為作業系統磁碟的百分比；預設值為 1%。重複使用的縮圖會被標記為最近使用，當超過限制時，最久未使用的項目會先被移除。限制可以設定從 0.1% 到 10%，並立即生效。清除縮圖 在確認前會報告當前的數量和大小，然後僅移除生成的縮圖——不包括原始媒體或快取的技術元資料。清除所有快取 會移除縮圖和元資料。"
+          },
+          {
+            "id": "details_and_thumbnails.size_slider_1272",
+            "source_sha256": "f73fba2585edabe7710a59372a59bce3e3509092c20423aeed2583c4bc430100",
+            "text": "縮圖大小滑桿僅在 縮圖 中出現；詳細資料 則會隱藏它。移動滑桿會連續調整縮圖大小，切換視圖時會保留其設定。暫停 在拖動後會短暫重新排列網格；較大的圖像會保持其縱橫比，當前大小會與窗格設定一起保存。視圖菜單中仍可使用命名的大小預設；窗格標題中沒有重複的大小下拉選單。"
+          }
+        ],
+        "body": "使用任一窗格頂部的檢視選擇器，或使用「檢視」選單，來切換該窗格之間詳細資料和縮圖兩種視圖都顯示相同的文件並共享它們的選擇。縮圖模式會遵循包含子資料夾、媒體切換、搜尋、解析度、高級篩選和排序。其排序菜單提供名稱的精確方向（A－Z / Z－A），修改日期（最舊/最新），檔案大小, 長度, 編解碼器, 解析度, 類型, 比特率, 幀率，以及評級每個窗格獨立排序，按鈕顯示當前排序方式，已保存的工作區和智慧收藏集會恢復它。詳細資料標題仍然可點擊以快速排序。相對路徑s 在遞歸掃描期間出現在縮圖下方。使用視圖選擇器旁的縮圖大小滑桿。命名的大小預設仍保留在「檢視」>縮圖大小. 連續是預設的縮圖瀏覽器：一個捲軸涵蓋完整的篩選後集合，而程式僅建立可見的卡片加上一個小緩衝區，並在捲動時重複使用它們。這可讓非常大的資料庫的元件和圖像記憶體保持有界。選擇分頁隨時在旁邊使用它以恢復已建立的頁面網格；選擇自動、每頁 200、500 或 1,000 張卡片，並使用緊湊的 ÔåÉ 和 ÔåÆ 控制。當影片佔篩選結果至少一半時，自動使用 200；當圖片為多數時，使用 500。每個窗格和已保存的工作區會記住其瀏覽選擇。\n\n縮圖網格在首次渲染之前測量實際瀏覽器寬度，並在窗格或資料夾/瀏覽器分隔線調整大小時自動重新排版。在 分頁 模式下，因此第 1 頁對於給定的窗格寬度和縮圖大小使用與後續頁面相同的列數。在 連續 模式下，調整大小會重新計算虛擬行，而不構建整個集合。在縮圖窗格的任何位置滾動滑鼠滾輪——包括卡片、圖片或檔案名上——即可上下滾動該窗格；兩個窗格可獨立滾動。\n\n在 詳細資料 模式下，預設順序為 名稱、編解碼器、解析度、影片長度、檔案大小、每分鐘 MB、FPS、修改日期、類型、比特率、音訊、HDR、百萬像素、標籤、Tags，以及 評級。拖動標題之間的分隔線可以任意調整欄位寬度；當分隔線準備好時，會顯示水平調整游標。直接拖動標題本身即可重新排序—不需要鍵盤修飾鍵。簡單點擊標題仍可進行排序。欄位會保持選定的寬度，水平捲軸可到達窗格之外的欄位。為了精確控制，可選擇「檢視 > 配置欄位」或右鍵點擊標題；欄位視窗可以移動欄位、設定精確寬度，並恢復預設值。現有個人安排並保存的欄位順序會被保留。長遞迴路徑會在中間縮短，以便檔名保持可見。\n\n影片縮圖會在剪輯的15%處取樣，以避免不具代表性的開頭畫面。如果無法取得時長的元資料，應用程式會使用一秒作為備用。生成的縮圖會被快取，以加快重複瀏覽的速度。\n\n普通的圖像縮略圖使用 Pillow 在進程中高效解碼；FFmpeg 用於視頻幀以及作為異常圖像格式的後備。縮略圖解碼使用小型工作池，因此大型資料夾不會啟動過多的解碼器。快取圖像以原子方式寫入並在顯示前檢查；不完整或損壞的快取縮略圖將被忽略並重新生成，而屬於舊網格的結果會被安全地捨棄。\n\n生成的縮圖在程式關閉後仍然可用，因此重新打開未更改的檔案時通常會立即使用其快取圖像。工具 > 緩存與掃描 控制最大縮圖快取大小，作為作業系統磁碟的百分比；預設值為 1%。重複使用的縮圖會被標記為最近使用，當超過限制時，最久未使用的項目會先被移除。限制可以設定從 0.1% 到 10%，並立即生效。清除縮圖 在確認前會報告當前的數量和大小，然後僅移除生成的縮圖——不包括原始媒體或快取的技術元資料。清除所有快取 會移除縮圖和元資料。\n\n縮圖大小滑桿僅在 縮圖 中出現；詳細資料 則會隱藏它。移動滑桿會連續調整縮圖大小，切換視圖時會保留其設定。暫停 在拖動後會短暫重新排列網格；較大的圖像會保持其縱橫比，當前大小會與窗格設定一起保存。視圖菜單中仍可使用命名的大小預設；窗格標題中沒有重複的大小下拉選單。"
+      },
+      {
+        "id": "scanning_and_filtering",
+        "title": "掃描與過濾",
+        "paragraphs": [
+          {
+            "id": "scanning_and_filtering.p001",
+            "source_sha256": "c4712ae8d144d44f4ec6a47e8ad4b477c14275c9c493ace31eef65a7a8b9168d",
+            "text": "啟用 包含子資料夾 用於遞迴掃描。使用搜尋檔名，解析度 用於精確解析，更多篩選條件可根據尺寸、檔案大小、時長、編碼、方向和日期。取消 停止長時間掃描。緩存與掃描 設定在 工具 下控制平行工作程序和排除模式。"
+          },
+          {
+            "id": "scanning_and_filtering.p002",
+            "source_sha256": "5f55a7b5ecdce4426e11fdc93539a0e0a436839a62d94bc8019a50af3c1deae6",
+            "text": "要將掃描結果保存為試算表或文件，請參閱 [chapter:media_reports]。"
+          },
+          {
+            "id": "scanning_and_filtering.p003",
+            "source_sha256": "6296398bb5bd08c4d57ca8f2606a7b6164825f670f0bfa1fd408f26fca05c53e",
+            "text": "大遞迴掃描在不反覆重建不斷增長的瀏覽器的情況下收集結果。當掃描完成時，詳細資料行以短批次添加，因此播放/暫停，導航、繪畫和視窗控制依然保持響應。縮圖網格同樣會在掃描完成時更新。成功的複製、移動和刪除命令現在只更新受影響的內存條目，而不是重新掃描兩個資料夾；從應用程式外部拖入的不熟悉文件仍然只會在受影響的窗格中觸發安全掃描。元資料緩存的保存運行在背景中，並且已停止FFmpeg預覽過程會被及時清理。工具 > 緩存與掃描提供安靜, 平衡，以及快速性能設定檔。平衡保留既定的行為。安靜減少掃描和縮圖的並發數，並以每秒 8 幅預覽幀為目標；快速提高並發數，並以每秒 15 幀為目標。安靜和平衡在預覽播放或尋找時安排新的未緩存探測和縮圖解碼，給予互動工作優先權。已緩存結果從不會被故意延遲。選擇配置檔後，metadata-worker 欄位仍然可以調整。"
+          },
+          {
+            "id": "scanning_and_filtering.p004",
+            "source_sha256": "cfc2a88e50877f4251ec58b90265b0c4485c3899666c8cdd2dcd43cc0541aa04",
+            "text": "每一方都有獨立的播放、時間線、速度、音訊/靜音、影格快取和解碼過程。原始影像播放刻意以每秒 12 影格的實時速度進行。這樣可以保持預覽的流暢，同時避免因解碼整個片段比預覽顯示得更快而造成的高 CPU 使用率，尤其是在進行大型資料夾掃描時。"
+          },
+          {
+            "id": "scanning_and_filtering.p005",
+            "source_sha256": "6d2351f7d55b8f5bf804e7ab66908fd915359b92794340ef24a0429900443a62",
+            "text": "點擊任一預覽時間線上的任何位置，即可將其標記直接移至該位置並從那裡恢復播放。你也可以按住標記拖動以進行連續掃描。掃描會在請求新的位置時立即取消較舊的框架請求，避免多個 FFmpeg 解碼器在後台競爭。最近訪問的位置會以四分之一秒的步長進行快取，因此返回這些位置是瞬間完成的。釋放滑桿即可從選定位置恢復播放。"
+          },
+          {
+            "id": "scanning_and_filtering.p006",
+            "source_sha256": "fe8d26dfc3bcebb327cad49202bcc0288ca9ad0b75babe71c0d04dfab8ac9fea",
+            "text": "影片預覽默認為 4× 速度以加快檢視。使用時間軸下方的 1×、2×、4×、6×、8× 和 16× 按鈕來更改播放速度。當前速度按鈕會被禁用以清楚顯示當前設置。音訊 預設為靜音；選擇 已靜音 可啟用同步聲音，再選擇 音訊 可再次靜音。在播放時更改速度會使影片和音訊從當前時間軸位置重新開始播放。"
+          },
+          {
+            "id": "scanning_and_filtering.p007",
+            "source_sha256": "3214a4d4fd458bb76deb51ff30947b215ded0ce500221cb3511bf25da94d6a74",
+            "text": "在音訊按鈕旁使用 |ÔùÇ 和 ÔûÂ| 可向後或向前移動一幀。應用程式使用影片報告的幀率，當該元資料不可用時，則採用 25 fps 作為後備，並對結果靜態畫面進行精確定位。選擇 ⤓ PNG 可將當前影片位置匯出為全來源解析度 PNG；播放會在該精確位置暫停，輸出通過暫存檔案寫入，影片本身永遠不會被更改。"
+          },
+          {
+            "id": "scanning_and_filtering.p008",
+            "source_sha256": "2427ebd091d494c4bd3cbf71c48a081ab4ee23a5f549571ceeb7c12ea2c351d6",
+            "text": "當焦點不在輸入欄位時，按逗號 (,) 可將當前面板的影片預覽向後跳轉其總長度的 10%，按句點/點號 (.) 可向前跳轉 10%。當前面板是最近點擊的那一側。正在播放的預覽會從新位置繼續播放；暫停的預覽則保持暫停，並顯示精確的目標影格。這些按鍵在路徑、搜尋、篩選和對話框欄位中會正常輸入文字。"
+          },
+          {
+            "id": "scanning_and_filtering.p009",
+            "source_sha256": "decded439831addc29ee74040e8bfff01524b194d15c0468751e96d11df67309",
+            "text": "重新整理活動窗格 或 刷新兩個窗格 在檔案總管或其他應用程式中資料夾或檔案變更後會在檢視中顯示。重新整理 會重建資料夾樹並重新掃描媒體。它也可以通過 F5、工具列，以及瀏覽器和資料夾樹的右鍵選單使用。或者，可在任一窗格中獨立啟用 即時，自動監控其當前資料夾。即時 會跟隨導航並使用與 包含子資料夾 相同的範圍。連續的建立、修改、重新命名和刪除操作會在刷新前合併；資料夾變更也會更新樹狀結構。在完成掃描狀態中會顯示 即時 標記。即時 預設為關閉，取消勾選其核取方塊會立即恢復手動刷新行為。"
+          }
+        ],
+        "body": "啟用 包含子資料夾 用於遞迴掃描。使用搜尋檔名，解析度 用於精確解析，更多篩選條件可根據尺寸、檔案大小、時長、編碼、方向和日期。取消 停止長時間掃描。緩存與掃描 設定在 工具 下控制平行工作程序和排除模式。\n\n要將掃描結果保存為試算表或文件，請參閱 [chapter:media_reports]。\n\n大遞迴掃描在不反覆重建不斷增長的瀏覽器的情況下收集結果。當掃描完成時，詳細資料行以短批次添加，因此播放/暫停，導航、繪畫和視窗控制依然保持響應。縮圖網格同樣會在掃描完成時更新。成功的複製、移動和刪除命令現在只更新受影響的內存條目，而不是重新掃描兩個資料夾；從應用程式外部拖入的不熟悉文件仍然只會在受影響的窗格中觸發安全掃描。元資料緩存的保存運行在背景中，並且已停止FFmpeg預覽過程會被及時清理。工具 > 緩存與掃描提供安靜, 平衡，以及快速性能設定檔。平衡保留既定的行為。安靜減少掃描和縮圖的並發數，並以每秒 8 幅預覽幀為目標；快速提高並發數，並以每秒 15 幀為目標。安靜和平衡在預覽播放或尋找時安排新的未緩存探測和縮圖解碼，給予互動工作優先權。已緩存結果從不會被故意延遲。選擇配置檔後，metadata-worker 欄位仍然可以調整。\n\n每一方都有獨立的播放、時間線、速度、音訊/靜音、影格快取和解碼過程。原始影像播放刻意以每秒 12 影格的實時速度進行。這樣可以保持預覽的流暢，同時避免因解碼整個片段比預覽顯示得更快而造成的高 CPU 使用率，尤其是在進行大型資料夾掃描時。\n\n點擊任一預覽時間線上的任何位置，即可將其標記直接移至該位置並從那裡恢復播放。你也可以按住標記拖動以進行連續掃描。掃描會在請求新的位置時立即取消較舊的框架請求，避免多個 FFmpeg 解碼器在後台競爭。最近訪問的位置會以四分之一秒的步長進行快取，因此返回這些位置是瞬間完成的。釋放滑桿即可從選定位置恢復播放。\n\n影片預覽默認為 4× 速度以加快檢視。使用時間軸下方的 1×、2×、4×、6×、8× 和 16× 按鈕來更改播放速度。當前速度按鈕會被禁用以清楚顯示當前設置。音訊 預設為靜音；選擇 已靜音 可啟用同步聲音，再選擇 音訊 可再次靜音。在播放時更改速度會使影片和音訊從當前時間軸位置重新開始播放。\n\n在音訊按鈕旁使用 |ÔùÇ 和 ÔûÂ| 可向後或向前移動一幀。應用程式使用影片報告的幀率，當該元資料不可用時，則採用 25 fps 作為後備，並對結果靜態畫面進行精確定位。選擇 ⤓ PNG 可將當前影片位置匯出為全來源解析度 PNG；播放會在該精確位置暫停，輸出通過暫存檔案寫入，影片本身永遠不會被更改。\n\n當焦點不在輸入欄位時，按逗號 (,) 可將當前面板的影片預覽向後跳轉其總長度的 10%，按句點/點號 (.) 可向前跳轉 10%。當前面板是最近點擊的那一側。正在播放的預覽會從新位置繼續播放；暫停的預覽則保持暫停，並顯示精確的目標影格。這些按鍵在路徑、搜尋、篩選和對話框欄位中會正常輸入文字。\n\n重新整理活動窗格 或 刷新兩個窗格 在檔案總管或其他應用程式中資料夾或檔案變更後會在檢視中顯示。重新整理 會重建資料夾樹並重新掃描媒體。它也可以通過 F5、工具列，以及瀏覽器和資料夾樹的右鍵選單使用。或者，可在任一窗格中獨立啟用 即時，自動監控其當前資料夾。即時 會跟隨導航並使用與 包含子資料夾 相同的範圍。連續的建立、修改、重新命名和刪除操作會在刷新前合併；資料夾變更也會更新樹狀結構。在完成掃描狀態中會顯示 即時 標記。即時 預設為關閉，取消勾選其核取方塊會立即恢復手動刷新行為。"
+      },
+      {
+        "id": "selecting_and_previewing",
+        "title": "選擇與 預覽",
+        "paragraphs": [
+          {
+            "id": "selecting_and_previewing.p001",
+            "source_sha256": "3cb30411bb6f6a0807c08da889783687297f5427e72f356e38a6f0de5a9fedf2",
+            "text": "每個窗格都有獨立的勾選框操作群組。點擊 詳細資料 行旁邊的 ÔÿÉ/Ôÿæ 框或縮圖卡片，或者將焦點放在 詳細資料 行並按空格鍵。當你高亮並預覽其他檔案、對窗格進行排序或更改篩選條件時，勾選仍會保留。瀏覽器下方的計數器顯示總數，包括目前被篩選隱藏的已勾選檔案。點擊 詳細資料 標題的 Ô£ô 或在 縮圖 中的 全部顯示 的 Ô£ô 以勾選當前顯示的所有檔案；再次點擊可取消勾選該顯示群組。清除勾選 會移除整個群組。複製、移動、拖曳、刪除、重新命名、評分、標籤、比較、完整性及轉換操作在存在任何勾選時會使用所有已勾選檔案；若無勾選，則使用普通高亮行。將該窗格切換到不同的資料夾或磁碟時，會清除其勾選，關閉應用程式後勾選不會保存。"
+          },
+          {
+            "id": "selecting_and_previewing.checkbox_accuracy_1272",
+            "source_sha256": "ec45605bac64df9520c7b16b9f54eb0ff1645c2f120d0e06da004d853d0a3acc",
+            "text": "只有當你在方框上點擊並釋放，而不拖動時，複選框才會改變。方框旁邊的空白處不屬於可點擊區域。移動超過幾個像素會開始高亮選取，並保持勾選不變，即使拖動從複選框開始。使用明確的 勾選選擇項 和 取消勾選選擇項 控制項來更改整個高亮顯示的群組。"
+          },
+          {
+            "id": "selecting_and_previewing.p007",
+            "source_sha256": "fe2df6bc40914fca7346780d043258bca3ac75b0c0da69d7d7c7af1921420d95",
+            "text": "從空白的瀏覽器區域拖動穿過行或縮圖卡片，以用邊框選擇矩形來突出顯示一組項目。這不會勾選或取消勾選任何檔案。普通拖動會開始一個新的高亮顯示組；開始拖動時按住 Ctrl 鍵可以將其添加到現有的高亮顯示中。開始在空的縮圖空間上，而不是圖片或檔名，因為拖曳縮圖檔案會開始傳輸。 在詳細資料您也可以垂直拖動跨行來選取一組；向另一個窗格拖動以進行傳送。標題保留其正常的調整大小和重新排序手勢。使用勾選選擇項將高亮的文件添加到現有的已選取操作組中。使用 取消勾選選擇項只從該組中移除那些被標示的檔案。兩個按鈕都位於每個瀏覽器的頂部，排序旁邊。選取所有顯示項目和清除勾選；控制在較窄窗格上的換行。這兩個命令也可以在右鍵菜單中使用。其他選中項目，包括被篩選器隱藏的文件，將被保留。文件操作在任何選中項目存在時仍優先使用全部選中，因此如果您想更改操作組，請在複製或移動之前使用這些明確的控制。"
+          },
+          {
+            "id": "selecting_and_previewing.p002",
+            "source_sha256": "7f32ecf04dddbc0b538a4d33856b7ca37e281994235e853d6806e565759f3fb5",
+            "text": "每個瀏覽器窗格都有自己的大型 ÔûÂ 預覽 切換開關，預設為關以避免不必要的解碼。啟用 預覽 可在左側、右側或兩側開啟單獨對齊的預覽面板於瀏覽器下方。按鈕有明顯的選取狀態，因此啟用的預覽容易辨識。當兩個切換開關都關閉時，預覽區將完全收起，瀏覽器會使用整個視窗高度。點擊檔案以在其自身的側邊進行預覽。高亮顯示與勾選是獨立的，因此可以檢查或預覽其他檔案而不會失去操作群組。按住 Ctrl 點擊縮圖或詳細列可同時高亮多個檔案。選擇匹配 會高亮顯示所有當前顯示的結果。雙擊可在其正常應用程式中開啟高亮檔案。"
+          },
+          {
+            "id": "selecting_and_previewing.p006",
+            "source_sha256": "ea7ee844c5a71c70be45874efacd2698bc3f2f6056cb1188f3f135038fbcd31c",
+            "text": "圖片 和影片影格會自動使用適合各自預覽面板的最大尺寸，同時保持原始的寬高比。調整主視窗或任一預覽分隔線後，影像會在短暫延遲後更新，以避免在拖動分隔線時重複重新啟動解碼器。"
+          },
+          {
+            "id": "selecting_and_previewing.p003",
+            "source_sha256": "6da9585bae76a4d0447bfa50948712331a0b66f7d19639b6472395a5337a1281",
+            "text": "每個窗格也都有一個大型獨立的 Ôôÿ 信息切換。它預設為關閉，並在該窗格的右側邊緣添加一個可折疊的檢查器。如果文件已經被選中，啟用信息會立即顯示它——不需要再次選擇它。檢查器會跟隨後續的選擇在詳細資料, 連續縮圖，以及 分頁縮圖並顯示完整路徑、尺寸、大小、日期、時長、編解碼器、幀率、位元率、像素格式、HDR、音訊、不可讀原因、評分、顏色和標籤。複製路徑將完整路徑放到剪貼簿；打開並顯示使用一般的檔案操作。關閉資訊會完全移除檢視器，而已保存的工作區會記住其狀態。資訊以大約 180 像素的緊湊起始寬度打開。頂部的排序和選取控制與資訊分隔線是獨立的，因此打開資訊不會壓縮那些按鈕。拖曳檢視器旁的分隔線可以改變其寬度；關閉再開啟資訊會恢復該寬度，已保存的面板/工作區設定也會保留它。在窄窗口中，寬度會受到限制，以保留一些瀏覽空間。"
+          },
+          {
+            "id": "selecting_and_previewing.p004",
+            "source_sha256": "f69ab2d999168d40676e34589ed911761ef8a4e8e683955ccaa9c471fc373e01",
+            "text": "在檔案總管中顯示/顯示 適用於完整選取項目。當選取的檔案數量最多為五個時，它會對每個路徑發送單獨的顯示請求。若超過五個，會顯示精確數量的警告，因為此操作可能會開啟許多檔案管理器視窗。選擇「是」以顯示每個選取的檔案，或選擇「否」只顯示第一個。Windows 和 macOS 會選取每個精確檔案；Linux 則透過系統檔案管理器開啟每個檔案的所在資料夾。"
+          },
+          {
+            "id": "selecting_and_previewing.p005",
+            "source_sha256": "78c83927ab22cd560e580cbf1dbe270da8c554ef8357eb67fdc828600c7f856a",
+            "text": "有關相機資訊、EXIF 欄位或影片容器/串流標籤，請參閱 [chapter:embedded_metadata]。"
+          }
+        ],
+        "body": "每個窗格都有獨立的勾選框操作群組。點擊 詳細資料 行旁邊的 ÔÿÉ/Ôÿæ 框或縮圖卡片，或者將焦點放在 詳細資料 行並按空格鍵。當你高亮並預覽其他檔案、對窗格進行排序或更改篩選條件時，勾選仍會保留。瀏覽器下方的計數器顯示總數，包括目前被篩選隱藏的已勾選檔案。點擊 詳細資料 標題的 Ô£ô 或在 縮圖 中的 全部顯示 的 Ô£ô 以勾選當前顯示的所有檔案；再次點擊可取消勾選該顯示群組。清除勾選 會移除整個群組。複製、移動、拖曳、刪除、重新命名、評分、標籤、比較、完整性及轉換操作在存在任何勾選時會使用所有已勾選檔案；若無勾選，則使用普通高亮行。將該窗格切換到不同的資料夾或磁碟時，會清除其勾選，關閉應用程式後勾選不會保存。\n\n只有當你在方框上點擊並釋放，而不拖動時，複選框才會改變。方框旁邊的空白處不屬於可點擊區域。移動超過幾個像素會開始高亮選取，並保持勾選不變，即使拖動從複選框開始。使用明確的 勾選選擇項 和 取消勾選選擇項 控制項來更改整個高亮顯示的群組。\n\n從空白的瀏覽器區域拖動穿過行或縮圖卡片，以用邊框選擇矩形來突出顯示一組項目。這不會勾選或取消勾選任何檔案。普通拖動會開始一個新的高亮顯示組；開始拖動時按住 Ctrl 鍵可以將其添加到現有的高亮顯示中。開始在空的縮圖空間上，而不是圖片或檔名，因為拖曳縮圖檔案會開始傳輸。 在詳細資料您也可以垂直拖動跨行來選取一組；向另一個窗格拖動以進行傳送。標題保留其正常的調整大小和重新排序手勢。使用勾選選擇項將高亮的文件添加到現有的已選取操作組中。使用 取消勾選選擇項只從該組中移除那些被標示的檔案。兩個按鈕都位於每個瀏覽器的頂部，排序旁邊。選取所有顯示項目和清除勾選；控制在較窄窗格上的換行。這兩個命令也可以在右鍵菜單中使用。其他選中項目，包括被篩選器隱藏的文件，將被保留。文件操作在任何選中項目存在時仍優先使用全部選中，因此如果您想更改操作組，請在複製或移動之前使用這些明確的控制。\n\n每個瀏覽器窗格都有自己的大型 ÔûÂ 預覽 切換開關，預設為關以避免不必要的解碼。啟用 預覽 可在左側、右側或兩側開啟單獨對齊的預覽面板於瀏覽器下方。按鈕有明顯的選取狀態，因此啟用的預覽容易辨識。當兩個切換開關都關閉時，預覽區將完全收起，瀏覽器會使用整個視窗高度。點擊檔案以在其自身的側邊進行預覽。高亮顯示與勾選是獨立的，因此可以檢查或預覽其他檔案而不會失去操作群組。按住 Ctrl 點擊縮圖或詳細列可同時高亮多個檔案。選擇匹配 會高亮顯示所有當前顯示的結果。雙擊可在其正常應用程式中開啟高亮檔案。\n\n圖片 和影片影格會自動使用適合各自預覽面板的最大尺寸，同時保持原始的寬高比。調整主視窗或任一預覽分隔線後，影像會在短暫延遲後更新，以避免在拖動分隔線時重複重新啟動解碼器。\n\n每個窗格也都有一個大型獨立的 Ôôÿ 信息切換。它預設為關閉，並在該窗格的右側邊緣添加一個可折疊的檢查器。如果文件已經被選中，啟用信息會立即顯示它——不需要再次選擇它。檢查器會跟隨後續的選擇在詳細資料, 連續縮圖，以及 分頁縮圖並顯示完整路徑、尺寸、大小、日期、時長、編解碼器、幀率、位元率、像素格式、HDR、音訊、不可讀原因、評分、顏色和標籤。複製路徑將完整路徑放到剪貼簿；打開並顯示使用一般的檔案操作。關閉資訊會完全移除檢視器，而已保存的工作區會記住其狀態。資訊以大約 180 像素的緊湊起始寬度打開。頂部的排序和選取控制與資訊分隔線是獨立的，因此打開資訊不會壓縮那些按鈕。拖曳檢視器旁的分隔線可以改變其寬度；關閉再開啟資訊會恢復該寬度，已保存的面板/工作區設定也會保留它。在窄窗口中，寬度會受到限制，以保留一些瀏覽空間。\n\n在檔案總管中顯示/顯示 適用於完整選取項目。當選取的檔案數量最多為五個時，它會對每個路徑發送單獨的顯示請求。若超過五個，會顯示精確數量的警告，因為此操作可能會開啟許多檔案管理器視窗。選擇「是」以顯示每個選取的檔案，或選擇「否」只顯示第一個。Windows 和 macOS 會選取每個精確檔案；Linux 則透過系統檔案管理器開啟每個檔案的所在資料夾。\n\n有關相機資訊、EXIF 欄位或影片容器/串流標籤，請參閱 [chapter:embedded_metadata]。"
+      },
+      {
+        "id": "copying_and_moving",
+        "title": "複製與移動",
+        "paragraphs": [
+          {
+            "id": "copying_and_moving.p001",
+            "source_sha256": "74a10eb18d51cae10f7fdd8931b1ad7feb8157e134c2e2f50071b7b2d30f5f1b",
+            "text": "在一個窗格中選擇檔案，然後使用工具列、編輯選單、右鍵選單、鍵盤快捷鍵或拖放功能。要將多個選取的檔案傳送到另一個應用程式（如 Shutter），請按住左鍵拖動該窗格導航控制旁的大型 ↗ 拖動選取 控制柄。它會以正常的作業系統檔案列表格式匯出完整選取範圍，並在 詳細資料 和 縮圖 中正常運作，不會干擾欄位調整。另一個窗格是應用程式內傳輸的目的地。傳輸會進入佇列，提供進度、速度、剩餘時間、暫停、取消、重試和衝突選項。窗格傳輸可讓你選擇是否保留相對資料夾或僅複製檔案。"
+          },
+          {
+            "id": "copying_and_moving.p002",
+            "source_sha256": "a438870a1a1fa7c4edc46d8f19aa10034df90810c0e6118e2c2f94828359328d",
+            "text": "編輯 > 批量重新命名選擇後會在更改任何名稱之前打開完整預覽。當您更改模式、查找/替換文本、大小寫敏感性、起始號碼或填充時，預覽會自動更新；重新整理預覽也可使用。建立名稱與{name}對於原始莖，{n}用於填充序列號，{ext}用於沒有點的擴展，並且{dotext}包括其點的擴展名。可選的查找/替換可以區分大小寫或不區分大小寫，編號的起始值和填充可以調整。無效的 Windows 名稱、重複輸出以及與未選擇文件的衝突會被禁用套用. 已確認的批次在內部使用臨時名稱，因此交換和循環不會互相覆蓋；中斷的批次在可能的情況下會回滾。成功的批次是指一個Ctrl+Z撤銷操作，包括評分和標籤。F2或重新命名在一個檔案上打開即時檔名預覽；重新命名僅對有效且可用的新名稱啟用。"
+          },
+          {
+            "id": "copying_and_moving.p003",
+            "source_sha256": "dc2923a823a7109741512e0c6e1a2302310ba36b9dbfaa6379ae5acf0c73c9e9",
+            "text": "關於在應用前進行審核的可重複複製/移動條件，請參見 [chapter:folder_organization_rules]。要暫停、取消或重試排隊的傳輸，請參見 [chapter:transfer_queue]。"
+          },
+          {
+            "id": "copying_and_moving.p004",
+            "source_sha256": "2c1a1fe656902fb987c4f1a88cd0f8d6ec8ead7edc9b2cf0817ce2b6e82f724b",
+            "text": "右鍵單擊一個或多個選取的檔案以指定零到五星的評分、紅色/黃色/綠色/藍色/紫色 顏色標籤，或逗號分隔的標籤。清除評級、無及空的標籤列表可還原這些更改。這些註解只儲存在應用程式資料庫中；原始媒體和嵌入的元資料永遠不會被修改。詳細資料 模式提供可排序的 評級、標籤 與標籤欄位。縮圖標題顯示評分/標籤，並使用顏色標籤作為未選取的邊框。更多篩選器可能要求最低評分、顏色（包括 未標記）或標籤文字。內部重新命名、複製、移動和復原操作會將註解帶至結果路徑。清除所有快取 會移除技術快取資料，但會刻意保留使用者註解。"
+          },
+          {
+            "id": "copying_and_moving.p005",
+            "source_sha256": "4ea753522d03bb48eab43c172373c00d21303828abeacab783fb94f7d41faa41",
+            "text": "在 詳細資料 模式下，單獨的列仍然保留右鍵拖動檔案的功能；正常右鍵點擊仍會打開內容選單。您也可以用左鍵將某一列或選取的群組拖到對側窗格。釋放時會顯示明確標示的複製、移動和 取消 按鈕。複製或移動會打開傳輸預覽；點擊 取消 或關閉提示則會保持檔案不變。標題的調整大小和重新排序仍然獨立。對於傳統的將檔案用左鍵拖入其他程式，請使用 ↗ 拖動選取。縮圖卡也支持普通的左鍵檔案拖拽。"
+          },
+          {
+            "id": "copying_and_moving.p006",
+            "source_sha256": "c09e896f93f4539ea5e39ce1ef9cf109147040645409d8f026ce228b0ae864d8",
+            "text": "複製、移動、重新命名、將檔案傳送到回收桶或垃圾桶、檢查重複項目、應用標籤和評分、匯出報告以及建立聯絡表。轉檔支援 H.264、H.265 及 AV1，並可使用相容的硬體加速。來源 檔案將被保留，部分失敗的輸出將被移除。"
+          },
+          {
+            "id": "copying_and_moving.p007",
+            "source_sha256": "88a277d5f920b679b295acc60e5e72f6b72f48d3630880924c349e271f7ab3aa",
+            "text": "新資料夾 s：選擇 [檔案] > 新資料夾ÔÇª，按 Ctrl+Shift+N，或在窗格中右鍵點擊並選擇 新資料夾ÔÇª。輸入一個新的資料夾名稱。該資料夾會在活動窗格的當前資料夾內建立，瀏覽器會刷新；這不會移動你選擇的檔案。空白、保留及無效的名稱將被拒絕，現有的資料夾不會被取代。"
+          },
+          {
+            "id": "copying_and_moving.p008",
+            "source_sha256": "cfa3700591ec389ae4438a32b015736c27e74632cc56284e786898fee744198b",
+            "text": "複製/移動示例：在來源面板中啟用 包含子資料夾，勾選幾個子文件夾中的文件，然後點擊 複製選取 → 其他窗格 或 將選中的移動 → 到另一個面板。在預覽中選擇 保留資料夾結構 以保留來源文件夾以下的路徑，或選擇 檔案僅限 (不含子資料夾) 將文件直接放到目的地。第一次默認會保留文件夾；後續傳輸會記住您上次的選擇。在排隊之前請閱讀 來源、目的地 和 狀態 列。瀏覽… 會更改目的地；新資料夾ÔÇª 會創建並選擇文件夾，而不放棄預覽。打開 完成時的目的地 僅在傳輸成功且未取消後打開該文件夾。點擊 排隊複製 或 排隊移動 以繼續，或 取消 以保持文件不變。貼上 和拖放的文件也使用此預覽。"
+          },
+          {
+            "id": "copying_and_moving.p009",
+            "source_sha256": "6f5fea1b68edde18db0247441f47c2ad2c00ad93e2b1f52f9b191e04d8ccde05",
+            "text": "衝突：詢問每個衝突 提供 保留兩者、替換、跳過 和 取消，使用 套用解決所有剩餘的衝突。或者在排隊前在預覽中選擇策略。保留兩者 會找到可用的編號檔名，例如 clip (2).mp4，包括來自不同子資料夾的選取檔案之間的衝突。替換 明確允許替換，並將先前的目的地保留在會話還原區域。跳過會保持現有目的地不變。作為選取來源檔之一的目的地會被阻止：請選擇其他資料夾。佇列會重新檢查目的地，因此預覽後出現的檔案不會被靜默覆蓋。還原僅限於此會話中最後 20 個支援的操作，並非永久備份。在使用還原前請勿編輯已傳輸的檔案；還原複製會刪除已複製的檔案。"
+          },
+          {
+            "id": "copying_and_moving.p010",
+            "source_sha256": "fd0ec5c6b05d49ff78891f64ea627a2fe1d7435cbdf0008018ace12f664e8341",
+            "text": "選擇籃：使用 選擇籃 工具列按鈕、檔案 > 選擇籃ÔÇª，或右鍵點選選取的檔案並選擇 加入選擇籃。籃子是一個可摺疊的面板，位於兩個瀏覽器之上，而不是獨立的視窗。隱藏籃子 或工具列按鈕可以隱藏它，而不清除其參考。新增窗格選取 收集窗格中已打勾的動作群組，或在沒有勾選時收集被選中的檔案。瀏覽其他資料夾並新增更多檔案；每個原始路徑僅出現一次。籃子包含的是參考，而非複製品，並在應用程式關閉時清除。移除參考 或 清除籃子 不會刪除原始檔案。選取籃子列並選擇 複製到活動窗格 或 移動到活動窗格；當沒有選取籃子列時，會使用所有項目。檢閱一般傳輸預覽。沒有共用瀏覽根的籃子檔案使用其檔名，而非合併後的資料夾樹。缺少的原始檔案會標記 ［遺失］，且在可用之前無法傳輸。"
+          }
+        ],
+        "body": "在一個窗格中選擇檔案，然後使用工具列、編輯選單、右鍵選單、鍵盤快捷鍵或拖放功能。要將多個選取的檔案傳送到另一個應用程式（如 Shutter），請按住左鍵拖動該窗格導航控制旁的大型 ↗ 拖動選取 控制柄。它會以正常的作業系統檔案列表格式匯出完整選取範圍，並在 詳細資料 和 縮圖 中正常運作，不會干擾欄位調整。另一個窗格是應用程式內傳輸的目的地。傳輸會進入佇列，提供進度、速度、剩餘時間、暫停、取消、重試和衝突選項。窗格傳輸可讓你選擇是否保留相對資料夾或僅複製檔案。\n\n編輯 > 批量重新命名選擇後會在更改任何名稱之前打開完整預覽。當您更改模式、查找/替換文本、大小寫敏感性、起始號碼或填充時，預覽會自動更新；重新整理預覽也可使用。建立名稱與{name}對於原始莖，{n}用於填充序列號，{ext}用於沒有點的擴展，並且{dotext}包括其點的擴展名。可選的查找/替換可以區分大小寫或不區分大小寫，編號的起始值和填充可以調整。無效的 Windows 名稱、重複輸出以及與未選擇文件的衝突會被禁用套用. 已確認的批次在內部使用臨時名稱，因此交換和循環不會互相覆蓋；中斷的批次在可能的情況下會回滾。成功的批次是指一個Ctrl+Z撤銷操作，包括評分和標籤。F2或重新命名在一個檔案上打開即時檔名預覽；重新命名僅對有效且可用的新名稱啟用。\n\n關於在應用前進行審核的可重複複製/移動條件，請參見 [chapter:folder_organization_rules]。要暫停、取消或重試排隊的傳輸，請參見 [chapter:transfer_queue]。\n\n右鍵單擊一個或多個選取的檔案以指定零到五星的評分、紅色/黃色/綠色/藍色/紫色 顏色標籤，或逗號分隔的標籤。清除評級、無及空的標籤列表可還原這些更改。這些註解只儲存在應用程式資料庫中；原始媒體和嵌入的元資料永遠不會被修改。詳細資料 模式提供可排序的 評級、標籤 與標籤欄位。縮圖標題顯示評分/標籤，並使用顏色標籤作為未選取的邊框。更多篩選器可能要求最低評分、顏色（包括 未標記）或標籤文字。內部重新命名、複製、移動和復原操作會將註解帶至結果路徑。清除所有快取 會移除技術快取資料，但會刻意保留使用者註解。\n\n在 詳細資料 模式下，單獨的列仍然保留右鍵拖動檔案的功能；正常右鍵點擊仍會打開內容選單。您也可以用左鍵將某一列或選取的群組拖到對側窗格。釋放時會顯示明確標示的複製、移動和 取消 按鈕。複製或移動會打開傳輸預覽；點擊 取消 或關閉提示則會保持檔案不變。標題的調整大小和重新排序仍然獨立。對於傳統的將檔案用左鍵拖入其他程式，請使用 ↗ 拖動選取。縮圖卡也支持普通的左鍵檔案拖拽。\n\n複製、移動、重新命名、將檔案傳送到回收桶或垃圾桶、檢查重複項目、應用標籤和評分、匯出報告以及建立聯絡表。轉檔支援 H.264、H.265 及 AV1，並可使用相容的硬體加速。來源 檔案將被保留，部分失敗的輸出將被移除。\n\n新資料夾 s：選擇 [檔案] > 新資料夾ÔÇª，按 Ctrl+Shift+N，或在窗格中右鍵點擊並選擇 新資料夾ÔÇª。輸入一個新的資料夾名稱。該資料夾會在活動窗格的當前資料夾內建立，瀏覽器會刷新；這不會移動你選擇的檔案。空白、保留及無效的名稱將被拒絕，現有的資料夾不會被取代。\n\n複製/移動示例：在來源面板中啟用 包含子資料夾，勾選幾個子文件夾中的文件，然後點擊 複製選取 → 其他窗格 或 將選中的移動 → 到另一個面板。在預覽中選擇 保留資料夾結構 以保留來源文件夾以下的路徑，或選擇 檔案僅限 (不含子資料夾) 將文件直接放到目的地。第一次默認會保留文件夾；後續傳輸會記住您上次的選擇。在排隊之前請閱讀 來源、目的地 和 狀態 列。瀏覽… 會更改目的地；新資料夾ÔÇª 會創建並選擇文件夾，而不放棄預覽。打開 完成時的目的地 僅在傳輸成功且未取消後打開該文件夾。點擊 排隊複製 或 排隊移動 以繼續，或 取消 以保持文件不變。貼上 和拖放的文件也使用此預覽。\n\n衝突：詢問每個衝突 提供 保留兩者、替換、跳過 和 取消，使用 套用解決所有剩餘的衝突。或者在排隊前在預覽中選擇策略。保留兩者 會找到可用的編號檔名，例如 clip (2).mp4，包括來自不同子資料夾的選取檔案之間的衝突。替換 明確允許替換，並將先前的目的地保留在會話還原區域。跳過會保持現有目的地不變。作為選取來源檔之一的目的地會被阻止：請選擇其他資料夾。佇列會重新檢查目的地，因此預覽後出現的檔案不會被靜默覆蓋。還原僅限於此會話中最後 20 個支援的操作，並非永久備份。在使用還原前請勿編輯已傳輸的檔案；還原複製會刪除已複製的檔案。\n\n選擇籃：使用 選擇籃 工具列按鈕、檔案 > 選擇籃ÔÇª，或右鍵點選選取的檔案並選擇 加入選擇籃。籃子是一個可摺疊的面板，位於兩個瀏覽器之上，而不是獨立的視窗。隱藏籃子 或工具列按鈕可以隱藏它，而不清除其參考。新增窗格選取 收集窗格中已打勾的動作群組，或在沒有勾選時收集被選中的檔案。瀏覽其他資料夾並新增更多檔案；每個原始路徑僅出現一次。籃子包含的是參考，而非複製品，並在應用程式關閉時清除。移除參考 或 清除籃子 不會刪除原始檔案。選取籃子列並選擇 複製到活動窗格 或 移動到活動窗格；當沒有選取籃子列時，會使用所有項目。檢閱一般傳輸預覽。沒有共用瀏覽根的籃子檔案使用其檔名，而非合併後的資料夾樹。缺少的原始檔案會標記 ［遺失］，且在可用之前無法傳輸。"
+      },
+      {
+        "id": "smart_collections",
+        "title": "智慧收藏：已儲存的搜尋",
+        "paragraphs": [
+          {
+            "id": "smart_collections.p001",
+            "source_sha256": "c8a00acd2ba2c17799572b74c47c2659ecb5a65fb4782693cbe786544ac1e764",
+            "text": "智慧型收藏儲存了什麼"
+          },
+          {
+            "id": "smart_collections.p002",
+            "source_sha256": "d366ab29cfd1f77bae1f8b286cca63d76a5e46d73bdbf4329d2cfb31a1b3694a",
+            "text": "智慧收藏是一個命名的、已保存的搜尋和檢視，用於單一瀏覽器窗格。它會記住如何在來源資料夾中查找和顯示檔案。它會引用原始檔案；建立、開啟、重新命名或刪除收藏並不會複製、移動、重新命名、刪除或註解那些媒體檔案。在您需要多次以特定篩選和排序方式檢視相同資源庫時使用它，而不是每次訪問時都重新輸入這些設定。已保存的工作區會恢復兩個窗格及其佈局；智慧收藏僅會更改活動窗格。"
+          },
+          {
+            "id": "smart_collections.p003",
+            "source_sha256": "006322e9c7ac283bd37b6dbb958c936304cc5977a4803b31ea4c4da238a217f2",
+            "text": "每個集合恰好有一個起始資料夾。包含子資料夾 會搜尋該根目錄下的所有資料夾。它無法將任意不相關的資料夾、不同磁碟或多個起始根目錄合併成同一個集合。實際操作中，選擇它們最近的共同父資料夾，或保存為不同的集合並在兩個窗格中打開。使用 包含子資料夾 選擇磁碟根目錄可以掃描整個磁碟；請選擇最狹窄且實用的父資料夾。"
+          },
+          {
+            "id": "smart_collections.p004",
+            "source_sha256": "20491128f8f22d658bb8601b6511411ea9d469ce4a9681d99090382d74cfc3cf",
+            "text": "已儲存的設定包括資料夾路徑、包含子資料夾、影片 和 圖片 開關、查找文字、解析度 選擇、所有更多篩選值、排序欄位和方向、詳細資料 或 縮圖、縮圖大小，以及 連續 或 分頁 模式。它不會儲存已勾選的檔案、已標記的選擇、預覽播放、即時監控、另一個窗格、欄位寬度/順序、窗格分隔線或縮圖頁面容量。這些保持獨立設定。集合則儲存在應用程式設定目錄中的 smart_collections.json。"
+          },
+          {
+            "id": "smart_collections.p005",
+            "source_sha256": "b11ace0b241e6cfceeaf8409069c6872f849fb89e4d9c2acab35996a93e19059",
+            "text": "建立收藏"
+          },
+          {
+            "id": "smart_collections.p006",
+            "source_sha256": "83c8a710973dcf1308b8fd867f872bf84624f939b91047eea47405238718426e",
+            "text": "1. 點擊你想要配置的窗格內部。這將使其成為活動窗格，以便工具命令。\n2. 使用 瀏覽…或使用路徑框以打開目標來源資料夾。啟用 包含子資料夾如果巢狀資料夾屬於搜尋範圍。\n3. 勾選影片, 圖片，或兩者皆選。將查找設為不區分大小寫的檔案名稱或相對路徑子字串，並選擇 解析度為想要的精確寬度 × 高度。顯示為解析度：當沒有應用精確解析度限制時全部。\n4. 開放更多篩選… 用於方向、編碼子字串、標籤子字串、最低評分、顏色標籤、最小/最大寬度和高度、檔案大小、持續時間以及修改日期。空白欄位不設定限制；所有非空限制都必須符合。輸入 套用使用過濾器。清除重置進階篩選值。這不是一個獨立的任意擴展篩選；請使用 影片/圖片開關，並在適當的情況下，使用像 .mp4 這樣的檔案名稱子字串。\n5. 等待掃描並選擇所需的順序。在詳細資料，點擊欄位標題；再次點擊可反轉方向。在縮圖，使用排序及其欄位/方向子選單。兩個檢視都使用相同的篩選媒體和順序。\n6. 選擇 工具 > 儲存目前使用的智慧收藏…並輸入一個描述性的收藏名稱。保存現有名稱會詢問替換智慧收藏；只有當當前窗格應該取代已保存的定義時才同意。保存會創建一個預設，而不是顯示文件的副本。"
+          },
+          {
+            "id": "smart_collections.p007",
+            "source_sha256": "cc9c90b0168ad0ec1cefb3b33388495dd4c350d67628c7413d8a0ee240b4ae7b",
+            "text": "打開並更新收藏"
+          },
+          {
+            "id": "smart_collections.p008",
+            "source_sha256": "89904bdaa8286ca4ca8546e5136bc9ff5b7688ac0147d82ee8a66fd4caa61afa",
+            "text": "請先選擇目標窗格。打開 工具 > 管理智慧收藏…，選擇一個已保存的條目，然後點擊 套用 或雙擊該行。活動窗格將導航到已保存的起始資料夾，恢復已保存的篩選、排序和呈現，然後進行掃描。對面窗格保持不變。如果資料夾已斷開連接、被移動或不再存在，集合資料夾不可用 將說明已保存的路徑；請重新連接它或使用有效的資料夾保存替代項。"
+          },
+          {
+            "id": "smart_collections.p009",
+            "source_sha256": "1668c49611305d33e2b5780a8b4c6910237f09146c4967272ffd9cf9df5477ae",
+            "text": "結果s 反映的是面板掃描時當前找到的檔案，而不是預設儲存時捕獲的固定列表。使用面板的 Ôå╗ 按鈕、檢視 > 重新整理活動窗格，或 F5 來在外部檔案更改後更新兩個面板。即時 可以監控當前資料夾，但 即時 並不屬於已儲存的集合。篩選或排序的更改會立即影響當前檢視；資料源範圍的更改則需要相應的掃描。取消 可停止掃描。大 遞歸集合使用與普通瀏覽相同的元資料快取和效能設定檔。"
+          },
+          {
+            "id": "smart_collections.p010",
+            "source_sha256": "5d0ba8ba1b4e449868d9118559c323b524f2ed494ba01573aee4d4176bc9d605",
+            "text": "沒有單獨的收藏編輯按鈕。要更改現有的收藏，先 套用 它，在該面板中調整資料夾、範圍、篩選條件或排序，然後選擇 工具 > 儲存目前使用的智慧收藏… 使用相同名稱並確認替換。在管理器中，儲存當前 會保存當前活動面板的設置並要求輸入名稱；它不會自動編輯選定的行。重新命名不會保存對面板篩選條件所做的任何更改。"
+          },
+          {
+            "id": "smart_collections.p011",
+            "source_sha256": "6e88b549b05defa2d24fa8d186b6ba7aea252c5d474f37b1bb4d2e876fbcdbfd",
+            "text": "重新命名、刪除和還原"
+          },
+          {
+            "id": "smart_collections.p012",
+            "source_sha256": "2a100ef5ff5e82d9b023158669f5f05a1ef343719fe452c2e74a2589cd33091a",
+            "text": "在 工具 > 管理智慧收藏… 中，選擇一個條目並點擊 重新命名。輸入 新名稱：，如果另一個集合已經有該名稱，則確認替換。刪除 會要求確認，並且僅刪除預設項。復原刪除 在管理器窗口保持開啟時恢復最新刪除的預設項。關閉管理器會失去這個臨時的撤銷堆疊。如果之後創建了同名集合，恢復刪除的條目會替換該名稱的預設項，因此在保留兩者時請使用不同名稱。關閉 在不應用選中列的情況下退出。Ctrl+Z 用於文件操作，而不是集合管理器的刪除。"
+          },
+          {
+            "id": "smart_collections.p013",
+            "source_sha256": "fc23ad3b8bc9134b6679c107990040938242a050929d015a037c6128ec0433d6",
+            "text": "範例：按解析度排序子資料夾中的圖片"
+          },
+          {
+            "id": "smart_collections.p014",
+            "source_sha256": "71fd063332ef48d1b7ce3c83f9cdbc8f08084a1965687f4f382f46399b47cc96",
+            "text": "1. 在左側窗格中，將 瀏覽… 指向你的「圖片」父資料夾，啟用 包含子資料夾 和 圖片，並關閉 影片。\n2. 清除 找到並將 解析度 設定為「全部」，如果你想比較所有尺寸。打開 更多篩選… 和 清除/套用，如果需要移除舊的限制。\n3. 在 詳細資料 中，點擊 解析度 直到出現所需的升序或降序。或者選擇 縮圖 並選擇「排序」> 解析度 > 最小的在前 或 最大的在前。解析度 排序使用像素面積（寬度 × 高度），並以寬度和高度來打破面積相同的平局；這不是單純的以寬度排序。精確的 解析度 篩選則限制為一組特定尺寸。\n4. 按解析度將啟動窗格另存為 圖片。稍後 套用 此條目在任一窗格中重複搜尋，包括掃描後新增的匹配檔案。"
+          },
+          {
+            "id": "smart_collections.p015",
+            "source_sha256": "ff3bb0c443412ace673aef6b3b1dd606e3214fe0e515419f44b8de1c6e8f7ee7",
+            "text": "範例：檢視高解析度影片"
+          },
+          {
+            "id": "smart_collections.p016",
+            "source_sha256": "58ddf88adee5ea950a3c3cc66a1975d861ac600276d297a9190c5cd96961d30b",
+            "text": "1. 瀏覽…到一個影片父資料夾，啟用包含子資料夾和影片，並轉圖片關閉。\n2. 在更多篩選…，設置 最小寬度（像素）到1920年和最小高度（像素）如果你希望影片同時符合兩個尺寸，請設為 1080。這不包含寬度小於 1920 的直向影片，即使它們的像素數很高；請調整限制或使用方向根據你的目標。\n3. 保留解析度完全包括不同的限定維度。可選擇設置編解碼器包含轉換為 HEVC 以匹配存儲的 HEVC 編解碼器標籤，或 H.264 以匹配 H.264。該篩選器會字面上匹配顯示的編解碼器標籤，忽略大小寫；不帶點的 h264 不匹配 H.264。如果篩選器沒有找到任何內容，請使用資訊查看文件的實際編解碼器。\n4. 排序方式解析度在詳細資料或縮圖。其他支援的排序欄位包括名稱，修改日期, 檔案大小, 長度, 編解碼器, 類型, 比特率, 幀率和評級儲存為高解析度影片。使用預覽或在需要時查看個別結果的資訊；啟用它們與收集定義是獨立的。"
+          },
+          {
+            "id": "smart_collections.p017",
+            "source_sha256": "582f628c0fa7f236fedaf4a03501cc2af09cc29bf57550102597d7d8e626b747",
+            "text": "限制與檔案操作"
+          },
+          {
+            "id": "smart_collections.p018",
+            "source_sha256": "9722f0d4824f0d75e2aa03fd474ccaa99cbe4abb11cf0728857e688af3d85f7a",
+            "text": "集合是對可存取檔案的預設，而不是跨越不相關碟的索引資料庫、背景自動規則、播放清單、重複群組或實體資料夾。更改預設從不會自動重新組織檔案。你刻意對其結果執行的檔案複製/移動/刪除命令仍然作用於原始媒體。現有的勾選優先於突出顯示，並且可以包括被篩選器隱藏的檔案；在對非預期群組執行操作前，請檢查勾選計數器和 清除勾選。導航到不同資料夾會清除該面板的勾選。當起始資料夾保持不變時，應用集合可能會保留現有勾選，因此在進行檔案操作前請務必檢查它們。"
+          },
+          {
+            "id": "smart_collections.p019",
+            "source_sha256": "07532ce67ddc2c2b72a425c349151e1bfee9bb68f725bc867be341fef82f1f29",
+            "text": "另見：[chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+          }
+        ],
+        "body": "智慧型收藏儲存了什麼\n\n智慧收藏是一個命名的、已保存的搜尋和檢視，用於單一瀏覽器窗格。它會記住如何在來源資料夾中查找和顯示檔案。它會引用原始檔案；建立、開啟、重新命名或刪除收藏並不會複製、移動、重新命名、刪除或註解那些媒體檔案。在您需要多次以特定篩選和排序方式檢視相同資源庫時使用它，而不是每次訪問時都重新輸入這些設定。已保存的工作區會恢復兩個窗格及其佈局；智慧收藏僅會更改活動窗格。\n\n每個集合恰好有一個起始資料夾。包含子資料夾 會搜尋該根目錄下的所有資料夾。它無法將任意不相關的資料夾、不同磁碟或多個起始根目錄合併成同一個集合。實際操作中，選擇它們最近的共同父資料夾，或保存為不同的集合並在兩個窗格中打開。使用 包含子資料夾 選擇磁碟根目錄可以掃描整個磁碟；請選擇最狹窄且實用的父資料夾。\n\n已儲存的設定包括資料夾路徑、包含子資料夾、影片 和 圖片 開關、查找文字、解析度 選擇、所有更多篩選值、排序欄位和方向、詳細資料 或 縮圖、縮圖大小，以及 連續 或 分頁 模式。它不會儲存已勾選的檔案、已標記的選擇、預覽播放、即時監控、另一個窗格、欄位寬度/順序、窗格分隔線或縮圖頁面容量。這些保持獨立設定。集合則儲存在應用程式設定目錄中的 smart_collections.json。\n\n建立收藏\n\n1. 點擊你想要配置的窗格內部。這將使其成為活動窗格，以便工具命令。\n2. 使用 瀏覽…或使用路徑框以打開目標來源資料夾。啟用 包含子資料夾如果巢狀資料夾屬於搜尋範圍。\n3. 勾選影片, 圖片，或兩者皆選。將查找設為不區分大小寫的檔案名稱或相對路徑子字串，並選擇 解析度為想要的精確寬度 × 高度。顯示為解析度：當沒有應用精確解析度限制時全部。\n4. 開放更多篩選… 用於方向、編碼子字串、標籤子字串、最低評分、顏色標籤、最小/最大寬度和高度、檔案大小、持續時間以及修改日期。空白欄位不設定限制；所有非空限制都必須符合。輸入 套用使用過濾器。清除重置進階篩選值。這不是一個獨立的任意擴展篩選；請使用 影片/圖片開關，並在適當的情況下，使用像 .mp4 這樣的檔案名稱子字串。\n5. 等待掃描並選擇所需的順序。在詳細資料，點擊欄位標題；再次點擊可反轉方向。在縮圖，使用排序及其欄位/方向子選單。兩個檢視都使用相同的篩選媒體和順序。\n6. 選擇 工具 > 儲存目前使用的智慧收藏…並輸入一個描述性的收藏名稱。保存現有名稱會詢問替換智慧收藏；只有當當前窗格應該取代已保存的定義時才同意。保存會創建一個預設，而不是顯示文件的副本。\n\n打開並更新收藏\n\n請先選擇目標窗格。打開 工具 > 管理智慧收藏…，選擇一個已保存的條目，然後點擊 套用 或雙擊該行。活動窗格將導航到已保存的起始資料夾，恢復已保存的篩選、排序和呈現，然後進行掃描。對面窗格保持不變。如果資料夾已斷開連接、被移動或不再存在，集合資料夾不可用 將說明已保存的路徑；請重新連接它或使用有效的資料夾保存替代項。\n\n結果s 反映的是面板掃描時當前找到的檔案，而不是預設儲存時捕獲的固定列表。使用面板的 Ôå╗ 按鈕、檢視 > 重新整理活動窗格，或 F5 來在外部檔案更改後更新兩個面板。即時 可以監控當前資料夾，但 即時 並不屬於已儲存的集合。篩選或排序的更改會立即影響當前檢視；資料源範圍的更改則需要相應的掃描。取消 可停止掃描。大 遞歸集合使用與普通瀏覽相同的元資料快取和效能設定檔。\n\n沒有單獨的收藏編輯按鈕。要更改現有的收藏，先 套用 它，在該面板中調整資料夾、範圍、篩選條件或排序，然後選擇 工具 > 儲存目前使用的智慧收藏… 使用相同名稱並確認替換。在管理器中，儲存當前 會保存當前活動面板的設置並要求輸入名稱；它不會自動編輯選定的行。重新命名不會保存對面板篩選條件所做的任何更改。\n\n重新命名、刪除和還原\n\n在 工具 > 管理智慧收藏… 中，選擇一個條目並點擊 重新命名。輸入 新名稱：，如果另一個集合已經有該名稱，則確認替換。刪除 會要求確認，並且僅刪除預設項。復原刪除 在管理器窗口保持開啟時恢復最新刪除的預設項。關閉管理器會失去這個臨時的撤銷堆疊。如果之後創建了同名集合，恢復刪除的條目會替換該名稱的預設項，因此在保留兩者時請使用不同名稱。關閉 在不應用選中列的情況下退出。Ctrl+Z 用於文件操作，而不是集合管理器的刪除。\n\n範例：按解析度排序子資料夾中的圖片\n\n1. 在左側窗格中，將 瀏覽… 指向你的「圖片」父資料夾，啟用 包含子資料夾 和 圖片，並關閉 影片。\n2. 清除 找到並將 解析度 設定為「全部」，如果你想比較所有尺寸。打開 更多篩選… 和 清除/套用，如果需要移除舊的限制。\n3. 在 詳細資料 中，點擊 解析度 直到出現所需的升序或降序。或者選擇 縮圖 並選擇「排序」> 解析度 > 最小的在前 或 最大的在前。解析度 排序使用像素面積（寬度 × 高度），並以寬度和高度來打破面積相同的平局；這不是單純的以寬度排序。精確的 解析度 篩選則限制為一組特定尺寸。\n4. 按解析度將啟動窗格另存為 圖片。稍後 套用 此條目在任一窗格中重複搜尋，包括掃描後新增的匹配檔案。\n\n範例：檢視高解析度影片\n\n1. 瀏覽…到一個影片父資料夾，啟用包含子資料夾和影片，並轉圖片關閉。\n2. 在更多篩選…，設置 最小寬度（像素）到1920年和最小高度（像素）如果你希望影片同時符合兩個尺寸，請設為 1080。這不包含寬度小於 1920 的直向影片，即使它們的像素數很高；請調整限制或使用方向根據你的目標。\n3. 保留解析度完全包括不同的限定維度。可選擇設置編解碼器包含轉換為 HEVC 以匹配存儲的 HEVC 編解碼器標籤，或 H.264 以匹配 H.264。該篩選器會字面上匹配顯示的編解碼器標籤，忽略大小寫；不帶點的 h264 不匹配 H.264。如果篩選器沒有找到任何內容，請使用資訊查看文件的實際編解碼器。\n4. 排序方式解析度在詳細資料或縮圖。其他支援的排序欄位包括名稱，修改日期, 檔案大小, 長度, 編解碼器, 類型, 比特率, 幀率和評級儲存為高解析度影片。使用預覽或在需要時查看個別結果的資訊；啟用它們與收集定義是獨立的。\n\n限制與檔案操作\n\n集合是對可存取檔案的預設，而不是跨越不相關碟的索引資料庫、背景自動規則、播放清單、重複群組或實體資料夾。更改預設從不會自動重新組織檔案。你刻意對其結果執行的檔案複製/移動/刪除命令仍然作用於原始媒體。現有的勾選優先於突出顯示，並且可以包括被篩選器隱藏的檔案；在對非預期群組執行操作前，請檢查勾選計數器和 清除勾選。導航到不同資料夾會清除該面板的勾選。當起始資料夾保持不變時，應用集合可能會保留現有勾選，因此在進行檔案操作前請務必檢查它們。\n\n另見：[chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+      },
+      {
+        "id": "duplicates_and_comparison",
+        "title": "重複項 與比較",
+        "paragraphs": [
+          {
+            "id": "duplicates_and_comparison.p001",
+            "source_sha256": "0782926d2c4bf15b6bc6546a84700657d47e97dec140144e01570bb40c129af6",
+            "text": "工具 > 尋找重複項 以階段方式尋找完全匹配的檔案。相同大小的檔案會先從開頭、中間和結尾抽取快速指紋；只有匹配的候選檔案才會被完全讀取並使用 SHA-256 驗證。兩個指紋都會保存在 SQLite 緩存中，同時路徑、大小和修改時間保持不變，使後續搜尋更快。進度會顯示在活動窗格的狀態列上。檢視窗口會並排顯示兩個副本，並顯示路徑、日期和保留標籤。策略僅會選擇建議的冗餘檔案——絕不會自動刪除它們。比較所選項目 顯示選擇的兩個檔案及其技術元資料。"
+          },
+          {
+            "id": "duplicates_and_comparison.p002",
+            "source_sha256": "db002d92b3f1a118d7bb8aa101af8c1ae262721f09af95713962ae48eac85a4e",
+            "text": "工具 > 尋找外觀相似的圖片 能夠檢測經過重設尺寸、輕度重新壓縮以及其他視覺上相似的圖片，即使它們的檔案不是逐位元一致的。選擇 可見 或 掃描全部 並設定寬容值 0–16；較低的數值較嚴格，預設值為 6。64 位元的差異雜湊會根據路徑、大小和修改日期進行快取，且 BK 樹可使在大型集合中匹配操作更實用。結果 是估算值，並且會以僅限檢視的視窗開啟，附有預覽與「選擇此群組」操作。該工具從不刪除或更改檔案；請在使用一般檔案操作前檢查每個建議的群組。"
+          },
+          {
+            "id": "duplicates_and_comparison.usage",
+            "source_sha256": "ff37fdb3497ad945d44131286606d3efc34ef09526591ecd559e63aaa9b6e4ca",
+            "text": "使用審閱工具\n\n對於完全重複的項目，打開來源資料夾，啟用包含子資料夾如有需要，請等待掃描並選擇工具 > 尋找重複項…它會檢查該窗格中所有掃描的媒體，而不僅僅是高亮或篩選可見的檔案。檢查分組的路徑和並排預覽，然後選擇保留策略以在來源窗格中標示建議的重複副本。這不會刪除它們。清除檢查現有的標記並在執行檔案操作之前檢查建議的重點。\n\n對於視覺上相似的圖像，請選擇工具 > 尋找視覺上相似的圖片…，選擇 範圍： 可見或掃描全部, 設定相似度容差 (0–16)，然後點擊 開始. 從 6 開始；數字越低，限制越嚴格。選擇一個結果來預覽；在來源窗格中選擇此群組突顯群組，包括參考圖片。這不是自動僅選擇不需要的複製品。\n\n要直接比較一對，請清除不需要的勾選，在一個窗格中精確選擇兩個文件，然後選擇工具 > 比較已選取的…檢查它們的預覽、路徑和屬性。靠左行駛（靠右回收）和保持右側（左側回收）在將另一個檔案送到資源回收筒 / 垃圾桶之前，請先確認。若關閉而未進行任何操作，兩個檔案將保持不變。"
+          }
+        ],
+        "body": "工具 > 尋找重複項 以階段方式尋找完全匹配的檔案。相同大小的檔案會先從開頭、中間和結尾抽取快速指紋；只有匹配的候選檔案才會被完全讀取並使用 SHA-256 驗證。兩個指紋都會保存在 SQLite 緩存中，同時路徑、大小和修改時間保持不變，使後續搜尋更快。進度會顯示在活動窗格的狀態列上。檢視窗口會並排顯示兩個副本，並顯示路徑、日期和保留標籤。策略僅會選擇建議的冗餘檔案——絕不會自動刪除它們。比較所選項目 顯示選擇的兩個檔案及其技術元資料。\n\n工具 > 尋找外觀相似的圖片 能夠檢測經過重設尺寸、輕度重新壓縮以及其他視覺上相似的圖片，即使它們的檔案不是逐位元一致的。選擇 可見 或 掃描全部 並設定寬容值 0–16；較低的數值較嚴格，預設值為 6。64 位元的差異雜湊會根據路徑、大小和修改日期進行快取，且 BK 樹可使在大型集合中匹配操作更實用。結果 是估算值，並且會以僅限檢視的視窗開啟，附有預覽與「選擇此群組」操作。該工具從不刪除或更改檔案；請在使用一般檔案操作前檢查每個建議的群組。\n\n使用審閱工具\n\n對於完全重複的項目，打開來源資料夾，啟用包含子資料夾如有需要，請等待掃描並選擇工具 > 尋找重複項…它會檢查該窗格中所有掃描的媒體，而不僅僅是高亮或篩選可見的檔案。檢查分組的路徑和並排預覽，然後選擇保留策略以在來源窗格中標示建議的重複副本。這不會刪除它們。清除檢查現有的標記並在執行檔案操作之前檢查建議的重點。\n\n對於視覺上相似的圖像，請選擇工具 > 尋找視覺上相似的圖片…，選擇 範圍： 可見或掃描全部, 設定相似度容差 (0–16)，然後點擊 開始. 從 6 開始；數字越低，限制越嚴格。選擇一個結果來預覽；在來源窗格中選擇此群組突顯群組，包括參考圖片。這不是自動僅選擇不需要的複製品。\n\n要直接比較一對，請清除不需要的勾選，在一個窗格中精確選擇兩個文件，然後選擇工具 > 比較已選取的…檢查它們的預覽、路徑和屬性。靠左行駛（靠右回收）和保持右側（左側回收）在將另一個檔案送到資源回收筒 / 垃圾桶之前，請先確認。若關閉而未進行任何操作，兩個檔案將保持不變。"
+      },
+      {
+        "id": "video_conversion",
+        "title": "影片轉換",
+        "paragraphs": [
+          {
+            "id": "video_conversion.p001",
+            "source_sha256": "b2ee9f6d3dced7fd286ca5ee1d093029d40566fbc9e29e283a2a3058d9c37b85",
+            "text": "使用 工具 > 轉換所選影片… 來創建具有不同編解碼器、容器或解析度的新視頻文件。原始文件將被保留。請先選擇一個小樣本，以便您可以比較其質量、播放兼容性、文件大小和轉換時間，再處理大量文件。"
+          },
+          {
+            "id": "video_conversion.p002",
+            "source_sha256": "d51cf66e935232f9f87c8254590a1e53247ff73d6b9a122efcfcfe2a026f48d9",
+            "text": "轉換一個或多個影片\n\n1. 在任一窗格中打開來源資料夾。啟用 包含子資料夾如果影片分散在其子資料夾中，請等待掃描完成。\n2. 勾選要轉換的影片。如果沒有勾選，命令將使用已高亮的檔案。清除先處理不需要的勾選項：被過濾器隱藏的已勾選檔案仍然屬於操作群組。圖片在群組中的將被此命令忽略。\n3. 選擇工具 > 轉換所選影片…\n4. 選擇預設解析度、質量 (CRF) 和編碼引擎如下面所述。\n5. 檢查輸出資料夾。它最初指向另一個窗格的資料夾；使用瀏覽…或在需要時輸入不同的目的地。檢查保留相對於活動窗格的資料夾保留該目標下的原始子資料夾結構。\n6. 選擇跳過已存在的或保留兩者. 點擊 重新整理預覽在更改目的地後、資料夾保留或現有檔案政策之後。請閱讀每一項來源和輸出路徑並檢查狀態欄位。僅準備就緒行將運行。\n7. 點擊 開始轉換…並在同意之前審核確認。監控進度和每個檔案結果完成後，打開已轉換的檔案並檢查它，再決定如何處理原始檔案。"
+          },
+          {
+            "id": "video_conversion.p003",
+            "source_sha256": "13dffb3d18a13839d2bb6145a7313a3ee2144bcdd5305808500659c8a434c0a8",
+            "text": "選擇預設值\n\nH.264 MP4（兼容）：當需要廣泛的播放器/設備相容性時，一個有用的選擇。\nH.265 MP4（較小）：HEVC 編碼，可以減少檔案大小，但需要相容的播放器。\nAV1 MKV（最小）：MKV 容器中的 AV1 編碼；請檢查電腦的播放支援和轉檔速度。\n720p H.264 代理檔：較低解析度的 H.264 複製，適合快速瀏覽或審查。選擇此預設會將 解析度 設為 720p；你可以在開始前更改它。\n重封裝為 MKV（不重新編碼）：將現有的串流複製到 MKV。它不會改變影片編碼、解析度或品質，也不是將 H.264 轉換為 H.265 的方法。重新編碼預設名稱不保證每個輸出檔都比原始檔小。"
+          },
+          {
+            "id": "video_conversion.p004",
+            "source_sha256": "31fe0e232d02cd89058578e2fccde72f21ae8fd0074c94698407be72fccf86ed",
+            "text": "解析度與品質\n\n保留原始解析度 在重新編碼時會保留原始影格尺寸。1080p 和 720p 將輸出高度設為 1080 或 720 像素，同時保持縱橫比；它們不是最大寬度或僅自動縮小的設置。例如，一個 3840 × 2160 的影片在 1080p 會變為 1920 × 1080。較小的來源可以被放大，但這不會恢復缺失的細節。縱向 影片保持其比例，而不會變成橫向。\n\n品質（CRF）接受 18 到 35 的整數；預設值為 23。較低的數值表示要求更高的品質，通常檔案也會更大。硬體引擎會將此值映射到它們自己的品質控制，因此相同的數值在不同引擎上不一定產生相同的結果。建議先試一個範例。Remux 不考慮品質、尺寸調整與加速。"
+          },
+          {
+            "id": "video_conversion.p005",
+            "source_sha256": "2d17a4384e7cc6ceb233a92096824f99dc79d0d11c5f43d2c552d545e166b856",
+            "text": "編碼與解碼\n\n自動（推薦） 嘗試可用的硬體編碼選項，如有必要則退回至 軟體 / CPU 替代方案。軟體 / CPU 使用處理器。在所選預設下，若支援的話提供 NVIDIA NVENC、Intel Quick Sync、AMD AMF 與 Linux VA-API。檢測摘要報告 FFmpeg 支援；選定的硬體與驅動程式也必須可用。明確選擇的硬體引擎若失敗，將會報告錯誤，而不是默默切換到其他編碼器。\n\n當可用時使用硬體解碼 控制獨立於輸出編碼器的來源讀取。若所請求的硬體解碼器無法啟動，將保留選定的編碼器並改為軟體解碼。若希望使用軟體解碼請取消勾選此項。這些設定不會改變原始檔案。"
+          },
+          {
+            "id": "video_conversion.p006",
+            "source_sha256": "06ea5ef5426b40dc040f7227353e00d7437b8fc335a4e6ad48d27d5bbdcf8834",
+            "text": "輸出名稱、進度與取消\n\n新檔名包含預設後綴，並在選擇時包含輸出解析度。跳過已存在的 保留現有目標不變。保留兩者 使用編號檔名，而不是覆蓋它。開始前請檢查預覽以確認是否有跳過的檔案、重複的輸出名稱或其他問題。\n\n影片 會一次處理一個檔案。取消轉換 停止目前的轉換、刪除未完成的輸出並停止剩餘的佇列。已完成的輸出則保留。關閉此轉換視窗也會請求取消。它的佇列與 工具 > 傳輸佇列… 分開，後者管理複製與移動。"
+          },
+          {
+            "id": "video_conversion.p007",
+            "source_sha256": "2305a1598d67013bd4f756c6d91dec721660a38e61ab32c2435ab8a104a9ee5b",
+            "text": "範例：在 1080p 將 H.264 轉為 H.265\n\n勾選一些 H.264 影片，打開 工具 > 轉換所選影片…，選擇 H.265 MP4（較小），將 解析度 設為 1080p，將品質（CRF）保留在 23 以進行初次測試，然後選擇 自動（推薦）。選擇輸出資料夾，點擊 重新整理預覽，檢查路徑，然後 開始轉換…。將完成的副本與原始檔案比較；如有需要，調整品質或解析度並再次測試。"
+          }
+        ],
+        "body": "使用 工具 > 轉換所選影片… 來創建具有不同編解碼器、容器或解析度的新視頻文件。原始文件將被保留。請先選擇一個小樣本，以便您可以比較其質量、播放兼容性、文件大小和轉換時間，再處理大量文件。\n\n轉換一個或多個影片\n\n1. 在任一窗格中打開來源資料夾。啟用 包含子資料夾如果影片分散在其子資料夾中，請等待掃描完成。\n2. 勾選要轉換的影片。如果沒有勾選，命令將使用已高亮的檔案。清除先處理不需要的勾選項：被過濾器隱藏的已勾選檔案仍然屬於操作群組。圖片在群組中的將被此命令忽略。\n3. 選擇工具 > 轉換所選影片…\n4. 選擇預設解析度、質量 (CRF) 和編碼引擎如下面所述。\n5. 檢查輸出資料夾。它最初指向另一個窗格的資料夾；使用瀏覽…或在需要時輸入不同的目的地。檢查保留相對於活動窗格的資料夾保留該目標下的原始子資料夾結構。\n6. 選擇跳過已存在的或保留兩者. 點擊 重新整理預覽在更改目的地後、資料夾保留或現有檔案政策之後。請閱讀每一項來源和輸出路徑並檢查狀態欄位。僅準備就緒行將運行。\n7. 點擊 開始轉換…並在同意之前審核確認。監控進度和每個檔案結果完成後，打開已轉換的檔案並檢查它，再決定如何處理原始檔案。\n\n選擇預設值\n\nH.264 MP4（兼容）：當需要廣泛的播放器/設備相容性時，一個有用的選擇。\nH.265 MP4（較小）：HEVC 編碼，可以減少檔案大小，但需要相容的播放器。\nAV1 MKV（最小）：MKV 容器中的 AV1 編碼；請檢查電腦的播放支援和轉檔速度。\n720p H.264 代理檔：較低解析度的 H.264 複製，適合快速瀏覽或審查。選擇此預設會將 解析度 設為 720p；你可以在開始前更改它。\n重封裝為 MKV（不重新編碼）：將現有的串流複製到 MKV。它不會改變影片編碼、解析度或品質，也不是將 H.264 轉換為 H.265 的方法。重新編碼預設名稱不保證每個輸出檔都比原始檔小。\n\n解析度與品質\n\n保留原始解析度 在重新編碼時會保留原始影格尺寸。1080p 和 720p 將輸出高度設為 1080 或 720 像素，同時保持縱橫比；它們不是最大寬度或僅自動縮小的設置。例如，一個 3840 × 2160 的影片在 1080p 會變為 1920 × 1080。較小的來源可以被放大，但這不會恢復缺失的細節。縱向 影片保持其比例，而不會變成橫向。\n\n品質（CRF）接受 18 到 35 的整數；預設值為 23。較低的數值表示要求更高的品質，通常檔案也會更大。硬體引擎會將此值映射到它們自己的品質控制，因此相同的數值在不同引擎上不一定產生相同的結果。建議先試一個範例。Remux 不考慮品質、尺寸調整與加速。\n\n編碼與解碼\n\n自動（推薦） 嘗試可用的硬體編碼選項，如有必要則退回至 軟體 / CPU 替代方案。軟體 / CPU 使用處理器。在所選預設下，若支援的話提供 NVIDIA NVENC、Intel Quick Sync、AMD AMF 與 Linux VA-API。檢測摘要報告 FFmpeg 支援；選定的硬體與驅動程式也必須可用。明確選擇的硬體引擎若失敗，將會報告錯誤，而不是默默切換到其他編碼器。\n\n當可用時使用硬體解碼 控制獨立於輸出編碼器的來源讀取。若所請求的硬體解碼器無法啟動，將保留選定的編碼器並改為軟體解碼。若希望使用軟體解碼請取消勾選此項。這些設定不會改變原始檔案。\n\n輸出名稱、進度與取消\n\n新檔名包含預設後綴，並在選擇時包含輸出解析度。跳過已存在的 保留現有目標不變。保留兩者 使用編號檔名，而不是覆蓋它。開始前請檢查預覽以確認是否有跳過的檔案、重複的輸出名稱或其他問題。\n\n影片 會一次處理一個檔案。取消轉換 停止目前的轉換、刪除未完成的輸出並停止剩餘的佇列。已完成的輸出則保留。關閉此轉換視窗也會請求取消。它的佇列與 工具 > 傳輸佇列… 分開，後者管理複製與移動。\n\n範例：在 1080p 將 H.264 轉為 H.265\n\n勾選一些 H.264 影片，打開 工具 > 轉換所選影片…，選擇 H.265 MP4（較小），將 解析度 設為 1080p，將品質（CRF）保留在 23 以進行初次測試，然後選擇 自動（推薦）。選擇輸出資料夾，點擊 重新整理預覽，檢查路徑，然後 開始轉換…。將完成的副本與原始檔案比較；如有需要，調整品質或解析度並再次測試。"
+      },
+      {
+        "id": "media_reports",
+        "title": "匯出媒體報告",
+        "paragraphs": [
+          {
+            "id": "media_reports.p001",
+            "source_sha256": "e5820c2e78ffa8b3b9ff09b57d59bc2adc0b1d92bf570493c0d4aa52c3ab7f5d",
+            "text": "工具 > 匯出媒體報告… 保存已在活動窗格中掃描的檔案清單。它不會複製、轉換或修改這些媒體檔案。對於試算表使用 CSV，對於結構化資料使用 JSON，對於可以在網頁瀏覽器中打開的報告使用 HTML。"
+          },
+          {
+            "id": "media_reports.p002",
+            "source_sha256": "94aceb1c124b99d41385988a2d8951dbf25dd5178e8759add72a545ebfbfd828",
+            "text": "建立報告\n\n1. 打開您想要編目（catalogue）的資料夾。如有需要，打開 啟用 包含子資料夾，並等待掃描完成。\n2. 如您想要特定群組的報告（例如 H.265 視頻或高解析度圖片），可使用 套用 過濾器。點擊該窗格以使其啟動。\n3. 選擇 工具 > 匯出媒體報告…。\n4. 將範圍（Scope）設為 已選取、可見 或 掃描全部。\n5. 選擇 格式： 的格式：CSV、JSON 或 HTML。\n6. 保持 包含完整檔案路徑 勾選以記錄完整位置，或取消勾選以在可能的情況下使用相對於活動資料夾的路徑。\n7. 點擊 匯出…，選擇報告檔名及存放位置，然後保存（儲存）。等待 報告已匯出。使用相應的試算表、瀏覽器或資料查看器打開已保存的檔案。"
+          },
+          {
+            "id": "media_reports.p003",
+            "source_sha256": "5537e045dec5259f000dbdf42606d0124a95734ebcc8c6f57073576f0b3bcd6d",
+            "text": "什麼是範圍\n\n已選取 在存在勾選時使用窗格中被勾選的檔案；否則，它使用已高亮的檔案。因此，隱藏的勾選也可以被包括在內。可見 意味著符合當前窗格篩選條件的所有檔案，而不僅僅是目前畫面上顯示的列或縮圖頁面。掃描全部 包括窗格中已掃描的媒體，即使當前篩選條件將它們隱藏。這些選項都不會自動掃描其他磁碟或資料夾。"
+          },
+          {
+            "id": "media_reports.p004",
+            "source_sha256": "5741554f0d983a0f0b711b553b0139e6d53ee97d55ac8ee048ac36b006cc85f4",
+            "text": "報告內容\n\n每個項目都包含其名稱及路徑、媒體類型及副檔名、尺寸/解析度、大小、修改日期、時長、影片編碼、位元速率、影格率、音訊編碼/頻道、像素格式、HDR、評分、顏色標籤、標籤及可讀/錯誤狀態（如適用）。缺失的資訊仍會保留為缺失；匯出時不會執行完整的完整性檢查。JSON 包含摘要及項目列表。HTML 包含摘要及表格。CSV 包含每個檔案的表格。"
+          },
+          {
+            "id": "media_reports.p005",
+            "source_sha256": "0c1aff0372dd91ebb6e6b1344e7ca59216b6cbc2432e03f36f180b7b9bd7118f",
+            "text": "範例與取消\n\n要列出子資料夾中的大型影片，請打開它們的共同父資料夾，啟用 影片 和 包含子資料夾，在 更多篩選… 設定大小限制，然後使用 範圍： 可見 和 格式： CSV 匯出。在試算表中打開 CSV，檢查大小和路徑。\n\n取消匯出 可停止正在進行的匯出；關閉 也能請求取消。報告只有在寫入完成時才會放置在最終檔名，因此取消操作不會留下部分寫入的最終報告。在分享報告前請檢查路徑：完整檔案路徑可能會洩露資料夾名稱。"
+          }
+        ],
+        "body": "工具 > 匯出媒體報告… 保存已在活動窗格中掃描的檔案清單。它不會複製、轉換或修改這些媒體檔案。對於試算表使用 CSV，對於結構化資料使用 JSON，對於可以在網頁瀏覽器中打開的報告使用 HTML。\n\n建立報告\n\n1. 打開您想要編目（catalogue）的資料夾。如有需要，打開 啟用 包含子資料夾，並等待掃描完成。\n2. 如您想要特定群組的報告（例如 H.265 視頻或高解析度圖片），可使用 套用 過濾器。點擊該窗格以使其啟動。\n3. 選擇 工具 > 匯出媒體報告…。\n4. 將範圍（Scope）設為 已選取、可見 或 掃描全部。\n5. 選擇 格式： 的格式：CSV、JSON 或 HTML。\n6. 保持 包含完整檔案路徑 勾選以記錄完整位置，或取消勾選以在可能的情況下使用相對於活動資料夾的路徑。\n7. 點擊 匯出…，選擇報告檔名及存放位置，然後保存（儲存）。等待 報告已匯出。使用相應的試算表、瀏覽器或資料查看器打開已保存的檔案。\n\n什麼是範圍\n\n已選取 在存在勾選時使用窗格中被勾選的檔案；否則，它使用已高亮的檔案。因此，隱藏的勾選也可以被包括在內。可見 意味著符合當前窗格篩選條件的所有檔案，而不僅僅是目前畫面上顯示的列或縮圖頁面。掃描全部 包括窗格中已掃描的媒體，即使當前篩選條件將它們隱藏。這些選項都不會自動掃描其他磁碟或資料夾。\n\n報告內容\n\n每個項目都包含其名稱及路徑、媒體類型及副檔名、尺寸/解析度、大小、修改日期、時長、影片編碼、位元速率、影格率、音訊編碼/頻道、像素格式、HDR、評分、顏色標籤、標籤及可讀/錯誤狀態（如適用）。缺失的資訊仍會保留為缺失；匯出時不會執行完整的完整性檢查。JSON 包含摘要及項目列表。HTML 包含摘要及表格。CSV 包含每個檔案的表格。\n\n範例與取消\n\n要列出子資料夾中的大型影片，請打開它們的共同父資料夾，啟用 影片 和 包含子資料夾，在 更多篩選… 設定大小限制，然後使用 範圍： 可見 和 格式： CSV 匯出。在試算表中打開 CSV，檢查大小和路徑。\n\n取消匯出 可停止正在進行的匯出；關閉 也能請求取消。報告只有在寫入完成時才會放置在最終檔名，因此取消操作不會留下部分寫入的最終報告。在分享報告前請檢查路徑：完整檔案路徑可能會洩露資料夾名稱。"
+      },
+      {
+        "id": "embedded_metadata",
+        "title": "檢視內嵌元資料",
+        "paragraphs": [
+          {
+            "id": "embedded_metadata.p001",
+            "source_sha256": "de02fc927d80ae28a81ef73fc00493e9dc09ed4f5766dfd6f65805e4b99c9abd",
+            "text": "工具 > 檢視嵌入的元資料… 讀取儲存在影像或影片中的資訊。這與應用程式本身的評分、顏色標籤和標記不同，這些不會改變媒體檔案。"
+          },
+          {
+            "id": "embedded_metadata.p002",
+            "source_sha256": "84dddde141e5b461ca97772fda91dd9488b49ce2db3f0100540c7e90cefcf078",
+            "text": "1. 取消選取 清除 不需要的項目，然後在活動窗格中選擇恰好一個圖片或影片。\n2. 選擇 工具 > 檢視嵌入的元資料…，並等待欄位出現。\n3. 閱讀「區段」、「欄位」和「數值」列。圖片 可能包含相機/日期 EXIF 資訊和 GPS 欄位（若有）；影片可能包含容器及串流標籤。並非每個檔案都含有這些欄位。\n4. 輸入 搜尋： 以依據其區段、欄位或數值縮小顯示的列。\n5. 選取列後，點擊 複製選取/全部 以複製它們。若未選取任何列，則會複製目前顯示的所有列。\n6. 點擊 匯出 JSON… 以儲存所有擷取的元資料，包括被 搜尋： 隱藏的列。選擇檔案名稱並儲存。\n7. 完成後 關閉 該視窗。查看、複製及匯出元資料不會編輯原始檔案中內嵌的資訊。"
+          }
+        ],
+        "body": "工具 > 檢視嵌入的元資料… 讀取儲存在影像或影片中的資訊。這與應用程式本身的評分、顏色標籤和標記不同，這些不會改變媒體檔案。\n\n1. 取消選取 清除 不需要的項目，然後在活動窗格中選擇恰好一個圖片或影片。\n2. 選擇 工具 > 檢視嵌入的元資料…，並等待欄位出現。\n3. 閱讀「區段」、「欄位」和「數值」列。圖片 可能包含相機/日期 EXIF 資訊和 GPS 欄位（若有）；影片可能包含容器及串流標籤。並非每個檔案都含有這些欄位。\n4. 輸入 搜尋： 以依據其區段、欄位或數值縮小顯示的列。\n5. 選取列後，點擊 複製選取/全部 以複製它們。若未選取任何列，則會複製目前顯示的所有列。\n6. 點擊 匯出 JSON… 以儲存所有擷取的元資料，包括被 搜尋： 隱藏的列。選擇檔案名稱並儲存。\n7. 完成後 關閉 該視窗。查看、複製及匯出元資料不會編輯原始檔案中內嵌的資訊。"
+      },
+      {
+        "id": "media_integrity",
+        "title": "檢查媒體完整性",
+        "paragraphs": [
+          {
+            "id": "media_integrity.p001",
+            "source_sha256": "97deea524f7dd0dcdc0cd44429f4c4d29e3e5d71f7a4e9ca6240aaad7b295631",
+            "text": "工具 > 驗證媒體完整性… 檢查媒體是否可以解碼，而不僅僅依賴其檔名或技術標頭。使用它來調查無法讀取的檔案或在存檔前檢查一批檔案。讀取整個影片可能需要相當長的時間。它從不修復或更改原始檔案。"
+          },
+          {
+            "id": "media_integrity.p002",
+            "source_sha256": "e788bb47cbc4c2ead78a958e6e1e23990943c61731afbfeeb2cda9b82c34fd3c",
+            "text": "1. 打開來源資料夾，設置 包含子資料夾根據需要，並讓掃描完成。\n2. 選擇工具 > 驗證媒體完整性…\n3. 設定範圍： 已選取針對已勾選/已標示的檔案，可見適用於所有符合過濾條件的檔案，或 掃描全部包括被篩選器隱藏的檔案。\n4. 勾選 強制重新檢查如果您想要新的檢查，即使先前的結果已被緩存。\n5. 點擊 開始. 審查狀態, 已緩存，路徑和詳細資料隨著結果到達。通過表示解碼器已完成其檢查；失敗記錄了解碼或存取問題。它不能保證視覺品質、內容正確性或無惡意軟體。\n6. 使用 取消停止進一步檢查。結果已收集的仍然可用。\n7. 點擊 匯出 CSV…保存收集的結果，包括檢查被取消的情況。選擇失敗在來源窗格中標示失敗的檔案並關閉結果視窗；它不會刪除它們。"
+          },
+          {
+            "id": "media_integrity.p003",
+            "source_sha256": "1ae255df200b724240135bb169ad32364b4431dd787322cf203b44e9ce3e8323",
+            "text": "在對標註的故障採取行動之前，請檢查其詳細資訊並核對 清除勾選：現有的勾選仍然優先於後續的檔案命令。故障可能反映權限問題、缺失的磁碟或解碼器支援，以及損壞的資料。不要僅因一次檢查失敗就刪除檔案。"
+          }
+        ],
+        "body": "工具 > 驗證媒體完整性… 檢查媒體是否可以解碼，而不僅僅依賴其檔名或技術標頭。使用它來調查無法讀取的檔案或在存檔前檢查一批檔案。讀取整個影片可能需要相當長的時間。它從不修復或更改原始檔案。\n\n1. 打開來源資料夾，設置 包含子資料夾根據需要，並讓掃描完成。\n2. 選擇工具 > 驗證媒體完整性…\n3. 設定範圍： 已選取針對已勾選/已標示的檔案，可見適用於所有符合過濾條件的檔案，或 掃描全部包括被篩選器隱藏的檔案。\n4. 勾選 強制重新檢查如果您想要新的檢查，即使先前的結果已被緩存。\n5. 點擊 開始. 審查狀態, 已緩存，路徑和詳細資料隨著結果到達。通過表示解碼器已完成其檢查；失敗記錄了解碼或存取問題。它不能保證視覺品質、內容正確性或無惡意軟體。\n6. 使用 取消停止進一步檢查。結果已收集的仍然可用。\n7. 點擊 匯出 CSV…保存收集的結果，包括檢查被取消的情況。選擇失敗在來源窗格中標示失敗的檔案並關閉結果視窗；它不會刪除它們。\n\n在對標註的故障採取行動之前，請檢查其詳細資訊並核對 清除勾選：現有的勾選仍然優先於後續的檔案命令。故障可能反映權限問題、缺失的磁碟或解碼器支援，以及損壞的資料。不要僅因一次檢查失敗就刪除檔案。"
+      },
+      {
+        "id": "video_contact_sheets",
+        "title": "製作影片聯絡表",
+        "paragraphs": [
+          {
+            "id": "video_contact_sheets.p001",
+            "source_sha256": "dfbcc6d5b6648c41111ac2cc655dcf84740fdf1c9bdd8173582892799fbf4a42",
+            "text": "聯絡表是一個 PNG，包含來自影片的靜態畫面網格。它提供概覽，而不需要播放整個片段。工具 > 建立影片聯絡表… 不會更改原始影片。"
+          },
+          {
+            "id": "video_contact_sheets.p002",
+            "source_sha256": "fe5c1944466bf890d4109983ffb85dd4dd70b26b039fb244122ff3be4f7462b1",
+            "text": "1. 取消 清除 的勾選，並在活動面板中選擇一個影片。\n2. 選擇 工具 > 建立影片聯絡表…。\n3. 設定影格數（4–48）、欄數（2–8）及影格寬度（像素）（160–640）。預設值為 12 影格、4 欄及 320 像素。\n4. 如果你希望在影格下方顯示說明文字，保持 顯示幀號和時間戳 勾選。\n5. 點擊 建立…，選擇 PNG 檔名及存放位置，然後按儲存。\n6. 等待 聯絡表完成，然後在影像檢視器中打開已保存的 PNG。取消 停止擷取；關閉 也會請求取消。"
+          },
+          {
+            "id": "video_contact_sheets.p003",
+            "source_sha256": "f7a7ce26c0b8bef736351a923a83f5889983daaf7968b4a4afe9f42a47d89af6",
+            "text": "幀均勻地從影片中取樣，避免取到影片的第一幀和最後一幀。這不是場景檢測，且工具需要可讀的影片長度。大r 格子和幀需要更長時間，並產生更大的圖像。若要快速概覽，可以從預設的 12 幀圖表開始。"
+          }
+        ],
+        "body": "聯絡表是一個 PNG，包含來自影片的靜態畫面網格。它提供概覽，而不需要播放整個片段。工具 > 建立影片聯絡表… 不會更改原始影片。\n\n1. 取消 清除 的勾選，並在活動面板中選擇一個影片。\n2. 選擇 工具 > 建立影片聯絡表…。\n3. 設定影格數（4–48）、欄數（2–8）及影格寬度（像素）（160–640）。預設值為 12 影格、4 欄及 320 像素。\n4. 如果你希望在影格下方顯示說明文字，保持 顯示幀號和時間戳 勾選。\n5. 點擊 建立…，選擇 PNG 檔名及存放位置，然後按儲存。\n6. 等待 聯絡表完成，然後在影像檢視器中打開已保存的 PNG。取消 停止擷取；關閉 也會請求取消。\n\n幀均勻地從影片中取樣，避免取到影片的第一幀和最後一幀。這不是場景檢測，且工具需要可讀的影片長度。大r 格子和幀需要更長時間，並產生更大的圖像。若要快速概覽，可以從預設的 12 幀圖表開始。"
+      },
+      {
+        "id": "folder_synchronization",
+        "title": "資料夾 同步",
+        "paragraphs": [
+          {
+            "id": "folder_synchronization.p001",
+            "source_sha256": "6a5c3c71a212781f6a6c74fac70303224fcbeac3c7d2b4e7c00e810e71cdd110",
+            "text": "在左側和右側窗格中打開要比較的資料夾，然後選擇 工具 > 比較 / 同步資料夾。在排入單向同步之前，先檢查僅左側、僅右側、新的和不同的條目。"
+          },
+          {
+            "id": "folder_synchronization.steps",
+            "source_sha256": "cf1597a5ccfc3cc7b73f8f7e2f000fa029816c676a9967854c22cd7d39862515",
+            "text": "1. 打開左側和右側窗格中的兩個資料夾。設置包含子資料夾如有需要，對每一側獨立進行。\n2. 選擇工具 > 比較 / 同步資料夾…\n3. 回顧相對路徑和狀態: 只在左側、只在右側、相同、左側更新、右側更新或不同。此比較使用受支持的媒體文件、文件大小和修改時間；「相同」並非完整內容的雜湊檢查。它獨立於窗格的搜尋/媒體顯示篩選器來盤點資料夾。\n4. 標示特定列以限制操作。如果沒有列被標示，方向按鈕會考慮整個比較。\n5. 點擊 複製缺失/較新 → 右或複製缺失/更新的 → 左邊僅建議該方向中缺失的、更新的或不同的檔案。在排隊之前請閱讀並確認檔案數量。\n6. 追蹤進度於工具 > 傳輸佇列…這會將檔案單向複製；它不會刪除多餘的目標檔案，也不會執行自動的雙向鏡像。如果您想要更新的結果列表，請在複製後再次運行比較。"
+          }
+        ],
+        "body": "在左側和右側窗格中打開要比較的資料夾，然後選擇 工具 > 比較 / 同步資料夾。在排入單向同步之前，先檢查僅左側、僅右側、新的和不同的條目。\n\n1. 打開左側和右側窗格中的兩個資料夾。設置包含子資料夾如有需要，對每一側獨立進行。\n2. 選擇工具 > 比較 / 同步資料夾…\n3. 回顧相對路徑和狀態: 只在左側、只在右側、相同、左側更新、右側更新或不同。此比較使用受支持的媒體文件、文件大小和修改時間；「相同」並非完整內容的雜湊檢查。它獨立於窗格的搜尋/媒體顯示篩選器來盤點資料夾。\n4. 標示特定列以限制操作。如果沒有列被標示，方向按鈕會考慮整個比較。\n5. 點擊 複製缺失/較新 → 右或複製缺失/更新的 → 左邊僅建議該方向中缺失的、更新的或不同的檔案。在排隊之前請閱讀並確認檔案數量。\n6. 追蹤進度於工具 > 傳輸佇列…這會將檔案單向複製；它不會刪除多餘的目標檔案，也不會執行自動的雙向鏡像。如果您想要更新的結果列表，請在複製後再次運行比較。"
+      },
+      {
+        "id": "folder_organization_rules",
+        "title": "資料夾 組織規則",
+        "paragraphs": [
+          {
+            "id": "folder_organization_rules.p001",
+            "source_sha256": "0bafa187b865c37f918aac231d07f9cd0755fcf9049ab3d6462fd49cfa5b59dd",
+            "text": "工具 > 資料夾組織規則… 保存可重複的複製或移動規則。與智慧型收藏不同，套用這些規則會真正改變檔案位置或創建副本。規則不會自動在背景中運行：每次請查看預覽並確認 套用…。"
+          },
+          {
+            "id": "folder_organization_rules.p002",
+            "source_sha256": "45964b262f5d8c5b49ac1274b9996e504d695e52fbadd425b9ecb861df577756",
+            "text": "建立或編輯規則\n\n1. 點擊包含您想整理的檔案的窗格，然後選擇 工具 > 資料夾組織規則…\n2. 點擊新增。輸入規則名稱，選擇動作：複製或移動，並使用設定目的地資料夾瀏覽…如有需要。仔細檢查動作：新規則最初使用移動。\n3. 將媒體類型設置為任何。圖片或影片. 可選條件為擴展名（以逗號分隔），檔案名稱包含，編解碼器包含, 最低評分（0－5），並且需要精確標籤。未使用的條件請留空；0 表示不強制最低評分限制。所有輸入的條件都必須符合。檔案名稱且編解碼器匹配時忽略字母大小寫；標籤必須匹配整個已分配的標籤，而不是其中的一部分。\n4. 保留 規則已啟用如果規則應該參與，則勾選，然後點擊保存規則\n5. 選擇一個現有規則並編輯以更改它。使用 ↑ 和 ↓ 來改變優先順序：第一個符合條件且啟用的規則將會勝出。刪除確認後移除規則，而不是其媒體；復原刪除只要此管理器保持開啟，即可使用。"
+          },
+          {
+            "id": "folder_organization_rules.p003",
+            "source_sha256": "c7c9d8a141f4adb1d8ac99b1211bd67950395855319313f7bcc29474683eae6c",
+            "text": "預覽與應用\n\n1. 如果您想限制考慮的文件，請設定來源窗格的篩選器。\n2. 在規則管理器中，點擊 預覽活動窗格…。\n3. 為窗格的篩選匹配文件選擇 範圍： 可見，或為其完整掃描集選擇 掃描全部。此工具沒有 已選取 範圍。\n4. 選擇是否 保留相對於活動窗格的資料夾。選中將保留每個規則目標下的相對子資料夾；未選中僅使用檔名。\n5. 更改這些控制後，點擊 重新整理預覽。檢查規則、操作、來源、目的地及 狀態。未匹配的文件不會入列。在應用前解決問題，例如重複目標。\n6. 點擊 套用… 並確認擬議的操作數量。複製/移動工作將進入正常傳輸隊列；現有目標使用正常衝突選項。關閉 會離開預覽而不應用。"
+          },
+          {
+            "id": "folder_organization_rules.p004",
+            "source_sha256": "f28b27db9fb710652715db25a211de3d6a9cef8f4fd15378e38e9f06d8fd4343",
+            "text": "範例\n\n要將 MP4 影片複製到審閱資料夾，新增一個名為 MP4 審閱複製的規則，選擇「複製」，選擇審閱目的地，將媒體類型設為 影片 並將副檔名設為 mp4，然後 保存規則。預覽活動窗格… 與 範圍： 可見，檢查路徑與 套用…。這會建立複製；只有當您打算移動原始檔案時才選擇「僅移動」。"
+          }
+        ],
+        "body": "工具 > 資料夾組織規則… 保存可重複的複製或移動規則。與智慧型收藏不同，套用這些規則會真正改變檔案位置或創建副本。規則不會自動在背景中運行：每次請查看預覽並確認 套用…。\n\n建立或編輯規則\n\n1. 點擊包含您想整理的檔案的窗格，然後選擇 工具 > 資料夾組織規則…\n2. 點擊新增。輸入規則名稱，選擇動作：複製或移動，並使用設定目的地資料夾瀏覽…如有需要。仔細檢查動作：新規則最初使用移動。\n3. 將媒體類型設置為任何。圖片或影片. 可選條件為擴展名（以逗號分隔），檔案名稱包含，編解碼器包含, 最低評分（0－5），並且需要精確標籤。未使用的條件請留空；0 表示不強制最低評分限制。所有輸入的條件都必須符合。檔案名稱且編解碼器匹配時忽略字母大小寫；標籤必須匹配整個已分配的標籤，而不是其中的一部分。\n4. 保留 規則已啟用如果規則應該參與，則勾選，然後點擊保存規則\n5. 選擇一個現有規則並編輯以更改它。使用 ↑ 和 ↓ 來改變優先順序：第一個符合條件且啟用的規則將會勝出。刪除確認後移除規則，而不是其媒體；復原刪除只要此管理器保持開啟，即可使用。\n\n預覽與應用\n\n1. 如果您想限制考慮的文件，請設定來源窗格的篩選器。\n2. 在規則管理器中，點擊 預覽活動窗格…。\n3. 為窗格的篩選匹配文件選擇 範圍： 可見，或為其完整掃描集選擇 掃描全部。此工具沒有 已選取 範圍。\n4. 選擇是否 保留相對於活動窗格的資料夾。選中將保留每個規則目標下的相對子資料夾；未選中僅使用檔名。\n5. 更改這些控制後，點擊 重新整理預覽。檢查規則、操作、來源、目的地及 狀態。未匹配的文件不會入列。在應用前解決問題，例如重複目標。\n6. 點擊 套用… 並確認擬議的操作數量。複製/移動工作將進入正常傳輸隊列；現有目標使用正常衝突選項。關閉 會離開預覽而不應用。\n\n範例\n\n要將 MP4 影片複製到審閱資料夾，新增一個名為 MP4 審閱複製的規則，選擇「複製」，選擇審閱目的地，將媒體類型設為 影片 並將副檔名設為 mp4，然後 保存規則。預覽活動窗格… 與 範圍： 可見，檢查路徑與 套用…。這會建立複製；只有當您打算移動原始檔案時才選擇「僅移動」。"
+      },
+      {
+        "id": "transfer_queue",
+        "title": "管理傳輸佇列",
+        "paragraphs": [
+          {
+            "id": "transfer_queue.p001",
+            "source_sha256": "4c74b2e240612a64b07641c0bd71035726be26f6a6731e266ba7363531a03670",
+            "text": "工具 > 傳輸佇列… 顯示排程中的複製和移動工作的進度，包括由資料夾同步和組織規則啟動的傳輸。影片轉檔有其自己的獨立進度視窗。"
+          },
+          {
+            "id": "transfer_queue.p002",
+            "source_sha256": "28ed18a8e1ee5a8d11f642e0b6267d950ad0adcf8efa7da73b9228138757b48c",
+            "text": "1. 使用窗格控制或檔案命令對 開始 進行複製或移動。若進度視窗尚未顯示，請打開 工具 > 傳輸佇列…。\n2. 閱讀目前操作、進度、排隊數量和傳輸詳情。\n3. 點擊 暫停 在安全點暫停複製；按鈕會變為「繼續」。點擊「繼續」可恢復傳輸。已進行的移動可能需要完成後才會響應。\n4. 取消當前 會請求停止活動工作。它不會清除所有待處理工作，且已成功完成的檔案不會自動還原。\n5. 重試失敗 會重新排隊在最近失敗傳輸中失敗的檔案。請先檢查報告的錯誤和目的地。\n6. 關閉 會隱藏進度視窗；它不會取消複製或移動。可從 工具 重新打開檢查進度。使用 Ctrl+Z 可單獨還原支援的已完成檔案操作。"
+          }
+        ],
+        "body": "工具 > 傳輸佇列… 顯示排程中的複製和移動工作的進度，包括由資料夾同步和組織規則啟動的傳輸。影片轉檔有其自己的獨立進度視窗。\n\n1. 使用窗格控制或檔案命令對 開始 進行複製或移動。若進度視窗尚未顯示，請打開 工具 > 傳輸佇列…。\n2. 閱讀目前操作、進度、排隊數量和傳輸詳情。\n3. 點擊 暫停 在安全點暫停複製；按鈕會變為「繼續」。點擊「繼續」可恢復傳輸。已進行的移動可能需要完成後才會響應。\n4. 取消當前 會請求停止活動工作。它不會清除所有待處理工作，且已成功完成的檔案不會自動還原。\n5. 重試失敗 會重新排隊在最近失敗傳輸中失敗的檔案。請先檢查報告的錯誤和目的地。\n6. 關閉 會隱藏進度視窗；它不會取消複製或移動。可從 工具 重新打開檢查進度。使用 Ctrl+Z 可單獨還原支援的已完成檔案操作。"
+      },
+      {
+        "id": "safe_file_actions",
+        "title": "安全檔案操作",
+        "paragraphs": [
+          {
+            "id": "safe_file_actions.p001",
+            "source_sha256": "4ed845375e5d90b2ef4791690f07c1a09210904cf1686aec2715d733a377226d",
+            "text": "刪除 將檔案傳送到作業系統的資源回收桶或垃圾桶。在刪除或移動之後，按照目前排序順序，移除選取項目後的下一個檔案會自動被選取並顯示；如果移除的檔案位於末端，則新的最後一個檔案會被選取。重新命名 以及重新整理也保留有用的當前檔案，而且這個行為也適用於 詳細資料 和 縮圖。復原可以還原最近的複製、移動、取代、單次重新命名以及完整批次重新命名。替換 衝突提供 替換、跳過或 保留兩者，並可以選擇將相同的回答套用到所有剩餘的衝突。"
+          },
+          {
+            "id": "safe_file_actions.undo_busy_1273",
+            "source_sha256": "ff2548c8d5b9c336f23e02624d99be111f63b741dd5e9d8d94c87c038febd3a8",
+            "text": "復原 在背景運行，因此視窗仍保持回應。它會暫時停止預覽並暫停新的元資料和縮圖檔案讀取，同時讓現有的讀取完成，然後再還原檔案。你不需要等資料夾掃描先完成。短暫的 Windows 檔案共享鎖會自動重試。如果其他程式仍然持有檔案，或者還原的來源檔案會取代新建立的檔案，復原 會停止並報告問題，而不是覆蓋它。已完成的復原步驟會保留；未完成的步驟和原始替換備份仍然可用。關閉 使用受影響檔案的應用程式或解決報告的衝突後，按下 復原 以繼續。排隊的傳輸會在復原未完成期間等待。復原未完成期間請勿刪除復原備份或編輯受影響檔案。預覽 切換保持為選擇狀態；復原後再次選擇檔案以恢復預覽。"
+          }
+        ],
+        "body": "刪除 將檔案傳送到作業系統的資源回收桶或垃圾桶。在刪除或移動之後，按照目前排序順序，移除選取項目後的下一個檔案會自動被選取並顯示；如果移除的檔案位於末端，則新的最後一個檔案會被選取。重新命名 以及重新整理也保留有用的當前檔案，而且這個行為也適用於 詳細資料 和 縮圖。復原可以還原最近的複製、移動、取代、單次重新命名以及完整批次重新命名。替換 衝突提供 替換、跳過或 保留兩者，並可以選擇將相同的回答套用到所有剩餘的衝突。\n\n復原 在背景運行，因此視窗仍保持回應。它會暫時停止預覽並暫停新的元資料和縮圖檔案讀取，同時讓現有的讀取完成，然後再還原檔案。你不需要等資料夾掃描先完成。短暫的 Windows 檔案共享鎖會自動重試。如果其他程式仍然持有檔案，或者還原的來源檔案會取代新建立的檔案，復原 會停止並報告問題，而不是覆蓋它。已完成的復原步驟會保留；未完成的步驟和原始替換備份仍然可用。關閉 使用受影響檔案的應用程式或解決報告的衝突後，按下 復原 以繼續。排隊的傳輸會在復原未完成期間等待。復原未完成期間請勿刪除復原備份或編輯受影響檔案。預覽 切換保持為選擇狀態；復原後再次選擇檔案以恢復預覽。"
+      },
+      {
+        "id": "workspaces_and_cache",
+        "title": "工作區和快取",
+        "paragraphs": [
+          {
+            "id": "workspaces_and_cache.p001",
+            "source_sha256": "9546017780aef5e7077c76d71f514132c6cabc5dd92f56a8dc2863641361fe9f",
+            "text": "已儲存的工作區會記住資料夾、篩選器、檢視模式、欄位、檢查器及佈局。工具 下的智慧收藏是較小的一窗格預設：它們會儲存資料夾、包含子資料夾 和媒體切換、檔名及進階篩選器、解析度、排序、詳細資料/縮圖 檢視、縮圖大小，以及 連續/分頁 選擇。套用 某個設定僅影響活動窗格。管理器可以重新命名或刪除預設；刪除需要確認，復原刪除 會在管理器保持開啟時還原。智慧收藏永遠不會移動、刪除或註解媒體。已緩存 的 metadata 和縮圖可加快未來訪問；工具 > 緩存與掃描 可以檢查、修剪或清除它們。"
+          },
+          {
+            "id": "workspaces_and_cache.workspace_steps",
+            "source_sha256": "dff5cc601aa1e01667f72fd065cd8e4b55ae77974639503d66c69592dd802aa7",
+            "text": "儲存和載入工作區\n\n1. 將兩個窗格排列好，並設置好您想重複使用的資料夾、篩選器、檢視和佈局。\n2. 選擇 工具 > 儲存工作區… 並輸入工作區名稱。重複使用名稱將會覆蓋該工作區，而無需單獨的替換提示；使用新名稱可保留先前的佈局。\n3. 稍後 選擇 工具 > 載入工作區…。提示會列出已儲存的名稱。輸入完全相符的名稱並確認以還原兩個窗格。取消 將保持當前工作區不變。\n\n當您只想還原其中一個窗格的搜尋和檢視時，請改用 [chapter:smart_collections]。"
+          },
+          {
+            "id": "workspaces_and_cache.cache_steps",
+            "source_sha256": "db9e5a5210a5fdc95458f3dd3a9b9cd62b82de37c69b195a47a3e595ebe17bc3",
+            "text": "快取與掃描控制\n\n開啟 工具 > 快取及掃描…查看元數據條目和縮略圖存儲。在掃描設定，選擇性能概況： 安靜對於較低的背景負載，平衡用於普通使用，或選擇快速以獲得更高的吞吐量。如有需要，可調整平行元資料工作者（1-16）。排除模式（以分號分隔）可以忽略匹配的路徑；窗口中顯示的範例包括 *.tmp；proxy/*；@eaDir/*. 點擊套用保存設定。重新整理使用更改的排除項來運行掃描的窗格。\n\n在縮圖儲存操作系統磁碟機的最大百分比預設為 1%，並接受 0.1%–10%。套用儲存限制；立即強制限制移除最近最少使用的快取縮圖，直到達到限制為止。移除過期條目修剪過時的元數據條目。清除縮圖請求確認，然後僅刪除生成的縮略圖；它們將在需要時重建。清除所有快取確認已移除技術緩存數據和縮略圖，因此未來訪問需要重新掃描/解碼。這些緩存控制不會刪除原始媒體或用戶評分、顏色標籤和標籤。"
+          }
+        ],
+        "body": "已儲存的工作區會記住資料夾、篩選器、檢視模式、欄位、檢查器及佈局。工具 下的智慧收藏是較小的一窗格預設：它們會儲存資料夾、包含子資料夾 和媒體切換、檔名及進階篩選器、解析度、排序、詳細資料/縮圖 檢視、縮圖大小，以及 連續/分頁 選擇。套用 某個設定僅影響活動窗格。管理器可以重新命名或刪除預設；刪除需要確認，復原刪除 會在管理器保持開啟時還原。智慧收藏永遠不會移動、刪除或註解媒體。已緩存 的 metadata 和縮圖可加快未來訪問；工具 > 緩存與掃描 可以檢查、修剪或清除它們。\n\n儲存和載入工作區\n\n1. 將兩個窗格排列好，並設置好您想重複使用的資料夾、篩選器、檢視和佈局。\n2. 選擇 工具 > 儲存工作區… 並輸入工作區名稱。重複使用名稱將會覆蓋該工作區，而無需單獨的替換提示；使用新名稱可保留先前的佈局。\n3. 稍後 選擇 工具 > 載入工作區…。提示會列出已儲存的名稱。輸入完全相符的名稱並確認以還原兩個窗格。取消 將保持當前工作區不變。\n\n當您只想還原其中一個窗格的搜尋和檢視時，請改用 [chapter:smart_collections]。\n\n快取與掃描控制\n\n開啟 工具 > 快取及掃描…查看元數據條目和縮略圖存儲。在掃描設定，選擇性能概況： 安靜對於較低的背景負載，平衡用於普通使用，或選擇快速以獲得更高的吞吐量。如有需要，可調整平行元資料工作者（1-16）。排除模式（以分號分隔）可以忽略匹配的路徑；窗口中顯示的範例包括 *.tmp；proxy/*；@eaDir/*. 點擊套用保存設定。重新整理使用更改的排除項來運行掃描的窗格。\n\n在縮圖儲存操作系統磁碟機的最大百分比預設為 1%，並接受 0.1%–10%。套用儲存限制；立即強制限制移除最近最少使用的快取縮圖，直到達到限制為止。移除過期條目修剪過時的元數據條目。清除縮圖請求確認，然後僅刪除生成的縮略圖；它們將在需要時重建。清除所有快取確認已移除技術緩存數據和縮略圖，因此未來訪問需要重新掃描/解碼。這些緩存控制不會刪除原始媒體或用戶評分、顏色標籤和標籤。"
+      },
+      {
+        "id": "language",
+        "title": "語言",
+        "paragraphs": [
+          {
+            "id": "language.p001",
+            "source_sha256": "76d36cb87d53e68bd8a17b59b3d7bf1868001f1323f01fa67c901dda96cf4779",
+            "text": "首次啟動時，應用程式會在支援的情況下遵循操作系統語言。選擇 工具 > 語言 可覆蓋它，或返回 系統預設。更改語言後請重新啟動應用程式。"
+          }
+        ],
+        "body": "首次啟動時，應用程式會在支援的情況下遵循操作系統語言。選擇 工具 > 語言 可覆蓋它，或返回 系統預設。更改語言後請重新啟動應用程式。"
+      },
+      {
+        "id": "glossary",
+        "title": "詞彙表",
+        "paragraphs": [
+          {
+            "id": "glossary.p001",
+            "source_sha256": "de56ad1538a95954142a64a6faf297c48d96564544c6f1ea1947a5a7a1974bf5",
+            "text": "活動窗格：最近一次被點擊的左側或右側瀏覽器。菜單和鍵盤操作通常適用於該處。"
+          },
+          {
+            "id": "glossary.p002",
+            "source_sha256": "9e944202497daf57a892e77418fbcd6ddd948febb6e71fdac6b8f66941692f17",
+            "text": "編解碼器：用於編碼視頻或音頻的方法，例如 H.264、H.265/HEVC、AV1、AAC 或 Opus。像 MP4 或 MKV 這樣的容器可以包含一個或多個編碼後的串流。"
+          },
+          {
+            "id": "glossary.p003",
+            "source_sha256": "672c8a727345c58eb445fec2a58768fb80215d8aa50e1aedf274abd854620d39",
+            "text": "Remux：將現有的視頻/音頻流複製到另一個容器中而不重新編碼。它快速且無損，但不會改變編解碼器。"
+          },
+          {
+            "id": "glossary.p004",
+            "source_sha256": "5b4c2520b2fcb4ed201a6f159e1d6042244f198a9d54ca2e7e50b21b6430ad98",
+            "text": "CRF/品質：重新編碼的固定品質目標。數字越低表示要求更高的品質和更大的檔案。硬體編碼器會將其轉換為最接近的品質控制。"
+          },
+          {
+            "id": "glossary.p005",
+            "source_sha256": "57f6a48371b1e7d33ef4389ca76d13c11dc500afbed5245024c4eb6695646f8c",
+            "text": "元資料快取：儲存技術結果，以避免反覆檢查未改變的檔案。它與評分、標籤和標記是分開的。"
+          },
+          {
+            "id": "glossary.p006",
+            "source_sha256": "a1bb6a1d6960bc4e1441baca24dc3ae68ea222ac01e819b3e083fcd1a166e6f7",
+            "text": "縮圖快取：生成的預覽圖片保存在磁碟上以便未來訪問更快，並通過 工具 > 緩存與掃描 進行限制。"
+          },
+          {
+            "id": "glossary.p007",
+            "source_sha256": "fa7be14671267800c9e3a8d8f85ceaf1d75c18d830685a91819c692490061aab",
+            "text": "遞迴/包含子資料夾：掃描所選資料夾及其下的所有資料夾。除非選擇了磁碟機根目錄，否則這不表示整個磁碟機。"
+          },
+          {
+            "id": "glossary.p008",
+            "source_sha256": "97af76d3a80e273362782d714bf88bcdcc83ab072222a8994eb06977af0de44c",
+            "text": "智慧集合：一個已保存的檢視定義，包含位置、篩選條件、排序和呈現設定。它不會複製或移動檔案。"
+          }
+        ],
+        "body": "活動窗格：最近一次被點擊的左側或右側瀏覽器。菜單和鍵盤操作通常適用於該處。\n\n編解碼器：用於編碼視頻或音頻的方法，例如 H.264、H.265/HEVC、AV1、AAC 或 Opus。像 MP4 或 MKV 這樣的容器可以包含一個或多個編碼後的串流。\n\nRemux：將現有的視頻/音頻流複製到另一個容器中而不重新編碼。它快速且無損，但不會改變編解碼器。\n\nCRF/品質：重新編碼的固定品質目標。數字越低表示要求更高的品質和更大的檔案。硬體編碼器會將其轉換為最接近的品質控制。\n\n元資料快取：儲存技術結果，以避免反覆檢查未改變的檔案。它與評分、標籤和標記是分開的。\n\n縮圖快取：生成的預覽圖片保存在磁碟上以便未來訪問更快，並通過 工具 > 緩存與掃描 進行限制。\n\n遞迴/包含子資料夾：掃描所選資料夾及其下的所有資料夾。除非選擇了磁碟機根目錄，否則這不表示整個磁碟機。\n\n智慧集合：一個已保存的檢視定義，包含位置、篩選條件、排序和呈現設定。它不會複製或移動檔案。"
+      },
+      {
+        "id": "support_the_project",
+        "title": "支持此專案",
+        "paragraphs": [
+          {
+            "id": "support_the_project.p001",
+            "source_sha256": "62b207421228680770777e66598c8ce79ee121aaee8cd232e847e65dd28e2122",
+            "text": "解析檔案管理器 作為獨立應用程式提供，無需訂閱。如果您覺得它有用並希望支持持續開發，請選擇「說明」>「如果您喜歡這個，買杯咖啡給 John」。同樣的選擇性支持按鈕也出現在「說明」>「關於」，並會在您的普通網頁瀏覽器中打開公共的 JohnPerky 頁面："
+          },
+          {
+            "id": "support_the_project.p002",
+            "source_sha256": "f625bc04cc8dea0548e7e06bf6f5a1bf75532166728133d0f26049dc60b5f0ee",
+            "text": "https://buymeacoffee.com/johnperky"
+          },
+          {
+            "id": "support_the_project.p003",
+            "source_sha256": "f3433f015e63332b4aeaca246443618a7f7f6614bafc5941d7509c71ca191619",
+            "text": "支持這個專案是完全可選的。該應用程序不會自動打開頁面、收集支付信息、追蹤你是否訪問過，或根據支持情況更改任何功能。"
+          },
+          {
+            "id": "support_the_project.p004",
+            "source_sha256": "fb8e1f1b4be83a666d0f808238dffefa4cc8b5369dc8b4d25aa74a5d499c5f7a",
+            "text": "評分和可選提醒"
+          },
+          {
+            "id": "support_the_project.reminder_timing",
+            "source_sha256": "b00a39416f2e0c07132850cca60bde12e893c16cbfd085f4b8a29fe722bf6d8e",
+            "text": "在至少三天內進行五次啟動後，應用程式可能會邀請你在 Microsoft Store 評分。稍後 會將請求延後十次啟動。可選的咖啡提醒從第 11 次啟動開始，並且僅在 也許稍後 之後的每 11 次啟動重複。不再詢問 可禁用任一提醒；工具 > 提醒可以重新啟用它。只有在你按下其明確按鈕後，頁面才會打開。"
+          },
+          {
+            "id": "support_the_project.reminder_settings",
+            "source_sha256": "aeec7ca97a52107645156aa31a220d7a33d6f136fde87d37a08a2729e511a24e",
+            "text": "選擇 工具 > 提醒事項… 以分別控制評分及支援提示。勾選提示以啟用或取消勾選以停用，然後儲存。取消 保留當前選擇不變。"
+          }
+        ],
+        "body": "解析檔案管理器 作為獨立應用程式提供，無需訂閱。如果您覺得它有用並希望支持持續開發，請選擇「說明」>「如果您喜歡這個，買杯咖啡給 John」。同樣的選擇性支持按鈕也出現在「說明」>「關於」，並會在您的普通網頁瀏覽器中打開公共的 JohnPerky 頁面：\n\nhttps://buymeacoffee.com/johnperky\n\n支持這個專案是完全可選的。該應用程序不會自動打開頁面、收集支付信息、追蹤你是否訪問過，或根據支持情況更改任何功能。\n\n評分和可選提醒\n\n在至少三天內進行五次啟動後，應用程式可能會邀請你在 Microsoft Store 評分。稍後 會將請求延後十次啟動。可選的咖啡提醒從第 11 次啟動開始，並且僅在 也許稍後 之後的每 11 次啟動重複。不再詢問 可禁用任一提醒；工具 > 提醒可以重新啟用它。只有在你按下其明確按鈕後，頁面才會打開。\n\n選擇 工具 > 提醒事項… 以分別控制評分及支援提示。勾選提示以啟用或取消勾選以停用，然後儲存。取消 保留當前選擇不變。"
+      }
+    ]
+  },
+  "literals": {
+    "Confirm": "確認",
+    "Move {field0} to the Recycle Bin / Trash?": "將 {field0} 移到資源回收筒 / 垃圾桶？",
+    "Synchronize preview": "同步預覽",
+    "Queue {field0} file(s) for copying to the {field1} pane?": "將 {field0} 個檔案排入佇列以複製到 {field1} 窗格？",
+    "Keyboard shortcuts": "鍵盤快速鍵",
+    "Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file": "Ctrl+A   選取所有顯示項目\nCtrl+C   複製所選項目\nCtrl+X   剪下所選項目\nCtrl+V   貼到活動窗格\nCtrl+Z   撤銷最後的檔案操作\nDelete   將所選檔案移到資源回收筒/垃圾桶\nF2       重新命名所選檔案\nF5       更新兩個窗格\nBackspace   返回上一個資料夾\n, (逗號)   活動預覽向後 10%\n. (句點)   活動預覽向前 10%\n雙擊   開啟檔案",
+    "Folder not found": "找不到資料夾",
+    "This folder does not exist:\n{field0}": "此資料夾不存在：\n{field0}",
+    "Not enough videos": "影片數量不足",
+    "At least two visible videos with readable durations are needed for comparison.": "至少需要兩個可見且可讀取時長的影片以便比較。",
+    "No size outliers": "無大小異常",
+    "No visible video is at least {field0}× the average data rate of {field1} MB/min.": "沒有可見影片的資料率至少為 {field0}× 平均資料率 {field1} MB/分鐘。",
+    "Some dropped files failed": "部分丟失的檔案處理失敗",
+    "Could not reveal some files": "無法顯示某些檔案",
+    "Select one file": "選擇一個檔案",
+    "Select exactly one file to rename.": "請正確選擇一個要重新命名的檔案。",
+    "Invalid filename": "檔名無效",
+    "Enter a filename without folder separators.": "請輸入不含資料夾分隔符的檔名。",
+    "File already exists": "檔案已存在",
+    "A file named {field0} already exists.": "名為 {field0} 的檔案已存在。",
+    "Nothing selected": "未選擇任何項目",
+    "Select one or more files in the active pane first.": "請先在活動窗格中選擇一個或多個檔案。",
+    "Confirm {field0}": "確認 {field0}",
+    "{field0} {field1} file(s) to:\n{field2}?": "將 {field0} {field1} 個檔案到：\n{field2}？",
+    "Some files failed": "有些檔案失敗",
+    "Finished": "完成",
+    "Successfully {field0} {field1} file(s).": "成功 {field0} {field1} 個檔案。",
+    "Unknown choice": "未知選擇",
+    "Use replace, skip, keep both, or newer.": "使用取代、跳過、保留兩者或較新版本。",
+    "Batch rename": "批量重新命名",
+    "Select one or more files first.": "請先選擇一個或多個檔案。",
+    "Batch rename complete": "批次重新命名完成",
+    "Renamed {field0} file(s). Use Ctrl+Z to undo the batch.": "已重新命名 {field0} 個檔案。使用 Ctrl+Z 來撤銷批次。",
+    "Nothing to retry": "無需重試",
+    "The last transfer had no failed files.": "上次傳輸沒有失敗的檔案。",
+    "Transfer active": "傳輸進行中",
+    "Wait for the current transfer to finish before undoing.": "請等待目前的傳輸完成後再進行撤銷。",
+    "Nothing to undo": "無需撤銷",
+    "There are no recent copy, move, replacement, or rename actions.": "沒有最近的複製、移動、替換或重新命名操作。",
+    "Undo incomplete": "取消操作未完成",
+    "Undo complete": "取消操作完成",
+    "The most recent file operation was undone.": "最近的檔案操作已被取消。",
+    "Move to Recycle Bin": "移動到資源回收筒",
+    "Move {field0} selected file(s) to the Recycle Bin / Trash?": "將 {field0} 個選取的檔案移動到資源回收筒 / 垃圾桶？",
+    "Some files could not be removed": "某些檔案無法刪除",
+    "Embedded metadata": "內嵌的元資料",
+    "Select exactly one image or video first.": "請先選擇一個圖像或影片。",
+    "Create video contact sheet": "建立影片聯絡表",
+    "Select exactly one video first.": "請先選擇一個影片。",
+    "Similar image search": "相似圖像搜尋",
+    "No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).": "在容差 {field0} 下未找到視覺相似群組。\n\n{field1} 個快取雜湊；{field2} 個無法讀取的圖像。",
+    "Select two files": "選擇兩個檔案",
+    "Select exactly two files to compare.": "請選擇正好兩個檔案以進行比較。",
+    "Nothing to synchronize": "沒有需要同步的項目",
+    "No selected files need copying in that direction.": "在該方向上沒有選定的檔案需要複製。",
+    "No workspaces": "沒有工作區",
+    "Save a workspace first.": "請先保存工作區。",
+    "Collection folder unavailable": "集合資料夾不可用",
+    "The saved folder does not currently exist:\n{field0}": "已保存的資料夾目前不存在：\n{field0}",
+    "Cache pruned": "快取已修剪",
+    "Removed {field0} stale entry/entries.": "已移除 {field0} 個過期項目。",
+    "Clear cache": "清除快取",
+    "Clear all cached metadata? Files will be rescanned next time.": "清除所有快取的資料？檔案將在下次重新掃描。",
+    "Clear thumbnail cache": "清除縮圖快取",
+    "Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.": "使用 {field1} 刪除 {field0} 個已儲存的縮圖？\n\n原始媒體檔案和資料不會被更動。",
+    "Settings": "設定",
+    "{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.": "{field0} 性能設置、掃描選項和縮圖快取限制已保存。快取限制正在後台執行。",
+    "Live updates unavailable": "即時更新不可用",
+    "The folder-monitoring component is not installed.": "資料夾監控元件未安裝。",
+    "Reveal many files?": "要顯示許多檔案嗎？",
+    "{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.": "{field0} 個檔案已被選取。顯示所有檔案可能會開啟大量檔案管理視窗。\n\n選擇「是」以顯示每個選取的檔案，或選擇「否」只顯示第一個。",
+    "Rename failed": "重新命名失敗",
+    "Confirm batch rename": "確認批次重新命名",
+    "Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.": "確定要將 {field0} 個檔案完全依預覽名稱重新命名嗎？\n\n整個批次可以透過 Ctrl+Z 還原。",
+    "Batch rename failed": "批次重新命名失敗",
+    "No completed rename was kept where rollback was possible.\n\n{field0}": "沒有保留已完成的重新命名，若可以回滾的情況下。\n\n{field0}",
+    "Nothing to export": "沒有可匯出的內容",
+    "The chosen scope contains no media files.": "所選範圍內不包含媒體檔案。",
+    "Nothing to verify": "沒有可驗證的內容",
+    "Not enough images": "圖片不足",
+    "The chosen scope contains fewer than two images.": "所選範圍內的圖片少於兩張。",
+    "Could not save workspace": "無法儲存工作區",
+    "Replace smart collection": "替換智慧收藏",
+    "Replace the existing collection named {field0}?": "是否要替換名為 {field0} 的現有集合？",
+    "Could not save collection": "無法保存集合",
+    "Invalid rule": "無效的規則",
+    "Enter a rule name.": "請輸入規則名稱。",
+    "Choose a destination folder.": "選擇目標資料夾。",
+    "Apply folder rules": "套用資料夾規則",
+    "Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.": "是否要將 {field0} 加入排程複製/移動操作？\n\n現有目標將使用一般衝突選項。移動和替換仍可還原。",
+    "Delete rule": "刪除規則",
+    "Delete rule '{field0}'?": "刪除規則 '{field0}'?",
+    "Cache cleared": "快取已清除",
+    "Removed {field0} metadata entries and cached thumbnails.": "已移除 {field0} 筆元資料條目與快取縮圖。",
+    "Thumbnail cache": "縮圖快取",
+    "The thumbnail cache is already empty.": "縮圖快取已經是空的。",
+    "Thumbnail cache cleared": "縮圖快取已清除",
+    "Deleted {field0} thumbnail(s) and freed {field1}.": "已刪除 {field0} 個縮圖並釋放 {field1}。",
+    "Could not monitor folder": "無法監視資料夾",
+    "Live updates could not be enabled for:\n{field0}\n\n{field1}": "無法啟用即時更新:\n{field0}\n\n{field1}",
+    "Could not open file": "無法開啟檔案",
+    "Frame exported": "框架已匯出",
+    "Metadata exported": "已匯出元資料",
+    "Saved {field0} field(s).": "已保存 {field0} 個欄位。",
+    "Metadata unavailable": "元資料不可用",
+    "Report exported": "報告已匯出",
+    "Saved {field0} result(s).": "已保存 {field0} 個結果。",
+    "Invalid settings": "無效設置",
+    "Use whole numbers for frames, columns, and width.": "框架、列和寬度請使用整數。",
+    "Invalid tolerance": "無效的公差",
+    "Enter a whole number from 0 to 16.": "請輸入 0 到 16 的整數。",
+    "Replace collection": "替換集合",
+    "Replace {field0}?": "替換 {field0}？",
+    "Delete smart collection": "刪除智慧集合",
+    "Delete {field0}?\n\nNo media files or annotations will be changed.": "刪除 {field0}？\n\n媒體檔案或註解不會被更改。",
+    "Invalid rating": "無效的評分",
+    "Minimum rating must be a whole number from 0 to 5.": "最低評分必須是從 0 到 5 的整數。",
+    "Frame export failed": "影格匯出失敗",
+    "Could not export metadata": "無法匯出元資料",
+    "Could not export report": "無法匯出報告",
+    "Contact sheet complete": "聯絡表完成",
+    "Report export failed": "報告匯出失敗",
+    "Contact sheet failed": "聯絡表失敗",
+    "Removed {field0} least-recently-used thumbnail(s).": "已移除 {field0} 個最少使用的縮圖。",
+    "Add": "新增",
+    "All non-empty conditions must match. Rules are checked from top to bottom; the first match wins.": "所有非空條件都必須符合。規則從上到下檢查；第一個符合者生效。",
+    "Appearance and accessibility": "外觀與可及性",
+    "Appearance and text size": "外觀與文字大小",
+    "Apply": "套用",
+    "Apply rename": "套用重新命名",
+    "Applying a collection changes only the active pane's folder, filters, sorting, and view.": "套用集合僅會更改活動窗格的資料夾、篩選條件、排序和檢視。",
+    "Apply…": "套用…",
+    "Batch rename selected files": "批次重新命名所選檔案",
+    "Browse…": "瀏覽…",
+    "Cache and scanning": "緩存與掃描",
+    "Cached": "已緩存",
+    "Cancel": "取消",
+    "Cancel current": "取消當前",
+    "Cancel export": "取消匯出",
+    "Case sensitive": "區分大小寫",
+    "Changes are previewed immediately. Cancel restores the previous appearance.": "變更會立即預覽。取消將恢復先前的外觀。",
+    "Choose rule destination": "選擇規則目的地",
+    "Clear all cache": "清除所有快取",
+    "Clear thumbnails": "清除縮圖",
+    "Close": "關閉",
+    "Collection name:": "收藏名稱：",
+    "Compare files": "比較檔案",
+    "Contents": "內容",
+    "Copy missing/newer → left": "複製缺失/更新的 → 左邊",
+    "Copy missing/newer → right": "複製缺失/較新 → 右",
+    "Copy selected/all": "複製選取/全部",
+    "Create…": "建立…",
+    "Current name": "當前名稱",
+    "Delete": "刪除",
+    "Details": "詳細資訊",
+    "Edit": "編輯",
+    "Edit tags": "編輯標籤",
+    "Enforce limit now": "立即強制限制",
+    "Examples: *.tmp; proxy/*; @eaDir/*": "範例：*.tmp; proxy/*; @eaDir/*",
+    "Exclude patterns (semicolon separated):": "排除模式（以分號分隔）：",
+    "Export CSV…": "匯出 CSV…",
+    "Export current video frame": "匯出當前影片畫面",
+    "Export embedded metadata": "匯出內嵌元資料",
+    "Export integrity report": "匯出完整性報告",
+    "Export JSON…": "匯出 JSON…",
+    "Export media report": "導出媒體報告",
+    "Exports technical details, annotations, file status, and a library summary without changing media.": "匯出技術細節、註解、檔案狀態以及庫摘要，而不更改媒體。",
+    "Export…": "匯出…",
+    "File conflicts": "檔案衝突",
+    "Filename.jpg   1920 × 1080   H.265 / HEVC": "Filename.jpg   1920 × 1080   H.265 / HEVC",
+    "Find visually similar images": "尋找外觀相似的圖片",
+    "Find:": "查找：",
+    "Folder": "資料夾",
+    "Folder comparison and synchronization": "資料夾比較與同步",
+    "Folder organization rules": "資料夾組織規則",
+    "Force recheck": "強制重新檢查",
+    "Format:": "格式：",
+    "Include full file paths": "包含完整檔案路徑",
+    "Interface scale:": "介面縮放：",
+    "Keep left (recycle right)": "靠左行駛（靠右回收）",
+    "Keep right (recycle left)": "保持右側（左側回收）",
+    "Load workspace": "加載工作區",
+    "Loading preview…": "正在加載預覽…",
+    "Lower values are stricter. 6 is a useful starting point for resized or lightly recompressed copies.": "較低的數值表示更嚴格。6 是調整尺寸或稍微重新壓縮的副本的有用起點。",
+    "Maximum percentage of operating-system drive:": "作業系統磁碟的最大百分比：",
+    "Media integrity verification": "媒體完整性驗證",
+    "Media inventory report": "媒體庫存報告",
+    "Move left": "向左移動",
+    "Move right": "向右移動",
+    "Name": "名稱",
+    "New filename:": "新檔案名稱：",
+    "New name": "新名稱",
+    "New name:": "新名稱：",
+    "Number padding:": "數字填充：",
+    "Parallel metadata workers (1–16):": "平行元資料工作者 (1–16)：",
+    "Path": "路徑",
+    "Pause": "暫停",
+    "Perceptual image matching": "知覺影像匹配",
+    "Performance profile:": "性能概況：",
+    "Preserve folders relative to the active pane": "保留與活動窗格相關的資料夾",
+    "Preview": "預覽",
+    "Preview active pane…": "預覽活動窗格…",
+    "Preview folder organization rules": "預覽資料夾組織規則",
+    "Preview only until Apply is confirmed. The first enabled matching rule wins.": "僅在確認應用前預覽。第一個啟用的匹配規則獲勝。",
+    "Query": "查詢",
+    "Refresh preview": "刷新預覽",
+    "Relative path": "相對路徑",
+    "Remove stale entries": "移除過期條目",
+    "Rename": "重新命名",
+    "Rename file": "重新命名檔案",
+    "Rename pattern": "重新命名模式",
+    "Rename smart collection": "重新命名智慧型收藏",
+    "Replace:": "替換：",
+    "Reset widths": "重設寬度",
+    "Resolution File Manager": "解析檔案管理器",
+    "Restore system default": "還原系統預設",
+    "Retry failed": "重試失敗",
+    "Review visually similar images": "檢視視覺上相似的圖片",
+    "Review-only: this tool never deletes or changes files.": "僅供檢視：此工具從不刪除或更改檔案。",
+    "Rule enabled": "規則已啟用",
+    "Rules are evaluated from top to bottom. Files are never changed until a preview is reviewed and Apply is confirmed.": "規則會從上到下進行評估。在預覽被檢視並確認應用之前，檔案不會被更改。",
+    "Sample button": "範例按鈕",
+    "Save": "儲存",
+    "Save contact sheet": "儲存連絡表",
+    "Save current": "儲存當前",
+    "Save media report": "保存媒體報告",
+    "Save rule": "保存規則",
+    "Save smart collection": "保存智慧收藏",
+    "Save workspace": "保存工作區",
+    "Saved one-pane searches": "已保存單窗格搜尋",
+    "Scan settings": "掃描設定",
+    "Scope:": "範圍：",
+    "Select a column, then move it or set its width.": "選擇一個欄位，然後移動它或設定其寬度。",
+    "Select an image": "選擇一張圖片",
+    "Select failed": "選擇失敗",
+    "Select this group in source pane": "在來源窗格中選擇此群組",
+    "Set width": "設置寬度",
+    "Show frame numbers and timestamps": "顯示幀號和時間戳",
+    "Similarity is an estimate. Review files before taking any action; this window cannot delete them.": "相似性是一種估計。在採取任何行動之前請先檢查檔案；此視窗無法刪除它們。",
+    "Similarity tolerance (0–16):": "相似度容差 (0–16)：",
+    "Smart collections": "智慧收集",
+    "Some files already exist. Enter: replace, skip, keep both, or newer": "某些檔案已經存在。請輸入：取代、跳過、保留兩者，或僅保留更新的",
+    "Start": "開始",
+    "Start number:": "起始號碼：",
+    "Status": "狀態",
+    "Template:": "範本：",
+    "Theme:": "主題：",
+    "Thumbnail storage": "縮圖儲存",
+    "Tokens: {name} original name, {n} number, {ext} extension, {dotext} extension including dot": "符號：{name} 原始名稱，{n} 數字，{ext} 副檔名，{dotext} 包含點的副檔名",
+    "Transfer queue": "傳輸佇列",
+    "Undo delete": "復原刪除",
+    "Verify media integrity": "驗證媒體完整性",
+    "Width:": "寬度：",
+    "Workspace name:": "工作區名稱：",
+    "⤓ PNG": "⤓ PNG",
+    "🔇 Unavailable": "🔇 無法使用",
+    "Thumbnails": "縮圖",
+    "Ready": "準備就緒",
+    "Keep both": "保留兩者",
+    "Filename": "檔案名稱",
+    "Move": "移動",
+    "Copy": "複製",
+    "Cancelled": "已取消",
+    "Add to selection basket": "加入選擇籃",
+    "New folder…": "新資料夾ÔÇª",
+    "Selection basket…": "選擇籃ÔÇª",
+    "Selection basket": "選擇籃",
+    "Highlighted files:": "已標示的檔案：",
+    "Tick selection": "勾選選擇項",
+    "Untick selection": "取消勾選選擇項",
+    "Undo in progress…": "復原進行中…",
+    "\nUnfinished recovery steps and backups were retained. Close applications using these files, then press Undo again.": "\n未完成的恢復步驟和備份已被保留。關閉使用這些檔案的應用程式，然後按復原再次。",
+    "Undo would overwrite an existing file: {target}. Both files were retained.": "復原將會覆寫現有的檔案：{target}. 兩個檔案均已保留。",
+    "Undo target is missing; recovery retained: {target}": "復原目標遺失；已保留恢復：{target}",
+    "Undo backup is missing: {backup}": "復原備份遺失：{backup}",
+    "New folder": "新資料夾",
+    "Folder name:": "資料夾名稱：",
+    "Filename conflict": "檔案名稱衝突",
+    "Rename file — live preview": "重新命名檔案– 即時預覽",
+    "Could not create folder": "無法建立資料夾",
+    "Select or tick files first.": "請先選擇或勾選檔案。",
+    "Move files": "移動檔案",
+    "Copy files": "複製檔案",
+    "Ask for each conflict": "詢問每個衝突",
+    "keep both": "保留兩者",
+    "Replace": "替換",
+    "Skip": "跳過",
+    "Selection basket — temporary references": "選擇籃 — 臨時參考",
+    "Original location": "原始位置",
+    "Add pane selection": "新增窗格選取",
+    "Remove references": "移除參考",
+    "Clear basket": "清除籃子",
+    "Copy to active pane": "複製到活動窗格",
+    "Move to active pane": "移動到活動窗格",
+    "Source missing": "來源遺失",
+    " files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "檔案。在排隊前會檢查衝突。替換會為本次會話保留一個還原備份。",
+    "Queue move": "排隊移動",
+    "Queue copy": "排隊複製",
+    "Unsafe destination": "不安全的目標位置",
+    "A destination is one of the selected source files. Choose another folder.": "目標位置是所選擇的來源檔案之一。請選擇其他資料夾。",
+    "New filename: ": "新檔案名稱：",
+    "Destination now exists. Choose another name.": "目標已存在。請選擇另一個名稱。",
+    "Destination folder:": "目標資料夾：",
+    "Preserve folder structure": "保留資料夾結構",
+    "Files only (no subfolders)": "檔案僅限 (不含子資料夾)",
+    "If a destination filename already exists:": "如果目標檔案名稱已存在：",
+    "Open destination when complete": "打開 完成時的目的地",
+    "Destination is a selected source": "目的地是已選擇的來源",
+    "Apply to all remaining conflicts": "套用解決所有剩餘的衝突",
+    "Hide basket": "隱藏籃子",
+    "Treeview": "樹狀檢視",
+    "Destination is a folder": "目的地是一個資料夾",
+    " to ": "至",
+    "Source: ": "來源:",
+    "\n\nDestination: ": "\n目的地:",
+    "\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "\n保留兩者創建一個帶編號的檔名。替換會備份本次會話的目標檔案復原",
+    "Current filename: ": "目前檔案名稱：",
+    "Duplicate destination name": "重複的目的地名稱",
+    " [missing]": "［遺失］",
+    "Existing destination": "現有的目的地",
+    "Enter a valid folder name without slashes, reserved names or trailing spaces/dots.": "請輸入有效的資料夾名稱，不能包含斜線、保留名稱或尾隨的空格/點。",
+    "Source and destination are the same file; nothing was changed.": "來源目的地和來源是同一個檔案；沒有任何更改。",
+    "Undo would overwrite an existing file: ": "復原將會覆蓋現有檔案：",
+    "Undo stopped because this file changed after transfer: ": "復原已停止，因為此檔案在傳輸後已更改：",
+    "Source changed during transfer; retained original. Retry after writing finishes.": "來源在傳輸過程中已更改；保留原始。寫入完成後重試。",
+    "Undo target is missing; recovery retained: ": "復原目標缺失；恢復保留：",
+    "Undo backup is missing: ": "復原備份遺失：",
+    "Destination changed; retry: ": "目的地已更改；重試：",
+    "{count} files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "{count}檔案。在排隊之前會檢查衝突。取代會為此工作階段保留一個還原備份。",
+    "Source: {source}\n\nDestination: {target}\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "來源: {source}目的地：{target}\n\n保留兩者創建一個帶編號的檔名。替換會備份本次會話的目標檔案復原.",
+    "Current filename: {name}": "目前檔名: {name}",
+    "New filename: {name}\n{status}": "新檔案名稱： {name}\n{status}",
+    "Source": "來源",
+    "Destination": "目的地",
+    "[missing]": "[遺失]",
+    "Unchanged": "未更改",
+    "Name cannot be empty": "名稱 不能為空",
+    "Name contains a forbidden character": "名稱 含有禁止字元",
+    "Name cannot end with a space or dot": "名稱 不能以空格或點結尾",
+    "Reserved Windows filename": "保留的 Windows 檔名",
+    "Duplicate output name": "輸出檔名重複 名稱",
+    "A file with this name already exists": "已存在具有此名稱的檔案",
+    "Invalid template: {error}": "無效的範本: {error}",
+    "Undo stopped because this file changed after transfer: {path}. The file was retained.": "復原已停止，因為此檔案在傳輸後已更改：{path}。該檔案已保留。",
+    "Destination changed; retry: {target}": "目的地已更改；重試：{target}",
+    "{ready} file(s) ready · {unchanged} unchanged · {problems} problem(s)": "{ready} 檔案已準備 ┬À {unchanged} 未更改 ┬À {problems} 遇到問題",
+    "Start and padding must be whole numbers.": "開始 和填充必須為整數。"
+  }
+}

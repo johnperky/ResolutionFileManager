@@ -1,0 +1,47 @@
+[
+  {
+    "language": "en",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 19,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ar",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 19,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "he",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 19,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ur",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 19,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "fa",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 19,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  }
+]

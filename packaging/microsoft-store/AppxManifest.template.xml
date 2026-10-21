@@ -17,6 +17,48 @@
   </Properties>
   <Resources>
     <Resource Language="en-gb" />
+    <Resource Language="bg-bg" />
+    <Resource Language="de-de" />
+    <Resource Language="el-gr" />
+    <Resource Language="es-es" />
+    <Resource Language="fil-ph" />
+    <Resource Language="fr-fr" />
+    <Resource Language="hi-in" />
+    <Resource Language="id-id" />
+    <Resource Language="it-it" />
+    <Resource Language="ar-sa" />
+    <Resource Language="vi-vn" />
+    <Resource Language="uk-ua" />
+    <Resource Language="nb-no" />
+    <Resource Language="fi-fi" />
+    <Resource Language="da-dk" />
+    <Resource Language="hu-hu" />
+    <Resource Language="ro-ro" />
+    <Resource Language="cs-cz" />
+    <Resource Language="pt-pt" />
+    <Resource Language="pt-br" />
+    <Resource Language="tr-tr" />
+    <Resource Language="zh-tw" />
+    <Resource Language="ms-my" />
+    <Resource Language="he-il" />
+    <Resource Language="bn-bd" />
+    <Resource Language="ur-pk" />
+    <Resource Language="fa-ir" />
+    <Resource Language="sk-sk" />
+    <Resource Language="hr-hr" />
+    <Resource Language="sr-cyrl-rs" />
+    <Resource Language="ca-es" />
+    <Resource Language="et-ee" />
+    <Resource Language="lv-lv" />
+    <Resource Language="lt-lt" />
+    <Resource Language="ja-jp" />
+    <Resource Language="ko-kr" />
+    <Resource Language="nl-nl" />
+    <Resource Language="pl-pl" />
+    <Resource Language="ru-ru" />
+    <Resource Language="sv-se" />
+    <Resource Language="th-th" />
+    <Resource Language="zh-cn" />
   </Resources>
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26100.0" />

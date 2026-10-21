@@ -5,6 +5,7 @@ import re
 import string
 from pathlib import Path
 from typing import Any
+from rtl_display import display_text
 
 
 SUPPORTED_LANGUAGES = {
@@ -17,7 +18,47 @@ SUPPORTED_LANGUAGES = {
     "ko": "한국어",
     "ru": "Русский",
     "es": "Español",
+    "sv": "Svenska",
+    "bg": "Български",
+    "th": "ไทย",
+    "id": "Bahasa Indonesia",
+    "el": "Ελληνικά",
+    "fil": "Filipino",
+    "hi": "हिन्दी",
+    "pl": "Polski",
+    "it": "Italiano",
+    "ar": "العربية",
+    "vi": "Tiếng Việt",
+    "uk": "Українська",
+    "no": "Norsk",
+    "fi": "Suomi",
+    "da": "Dansk",
+    "hu": "Magyar",
+    "ro": "Română",
+    "cs": "Čeština",
+    "pt-PT": "Português (Portugal)",
+    "pt-BR": "Português (Brasil)",
+    "tr": "Türkçe",
+    "zh-TW": "繁體中文",
+    "ms": "Bahasa Melayu",
+    "he": "עברית",
+    "bn": "বাংলা",
+    "ur": "اردو",
+    "fa": "فارسی",
+    "sk": "Slovenčina",
+    "hr": "Hrvatski",
+    "sr": "Српски",
+    "ca": "Català",
+    "et": "Eesti",
+    "lv": "Latviešu",
+    "lt": "Lietuvių",
 }
+
+RTL_LANGUAGES = frozenset({"ar", "he", "ur", "fa"})
+
+
+def is_rtl_language(language: str | None) -> bool:
+    return bool(language in RTL_LANGUAGES)
 
 
 def normalise_locale(value: str | None) -> str:
@@ -29,10 +70,31 @@ def normalise_locale(value: str | None) -> str:
         "english": "en", "chinese": "zh-CN", "dutch": "nl",
         "french": "fr", "german": "de", "japanese": "ja",
         "korean": "ko", "russian": "ru", "spanish": "es",
+        "swedish": "sv", "bulgarian": "bg", "thai": "th",
+        "indonesian": "id", "greek": "el", "filipino": "fil",
+        "hindi": "hi",
+        "polish": "pl",
+        "italian": "it",
+        "arabic": "ar", "vietnamese": "vi", "ukrainian": "uk",
+        "norwegian": "no", "finnish": "fi", "danish": "da",
+        "hungarian": "hu", "romanian": "ro", "czech": "cs",
+        "portuguese": "pt-PT", "turkish": "tr", "malay": "ms",
+        "hebrew": "he", "bengali": "bn", "bangla": "bn",
+        "urdu": "ur", "persian": "fa", "slovak": "sk",
+        "croatian": "hr", "serbian": "sr", "catalan": "ca",
+        "estonian": "et", "latvian": "lv", "lithuanian": "lt",
     }
+    if lowered.startswith(("zh-tw", "zh-hant", "zh-hk", "zh-mo")) or "traditional" in lowered:
+        return "zh-TW"
     if lowered.startswith("zh") or lowered.startswith("chinese"):
         return "zh-CN"
+    if lowered.startswith("pt-br") or "portuguese-brazil" in lowered:
+        return "pt-BR"
+    if lowered.startswith("pt") or lowered.startswith("portuguese"):
+        return "pt-PT"
     base = lowered.split("-", 1)[0]
+    if base in {"nb", "nn"}:
+        return "no"
     if base in SUPPORTED_LANGUAGES:
         return base
     return next((code for name, code in aliases.items() if base.startswith(name)), "en")
@@ -85,14 +147,17 @@ class Translator:
             self.diagnostics.append(f"Missing English translation: {key}")
             return key
         try:
-            return value.format(**values)
+            return self.display(value.format(**values))
         except (KeyError, ValueError, IndexError) as exc:
             self.diagnostics.append(f"Could not format {key}: {exc}")
             fallback = english_strings.get(key, value)
             try:
-                return fallback.format(**values)
+                return self.display(fallback.format(**values))
             except (KeyError, ValueError, IndexError):
                 return fallback
+
+    def display(self, value: str) -> str:
+        return display_text(value,self.language)
 
     def help_chapters(self) -> list[tuple[str, str]]:
         english = self._chapter_map(self._english)
@@ -100,6 +165,23 @@ class Translator:
         chapters: list[tuple[str, str]] = []
         for chapter_id, title, body in english:
             translated = next((entry for entry in selected if entry[0] == chapter_id), None)
+            if self._english.get("help", {}).get("schema", 0) >= 2 and self.language != "en":
+                source_help = self._english["help"]
+                selected_help = self._selected.get("help", {})
+                source_chapter = next(c for c in source_help["chapters"] if c["id"] == chapter_id)
+                selected_chapter = next((c for c in selected_help.get("chapters", []) if c.get("id") == chapter_id), {})
+                expected_ids = [p["id"] for p in source_chapter.get("paragraphs", [])]
+                selected_paragraphs = selected_chapter.get("paragraphs", [])
+                complete = (
+                    selected_help.get("schema") == 2
+                    and selected_help.get("master_sha256") == source_help.get("master_sha256")
+                    and [p.get("id") for p in selected_paragraphs] == expected_ids
+                    and all(isinstance(p.get("text"), str) and p["text"].strip() for p in selected_paragraphs)
+                    and selected_chapter.get("body") == "\n\n".join(p["text"] for p in selected_paragraphs)
+                )
+                if not complete:
+                    translated = None
+                    self.diagnostics.append(f"Incomplete Help chapter {chapter_id}; using full English master")
             if translated and translated[1].strip() and translated[2].strip():
                 chapters.append((translated[1], translated[2]))
             else:
@@ -110,12 +192,14 @@ class Translator:
         """Translate a completed dialog string, including catalogued templates."""
         if not isinstance(value, str) or self.language == "en":
             return value
+        if value.startswith("\u200e"):
+            return value
         selected = self._selected.get("literals", {})
         if not isinstance(selected, dict):
             return value
         exact = selected.get(value)
         if isinstance(exact, str) and exact:
-            return exact
+            return self.display(exact)
         for template, translated in selected.items():
             if not isinstance(template, str) or not isinstance(translated, str) or "{" not in template:
                 continue
@@ -131,7 +215,7 @@ class Translator:
             if match:
                 values = {name: match.group(safe_name) for name, safe_name in field_names}
                 try:
-                    return translated.format(**values)
+                    return self.display(translated.format(**values))
                 except (KeyError, ValueError, IndexError):
                     return value
         return value

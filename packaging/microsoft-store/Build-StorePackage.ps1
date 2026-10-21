@@ -2,7 +2,7 @@ param(
     [Parameter(Mandatory = $true)] [string] $IdentityName,
     [Parameter(Mandatory = $true)] [string] $Publisher,
     [Parameter(Mandatory = $true)] [string] $PublisherDisplayName,
-    [string] $Version = "12.3.0.0"
+    [string] $Version = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -15,12 +15,19 @@ $sourceExe = Join-Path $projectRoot "dist\ResolutionFileManager.exe"
 $sourceIcon = Join-Path $projectRoot "app_icon.png"
 $makeAppx = "C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\makeappx.exe"
 
+if ([string]::IsNullOrWhiteSpace($Version)) {
+    $releaseVersion = (Get-Content -LiteralPath (Join-Path $projectRoot "VERSION.txt") -Raw).Trim()
+    $Version = "$releaseVersion.0"
+}
+
 if (-not (Test-Path -LiteralPath $sourceExe)) { throw "Missing executable: $sourceExe" }
 if (-not (Test-Path -LiteralPath $sourceIcon)) { throw "Missing icon: $sourceIcon" }
 if (-not (Test-Path -LiteralPath $makeAppx)) { throw "MakeAppx.exe was not found. Install the Windows 10/11 SDK." }
 if ($Version -notmatch '^([1-9][0-9]{0,4})\.([0-9]{1,5})\.([0-9]{1,5})\.0$') {
     throw "Store versions must use four numeric sections and end in .0, for example 12.2.2.0."
 }
+python (Join-Path $projectRoot "verify_release_assets.py") $projectRoot $sourceExe
+if ($LASTEXITCODE -ne 0) { throw "Store executable validation failed. Build the current Windows executable first." }
 
 Remove-Item -LiteralPath $stageRoot -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Path $assetRoot -Force | Out-Null

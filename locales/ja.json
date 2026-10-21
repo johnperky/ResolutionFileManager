@@ -1,26 +1,1561 @@
-{"meta":{"language":"日本語"},"strings":{
-"app.title":"Resolution File Manager {version}","menu.file":"ファイル","menu.edit":"編集","menu.view":"表示","menu.tools":"ツール","menu.help":"ヘルプ","menu.language":"言語","menu.reminders":"リマインダー…","menu.how_to":"Resolution File Manager の使い方","menu.about":"バージョン情報",
-"duplicates.title":"重複","duplicates.none_candidates":"同じサイズの重複候補が見つかりませんでした。","duplicates.quick_start":"{count} の重複候補をクイックチェックしています…","duplicates.quick_progress":"{total} の重複 {current} をクイックチェックしています…","duplicates.verify_progress":"{total} の {current} が完全に一致することを確認しています…","duplicates.complete_title":"重複検索が完了しました","duplicates.none":"正確な重複は見つかりませんでした。","duplicates.none_status":"正確な重複は見つかりません · {cached} キャッシュされたフィンガープリント","duplicates.groups_status":"{groups} 完全に重複したグループ · {cached} キャッシュされたフィンガープリント","duplicates.first":"まず","duplicates.newest":"最新の","duplicates.oldest":"最古の","duplicates.smallest":"最小","duplicates.largest":"最大の","duplicates.review_title":"完全な重複を確認する","duplicates.found":"{count} 個の完全な重複グループが見つかりました。行を選択して、同じグループの別のコピーと並べてプレビューします。","duplicates.explanation":"完全な複製は内容とファイル サイズが同一であるため、通常、最小値と最大値は同数になります。日付と場所は異なる場合があります。","duplicates.preview":"{number} をプレビューする","duplicates.select":"重複を選択してください","duplicates.group":"グループ","duplicates.filename":"ファイル名","duplicates.folder":"フォルダー","duplicates.size":"サイズ","duplicates.modified":"修正済み","duplicates.reason":"なぜ保管されるのか","duplicates.loading":"プレビューを読み込み中…","duplicates.keep_one":"グループごとに 1 つずつ保持します。","duplicates.clear":"明確な提案","duplicates.close":"変更せずに閉じます","duplicates.proposal_status":"重複したプロポーザル: {strategy} · 選択した {count} の冗長ファイルをレビューのために保持します","duplicates.applied_title":"重複したプロポーザルが適用されました","duplicates.applied_body":"各グループの {strategy} コピーは選択されないままでした。\n\n{count} 冗長ファイルがメイン ペインで選択されています。何かを移動または削除する前に、そこで確認してください。",
-"convert.title":"選択したビデオを変換する","convert.select_first_title":"ビデオを変換する","convert.select_first":"まず 1 つ以上のビデオ ファイルを選択します。","convert.settings":"変換設定","convert.preset":"プリセット:","convert.quality":"品質 (CRF):","convert.resolution":"解決策:","convert.resolution_help":"1080p と 720p では、アスペクト比を維持しながら出力の高さを設定します。","convert.quality_help":"品質値が低いほど、より高い品質が要求されます。ハードウェア エンジンは、この値を独自のコントロールにマップします。 Remux は品質と解像度を無視します。","convert.engine":"エンコードエンジン:","convert.hardware_decode":"可能な場合はハードウェア デコードを使用する","convert.output_folder":"出力フォルダー:","convert.choose_output":"変換出力フォルダーを選択してください","convert.preserve_folders":"アクティブなペインを基準にしてフォルダを保持する","convert.skip_existing":"既存をスキップする","convert.keep_both":"両方とも保管しておいてください","convert.originals_retained":"元のビデオは常に保持されます。開始する前に、すべての出力パスを確認してください。","convert.status":"ステータス","convert.source":"ソース","convert.output":"出力","convert.result":"結果","convert.remux_help":"Remux はストリームを直接コピーします。エンコード、サイズ変更、ハードウェア デコードは使用されません。","convert.none_reported":"何も報告されていない","convert.cpu_fallback":"なし;自動ではCPUを使用します","convert.capabilities":"FFmpeg ハードウェア エンコーダのサポート: {hardware} · デコード メソッド: {decode}","convert.capability_failed":"機能チェックに失敗しました: {error} · ソフトウェア エンコードは引き続き利用可能です","convert.choose_folder":"出力フォルダーを選択します。","convert.preview_summary":"{ready} 準備完了 · {skipped} スキップ/問題 · ソース サイズ {size}","convert.invalid_quality":"無効な品質","convert.invalid_quality_body":"CRF は 18 ～ 35 の整数でなければなりません。","convert.engine_unavailable":"エンコードエンジンが使用不可","convert.engine_unavailable_body":"{engine} は {preset} では使用できません。別のエンジンを選択してください。","convert.unchanged":"変更なし（ストリームコピー）","convert.decode_unused":"使用されません（ストリームコピー）","convert.decode_fallback":"安全なフォールバックでリクエストされました","convert.off":"オフ","convert.confirm_title":"ビデオ変換を開始する","convert.confirm_body":"{count} 新しいビデオ ファイルを作成しますか?\n\nエンコーディング: {engine}\n解決策: {resolution}\nハードウェア デコード: {decode}\n\n元のファイルは保持されます。キャンセルは、現在の部分出力を削除し、残りのキューを停止します。","convert.progress":"ファイル {current} の {total} · {percent}% を変換しています","convert.complete":"完了 · {created} が作成されました · {failed} が失敗しました · {cancelled} がキャンセルされました","convert.refresh":"プレビューを更新する","convert.start":"変換を開始します…","convert.cancel":"変換をキャンセルする",
-"context.configure_columns":"列を構成します…","context.reset_columns":"列幅をリセットする","context.files_suffix":" ({count} ファイル)",
-"status.cancelling":"スキャンをキャンセルしています…","status.live_on":"ライブアップデート","status.live_off":"ライブアップデートはオフです","status.loading":"読み込み中…","outlier.moderate":"中程度 (1.4×)","outlier.large":"大（1.75倍）","outlier.extreme":"エクストリーム (2.5×)","inspector.title":"検査官","inspector.no_file":"ファイルが選択されていません","inspector.select_file":"メディア ファイルを選択すると、その詳細が表示されます。","inspector.copy_path":"パスをコピーする","inspector.open":"開く","inspector.reveal":"明らかにする","preview.off":"プレビューオフ","preview.is_off":"プレビューがオフになっています","preview.select":"プレビューするファイルを選択してください","preview.select_side":"こちら側の画像またはビデオを選択してください","preview.play":"遊ぶ","preview.pause":"一時停止","preview.skim":"スキム:","preview.speed":"速度:","preview.muted":"ミュート","preview.unmuted":"サウンドオン","preview.still":"静止画","preview.unavailable":"プレビューは利用できません","preview.read_failed":"フレームを読み取れませんでした","browse.page_summary":"ページ {page} / {pages} · {count} ファイル{automatic}","browse.auto_suffix":" · 自動 {count}/ページ","browse.continuous_summary":"{count} ファイル · {mode} · 表示されるカードのみ","browse.all_shown":"すべて表示","status.folder_missing":"フォルダーが見つかりません","status.select_files":"まず、アクティブなペインで 1 つ以上のファイルを選択します。","status.finished":"完了しました","status.error":"エラー",
-"menu.browse":"アクティブなペインを参照…","menu.refresh":"リフレッシュ","menu.exit":"終了","menu.copy":"コピー","menu.cut":"カット","menu.paste":"ペースト","menu.undo":"元に戻す","menu.rename":"名前を変更…","menu.batch_rename":"名前の一括変更が選択されました…","menu.delete":"ごみ箱/ゴミ箱に移動","menu.select_all":"表示されているものをすべて選択してください","menu.details":"アクティブなペインの詳細","menu.thumbnails":"アクティブなペインのサムネイル","menu.thumbnail_size":"サムネイルのサイズ","menu.columns":"列を構成します…","menu.appearance":"見た目と文字サイズ…","menu.refresh_active":"アクティブなペインを更新","menu.refresh_both":"両方のペインを更新します","menu.go_up":"上がる","menu.verify":"メディアの整合性を確認してください…","menu.contact_sheet":"ビデオコンタクトシートを作成…","menu.export_report":"メディアレポートをエクスポート…","menu.metadata":"埋め込まれたメタデータを表示…","menu.convert":"選択したビデオを変換します…","menu.duplicates":"重複を検索…","menu.similar":"視覚的に類似した画像を検索…","menu.compare":"選択したものを比較…","menu.sync":"フォルダーの比較/同期…","menu.save_workspace":"ワークスペースを保存…","menu.load_workspace":"ワークスペースをロード…","menu.save_collection":"アクティブなスマート コレクションを保存します…","menu.manage_collections":"スマートコレクションを管理…","menu.folder_rules":"フォルダ整理のルール…","menu.cache":"キャッシュとスキャン…","menu.queue":"転送キュー…","menu.shortcuts":"キーボードショートカット","menu.coffee":"☕ これが気に入ったら、ジョンにコーヒーを買ってください…","context.copy_other":"他のペインにコピーする","context.move_other":"他のペインに移動する","context.open":"開く","context.reveal":"ファイルエクスプローラーで表示","context.rename":"名前を変更…","context.clear_rating":"明確な評価","context.rating":"評価","context.none":"なし","context.colour":"カラーラベル","context.edit_tags":"タグを編集…","context.recycle":"ごみ箱に移動","context.select_all":"表示されているものをすべて選択してください","context.clear_ticks":"目盛りをクリアする","context.find_duplicates":"重複の検索","context.compare":"選択したものを比較","context.refresh_pane":"このペインを更新する","context.refresh_both":"両方のペインを更新します","context.open_folder":"フォルダーを開く","context.red":"赤","context.yellow":"黄色","context.green":"緑","context.blue":"ブルー","context.purple":"紫","sort.sort":"並べ替え","sort.name":"名前","sort.modified":"変更日","sort.size":"ファイルサイズ","sort.duration":"長さ","sort.codec":"コーデック","sort.resolution":"解像度","sort.type":"タイプ","sort.bitrate":"ビットレート","sort.fps":"フレームレート","sort.rating":"評価","sort.a_z":"AからZまで","sort.z_a":"ZからAへ","sort.oldest":"古い順","sort.newest":"新しい順","sort.smallest":"小さいものから順","sort.largest":"大きい順","sort.shortest":"短い順","sort.longest":"長い順","sort.ascending":"昇順","sort.descending":"降順",
-"toolbar.guide":"どちらかのペインでファイルを選び、もう一方のペインへ送ります。","toolbar.refresh":"更新","toolbar.move":"選択項目を移動 → 反対側","toolbar.copy":"選択項目をコピー → 反対側","toolbar.undo":"元に戻す",
-"pane.left":"左ペイン","pane.right":"右ペイン","pane.preview":"プレビュー","pane.info":"情報","pane.browse":"参照…","pane.drag":"↗ 選択項目をドラッグ","pane.show":"表示：","pane.videos":"動画","pane.images":"画像","pane.find":"検索：","pane.live":"ライブ","pane.subfolders":"サブフォルダーを含める","pane.resolution":"解像度：","pane.all":"すべて","pane.select_matching":"一致項目を選択","pane.more_filters":"その他のフィルター…","pane.outliers":"サイズ外れ値を選択","pane.scanning":"メディアをスキャン中…","pane.cancel":"キャンセル","pane.no_files":"一致するメディアがありません","pane.checked":"{count} 件チェック済み","pane.clear_ticks":"チェックを解除",
-"view.details":"詳細","view.thumbnails":"サムネイル","size.small":"小","size.medium":"中","size.large":"大","browse.continuous":"連続","browse.paged":"ページ","browse.auto":"自動","browse.per_page":"1ページ：",
-"column.name":"名前 / 相対パス","column.codec":"コーデック","column.resolution":"解像度","column.duration":"動画の長さ","column.size":"ファイルサイズ","column.rate":"MB/分","column.fps":"FPS","column.modified":"更新日時","column.type":"種類","column.bitrate":"ビットレート","column.audio":"音声","column.hdr":"HDR","column.pixels":"メガピクセル","column.color":"ラベル","column.tags":"タグ","column.rating":"評価",
-"status.ready":"準備完了","status.scanning_progress":"{total} 件中 {current} 件をスキャン中… · キャッシュ {cached} 件","status.scan_complete_folder":"このフォルダーに {count} 件のメディアファイル","status.scan_complete_subfolders":"サブフォルダーを含め {count} 件のメディアファイル","status.unreadable":"{count} 件読み取り不可","status.from_cache":"キャッシュから {count} 件","status.scan_cancelled":"{count} 件後にスキャンを中止","status.skipped_file":"ファイルをスキップ：{error}","status.scan_failed":"スキャンできません：{error}",
-"common.system_default":"システム既定","common.restart_required":"再起動が必要です","common.close":"閉じる","common.save":"保存",
-"language.title":"言語","language.message":"言語設定を保存しました。全体に適用するには Resolution File Manager を再起動してください。",
-"reminders.title":"リマインダー設定","reminders.rating":"Microsoft Store 評価リマインダー","reminders.support":"Buy Me a Coffee リマインダー",
-"rating.title":"Resolution File Manager は役立っていますか？","rating.body":"役立っている場合は Microsoft Store で評価していただけますか？評価は他の利用者が見つける助けになります。","rating.rate":"Microsoft Store で評価","rating.later":"後で","rating.never":"今後表示しない",
-"support.title":"Resolution File Manager を支援","support.body":"このプログラムが役立つ場合は、John にコーヒーをごちそうできます。支援は完全に任意です。","support.open":"コーヒーを贈る","support.later":"後で考える","support.never":"今後表示しない",
-"link.error_title":"ページを開けませんでした","link.error_body":"ブラウザーで次のアドレスを開いてください：\n\n{url}\n\n{error}","help.title":"Resolution File Manager ヘルプ — {version}","help.search":"ガイド全体を検索：","help.previous":"前の章","help.next":"次の章"},
-"literals":{"Confirm":"確認する","Move {field0} to the Recycle Bin / Trash?":"{field0} をごみ箱/ゴミ箱に移動しますか?","Synchronize preview":"プレビューを同期する","Queue {field0} file(s) for copying to the {field1} pane?":"{field1} ペインにコピーするために {field0} ファイルをキューに入れますか?","Keyboard shortcuts":"キーボードショートカット","Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file":"Ctrl+A 表示されているすべてを選択\nCtrl+C 選択したものをコピー\nCtrl+X 選択された切り取り\nCtrl+V アクティブなペインに貼り付けます\nCtrl+Z 最後のファイル操作を元に戻す\n削除 選択したファイルをごみ箱/ゴミ箱に移動します\nF2 選択したファイルの名前を変更します\nF5 両方のペインを更新します\nBackspace 1 つ上のフォルダーに移動\n, (カンマ) アクティブなプレビューが 10% 戻る\n。 (ピリオド) アクティブ プレビューを 10% 前方に表示\nダブルクリック ファイルを開く","Folder not found":"フォルダーが見つかりません","This folder does not exist:\n{field0}":"このフォルダーは存在しません:\n{field0}","Not enough videos":"動画が足りない","At least two visible videos with readable durations are needed for comparison.":"比較するには、読み取り可能な長さの表示可能なビデオが少なくとも 2 つ必要です。","No size outliers":"サイズ異常値なし","No visible video is at least {field0}× the average data rate of {field1} MB/min.":"少なくとも {field0} × 平均データ レート {field1} MB/分以上の可視ビデオはありません。","Some dropped files failed":"いくつかのドロップされたファイルが失敗しました","Could not reveal some files":"一部のファイルを公開できませんでした","Select one file":"ファイルを 1 つ選択してください","Select exactly one file to rename.":"名前を変更するファイルを 1 つだけ選択してください。","Invalid filename":"無効なファイル名","Enter a filename without folder separators.":"フォルダー区切り文字を使用せずにファイル名を入力します。","File already exists":"ファイルはすでに存在します","A file named {field0} already exists.":"{field0} という名前のファイルはすでに存在します。","Nothing selected":"何も選択されていません","Select one or more files in the active pane first.":"まず、アクティブなペインで 1 つ以上のファイルを選択します。","Confirm {field0}":"{field0}を確認してください","{field0} {field1} file(s) to:\n{field2}?":"{field0} {field1} ファイルの宛先:\n{field2}?","Some files failed":"一部のファイルが失敗しました","Finished":"完了しました","Successfully {field0} {field1} file(s).":"{field0} {field1} ファイルが正常に作成されました。","Unknown choice":"未知の選択","Use replace, skip, keep both, or newer.":"置換、スキップ、両方を保持、または新しいを使用します。","Batch rename":"名前の一括変更","Select one or more files first.":"まず 1 つ以上のファイルを選択します。","Batch rename complete":"名前の一括変更が完了しました","Renamed {field0} file(s). Use Ctrl+Z to undo the batch.":"{field0} ファイルの名前が変更されました。バッチを元に戻すには、Ctrl+Z を使用します。","Nothing to retry":"再試行するものはありません","The last transfer had no failed files.":"最後の転送には失敗したファイルはありませんでした。","Transfer active":"転送がアクティブです","Wait for the current transfer to finish before undoing.":"元に戻す前に、現在の転送が完了するまで待ってください。","Nothing to undo":"元に戻すものはありません","There are no recent copy, move, replacement, or rename actions.":"最近、コピー、移動、置換、または名前変更のアクションはありません。","Undo incomplete":"不完全な状態を元に戻す","Undo complete":"元に戻す完了","The most recent file operation was undone.":"直前のファイル操作が取り消されました。","Move to Recycle Bin":"ごみ箱に移動","Move {field0} selected file(s) to the Recycle Bin / Trash?":"{field0} 選択したファイルをごみ箱/ゴミ箱に移動しますか?","Some files could not be removed":"一部のファイルを削除できませんでした","Embedded metadata":"埋め込みメタデータ","Select exactly one image or video first.":"最初に画像またはビデオを 1 つだけ選択します。","Create video contact sheet":"ビデオコンタクトシートを作成する","Select exactly one video first.":"最初にビデオを 1 つだけ選択してください。","Similar image search":"類似画像検索","No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).":"許容値 {field0} では、視覚的に類似したグループが見つかりません。\n\n{field1} キャッシュされたハッシュ。 {field2} 読み取り不可能な画像。","Select two files":"2つのファイルを選択してください","Select exactly two files to compare.":"比較するファイルを 2 つだけ選択してください。","Nothing to synchronize":"同期するものがありません","No selected files need copying in that direction.":"選択したファイルはその方向にコピーする必要はありません。","No workspaces":"ワークスペースがありません","Save a workspace first.":"まずワークスペースを保存します。","Collection folder unavailable":"コレクションフォルダーが使用できません","The saved folder does not currently exist:\n{field0}":"保存されたフォルダーは現在存在しません:\n{field0}","Cache pruned":"キャッシュのプルーニング","Removed {field0} stale entry/entries.":"{field0} の古いエントリを削除しました。","Clear cache":"キャッシュをクリアする","Clear all cached metadata? Files will be rescanned next time.":"キャッシュされたメタデータをすべてクリアしますか?ファイルは次回再スキャンされます。","Clear thumbnail cache":"サムネイルキャッシュをクリア","Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.":"{field1} を使用して、{field0} に保存されたサムネイルを削除しますか?\n\n元のメディア ファイルとメタデータは変更されません。","Settings":"設定","{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.":"{field0} パフォーマンス設定、スキャン オプション、およびサムネイル キャッシュ制限が保存されました。キャッシュ制限はバックグラウンドで適用されます。","Live updates unavailable":"ライブアップデートは利用できません","The folder-monitoring component is not installed.":"フォルダー監視コンポーネントがインストールされていません。","Reveal many files?":"多くのファイルを公開しますか?","{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.":"{field0} ファイルが選択されています。これらをすべて公開すると、多数のファイル マネージャー ウィンドウが開く可能性があります。\n\n選択したすべてのファイルを表示するには「はい」を選択し、最初のファイルのみを表示するには「いいえ」を選択します。","Rename failed":"名前の変更に失敗しました","Confirm batch rename":"名前の一括変更を確認する","Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.":"{field0} ファイルの名前をプレビューどおりに変更しますか?\n\n完全なバッチは Ctrl+Z で元に戻すことができます。","Batch rename failed":"名前の一括変更に失敗しました","No completed rename was kept where rollback was possible.\n\n{field0}":"ロールバックが可能な場合、完了した名前変更は保持されませんでした。\n\n{field0}","Nothing to export":"エクスポートするものがありません","The chosen scope contains no media files.":"選択したスコープにはメディア ファイルが含まれていません。","Nothing to verify":"確認するものは何もありません","Not enough images":"画像が足りません","The chosen scope contains fewer than two images.":"選択したスコープに含まれる画像は 2 つ未満です。","Could not save workspace":"ワークスペースを保存できませんでした","Replace smart collection":"スマートコレクションを置き換える","Replace the existing collection named {field0}?":"{field0} という名前の既存のコレクションを置き換えますか?","Could not save collection":"コレクションを保存できませんでした","Invalid rule":"無効なルール","Enter a rule name.":"ルール名を入力します。","Choose a destination folder.":"宛先フォルダーを選択します。","Apply folder rules":"フォルダールールを適用する","Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.":"{field0} 計画されたコピー/移動アクションをキューに入れますか?\n\n既存のターゲットは通常の競合の選択肢を使用します。移動と置換は元に戻せないままです。","Delete rule":"ルールの削除","Delete rule '{field0}'?":"ルール「{field0}」を削除しますか?","Cache cleared":"キャッシュがクリアされました","Removed {field0} metadata entries and cached thumbnails.":"{field0} メタデータ エントリとキャッシュされたサムネイルを削除しました。","Thumbnail cache":"サムネイルキャッシュ","The thumbnail cache is already empty.":"サムネイル キャッシュはすでに空です。","Thumbnail cache cleared":"サムネイルキャッシュがクリアされました","Deleted {field0} thumbnail(s) and freed {field1}.":"{field0} サムネイルを削除し、{field1} を解放しました。","Could not monitor folder":"フォルダを監視できませんでした","Live updates could not be enabled for:\n{field0}\n\n{field1}":"次のライブ アップデートを有効にできませんでした:\n{field0}\n\n{field1}","Could not open file":"ファイルを開けませんでした","Frame exported":"エクスポートされたフレーム","Metadata exported":"メタデータのエクスポート","Saved {field0} field(s).":"{field0} フィールドを保存しました。","Metadata unavailable":"メタデータは使用できません","Report exported":"レポートがエクスポートされました","Saved {field0} result(s).":"{field0} 件の結果を保存しました。","Invalid settings":"無効な設定","Use whole numbers for frames, columns, and width.":"フレーム、列、幅には整数を使用します。","Invalid tolerance":"無効な許容差","Enter a whole number from 0 to 16.":"0 ～ 16 の整数を入力します。","Replace collection":"コレクションを置換する","Replace {field0}?":"{field0} を置き換えますか?","Delete smart collection":"スマートコレクションの削除","Delete {field0}?\n\nNo media files or annotations will be changed.":"{field0} を削除しますか?\n\nメディア ファイルや注釈は変更されません。","Invalid rating":"無効な評価","Minimum rating must be a whole number from 0 to 5.":"最小評価は 0 ～ 5 の整数である必要があります。","Frame export failed":"フレームのエクスポートに失敗しました","Could not export metadata":"メタデータをエクスポートできませんでした","Could not export report":"レポートをエクスポートできませんでした","Contact sheet complete":"コンタクトシート完成","Report export failed":"レポートのエクスポートに失敗しました","Contact sheet failed":"コンタクトシートが失敗しました","Removed {field0} least-recently-used thumbnail(s).":"{field0} 最も最近使用されていないサムネイルを削除しました。"},
-"help":{"chapters":[
-{"id":"quick_start","title":"クイックスタート","body":"どちらかのペインでフォルダーを選択します。必要に応じて動画、画像、サブフォルダーを有効にします。詳細またはサムネイルでファイルをチェックし、グループ全体をコピー、移動、分析、変換できます。"},
-{"id":"browsing","title":"閲覧とプレビュー","body":"各ペインには独立した履歴、フィルター、並べ替え、サムネイル、情報、プレビューがあります。動画は既定で 4× 再生です。カンマとピリオドで 10% 戻る／進むことができます。"},
-{"id":"organising","title":"整理と変換","body":"コピー、移動、名前変更、重複確認、タグや評価、レポート出力ができます。対応するハードウェアアクセラレーションで H.264、H.265、AV1 に変換できます。元ファイルは保持されます。"},
-{"id":"language","title":"言語","body":"初回起動時は、対応していれば OS の言語を使用します。ツール > 言語で変更またはシステム既定へ戻せます。変更後は再起動してください。不足する翻訳は英語に戻ります。"},
-{"id":"reminders","title":"評価と任意の支援","body":"3 日以上にわたり 5 回起動すると Store 評価を案内する場合があります。後でを選ぶと 10 回延期します。コーヒーの案内は 11 回目から始まり、後で考えるを選んだ場合のみ 11 回ごとに再表示されます。どちらも無効化と再有効化が可能です。"},
-{"id":"privacy","title":"プライバシーとトラブル対処","body":"スキャン、プレビュー、メタデータ、リマインダー、ファイル操作はローカルです。アカウント、広告、分析はなく、メディアや起動履歴を送信しません。遅い場合は不要なプレビューを切り、静音プロファイルか狭いフォルダーを使ってください。"}]}}
+{
+  "meta": {
+    "language": "日本語"
+  },
+  "strings": {
+    "app.title": "Resolution File Manager {version}",
+    "menu.file": "ファイル",
+    "menu.edit": "編集",
+    "menu.view": "表示",
+    "menu.tools": "ツール",
+    "menu.help": "ヘルプ",
+    "menu.language": "言語",
+    "menu.reminders": "リマインダー…",
+    "menu.how_to": "Resolution File Manager の使い方",
+    "menu.about": "バージョン情報",
+    "duplicates.title": "重複",
+    "duplicates.none_candidates": "同じサイズの重複候補が見つかりませんでした。",
+    "duplicates.quick_start": "{count} の重複候補をクイックチェックしています…",
+    "duplicates.quick_progress": "{total} の重複 {current} をクイックチェックしています…",
+    "duplicates.verify_progress": "{total} の {current} が完全に一致することを確認しています…",
+    "duplicates.complete_title": "重複検索が完了しました",
+    "duplicates.none": "正確な重複は見つかりませんでした。",
+    "duplicates.none_status": "正確な重複は見つかりません · {cached} キャッシュされたフィンガープリント",
+    "duplicates.groups_status": "{groups} 完全に重複したグループ · {cached} キャッシュされたフィンガープリント",
+    "duplicates.first": "まず",
+    "duplicates.newest": "最新の",
+    "duplicates.oldest": "最古の",
+    "duplicates.smallest": "最小",
+    "duplicates.largest": "最大の",
+    "duplicates.review_title": "完全な重複を確認する",
+    "duplicates.found": "{count} 個の完全な重複グループが見つかりました。行を選択して、同じグループの別のコピーと並べてプレビューします。",
+    "duplicates.explanation": "完全な複製は内容とファイル サイズが同一であるため、通常、最小値と最大値は同数になります。日付と場所は異なる場合があります。",
+    "duplicates.preview": "{number} をプレビューする",
+    "duplicates.select": "重複を選択してください",
+    "duplicates.group": "グループ",
+    "duplicates.filename": "ファイル名",
+    "duplicates.folder": "フォルダー",
+    "duplicates.size": "サイズ",
+    "duplicates.modified": "修正済み",
+    "duplicates.reason": "なぜ保管されるのか",
+    "duplicates.loading": "プレビューを読み込み中…",
+    "duplicates.keep_one": "グループごとに 1 つずつ保持します。",
+    "duplicates.clear": "明確な提案",
+    "duplicates.close": "変更せずに閉じます",
+    "duplicates.proposal_status": "重複したプロポーザル: {strategy} · 選択した {count} の冗長ファイルをレビューのために保持します",
+    "duplicates.applied_title": "重複したプロポーザルが適用されました",
+    "duplicates.applied_body": "各グループの {strategy} コピーは選択されないままでした。\n\n{count} 冗長ファイルがメイン ペインで選択されています。何かを移動または削除する前に、そこで確認してください。",
+    "convert.title": "選択したビデオを変換する",
+    "convert.select_first_title": "ビデオを変換する",
+    "convert.select_first": "まず 1 つ以上のビデオ ファイルを選択します。",
+    "convert.settings": "変換設定",
+    "convert.preset": "プリセット:",
+    "convert.quality": "品質 (CRF):",
+    "convert.resolution": "解決策:",
+    "convert.resolution_help": "1080p と 720p では、アスペクト比を維持しながら出力の高さを設定します。",
+    "convert.quality_help": "品質値が低いほど、より高い品質が要求されます。ハードウェア エンジンは、この値を独自のコントロールにマップします。 Remux は品質と解像度を無視します。",
+    "convert.engine": "エンコードエンジン:",
+    "convert.hardware_decode": "可能な場合はハードウェア デコードを使用する",
+    "convert.output_folder": "出力フォルダー:",
+    "convert.choose_output": "変換出力フォルダーを選択してください",
+    "convert.preserve_folders": "アクティブなペインを基準にしてフォルダを保持する",
+    "convert.skip_existing": "既存をスキップする",
+    "convert.keep_both": "両方とも保管しておいてください",
+    "convert.originals_retained": "元のビデオは常に保持されます。開始する前に、すべての出力パスを確認してください。",
+    "convert.status": "ステータス",
+    "convert.source": "ソース",
+    "convert.output": "出力",
+    "convert.result": "結果",
+    "convert.remux_help": "Remux はストリームを直接コピーします。エンコード、サイズ変更、ハードウェア デコードは使用されません。",
+    "convert.none_reported": "何も報告されていない",
+    "convert.cpu_fallback": "なし;自動ではCPUを使用します",
+    "convert.capabilities": "FFmpeg ハードウェア エンコーダのサポート: {hardware} · デコード メソッド: {decode}",
+    "convert.capability_failed": "機能チェックに失敗しました: {error} · ソフトウェア エンコードは引き続き利用可能です",
+    "convert.choose_folder": "出力フォルダーを選択します。",
+    "convert.preview_summary": "{ready} 準備完了 · {skipped} スキップ/問題 · ソース サイズ {size}",
+    "convert.invalid_quality": "無効な品質",
+    "convert.invalid_quality_body": "CRF は 18 ～ 35 の整数でなければなりません。",
+    "convert.engine_unavailable": "エンコードエンジンが使用不可",
+    "convert.engine_unavailable_body": "{engine} は {preset} では使用できません。別のエンジンを選択してください。",
+    "convert.unchanged": "変更なし（ストリームコピー）",
+    "convert.decode_unused": "使用されません（ストリームコピー）",
+    "convert.decode_fallback": "安全なフォールバックでリクエストされました",
+    "convert.off": "オフ",
+    "convert.confirm_title": "ビデオ変換を開始する",
+    "convert.confirm_body": "{count} 新しいビデオ ファイルを作成しますか?\n\nエンコーディング: {engine}\n解決策: {resolution}\nハードウェア デコード: {decode}\n\n元のファイルは保持されます。キャンセルは、現在の部分出力を削除し、残りのキューを停止します。",
+    "convert.progress": "ファイル {current} の {total} · {percent}% を変換しています",
+    "convert.complete": "完了 · {created} が作成されました · {failed} が失敗しました · {cancelled} がキャンセルされました",
+    "convert.refresh": "プレビューを更新する",
+    "convert.start": "変換を開始します…",
+    "convert.cancel": "変換をキャンセルする",
+    "context.configure_columns": "列を構成します…",
+    "context.reset_columns": "列幅をリセットする",
+    "context.files_suffix": " ({count} ファイル)",
+    "status.cancelling": "スキャンをキャンセルしています…",
+    "status.live_on": "ライブアップデート",
+    "status.live_off": "ライブアップデートはオフです",
+    "status.loading": "読み込み中…",
+    "outlier.moderate": "中程度 (1.4×)",
+    "outlier.large": "大（1.75倍）",
+    "outlier.extreme": "エクストリーム (2.5×)",
+    "inspector.title": "検査官",
+    "inspector.no_file": "ファイルが選択されていません",
+    "inspector.select_file": "メディア ファイルを選択すると、その詳細が表示されます。",
+    "inspector.copy_path": "パスをコピーする",
+    "inspector.open": "開く",
+    "inspector.reveal": "明らかにする",
+    "preview.off": "プレビューオフ",
+    "preview.is_off": "プレビューがオフになっています",
+    "preview.select": "プレビューするファイルを選択してください",
+    "preview.select_side": "こちら側の画像またはビデオを選択してください",
+    "preview.play": "遊ぶ",
+    "preview.pause": "一時停止",
+    "preview.skim": "スキム:",
+    "preview.speed": "速度:",
+    "preview.muted": "ミュート",
+    "preview.unmuted": "サウンドオン",
+    "preview.still": "静止画",
+    "preview.unavailable": "プレビューは利用できません",
+    "preview.read_failed": "フレームを読み取れませんでした",
+    "browse.page_summary": "ページ {page} / {pages} · {count} ファイル{automatic}",
+    "browse.auto_suffix": " · 自動 {count}/ページ",
+    "browse.continuous_summary": "{count} ファイル · {mode} · 表示されるカードのみ",
+    "browse.all_shown": "すべて表示",
+    "status.folder_missing": "フォルダーが見つかりません",
+    "status.select_files": "まず、アクティブなペインで 1 つ以上のファイルを選択します。",
+    "status.finished": "完了しました",
+    "status.error": "エラー",
+    "menu.browse": "アクティブなペインを参照…",
+    "menu.refresh": "リフレッシュ",
+    "menu.exit": "終了",
+    "menu.copy": "コピー",
+    "menu.cut": "カット",
+    "menu.paste": "ペースト",
+    "menu.undo": "元に戻す",
+    "menu.rename": "名前を変更…",
+    "menu.batch_rename": "名前の一括変更が選択されました…",
+    "menu.delete": "ごみ箱/ゴミ箱に移動",
+    "menu.select_all": "表示されているものをすべて選択してください",
+    "menu.details": "アクティブなペインの詳細",
+    "menu.thumbnails": "アクティブなペインのサムネイル",
+    "menu.thumbnail_size": "サムネイルのサイズ",
+    "menu.columns": "列を構成します…",
+    "menu.appearance": "見た目と文字サイズ…",
+    "menu.refresh_active": "アクティブなペインを更新",
+    "menu.refresh_both": "両方のペインを更新します",
+    "menu.go_up": "上がる",
+    "menu.verify": "メディアの整合性を確認してください…",
+    "menu.contact_sheet": "ビデオコンタクトシートを作成…",
+    "menu.export_report": "メディアレポートをエクスポート…",
+    "menu.metadata": "埋め込まれたメタデータを表示…",
+    "menu.convert": "選択したビデオを変換します…",
+    "menu.duplicates": "重複を検索…",
+    "menu.similar": "視覚的に類似した画像を検索…",
+    "menu.compare": "選択したものを比較…",
+    "menu.sync": "フォルダーの比較/同期…",
+    "menu.save_workspace": "ワークスペースを保存…",
+    "menu.load_workspace": "ワークスペースをロード…",
+    "menu.save_collection": "アクティブなスマート コレクションを保存します…",
+    "menu.manage_collections": "スマートコレクションを管理…",
+    "menu.folder_rules": "フォルダ整理のルール…",
+    "menu.cache": "キャッシュとスキャン…",
+    "menu.queue": "転送キュー…",
+    "menu.shortcuts": "キーボードショートカット",
+    "menu.coffee": "☕ これが気に入ったら、ジョンにコーヒーを買ってください…",
+    "context.copy_other": "他のペインにコピーする",
+    "context.move_other": "他のペインに移動する",
+    "context.open": "開く",
+    "context.reveal": "ファイルエクスプローラーで表示",
+    "context.rename": "名前を変更…",
+    "context.clear_rating": "明確な評価",
+    "context.rating": "評価",
+    "context.none": "なし",
+    "context.colour": "カラーラベル",
+    "context.edit_tags": "タグを編集…",
+    "context.recycle": "ごみ箱に移動",
+    "context.select_all": "表示されているものをすべて選択してください",
+    "context.clear_ticks": "目盛りをクリアする",
+    "context.find_duplicates": "重複の検索",
+    "context.compare": "選択したものを比較",
+    "context.refresh_pane": "このペインを更新する",
+    "context.refresh_both": "両方のペインを更新します",
+    "context.open_folder": "フォルダーを開く",
+    "context.red": "赤",
+    "context.yellow": "黄色",
+    "context.green": "緑",
+    "context.blue": "ブルー",
+    "context.purple": "紫",
+    "sort.sort": "並べ替え",
+    "sort.name": "名前",
+    "sort.modified": "変更日",
+    "sort.size": "ファイルサイズ",
+    "sort.duration": "長さ",
+    "sort.codec": "コーデック",
+    "sort.resolution": "解像度",
+    "sort.type": "タイプ",
+    "sort.bitrate": "ビットレート",
+    "sort.fps": "フレームレート",
+    "sort.rating": "評価",
+    "sort.a_z": "AからZまで",
+    "sort.z_a": "ZからAへ",
+    "sort.oldest": "古い順",
+    "sort.newest": "新しい順",
+    "sort.smallest": "小さいものから順",
+    "sort.largest": "大きい順",
+    "sort.shortest": "短い順",
+    "sort.longest": "長い順",
+    "sort.ascending": "昇順",
+    "sort.descending": "降順",
+    "toolbar.guide": "どちらかのペインでファイルを選び、もう一方のペインへ送ります。",
+    "toolbar.refresh": "更新",
+    "toolbar.move": "選択項目を移動 → 反対側",
+    "toolbar.copy": "選択項目をコピー → 反対側",
+    "toolbar.undo": "元に戻す",
+    "pane.left": "左ペイン",
+    "pane.right": "右ペイン",
+    "pane.preview": "プレビュー",
+    "pane.info": "情報",
+    "pane.browse": "参照…",
+    "pane.drag": "↗ 選択項目をドラッグ",
+    "pane.show": "表示：",
+    "pane.videos": "動画",
+    "pane.images": "画像",
+    "pane.find": "検索：",
+    "pane.live": "ライブ",
+    "pane.subfolders": "サブフォルダーを含める",
+    "pane.resolution": "解像度：",
+    "pane.all": "すべて",
+    "pane.select_matching": "一致項目を選択",
+    "pane.more_filters": "その他のフィルター…",
+    "pane.outliers": "サイズ外れ値を選択",
+    "pane.scanning": "メディアをスキャン中…",
+    "pane.cancel": "キャンセル",
+    "pane.no_files": "一致するメディアがありません",
+    "pane.checked": "{count} 件チェック済み",
+    "pane.clear_ticks": "チェックを解除",
+    "view.details": "詳細",
+    "view.thumbnails": "サムネイル",
+    "size.small": "小",
+    "size.medium": "中",
+    "size.large": "大",
+    "browse.continuous": "連続",
+    "browse.paged": "ページ",
+    "browse.auto": "自動",
+    "browse.per_page": "1ページ：",
+    "column.name": "名前 / 相対パス",
+    "column.codec": "コーデック",
+    "column.resolution": "解像度",
+    "column.duration": "動画の長さ",
+    "column.size": "ファイルサイズ",
+    "column.rate": "MB/分",
+    "column.fps": "FPS",
+    "column.modified": "更新日時",
+    "column.type": "種類",
+    "column.bitrate": "ビットレート",
+    "column.audio": "音声",
+    "column.hdr": "HDR",
+    "column.pixels": "メガピクセル",
+    "column.color": "ラベル",
+    "column.tags": "タグ",
+    "column.rating": "評価",
+    "status.ready": "準備完了",
+    "status.scanning_progress": "{total} 件中 {current} 件をスキャン中… · キャッシュ {cached} 件",
+    "status.scan_complete_folder": "このフォルダーに {count} 件のメディアファイル",
+    "status.scan_complete_subfolders": "サブフォルダーを含め {count} 件のメディアファイル",
+    "status.unreadable": "{count} 件読み取り不可",
+    "status.from_cache": "キャッシュから {count} 件",
+    "status.scan_cancelled": "{count} 件後にスキャンを中止",
+    "status.skipped_file": "ファイルをスキップ：{error}",
+    "status.scan_failed": "スキャンできません：{error}",
+    "common.system_default": "システム既定",
+    "common.restart_required": "再起動が必要です",
+    "common.close": "閉じる",
+    "common.save": "保存",
+    "language.title": "言語",
+    "language.message": "言語設定を保存しました。全体に適用するには Resolution File Manager を再起動してください。",
+    "reminders.title": "リマインダー設定",
+    "reminders.rating": "Microsoft Store 評価リマインダー",
+    "reminders.support": "Buy Me a Coffee リマインダー",
+    "rating.title": "Resolution File Manager は役立っていますか？",
+    "rating.body": "役立っている場合は Microsoft Store で評価していただけますか？評価は他の利用者が見つける助けになります。",
+    "rating.rate": "Microsoft Store で評価",
+    "rating.later": "後で",
+    "rating.never": "今後表示しない",
+    "support.title": "Resolution File Manager を支援",
+    "support.body": "このプログラムが役立つ場合は、John にコーヒーをごちそうできます。支援は完全に任意です。",
+    "support.open": "コーヒーを贈る",
+    "support.later": "後で考える",
+    "support.never": "今後表示しない",
+    "link.error_title": "ページを開けませんでした",
+    "link.error_body": "ブラウザーで次のアドレスを開いてください：\n\n{url}\n\n{error}",
+    "help.title": "Resolution File Manager ヘルプ — {version}",
+    "help.search": "ガイド全体を検索：",
+    "help.previous": "前の章",
+    "help.next": "次の章",
+    "filters.title": "詳細フィルター",
+    "filters.orientation": "向き",
+    "filters.codec": "コーデックに含む",
+    "filters.tag": "タグに含む",
+    "filters.min_rating": "最低評価",
+    "filters.color": "カラーラベル",
+    "filters.min_width": "最小幅（ピクセル）",
+    "filters.max_width": "最大幅（ピクセル）",
+    "filters.min_height": "最小高さ（ピクセル）",
+    "filters.max_height": "最大高さ（ピクセル）",
+    "filters.min_size": "最小サイズ（MB）",
+    "filters.max_size": "最大サイズ（MB）",
+    "filters.min_duration": "最短時間（秒）",
+    "filters.max_duration": "最長時間（秒）",
+    "filters.date_from": "更新日（開始、YYYY-MM-DD）",
+    "filters.date_to": "更新日（終了、YYYY-MM-DD）",
+    "filters.any": "すべて",
+    "filters.landscape": "横向き",
+    "filters.portrait": "縦向き",
+    "filters.square": "正方形",
+    "filters.unlabelled": "ラベルなし",
+    "filters.clear": "クリア",
+    "filters.apply": "適用",
+    "filters.rating_1": "1",
+    "filters.rating_2": "2",
+    "filters.rating_3": "3",
+    "filters.rating_4": "4",
+    "filters.rating_5": "5",
+    "convert.preset_h264": "H.264 MP4（互換）",
+    "convert.preset_h265": "H.265 MP4（小容量）",
+    "convert.preset_av1": "AV1 MKV（最小容量）",
+    "convert.preset_proxy": "720p H.264 プロキシ",
+    "convert.preset_remux": "MKVへリマックス（再エンコードなし）",
+    "convert.resolution_source": "元の解像度を維持",
+    "convert.resolution_1080p": "1080p",
+    "convert.resolution_720p": "720p",
+    "convert.engine_automatic": "自動（推奨）",
+    "convert.engine_software": "ソフトウェア / CPU",
+    "convert.status_ready": "準備完了",
+    "convert.status_skipped": "スキップ",
+    "convert.status_unknown_resolution": "解像度不明",
+    "convert.status_converting": "変換中",
+    "convert.status_passed": "完了",
+    "convert.status_cancelled": "キャンセル",
+    "convert.status_failed": "失敗",
+    "choice.system": "システム",
+    "choice.light": "ライト",
+    "choice.dark": "ダーク",
+    "choice.high_contrast": "ハイコントラスト",
+    "choice.selected": "選択済み",
+    "choice.visible": "表示中",
+    "choice.all_scanned": "スキャン済みすべて",
+    "choice.copy": "コピー",
+    "choice.move": "移動",
+    "choice.any": "すべて",
+    "choice.images": "画像",
+    "choice.videos": "動画",
+    "choice.quiet": "静音",
+    "choice.balanced": "バランス",
+    "choice.fast": "高速",
+    "common.ok": "OK",
+    "common.cancel": "キャンセル",
+    "common.enable": "有効にする",
+    "common.disable": "無効にする",
+    "common.never": "なし",
+    "common.launch": "起動 {count}",
+    "reminders.next": "次の対象: {value}",
+    "reminders.saved": "リマインダー設定が保存されました。",
+    "about.title": "Resolution File Manager について",
+    "about.description": "画像および動画のコレクションを閲覧、プレビュー、解析、整理するためのクロスプラットフォームのデュアルペインアプリケーション。",
+    "about.support": "開発を支援する",
+    "about.optional": "Resolution File Managerが役に立った場合は、ジョンにコーヒーを買うことができます。サポートは完全に任意です。",
+    "help.next_match": "次の検索結果へ (F3)",
+    "help.clear": "検索をクリア",
+    "help.no_results": "結果なし",
+    "help.no_results_body": "ヘルプの章に「{query}」は含まれていません。より短い用語を試してください。",
+    "convert.status_duplicate_output": "出力ファイル名が重複",
+    "convert.status_same_source": "元のファイルと同じ",
+    "inspector.channels": "{count} チャネル",
+    "inspector.pixel_format": "ピクセル形式",
+    "inspector.dynamic_range": "ダイナミックレンジ",
+    "inspector.unknown": "不明",
+    "inspector.unrated": "未評価",
+    "inspector.unreadable": "判読不能"
+  },
+  "help": {
+    "schema": 2,
+    "master_sha256": "bd7b7615b744101897e361e188e64bd95e7d6173d11a1121a797d9d8cf6df279",
+    "direction": "ltr",
+    "translation_method": "machine translation with existing UI glossary; human linguistic review pending",
+    "chapters": [
+      {
+        "id": "quick_start",
+        "title": "クイック 開始",
+        "paragraphs": [
+          {
+            "id": "quick_start.p001",
+            "source_sha256": "960121a7b5ea76c266026469e9fb06e35da0a7256799d3736a5fffadc23a744a",
+            "text": "1. 参照、フォルダー ツリー、またはパス ボックスを使用して、各ペインでフォルダーを個別に選択します。\n2. そのフォルダーの下にある完全なツリーをスキャンする場合にのみ、サブフォルダーを含める をオンにします。\n3. 並べ替え可能な技術情報には 詳細 を使用し、視覚的な参照には サムネイル を使用します。\n4. 1 つのペインでファイルを選択します。コピーと移動は、別のペインに表示されているフォルダーを宛先として使用します。\n5. 必要なペインでのみ、プレビュー または 情報 をオンにします。処理能力を節約するために、両方ともデフォルトでオフになっています。\n6. ファイル変更アクションでは、必要に応じて確認またはプレビューが表示されます。 削除 はごみ箱/ゴミ箱を使用し、Ctrl+Z はサポートされている最近のアクションを元に戻します。"
+          },
+          {
+            "id": "quick_start.p002",
+            "source_sha256": "e826944984faca1d9ef2ae01fac89df96998673ffbcb18c1a6dc76906714d5f9",
+            "text": "左側の章では、プログラムの各部分について説明します。 [すべての章を検索] に任意の単語または語句を入力し、Enter キーを押します。一致する章と一致する数がコンテンツ リストに表示されます。 [次の一致] を使用して、強調表示された各出現箇所を順に実行します。"
+          },
+          {
+            "id": "quick_start.p003",
+            "source_sha256": "939c9b2348d95e362c7a750296c26c65e72efb3c8fd71071cf751214de3accaf",
+            "text": "どちらかのペインでフォルダーを選択します。必要に応じて、有効にする 動画、画像、および サブフォルダーを含める。 詳細 または サムネイル を使用して、ファイルを選択またはチェックマークを付けてプレビューし、コピー、移動、分析、または変換します。チェックされたファイルはアクション グループを構成します。ハイライト表示は引き続き参照およびプレビューに使用できます。"
+          }
+        ],
+        "body": "1. 参照、フォルダー ツリー、またはパス ボックスを使用して、各ペインでフォルダーを個別に選択します。\n2. そのフォルダーの下にある完全なツリーをスキャンする場合にのみ、サブフォルダーを含める をオンにします。\n3. 並べ替え可能な技術情報には 詳細 を使用し、視覚的な参照には サムネイル を使用します。\n4. 1 つのペインでファイルを選択します。コピーと移動は、別のペインに表示されているフォルダーを宛先として使用します。\n5. 必要なペインでのみ、プレビュー または 情報 をオンにします。処理能力を節約するために、両方ともデフォルトでオフになっています。\n6. ファイル変更アクションでは、必要に応じて確認またはプレビューが表示されます。 削除 はごみ箱/ゴミ箱を使用し、Ctrl+Z はサポートされている最近のアクションを元に戻します。\n\n左側の章では、プログラムの各部分について説明します。 [すべての章を検索] に任意の単語または語句を入力し、Enter キーを押します。一致する章と一致する数がコンテンツ リストに表示されます。 [次の一致] を使用して、強調表示された各出現箇所を順に実行します。\n\nどちらかのペインでフォルダーを選択します。必要に応じて、有効にする 動画、画像、および サブフォルダーを含める。 詳細 または サムネイル を使用して、ファイルを選択またはチェックマークを付けてプレビューし、コピー、移動、分析、または変換します。チェックされたファイルはアクション グループを構成します。ハイライト表示は引き続き参照およびプレビューに使用できます。"
+      },
+      {
+        "id": "topic_index",
+        "title": "トピック索引と章リンク",
+        "paragraphs": [
+          {
+            "id": "topic_index.quick_start",
+            "source_sha256": "b69a25b79b167c5a7e40d38d5814f094716600a942de0f3ec6218b07b27489ca",
+            "text": "クイック 開始 — [chapter:quick_start]"
+          },
+          {
+            "id": "topic_index.getting_started",
+            "source_sha256": "9ac44a658d4ae090bae2481dfb1b5e9df78322e4632b50bacb4e99ccb098f22e",
+            "text": "開始 を取得中 — [chapter:getting_started]"
+          },
+          {
+            "id": "topic_index.details_and_thumbnails",
+            "source_sha256": "84d1aca1a733a359aa903a64b7b96947cc10eba572194f604180ee279e080f20",
+            "text": "詳細 および サムネイル — [chapter:details_and_thumbnails]"
+          },
+          {
+            "id": "topic_index.scanning_and_filtering",
+            "source_sha256": "addcb00612695126e1840e75947c51d82d93657985581b6946e2e9058895aa52",
+            "text": "スキャンとフィルタリング — [chapter:scanning_and_filtering]"
+          },
+          {
+            "id": "topic_index.selecting_and_previewing",
+            "source_sha256": "dcaa1afa4caf83d3fb5359c1d384469e2f0bb809a48dcce645893f93a174d545",
+            "text": "選択と プレビュー — [chapter:selecting_and_previewing]"
+          },
+          {
+            "id": "topic_index.copying_and_moving",
+            "source_sha256": "d439134119d88ce4d1728bbf520f1855578ba9e0e85bbaf480a60a626344f26c",
+            "text": "コピーと移動 — [chapter:copying_and_moving]"
+          },
+          {
+            "id": "topic_index.smart_collections",
+            "source_sha256": "497f5371f88656a6629fdab4f4a433d4d9f4bc360680765c65bac19426e50cad",
+            "text": "スマート コレクション: 保存された検索結果 — [chapter:smart_collections]"
+          },
+          {
+            "id": "topic_index.duplicates_and_comparison",
+            "source_sha256": "bc7a386de1f53414fd714586f4309ed4082731697a1928637001ad61f6b93657",
+            "text": "重複 と比較 — [chapter:duplicates_and_comparison]"
+          },
+          {
+            "id": "topic_index.video_conversion",
+            "source_sha256": "87541c8126b7efe82872889b78979b23a37056c7a88de8c8847df6a8d172d292",
+            "text": "ビデオ変換 – [chapter:video_conversion]"
+          },
+          {
+            "id": "topic_index.media_reports",
+            "source_sha256": "88f5be9c7f544bd30958395250596ef1e6d7269236323741b0d581860c896994",
+            "text": "メディアレポートのエクスポート ÔÇö [chapter:media_reports]"
+          },
+          {
+            "id": "topic_index.embedded_metadata",
+            "source_sha256": "c43d4127a8b410091566783a394e9819305712159510d96c02ddbb7ee7bc0352",
+            "text": "埋め込みメタデータの表示 ÔÇö [chapter:embedded_metadata]"
+          },
+          {
+            "id": "topic_index.media_integrity",
+            "source_sha256": "a9696b3a52d78f01ec30371ab6e369b1b794257eada141cd26b7fcbc28def24e",
+            "text": "メディアの整合性を確認中 – [chapter:media_integrity]"
+          },
+          {
+            "id": "topic_index.video_contact_sheets",
+            "source_sha256": "d8c3d3d7bfb6f6240bd2dff740e17dea7096558eed8132d688fce5b8a7d38f73",
+            "text": "ビデオコンタクトシートの作成 ÔÇö [chapter:video_contact_sheets]"
+          },
+          {
+            "id": "topic_index.folder_synchronization",
+            "source_sha256": "c5ffb5dcb3df4777df924d496bf92af4c0c309f7dc6571a8f95f2c8efb528e08",
+            "text": "フォルダー 同期 — [chapter:folder_synchronization]"
+          },
+          {
+            "id": "topic_index.folder_organization_rules",
+            "source_sha256": "1306acd5de57ef19675cac113a607091b30225a064b0b38a632584586670cbad",
+            "text": "フォルダー 組織規則 – [chapter:folder_organization_rules]"
+          },
+          {
+            "id": "topic_index.transfer_queue",
+            "source_sha256": "6c218104ba617d50d4666bcf2e5e70b9635d64f83ea5e74719da6042dc1c5851",
+            "text": "転送キューの管理 ÔÇö [chapter:transfer_queue]"
+          },
+          {
+            "id": "topic_index.safe_file_actions",
+            "source_sha256": "5ddc3613ad7b87ccfee060d77a71fadb05a457f0de7ac987a4405385b7803b59",
+            "text": "安全なファイルアクション — [chapter:safe_file_actions]"
+          },
+          {
+            "id": "topic_index.workspaces_and_cache",
+            "source_sha256": "9bedfb9cdb5f7f673cb6f702accaf18c7be93438596d081884e6616cbb751195",
+            "text": "ワークスペースとキャッシュ — [chapter:workspaces_and_cache]"
+          },
+          {
+            "id": "topic_index.language",
+            "source_sha256": "57d2d6a2b519f2d4a908f2c480625bc9d06f02a72c79d74aae29f6de3818a779",
+            "text": "言語 — [chapter:language]"
+          },
+          {
+            "id": "topic_index.glossary",
+            "source_sha256": "c7a062c88b48c29ae512bf610ce2700dd67290004652c38e6af6dce5c9f29f8b",
+            "text": "用語集 — [chapter:glossary]"
+          },
+          {
+            "id": "topic_index.support_the_project",
+            "source_sha256": "01ccc57e26166b3a3a356d1ef2192f8c832175b4c003038bb1692f5f94473ebe",
+            "text": "プロジェクトをサポートします — [chapter:support_the_project]"
+          }
+        ],
+        "body": "クイック 開始 — [chapter:quick_start]\n\n開始 を取得中 — [chapter:getting_started]\n\n詳細 および サムネイル — [chapter:details_and_thumbnails]\n\nスキャンとフィルタリング — [chapter:scanning_and_filtering]\n\n選択と プレビュー — [chapter:selecting_and_previewing]\n\nコピーと移動 — [chapter:copying_and_moving]\n\nスマート コレクション: 保存された検索結果 — [chapter:smart_collections]\n\n重複 と比較 — [chapter:duplicates_and_comparison]\n\nビデオ変換 – [chapter:video_conversion]\n\nメディアレポートのエクスポート ÔÇö [chapter:media_reports]\n\n埋め込みメタデータの表示 ÔÇö [chapter:embedded_metadata]\n\nメディアの整合性を確認中 – [chapter:media_integrity]\n\nビデオコンタクトシートの作成 ÔÇö [chapter:video_contact_sheets]\n\nフォルダー 同期 — [chapter:folder_synchronization]\n\nフォルダー 組織規則 – [chapter:folder_organization_rules]\n\n転送キューの管理 ÔÇö [chapter:transfer_queue]\n\n安全なファイルアクション — [chapter:safe_file_actions]\n\nワークスペースとキャッシュ — [chapter:workspaces_and_cache]\n\n言語 — [chapter:language]\n\n用語集 — [chapter:glossary]\n\nプロジェクトをサポートします — [chapter:support_the_project]"
+      },
+      {
+        "id": "getting_started",
+        "title": "開始 を取得中",
+        "paragraphs": [
+          {
+            "id": "getting_started.p001",
+            "source_sha256": "5f188741bf38dafbb6803c0d32c5c55281c418b27b6b6204c2b4b9470484371b",
+            "text": "ウィンドウの各側は独立したフォルダー ブラウザーです。 [参照]、フォルダ ツリー、パス ボックス、または [上へ] を使用してフォルダを選択します。ペイン内をクリックしてアクティブにします。"
+          },
+          {
+            "id": "getting_started.p002",
+            "source_sha256": "5c862d90858ec952be55c182a8161ba52748f10b89bab70f8f5f595c38c95370",
+            "text": "[表示] > 外観と文字サイズ は、システム、ライト、ダーク、および ハイコントラスト テーマに加えて、100%、125%、150%、175%、および 200% のインターフェイス スケーリングを提供します。既存のコントロール全体でプレビューを即座に変更します。 [保存] を選択すると今後の起動時に選択が保持され、キャンセル またはウィンドウを閉じると以前の設定が復元され、システム設定をデフォルトに戻す はオペレーティング システムのテーマ 100% に戻ります。これらの設定はプレゼンテーションのみを変更し、メディアやライブラリ データは変更しません。"
+          },
+          {
+            "id": "getting_started.p003",
+            "source_sha256": "716b38f3fc587aa8c148a51715d481a35d5c135e6211016faa710ce34b4bf55a",
+            "text": "各ペインには、独自のコンパクトなエクスプローラー スタイルのナビゲーション ストリップがあります。 ← で戻る、→ で進む、↑ で親フォルダーが開き、↻ リフレッシュ でフォルダー ツリーと現在のスキャンが表示されます。前に戻った後に別のフォルダーを開くと、その時点から新しい前方履歴が開始されます。"
+          },
+          {
+            "id": "getting_started.p004",
+            "source_sha256": "b34bc532ebe9785101efd80988074ed03a0c0fbf0e349d6133d31620e8a8ad3f",
+            "text": "フォルダー ツリーは常にペインの現在の場所に従います。親フォルダーを展開し、正確なスキャン開始フォルダーを選択し、そのフォルダーをスクロールして表示します。現在のフォルダーは展開するまで閉じたままになるため、一時的な読み込みプレースホルダーは表示されません。これは、ワークスペースを復元するかパスを入力した後でも発生するため、より深いフォルダーがスキャンされている間、ドライブ ルートが強調表示されたままになることはありません。 サブフォルダーを含める は、その上のドライブ ルートではなく、そのペインに表示されている選択/現在のフォルダーから始まります。"
+          },
+          {
+            "id": "getting_started.p005",
+            "source_sha256": "90fbbedebb973bad42d26e8534c1fdab61604a30d9ead7a4ce4c88ea2cc4012a",
+            "text": "各ペインには、独立した「戻る」、「進む」、「上」、および リフレッシュ コントロール、フィルター、並べ替え、サムネイル、情報、および プレビュー があります。ビデオのプレビューは 4 倍速で開始されます。カンマとピリオドは 10 パーセント前後に移動します。 プレビュー と情報は、バックグラウンド作業を軽減するために有効になるまでオフのままです。"
+          },
+          {
+            "id": "getting_started.tree_alignment_1272",
+            "source_sha256": "04feb6a3e71761ee4884be7564bb8832204338d93939bf1fdd67aa20f7e62380",
+            "text": "フォルダーツリーは、現在表示されているブランチを自動的に整列させ、無駄なインデントを避けます。より深いブランチにスクロールすると水平にシフトし、上位の祖先にスクロールバックするとクリックする必要なく左に戻ります。全階層は常に利用可能で、ツリー下の水平スクロールバーにより手動で水平に表示することもできます。"
+          }
+        ],
+        "body": "ウィンドウの各側は独立したフォルダー ブラウザーです。 [参照]、フォルダ ツリー、パス ボックス、または [上へ] を使用してフォルダを選択します。ペイン内をクリックしてアクティブにします。\n\n[表示] > 外観と文字サイズ は、システム、ライト、ダーク、および ハイコントラスト テーマに加えて、100%、125%、150%、175%、および 200% のインターフェイス スケーリングを提供します。既存のコントロール全体でプレビューを即座に変更します。 [保存] を選択すると今後の起動時に選択が保持され、キャンセル またはウィンドウを閉じると以前の設定が復元され、システム設定をデフォルトに戻す はオペレーティング システムのテーマ 100% に戻ります。これらの設定はプレゼンテーションのみを変更し、メディアやライブラリ データは変更しません。\n\n各ペインには、独自のコンパクトなエクスプローラー スタイルのナビゲーション ストリップがあります。 ← で戻る、→ で進む、↑ で親フォルダーが開き、↻ リフレッシュ でフォルダー ツリーと現在のスキャンが表示されます。前に戻った後に別のフォルダーを開くと、その時点から新しい前方履歴が開始されます。\n\nフォルダー ツリーは常にペインの現在の場所に従います。親フォルダーを展開し、正確なスキャン開始フォルダーを選択し、そのフォルダーをスクロールして表示します。現在のフォルダーは展開するまで閉じたままになるため、一時的な読み込みプレースホルダーは表示されません。これは、ワークスペースを復元するかパスを入力した後でも発生するため、より深いフォルダーがスキャンされている間、ドライブ ルートが強調表示されたままになることはありません。 サブフォルダーを含める は、その上のドライブ ルートではなく、そのペインに表示されている選択/現在のフォルダーから始まります。\n\n各ペインには、独立した「戻る」、「進む」、「上」、および リフレッシュ コントロール、フィルター、並べ替え、サムネイル、情報、および プレビュー があります。ビデオのプレビューは 4 倍速で開始されます。カンマとピリオドは 10 パーセント前後に移動します。 プレビュー と情報は、バックグラウンド作業を軽減するために有効になるまでオフのままです。\n\nフォルダーツリーは、現在表示されているブランチを自動的に整列させ、無駄なインデントを避けます。より深いブランチにスクロールすると水平にシフトし、上位の祖先にスクロールバックするとクリックする必要なく左に戻ります。全階層は常に利用可能で、ツリー下の水平スクロールバーにより手動で水平に表示することもできます。"
+      },
+      {
+        "id": "details_and_thumbnails",
+        "title": "詳細 および サムネイル",
+        "paragraphs": [
+          {
+            "id": "details_and_thumbnails.p001",
+            "source_sha256": "0d7fe0d7d10b204c166baf479099c908e17fbe87952b9f9f35dd9cf1de776edb",
+            "text": "どちらかのペインの上部にある表示セレクター、または[表示]メニューを使用して、そのペインを切り替えます詳細そしてサムネイル. 両方のビューは同じファイルを表示し、その選択を共有します。サムネイルモードは～を尊重しますサブフォルダーを含める、メディアスイッチ、検索、解像度、高度なフィルター、および並べ替え。並べ替えメニューでは、名前（AからZ / ZからA）の正確な方向を提供します、変更日（最古／最新）、ファイルサイズ, 長さ, コーデック, 解像度、タイプ、ビットレート, フレームレート、そして評価各ペインは独立して並べ替えが可能で、ボタンはアクティブな順序を表示し、保存されたワークスペースやスマートコレクションはそれを復元します。詳細見出しは、迅速な並べ替えのためにクリック可能なままです。相対パス再帰スキャン中にサムネイルの下に表示されます。ビューセレクターの横にあるサムネイルサイズスライダーを使用してください。名前付きサイズプリセットは引き続き「ビュー >」の下にあります。サムネイルのサイズ. 連続はデフォルトのサムネイルブラウザです：1つのスクロールバーがフィルタリングされたコレクション全体をカバーし、プログラムは表示されているカードと小さなバッファのみを作成してスクロール中にそれらを再利用します。これにより、非常に大きなライブラリでもウィジェットと画像のメモリが制限されます。選択してくださいページいつでもその横にあるボタンを使用して、既定のページグリッドを復元できます。1ページあたりのカード数として、Auto、200、500、または1,000を選択し、コンパクトなÔåÉおよびÔåÆコントロールを使用します。Autoは、動画がフィルタ結果の半分以上の場合は200を使用し、画像が多数を占める場合は500を使用します。各ペインと保存された作業スペースは、それぞれのブラウザの選択を記憶します。"
+          },
+          {
+            "id": "details_and_thumbnails.p002",
+            "source_sha256": "f88d676b4ba78ef8e5f3064d34755f67ce646a0965745c31f8a74570a37bd2d4",
+            "text": "サムネイル グリッドは、最初のレンダリングの前にブラウザの実際の幅を測定し、ペインまたはフォルダ/ブラウザの分割線のサイズが変更されると自動的にリフローします。したがって、ページ モードでは、ページ 1 は、特定のペイン幅とサムネイル サイズに対して、後続のページと同じ列数を使用します。 連続 モードでは、サイズ変更によりコレクション全体を構築せずに仮想行が再計算されます。カード、画像、ファイル名など、サムネイル ペイン上の任意の場所でマウス ホイールを回転すると、そのペインが上下にスクロールします。 2 つのペインは独立してスクロールします。"
+          },
+          {
+            "id": "details_and_thumbnails.p003",
+            "source_sha256": "878f1f9405d3cda5132d953b07e64ce5639125896f32cdb19341e4c2156fd898",
+            "text": "詳細 モードでは、デフォルトの順序は、名前、コーデック、解像度、動画の長さ、ファイルサイズ、MB/分、FPS、変更日、タイプ、 ビットレート、音声、HDR、メガピクセル、ラベル、タグ、および 評価。ヘッダー間の境界線をドラッグして、任意の量だけ列のサイズを変更します。分割線の準備が完了すると、水平サイズ変更カーソルが表示されます。ヘッダー自体をドラッグして並べ替えます。キーボード修飾子は必要ありません。ヘッダーをクリックするだけでも並べ替えが行われます。列は選択した幅を維持し、水平スクロールバーはペインの外側のフィールドに到達します。正確に制御するには、「表示」>「列の構成」を選択するか、ヘッダーを右クリックします。 [列] ウィンドウでは、フィールドを移動したり、正確な幅を設定したり、デフォルトを復元したりできます。個人的にアレンジして保存した既存の列の順序は保持されます。長い再帰パスは途中で短縮されるため、ファイル名は表示されたままになります。"
+          },
+          {
+            "id": "details_and_thumbnails.p004",
+            "source_sha256": "88415a6236cebbf0ce6211ef333a7271672023a2bdae6ccdc38584b6cce810d6",
+            "text": "ビデオのサムネイルは、代表的ではない開始フレームを避けるためにクリップに 15% サンプリングされます。期間メタデータが利用できない場合、アプリケーションは 1 秒のフォールバックを使用します。生成されたサムネイルはキャッシュされ、繰り返しブラウジングを高速化します。"
+          },
+          {
+            "id": "details_and_thumbnails.p005",
+            "source_sha256": "7a726d60e44b6a6ccdb5c196cf1f81af226094ce2b8f43f72c1bf065feb34ad5",
+            "text": "通常の画像サムネイルは、Pillow のプロセス内で効率的にデコードされます。 FFmpeg はビデオ フレームに使用され、異常な画像形式のフォールバックとして使用されます。サムネイルのデコードでは小さなワーカー プールが使用されるため、大きなフォルダーでは過剰な数のデコーダーを起動できません。キャッシュ画像はアトミックに書き込まれ、表示前にチェックされます。不完全または破損したキャッシュされたサムネイルは無視されて再生成されますが、古いグリッドに属する結果は安全に破棄されます。"
+          },
+          {
+            "id": "details_and_thumbnails.p006",
+            "source_sha256": "ea382833a32b1bb5c8dac172f29751f48d27aead08969ef699cca6142fddc69f",
+            "text": "生成されたサムネイルはプログラムが終了した後も利用できるため、変更されていないファイルを再訪問すると、通常はキャッシュされた画像がすぐに使用されます。 ツール > キャッシュとスキャン は、サムネイル キャッシュの最大サイズをオペレーティング システム ドライブのパーセンテージとして制御します。デフォルトは 1% です。再利用されたサムネイルは最近のものとしてマークされ、制限を超えると、最も最近使用されていないエントリが最初に削除されます。制限は 0.1% ～ 10% に設定でき、すぐに適用されます。 サムネイルをクリア は確認前に現在の数とサイズを報告し、生成されたサムネイルのみを削除します。元のメディアやキャッシュされた技術メタデータは削除されません。 すべてのキャッシュをクリア は、サムネイルとメタデータの両方を削除します。"
+          },
+          {
+            "id": "details_and_thumbnails.size_slider_1272",
+            "source_sha256": "f73fba2585edabe7710a59372a59bce3e3509092c20423aeed2583c4bc430100",
+            "text": "サムネイルサイズのスライダーは サムネイル でのみ表示され、詳細 では非表示になります。スライダーを動かすとサムネイルのサイズが連続的に調整され、ビューを切り替えてもその設定は保持されます。ドラッグ後に 一時停止 が短時間表示され、グリッドが再配置されます。より大きな画像はアスペクト比を保持し、現在のサイズはペインの設定と共に保存されます。名前付きのサイズプリセットはビュー メニューで引き続き利用可能で、ペインの見出しに重複するサイズのドロップダウンはありません。"
+          }
+        ],
+        "body": "どちらかのペインの上部にある表示セレクター、または[表示]メニューを使用して、そのペインを切り替えます詳細そしてサムネイル. 両方のビューは同じファイルを表示し、その選択を共有します。サムネイルモードは～を尊重しますサブフォルダーを含める、メディアスイッチ、検索、解像度、高度なフィルター、および並べ替え。並べ替えメニューでは、名前（AからZ / ZからA）の正確な方向を提供します、変更日（最古／最新）、ファイルサイズ, 長さ, コーデック, 解像度、タイプ、ビットレート, フレームレート、そして評価各ペインは独立して並べ替えが可能で、ボタンはアクティブな順序を表示し、保存されたワークスペースやスマートコレクションはそれを復元します。詳細見出しは、迅速な並べ替えのためにクリック可能なままです。相対パス再帰スキャン中にサムネイルの下に表示されます。ビューセレクターの横にあるサムネイルサイズスライダーを使用してください。名前付きサイズプリセットは引き続き「ビュー >」の下にあります。サムネイルのサイズ. 連続はデフォルトのサムネイルブラウザです：1つのスクロールバーがフィルタリングされたコレクション全体をカバーし、プログラムは表示されているカードと小さなバッファのみを作成してスクロール中にそれらを再利用します。これにより、非常に大きなライブラリでもウィジェットと画像のメモリが制限されます。選択してくださいページいつでもその横にあるボタンを使用して、既定のページグリッドを復元できます。1ページあたりのカード数として、Auto、200、500、または1,000を選択し、コンパクトなÔåÉおよびÔåÆコントロールを使用します。Autoは、動画がフィルタ結果の半分以上の場合は200を使用し、画像が多数を占める場合は500を使用します。各ペインと保存された作業スペースは、それぞれのブラウザの選択を記憶します。\n\nサムネイル グリッドは、最初のレンダリングの前にブラウザの実際の幅を測定し、ペインまたはフォルダ/ブラウザの分割線のサイズが変更されると自動的にリフローします。したがって、ページ モードでは、ページ 1 は、特定のペイン幅とサムネイル サイズに対して、後続のページと同じ列数を使用します。 連続 モードでは、サイズ変更によりコレクション全体を構築せずに仮想行が再計算されます。カード、画像、ファイル名など、サムネイル ペイン上の任意の場所でマウス ホイールを回転すると、そのペインが上下にスクロールします。 2 つのペインは独立してスクロールします。\n\n詳細 モードでは、デフォルトの順序は、名前、コーデック、解像度、動画の長さ、ファイルサイズ、MB/分、FPS、変更日、タイプ、 ビットレート、音声、HDR、メガピクセル、ラベル、タグ、および 評価。ヘッダー間の境界線をドラッグして、任意の量だけ列のサイズを変更します。分割線の準備が完了すると、水平サイズ変更カーソルが表示されます。ヘッダー自体をドラッグして並べ替えます。キーボード修飾子は必要ありません。ヘッダーをクリックするだけでも並べ替えが行われます。列は選択した幅を維持し、水平スクロールバーはペインの外側のフィールドに到達します。正確に制御するには、「表示」>「列の構成」を選択するか、ヘッダーを右クリックします。 [列] ウィンドウでは、フィールドを移動したり、正確な幅を設定したり、デフォルトを復元したりできます。個人的にアレンジして保存した既存の列の順序は保持されます。長い再帰パスは途中で短縮されるため、ファイル名は表示されたままになります。\n\nビデオのサムネイルは、代表的ではない開始フレームを避けるためにクリップに 15% サンプリングされます。期間メタデータが利用できない場合、アプリケーションは 1 秒のフォールバックを使用します。生成されたサムネイルはキャッシュされ、繰り返しブラウジングを高速化します。\n\n通常の画像サムネイルは、Pillow のプロセス内で効率的にデコードされます。 FFmpeg はビデオ フレームに使用され、異常な画像形式のフォールバックとして使用されます。サムネイルのデコードでは小さなワーカー プールが使用されるため、大きなフォルダーでは過剰な数のデコーダーを起動できません。キャッシュ画像はアトミックに書き込まれ、表示前にチェックされます。不完全または破損したキャッシュされたサムネイルは無視されて再生成されますが、古いグリッドに属する結果は安全に破棄されます。\n\n生成されたサムネイルはプログラムが終了した後も利用できるため、変更されていないファイルを再訪問すると、通常はキャッシュされた画像がすぐに使用されます。 ツール > キャッシュとスキャン は、サムネイル キャッシュの最大サイズをオペレーティング システム ドライブのパーセンテージとして制御します。デフォルトは 1% です。再利用されたサムネイルは最近のものとしてマークされ、制限を超えると、最も最近使用されていないエントリが最初に削除されます。制限は 0.1% ～ 10% に設定でき、すぐに適用されます。 サムネイルをクリア は確認前に現在の数とサイズを報告し、生成されたサムネイルのみを削除します。元のメディアやキャッシュされた技術メタデータは削除されません。 すべてのキャッシュをクリア は、サムネイルとメタデータの両方を削除します。\n\nサムネイルサイズのスライダーは サムネイル でのみ表示され、詳細 では非表示になります。スライダーを動かすとサムネイルのサイズが連続的に調整され、ビューを切り替えてもその設定は保持されます。ドラッグ後に 一時停止 が短時間表示され、グリッドが再配置されます。より大きな画像はアスペクト比を保持し、現在のサイズはペインの設定と共に保存されます。名前付きのサイズプリセットはビュー メニューで引き続き利用可能で、ペインの見出しに重複するサイズのドロップダウンはありません。"
+      },
+      {
+        "id": "scanning_and_filtering",
+        "title": "スキャンとフィルタリング",
+        "paragraphs": [
+          {
+            "id": "scanning_and_filtering.p001",
+            "source_sha256": "c4712ae8d144d44f4ec6a47e8ad4b477c14275c9c493ace31eef65a7a8b9168d",
+            "text": "有効にする サブフォルダーを含める 再帰的にスキャンします。ファイル名には [検索] を使用し、正確な解像度には 解像度 を使用し、サイズ、ファイル サイズ、期間、コーデック、方向、および日付にはその他のフィルターを使用します。 キャンセル は長時間のスキャンを停止します。 ツール の キャッシュとスキャン 設定は、並列ワーカーと除外されたパターンを制御します。"
+          },
+          {
+            "id": "scanning_and_filtering.p002",
+            "source_sha256": "5f55a7b5ecdce4426e11fdc93539a0e0a436839a62d94bc8019a50af3c1deae6",
+            "text": "スキャン結果をスプレッドシートまたはドキュメントとして保存するには、[chapter:media_reports]を参照してください。"
+          },
+          {
+            "id": "scanning_and_filtering.p003",
+            "source_sha256": "6296398bb5bd08c4d57ca8f2606a7b6164825f670f0bfa1fd408f26fca05c53e",
+            "text": "大 再帰的スキャンは、増大するブラウザを繰り返し再構築することなく結果を収集します。スキャンが終了すると、詳細 行が短いバッチで追加されるため、Play/一時停止、ナビゲーション、ペイント、およびウィンドウ コントロールの応答性が維持されます。サムネイル グリッドも同様にスキャン完了時に更新されます。コピー、移動、および削除コマンドが成功すると、両方のフォルダーを再スキャンするのではなく、影響を受けるメモリ内のエントリのみが更新されるようになりました。アプリケーションの外部からドロップされた見慣れないファイルは、影響を受けるペインでのみ安全スキャンをトリガーします。メタデータ キャッシュの保存はバックグラウンドで実行され、停止した FFmpeg プレビュー プロセスはすぐにクリーンアップされます。 ツール > キャッシュとスキャン は、静音、バランス、および高速パフォーマンス プロファイルを提供します。 バランス は確立された動作を保持します。 静音 はスキャンとサムネイルの同時実行性を減らし、1 秒あたり 8 プレビュー フレームを目標とします。 高速 では同時実行性が向上し、1 秒あたり 15 フレームが目標になります。 静音 および バランス は、プレビューの再生またはシーク中に新しいキャッシュされていないプローブとサムネイル デコードのペースを調整し、インタラクティブな作業を優先します。 キャッシュ済み の結果が意図的に遅延されることはありません。メタデータ ワーカー フィールドは、プロファイルを選択した後も調整可能なままです。"
+          },
+          {
+            "id": "scanning_and_filtering.p004",
+            "source_sha256": "cfc2a88e50877f4251ec58b90265b0c4485c3899666c8cdd2dcd43cc0541aa04",
+            "text": "それぞれの側に独立した再生、タイムライン、速度、オーディオ/ミュート、フレーム キャッシュ、およびデコーダー プロセスがあります。スクラッチ ビデオの再生ペースは、意図的に 1 秒あたり 12 フレームのリアルタイムに調整されます。これにより、特に大規模なフォルダー スキャンの実行中に、プレビューで表示できる速度よりも速くクリップの残りの部分をデコードすることによって引き起こされる CPU の大量使用を回避しながら、プレビューをスムーズに保ちます。"
+          },
+          {
+            "id": "scanning_and_filtering.p005",
+            "source_sha256": "6d2351f7d55b8f5bf804e7ab66908fd915359b92794340ef24a0429900443a62",
+            "text": "いずれかのプレビュー タイムラインの任意の場所をクリックすると、マーカーがその位置に直接移動し、そこで再生が再開されます。マーカーを押してドラッグして、継続的にスクラブすることもできます。スクラビングは、新しい位置が要求されるとすぐに古いフレーム要求をキャンセルし、複数の FFmpeg デコーダーがバックグラウンドで競合するのを防ぎます。最近訪問した位置は 4 分の 1 秒単位でキャッシュされるため、すぐにその位置に戻ることができます。スライダーを放すと、選択した位置から再生が再開されます。"
+          },
+          {
+            "id": "scanning_and_filtering.p006",
+            "source_sha256": "fe8d26dfc3bcebb327cad49202bcc0288ca9ad0b75babe71c0d04dfab8ac9fea",
+            "text": "ビデオのプレビューはデフォルトで 4 倍速になっており、より迅速に確認できます。タイムラインの下にある 1x、2x、4x、6x、8x、および 16x ボタンを使用して、再生速度を変更します。現在の設定を明確にするために、アクティブな速度ボタンが無効になります。 音声 はデフォルトでミュートされています。 🔇 ミュート を選択して同期サウンドを有効にし、🔊 音声 を選択して再びミュートします。再生中に速度を変更すると、現在のタイムライン位置でビデオとオーディオが一緒に再開されます。"
+          },
+          {
+            "id": "scanning_and_filtering.p007",
+            "source_sha256": "3214a4d4fd458bb76deb51ff30947b215ded0ce500221cb3511bf25da94d6a74",
+            "text": "|◀ と ▶| を使用します。オーディオ ボタンの横にある をクリックすると、1 フレームずつ前後に移動します。アプリケーションは、ビデオの報告されたフレーム レートを使用し、そのメタデータが利用できない場合は 25 fps にフォールバックし、結果の静止画に対して正確なシークを実行します。現在のビデオ位置をフルソース解像度の PNG としてエクスポートするには、⤓ PNG を選択します。再生はその正確な位置で一時停止され、出力は一時ファイルを通じて書き込まれ、ビデオは決して変更されません。"
+          },
+          {
+            "id": "scanning_and_filtering.p008",
+            "source_sha256": "2427ebd091d494c4bd3cbf71c48a081ab4ee23a5f549571ceeb7c12ea2c351d6",
+            "text": "入力フィールドの外側にフォーカスがある場合、コンマ (,) を押すと、アクティブなペインのビデオ プレビューが合計期間の 10% だけ後方にジャンプし、ピリオド (.) を押すと 10％ 前にジャンプします。アクティブなペインは、最後にクリックされた側です。再生プレビューは新しい位置から再生を続けます。一時停止されたプレビューは一時停止されたままになり、正確な宛先フレームが表示されます。通常、キーはパス、検索、フィルター、ダイアログ フィールドに入力されます。"
+          },
+          {
+            "id": "scanning_and_filtering.p009",
+            "source_sha256": "decded439831addc29ee74040e8bfff01524b194d15c0468751e96d11df67309",
+            "text": "ファイル エクスプローラーまたは別のアプリケーションでフォルダーまたはファイルが変更された後、[表示] の下の アクティブなペインを更新 または 両方のペインを更新します。 リフレッシュ は、メディアを再スキャンするだけでなく、フォルダー ツリーを再構築します。これは、F5、ツールバー、ブラウザーとフォルダー ツリーの右クリック メニューからも利用できます。あるいは、いずれかのペインで ライブ Individual を有効にして、現在のフォルダーを自動的に監視します。 ライブ はナビゲーションに従い、サブフォルダーを含める と同じスコープを使用します。作成、変更、名前変更、および削除のバーストは、更新前に結合されます。フォルダーを変更するとツリーも更新されます。スキャン完了ステータスにライブ マーカーが表示されます。 ライブ はデフォルトでオフになっており、チェックボックスをオフにすると、すぐに手動更新動作が復元されます。"
+          }
+        ],
+        "body": "有効にする サブフォルダーを含める 再帰的にスキャンします。ファイル名には [検索] を使用し、正確な解像度には 解像度 を使用し、サイズ、ファイル サイズ、期間、コーデック、方向、および日付にはその他のフィルターを使用します。 キャンセル は長時間のスキャンを停止します。 ツール の キャッシュとスキャン 設定は、並列ワーカーと除外されたパターンを制御します。\n\nスキャン結果をスプレッドシートまたはドキュメントとして保存するには、[chapter:media_reports]を参照してください。\n\n大 再帰的スキャンは、増大するブラウザを繰り返し再構築することなく結果を収集します。スキャンが終了すると、詳細 行が短いバッチで追加されるため、Play/一時停止、ナビゲーション、ペイント、およびウィンドウ コントロールの応答性が維持されます。サムネイル グリッドも同様にスキャン完了時に更新されます。コピー、移動、および削除コマンドが成功すると、両方のフォルダーを再スキャンするのではなく、影響を受けるメモリ内のエントリのみが更新されるようになりました。アプリケーションの外部からドロップされた見慣れないファイルは、影響を受けるペインでのみ安全スキャンをトリガーします。メタデータ キャッシュの保存はバックグラウンドで実行され、停止した FFmpeg プレビュー プロセスはすぐにクリーンアップされます。 ツール > キャッシュとスキャン は、静音、バランス、および高速パフォーマンス プロファイルを提供します。 バランス は確立された動作を保持します。 静音 はスキャンとサムネイルの同時実行性を減らし、1 秒あたり 8 プレビュー フレームを目標とします。 高速 では同時実行性が向上し、1 秒あたり 15 フレームが目標になります。 静音 および バランス は、プレビューの再生またはシーク中に新しいキャッシュされていないプローブとサムネイル デコードのペースを調整し、インタラクティブな作業を優先します。 キャッシュ済み の結果が意図的に遅延されることはありません。メタデータ ワーカー フィールドは、プロファイルを選択した後も調整可能なままです。\n\nそれぞれの側に独立した再生、タイムライン、速度、オーディオ/ミュート、フレーム キャッシュ、およびデコーダー プロセスがあります。スクラッチ ビデオの再生ペースは、意図的に 1 秒あたり 12 フレームのリアルタイムに調整されます。これにより、特に大規模なフォルダー スキャンの実行中に、プレビューで表示できる速度よりも速くクリップの残りの部分をデコードすることによって引き起こされる CPU の大量使用を回避しながら、プレビューをスムーズに保ちます。\n\nいずれかのプレビュー タイムラインの任意の場所をクリックすると、マーカーがその位置に直接移動し、そこで再生が再開されます。マーカーを押してドラッグして、継続的にスクラブすることもできます。スクラビングは、新しい位置が要求されるとすぐに古いフレーム要求をキャンセルし、複数の FFmpeg デコーダーがバックグラウンドで競合するのを防ぎます。最近訪問した位置は 4 分の 1 秒単位でキャッシュされるため、すぐにその位置に戻ることができます。スライダーを放すと、選択した位置から再生が再開されます。\n\nビデオのプレビューはデフォルトで 4 倍速になっており、より迅速に確認できます。タイムラインの下にある 1x、2x、4x、6x、8x、および 16x ボタンを使用して、再生速度を変更します。現在の設定を明確にするために、アクティブな速度ボタンが無効になります。 音声 はデフォルトでミュートされています。 🔇 ミュート を選択して同期サウンドを有効にし、🔊 音声 を選択して再びミュートします。再生中に速度を変更すると、現在のタイムライン位置でビデオとオーディオが一緒に再開されます。\n\n|◀ と ▶| を使用します。オーディオ ボタンの横にある をクリックすると、1 フレームずつ前後に移動します。アプリケーションは、ビデオの報告されたフレーム レートを使用し、そのメタデータが利用できない場合は 25 fps にフォールバックし、結果の静止画に対して正確なシークを実行します。現在のビデオ位置をフルソース解像度の PNG としてエクスポートするには、⤓ PNG を選択します。再生はその正確な位置で一時停止され、出力は一時ファイルを通じて書き込まれ、ビデオは決して変更されません。\n\n入力フィールドの外側にフォーカスがある場合、コンマ (,) を押すと、アクティブなペインのビデオ プレビューが合計期間の 10% だけ後方にジャンプし、ピリオド (.) を押すと 10％ 前にジャンプします。アクティブなペインは、最後にクリックされた側です。再生プレビューは新しい位置から再生を続けます。一時停止されたプレビューは一時停止されたままになり、正確な宛先フレームが表示されます。通常、キーはパス、検索、フィルター、ダイアログ フィールドに入力されます。\n\nファイル エクスプローラーまたは別のアプリケーションでフォルダーまたはファイルが変更された後、[表示] の下の アクティブなペインを更新 または 両方のペインを更新します。 リフレッシュ は、メディアを再スキャンするだけでなく、フォルダー ツリーを再構築します。これは、F5、ツールバー、ブラウザーとフォルダー ツリーの右クリック メニューからも利用できます。あるいは、いずれかのペインで ライブ Individual を有効にして、現在のフォルダーを自動的に監視します。 ライブ はナビゲーションに従い、サブフォルダーを含める と同じスコープを使用します。作成、変更、名前変更、および削除のバーストは、更新前に結合されます。フォルダーを変更するとツリーも更新されます。スキャン完了ステータスにライブ マーカーが表示されます。 ライブ はデフォルトでオフになっており、チェックボックスをオフにすると、すぐに手動更新動作が復元されます。"
+      },
+      {
+        "id": "selecting_and_previewing",
+        "title": "選択して プレビューing",
+        "paragraphs": [
+          {
+            "id": "selecting_and_previewing.p001",
+            "source_sha256": "3cb30411bb6f6a0807c08da889783687297f5427e72f356e38a6f0de5a9fedf2",
+            "text": "各ペインには、独立したチェックボックス アクション グループがあります。 詳細 行の横またはサムネイル カード上の ☐/☑ ボックスをクリックするか、詳細 行にフォーカスして Space キーを押します。他のファイルを強調表示してプレビューしたり、ペインを並べ替えたり、フィルターを変更したりしている間も、ティックは収集されたままになります。ブラウザの下のカウンターには、現在フィルターによって非表示になっているチェックマークが付いているファイルを含む合計が表示されます。 ✓ 詳細 見出しをクリックするか、✓ サムネイル 内の すべて表示 をクリックして、現在表示されているすべてのファイルにチェックを入れます。これを繰り返して、表示されているグループのチェックを外します。 目盛りをクリアする はグループ全体を削除します。コピー、移動、ドラッグ、削除、名前変更、評価、タグ、比較、整合性、および変換アクションでは、チェックマークが付いているファイルが存在する場合はすべて使用されます。チェックマークを付けない場合は、通常の強調表示された行が使用されます。そのペインを別のフォルダーまたはドライブに変更すると、目盛りがクリアされ、アプリケーションを閉じた後は目盛りは保存されません。"
+          },
+          {
+            "id": "selecting_and_previewing.checkbox_accuracy_1272",
+            "source_sha256": "ec45605bac64df9520c7b16b9f54eb0ff1645c2f120d0e06da004d853d0a3acc",
+            "text": "チェックボックスは、ドラッグせずにボックスをクリックして放したときにのみ変更されます。ボックスの横の空白部分は、クリック可能な領域には含まれません。数ピクセル以上移動すると、ハイライト選択が開始され、チェックは変更されません。ドラッグがチェックボックスで始まった場合でも変わりません。ハイライトされたグループ全体を変更するには、明示的に チェックボックス選択 および 選択のチェックを外す コントロールを使用してください。"
+          },
+          {
+            "id": "selecting_and_previewing.p007",
+            "source_sha256": "fe2df6bc40914fca7346780d043258bca3ac75b0c0da69d7d7c7af1921420d95",
+            "text": "空のブラウザスペースから行やサムネイルカードにかけてドラッグすると、アウトライン付きの選択矩形でグループをハイライトできます。これによりファイルのチェックが入ったり外れたりすることはありません。通常のドラッグは新しいハイライトグループを作成します。ドラッグ開始時にCtrlを押しながら行うと、既存のハイライトに追加されます。開始空のサムネイルスペース上で、画像やファイル名ではなく、サムネイルファイルをドラッグすると転送が始まるためです。詳細行を縦にドラッグしてグループをハイライトすることもできます。別のペインの方にドラッグすると転送されます。ヘッダーは通常のサイズ変更および順序変更のジェスチャーがそのまま機能します。使用してくださいチェックボックス選択ハイライトされたファイルを既存の選択されたアクショングループに追加するには、使用してください選択のチェックを外すそのグループからハイライトされたファイルだけを削除するには。両方のボタンはそれぞれのブラウザの上部、並べ替えの横にあります。表示されているものをすべて選択してくださいそして目盛りをクリアする；狭いペインでの折り返しを制御します。両方のコマンドは右クリックメニューでも利用可能です。フィルターで非表示になっているファイルを含むその他のチェックも保持されます。ファイル操作は、いずれかのチェックが存在する場合は常にすべてのチェックを優先するため、コピーまたは移動する前にアクショングループを変更したい場合は、これらの明示的なコントロールを使用してください。"
+          },
+          {
+            "id": "selecting_and_previewing.p002",
+            "source_sha256": "7f32ecf04dddbc0b538a4d33856b7ca37e281994235e853d6806e565759f3fb5",
+            "text": "各ブラウザ ペインには、独自の大きな ▶ プレビュー トグルがあり、不必要なデコードを避けるためにデフォルトでオフになっています。左側、右側、または両側で 有効にする プレビュー を押すと、ブラウザの下に整列した個別のプレビュー パネルが開きます。ボタンには明確な選択状態があるため、有効になっているプレビューを簡単に見つけることができます。両方のトグルがオフの場合、プレビュー領域は完全に折りたたまれ、ブラウザーはウィンドウの高さ全体を使用します。ファイルをクリックして、その面でプレビューします。ハイライト表示は目盛りとは独立しているため、アクション グループを失うことなく別のファイルを検査またはプレビューできます。 Ctrl キーを押しながらサムネイルまたは詳細行をクリックすると、複数のファイルが強調表示されます。 一致項目を選択 は、現在表示されているすべての結果を強調表示します。ダブルクリックすると、強調表示されたファイルが通常のアプリケーションで開きます。"
+          },
+          {
+            "id": "selecting_and_previewing.p006",
+            "source_sha256": "ea7ee844c5a71c70be45874efacd2698bc3f2f6056cb1188f3f135038fbcd31c",
+            "text": "画像 およびビデオ フレームは、元の幅と高さの比率を維持しながら、独自のプレビュー パネルに適合する最大サイズを自動的に使用します。メイン ウィンドウまたはプレビュー ディバイダのサイズを変更すると、少し遅れて画像が更新されるため、ディバイダがドラッグされている間にデコーダが繰り返し再起動されることがなくなります。"
+          },
+          {
+            "id": "selecting_and_previewing.p003",
+            "source_sha256": "6da9585bae76a4d0447bfa50948712331a0b66f7d19639b6472395a5337a1281",
+            "text": "各ペインには大きな独立したÔôÿ情報トグルもあります。デフォルトではオフになっており、そのペインの右端に折りたたみ可能なインスペクタを追加します。ファイルがすでに選択されている場合、情報を有効にするとすぐに表示されます—再度選択する必要はありません。インスペクタは後の選択に従います。詳細, 連続サムネイル、そしてページサムネイルを表示し、完全なパス、寸法、サイズ、日付、再生時間、コーデック、フレームレート、ビットレート、ピクセル形式、HDR、オーディオ、読み取れない理由、評価、色、タグを表示します。パスをコピーするフルパスをクリップボードに配置します；開くと明らかにする通常のファイル操作を使用します。Infoをオフにするとインスペクターが完全に非表示になり、保存されたワークスペースはその状態を記憶します。Infoは約180ピクセルのコンパクトな初期幅で開きます。上部のソートおよび選択コントロールはInfoディバイダーとは独立しているため、Infoを開いてもそれらのボタンが圧迫されることはありません。インスペクター横のディバイダーをドラッグして幅を変更できます。Infoをオフ・オンするとその幅が復元され、保存されたペイン／ワークスペースの設定も保持されます。狭いウィンドウでは、閲覧のためのスペースを確保するために幅が制限されます。"
+          },
+          {
+            "id": "selecting_and_previewing.p004",
+            "source_sha256": "f69ab2d999168d40676e34589ed911761ef8a4e8e683955ccaa9c471fc373e01",
+            "text": "ファイルエクスプローラーで表示/明らかにする は完全な選択で機能します。最大 5 つのファイルを選択すると、パスごとに個別の公開リクエストが送信されます。 5 を超えると、操作により多数のファイル マネージャー ウィンドウが開く可能性があるため、警告によって正確な数が表示されます。選択したすべてのファイルを表示するには「はい」を選択し、最初のファイルのみを表示するには「いいえ」を選択します。 Windows と macOS はそれぞれのファイルを正確に選択します。 Linux は、システム ファイル マネージャーを通じて各ファイルが含まれるフォルダーを開きます。"
+          },
+          {
+            "id": "selecting_and_previewing.p005",
+            "source_sha256": "78c83927ab22cd560e580cbf1dbe270da8c554ef8357eb67fdc828600c7f856a",
+            "text": "カメラ情報、EXIF フィールド、またはビデオコンテナ/ストリームタグについては、[chapter:embedded_metadata] を参照してください。"
+          }
+        ],
+        "body": "各ペインには、独立したチェックボックス アクション グループがあります。 詳細 行の横またはサムネイル カード上の ☐/☑ ボックスをクリックするか、詳細 行にフォーカスして Space キーを押します。他のファイルを強調表示してプレビューしたり、ペインを並べ替えたり、フィルターを変更したりしている間も、ティックは収集されたままになります。ブラウザの下のカウンターには、現在フィルターによって非表示になっているチェックマークが付いているファイルを含む合計が表示されます。 ✓ 詳細 見出しをクリックするか、✓ サムネイル 内の すべて表示 をクリックして、現在表示されているすべてのファイルにチェックを入れます。これを繰り返して、表示されているグループのチェックを外します。 目盛りをクリアする はグループ全体を削除します。コピー、移動、ドラッグ、削除、名前変更、評価、タグ、比較、整合性、および変換アクションでは、チェックマークが付いているファイルが存在する場合はすべて使用されます。チェックマークを付けない場合は、通常の強調表示された行が使用されます。そのペインを別のフォルダーまたはドライブに変更すると、目盛りがクリアされ、アプリケーションを閉じた後は目盛りは保存されません。\n\nチェックボックスは、ドラッグせずにボックスをクリックして放したときにのみ変更されます。ボックスの横の空白部分は、クリック可能な領域には含まれません。数ピクセル以上移動すると、ハイライト選択が開始され、チェックは変更されません。ドラッグがチェックボックスで始まった場合でも変わりません。ハイライトされたグループ全体を変更するには、明示的に チェックボックス選択 および 選択のチェックを外す コントロールを使用してください。\n\n空のブラウザスペースから行やサムネイルカードにかけてドラッグすると、アウトライン付きの選択矩形でグループをハイライトできます。これによりファイルのチェックが入ったり外れたりすることはありません。通常のドラッグは新しいハイライトグループを作成します。ドラッグ開始時にCtrlを押しながら行うと、既存のハイライトに追加されます。開始空のサムネイルスペース上で、画像やファイル名ではなく、サムネイルファイルをドラッグすると転送が始まるためです。詳細行を縦にドラッグしてグループをハイライトすることもできます。別のペインの方にドラッグすると転送されます。ヘッダーは通常のサイズ変更および順序変更のジェスチャーがそのまま機能します。使用してくださいチェックボックス選択ハイライトされたファイルを既存の選択されたアクショングループに追加するには、使用してください選択のチェックを外すそのグループからハイライトされたファイルだけを削除するには。両方のボタンはそれぞれのブラウザの上部、並べ替えの横にあります。表示されているものをすべて選択してくださいそして目盛りをクリアする；狭いペインでの折り返しを制御します。両方のコマンドは右クリックメニューでも利用可能です。フィルターで非表示になっているファイルを含むその他のチェックも保持されます。ファイル操作は、いずれかのチェックが存在する場合は常にすべてのチェックを優先するため、コピーまたは移動する前にアクショングループを変更したい場合は、これらの明示的なコントロールを使用してください。\n\n各ブラウザ ペインには、独自の大きな ▶ プレビュー トグルがあり、不必要なデコードを避けるためにデフォルトでオフになっています。左側、右側、または両側で 有効にする プレビュー を押すと、ブラウザの下に整列した個別のプレビュー パネルが開きます。ボタンには明確な選択状態があるため、有効になっているプレビューを簡単に見つけることができます。両方のトグルがオフの場合、プレビュー領域は完全に折りたたまれ、ブラウザーはウィンドウの高さ全体を使用します。ファイルをクリックして、その面でプレビューします。ハイライト表示は目盛りとは独立しているため、アクション グループを失うことなく別のファイルを検査またはプレビューできます。 Ctrl キーを押しながらサムネイルまたは詳細行をクリックすると、複数のファイルが強調表示されます。 一致項目を選択 は、現在表示されているすべての結果を強調表示します。ダブルクリックすると、強調表示されたファイルが通常のアプリケーションで開きます。\n\n画像 およびビデオ フレームは、元の幅と高さの比率を維持しながら、独自のプレビュー パネルに適合する最大サイズを自動的に使用します。メイン ウィンドウまたはプレビュー ディバイダのサイズを変更すると、少し遅れて画像が更新されるため、ディバイダがドラッグされている間にデコーダが繰り返し再起動されることがなくなります。\n\n各ペインには大きな独立したÔôÿ情報トグルもあります。デフォルトではオフになっており、そのペインの右端に折りたたみ可能なインスペクタを追加します。ファイルがすでに選択されている場合、情報を有効にするとすぐに表示されます—再度選択する必要はありません。インスペクタは後の選択に従います。詳細, 連続サムネイル、そしてページサムネイルを表示し、完全なパス、寸法、サイズ、日付、再生時間、コーデック、フレームレート、ビットレート、ピクセル形式、HDR、オーディオ、読み取れない理由、評価、色、タグを表示します。パスをコピーするフルパスをクリップボードに配置します；開くと明らかにする通常のファイル操作を使用します。Infoをオフにするとインスペクターが完全に非表示になり、保存されたワークスペースはその状態を記憶します。Infoは約180ピクセルのコンパクトな初期幅で開きます。上部のソートおよび選択コントロールはInfoディバイダーとは独立しているため、Infoを開いてもそれらのボタンが圧迫されることはありません。インスペクター横のディバイダーをドラッグして幅を変更できます。Infoをオフ・オンするとその幅が復元され、保存されたペイン／ワークスペースの設定も保持されます。狭いウィンドウでは、閲覧のためのスペースを確保するために幅が制限されます。\n\nファイルエクスプローラーで表示/明らかにする は完全な選択で機能します。最大 5 つのファイルを選択すると、パスごとに個別の公開リクエストが送信されます。 5 を超えると、操作により多数のファイル マネージャー ウィンドウが開く可能性があるため、警告によって正確な数が表示されます。選択したすべてのファイルを表示するには「はい」を選択し、最初のファイルのみを表示するには「いいえ」を選択します。 Windows と macOS はそれぞれのファイルを正確に選択します。 Linux は、システム ファイル マネージャーを通じて各ファイルが含まれるフォルダーを開きます。\n\nカメラ情報、EXIF フィールド、またはビデオコンテナ/ストリームタグについては、[chapter:embedded_metadata] を参照してください。"
+      },
+      {
+        "id": "copying_and_moving",
+        "title": "コピーと移動",
+        "paragraphs": [
+          {
+            "id": "copying_and_moving.p001",
+            "source_sha256": "74a10eb18d51cae10f7fdd8931b1ad7feb8157e134c2e2f50071b7b2d30f5f1b",
+            "text": "1つのペインでファイルを選択し、ツールバー、編集メニュー、右クリックメニュー、キーボードショートカット、またはドラッグアンドドロップを使用します。複数の選択されたファイルをShutterなどの他のアプリケーションに送信するには、そのペインのナビゲーションコントロールの横にある大きな↗ 選択項目をドラッグ ハンドルを左クリックでドラッグします。これにより、通常のオペレーティングシステムのファイルリスト形式で選択されたすべてのファイルをエクスポートでき、詳細 および サムネイル の両方で列のサイズ変更に干渉することなく機能します。もう一方のペインはアプリ内転送の宛先です。転送は進行状況、速度、残り時間、一時停止、キャンセル、再試行、競合の選択肢とともにキューに入ります。ペイン間転送では、相対フォルダーを保持するかファイルだけをコピーするかを選択できます。"
+          },
+          {
+            "id": "copying_and_moving.p002",
+            "source_sha256": "a438870a1a1fa7c4edc46d8f19aa10034df90810c0e6118e2c2f94828359328d",
+            "text": "編集 > 名前の一括変更選択すると、名前を変更する前に完全なプレビューが表示されます。プレビューは、パターン、検索/置換テキスト、大文字小文字の区別、開始番号、またはパディングを変更すると自動的に更新されます；プレビューを更新するも利用可能です。名前を作成するには{name}元の茎のために、{n}パディングされたシーケンス番号の場合、{ext}ドットなしの拡張子の場合、そして{dotext}拡張子（ドットを含む）用。オプションの検索/置換は大文字小文字を区別する場合としない場合があります。また、番号付けは開始番号と桁数を調整可能です。無効なWindowsの名前、重複する出力、選択されていないファイルとの競合は無効化されます。適用. 確定されたバッチは、内部で一時的な名前を使用するため、スワップやサイクルがお互いを上書きすることはありません。中断されたバッチは可能な限りロールバックされます。成功したバッチとは、Ctrl+Z評価やタグを含む操作を元に戻す。F2または名前を変更1つのファイルでライブファイル名プレビューを開きます;名前を変更は、有効で利用可能な新しい名前に対してのみ有効です。"
+          },
+          {
+            "id": "copying_and_moving.p003",
+            "source_sha256": "dc2923a823a7109741512e0c6e1a2302310ba36b9dbfaa6379ae5acf0c73c9e9",
+            "text": "適用前に確認する繰り返し可能なコピー/移動条件については、[chapter:folder_organization_rules] を参照してください。保留中の転送を一時停止、キャンセル、または再試行するには、[chapter:transfer_queue] を参照してください。"
+          },
+          {
+            "id": "copying_and_moving.p004",
+            "source_sha256": "2c1a1fe656902fb987c4f1a88cd0f8d6ec8ead7edc9b2cf0817ce2b6e82f724b",
+            "text": "選択した 1 つまたは複数のファイルを右クリックして、0 から 5 つ星の評価、赤/黄色/緑/青/紫 のカラー ラベル、またはカンマ区切りのタグを割り当てます。 明確な評価、None、および空のタグ リストは、これらの変更を元に戻します。これらの注釈はアプリケーション データベースにのみ保存されます。オリジナルのメディアと埋め込まれたメタデータは決して変更されません。 詳細 モードでは、並べ替え可能な 評価、ラベル、およびタグ列が提供されます。サムネイルのキャプションには評価/タグが表示され、選択されていないアウトラインとしてカラー ラベルが使用されます。さらに多くのフィルターでは、最小評価、色 (ラベルなし を含む)、またはタグ テキストが必要になる場合があります。内部の名前変更、コピー、移動、および元に戻す操作では、結果のパスに注釈が付けられます。 すべてのキャッシュをクリア は技術的なキャッシュ データを削除しますが、ユーザーの注釈は意図的に保持します。"
+          },
+          {
+            "id": "copying_and_moving.p005",
+            "source_sha256": "4ea753522d03bb48eab43c172373c00d21303828abeacab783fb94f7d41faa41",
+            "text": "詳細 モードでは、個々の行は右ボタンによるファイルドラッグを維持します；通常の右クリックでコンテキストメニューが開きます。また、行や選択したグループを左ボタンで反対のペインにドラッグすることもできます。ドロップすると、明確にラベル付けされた「コピー」「移動」「キャンセル」ボタンが表示されます。コピーまたは移動を選択すると転送プレビューが開きます；キャンセル またはプロンプトを閉じると、ファイルは変更されません。ヘッダーのサイズ変更や並べ替えは独立して行えます。別のプログラムへの通常の左ボタンドラッグには、↗ 選択項目をドラッグ を使用してください。サムネイルカードも通常の左ボタンでのファイルドラッグをサポートします。"
+          },
+          {
+            "id": "copying_and_moving.p006",
+            "source_sha256": "c09e896f93f4539ea5e39ce1ef9cf109147040645409d8f026ce228b0ae864d8",
+            "text": "ファイルのコピー、移動、名前変更、ごみ箱またはゴミ箱への送信、重複の確認、タグと評価の適用、レポートのエクスポート、コンタクト シートの作成。変換は、互換性のあるハードウェア アクセラレーションを備えた H.264、H.265、および AV1 をサポートします。 ソース ファイルは保持され、部分的に失敗した出力は削除されます。"
+          },
+          {
+            "id": "copying_and_moving.p007",
+            "source_sha256": "88a277d5f920b679b295acc60e5e72f6b72f48d3630880924c349e271f7ab3aa",
+            "text": "新しいフォルダー s: ファイル > 新しいフォルダー… を選択するか、Ctrl+Shift+N を押すか、ペイン内で右クリックして 新しいフォルダー… を選択します。新しいフォルダーの名前を入力します。フォルダーはアクティブなペインの現在のフォルダー内に作成され、ブラウザーが更新されます；これは選択したファイルを移動しません。空の名前、予約済みの名前、無効な名前は拒否され、既存のフォルダーは決して置き換えられません。"
+          },
+          {
+            "id": "copying_and_moving.p008",
+            "source_sha256": "cfa3700591ec389ae4438a32b015736c27e74632cc56284e786898fee744198b",
+            "text": "コピー/移動の例: ソースペインで サブフォルダーを含める を有効にし、いくつかのサブフォルダー内のファイルにチェックを入れ、選択項目をコピー → 反対側 または 選択項目を移動 → 反対側 をクリックします。プレビューでは フォルダ構造を保持する を選択するとソースフォルダー以下のパスを保持し、ファイルフォルダー内のみ（サブフォルダーなし）を選択するとファイルを直接宛先に置きます。最初のデフォルトではフォルダーを保持し、後の転送では最後に選んだ設定を記憶します。キューに登録する前に ソース、宛先、ステータス の列を読んでください。参照… は宛先を変更し、新しいフォルダー… はプレビューを離れることなくフォルダーを作成して選択します。開く完了時の宛先 は、転送が成功してキャンセルされなかった場合にのみそのフォルダーを開きます。キューのコピー または キュー移動 をクリックして進めるか、キャンセル をクリックしてファイルを変更せずに残します。ペースト およびドロップしたファイルもこのプレビューを使用します。"
+          },
+          {
+            "id": "copying_and_moving.p009",
+            "source_sha256": "6f5fea1b68edde18db0247441f47c2ad2c00ad93e2b1f52f9b191e04d8ccde05",
+            "text": "競合: それぞれの対立について尋ねる は 両方とも保管しておいてください、置き換える、スキップ、および キャンセル を 適用すべての残りの競合に と共に提供します。あるいは、キューに登録する前にプレビューでポリシーを選択してください。両方とも保管しておいてください は、clip (2).mp4のような利用可能な番号付きファイル名を見つけ、異なるサブフォルダから選択されたファイル間の衝突も含みます。置き換える は明示的に置換を許可し、前の宛先をセッションの元に戻す領域に保持します。スキップは既存の宛先を変更せずにそのままにします。選択されたソースファイルの1つが宛先である場合はブロックされます：別のフォルダを選択してください。キューは宛先を再確認するため、プレビュー後に現れたファイルは静かに上書きされません。元に戻す操作はこのセッションで最後にサポートされた20の操作に限定され、永久的なバックアップではありません。Undoを使用する前に転送したファイルを編集しないでください。コピーを元に戻すとコピーされたファイルが削除されます。"
+          },
+          {
+            "id": "copying_and_moving.p010",
+            "source_sha256": "fd0ec5c6b05d49ff78891f64ea627a2fe1d7435cbdf0008018ace12f664e8341",
+            "text": "選択バスケット: 選択バスケット のツールバーボタン、[ファイル] > 選択バスケット…、または選択したファイルを右クリックして セレクションバスケットに追加 を選択してください。バスケットは両方のブラウザの上にある折りたたみ可能なパネルであり、別ウィンドウではありません。バスケットを非表示 またはツールバーボタンで参照を消さずに非表示にできます。ペイン選択を追加 は、パネルでチェックされたアクショングループ、またはチェックなしの場合はハイライトされたファイルを収集します。他のフォルダーに移動してファイルを追加できます; 各元のパスは一度だけ表示されます。バスケットにはコピーではなく参照が含まれ、アプリケーションを閉じるとクリアされます。参照を削除する または クリア バスケット は元のファイルを削除しません。バスケットの行を選択して コピー をアクティブペインに または 移動 をアクティブペインに を選択してください; バスケット行が選択されていない場合は、すべてのエントリが使用されます。通常の転送プレビューを確認してください。共有ブラウジングルートがないバスケットファイルは、統合されたフォルダーツリーではなくファイル名を使用します。元のファイルが見つからない場合は[欠落]でマークされ、利用可能になるまで転送できません。"
+          }
+        ],
+        "body": "1つのペインでファイルを選択し、ツールバー、編集メニュー、右クリックメニュー、キーボードショートカット、またはドラッグアンドドロップを使用します。複数の選択されたファイルをShutterなどの他のアプリケーションに送信するには、そのペインのナビゲーションコントロールの横にある大きな↗ 選択項目をドラッグ ハンドルを左クリックでドラッグします。これにより、通常のオペレーティングシステムのファイルリスト形式で選択されたすべてのファイルをエクスポートでき、詳細 および サムネイル の両方で列のサイズ変更に干渉することなく機能します。もう一方のペインはアプリ内転送の宛先です。転送は進行状況、速度、残り時間、一時停止、キャンセル、再試行、競合の選択肢とともにキューに入ります。ペイン間転送では、相対フォルダーを保持するかファイルだけをコピーするかを選択できます。\n\n編集 > 名前の一括変更選択すると、名前を変更する前に完全なプレビューが表示されます。プレビューは、パターン、検索/置換テキスト、大文字小文字の区別、開始番号、またはパディングを変更すると自動的に更新されます；プレビューを更新するも利用可能です。名前を作成するには{name}元の茎のために、{n}パディングされたシーケンス番号の場合、{ext}ドットなしの拡張子の場合、そして{dotext}拡張子（ドットを含む）用。オプションの検索/置換は大文字小文字を区別する場合としない場合があります。また、番号付けは開始番号と桁数を調整可能です。無効なWindowsの名前、重複する出力、選択されていないファイルとの競合は無効化されます。適用. 確定されたバッチは、内部で一時的な名前を使用するため、スワップやサイクルがお互いを上書きすることはありません。中断されたバッチは可能な限りロールバックされます。成功したバッチとは、Ctrl+Z評価やタグを含む操作を元に戻す。F2または名前を変更1つのファイルでライブファイル名プレビューを開きます;名前を変更は、有効で利用可能な新しい名前に対してのみ有効です。\n\n適用前に確認する繰り返し可能なコピー/移動条件については、[chapter:folder_organization_rules] を参照してください。保留中の転送を一時停止、キャンセル、または再試行するには、[chapter:transfer_queue] を参照してください。\n\n選択した 1 つまたは複数のファイルを右クリックして、0 から 5 つ星の評価、赤/黄色/緑/青/紫 のカラー ラベル、またはカンマ区切りのタグを割り当てます。 明確な評価、None、および空のタグ リストは、これらの変更を元に戻します。これらの注釈はアプリケーション データベースにのみ保存されます。オリジナルのメディアと埋め込まれたメタデータは決して変更されません。 詳細 モードでは、並べ替え可能な 評価、ラベル、およびタグ列が提供されます。サムネイルのキャプションには評価/タグが表示され、選択されていないアウトラインとしてカラー ラベルが使用されます。さらに多くのフィルターでは、最小評価、色 (ラベルなし を含む)、またはタグ テキストが必要になる場合があります。内部の名前変更、コピー、移動、および元に戻す操作では、結果のパスに注釈が付けられます。 すべてのキャッシュをクリア は技術的なキャッシュ データを削除しますが、ユーザーの注釈は意図的に保持します。\n\n詳細 モードでは、個々の行は右ボタンによるファイルドラッグを維持します；通常の右クリックでコンテキストメニューが開きます。また、行や選択したグループを左ボタンで反対のペインにドラッグすることもできます。ドロップすると、明確にラベル付けされた「コピー」「移動」「キャンセル」ボタンが表示されます。コピーまたは移動を選択すると転送プレビューが開きます；キャンセル またはプロンプトを閉じると、ファイルは変更されません。ヘッダーのサイズ変更や並べ替えは独立して行えます。別のプログラムへの通常の左ボタンドラッグには、↗ 選択項目をドラッグ を使用してください。サムネイルカードも通常の左ボタンでのファイルドラッグをサポートします。\n\nファイルのコピー、移動、名前変更、ごみ箱またはゴミ箱への送信、重複の確認、タグと評価の適用、レポートのエクスポート、コンタクト シートの作成。変換は、互換性のあるハードウェア アクセラレーションを備えた H.264、H.265、および AV1 をサポートします。 ソース ファイルは保持され、部分的に失敗した出力は削除されます。\n\n新しいフォルダー s: ファイル > 新しいフォルダー… を選択するか、Ctrl+Shift+N を押すか、ペイン内で右クリックして 新しいフォルダー… を選択します。新しいフォルダーの名前を入力します。フォルダーはアクティブなペインの現在のフォルダー内に作成され、ブラウザーが更新されます；これは選択したファイルを移動しません。空の名前、予約済みの名前、無効な名前は拒否され、既存のフォルダーは決して置き換えられません。\n\nコピー/移動の例: ソースペインで サブフォルダーを含める を有効にし、いくつかのサブフォルダー内のファイルにチェックを入れ、選択項目をコピー → 反対側 または 選択項目を移動 → 反対側 をクリックします。プレビューでは フォルダ構造を保持する を選択するとソースフォルダー以下のパスを保持し、ファイルフォルダー内のみ（サブフォルダーなし）を選択するとファイルを直接宛先に置きます。最初のデフォルトではフォルダーを保持し、後の転送では最後に選んだ設定を記憶します。キューに登録する前に ソース、宛先、ステータス の列を読んでください。参照… は宛先を変更し、新しいフォルダー… はプレビューを離れることなくフォルダーを作成して選択します。開く完了時の宛先 は、転送が成功してキャンセルされなかった場合にのみそのフォルダーを開きます。キューのコピー または キュー移動 をクリックして進めるか、キャンセル をクリックしてファイルを変更せずに残します。ペースト およびドロップしたファイルもこのプレビューを使用します。\n\n競合: それぞれの対立について尋ねる は 両方とも保管しておいてください、置き換える、スキップ、および キャンセル を 適用すべての残りの競合に と共に提供します。あるいは、キューに登録する前にプレビューでポリシーを選択してください。両方とも保管しておいてください は、clip (2).mp4のような利用可能な番号付きファイル名を見つけ、異なるサブフォルダから選択されたファイル間の衝突も含みます。置き換える は明示的に置換を許可し、前の宛先をセッションの元に戻す領域に保持します。スキップは既存の宛先を変更せずにそのままにします。選択されたソースファイルの1つが宛先である場合はブロックされます：別のフォルダを選択してください。キューは宛先を再確認するため、プレビュー後に現れたファイルは静かに上書きされません。元に戻す操作はこのセッションで最後にサポートされた20の操作に限定され、永久的なバックアップではありません。Undoを使用する前に転送したファイルを編集しないでください。コピーを元に戻すとコピーされたファイルが削除されます。\n\n選択バスケット: 選択バスケット のツールバーボタン、[ファイル] > 選択バスケット…、または選択したファイルを右クリックして セレクションバスケットに追加 を選択してください。バスケットは両方のブラウザの上にある折りたたみ可能なパネルであり、別ウィンドウではありません。バスケットを非表示 またはツールバーボタンで参照を消さずに非表示にできます。ペイン選択を追加 は、パネルでチェックされたアクショングループ、またはチェックなしの場合はハイライトされたファイルを収集します。他のフォルダーに移動してファイルを追加できます; 各元のパスは一度だけ表示されます。バスケットにはコピーではなく参照が含まれ、アプリケーションを閉じるとクリアされます。参照を削除する または クリア バスケット は元のファイルを削除しません。バスケットの行を選択して コピー をアクティブペインに または 移動 をアクティブペインに を選択してください; バスケット行が選択されていない場合は、すべてのエントリが使用されます。通常の転送プレビューを確認してください。共有ブラウジングルートがないバスケットファイルは、統合されたフォルダーツリーではなくファイル名を使用します。元のファイルが見つからない場合は[欠落]でマークされ、利用可能になるまで転送できません。"
+      },
+      {
+        "id": "smart_collections",
+        "title": "スマート コレクション: 保存された検索結果",
+        "paragraphs": [
+          {
+            "id": "smart_collections.p001",
+            "source_sha256": "c8a00acd2ba2c17799572b74c47c2659ecb5a65fb4782693cbe786544ac1e764",
+            "text": "スマートコレクションが節約できるもの"
+          },
+          {
+            "id": "smart_collections.p002",
+            "source_sha256": "d366ab29cfd1f77bae1f8b286cca63d76a5e46d73bdbf4329d2cfb31a1b3694a",
+            "text": "スマート コレクションは、1 つのブラウザ ペインに名前を付けて保存した検索とビューです。ソースフォルダーでファイルを検索して表示する方法を記憶します。元のファイルを参照します。コレクションを作成、開く、名前変更、または削除しても、それらのメディア ファイルはコピー、移動、名前変更、削除、または注釈付けされません。アクセスするたびに設定を再入力するのではなく、特定のフィルターや並べ替えを使用して同じライブラリを繰り返し確認する場合に使用します。保存されたワークスペースでは、両方のペインとそのレイアウトが復元されます。スマート コレクションでは、アクティブなペインのみが変更されます。"
+          },
+          {
+            "id": "smart_collections.p003",
+            "source_sha256": "006322e9c7ac283bd37b6dbb958c936304cc5977a4803b31ea4c4da238a217f2",
+            "text": "各コレクションには開始フォルダーが 1 つだけあります。 サブフォルダーを含める は、そのルートの下にあるすべてのフォルダーを検索します。無関係な任意のフォルダー、個別のドライブ、または複数の開始ルートを 1 つのコレクションに結合することはできません。実用的であれば最も近い共通の親を選択するか、別々のコレクションを保存して 2​​ つのペインで開きます。 サブフォルダーを含める でドライブ ルートを選択すると、ドライブ全体をスキャンできます。最も狭い有用な親フォルダーを選択します。"
+          },
+          {
+            "id": "smart_collections.p004",
+            "source_sha256": "20491128f8f22d658bb8601b6511411ea9d469ce4a9681d99090382d74cfc3cf",
+            "text": "保存される設定は、フォルダー パス、サブフォルダーを含める、動画、および 画像 スイッチ、テキストの検索、解像度 の選択、すべてのその他のフィルター値、並べ替えフィールドと方向、詳細 または サムネイル、サムネイル サイズ、および連続 または ページ モード。チェックされたファイル、強調表示された選択内容、プレビュー再生、ライブモニタリング、他のペイン、列の幅/順序、ペインの分割線、またはサムネイルのページ容量は保存されません。これらは独立した設定のままです。コレクションは、アプリケーション設定ディレクトリの smart_collections.json にローカルに保存されます。"
+          },
+          {
+            "id": "smart_collections.p005",
+            "source_sha256": "b11ace0b241e6cfceeaf8409069c6872f849fb89e4d9c2acab35996a93e19059",
+            "text": "コレクションを作成する"
+          },
+          {
+            "id": "smart_collections.p006",
+            "source_sha256": "83c8a710973dcf1308b8fd867f872bf84624f939b91047eea47405238718426e",
+            "text": "1. 設定するペイン内をクリックします。これにより、ツール コマンドのアクティブなペインになります。\n2. 参照… またはパス ボックスを使用して、目的のソース フォルダーを開きます。 有効にする ネストされたフォルダーが検索に属する場合は、サブフォルダーを含める。\n3. 動画、画像、または両方にチェックを入れます。大文字と小文字を区別しないファイル名または相対パスの部分文字列に対して [検索] を設定し、必要に応じて正確な幅×高さを得るために 解像度 を選択します。正確な解像度制限が適用されていない場合、ディスプレイには「解像度： すべて」と表示されます。\n4. その他のフィルター… を開いて、向き、コーデックの部分文字列、タグの部分文字列、最小評価、カラー ラベル、最小/最大の幅と高さ、ファイル サイズ、期間、および変更日を確認します。空のフィールドには制限がありません。空ではない制限はすべて一致する必要があります。フィルターを使用するには、「適用」と入力します。 クリア は、高度なフィルター値をリセットします。これは、個別の任意拡張子フィルターではありません。 動画/画像 スイッチを使用し、必要に応じて .mp4 などのファイル名の部分文字列を使用します。\n5. スキャンを待ち、必要な順序を選択します。 詳細 で、列見出しをクリックします。もう一度クリックすると方向が逆になります。 サムネイル で、[並べ替え] とそのフィールド/方向のサブメニューを使用します。どちらのビューも同じフィルタリングされたメディアと順序を使用します。\n6. [ツール] > [アクティブなスマート コレクションを保存します…] を選択し、わかりやすいコレクション名を入力します。既存の名前を保存すると、スマートコレクションを置き換える が要求されます。現在のペインでその保存された定義を置き換える必要がある場合にのみ同意します。保存すると、表示されているファイルのコピーではなく、プリセットが作成されます。"
+          },
+          {
+            "id": "smart_collections.p007",
+            "source_sha256": "cc9c90b0168ad0ec1cefb3b33388495dd4c350d67628c7413d8a0ee240b4ae7b",
+            "text": "コレクションを開いて更新する"
+          },
+          {
+            "id": "smart_collections.p008",
+            "source_sha256": "89904bdaa8286ca4ca8546e5136bc9ff5b7688ac0147d82ee8a66fd4caa61afa",
+            "text": "まず宛先ペインを選択します。 ツール > スマートコレクションを管理… を開き、保存されたエントリを選択して、適用 をクリックするか、行をダブルクリックします。アクティブなペインは、保存された開始フォルダーに移動し、保存されたフィルター、並べ替え、プレゼンテーションを復元してから、スキャンします。反対側のペインは変更されません。フォルダーが切断されている、移動されている、または存在しない場合、コレクションフォルダーが使用できません は保存されたパスを説明します。再接続するか、有効なフォルダーを使用して置換を保存してください。"
+          },
+          {
+            "id": "smart_collections.p009",
+            "source_sha256": "1668c49611305d33e2b5780a8b4c6910237f09146c4967272ffd9cf9df5477ae",
+            "text": "結果 は、プリセットの保存時にキャプチャされた固定リストではなく、ペインのスキャン時に現在見つかったファイルを反映します。外部ファイルを変更した後、両方のペインでペインの ↻ ボタン、[表示] > アクティブなペインを更新 または F5 を使用します。 ライブ は現在のフォルダーを監視できますが、ライブ は保存されたコレクションの一部ではありません。フィルタリングまたは並べ替えに対する変更は、現在のビューに直ちに影響します。ソーススコープを変更するには、対応するスキャンが必要です。 キャンセル はスキャンを停止します。 大 再帰的コレクションは、通常のブラウジングと同じメタデータ キャッシュとパフォーマンス プロファイルを使用します。"
+          },
+          {
+            "id": "smart_collections.p010",
+            "source_sha256": "5d0ba8ba1b4e449868d9118559c323b524f2ed494ba01573aee4d4176bc9d605",
+            "text": "個別のコレクションの [編集] ボタンはありません。既存のコレクション (適用) を変更するには、そのペインでフォルダー、スコープ、フィルター、または順序を調整し、同じ名前の ツール > アクティブなスマート コレクションを保存します… を選択して置換を確認します。マネージャーで、現在を保存 は現在のアクティブ ペイン設定を保存し、名前を尋ねます。選択した行は自動的に編集されません。名前を変更しても、ペインのフィルターに加えられた変更は保存されません。"
+          },
+          {
+            "id": "smart_collections.p011",
+            "source_sha256": "6e88b549b05defa2d24fa8d186b6ba7aea252c5d474f37b1bb4d2e876fbcdbfd",
+            "text": "名前変更、削除、復元"
+          },
+          {
+            "id": "smart_collections.p012",
+            "source_sha256": "2a100ef5ff5e82d9b023158669f5f05a1ef343719fe452c2e74a2589cd33091a",
+            "text": "[ツール] > [スマートコレクションを管理…] でエントリを選択し、[名前を変更] をクリックします。別のコレクションにその名前がす​​でにある場合は、「新しい名前:」と入力して置換を確認します。 削除 は確認を求め、プリセットのみを削除します。 削除を元に戻す は、このマネージャー ウィンドウが開いたままになっている間に、最後に削除されたプリセットを復元します。マネージャーを閉じると、この一時的な元に戻すスタックは失われます。その後同じ名前のコレクションが作成された場合、削除されたエントリを復元するとその名前のプリセットが置き換えられるため、両方を保存する場合は別の名前を使用してください。 閉じる は、選択した行を適用せずに終了します。 Ctrl+Z は、コレクション マネージャーの削除ではなく、ファイル操作用です。"
+          },
+          {
+            "id": "smart_collections.p013",
+            "source_sha256": "fc23ad3b8bc9134b6679c107990040938242a050929d015a037c6128ec0433d6",
+            "text": "例: 解像度ごとにサブフォルダー全体の画像を並べ替える"
+          },
+          {
+            "id": "smart_collections.p014",
+            "source_sha256": "71fd063332ef48d1b7ce3c83f9cdbc8f08084a1965687f4f382f46399b47cc96",
+            "text": "1. 左側のペインで、参照… をピクチャの親フォルダーに追加し、サブフォルダーを含める と 画像 を有効にし、動画 をオフにします。\n2. クリア すべてのディメンションを比較する場合は、解像度 を検索して [すべて] に設定します。古い制限を削除する必要がある場合は、その他のフィルター… および クリア/適用 を開きます。\n3. 詳細 で、希望の昇順または降順が表示されるまで 解像度 をクリックします。または、サムネイル を選択し、並べ替え > 解像度 > 小さいものから順 または 大きい順 を選択します。 解像度 並べ替えではピクセル領域 (幅 × 高さ) が使用され、幅と高さが等面積の関係を破ります。これは単純な幅のみの並べ替えではありません。正確な 解像度 フィルターは、代わりに 1 つの特定のディメンション ペアに制限します。\n4. アクティブなペインを解像度ごとに 画像 として保存します。 後で 適用 このエントリをどちらかのペインに入力して、スキャン後に新しく追加された一致するファイルを含めて検索を繰り返します。"
+          },
+          {
+            "id": "smart_collections.p015",
+            "source_sha256": "ff3bb0c443412ace673aef6b3b1dd606e3214fe0e515419f44b8de1c6e8f7ee7",
+            "text": "例: 高解像度ビデオをレビューする"
+          },
+          {
+            "id": "smart_collections.p016",
+            "source_sha256": "58ddf88adee5ea950a3c3cc66a1975d861ac600276d297a9190c5cd96961d30b",
+            "text": "1. 参照… へ 動画親フォルダ、有効にするサブフォルダーを含めるそして動画、そして曲がる画像オフ。\n2. にその他のフィルター…、設定最小幅（ピクセル）1920年までにそして最小高さ（ピクセル）両方の寸法に対応する動画が必要な場合は1080に設定してください。これは、高いピクセル数を持っていても1920より狭い縦向き動画は除外されます。制限を調整するか、使用してください向きあなたの目標に従って。\n3. 残す解像度さまざまな適格な次元を含めるためにすべてで。オプションで設定コーデックに含む保存されているHEVCコーデックラベルに合わせるにはHEVCに、H.264にはH.264に変換します。フィルタは表示されているコーデックラベルと文字通り一致させ、文字の大小は無視します。ドットなしのh264はH.264とは一致しません。フィルタが何も見つけられない場合は、Infoを使ってファイルの実際のコーデックを確認してください。\n4. 並べ替え解像度中で詳細またはサムネイルその他のサポートされている並べ替えフィールドには、名前が含まれます、変更日, ファイルサイズ, 長さ, コーデック、タイプ、ビットレート, フレームレートそして評価. 高解像度のビデオとして保存します。使用するプレビュー個々の結果を確認する必要がある場合の情報や通知；それらを有効にすることは、収集の定義とは独立しています。"
+          },
+          {
+            "id": "smart_collections.p017",
+            "source_sha256": "582f628c0fa7f236fedaf4a03501cc2af09cc29bf57550102597d7d8e626b747",
+            "text": "制限とファイルアクション"
+          },
+          {
+            "id": "smart_collections.p018",
+            "source_sha256": "9722f0d4824f0d75e2aa03fd474ccaa99cbe4abb11cf0728857e688af3d85f7a",
+            "text": "コレクションは、アクセス可能なファイルに対するプリセットであり、切断されたドライブにまたがるインデックス付きライブラリ、バックグラウンドの自動ルール、プレイリスト、重複グループ、または物理フォルダーではありません。プリセットを変更しても、ファイルが自動的に再編成されることはありません。その結果に対して意図的に実行したファイルのコピー/移動/削除コマンドは、元のメディアに対しても動作します。既存のチェックマークは強調表示よりも優先され、フィルターによって隠されたファイルを含めることができます。意図しないグループに対して操作を行う前に、ティック カウンタと 目盛りをクリアする を確認してください。別のフォルダーに移動すると、そのペインのチェックマークが消えます。開始フォルダーが同じままの場合、収集アプリケーションは既存のティックを残す可能性があるため、ファイル操作の前に必ずそれらを確認してください。"
+          },
+          {
+            "id": "smart_collections.p019",
+            "source_sha256": "07532ce67ddc2c2b72a425c349151e1bfee9bb68f725bc867be341fef82f1f29",
+            "text": "参照: [chapter:scanning_and_filtering] · [chapter:details_and_thumbnails] · [chapter:workspaces_and_cache] · [chapter:safe_file_actions]"
+          }
+        ],
+        "body": "スマートコレクションが節約できるもの\n\nスマート コレクションは、1 つのブラウザ ペインに名前を付けて保存した検索とビューです。ソースフォルダーでファイルを検索して表示する方法を記憶します。元のファイルを参照します。コレクションを作成、開く、名前変更、または削除しても、それらのメディア ファイルはコピー、移動、名前変更、削除、または注釈付けされません。アクセスするたびに設定を再入力するのではなく、特定のフィルターや並べ替えを使用して同じライブラリを繰り返し確認する場合に使用します。保存されたワークスペースでは、両方のペインとそのレイアウトが復元されます。スマート コレクションでは、アクティブなペインのみが変更されます。\n\n各コレクションには開始フォルダーが 1 つだけあります。 サブフォルダーを含める は、そのルートの下にあるすべてのフォルダーを検索します。無関係な任意のフォルダー、個別のドライブ、または複数の開始ルートを 1 つのコレクションに結合することはできません。実用的であれば最も近い共通の親を選択するか、別々のコレクションを保存して 2​​ つのペインで開きます。 サブフォルダーを含める でドライブ ルートを選択すると、ドライブ全体をスキャンできます。最も狭い有用な親フォルダーを選択します。\n\n保存される設定は、フォルダー パス、サブフォルダーを含める、動画、および 画像 スイッチ、テキストの検索、解像度 の選択、すべてのその他のフィルター値、並べ替えフィールドと方向、詳細 または サムネイル、サムネイル サイズ、および連続 または ページ モード。チェックされたファイル、強調表示された選択内容、プレビュー再生、ライブモニタリング、他のペイン、列の幅/順序、ペインの分割線、またはサムネイルのページ容量は保存されません。これらは独立した設定のままです。コレクションは、アプリケーション設定ディレクトリの smart_collections.json にローカルに保存されます。\n\nコレクションを作成する\n\n1. 設定するペイン内をクリックします。これにより、ツール コマンドのアクティブなペインになります。\n2. 参照… またはパス ボックスを使用して、目的のソース フォルダーを開きます。 有効にする ネストされたフォルダーが検索に属する場合は、サブフォルダーを含める。\n3. 動画、画像、または両方にチェックを入れます。大文字と小文字を区別しないファイル名または相対パスの部分文字列に対して [検索] を設定し、必要に応じて正確な幅×高さを得るために 解像度 を選択します。正確な解像度制限が適用されていない場合、ディスプレイには「解像度： すべて」と表示されます。\n4. その他のフィルター… を開いて、向き、コーデックの部分文字列、タグの部分文字列、最小評価、カラー ラベル、最小/最大の幅と高さ、ファイル サイズ、期間、および変更日を確認します。空のフィールドには制限がありません。空ではない制限はすべて一致する必要があります。フィルターを使用するには、「適用」と入力します。 クリア は、高度なフィルター値をリセットします。これは、個別の任意拡張子フィルターではありません。 動画/画像 スイッチを使用し、必要に応じて .mp4 などのファイル名の部分文字列を使用します。\n5. スキャンを待ち、必要な順序を選択します。 詳細 で、列見出しをクリックします。もう一度クリックすると方向が逆になります。 サムネイル で、[並べ替え] とそのフィールド/方向のサブメニューを使用します。どちらのビューも同じフィルタリングされたメディアと順序を使用します。\n6. [ツール] > [アクティブなスマート コレクションを保存します…] を選択し、わかりやすいコレクション名を入力します。既存の名前を保存すると、スマートコレクションを置き換える が要求されます。現在のペインでその保存された定義を置き換える必要がある場合にのみ同意します。保存すると、表示されているファイルのコピーではなく、プリセットが作成されます。\n\nコレクションを開いて更新する\n\nまず宛先ペインを選択します。 ツール > スマートコレクションを管理… を開き、保存されたエントリを選択して、適用 をクリックするか、行をダブルクリックします。アクティブなペインは、保存された開始フォルダーに移動し、保存されたフィルター、並べ替え、プレゼンテーションを復元してから、スキャンします。反対側のペインは変更されません。フォルダーが切断されている、移動されている、または存在しない場合、コレクションフォルダーが使用できません は保存されたパスを説明します。再接続するか、有効なフォルダーを使用して置換を保存してください。\n\n結果 は、プリセットの保存時にキャプチャされた固定リストではなく、ペインのスキャン時に現在見つかったファイルを反映します。外部ファイルを変更した後、両方のペインでペインの ↻ ボタン、[表示] > アクティブなペインを更新 または F5 を使用します。 ライブ は現在のフォルダーを監視できますが、ライブ は保存されたコレクションの一部ではありません。フィルタリングまたは並べ替えに対する変更は、現在のビューに直ちに影響します。ソーススコープを変更するには、対応するスキャンが必要です。 キャンセル はスキャンを停止します。 大 再帰的コレクションは、通常のブラウジングと同じメタデータ キャッシュとパフォーマンス プロファイルを使用します。\n\n個別のコレクションの [編集] ボタンはありません。既存のコレクション (適用) を変更するには、そのペインでフォルダー、スコープ、フィルター、または順序を調整し、同じ名前の ツール > アクティブなスマート コレクションを保存します… を選択して置換を確認します。マネージャーで、現在を保存 は現在のアクティブ ペイン設定を保存し、名前を尋ねます。選択した行は自動的に編集されません。名前を変更しても、ペインのフィルターに加えられた変更は保存されません。\n\n名前変更、削除、復元\n\n[ツール] > [スマートコレクションを管理…] でエントリを選択し、[名前を変更] をクリックします。別のコレクションにその名前がす​​でにある場合は、「新しい名前:」と入力して置換を確認します。 削除 は確認を求め、プリセットのみを削除します。 削除を元に戻す は、このマネージャー ウィンドウが開いたままになっている間に、最後に削除されたプリセットを復元します。マネージャーを閉じると、この一時的な元に戻すスタックは失われます。その後同じ名前のコレクションが作成された場合、削除されたエントリを復元するとその名前のプリセットが置き換えられるため、両方を保存する場合は別の名前を使用してください。 閉じる は、選択した行を適用せずに終了します。 Ctrl+Z は、コレクション マネージャーの削除ではなく、ファイル操作用です。\n\n例: 解像度ごとにサブフォルダー全体の画像を並べ替える\n\n1. 左側のペインで、参照… をピクチャの親フォルダーに追加し、サブフォルダーを含める と 画像 を有効にし、動画 をオフにします。\n2. クリア すべてのディメンションを比較する場合は、解像度 を検索して [すべて] に設定します。古い制限を削除する必要がある場合は、その他のフィルター… および クリア/適用 を開きます。\n3. 詳細 で、希望の昇順または降順が表示されるまで 解像度 をクリックします。または、サムネイル を選択し、並べ替え > 解像度 > 小さいものから順 または 大きい順 を選択します。 解像度 並べ替えではピクセル領域 (幅 × 高さ) が使用され、幅と高さが等面積の関係を破ります。これは単純な幅のみの並べ替えではありません。正確な 解像度 フィルターは、代わりに 1 つの特定のディメンション ペアに制限します。\n4. アクティブなペインを解像度ごとに 画像 として保存します。 後で 適用 このエントリをどちらかのペインに入力して、スキャン後に新しく追加された一致するファイルを含めて検索を繰り返します。\n\n例: 高解像度ビデオをレビューする\n\n1. 参照… へ 動画親フォルダ、有効にするサブフォルダーを含めるそして動画、そして曲がる画像オフ。\n2. にその他のフィルター…、設定最小幅（ピクセル）1920年までにそして最小高さ（ピクセル）両方の寸法に対応する動画が必要な場合は1080に設定してください。これは、高いピクセル数を持っていても1920より狭い縦向き動画は除外されます。制限を調整するか、使用してください向きあなたの目標に従って。\n3. 残す解像度さまざまな適格な次元を含めるためにすべてで。オプションで設定コーデックに含む保存されているHEVCコーデックラベルに合わせるにはHEVCに、H.264にはH.264に変換します。フィルタは表示されているコーデックラベルと文字通り一致させ、文字の大小は無視します。ドットなしのh264はH.264とは一致しません。フィルタが何も見つけられない場合は、Infoを使ってファイルの実際のコーデックを確認してください。\n4. 並べ替え解像度中で詳細またはサムネイルその他のサポートされている並べ替えフィールドには、名前が含まれます、変更日, ファイルサイズ, 長さ, コーデック、タイプ、ビットレート, フレームレートそして評価. 高解像度のビデオとして保存します。使用するプレビュー個々の結果を確認する必要がある場合の情報や通知；それらを有効にすることは、収集の定義とは独立しています。\n\n制限とファイルアクション\n\nコレクションは、アクセス可能なファイルに対するプリセットであり、切断されたドライブにまたがるインデックス付きライブラリ、バックグラウンドの自動ルール、プレイリスト、重複グループ、または物理フォルダーではありません。プリセットを変更しても、ファイルが自動的に再編成されることはありません。その結果に対して意図的に実行したファイルのコピー/移動/削除コマンドは、元のメディアに対しても動作します。既存のチェックマークは強調表示よりも優先され、フィルターによって隠されたファイルを含めることができます。意図しないグループに対して操作を行う前に、ティック カウンタと 目盛りをクリアする を確認してください。別のフォルダーに移動すると、そのペインのチェックマークが消えます。開始フォルダーが同じままの場合、収集アプリケーションは既存のティックを残す可能性があるため、ファイル操作の前に必ずそれらを確認してください。\n\n参照: [chapter:scanning_and_filtering] · [chapter:details_and_thumbnails] · [chapter:workspaces_and_cache] · [chapter:safe_file_actions]"
+      },
+      {
+        "id": "duplicates_and_comparison",
+        "title": "重複 との比較",
+        "paragraphs": [
+          {
+            "id": "duplicates_and_comparison.p001",
+            "source_sha256": "0782926d2c4bf15b6bc6546a84700657d47e97dec140144e01570bb40c129af6",
+            "text": "ツール > 重複の検索 は段階的に完全一致を検索します。同じサイズのファイルは、先頭、中間、末尾からサンプリングされたクイック フィンガープリントを受け取ります。一致する候補のみが完全に読み取られ、SHA-256 で検証されます。両方のフィンガープリントは SQLite キャッシュに保持されますが、パス、サイズ、変更時間は変更されないため、後の検索が大幅に高速になります。進行状況は、アクティブなペインのステータス行に表示されます。レビュー ウィンドウには、パス、日付、保持ラベルを含む 2 つのコピーが並べて表示されます。戦略では提案された冗長ファイルのみが選択され、それらのファイルが自動的に削除されることはありません。 選択したものを比較 には、選択した 2 つのファイルとその技術メタデータが表示されます。"
+          },
+          {
+            "id": "duplicates_and_comparison.p002",
+            "source_sha256": "db002d92b3f1a118d7bb8aa101af8c1ae262721f09af95713962ae48eac85a4e",
+            "text": "ツール > 視覚的に類似した画像を探す は、ファイルがバイトごとに同一でない場合でも、サイズ変更、軽く再圧縮された、または視覚的に近い画像を検出します。 表示中 または スキャン済みすべて と 0 ～ 16 の許容値を選択します。値が小さいほど厳密になり、6 がデフォルトです。 64 ビットの差分ハッシュはパス、サイズ、変更日に対してキャッシュされ、BK ツリーは大規模なコレクションでも実用的なマッチングを維持します。 結果 は推定値であり、プレビューと [このグループを選択] アクションを含むレビュー専用ウィンドウで開きます。このツールはファイルを削除したり変更したりすることはありません。通常のファイル操作を使用する前に、提案されたすべてのグループを確認してください。"
+          },
+          {
+            "id": "duplicates_and_comparison.usage",
+            "source_sha256": "ff37fdb3497ad945d44131286606d3efc34ef09526591ecd559e63aaa9b6e4ca",
+            "text": "レビュー ツールの使用\n\n正確な複製の場合は、ソース フォルダーを開き、有効にしますサブフォルダーを含める必要に応じて、スキャンを待って選択してくださいツール > 重複を検索…これは、強調表示されたファイルやフィルターで表示されるファイルだけでなく、そのペインでスキャンされたすべてのメディアを検査します。グループ化されたパスや並べて表示されたプレビューを確認し、ソースペインで提案された重複コピーを強調表示する保持戦略を選択します。これにより、それらは削除されません。クリア既存のチェックを確認し、ファイル操作を実行する前に提案されたハイライトを点検してください。\n\n視覚的に類似した画像の場合は、次を選択してくださいツール > 視覚的に類似した画像を検索…、選択範囲： 表示中またはスキャン済みすべて類似度の許容範囲を設定（0〜16）、そしてクリック開始6から始めます；数字が低いほど厳しいです。プレビューする結果を選択してください；ソースペインでこのグループを選択参照画像を含むグループをハイライトします。これは不要なコピーのみを自動的に選択するものではありません。\n\nペアを直接比較するには、不要なチェックを外し、1つのペインで正確に2つのファイルを選択して、次を選択しますツール > 選択したものを比較…プレビュー、パス、プロパティを確認してください。左側を通行 (右側はリサイクル)そして右側を通行 (左側はリサイクル)他のファイルをごみ箱／トラッシュに送る前に確認を求める。どちらの操作も行わずに閉じると、両方のファイルは変更されません。"
+          }
+        ],
+        "body": "ツール > 重複の検索 は段階的に完全一致を検索します。同じサイズのファイルは、先頭、中間、末尾からサンプリングされたクイック フィンガープリントを受け取ります。一致する候補のみが完全に読み取られ、SHA-256 で検証されます。両方のフィンガープリントは SQLite キャッシュに保持されますが、パス、サイズ、変更時間は変更されないため、後の検索が大幅に高速になります。進行状況は、アクティブなペインのステータス行に表示されます。レビュー ウィンドウには、パス、日付、保持ラベルを含む 2 つのコピーが並べて表示されます。戦略では提案された冗長ファイルのみが選択され、それらのファイルが自動的に削除されることはありません。 選択したものを比較 には、選択した 2 つのファイルとその技術メタデータが表示されます。\n\nツール > 視覚的に類似した画像を探す は、ファイルがバイトごとに同一でない場合でも、サイズ変更、軽く再圧縮された、または視覚的に近い画像を検出します。 表示中 または スキャン済みすべて と 0 ～ 16 の許容値を選択します。値が小さいほど厳密になり、6 がデフォルトです。 64 ビットの差分ハッシュはパス、サイズ、変更日に対してキャッシュされ、BK ツリーは大規模なコレクションでも実用的なマッチングを維持します。 結果 は推定値であり、プレビューと [このグループを選択] アクションを含むレビュー専用ウィンドウで開きます。このツールはファイルを削除したり変更したりすることはありません。通常のファイル操作を使用する前に、提案されたすべてのグループを確認してください。\n\nレビュー ツールの使用\n\n正確な複製の場合は、ソース フォルダーを開き、有効にしますサブフォルダーを含める必要に応じて、スキャンを待って選択してくださいツール > 重複を検索…これは、強調表示されたファイルやフィルターで表示されるファイルだけでなく、そのペインでスキャンされたすべてのメディアを検査します。グループ化されたパスや並べて表示されたプレビューを確認し、ソースペインで提案された重複コピーを強調表示する保持戦略を選択します。これにより、それらは削除されません。クリア既存のチェックを確認し、ファイル操作を実行する前に提案されたハイライトを点検してください。\n\n視覚的に類似した画像の場合は、次を選択してくださいツール > 視覚的に類似した画像を検索…、選択範囲： 表示中またはスキャン済みすべて類似度の許容範囲を設定（0〜16）、そしてクリック開始6から始めます；数字が低いほど厳しいです。プレビューする結果を選択してください；ソースペインでこのグループを選択参照画像を含むグループをハイライトします。これは不要なコピーのみを自動的に選択するものではありません。\n\nペアを直接比較するには、不要なチェックを外し、1つのペインで正確に2つのファイルを選択して、次を選択しますツール > 選択したものを比較…プレビュー、パス、プロパティを確認してください。左側を通行 (右側はリサイクル)そして右側を通行 (左側はリサイクル)他のファイルをごみ箱／トラッシュに送る前に確認を求める。どちらの操作も行わずに閉じると、両方のファイルは変更されません。"
+      },
+      {
+        "id": "video_conversion",
+        "title": "ビデオ変換",
+        "paragraphs": [
+          {
+            "id": "video_conversion.p001",
+            "source_sha256": "b2ee9f6d3dced7fd286ca5ee1d093029d40566fbc9e29e283a2a3058d9c37b85",
+            "text": "異なるコーデック、コンテナ、または解像度で新しいビデオファイルを作成するには、ツール > 選択したビデオを変換します… を使用してください。元のファイルは保持されます。まず小さなサンプルを選び、品質、再生互換性、ファイルサイズ、変換時間を比較してから、大量処理を行ってください。"
+          },
+          {
+            "id": "video_conversion.p002",
+            "source_sha256": "d51cf66e935232f9f87c8254590a1e53247ff73d6b9a122efcfcfe2a026f48d9",
+            "text": "1つ以上のビデオを変換する\n\n1. いずれかのペインでソースフォルダーを開きます。有効にする サブフォルダーを含める動画がサブフォルダに分散している場合は、それらを確認し、スキャンが終了するのを待ちます。\n2. 変換する動画にチェックを入れます。チェックがない場合、コマンドは代わりにハイライトされたファイルを使用します。クリア不要なチェックを最初に: フィルターによって隠されたチェック済みのファイルでも、アクショングループに属します。画像グループ内のものはこのコマンドによって無視されます。\n3. 選択してくださいツール > 選択したビデオを変換します…\n4. プリセットを選択する解像度, 以下に示すように品質（CRF）およびエンコーディングエンジン。\n5. チェック出力フォルダー。最初は他のペインのフォルダーを指します；使用してください参照…必要に応じて別の目的地を入力するか、確認してくださいアクティブなペインを基準にしてフォルダを保持するその宛先の下で元のサブフォルダ構造を保持する。\n6. 選択する既存をスキップするまたは両方とも保管しておいてください. クリックプレビューを更新する宛先、フォルダの保持、または既存ファイルのポリシーを変更した後。すべてを読むソースそして出力パスとチェックをステータス列。だけ準備完了行が実行されます。\n7. クリック変換を開始します…そして同意する前に確認を確認してください。進行状況とファイルごとに確認してください結果完了したら、変換されたファイルを開き、元のファイルをどうするか決める前に確認してください。"
+          },
+          {
+            "id": "video_conversion.p003",
+            "source_sha256": "13dffb3d18a13839d2bb6145a7313a3ee2144bcdd5305808500659c8a434c0a8",
+            "text": "プリセットの選択\n\nH.264 MP4（互換）: プレイヤーやデバイスの互換性を重視する場合に便利な選択肢。\nH.265 MP4（小容量）: HEVCエンコード。ファイルサイズを小さくできるが、対応プレイヤーが必要。\nAV1 MKV（最小容量）: MKVコンテナのAV1エンコード。再生サポートとコンピューターでの変換速度を確認してください。\n720p H.264 プロキシ: より低解像度のH.264コピー。ブラウジングやレビューを素早く行うのに便利。このプリセットを選択すると解像度が720p に設定されます。開始前に変更可能です。\nMKVへリマックス（再エンコードなし）: 既存のストリームをMKVにコピーします。映像コーデック、解像度、品質は変更されず、H.264からH.265への変換方法ではありません。再エンコード用のプリセット名は、必ずしもすべての出力が元のファイルより小さくなることを保証するものではありません。"
+          },
+          {
+            "id": "video_conversion.p004",
+            "source_sha256": "31fe0e232d02cd89058578e2fccde72f21ae8fd0074c94698407be72fccf86ed",
+            "text": "解像度と品質\n\n元の解像度を維持は再エンコード時に元のフレーム寸法を保持します。1080p および720p は、アスペクト比を維持しながら出力の高さを1080または720ピクセルに設定します。これらは最大幅設定や自動縮小専用設定ではありません。たとえば、3840×2160のビデオは1080p で1920×1080になります。より小さいソースは拡大可能ですが、欠落した詳細を復元することはできません。縦向きのビデオは横向きになるのではなく、比率を保持します。\n\n品質（CRF）は18から35までの整数を受け付け、デフォルトは23です。数値が低いほど高品質を要求し、通常ファイルサイズも大きくなります。ハードウェアエンジンはこの値を自分の品質管理にマッピングするため、同じ値でもエンジンによって結果が同一になるとは限りません。サンプルで試してください。Remuxは品質、リサイズ、アクセラレーションを無視します。"
+          },
+          {
+            "id": "video_conversion.p005",
+            "source_sha256": "2d17a4384e7cc6ceb233a92096824f99dc79d0d11c5f43d2c552d545e166b856",
+            "text": "エンコーディングとデコーディング\n\n自動（推奨）は使用可能なハードウェアエンコーディングオプションを試し、必要に応じてソフトウェア / CPUに代替手段を戻します。ソフトウェア / CPUはプロセッサを使用します。NVIDIA NVENC、Intel Quick Sync、AMD AMF、Linux VA-APIは、選択されたプリセットでサポートされている場合に提供されます。検出の概要にはFFmpegサポートが報告されます。選択されたハードウェアとドライバも動作する必要があります。明示的に選択されたハードウェアエンジンは、別のエンコーダに静かに切り替えるのではなく、失敗を報告します。\n\n可能な場合はハードウェア デコードを使用するは、出力エンコーダに関係なく、ソースの読み取りを制御します。要求されたハードウェアデコーダが開始できない場合、選択されたエンコーダを保持したままソフトウェアでデコードを再試行します。ソフトウェアデコードを希望する場合は、チェックを外してください。これらの設定は元のファイルを変更しません。"
+          },
+          {
+            "id": "video_conversion.p006",
+            "source_sha256": "06ea5ef5426b40dc040f7227353e00d7437b8fc335a4e6ad48d27d5bbdcf8834",
+            "text": "出力名、進行状況およびキャンセル\n\n新しいファイル名にはプリセットのサフィックスが含まれ、選択された場合は出力解像度も含まれます。既存をスキップする は既存のターゲットをそのままにします。両方とも保管しておいてください は置き換えずに番号付きのファイル名を使用します。開始する前に、スキップされたファイル、重複する出力名、その他の問題がないかプレビューを確認してください。\n\n動画 は1つずつ処理されます。変換をキャンセルする は現在の変換を停止し、未完了の出力を削除し、残りのキューを停止します。完了した出力は残ります。この変換ウィンドウを閉じることでもキャンセルが要求されます。そのキューは、コピーおよび移動を管理する ツール > 転送キュー… とは別です。"
+          },
+          {
+            "id": "video_conversion.p007",
+            "source_sha256": "2305a1598d67013bd4f756c6d91dec721660a38e61ab32c2435ab8a104a9ee5b",
+            "text": "例: H.264 を H.265 に 1080p で変換する\n\nいくつかの H.264 ビデオにチェックを入れ、ツール > 選択したビデオを変換します… を開き、H.265 MP4（小容量） を選択し、解像度 を 1080p に設定します。初回の試行では品質（CRF）を 23 にしておき、自動（推奨） を選択します。出力フォルダを選び、プレビューを更新する をクリックし、パスを確認してから 変換を開始します… を実行します。完成したコピーを元のファイルと比較し、必要に応じて画質または解像度を調整して再テストします。"
+          }
+        ],
+        "body": "異なるコーデック、コンテナ、または解像度で新しいビデオファイルを作成するには、ツール > 選択したビデオを変換します… を使用してください。元のファイルは保持されます。まず小さなサンプルを選び、品質、再生互換性、ファイルサイズ、変換時間を比較してから、大量処理を行ってください。\n\n1つ以上のビデオを変換する\n\n1. いずれかのペインでソースフォルダーを開きます。有効にする サブフォルダーを含める動画がサブフォルダに分散している場合は、それらを確認し、スキャンが終了するのを待ちます。\n2. 変換する動画にチェックを入れます。チェックがない場合、コマンドは代わりにハイライトされたファイルを使用します。クリア不要なチェックを最初に: フィルターによって隠されたチェック済みのファイルでも、アクショングループに属します。画像グループ内のものはこのコマンドによって無視されます。\n3. 選択してくださいツール > 選択したビデオを変換します…\n4. プリセットを選択する解像度, 以下に示すように品質（CRF）およびエンコーディングエンジン。\n5. チェック出力フォルダー。最初は他のペインのフォルダーを指します；使用してください参照…必要に応じて別の目的地を入力するか、確認してくださいアクティブなペインを基準にしてフォルダを保持するその宛先の下で元のサブフォルダ構造を保持する。\n6. 選択する既存をスキップするまたは両方とも保管しておいてください. クリックプレビューを更新する宛先、フォルダの保持、または既存ファイルのポリシーを変更した後。すべてを読むソースそして出力パスとチェックをステータス列。だけ準備完了行が実行されます。\n7. クリック変換を開始します…そして同意する前に確認を確認してください。進行状況とファイルごとに確認してください結果完了したら、変換されたファイルを開き、元のファイルをどうするか決める前に確認してください。\n\nプリセットの選択\n\nH.264 MP4（互換）: プレイヤーやデバイスの互換性を重視する場合に便利な選択肢。\nH.265 MP4（小容量）: HEVCエンコード。ファイルサイズを小さくできるが、対応プレイヤーが必要。\nAV1 MKV（最小容量）: MKVコンテナのAV1エンコード。再生サポートとコンピューターでの変換速度を確認してください。\n720p H.264 プロキシ: より低解像度のH.264コピー。ブラウジングやレビューを素早く行うのに便利。このプリセットを選択すると解像度が720p に設定されます。開始前に変更可能です。\nMKVへリマックス（再エンコードなし）: 既存のストリームをMKVにコピーします。映像コーデック、解像度、品質は変更されず、H.264からH.265への変換方法ではありません。再エンコード用のプリセット名は、必ずしもすべての出力が元のファイルより小さくなることを保証するものではありません。\n\n解像度と品質\n\n元の解像度を維持は再エンコード時に元のフレーム寸法を保持します。1080p および720p は、アスペクト比を維持しながら出力の高さを1080または720ピクセルに設定します。これらは最大幅設定や自動縮小専用設定ではありません。たとえば、3840×2160のビデオは1080p で1920×1080になります。より小さいソースは拡大可能ですが、欠落した詳細を復元することはできません。縦向きのビデオは横向きになるのではなく、比率を保持します。\n\n品質（CRF）は18から35までの整数を受け付け、デフォルトは23です。数値が低いほど高品質を要求し、通常ファイルサイズも大きくなります。ハードウェアエンジンはこの値を自分の品質管理にマッピングするため、同じ値でもエンジンによって結果が同一になるとは限りません。サンプルで試してください。Remuxは品質、リサイズ、アクセラレーションを無視します。\n\nエンコーディングとデコーディング\n\n自動（推奨）は使用可能なハードウェアエンコーディングオプションを試し、必要に応じてソフトウェア / CPUに代替手段を戻します。ソフトウェア / CPUはプロセッサを使用します。NVIDIA NVENC、Intel Quick Sync、AMD AMF、Linux VA-APIは、選択されたプリセットでサポートされている場合に提供されます。検出の概要にはFFmpegサポートが報告されます。選択されたハードウェアとドライバも動作する必要があります。明示的に選択されたハードウェアエンジンは、別のエンコーダに静かに切り替えるのではなく、失敗を報告します。\n\n可能な場合はハードウェア デコードを使用するは、出力エンコーダに関係なく、ソースの読み取りを制御します。要求されたハードウェアデコーダが開始できない場合、選択されたエンコーダを保持したままソフトウェアでデコードを再試行します。ソフトウェアデコードを希望する場合は、チェックを外してください。これらの設定は元のファイルを変更しません。\n\n出力名、進行状況およびキャンセル\n\n新しいファイル名にはプリセットのサフィックスが含まれ、選択された場合は出力解像度も含まれます。既存をスキップする は既存のターゲットをそのままにします。両方とも保管しておいてください は置き換えずに番号付きのファイル名を使用します。開始する前に、スキップされたファイル、重複する出力名、その他の問題がないかプレビューを確認してください。\n\n動画 は1つずつ処理されます。変換をキャンセルする は現在の変換を停止し、未完了の出力を削除し、残りのキューを停止します。完了した出力は残ります。この変換ウィンドウを閉じることでもキャンセルが要求されます。そのキューは、コピーおよび移動を管理する ツール > 転送キュー… とは別です。\n\n例: H.264 を H.265 に 1080p で変換する\n\nいくつかの H.264 ビデオにチェックを入れ、ツール > 選択したビデオを変換します… を開き、H.265 MP4（小容量） を選択し、解像度 を 1080p に設定します。初回の試行では品質（CRF）を 23 にしておき、自動（推奨） を選択します。出力フォルダを選び、プレビューを更新する をクリックし、パスを確認してから 変換を開始します… を実行します。完成したコピーを元のファイルと比較し、必要に応じて画質または解像度を調整して再テストします。"
+      },
+      {
+        "id": "media_reports",
+        "title": "メディアレポートをエクスポートする",
+        "paragraphs": [
+          {
+            "id": "media_reports.p001",
+            "source_sha256": "e5820c2e78ffa8b3b9ff09b57d59bc2adc0b1d92bf570493c0d4aa52c3ab7f5d",
+            "text": "ツール > メディアレポートをエクスポート… は、アクティブペインで既にスキャンされたファイルのインベントリを保存します。それらのメディアファイルをコピー、変換、または変更することはありません。スプレッドシートには CSV を、構造化データには JSON を、ウェブブラウザで開けるレポートには HTML を使用してください。"
+          },
+          {
+            "id": "media_reports.p002",
+            "source_sha256": "94aceb1c124b99d41385988a2d8951dbf25dd5178e8759add72a545ebfbfd828",
+            "text": "レポートを作成する\n\n1. カタログ化したいフォルダーを開きます。必要に応じて 有効にする サブフォルダーを含める も開き、スキャンが完了するまで待ちます。\n2. 特定のグループ（例えば H.265 ビデオや高解像度画像）のレポートを作成したい場合は 適用 フィルターを使用します。そのペイン内をクリックしてアクティブにします。\n3. ツール > メディアレポートをエクスポート… を選択します。\n4. 選択済み、表示中、または スキャン済みすべて にスコープを設定します。\n5. 形式： CSV、JSON、または HTML を選択します。\n6. 完全な場所を記録する場合は フルファイルパスを含める のチェックを入れ、可能な場合はアクティブフォルダーに対する相対パスを使用する場合はチェックを外します。\n7. エクスポート… をクリックし、レポートのファイル名と保存先を選択して保存します。レポートがエクスポートされました を待ちます。保存されたファイルを適切なスプレッドシート、ブラウザ、またはデータビューアで開きます。"
+          },
+          {
+            "id": "media_reports.p003",
+            "source_sha256": "5537e045dec5259f000dbdf42606d0124a95734ebcc8c6f57073576f0b3bcd6d",
+            "text": "スコープの意味\n\n選択済み は、チェックされたファイルがある場合はペインのチェックされたファイルを使用します。チェックがない場合は、ハイライトされたファイルを使用します。したがって、非表示のチェックも含まれる可能性があります。表示中 は、現在のペインフィルターに一致するすべてのファイルを意味し、画面上に表示されている行やサムネイル、または現在のサムネイルページだけではありません。スキャン済みすべて は、現在のフィルターで隠されていてもペインのスキャン済みメディアを含みます。これらのオプションのいずれも、別のドライブやフォルダーを自動的にスキャンすることはありません。"
+          },
+          {
+            "id": "media_reports.p004",
+            "source_sha256": "5741554f0d983a0f0b711b553b0139e6d53ee97d55ac8ee048ac36b006cc85f4",
+            "text": "レポートの内容\n\n各項目には、その名前とパス、メディアの種類と拡張子、寸法/解像度、サイズ、変更日、再生時間、ビデオコーデック、ビットレート、フレームレート、オーディオコーデック/チャンネル、ピクセルフォーマット、HDR、評価、カラーレーベル、タグ、利用可能な場合は読み取り/エラー状態が含まれます。情報が欠落している場合はそのまま残ります。エクスポートは完全な整合性チェックを実行しません。JSONには概要と項目リストが含まれます。HTMLには概要とテーブルが含まれます。CSVには各ファイルのテーブルが含まれます。"
+          },
+          {
+            "id": "media_reports.p005",
+            "source_sha256": "0c1aff0372dd91ebb6e6b1344e7ca59216b6cbc2432e03f36f180b7b9bd7118f",
+            "text": "例とキャンセル\n\nサブフォルダ内の大きな動画を一覧表示するには、共通の親フォルダを開き、動画 と サブフォルダーを含める を有効にし、その他のフィルター… でサイズ制限を設定してから、範囲： 表示中 および 形式： CSV でエクスポートします。CSV をスプレッドシートで開き、サイズとパスを確認してください。\n\nエクスポートをキャンセル は進行中のエクスポートを停止します。閉じる もキャンセルを要求します。レポートは書き込みが完了したときにのみ最終ファイル名で配置されるため、キャンセルしても部分的に書き込まれた最終レポートは残りません。レポートを共有する前にパスを確認してください：完全なファイルパスはフォルダ名を明らかにする可能性があります。"
+          }
+        ],
+        "body": "ツール > メディアレポートをエクスポート… は、アクティブペインで既にスキャンされたファイルのインベントリを保存します。それらのメディアファイルをコピー、変換、または変更することはありません。スプレッドシートには CSV を、構造化データには JSON を、ウェブブラウザで開けるレポートには HTML を使用してください。\n\nレポートを作成する\n\n1. カタログ化したいフォルダーを開きます。必要に応じて 有効にする サブフォルダーを含める も開き、スキャンが完了するまで待ちます。\n2. 特定のグループ（例えば H.265 ビデオや高解像度画像）のレポートを作成したい場合は 適用 フィルターを使用します。そのペイン内をクリックしてアクティブにします。\n3. ツール > メディアレポートをエクスポート… を選択します。\n4. 選択済み、表示中、または スキャン済みすべて にスコープを設定します。\n5. 形式： CSV、JSON、または HTML を選択します。\n6. 完全な場所を記録する場合は フルファイルパスを含める のチェックを入れ、可能な場合はアクティブフォルダーに対する相対パスを使用する場合はチェックを外します。\n7. エクスポート… をクリックし、レポートのファイル名と保存先を選択して保存します。レポートがエクスポートされました を待ちます。保存されたファイルを適切なスプレッドシート、ブラウザ、またはデータビューアで開きます。\n\nスコープの意味\n\n選択済み は、チェックされたファイルがある場合はペインのチェックされたファイルを使用します。チェックがない場合は、ハイライトされたファイルを使用します。したがって、非表示のチェックも含まれる可能性があります。表示中 は、現在のペインフィルターに一致するすべてのファイルを意味し、画面上に表示されている行やサムネイル、または現在のサムネイルページだけではありません。スキャン済みすべて は、現在のフィルターで隠されていてもペインのスキャン済みメディアを含みます。これらのオプションのいずれも、別のドライブやフォルダーを自動的にスキャンすることはありません。\n\nレポートの内容\n\n各項目には、その名前とパス、メディアの種類と拡張子、寸法/解像度、サイズ、変更日、再生時間、ビデオコーデック、ビットレート、フレームレート、オーディオコーデック/チャンネル、ピクセルフォーマット、HDR、評価、カラーレーベル、タグ、利用可能な場合は読み取り/エラー状態が含まれます。情報が欠落している場合はそのまま残ります。エクスポートは完全な整合性チェックを実行しません。JSONには概要と項目リストが含まれます。HTMLには概要とテーブルが含まれます。CSVには各ファイルのテーブルが含まれます。\n\n例とキャンセル\n\nサブフォルダ内の大きな動画を一覧表示するには、共通の親フォルダを開き、動画 と サブフォルダーを含める を有効にし、その他のフィルター… でサイズ制限を設定してから、範囲： 表示中 および 形式： CSV でエクスポートします。CSV をスプレッドシートで開き、サイズとパスを確認してください。\n\nエクスポートをキャンセル は進行中のエクスポートを停止します。閉じる もキャンセルを要求します。レポートは書き込みが完了したときにのみ最終ファイル名で配置されるため、キャンセルしても部分的に書き込まれた最終レポートは残りません。レポートを共有する前にパスを確認してください：完全なファイルパスはフォルダ名を明らかにする可能性があります。"
+      },
+      {
+        "id": "embedded_metadata",
+        "title": "埋め込みメタデータの表示",
+        "paragraphs": [
+          {
+            "id": "embedded_metadata.p001",
+            "source_sha256": "de02fc927d80ae28a81ef73fc00493e9dc09ed4f5766dfd6f65805e4b99c9abd",
+            "text": "ツール > 埋め込まれたメタデータを表示… は、1つの画像または動画内に保存された情報を読み取ります。これは、アプリケーション自身の評価、カラーラベル、タグとは異なり、メディアファイル自体を変更するものではありません。"
+          },
+          {
+            "id": "embedded_metadata.p002",
+            "source_sha256": "84dddde141e5b461ca97772fda91dd9488b49ce2db3f0100540c7e90cefcf078",
+            "text": "1. クリア の不要なチェックを外し、アクティブペインで正確に1つの画像またはビデオを選択します。\n2. ツール > 埋め込まれたメタデータを表示… を選択し、フィールドが表示されるまで待ちます。\n3. セクション、フィールド、値の列を読みます。画像 には、存在する場合、カメラ/日付のEXIF情報やGPSフィールドが含まれることがあります。ビデオにはコンテナやストリームタグが含まれる場合があります。すべてのファイルがこれらのフィールドを含むわけではありません。\n4. 検索： に入力して、表示されている行をセクション、フィールド、値で絞り込みます。\n5. 行を選択して 選択/すべてをコピー をクリックすると、コピーできます。行を選択しない場合は、現在表示されているすべての行をコピーします。\n6. JSONをエクスポート… をクリックして、検索： で隠された行を含むすべての抽出データを保存します。ファイル名を選択して保存します。\n7. 完了したら 閉じる ウィンドウを閉じます。メタデータの表示、コピー、エクスポートは、元のファイルに埋め込まれた情報を編集しません。"
+          }
+        ],
+        "body": "ツール > 埋め込まれたメタデータを表示… は、1つの画像または動画内に保存された情報を読み取ります。これは、アプリケーション自身の評価、カラーラベル、タグとは異なり、メディアファイル自体を変更するものではありません。\n\n1. クリア の不要なチェックを外し、アクティブペインで正確に1つの画像またはビデオを選択します。\n2. ツール > 埋め込まれたメタデータを表示… を選択し、フィールドが表示されるまで待ちます。\n3. セクション、フィールド、値の列を読みます。画像 には、存在する場合、カメラ/日付のEXIF情報やGPSフィールドが含まれることがあります。ビデオにはコンテナやストリームタグが含まれる場合があります。すべてのファイルがこれらのフィールドを含むわけではありません。\n4. 検索： に入力して、表示されている行をセクション、フィールド、値で絞り込みます。\n5. 行を選択して 選択/すべてをコピー をクリックすると、コピーできます。行を選択しない場合は、現在表示されているすべての行をコピーします。\n6. JSONをエクスポート… をクリックして、検索： で隠された行を含むすべての抽出データを保存します。ファイル名を選択して保存します。\n7. 完了したら 閉じる ウィンドウを閉じます。メタデータの表示、コピー、エクスポートは、元のファイルに埋め込まれた情報を編集しません。"
+      },
+      {
+        "id": "media_integrity",
+        "title": "メディアの整合性を確認しています",
+        "paragraphs": [
+          {
+            "id": "media_integrity.p001",
+            "source_sha256": "97deea524f7dd0dcdc0cd44429f4c4d29e3e5d71f7a4e9ca6240aaad7b295631",
+            "text": "ツール > メディアの整合性を確認してください… は、メディアがデコードできるかどうかを、ファイル名や技術的なヘッダーだけに頼るのではなく確認します。読み取り不可能なファイルを調査したり、アーカイブ前に一括チェックするために使用してください。動画全体を読み込むにはかなりの時間がかかることがあります。元のファイルを修復したり変更したりすることはありません。"
+          },
+          {
+            "id": "media_integrity.p002",
+            "source_sha256": "e788bb47cbc4c2ead78a958e6e1e23990943c61731afbfeeb2cda9b82c34fd3c",
+            "text": "1. ソースフォルダを開き、設定するサブフォルダーを含める必要に応じて、スキャンが完了するまで待ちます。\n2. 選択してくださいツール > メディアの整合性を確認してください…\n3. 設定範囲： 選択済みチェックされた/ハイライトされたファイルの場合、表示中すべてのフィルターに一致するファイル、またはスキャン済みすべてフィルターで隠されたファイルを含める。\n4. チェックしてください再チェックを強制以前の結果がキャッシュされていても新しいチェックを行いたい場合。\n5. クリック開始. レビューステータス, キャッシュ済み、パスと詳細結果が届くとすぐに。完了デコーダーがチェックを完了したことを意味します；失敗デコードまたはアクセスの問題を記録します。それは視覚的な品質、正しい内容、またはマルウェアがないことを保証するものではありません。\n6. 使用キャンセルこれ以上の確認を止めるために。結果すでに収集されたものは引き続き利用可能です。\n7. クリックCSVをエクスポート…チェックがキャンセルされた場合を含め、収集された結果を保存するために。選択に失敗しました失敗したファイルをソースペインでハイライト表示し、結果ウィンドウを閉じます；それらを削除するわけではありません。"
+          },
+          {
+            "id": "media_integrity.p003",
+            "source_sha256": "1ae255df200b724240135bb169ad32364b4431dd787322cf203b44e9ce3e8323",
+            "text": "ハイライトされた失敗に対処する前に、その詳細を確認し、目盛りをクリアする をチェックしてください：既存のチェックは、後続のファイルコマンドに対して依然として優先されます。失敗は、権限、ドライブの欠落またはデコーダのサポートに加え、データの破損を反映する可能性があります。1 回のチェックが失敗しただけでファイルを削除しないでください。"
+          }
+        ],
+        "body": "ツール > メディアの整合性を確認してください… は、メディアがデコードできるかどうかを、ファイル名や技術的なヘッダーだけに頼るのではなく確認します。読み取り不可能なファイルを調査したり、アーカイブ前に一括チェックするために使用してください。動画全体を読み込むにはかなりの時間がかかることがあります。元のファイルを修復したり変更したりすることはありません。\n\n1. ソースフォルダを開き、設定するサブフォルダーを含める必要に応じて、スキャンが完了するまで待ちます。\n2. 選択してくださいツール > メディアの整合性を確認してください…\n3. 設定範囲： 選択済みチェックされた/ハイライトされたファイルの場合、表示中すべてのフィルターに一致するファイル、またはスキャン済みすべてフィルターで隠されたファイルを含める。\n4. チェックしてください再チェックを強制以前の結果がキャッシュされていても新しいチェックを行いたい場合。\n5. クリック開始. レビューステータス, キャッシュ済み、パスと詳細結果が届くとすぐに。完了デコーダーがチェックを完了したことを意味します；失敗デコードまたはアクセスの問題を記録します。それは視覚的な品質、正しい内容、またはマルウェアがないことを保証するものではありません。\n6. 使用キャンセルこれ以上の確認を止めるために。結果すでに収集されたものは引き続き利用可能です。\n7. クリックCSVをエクスポート…チェックがキャンセルされた場合を含め、収集された結果を保存するために。選択に失敗しました失敗したファイルをソースペインでハイライト表示し、結果ウィンドウを閉じます；それらを削除するわけではありません。\n\nハイライトされた失敗に対処する前に、その詳細を確認し、目盛りをクリアする をチェックしてください：既存のチェックは、後続のファイルコマンドに対して依然として優先されます。失敗は、権限、ドライブの欠落またはデコーダのサポートに加え、データの破損を反映する可能性があります。1 回のチェックが失敗しただけでファイルを削除しないでください。"
+      },
+      {
+        "id": "video_contact_sheets",
+        "title": "ビデオコンタクトシートの作成",
+        "paragraphs": [
+          {
+            "id": "video_contact_sheets.p001",
+            "source_sha256": "dfbcc6d5b6648c41111ac2cc655dcf84740fdf1c9bdd8173582892799fbf4a42",
+            "text": "コンタクトシートは、ビデオの静止フレームのグリッドを含む1つのPNGです。全クリップを再生せずに概要を示します。ツール > ビデオコンタクトシートを作成… はソースビデオを変更しません。"
+          },
+          {
+            "id": "video_contact_sheets.p002",
+            "source_sha256": "fe5c1944466bf890d4109983ffb85dd4dd70b26b039fb244122ff3be4f7462b1",
+            "text": "1. クリア不要なチェックマークを外し、アクティブペインで1つのビデオを選択します。\n2. 選択しますツール > ビデオコンタクトシートを作成…\n3. フレーム数（4〜48）、列数（2〜8）、フレーム幅（ピクセル）（160〜640）を設定します。デフォルトは、フレーム数12、列数4、幅320ピクセルです。\n4. 「フレーム番号とタイムスタンプを表示フレームの下にキャプションを表示したい場合は、チェックを入れてください。\n5. クリック作成…、PNGのファイル名と保存先を選択し、保存してください。\n6. 待ちますコンタクトシート完成その後、保存したPNGを画像ビューアで開きます。キャンセル抽出を停止します；閉じるまた、キャンセルも要求します。"
+          },
+          {
+            "id": "video_contact_sheets.p003",
+            "source_sha256": "f7a7ce26c0b8bef736351a923a83f5889983daaf7968b4a4afe9f42a47d89af6",
+            "text": "フレームはクリップ全体から均等にサンプリングされ、最初と最後のフレームは避けられます。これはシーン検出ではなく、ツールには読み取可能なビデオの長さが必要です。大r のグリッドとフレームは時間がかかり、より大きな画像を作成します。素早く概要を確認するには、デフォルトの12フレームシートから始めてください。"
+          }
+        ],
+        "body": "コンタクトシートは、ビデオの静止フレームのグリッドを含む1つのPNGです。全クリップを再生せずに概要を示します。ツール > ビデオコンタクトシートを作成… はソースビデオを変更しません。\n\n1. クリア不要なチェックマークを外し、アクティブペインで1つのビデオを選択します。\n2. 選択しますツール > ビデオコンタクトシートを作成…\n3. フレーム数（4〜48）、列数（2〜8）、フレーム幅（ピクセル）（160〜640）を設定します。デフォルトは、フレーム数12、列数4、幅320ピクセルです。\n4. 「フレーム番号とタイムスタンプを表示フレームの下にキャプションを表示したい場合は、チェックを入れてください。\n5. クリック作成…、PNGのファイル名と保存先を選択し、保存してください。\n6. 待ちますコンタクトシート完成その後、保存したPNGを画像ビューアで開きます。キャンセル抽出を停止します；閉じるまた、キャンセルも要求します。\n\nフレームはクリップ全体から均等にサンプリングされ、最初と最後のフレームは避けられます。これはシーン検出ではなく、ツールには読み取可能なビデオの長さが必要です。大r のグリッドとフレームは時間がかかり、より大きな画像を作成します。素早く概要を確認するには、デフォルトの12フレームシートから始めてください。"
+      },
+      {
+        "id": "folder_synchronization",
+        "title": "フォルダー 同期",
+        "paragraphs": [
+          {
+            "id": "folder_synchronization.p001",
+            "source_sha256": "6a5c3c71a212781f6a6c74fac70303224fcbeac3c7d2b4e7c00e810e71cdd110",
+            "text": "左右のペインで比較するフォルダーを開き、[ツール] > [フォルダーの比較/同期] を選択します。一方向同期をキューに入れる前に、左のみ、右のみ、新しい、および異なるエントリを確認してください。"
+          },
+          {
+            "id": "folder_synchronization.steps",
+            "source_sha256": "cf1597a5ccfc3cc7b73f8f7e2f000fa029816c676a9967854c22cd7d39862515",
+            "text": "1. 左側と右側のペインにある2つのフォルダを開きます。設定しますサブフォルダーを含める必要に応じて、それぞれの側で独立して。\n2. 選択するツール > フォルダーの比較/同期…\n3. レビュー相対パスそしてステータス: 左のみ、右のみ、同じ、左が新しい、右が新しい、または異なる。 この比較ではサポートされているメディアファイル、ファイルサイズ、および更新日時を使用します。「同じ」は完全な内容のハッシュチェックではありません。フォルダーは、ペインの検索/メディア表示フィルターに関係なく独立して一覧表示されます。\n4. 特定の行をハイライトして操作を制限します。行がハイライトされていない場合、方向ボタンは全体の比較を考慮します。\n5. クリックします欠落/新しいものをコピー → 右または不足/新しいものをコピー → 左. その方向で欠落している、より新しい、または異なるファイルのみが提案されます。キューに入れる前にファイル数を確認してください。\n6. 進行状況を確認してくださいツール > 転送キュー…これはファイルを一方向にコピーします；余分な宛先ファイルを削除したり、自動的な双方向ミラーリングを行ったりすることはありません。更新された結果リストを取得したい場合は、コピー後にもう一度比較を実行してください。"
+          }
+        ],
+        "body": "左右のペインで比較するフォルダーを開き、[ツール] > [フォルダーの比較/同期] を選択します。一方向同期をキューに入れる前に、左のみ、右のみ、新しい、および異なるエントリを確認してください。\n\n1. 左側と右側のペインにある2つのフォルダを開きます。設定しますサブフォルダーを含める必要に応じて、それぞれの側で独立して。\n2. 選択するツール > フォルダーの比較/同期…\n3. レビュー相対パスそしてステータス: 左のみ、右のみ、同じ、左が新しい、右が新しい、または異なる。 この比較ではサポートされているメディアファイル、ファイルサイズ、および更新日時を使用します。「同じ」は完全な内容のハッシュチェックではありません。フォルダーは、ペインの検索/メディア表示フィルターに関係なく独立して一覧表示されます。\n4. 特定の行をハイライトして操作を制限します。行がハイライトされていない場合、方向ボタンは全体の比較を考慮します。\n5. クリックします欠落/新しいものをコピー → 右または不足/新しいものをコピー → 左. その方向で欠落している、より新しい、または異なるファイルのみが提案されます。キューに入れる前にファイル数を確認してください。\n6. 進行状況を確認してくださいツール > 転送キュー…これはファイルを一方向にコピーします；余分な宛先ファイルを削除したり、自動的な双方向ミラーリングを行ったりすることはありません。更新された結果リストを取得したい場合は、コピー後にもう一度比較を実行してください。"
+      },
+      {
+        "id": "folder_organization_rules",
+        "title": "フォルダー 組織規則",
+        "paragraphs": [
+          {
+            "id": "folder_organization_rules.p001",
+            "source_sha256": "0bafa187b865c37f918aac231d07f9cd0755fcf9049ab3d6462fd49cfa5b59dd",
+            "text": "ツール > フォルダ整理のルール… は繰り返し使用可能なコピーまたは移動のルールを保存します。スマートコレクションとは異なり、これらのルールを適用すると、実際にファイルの場所が変更されたりコピーが作成されたりします。ルールはバックグラウンドで自動的に実行されることはありません：プレビューを確認し、毎回 適用… を確定してください。"
+          },
+          {
+            "id": "folder_organization_rules.p002",
+            "source_sha256": "45964b262f5d8c5b49ac1274b9996e504d695e52fbadd425b9ecb861df577756",
+            "text": "ルールの作成または編集\n\n1. 整理したいファイルが含まれるペインをクリックし、次に選択しますツール > フォルダ整理のルール…\n2. 追加をクリックします。ルール名を入力し、アクション（コピーまたは移動）を選択し、宛先フォルダーを設定します。参照…必要に応じて。アクションを注意深く確認してください：新しいルールは最初にMoveを使用します。\n3. メディア種類をAnyに設定します、画像または動画. 任意の条件は拡張子（カンマ区切り）です、ファイル名含む、コーデックに含む, 最低評価(0〜5)、および必須の正確なタグ。使用しない条件は空欄のままにしてください。0は最低評価制限を課しません。入力されたすべての条件が一致する必要があります。ファイル名およびコーデックの一致は大文字と小文字を区別しません。タグは、部分的ではなく割り当てられたタグ全体と一致する必要があります。\n4. 残すルール有効ルールが参加する場合にチェックを入れ、次にクリックしてくださいルールを保存\n5. 既存のルールを選択して、編集し、変更してください。優先順位を変更するには ↑ と ↓ を使用してください: 最初に有効になった一致するルールが勝ちます。削除確認後にルールを削除しますが、メディアは削除しません；削除を元に戻すこのマネージャーが開いている間は利用可能です。"
+          },
+          {
+            "id": "folder_organization_rules.p003",
+            "source_sha256": "c7c9d8a141f4adb1d8ac99b1211bd67950395855319313f7bcc29474683eae6c",
+            "text": "プレビューと適用\n\n1. 対象ファイルを制限したい場合は、ソースペインのフィルターを設定します。\n2. ルールマネージャで、アクティブペインをプレビュー… をクリックします。\n3. ペインのフィルターマッチするファイルには 範囲： 表示中 を、完全スキャンされたセットには スキャン済みすべて を選択します。このツールには 選択済み のスコープはありません。\n4. アクティブなペインを基準にしてフォルダを保持する するかどうかを選択します。チェックを入れると、各ルールの宛先の下の相対サブフォルダーを保持します。チェックを外すと、ファイル名のみを使用します。\n5. これらのコントロールを変更した後、プレビューを更新する をクリックします。ルール、アクション、ソース、宛先、ステータス を確認します。未対応のファイルはキューに入れられません。適用する前に、重複する宛先などの問題を解決してください。\n6. 適用… をクリックし、提案されたアクション数を確認します。コピー/移動作業は通常の転送キューに入り、既存の宛先には通常の競合解決方法が適用されます。閉じる はプレビューを終了して適用せずに残ります。"
+          },
+          {
+            "id": "folder_organization_rules.p004",
+            "source_sha256": "f28b27db9fb710652715db25a211de3d6a9cef8f4fd15378e38e9f06d8fd4343",
+            "text": "例\n\nMP4ビデオをレビュー用フォルダーにコピーするには、MP4レビューコピーという名前のルールを追加し、コピーを選択し、レビュー先を選択し、メディア種類を動画に設定し、拡張子をmp4に設定してからルールを保存にします。アクティブペインをプレビュー…と範囲：、表示中でパスを確認し適用…します。これによりコピーが作成されます。元のファイルを移動する場合のみ「移動」を選択してください。"
+          }
+        ],
+        "body": "ツール > フォルダ整理のルール… は繰り返し使用可能なコピーまたは移動のルールを保存します。スマートコレクションとは異なり、これらのルールを適用すると、実際にファイルの場所が変更されたりコピーが作成されたりします。ルールはバックグラウンドで自動的に実行されることはありません：プレビューを確認し、毎回 適用… を確定してください。\n\nルールの作成または編集\n\n1. 整理したいファイルが含まれるペインをクリックし、次に選択しますツール > フォルダ整理のルール…\n2. 追加をクリックします。ルール名を入力し、アクション（コピーまたは移動）を選択し、宛先フォルダーを設定します。参照…必要に応じて。アクションを注意深く確認してください：新しいルールは最初にMoveを使用します。\n3. メディア種類をAnyに設定します、画像または動画. 任意の条件は拡張子（カンマ区切り）です、ファイル名含む、コーデックに含む, 最低評価(0〜5)、および必須の正確なタグ。使用しない条件は空欄のままにしてください。0は最低評価制限を課しません。入力されたすべての条件が一致する必要があります。ファイル名およびコーデックの一致は大文字と小文字を区別しません。タグは、部分的ではなく割り当てられたタグ全体と一致する必要があります。\n4. 残すルール有効ルールが参加する場合にチェックを入れ、次にクリックしてくださいルールを保存\n5. 既存のルールを選択して、編集し、変更してください。優先順位を変更するには ↑ と ↓ を使用してください: 最初に有効になった一致するルールが勝ちます。削除確認後にルールを削除しますが、メディアは削除しません；削除を元に戻すこのマネージャーが開いている間は利用可能です。\n\nプレビューと適用\n\n1. 対象ファイルを制限したい場合は、ソースペインのフィルターを設定します。\n2. ルールマネージャで、アクティブペインをプレビュー… をクリックします。\n3. ペインのフィルターマッチするファイルには 範囲： 表示中 を、完全スキャンされたセットには スキャン済みすべて を選択します。このツールには 選択済み のスコープはありません。\n4. アクティブなペインを基準にしてフォルダを保持する するかどうかを選択します。チェックを入れると、各ルールの宛先の下の相対サブフォルダーを保持します。チェックを外すと、ファイル名のみを使用します。\n5. これらのコントロールを変更した後、プレビューを更新する をクリックします。ルール、アクション、ソース、宛先、ステータス を確認します。未対応のファイルはキューに入れられません。適用する前に、重複する宛先などの問題を解決してください。\n6. 適用… をクリックし、提案されたアクション数を確認します。コピー/移動作業は通常の転送キューに入り、既存の宛先には通常の競合解決方法が適用されます。閉じる はプレビューを終了して適用せずに残ります。\n\n例\n\nMP4ビデオをレビュー用フォルダーにコピーするには、MP4レビューコピーという名前のルールを追加し、コピーを選択し、レビュー先を選択し、メディア種類を動画に設定し、拡張子をmp4に設定してからルールを保存にします。アクティブペインをプレビュー…と範囲：、表示中でパスを確認し適用…します。これによりコピーが作成されます。元のファイルを移動する場合のみ「移動」を選択してください。"
+      },
+      {
+        "id": "transfer_queue",
+        "title": "転送キューの管理",
+        "paragraphs": [
+          {
+            "id": "transfer_queue.p001",
+            "source_sha256": "4c74b2e240612a64b07641c0bd71035726be26f6a6731e266ba7363531a03670",
+            "text": "ツール > 転送キュー… は、フォルダーの同期や整理ルールによって開始された転送を含む、キューに入ったコピーおよび移動作業の進行状況を表示します。ビデオ変換には独自の進行状況ウィンドウがあります。"
+          },
+          {
+            "id": "transfer_queue.p002",
+            "source_sha256": "28ed18a8e1ee5a8d11f642e0b6267d950ad0adcf8efa7da73b9228138757b48c",
+            "text": "1. 開始 を使用して、ペインのコントロールやファイルコマンドでコピーまたは移動を行います。進行状況ウィンドウがまだ表示されていない場合は、ツール > 転送キュー… を開きます。\n2. 現在の操作、進行状況、キューに入っている数、および転送の詳細を確認します。\n3. 安全なポイントでコピーを中断するには 一時停止 をクリックします。ボタンは「再開」に変わります。「再開」をクリックすると転送が続行されます。すでに実行中の移動操作は、応答する前に完了する必要がある場合があります。\n4. 現在のキャンセル はアクティブなジョブの停止を要求します。すべての保留中のジョブを消去するわけではなく、正常に完了したファイルは自動的に元に戻りません。\n5. 失敗したものを再試行 は直近の失敗した転送で失敗したファイルを再キューに入れます。まず報告されたエラーと宛先を確認してください。\n6. 閉じる は進行状況ウィンドウを非表示にします。コピーや移動はキャンセルされません。進行状況を確認するには ツール から再度開きます。対応済みの完了ファイル操作を元に戻すには、Ctrl+Z を別途使用してください。"
+          }
+        ],
+        "body": "ツール > 転送キュー… は、フォルダーの同期や整理ルールによって開始された転送を含む、キューに入ったコピーおよび移動作業の進行状況を表示します。ビデオ変換には独自の進行状況ウィンドウがあります。\n\n1. 開始 を使用して、ペインのコントロールやファイルコマンドでコピーまたは移動を行います。進行状況ウィンドウがまだ表示されていない場合は、ツール > 転送キュー… を開きます。\n2. 現在の操作、進行状況、キューに入っている数、および転送の詳細を確認します。\n3. 安全なポイントでコピーを中断するには 一時停止 をクリックします。ボタンは「再開」に変わります。「再開」をクリックすると転送が続行されます。すでに実行中の移動操作は、応答する前に完了する必要がある場合があります。\n4. 現在のキャンセル はアクティブなジョブの停止を要求します。すべての保留中のジョブを消去するわけではなく、正常に完了したファイルは自動的に元に戻りません。\n5. 失敗したものを再試行 は直近の失敗した転送で失敗したファイルを再キューに入れます。まず報告されたエラーと宛先を確認してください。\n6. 閉じる は進行状況ウィンドウを非表示にします。コピーや移動はキャンセルされません。進行状況を確認するには ツール から再度開きます。対応済みの完了ファイル操作を元に戻すには、Ctrl+Z を別途使用してください。"
+      },
+      {
+        "id": "safe_file_actions",
+        "title": "安全なファイルアクション",
+        "paragraphs": [
+          {
+            "id": "safe_file_actions.p001",
+            "source_sha256": "4ed845375e5d90b2ef4791690f07c1a09210904cf1686aec2715d733a377226d",
+            "text": "削除 はファイルをオペレーティングシステムのごみ箱またはゴミ箱に送ります。削除または移動の後、アクティブなソート順で削除された選択の次のファイルが自動的に選択されて表示されます。削除されたファイルが末尾にあった場合、新しい最後のファイルが選択されます。名前を変更 および更新は、有用な現在のファイルも保持し、この動作は 詳細 と サムネイル でも共通です。元に戻すは、最近のコピー、移動、置換、単一の名前変更、および完全なバッチ名前変更を取り消します。置き換える の競合は、置き換える、スキップ、または 両方とも保管しておいてください を提供し、残りのすべての競合に同じ回答を適用するオプションがあります。"
+          },
+          {
+            "id": "safe_file_actions.undo_busy_1273",
+            "source_sha256": "ff2548c8d5b9c336f23e02624d99be111f63b741dd5e9d8d94c87c038febd3a8",
+            "text": "元に戻す はバックグラウンドで動作するため、ウィンドウは応答可能なままです。既存の読み取りが完了するまでプレビューを一時停止し、新しいメタデータやサムネイルファイルの読み取りを一時停止してから、ファイルを復元します。フォルダスキャンが完了するまで待つ必要はありません。短時間の Windows ファイル共有ロックは自動的に再試行されます。別のプログラムがまだファイルを保持している場合、または復元されたソースが新たに作成されたファイルを置き換える場合、元に戻す は停止して問題を報告し、上書きしません。完了した復元手順は保持され、未完了の手順および元の置き換えバックアップは利用可能なままです。閉じる 影響を受けたファイルを使用しているアプリケーションを閉じるか報告された競合を解決し、その後再度 元に戻す を押すと復元を再開します。復元が完了していない間は、キューに入った転送は待機します。復元が完了していない間は、復元バックアップを削除したり、影響を受けたファイルを編集したりしないでください。プレビュー のトグル設定は選択したまま保持されます；復元後に再度ファイルを選択するとプレビューを再開できます。"
+          }
+        ],
+        "body": "削除 はファイルをオペレーティングシステムのごみ箱またはゴミ箱に送ります。削除または移動の後、アクティブなソート順で削除された選択の次のファイルが自動的に選択されて表示されます。削除されたファイルが末尾にあった場合、新しい最後のファイルが選択されます。名前を変更 および更新は、有用な現在のファイルも保持し、この動作は 詳細 と サムネイル でも共通です。元に戻すは、最近のコピー、移動、置換、単一の名前変更、および完全なバッチ名前変更を取り消します。置き換える の競合は、置き換える、スキップ、または 両方とも保管しておいてください を提供し、残りのすべての競合に同じ回答を適用するオプションがあります。\n\n元に戻す はバックグラウンドで動作するため、ウィンドウは応答可能なままです。既存の読み取りが完了するまでプレビューを一時停止し、新しいメタデータやサムネイルファイルの読み取りを一時停止してから、ファイルを復元します。フォルダスキャンが完了するまで待つ必要はありません。短時間の Windows ファイル共有ロックは自動的に再試行されます。別のプログラムがまだファイルを保持している場合、または復元されたソースが新たに作成されたファイルを置き換える場合、元に戻す は停止して問題を報告し、上書きしません。完了した復元手順は保持され、未完了の手順および元の置き換えバックアップは利用可能なままです。閉じる 影響を受けたファイルを使用しているアプリケーションを閉じるか報告された競合を解決し、その後再度 元に戻す を押すと復元を再開します。復元が完了していない間は、キューに入った転送は待機します。復元が完了していない間は、復元バックアップを削除したり、影響を受けたファイルを編集したりしないでください。プレビュー のトグル設定は選択したまま保持されます；復元後に再度ファイルを選択するとプレビューを再開できます。"
+      },
+      {
+        "id": "workspaces_and_cache",
+        "title": "ワークスペースとキャッシュ",
+        "paragraphs": [
+          {
+            "id": "workspaces_and_cache.p001",
+            "source_sha256": "9546017780aef5e7077c76d71f514132c6cabc5dd92f56a8dc2863641361fe9f",
+            "text": "保存されたワークスペースは、フォルダ、フィルター、表示モード、列、インスペクター、およびレイアウトを記憶します。ツール の下にあるスマートコレクションは、より小さいワンペインのプリセットです：フォルダ、サブフォルダーを含める およびメディア切り替え、ファイル名および高度なフィルター、解像度、ソート、詳細/サムネイル 表示、サムネイルサイズ、および 連続/ページ の選択を保存します。適用 すると、アクティブなペインのみに影響します。マネージャーはプリセットの名前を変更したり削除したりできます；削除には確認が必要で、削除を元に戻す はマネージャーを開いたままそれを復元します。スマートコレクションはメディアを移動、削除、注釈付けすることはありません。キャッシュ済み メタデータおよびサムネイルは、将来のアクセスを高速化します；ツール > キャッシュとスキャン でそれらを検査、剪定、またはクリアできます。"
+          },
+          {
+            "id": "workspaces_and_cache.workspace_steps",
+            "source_sha256": "dff5cc601aa1e01667f72fd065cd8e4b55ae77974639503d66c69592dd802aa7",
+            "text": "ワークスペースの保存と読み込み\n\n1. 再利用したいフォルダー、フィルター、ビュー、レイアウトで両方のペインを配置します。\n2. ツール > ワークスペースを保存… を選択し、ワークスペース名を入力します。同じ名前を再利用すると、別の置換確認なしでそのワークスペースが置き換えられます。以前のレイアウトを保持するには新しい名前を使用してください。\n3. 後で で ツール > ワークスペースをロード… を選択します。プロンプトに保存された名前が表示されます。表示されている正確な名前を入力して、両方のペインを復元するには確認します。キャンセル は現在のワークスペースを変更せずに残します。\n\n片方のペインの検索とビューだけを復元したい場合は、代わりに [chapter:smart_collections] を使用します。"
+          },
+          {
+            "id": "workspaces_and_cache.cache_steps",
+            "source_sha256": "db9e5a5210a5fdc95458f3dd3a9b9cd62b82de37c69b195a47a3e595ebe17bc3",
+            "text": "キャッシュおよびスキャンのコントロール\n\n開くツール > キャッシュとスキャン…メタデータの項目やサムネイルの保存を見るために。スキャン設定、選択してくださいパフォーマンスプロファイル: 静音低いバックグラウンド負荷の場合、バランス通常の使用には「Normal」、より高いスループットには「高速」を使用します。必要に応じて、並列メタデータワーカー（1～16）を調整してください。除外パターン（セミコロンで区切る）により、マッチするパスを省略できます。ウィンドウに示された例には、*.tmp; proxy/*; @eaDir/* が含まれています。クリックしてください適用設定を保存するために。リフレッシュ変更された除外を使用してスキャンを実行するためのペイン。\n\nでサムネイル保存オペレーティングシステムドライブの最大割合はデフォルトで1％で、0.1％～10％を受け入れます。適用制限を保存します；今すぐ制限を適用制限に達するまで、最も最近使用されていないキャッシュされたサムネイルを削除します。古いエントリを削除古くなったメタデータ項目を削除します。サムネイルをクリア確認を求めた後、生成されたサムネイル画像のみを削除します；必要に応じて再生成されます。すべてのキャッシュをクリア技術キャッシュデータとサムネイルの削除を確認するため、将来の訪問では新たなスキャン／デコードが必要です。これらのキャッシュ管理は、元のメディアやユーザー評価、カラーレーベル、タグを削除するものではありません。"
+          }
+        ],
+        "body": "保存されたワークスペースは、フォルダ、フィルター、表示モード、列、インスペクター、およびレイアウトを記憶します。ツール の下にあるスマートコレクションは、より小さいワンペインのプリセットです：フォルダ、サブフォルダーを含める およびメディア切り替え、ファイル名および高度なフィルター、解像度、ソート、詳細/サムネイル 表示、サムネイルサイズ、および 連続/ページ の選択を保存します。適用 すると、アクティブなペインのみに影響します。マネージャーはプリセットの名前を変更したり削除したりできます；削除には確認が必要で、削除を元に戻す はマネージャーを開いたままそれを復元します。スマートコレクションはメディアを移動、削除、注釈付けすることはありません。キャッシュ済み メタデータおよびサムネイルは、将来のアクセスを高速化します；ツール > キャッシュとスキャン でそれらを検査、剪定、またはクリアできます。\n\nワークスペースの保存と読み込み\n\n1. 再利用したいフォルダー、フィルター、ビュー、レイアウトで両方のペインを配置します。\n2. ツール > ワークスペースを保存… を選択し、ワークスペース名を入力します。同じ名前を再利用すると、別の置換確認なしでそのワークスペースが置き換えられます。以前のレイアウトを保持するには新しい名前を使用してください。\n3. 後で で ツール > ワークスペースをロード… を選択します。プロンプトに保存された名前が表示されます。表示されている正確な名前を入力して、両方のペインを復元するには確認します。キャンセル は現在のワークスペースを変更せずに残します。\n\n片方のペインの検索とビューだけを復元したい場合は、代わりに [chapter:smart_collections] を使用します。\n\nキャッシュおよびスキャンのコントロール\n\n開くツール > キャッシュとスキャン…メタデータの項目やサムネイルの保存を見るために。スキャン設定、選択してくださいパフォーマンスプロファイル: 静音低いバックグラウンド負荷の場合、バランス通常の使用には「Normal」、より高いスループットには「高速」を使用します。必要に応じて、並列メタデータワーカー（1～16）を調整してください。除外パターン（セミコロンで区切る）により、マッチするパスを省略できます。ウィンドウに示された例には、*.tmp; proxy/*; @eaDir/* が含まれています。クリックしてください適用設定を保存するために。リフレッシュ変更された除外を使用してスキャンを実行するためのペイン。\n\nでサムネイル保存オペレーティングシステムドライブの最大割合はデフォルトで1％で、0.1％～10％を受け入れます。適用制限を保存します；今すぐ制限を適用制限に達するまで、最も最近使用されていないキャッシュされたサムネイルを削除します。古いエントリを削除古くなったメタデータ項目を削除します。サムネイルをクリア確認を求めた後、生成されたサムネイル画像のみを削除します；必要に応じて再生成されます。すべてのキャッシュをクリア技術キャッシュデータとサムネイルの削除を確認するため、将来の訪問では新たなスキャン／デコードが必要です。これらのキャッシュ管理は、元のメディアやユーザー評価、カラーレーベル、タグを削除するものではありません。"
+      },
+      {
+        "id": "language",
+        "title": "言語",
+        "paragraphs": [
+          {
+            "id": "language.p001",
+            "source_sha256": "76d36cb87d53e68bd8a17b59b3d7bf1868001f1323f01fa67c901dda96cf4779",
+            "text": "アプリケーションを初めて起動すると、サポートされている場合はオペレーティングシステムの言語が使用されます。言語を上書きするには ツール > 言語 を選択するか、システム既定 に戻ってください。言語を変更した後は、アプリケーションを再起動してください。"
+          }
+        ],
+        "body": "アプリケーションを初めて起動すると、サポートされている場合はオペレーティングシステムの言語が使用されます。言語を上書きするには ツール > 言語 を選択するか、システム既定 に戻ってください。言語を変更した後は、アプリケーションを再起動してください。"
+      },
+      {
+        "id": "glossary",
+        "title": "用語集",
+        "paragraphs": [
+          {
+            "id": "glossary.p001",
+            "source_sha256": "de56ad1538a95954142a64a6faf297c48d96564544c6f1ea1947a5a7a1974bf5",
+            "text": "アクティブなペイン: 最後にクリックを受け取った左または右のブラウザ。通常、メニューとキーボードの操作はそこに適用されます。"
+          },
+          {
+            "id": "glossary.p002",
+            "source_sha256": "9e944202497daf57a892e77418fbcd6ddd948febb6e71fdac6b8f66941692f17",
+            "text": "コーデック: ビデオまたはオーディオのエンコードに使用される方式 (H.264、H.265/HEVC、AV1、AAC、Opus など)。 MP4 や MKV などのコンテナは、1 つ以上のエンコードされたストリームを保持できます。"
+          },
+          {
+            "id": "glossary.p003",
+            "source_sha256": "672c8a727345c58eb445fec2a58768fb80215d8aa50e1aedf274abd854620d39",
+            "text": "Remux: 既存のビデオ/オーディオ ストリームを再エンコードせずに別のコンテナにコピーします。高速かつロスレスですが、コーデックは変更されません。"
+          },
+          {
+            "id": "glossary.p004",
+            "source_sha256": "5b4c2520b2fcb4ed201a6f159e1d6042244f198a9d54ca2e7e50b21b6430ad98",
+            "text": "CRF/品質: 再エンコードの一定品質の目標。数値が小さいほど、高品質で大きなファイルが要求されます。ハードウェア エンコーダは、それを最も近い品質管理に変換します。"
+          },
+          {
+            "id": "glossary.p005",
+            "source_sha256": "57f6a48371b1e7d33ef4389ca76d13c11dc500afbed5245024c4eb6695646f8c",
+            "text": "メタデータ キャッシュ: 変更されていないファイルを繰り返し調査することを回避する、保存された技術的結果。これは、評価、ラベル、タグとは別のものです。"
+          },
+          {
+            "id": "glossary.p006",
+            "source_sha256": "a1bb6a1d6960bc4e1441baca24dc3ae68ea222ac01e819b3e083fcd1a166e6f7",
+            "text": "サムネイルキャッシュ: 生成されたプレビュー画像は、将来のアクセスを高速化するためにディスク上に保持され、ツール > キャッシュとスキャン によって制限されます。"
+          },
+          {
+            "id": "glossary.p007",
+            "source_sha256": "fa7be14671267800c9e3a8d8f85ceaf1d75c18d830685a91819c692490061aab",
+            "text": "再帰的/サブフォルダーを含める: 選択したフォルダーとその下のすべてのフォルダーをスキャンします。ドライブ ルート自体が選択されていない限り、ドライブ全体を意味することはありません。"
+          },
+          {
+            "id": "glossary.p008",
+            "source_sha256": "97af76d3a80e273362782d714bf88bcdcc83ab072222a8994eb06977af0de44c",
+            "text": "スマート コレクション: 場所、フィルター、並べ替え、プレゼンテーション設定を含む保存されたビュー定義。ファイルのコピーや移動は行いません。"
+          }
+        ],
+        "body": "アクティブなペイン: 最後にクリックを受け取った左または右のブラウザ。通常、メニューとキーボードの操作はそこに適用されます。\n\nコーデック: ビデオまたはオーディオのエンコードに使用される方式 (H.264、H.265/HEVC、AV1、AAC、Opus など)。 MP4 や MKV などのコンテナは、1 つ以上のエンコードされたストリームを保持できます。\n\nRemux: 既存のビデオ/オーディオ ストリームを再エンコードせずに別のコンテナにコピーします。高速かつロスレスですが、コーデックは変更されません。\n\nCRF/品質: 再エンコードの一定品質の目標。数値が小さいほど、高品質で大きなファイルが要求されます。ハードウェア エンコーダは、それを最も近い品質管理に変換します。\n\nメタデータ キャッシュ: 変更されていないファイルを繰り返し調査することを回避する、保存された技術的結果。これは、評価、ラベル、タグとは別のものです。\n\nサムネイルキャッシュ: 生成されたプレビュー画像は、将来のアクセスを高速化するためにディスク上に保持され、ツール > キャッシュとスキャン によって制限されます。\n\n再帰的/サブフォルダーを含める: 選択したフォルダーとその下のすべてのフォルダーをスキャンします。ドライブ ルート自体が選択されていない限り、ドライブ全体を意味することはありません。\n\nスマート コレクション: 場所、フィルター、並べ替え、プレゼンテーション設定を含む保存されたビュー定義。ファイルのコピーや移動は行いません。"
+      },
+      {
+        "id": "support_the_project",
+        "title": "プロジェクトをサポートする",
+        "paragraphs": [
+          {
+            "id": "support_the_project.p001",
+            "source_sha256": "62b207421228680770777e66598c8ce79ee121aaee8cd232e847e65dd28e2122",
+            "text": "解像度ファイルマネージャー は、サブスクリプションを必要とせずにスタンドアロン アプリケーションとして提供されます。これが役立つと感じ、継続的な開発をサポートしたい場合は、[ヘルプ] > [これが気に入ったら、ジョンにコーヒーを買ってください] を選択します。同じオプションのサポート ボタンが [ヘルプ] > [バージョン情報] に表示され、通常の Web ブラウザで JohnPerky の公開ページが開きます。"
+          },
+          {
+            "id": "support_the_project.p002",
+            "source_sha256": "f625bc04cc8dea0548e7e06bf6f5a1bf75532166728133d0f26049dc60b5f0ee",
+            "text": "https://buymeacoffee.com/johnperky"
+          },
+          {
+            "id": "support_the_project.p003",
+            "source_sha256": "f3433f015e63332b4aeaca246443618a7f7f6614bafc5941d7509c71ca191619",
+            "text": "プロジェクトのサポートは完全に任意です。アプリケーションは、ページを自動的に開いたり、支払い情報を収集したり、ページにアクセスしたかどうかを追跡したり、サポートに基づいて機能を変更したりすることはありません。"
+          },
+          {
+            "id": "support_the_project.p004",
+            "source_sha256": "fb8e1f1b4be83a666d0f808238dffefa4cc8b5369dc8b4d25aa74a5d499c5f7a",
+            "text": "評価とオプションのリマインダー"
+          },
+          {
+            "id": "support_the_project.reminder_timing",
+            "source_sha256": "b00a39416f2e0c07132850cca60bde12e893c16cbfd085f4b8a29fe722bf6d8e",
+            "text": "少なくとも 3 日間で 5 回起動すると、アプリは Microsoft Store での評価を求めるメッセージを表示する場合があります。 後で は、リクエストを 10 回の起動まで延期します。オプションのコーヒー リマインダーは、起動 11 から始まり、後で考える 以降のみ、起動 11 回ごとに繰り返されます。 今後表示しない はどちらのリマインダーも無効にします。 ツール > リマインダーで再度有効にすることができます。ページは、明示的なボタンを押した後にのみ開きます。"
+          },
+          {
+            "id": "support_the_project.reminder_settings",
+            "source_sha256": "aeec7ca97a52107645156aa31a220d7a33d6f136fde87d37a08a2729e511a24e",
+            "text": "評価とサポートのプロンプトを個別に管理するには、ツール > リマインダー… を選択してください。プロンプトを有効にするにはチェックを入れ、無効にするにはチェックを外してから、保存してください。キャンセル を選択すると、現在の選択は変更されません。"
+          }
+        ],
+        "body": "解像度ファイルマネージャー は、サブスクリプションを必要とせずにスタンドアロン アプリケーションとして提供されます。これが役立つと感じ、継続的な開発をサポートしたい場合は、[ヘルプ] > [これが気に入ったら、ジョンにコーヒーを買ってください] を選択します。同じオプションのサポート ボタンが [ヘルプ] > [バージョン情報] に表示され、通常の Web ブラウザで JohnPerky の公開ページが開きます。\n\nhttps://buymeacoffee.com/johnperky\n\nプロジェクトのサポートは完全に任意です。アプリケーションは、ページを自動的に開いたり、支払い情報を収集したり、ページにアクセスしたかどうかを追跡したり、サポートに基づいて機能を変更したりすることはありません。\n\n評価とオプションのリマインダー\n\n少なくとも 3 日間で 5 回起動すると、アプリは Microsoft Store での評価を求めるメッセージを表示する場合があります。 後で は、リクエストを 10 回の起動まで延期します。オプションのコーヒー リマインダーは、起動 11 から始まり、後で考える 以降のみ、起動 11 回ごとに繰り返されます。 今後表示しない はどちらのリマインダーも無効にします。 ツール > リマインダーで再度有効にすることができます。ページは、明示的なボタンを押した後にのみ開きます。\n\n評価とサポートのプロンプトを個別に管理するには、ツール > リマインダー… を選択してください。プロンプトを有効にするにはチェックを入れ、無効にするにはチェックを外してから、保存してください。キャンセル を選択すると、現在の選択は変更されません。"
+      }
+    ]
+  },
+  "literals": {
+    "Confirm": "確認する",
+    "Move {field0} to the Recycle Bin / Trash?": "{field0} をごみ箱/ゴミ箱に移動しますか?",
+    "Synchronize preview": "プレビューを同期する",
+    "Queue {field0} file(s) for copying to the {field1} pane?": "{field1} ペインにコピーするために {field0} ファイルをキューに入れますか?",
+    "Keyboard shortcuts": "キーボードショートカット",
+    "Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file": "Ctrl+A 表示されているすべてを選択\nCtrl+C 選択したものをコピー\nCtrl+X 選択された切り取り\nCtrl+V アクティブなペインに貼り付けます\nCtrl+Z 最後のファイル操作を元に戻す\n削除 選択したファイルをごみ箱/ゴミ箱に移動します\nF2 選択したファイルの名前を変更します\nF5 両方のペインを更新します\nBackspace 1 つ上のフォルダーに移動\n, (カンマ) アクティブなプレビューが 10% 戻る\n。 (ピリオド) アクティブ プレビューを 10% 前方に表示\nダブルクリック ファイルを開く",
+    "Folder not found": "フォルダーが見つかりません",
+    "This folder does not exist:\n{field0}": "このフォルダーは存在しません:\n{field0}",
+    "Not enough videos": "動画が足りない",
+    "At least two visible videos with readable durations are needed for comparison.": "比較するには、読み取り可能な長さの表示可能なビデオが少なくとも 2 つ必要です。",
+    "No size outliers": "サイズ異常値なし",
+    "No visible video is at least {field0}× the average data rate of {field1} MB/min.": "少なくとも {field0} × 平均データ レート {field1} MB/分以上の可視ビデオはありません。",
+    "Some dropped files failed": "いくつかのドロップされたファイルが失敗しました",
+    "Could not reveal some files": "一部のファイルを公開できませんでした",
+    "Select one file": "ファイルを 1 つ選択してください",
+    "Select exactly one file to rename.": "名前を変更するファイルを 1 つだけ選択してください。",
+    "Invalid filename": "無効なファイル名",
+    "Enter a filename without folder separators.": "フォルダー区切り文字を使用せずにファイル名を入力します。",
+    "File already exists": "ファイルはすでに存在します",
+    "A file named {field0} already exists.": "{field0} という名前のファイルはすでに存在します。",
+    "Nothing selected": "何も選択されていません",
+    "Select one or more files in the active pane first.": "まず、アクティブなペインで 1 つ以上のファイルを選択します。",
+    "Confirm {field0}": "{field0}を確認してください",
+    "{field0} {field1} file(s) to:\n{field2}?": "{field0} {field1} ファイルの宛先:\n{field2}?",
+    "Some files failed": "一部のファイルが失敗しました",
+    "Finished": "完了しました",
+    "Successfully {field0} {field1} file(s).": "{field0} {field1} ファイルが正常に作成されました。",
+    "Unknown choice": "未知の選択",
+    "Use replace, skip, keep both, or newer.": "置換、スキップ、両方を保持、または新しいを使用します。",
+    "Batch rename": "名前の一括変更",
+    "Select one or more files first.": "まず 1 つ以上のファイルを選択します。",
+    "Batch rename complete": "名前の一括変更が完了しました",
+    "Renamed {field0} file(s). Use Ctrl+Z to undo the batch.": "{field0} ファイルの名前が変更されました。バッチを元に戻すには、Ctrl+Z を使用します。",
+    "Nothing to retry": "再試行するものはありません",
+    "The last transfer had no failed files.": "最後の転送には失敗したファイルはありませんでした。",
+    "Transfer active": "転送がアクティブです",
+    "Wait for the current transfer to finish before undoing.": "元に戻す前に、現在の転送が完了するまで待ってください。",
+    "Nothing to undo": "元に戻すものはありません",
+    "There are no recent copy, move, replacement, or rename actions.": "最近、コピー、移動、置換、または名前変更のアクションはありません。",
+    "Undo incomplete": "不完全な状態を元に戻す",
+    "Undo complete": "元に戻す完了",
+    "The most recent file operation was undone.": "直前のファイル操作が取り消されました。",
+    "Move to Recycle Bin": "ごみ箱に移動",
+    "Move {field0} selected file(s) to the Recycle Bin / Trash?": "{field0} 選択したファイルをごみ箱/ゴミ箱に移動しますか?",
+    "Some files could not be removed": "一部のファイルを削除できませんでした",
+    "Embedded metadata": "埋め込みメタデータ",
+    "Select exactly one image or video first.": "最初に画像またはビデオを 1 つだけ選択します。",
+    "Create video contact sheet": "ビデオコンタクトシートを作成する",
+    "Select exactly one video first.": "最初にビデオを 1 つだけ選択してください。",
+    "Similar image search": "類似画像検索",
+    "No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).": "許容値 {field0} では、視覚的に類似したグループが見つかりません。\n\n{field1} キャッシュされたハッシュ。 {field2} 読み取り不可能な画像。",
+    "Select two files": "2つのファイルを選択してください",
+    "Select exactly two files to compare.": "比較するファイルを 2 つだけ選択してください。",
+    "Nothing to synchronize": "同期するものがありません",
+    "No selected files need copying in that direction.": "選択したファイルはその方向にコピーする必要はありません。",
+    "No workspaces": "ワークスペースがありません",
+    "Save a workspace first.": "まずワークスペースを保存します。",
+    "Collection folder unavailable": "コレクションフォルダーが使用できません",
+    "The saved folder does not currently exist:\n{field0}": "保存されたフォルダーは現在存在しません:\n{field0}",
+    "Cache pruned": "キャッシュのプルーニング",
+    "Removed {field0} stale entry/entries.": "{field0} の古いエントリを削除しました。",
+    "Clear cache": "キャッシュをクリアする",
+    "Clear all cached metadata? Files will be rescanned next time.": "キャッシュされたメタデータをすべてクリアしますか?ファイルは次回再スキャンされます。",
+    "Clear thumbnail cache": "サムネイルキャッシュをクリア",
+    "Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.": "{field1} を使用して、{field0} に保存されたサムネイルを削除しますか?\n\n元のメディア ファイルとメタデータは変更されません。",
+    "Settings": "設定",
+    "{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.": "{field0} パフォーマンス設定、スキャン オプション、およびサムネイル キャッシュ制限が保存されました。キャッシュ制限はバックグラウンドで適用されます。",
+    "Live updates unavailable": "ライブアップデートは利用できません",
+    "The folder-monitoring component is not installed.": "フォルダー監視コンポーネントがインストールされていません。",
+    "Reveal many files?": "多くのファイルを公開しますか?",
+    "{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.": "{field0} ファイルが選択されています。これらをすべて公開すると、多数のファイル マネージャー ウィンドウが開く可能性があります。\n\n選択したすべてのファイルを表示するには「はい」を選択し、最初のファイルのみを表示するには「いいえ」を選択します。",
+    "Rename failed": "名前の変更に失敗しました",
+    "Confirm batch rename": "名前の一括変更を確認する",
+    "Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.": "{field0} ファイルの名前をプレビューどおりに変更しますか?\n\n完全なバッチは Ctrl+Z で元に戻すことができます。",
+    "Batch rename failed": "名前の一括変更に失敗しました",
+    "No completed rename was kept where rollback was possible.\n\n{field0}": "ロールバックが可能な場合、完了した名前変更は保持されませんでした。\n\n{field0}",
+    "Nothing to export": "エクスポートするものがありません",
+    "The chosen scope contains no media files.": "選択したスコープにはメディア ファイルが含まれていません。",
+    "Nothing to verify": "確認するものは何もありません",
+    "Not enough images": "画像が足りません",
+    "The chosen scope contains fewer than two images.": "選択したスコープに含まれる画像は 2 つ未満です。",
+    "Could not save workspace": "ワークスペースを保存できませんでした",
+    "Replace smart collection": "スマートコレクションを置き換える",
+    "Replace the existing collection named {field0}?": "{field0} という名前の既存のコレクションを置き換えますか?",
+    "Could not save collection": "コレクションを保存できませんでした",
+    "Invalid rule": "無効なルール",
+    "Enter a rule name.": "ルール名を入力します。",
+    "Choose a destination folder.": "宛先フォルダーを選択します。",
+    "Apply folder rules": "フォルダールールを適用する",
+    "Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.": "{field0} 計画されたコピー/移動アクションをキューに入れますか?\n\n既存のターゲットは通常の競合の選択肢を使用します。移動と置換は元に戻せないままです。",
+    "Delete rule": "ルールの削除",
+    "Delete rule '{field0}'?": "ルール「{field0}」を削除しますか?",
+    "Cache cleared": "キャッシュがクリアされました",
+    "Removed {field0} metadata entries and cached thumbnails.": "{field0} メタデータ エントリとキャッシュされたサムネイルを削除しました。",
+    "Thumbnail cache": "サムネイルキャッシュ",
+    "The thumbnail cache is already empty.": "サムネイル キャッシュはすでに空です。",
+    "Thumbnail cache cleared": "サムネイルキャッシュがクリアされました",
+    "Deleted {field0} thumbnail(s) and freed {field1}.": "{field0} サムネイルを削除し、{field1} を解放しました。",
+    "Could not monitor folder": "フォルダを監視できませんでした",
+    "Live updates could not be enabled for:\n{field0}\n\n{field1}": "次のライブ アップデートを有効にできませんでした:\n{field0}\n\n{field1}",
+    "Could not open file": "ファイルを開けませんでした",
+    "Frame exported": "エクスポートされたフレーム",
+    "Metadata exported": "メタデータのエクスポート",
+    "Saved {field0} field(s).": "{field0} フィールドを保存しました。",
+    "Metadata unavailable": "メタデータは使用できません",
+    "Report exported": "レポートがエクスポートされました",
+    "Saved {field0} result(s).": "{field0} 件の結果を保存しました。",
+    "Invalid settings": "無効な設定",
+    "Use whole numbers for frames, columns, and width.": "フレーム、列、幅には整数を使用します。",
+    "Invalid tolerance": "無効な許容差",
+    "Enter a whole number from 0 to 16.": "0 ～ 16 の整数を入力します。",
+    "Replace collection": "コレクションを置換する",
+    "Replace {field0}?": "{field0} を置き換えますか?",
+    "Delete smart collection": "スマートコレクションの削除",
+    "Delete {field0}?\n\nNo media files or annotations will be changed.": "{field0} を削除しますか?\n\nメディア ファイルや注釈は変更されません。",
+    "Invalid rating": "無効な評価",
+    "Minimum rating must be a whole number from 0 to 5.": "最小評価は 0 ～ 5 の整数である必要があります。",
+    "Frame export failed": "フレームのエクスポートに失敗しました",
+    "Could not export metadata": "メタデータをエクスポートできませんでした",
+    "Could not export report": "レポートをエクスポートできませんでした",
+    "Contact sheet complete": "コンタクトシート完成",
+    "Report export failed": "レポートのエクスポートに失敗しました",
+    "Contact sheet failed": "コンタクトシートが失敗しました",
+    "Removed {field0} least-recently-used thumbnail(s).": "{field0} 最も最近使用されていないサムネイルを削除しました。",
+    "Add": "追加",
+    "All non-empty conditions must match. Rules are checked from top to bottom; the first match wins.": "すべての空でない条件が一致する必要があります。ルールは上から下へチェックされ、最初に一致したものが勝ちます。",
+    "Appearance and accessibility": "外観とアクセシビリティ",
+    "Appearance and text size": "外観と文字サイズ",
+    "Apply": "適用",
+    "Apply rename": "名前を変更して適用",
+    "Applying a collection changes only the active pane's folder, filters, sorting, and view.": "コレクションを適用すると、アクティブペインのフォルダー、フィルター、並べ替え、および表示のみが変更されます。",
+    "Apply…": "適用…",
+    "Batch rename selected files": "選択したファイルを一括で名前変更",
+    "Browse…": "参照…",
+    "Cache and scanning": "キャッシュとスキャン",
+    "Cached": "キャッシュ済み",
+    "Cancel": "キャンセル",
+    "Cancel current": "現在のキャンセル",
+    "Cancel export": "エクスポートをキャンセル",
+    "Case sensitive": "大文字と小文字は区別されます",
+    "Changes are previewed immediately. Cancel restores the previous appearance.": "変更は即座にプレビューされます。キャンセルすると以前の表示に戻ります。",
+    "Choose rule destination": "ルールの宛先を選択してください",
+    "Clear all cache": "すべてのキャッシュをクリア",
+    "Clear thumbnails": "サムネイルをクリア",
+    "Close": "閉じる",
+    "Collection name:": "コレクション名：",
+    "Compare files": "ファイルを比較",
+    "Contents": "内容",
+    "Copy missing/newer → left": "不足/新しいものをコピー → 左",
+    "Copy missing/newer → right": "欠落/新しいものをコピー → 右",
+    "Copy selected/all": "選択/すべてをコピー",
+    "Create…": "作成…",
+    "Current name": "現在の名前",
+    "Delete": "削除",
+    "Details": "詳細",
+    "Edit": "編集",
+    "Edit tags": "タグを編集",
+    "Enforce limit now": "今すぐ制限を適用",
+    "Examples: *.tmp; proxy/*; @eaDir/*": "例: *.tmp; proxy/*; @eaDir/*",
+    "Exclude patterns (semicolon separated):": "除外パターン（セミコロンで区切る）:",
+    "Export CSV…": "CSVをエクスポート…",
+    "Export current video frame": "現在のビデオフレームをエクスポート",
+    "Export embedded metadata": "埋め込みメタデータをエクスポート",
+    "Export integrity report": "整合性レポートをエクスポート",
+    "Export JSON…": "JSONをエクスポート…",
+    "Export media report": "メディアレポートのエクスポート",
+    "Exports technical details, annotations, file status, and a library summary without changing media.": "メディアを変更せずに、技術的な詳細、注釈、ファイルの状態、およびライブラリの概要をエクスポートします。",
+    "Export…": "エクスポート…",
+    "File conflicts": "ファイルの競合",
+    "Filename.jpg   1920 × 1080   H.265 / HEVC": "Filename.jpg   1920 × 1080   H.265 / HEVC",
+    "Find visually similar images": "視覚的に類似した画像を探す",
+    "Find:": "探す:",
+    "Folder": "フォルダー",
+    "Folder comparison and synchronization": "フォルダーの比較と同期",
+    "Folder organization rules": "フォルダ整理ルール",
+    "Force recheck": "再チェックを強制",
+    "Format:": "形式：",
+    "Include full file paths": "フルファイルパスを含める",
+    "Interface scale:": "インターフェースのスケール：",
+    "Keep left (recycle right)": "左側を通行 (右側はリサイクル)",
+    "Keep right (recycle left)": "右側を通行 (左側はリサイクル)",
+    "Load workspace": "作業スペースを読み込む",
+    "Loading preview…": "プレビューを読み込み中…",
+    "Lower values are stricter. 6 is a useful starting point for resized or lightly recompressed copies.": "値が低いほど厳しくなります。サイズ変更済みまたは軽く再圧縮されたコピーには、6が便利な出発点です。",
+    "Maximum percentage of operating-system drive:": "オペレーティングシステムのドライブの最大割合:",
+    "Media integrity verification": "メディアの整合性確認",
+    "Media inventory report": "メディア在庫報告書",
+    "Move left": "左に移動",
+    "Move right": "右に移動",
+    "Name": "名前",
+    "New filename:": "新しいファイル名:",
+    "New name": "新しい名前",
+    "New name:": "新しい名前:",
+    "Number padding:": "番号のパディング:",
+    "Parallel metadata workers (1–16):": "並列メタデータワーカー（1–16）:",
+    "Path": "パス",
+    "Pause": "一時停止",
+    "Perceptual image matching": "知覚的画像マッチング",
+    "Performance profile:": "パフォーマンスプロファイル:",
+    "Preserve folders relative to the active pane": "アクティブペインに対して相対的にフォルダを保持する",
+    "Preview": "プレビュー",
+    "Preview active pane…": "アクティブペインをプレビュー…",
+    "Preview folder organization rules": "フォルダの整理ルールをプレビュー",
+    "Preview only until Apply is confirmed. The first enabled matching rule wins.": "適用が確認されるまでプレビューのみ。最初に有効になった一致ルールが勝ちます。",
+    "Query": "クエリ",
+    "Refresh preview": "プレビュを更新",
+    "Relative path": "相対パス",
+    "Remove stale entries": "古いエントリを削除",
+    "Rename": "名前を変更",
+    "Rename file": "ファイルの名前を変更",
+    "Rename pattern": "パターンの名前を変更",
+    "Rename smart collection": "スマートコレクションの名前を変更",
+    "Replace:": "置換:",
+    "Reset widths": "幅をリセット",
+    "Resolution File Manager": "解像度ファイルマネージャー",
+    "Restore system default": "システム設定をデフォルトに戻す",
+    "Retry failed": "失敗したものを再試行",
+    "Review visually similar images": "視覚的に類似した画像を確認",
+    "Review-only: this tool never deletes or changes files.": "レビュー専用: このツールはファイルを削除したり変更したりすることはありません。",
+    "Rule enabled": "ルール有効",
+    "Rules are evaluated from top to bottom. Files are never changed until a preview is reviewed and Apply is confirmed.": "ルールは上から下へ評価されます。プレビューが確認されて「適用」が確定するまでは、ファイルは変更されません。",
+    "Sample button": "サンプルボタン",
+    "Save": "保存",
+    "Save contact sheet": "コンタクトシートを保存",
+    "Save current": "現在を保存",
+    "Save media report": "メディアレポートを保存",
+    "Save rule": "ルールを保存",
+    "Save smart collection": "スマートコレクションを保存",
+    "Save workspace": "ワークスペースを保存",
+    "Saved one-pane searches": "保存されたワンパネル検索",
+    "Scan settings": "スキャン設定",
+    "Scope:": "範囲：",
+    "Select a column, then move it or set its width.": "列を選択し、それから移動するか幅を設定してください。",
+    "Select an image": "画像を選択",
+    "Select failed": "選択に失敗しました",
+    "Select this group in source pane": "ソースペインでこのグループを選択",
+    "Set width": "幅を設定",
+    "Show frame numbers and timestamps": "フレーム番号とタイムスタンプを表示",
+    "Similarity is an estimate. Review files before taking any action; this window cannot delete them.": "類似度は推定値です。アクションを実行する前にファイルを確認してください。このウィンドウでは削除できません。",
+    "Similarity tolerance (0–16):": "類似度の許容範囲 (0–16):",
+    "Smart collections": "スマートコレクション",
+    "Some files already exist. Enter: replace, skip, keep both, or newer": "一部のファイルはすでに存在します。入力してください: 置き換える、スキップする、両方保持、または新しいもの",
+    "Start": "開始",
+    "Start number:": "開始番号:",
+    "Status": "ステータス",
+    "Template:": "テンプレート:",
+    "Theme:": "テーマ:",
+    "Thumbnail storage": "サムネイル保存",
+    "Tokens: {name} original name, {n} number, {ext} extension, {dotext} extension including dot": "トークン: {name} 元の名前, {n} 番号, {ext} 拡張子, {dotext} ドットを含む拡張子",
+    "Transfer queue": "転送キュー",
+    "Undo delete": "削除を元に戻す",
+    "Verify media integrity": "メディアの整合性を確認",
+    "Width:": "幅:",
+    "Workspace name:": "ワークスペース名:",
+    "⤓ PNG": "⤓ PNG",
+    "🔇 Unavailable": "🔇 利用不可",
+    "Thumbnails": "サムネイル",
+    "Ready": "準備完了",
+    "Keep both": "両方とも保管しておいてください",
+    "Filename": "ファイル名",
+    "Move": "移動",
+    "Copy": "コピー",
+    "Cancelled": "キャンセル",
+    "Add to selection basket": "セレクションバスケットに追加",
+    "New folder…": "新しいフォルダー…",
+    "Selection basket…": "選択バスケット…",
+    "Selection basket": "選択バスケット",
+    "Highlighted files:": "ハイライトされたファイル:",
+    "Tick selection": "チェックボックス選択",
+    "Untick selection": "選択のチェックを外す",
+    "Undo in progress…": "元に戻す 進行中…",
+    "\nUnfinished recovery steps and backups were retained. Close applications using these files, then press Undo again.": "\n未完了の回復手順とバックアップは保持されました。これらのファイルを使用している 閉じる アプリケーションは、その後 元に戻す を再度押してください。",
+    "Undo would overwrite an existing file: {target}. Both files were retained.": "元に戻す は既存のファイル {target} を上書きします。両方のファイルは保持されました。",
+    "Undo target is missing; recovery retained: {target}": "元に戻す のターゲットが見つかりません; 回復は保持されました: {target}",
+    "Undo backup is missing: {backup}": "元に戻す のバックアップがありません: {backup}",
+    "New folder": "新しいフォルダー",
+    "Folder name:": "フォルダー 名前：",
+    "Filename conflict": "ファイル名 の衝突",
+    "Rename file — live preview": "ファイルの名前を変更 — ライブプレビュー",
+    "Could not create folder": "フォルダーを作成できませんでした",
+    "Select or tick files first.": "最初にファイルを選択するか、チェックしてください。",
+    "Move files": "移動 ファイル",
+    "Copy files": "コピー ファイル",
+    "Ask for each conflict": "それぞれの対立について尋ねる",
+    "keep both": "両方とも取っておく",
+    "Replace": "置き換える",
+    "Skip": "スキップ",
+    "Selection basket — temporary references": "選択バスケット - 一時的な参照",
+    "Original location": "元の場所",
+    "Add pane selection": "ペイン選択を追加",
+    "Remove references": "参照を削除する",
+    "Clear basket": "クリア バスケット",
+    "Copy to active pane": "コピー をアクティブペインに",
+    "Move to active pane": "移動 をアクティブペインに",
+    "Source missing": "ソース が見つかりません",
+    " files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "ファイル。競合はキューに入れる前に確認されます。置換はこのセッション用の元に戻すバックアップを保持します。",
+    "Queue move": "キュー移動",
+    "Queue copy": "キューのコピー",
+    "Unsafe destination": "危険な目的地",
+    "A destination is one of the selected source files. Choose another folder.": "宛先は選択されたソースファイルの1つです。別のフォルダーを選んでください。",
+    "New filename: ": "新しいファイル名:",
+    "Destination now exists. Choose another name.": "宛先は既に存在します。別の名前を選んでください。",
+    "Destination folder:": "宛先フォルダー:",
+    "Preserve folder structure": "フォルダ構造を保持する",
+    "Files only (no subfolders)": "ファイルフォルダー内のみ（サブフォルダーなし）",
+    "If a destination filename already exists:": "もし目的地のファイル名が既に存在する場合：",
+    "Open destination when complete": "開く完了時の宛先",
+    "Destination is a selected source": "宛先は選択されたソースです",
+    "Apply to all remaining conflicts": "適用すべての残りの競合に",
+    "Hide basket": "バスケットを非表示",
+    "Treeview": "ツリービュー",
+    "Destination is a folder": "宛先はフォルダーです",
+    " to ": "へ",
+    "Source: ": "ソース:",
+    "\n\nDestination: ": "\n宛先:",
+    "\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "\n両方とも保管しておいてください番号付きのファイル名を作成します。Replace はセッションのために宛先をバックアップします元に戻す",
+    "Current filename: ": "現在のファイル名:",
+    "Duplicate destination name": "重複する宛先名",
+    " [missing]": "[欠落]",
+    "Existing destination": "既存の宛先",
+    "Enter a valid folder name without slashes, reserved names or trailing spaces/dots.": "スラッシュ、予約語、末尾の空白またはドットを含まない有効なフォルダー名を入力してください。",
+    "Source and destination are the same file; nothing was changed.": "ソース宛先と元のファイルは同じです；何も変更されませんでした。",
+    "Undo would overwrite an existing file: ": "元に戻す既存のファイルを上書きします:",
+    "Undo stopped because this file changed after transfer: ": "元に戻す転送後にこのファイルが変更されたため、停止しました：",
+    "Source changed during transfer; retained original. Retry after writing finishes.": "ソース転送中に変更されました；元のものを保持しました。書き込みが終了したら再試行してください。",
+    "Undo target is missing; recovery retained: ": "元に戻すターゲットが見つかりません; リカバリが保持されました:",
+    "Undo backup is missing: ": "元に戻すバックアップが見つかりません:",
+    "Destination changed; retry: ": "宛先が変更されました; 再試行:",
+    "{count} files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "{count}ファイル。キューに入れる前に競合が確認されます。置換はこのセッションのために元に戻すバックアップを保持します。",
+    "Source: {source}\n\nDestination: {target}\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "ソース: {source}目的地：{target}\n\n両方とも保管しておいてください番号付きのファイル名を作成します。Replace はセッションのために宛先をバックアップします元に戻す.",
+    "Current filename: {name}": "現在のファイル名: {name}",
+    "New filename: {name}\n{status}": "新しいファイル名: {name}\n{status}",
+    "Source": "ソース",
+    "Destination": "宛先",
+    "[missing]": "[不足]",
+    "Unchanged": "変更なし",
+    "Name cannot be empty": "名前 は空にできません",
+    "Name contains a forbidden character": "名前 に禁止されている文字が含まれています",
+    "Name cannot end with a space or dot": "名前 はスペースやドットで終わることはできません",
+    "Reserved Windows filename": "予約済みの Windows ファイル名",
+    "Duplicate output name": "出力ファイル名が重複 名",
+    "A file with this name already exists": "同じ名前のファイルが既に存在します",
+    "Invalid template: {error}": "無効なテンプレート: {error}",
+    "Undo stopped because this file changed after transfer: {path}. The file was retained.": "元に戻す転送後にこのファイルが変更されたため、停止しました：{path}。ファイルは保持されました。",
+    "Destination changed; retry: {target}": "宛先が変更されました; 再試行:{target}",
+    "{ready} file(s) ready · {unchanged} unchanged · {problems} problem(s)": "{ready} ファイル準備完了 ┬À {unchanged} 変更なし ┬À {problems} 問題あり",
+    "Start and padding must be whole numbers.": "開始 とパディングは整数でなければなりません。"
+  }
+}

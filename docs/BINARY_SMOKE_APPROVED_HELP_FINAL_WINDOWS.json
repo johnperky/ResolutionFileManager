@@ -1,0 +1,9 @@
+{
+  "executable": "C:\\Users\\johnp\\Desktop\\ResolutionFileManager-v12.6.1-Updated-Help-43-Languages-Final.exe",
+  "sha256": "b77c08f2c65f1ecbe3743d553acec45e18b24266923457c5196c409bd11b6a67",
+  "language": "en",
+  "startup_liveness_passed": true,
+  "observation_seconds": 30,
+  "stderr": "",
+  "scope": "Startup/liveness only; visual and feature checks reported separately."
+}

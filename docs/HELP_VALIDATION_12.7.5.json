@@ -1,0 +1,265 @@
+{
+  "master_sha256": "bd7b7615b744101897e361e188e64bd95e7d6173d11a1121a797d9d8cf6df279",
+  "languages": [
+    {
+      "language": "en",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "zh-CN",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "nl",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "fr",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "de",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "ja",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "ko",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "ru",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "es",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "sv",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "bg",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "th",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "id",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "el",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "fil",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "hi",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "pl",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "it",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "ar",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "rtl"
+    },
+    {
+      "language": "vi",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "uk",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "no",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "fi",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "da",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "hu",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "ro",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "cs",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "pt-PT",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "pt-BR",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "tr",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "zh-TW",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "ms",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "he",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "rtl"
+    },
+    {
+      "language": "bn",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "ur",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "rtl"
+    },
+    {
+      "language": "fa",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "rtl"
+    },
+    {
+      "language": "sk",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "hr",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "sr",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "ca",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "et",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "lv",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    },
+    {
+      "language": "lt",
+      "chapters": 22,
+      "paragraphs": 134,
+      "direction": "ltr"
+    }
+  ],
+  "errors": [],
+  "review_warnings": []
+}

@@ -28,7 +28,7 @@ if (Test-Path -LiteralPath $ReleaseRoot) {
     if (-not $ResolvedRelease.StartsWith($ResolvedProject, [System.StringComparison]::OrdinalIgnoreCase)) {
         throw "Refusing to replace a release folder outside the project."
     }
-    Remove-Item -LiteralPath $ReleaseRoot -Recurse -Force
+    throw "Preserving existing release folder. Use a new version or a new explicit output path: $ReleaseRoot"
 }
 
 New-Item -ItemType Directory -Path $PortableDirectory -Force | Out-Null
@@ -50,6 +50,10 @@ $PythonLicenceMap = @{
     "Pillow" = "pillow-12.3.0.dist-info/licenses/LICENSE"
     "watchdog" = "watchdog-6.0.0.dist-info/LICENSE"
     "PyInstaller" = "pyinstaller-6.22.2.dist-info/licenses/COPYING.txt"
+    "arabic-reshaper" = "arabic_reshaper-3.0.0.dist-info/LICENSE"
+    "python-bidi" = "python_bidi-0.4.2.dist-info/COPYING.LESSER"
+    "python-bidi-GPL" = "python_bidi-0.4.2.dist-info/COPYING"
+    "six" = "six-1.17.0.dist-info/LICENSE"
 }
 $SitePackages = python -c "import site; print(site.getusersitepackages())"
 foreach ($Entry in $PythonLicenceMap.GetEnumerator()) {
@@ -59,9 +63,8 @@ foreach ($Entry in $PythonLicenceMap.GetEnumerator()) {
 }
 
 $SourceDirectory = Join-Path $ReleaseRoot "ResolutionFileManager-$Version-Source"
-New-Item -ItemType Directory -Path $SourceDirectory -Force | Out-Null
-Copy-Item -LiteralPath media_sorter.py, app_icon.ico, app_icon.png, requirements.txt, build_windows.ps1, build_windows_release.ps1, run_windows.bat, VERSION.txt, README.md, PROJECT_CONTEXT.md, LICENSE, THIRD_PARTY_NOTICES.md, PRIVACY.md, CHANGELOG.md, WINDOWS_RELEASE.md, $ReleaseNotes, .gitignore -Destination $SourceDirectory
-Copy-Item -LiteralPath packaging -Destination $SourceDirectory -Recurse
+python (Join-Path $ProjectDirectory "tools\project_snapshot.py") create "$SourceDirectory"
+if ($LASTEXITCODE -ne 0) { throw "Complete source export failed." }
 $GeneratedPackagingDirectories = @(
     (Join-Path $SourceDirectory "packaging\microsoft-store\output"),
     (Join-Path $SourceDirectory "packaging\microsoft-store\stage")

@@ -19,6 +19,8 @@ dist/
 dist-*/
 release-output/
 packaging/microsoft-store/stage/
+packaging/microsoft-store/stage-*/
+packaging/microsoft-store/output-*/
 packaging/microsoft-store/output/
 *.spec
 *.exe
@@ -27,9 +29,23 @@ packaging/microsoft-store/output/
 *.sha256
 windows-startup-fix/
 
-# Linux packaging is retained privately while public distribution is Windows-only.
-build_linux.sh
-run_linux.sh
+# Shared platform build/run scripts belong in version control.
+.venv*/
+.help-translation-cache/
+.ui-translation-cache/
+.linux-build-env/
+*.help.tmp
 
 # Keep the maintained packaging specification if it is deliberately added later.
 !packaging/*.spec
+
+# Local Store preparation outputs and unreviewed evidence images
+packaging/microsoft-store/prepared-*/
+packaging/microsoft-store/Submission-*-In-Certification.png
+packaging/microsoft-store/listing-assets/screenshot-dual-pane-media-preview.png
+packaging/microsoft-store/listing-assets/screenshot-dual-preview-1920x1080.png
+packaging/microsoft-store/listing-assets/screenshot-main-1920x1080.png
+packaging/microsoft-store/listing-assets/screenshot-thumbnails-demo-media.png
+packaging/microsoft-store/listing-assets/screenshot-thumbnails-inspector-preview.png
+packaging/softonic/listing-assets/
+docs/STORE_UI_FIXES_ARABIC_2026-10-20.png

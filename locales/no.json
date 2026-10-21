@@ -1,0 +1,1561 @@
+{
+  "meta": {
+    "language": "Norsk"
+  },
+  "strings": {
+    "app.title": "Resolution Filbehandler {version}",
+    "menu.file": "Fil",
+    "menu.edit": "Rediger",
+    "menu.view": "Vis",
+    "menu.tools": "Verktøy",
+    "menu.help": "Hjelp",
+    "menu.browse": "Bla gjennom aktiv rute…",
+    "menu.refresh": "Oppdater",
+    "menu.exit": "Avslutt",
+    "menu.copy": "Kopier",
+    "menu.cut": "Klipp ut",
+    "menu.paste": "Lim inn",
+    "menu.undo": "Angre",
+    "menu.rename": "Gi nytt navn…",
+    "menu.batch_rename": "Endre navn i batch på valgte…",
+    "menu.delete": "Flytt til papirkurv / søppel",
+    "menu.select_all": "Velg alle som vises",
+    "menu.details": "Detaljer i aktiv rute",
+    "menu.thumbnails": "Miniatyrbilder i aktiv rute",
+    "menu.thumbnail_size": "Miniatyrbildestørrelse",
+    "menu.columns": "Konfigurer kolonner…",
+    "menu.appearance": "Utseende og tekststørrelse…",
+    "menu.refresh_active": "Oppdater aktiv rute",
+    "menu.refresh_both": "Oppdater begge paneler",
+    "menu.go_up": "Gå opp",
+    "menu.verify": "Bekreft medienes integritet…",
+    "menu.contact_sheet": "Opprett videokontaktark…",
+    "menu.export_report": "Eksporter medierapport…",
+    "menu.metadata": "Vis innleiret metadata…",
+    "menu.convert": "Konverter valgte videoer…",
+    "menu.duplicates": "Finn duplikater…",
+    "menu.similar": "Finn visuelt like bilder…",
+    "menu.compare": "Sammenlign valgte…",
+    "menu.sync": "Sammenlign / synkroniser mapper…",
+    "menu.save_workspace": "Lagre arbeidsområde…",
+    "menu.load_workspace": "Last inn arbeidsområde…",
+    "menu.save_collection": "Lagre aktiv smart samling…",
+    "menu.manage_collections": "Administrer smarte samlinger…",
+    "menu.folder_rules": "Regler for mappeorganisering…",
+    "menu.cache": "Cache og skanning…",
+    "menu.queue": "Overføringskø…",
+    "menu.language": "Språk",
+    "menu.reminders": "Påminnelser…",
+    "menu.how_to": "Hvordan bruke Resolution File Manager",
+    "menu.shortcuts": "Tastatursnarveier",
+    "menu.coffee": "☕ Hvis du liker dette, kjøp en kaffe til John…",
+    "menu.about": "Om",
+    "context.copy_other": "Kopier til annen rute",
+    "context.move_other": "Flytt til annen rute",
+    "context.open": "Åpne",
+    "context.reveal": "Vis i Filutforsker",
+    "context.rename": "Gi nytt navn…",
+    "context.clear_rating": "Fjern vurdering",
+    "context.rating": "Vurdering",
+    "context.none": "Ingen",
+    "context.colour": "Fargemerking",
+    "context.edit_tags": "Rediger etiketter…",
+    "context.recycle": "Flytt til papirkurv",
+    "context.select_all": "Velg alle viste",
+    "context.clear_ticks": "Fjern merker",
+    "context.find_duplicates": "Finn duplikater",
+    "context.compare": "Sammenlign valgte",
+    "context.refresh_pane": "Oppdater dette vinduet",
+    "context.refresh_both": "Oppdater begge paneler",
+    "context.open_folder": "Åpne mappe",
+    "context.red": "Rød",
+    "context.yellow": "Gul",
+    "context.green": "Grønn",
+    "context.blue": "Blå",
+    "context.purple": "Lilla",
+    "context.configure_columns": "Konfigurer kolonner…",
+    "context.reset_columns": "Tilbakestill kolonnebredder",
+    "context.files_suffix": "({count} filer)",
+    "sort.sort": "Sorter",
+    "sort.name": "Navn",
+    "sort.modified": "Dato endret",
+    "sort.size": "Filstørrelse",
+    "sort.duration": "Lengde",
+    "sort.codec": "Kodek",
+    "sort.resolution": "Oppløsning",
+    "sort.type": "Type",
+    "sort.bitrate": "Bitrate",
+    "sort.fps": "Bilder per sekund",
+    "sort.rating": "Vurdering",
+    "sort.a_z": "A til Å",
+    "sort.z_a": "Å til A",
+    "sort.oldest": "Eldste først",
+    "sort.newest": "Nyeste først",
+    "sort.smallest": "Minste først",
+    "sort.largest": "Største først",
+    "sort.shortest": "Kortest først",
+    "sort.longest": "Lengst først",
+    "sort.ascending": "Stigende",
+    "sort.descending": "Synkende",
+    "toolbar.guide": "Velg filer i en av rutene, og send dem deretter til den andre ruten.",
+    "toolbar.refresh": "Oppdater",
+    "toolbar.move": "Flytt valgte → annen rute",
+    "toolbar.copy": "Kopier valgt → annet panel",
+    "toolbar.undo": "Angre",
+    "pane.left": "Venstre panel",
+    "pane.right": "Høyre panel",
+    "pane.preview": "Forhåndsvisning",
+    "pane.info": "Info",
+    "pane.browse": "Bla gjennom…",
+    "pane.drag": "↗ Dra valgt",
+    "pane.show": "Vis:",
+    "pane.videos": "Videoer",
+    "pane.images": "Bilder",
+    "pane.find": "Finn:",
+    "pane.live": "Live",
+    "pane.subfolders": "Inkluder undermapper",
+    "pane.resolution": "Oppløsning:",
+    "pane.all": "Alle",
+    "pane.select_matching": "Velg samsvarende",
+    "pane.more_filters": "Flere filtre…",
+    "pane.outliers": "Velg størrelseavvik",
+    "pane.scanning": "Skanner media…",
+    "pane.cancel": "Avbryt",
+    "pane.no_files": "Ingen samsvarende mediainnhold",
+    "pane.checked": "{count} valgt",
+    "pane.clear_ticks": "Fjern merker",
+    "view.details": "Detaljer",
+    "view.thumbnails": "Minibilder",
+    "size.small": "Liten",
+    "size.medium": "Middels",
+    "size.large": "Stor",
+    "browse.continuous": "Kontinuerlig",
+    "browse.paged": "Sidevis",
+    "browse.auto": "Automatisk",
+    "browse.per_page": "Per side:",
+    "column.name": "Navn / relativ sti",
+    "column.codec": "Codec",
+    "column.resolution": "Oppløsning",
+    "column.duration": "Videolengde",
+    "column.size": "Filstørrelse",
+    "column.rate": "MB/min",
+    "column.fps": "FPS",
+    "column.modified": "Endret dato",
+    "column.type": "Type",
+    "column.bitrate": "Bitrate",
+    "column.audio": "Lyd",
+    "column.hdr": "HDR",
+    "column.pixels": "Megapiksler",
+    "column.color": "Etikett",
+    "column.tags": "Tagger",
+    "column.rating": "Vurdering",
+    "status.ready": "Klar",
+    "status.scanning_progress": "Skanner {current} av {total}… · {cached} fra hurtigbuffer",
+    "status.scan_complete_folder": "{count} mediefil(er) i denne mappen",
+    "status.scan_complete_subfolders": "{count} mediefil(er) inkludert undermapper",
+    "status.unreadable": "{count} uleste",
+    "status.from_cache": "{count} fra hurtigbuffer",
+    "status.scan_cancelled": "Skanning avbrutt etter {count} fil(er)",
+    "status.skipped_file": "Hoppet over fil: {error}",
+    "status.scan_failed": "Kunne ikke skanne: {error}",
+    "status.cancelling": "Avbryter skanning…",
+    "status.live_on": "Live-oppdateringer på",
+    "status.live_off": "Live-oppdateringer av",
+    "status.loading": "Laster…",
+    "outlier.moderate": "Moderat (1,4×)",
+    "outlier.large": "Stor (1,75×)",
+    "outlier.extreme": "Ekstrem (2,5×)",
+    "inspector.title": "Inspektør",
+    "inspector.no_file": "Ingen fil valgt",
+    "inspector.select_file": "Velg en mediefil for å se detaljene.",
+    "inspector.copy_path": "Kopier sti",
+    "inspector.open": "Åpne",
+    "inspector.reveal": "Avslør",
+    "preview.off": "Forhåndsvisning av",
+    "preview.is_off": "Forhåndsvisning er av",
+    "preview.select": "Velg en fil for forhåndsvisning",
+    "preview.select_side": "Velg et bilde eller en video på denne siden",
+    "preview.play": "Spill av",
+    "preview.pause": "Pause",
+    "preview.skim": "Skumles:",
+    "preview.speed": "Hastighet:",
+    "preview.muted": "Lydløs",
+    "preview.unmuted": "Lyd på",
+    "preview.still": "Stille bilde",
+    "preview.unavailable": "Forhåndsvisning ikke tilgjengelig",
+    "preview.read_failed": "Kunne ikke lese bilde",
+    "convert.title": "Konverter valgte videoer",
+    "convert.select_first_title": "Konverter videoer",
+    "convert.select_first": "Velg en eller flere videofiler først.",
+    "convert.settings": "Konverteringsinnstillinger",
+    "convert.preset": "Forhåndsinnstilling:",
+    "convert.quality": "Kvalitet (CRF):",
+    "convert.resolution": "Oppløsning:",
+    "convert.resolution_help": "1080p og 720p setter utgangshøyden samtidig som bildeforholdet beholdes.",
+    "convert.quality_help": "Lavere kvalitetsverdier etterspør høyere kvalitet; maskinvaremotorer tilordner denne verdien til sin egen kontroll. Remux ignorerer kvalitet og oppløsning.",
+    "convert.engine": "Encoder-motor:",
+    "convert.hardware_decode": "Bruk maskinvardekoding når tilgjengelig",
+    "convert.output_folder": "Utdata-mappe:",
+    "convert.choose_output": "Velg konverteringsutdata-mappe",
+    "convert.preserve_folders": "Behold mapper relativt til aktivt panel",
+    "convert.skip_existing": "Hopp over eksisterende",
+    "convert.keep_both": "Behold begge",
+    "convert.originals_retained": "Originalvideoer beholdes alltid. Gå gjennom hver utdata-mappe før du starter.",
+    "convert.status": "Status",
+    "convert.source": "Kilde",
+    "convert.output": "Utdata",
+    "convert.result": "Resultat",
+    "convert.remux_help": "Remux kopierer strømmer direkte; koding, endring av størrelse og maskinvareavkoding brukes ikke.",
+    "convert.none_reported": "ingen rapportert",
+    "convert.cpu_fallback": "ingen; Automatisk vil bruke CPU",
+    "convert.capabilities": "FFmpeg maskinvarekoderstøtte: {hardware} · Avkodingsmetoder: {decode}",
+    "convert.capability_failed": "Kapabilitetssjekk mislyktes: {error} · Programvarekoding er fortsatt tilgjengelig",
+    "convert.choose_folder": "Velg en utdatamappe.",
+    "convert.preview_summary": "{ready} klar · {skipped} hoppet over/problem · kilde størrelse {size}",
+    "convert.invalid_quality": "Ugyldig kvalitet",
+    "convert.invalid_quality_body": "CRF må være et helt tall fra 18 til 35.",
+    "convert.engine_unavailable": "Kodingsmotor utilgjengelig",
+    "convert.engine_unavailable_body": "{engine} er ikke tilgjengelig for {preset}. Velg en annen motor.",
+    "convert.unchanged": "Uendret (strøm kopiering)",
+    "convert.decode_unused": "ikke brukt (strømkopi)",
+    "convert.decode_fallback": "forespurt med sikker reserve",
+    "convert.off": "av",
+    "convert.confirm_title": "Start videokonvertering",
+    "convert.confirm_body": "Opprett {count} ny(e) videofil(e)?\n\nKoding: {engine}\nOppløsning: {resolution}\nMaskinvareavkoding: {decode}\n\nOriginalfilene vil bli beholdt. Avbryt fjerner gjeldende delvise utdata og stopper resten av køen.",
+    "convert.progress": "Konverterer fil {current} av {total} · {percent}%",
+    "convert.complete": "Fullført · {created} opprettet · {failed} mislyktes · {cancelled} avbrutt",
+    "convert.refresh": "Oppdater forhåndsvisning",
+    "convert.start": "Start konvertering…",
+    "convert.cancel": "Avbryt konvertering",
+    "duplicates.title": "Duplikater",
+    "duplicates.none_candidates": "Ingen duplikatkandidater med samme størrelse ble funnet.",
+    "duplicates.quick_start": "Raskkontrollerer {count} duplikatkandidat(er)…",
+    "duplicates.quick_progress": "Raskkontrollerer duplikater {current} av {total}…",
+    "duplicates.verify_progress": "Verifiserer eksakte treff {current} av {total}…",
+    "duplicates.complete_title": "Duplikatsøk fullført",
+    "duplicates.none": "Ingen eksakte duplikater ble funnet.",
+    "duplicates.none_status": "Ingen eksakte duplikater funnet · {cached} bufrede fingeravtrykk",
+    "duplicates.groups_status": "{groups} eksakt duplikatgruppe(r) · {cached} bufrede fingeravtrykk",
+    "duplicates.first": "Først",
+    "duplicates.newest": "Nyeste",
+    "duplicates.oldest": "Eldste",
+    "duplicates.smallest": "Minste",
+    "duplicates.largest": "Største",
+    "duplicates.review_title": "Gjennomgå eksakte duplikater",
+    "duplicates.found": "Fant {count} eksakt duplikatgruppe(r). Velg en rad for å forhåndsvise den ved siden av en annen kopi fra samme gruppe.",
+    "duplicates.explanation": "Eksakte duplikater har identisk innhold og filstørrelse, så Minste og Største vil normalt være bundet. Datoer og steder kan fortsatt variere.",
+    "duplicates.preview": "Forhåndsvisning {number}",
+    "duplicates.select": "Velg en duplikat",
+    "duplicates.group": "Gruppe",
+    "duplicates.filename": "Filnavn",
+    "duplicates.folder": "Mappe",
+    "duplicates.size": "Størrelse",
+    "duplicates.modified": "Endret",
+    "duplicates.reason": "Hvorfor det kan beholdes",
+    "duplicates.loading": "Laster forhåndsvisning…",
+    "duplicates.keep_one": "Behold én per gruppe:",
+    "duplicates.clear": "Fjern forslag",
+    "duplicates.close": "Lukk uten endringer",
+    "duplicates.proposal_status": "Dupliser forslag: behold {strategy} · valgt {count} overflødig fil(e) for gjennomgang",
+    "duplicates.applied_title": "Dupliser forslag brukt",
+    "duplicates.applied_body": "Kopien med {strategy} i hver gruppe ble holdt ukrysset.\n\n{count} overflødige fil(er) er valgt i hovedpanelet. Gå gjennom dem der før du flytter eller sletter noe.",
+    "browse.page_summary": "Side {page} av {pages} · {count} filer{automatic}",
+    "browse.auto_suffix": "· Auto {count}/side",
+    "browse.continuous_summary": "{count} filer · {mode} · bare synlige kort",
+    "browse.all_shown": "Alt vist",
+    "common.system_default": "Systemstandard",
+    "common.restart_required": "Omstart kreves",
+    "common.ok": "OK",
+    "common.cancel": "Avbryt",
+    "common.close": "Lukk",
+    "common.save": "Lagre",
+    "common.enable": "Aktiver",
+    "common.disable": "Deaktiver",
+    "common.never": "Aldri",
+    "common.launch": "starter {count}",
+    "language.title": "Språk",
+    "language.message": "Språkinnstillingen er lagret. Start Resolution File Manager på nytt for å bruke den overalt.",
+    "reminders.title": "Påminnelsesinnstillinger",
+    "reminders.rating": "Påminnelse om vurdering i Microsoft Store",
+    "reminders.support": "Påminnelse om å kjøpe meg en kaffe",
+    "reminders.next": "Neste gyldige: {value}",
+    "reminders.saved": "Påminnelsesinnstillinger lagret.",
+    "rating.title": "Liker du Resolution File Manager?",
+    "rating.body": "Hvis Resolution File Manager har vært nyttig, vil du vurdere det i Microsoft Store? Vurderinger hjelper andre med å oppdage det.",
+    "rating.rate": "Vurder i Microsoft Store",
+    "rating.later": "Senere",
+    "rating.never": "\\nIkke spør igjen",
+    "support.title": "Supportløsning Filbehandler",
+    "support.body": "Hvis programmet er nyttig for deg, kan du gjerne kjøpe John en kaffe. Støtte er helt valgfritt.",
+    "support.open": "Kjøp meg en kaffe",
+    "support.later": "Kanskje senere",
+    "support.never": "Ikke spør igjen",
+    "link.error_title": "Kunne ikke åpne siden",
+    "link.error_body": "Åpne denne adressen i nettleseren din:\n\n{url}\n\n{error}",
+    "about.title": "Om Resolution File Manager",
+    "about.description": "En plattformuavhengig dobbeltpanelapplikasjon for å bla gjennom, forhåndsvise, analysere og organisere bilde- og videosamlinger.",
+    "about.support": "Støtt utviklingen",
+    "about.optional": "Hvis Resolution File Manager er nyttig for deg, kan du kjøpe John en kaffe. Støtte er helt valgfritt.",
+    "help.title": "Resolution File Manager Hjelp — {version}",
+    "help.search": "Søk i hele guiden:",
+    "help.previous": "Forrige kapittel",
+    "help.next": "Neste kapittel",
+    "help.next_match": "Neste treff (F3)",
+    "help.clear": "Tøm søk",
+    "help.no_results": "Ingen resultater",
+    "help.no_results_body": "Ingen hjelpekapittel inneholder “{query}”. Prøv et kortere søkeord.",
+    "status.folder_missing": "Mappe ikke funnet",
+    "status.select_files": "Velg en eller flere filer i det aktive panelet først.",
+    "status.finished": "Ferdig",
+    "status.error": "Feil",
+    "filters.title": "Avanserte filtre",
+    "filters.orientation": "Orientering",
+    "filters.codec": "Codec inneholder",
+    "filters.tag": "Tagg inneholder",
+    "filters.min_rating": "Minimum vurdering",
+    "filters.color": "Fargeetikett",
+    "filters.min_width": "Minimum bredde (piksler)",
+    "filters.max_width": "Maksimal bredde (piksler)",
+    "filters.min_height": "Minimal høyde (piksler)",
+    "filters.max_height": "Maksimal høyde (piksler)",
+    "filters.min_size": "Minimum størrelse (MB)",
+    "filters.max_size": "Maksimal størrelse (MB)",
+    "filters.min_duration": "Minimum varighet (sekunder)",
+    "filters.max_duration": "Maksimal varighet (sekunder)",
+    "filters.date_from": "Endret fra (ÅÅÅÅ-MM-DD)",
+    "filters.date_to": "Endret til (ÅÅÅÅ-MM-DD)",
+    "filters.any": "Alle",
+    "filters.landscape": "Landskap",
+    "filters.portrait": "Portrett",
+    "filters.square": "Kvadrat",
+    "filters.unlabelled": "Umerket",
+    "filters.clear": "Fjern",
+    "filters.apply": "Bruk",
+    "filters.rating_1": "1",
+    "filters.rating_2": "2",
+    "filters.rating_3": "3",
+    "filters.rating_4": "4",
+    "filters.rating_5": "5",
+    "convert.preset_h264": "H.264 MP4 (kompatibel)",
+    "convert.preset_h265": "H.265 MP4 (mindre)",
+    "convert.preset_av1": "AV1 MKV (minste)",
+    "convert.preset_proxy": "720p H.264 proxy",
+    "convert.preset_remux": "Remux til MKV (ingen re-koding)",
+    "convert.resolution_source": "Behold kildeoppløsning",
+    "convert.resolution_1080p": "1080p",
+    "convert.resolution_720p": "720p",
+    "convert.engine_automatic": "Automatisk (anbefalt)",
+    "convert.engine_software": "Programvare / CPU",
+    "convert.status_ready": "Klar",
+    "convert.status_skipped": "Hoppet over",
+    "convert.status_unknown_resolution": "Ukjent oppløsning",
+    "convert.status_converting": "Konverterer",
+    "convert.status_passed": "Godkjent",
+    "convert.status_cancelled": "Avbrutt",
+    "convert.status_failed": "Mislyktes",
+    "choice.system": "System",
+    "choice.light": "Lys",
+    "choice.dark": "Mørk",
+    "choice.high_contrast": "Høy kontrast",
+    "choice.selected": "Valgt",
+    "choice.visible": "Synlig",
+    "choice.all_scanned": "Alle skannet",
+    "choice.copy": "Kopier",
+    "choice.move": "Flytt",
+    "choice.any": "Alle",
+    "choice.images": "Bilder",
+    "choice.videos": "Videoer",
+    "choice.quiet": "Rolig",
+    "choice.balanced": "Balansert",
+    "choice.fast": "Rask",
+    "convert.status_duplicate_output": "Duplisert utdatafilnavn",
+    "convert.status_same_source": "Samme som kildefilen",
+    "inspector.channels": "{count} kanal(er)",
+    "inspector.pixel_format": "Pikselformat",
+    "inspector.dynamic_range": "Dynamisk rekkevidde",
+    "inspector.unknown": "Ukjent",
+    "inspector.unrated": "Ikke vurdert",
+    "inspector.unreadable": "Uleselig"
+  },
+  "help": {
+    "schema": 2,
+    "master_sha256": "bd7b7615b744101897e361e188e64bd95e7d6173d11a1121a797d9d8cf6df279",
+    "direction": "ltr",
+    "translation_method": "machine translation with existing UI glossary; human linguistic review pending",
+    "chapters": [
+      {
+        "id": "quick_start",
+        "title": "Rask Start",
+        "paragraphs": [
+          {
+            "id": "quick_start.p001",
+            "source_sha256": "960121a7b5ea76c266026469e9fb06e35da0a7256799d3736a5fffadc23a744a",
+            "text": "1. Velg en mappe uavhengig i hver rute med Bla gjennom, mappetreet eller baneboksen.\n2. Slå på Inkluder undermapper bare når du vil at hele treet under den mappen skal skannes.\n3. Bruk Detaljer for sorterbar teknisk informasjon eller Minibilder for visuell surfing.\n4. Velg filer i én rute. Kopier og flytt bruker mappen som vises i den andre ruten som destinasjon.\n5. Slå på Forhåndsvisning eller Info kun i ruten der du trenger dem. Begge er standard av for å spare prosessorkraft.\n6. Filendringshandlinger viser bekreftelse eller forhåndsvisning der det er aktuelt. Slett bruker papirkurv/søppel, og Ctrl+Z reverserer støttede nylige handlinger."
+          },
+          {
+            "id": "quick_start.p002",
+            "source_sha256": "e826944984faca1d9ef2ae01fac89df96998673ffbcb18c1a6dc76906714d5f9",
+            "text": "Kapitlene til venstre forklarer hver del av programmet. Skriv inn et hvilket som helst ord eller uttrykk i Søk i alle kapitler og trykk Enter. Matchende kapitler og antall treff vises i innholdslisten; bruk Neste match for å gå gjennom hver uthevede forekomst."
+          },
+          {
+            "id": "quick_start.p003",
+            "source_sha256": "939c9b2348d95e362c7a750296c26c65e72efb3c8fd71071cf751214de3accaf",
+            "text": "Velg en mappe i begge rutene. Aktiver Videoer, Bilder og Inkluder undermapper etter behov. Bruk Detaljer eller Minibilder, velg eller merk av for filer, forhåndsvis dem, kopier, flytt, analyser eller konverter dem. Avmerkede filer utgjør handlingsgruppen; utheving forblir tilgjengelig for surfing og forhåndsvisning."
+          }
+        ],
+        "body": "1. Velg en mappe uavhengig i hver rute med Bla gjennom, mappetreet eller baneboksen.\n2. Slå på Inkluder undermapper bare når du vil at hele treet under den mappen skal skannes.\n3. Bruk Detaljer for sorterbar teknisk informasjon eller Minibilder for visuell surfing.\n4. Velg filer i én rute. Kopier og flytt bruker mappen som vises i den andre ruten som destinasjon.\n5. Slå på Forhåndsvisning eller Info kun i ruten der du trenger dem. Begge er standard av for å spare prosessorkraft.\n6. Filendringshandlinger viser bekreftelse eller forhåndsvisning der det er aktuelt. Slett bruker papirkurv/søppel, og Ctrl+Z reverserer støttede nylige handlinger.\n\nKapitlene til venstre forklarer hver del av programmet. Skriv inn et hvilket som helst ord eller uttrykk i Søk i alle kapitler og trykk Enter. Matchende kapitler og antall treff vises i innholdslisten; bruk Neste match for å gå gjennom hver uthevede forekomst.\n\nVelg en mappe i begge rutene. Aktiver Videoer, Bilder og Inkluder undermapper etter behov. Bruk Detaljer eller Minibilder, velg eller merk av for filer, forhåndsvis dem, kopier, flytt, analyser eller konverter dem. Avmerkede filer utgjør handlingsgruppen; utheving forblir tilgjengelig for surfing og forhåndsvisning."
+      },
+      {
+        "id": "topic_index",
+        "title": "Emneindeks og kapittellinker",
+        "paragraphs": [
+          {
+            "id": "topic_index.quick_start",
+            "source_sha256": "b69a25b79b167c5a7e40d38d5814f094716600a942de0f3ec6218b07b27489ca",
+            "text": "Rask Start – [chapter:quick_start]"
+          },
+          {
+            "id": "topic_index.getting_started",
+            "source_sha256": "9ac44a658d4ae090bae2481dfb1b5e9df78322e4632b50bacb4e99ccb098f22e",
+            "text": "Får Started – [chapter:getting_started]"
+          },
+          {
+            "id": "topic_index.details_and_thumbnails",
+            "source_sha256": "84d1aca1a733a359aa903a64b7b96947cc10eba572194f604180ee279e080f20",
+            "text": "Detaljer Og Minibilder – [chapter:details_and_thumbnails]"
+          },
+          {
+            "id": "topic_index.scanning_and_filtering",
+            "source_sha256": "addcb00612695126e1840e75947c51d82d93657985581b6946e2e9058895aa52",
+            "text": "Skanning og filtrering – [chapter:scanning_and_filtering]"
+          },
+          {
+            "id": "topic_index.selecting_and_previewing",
+            "source_sha256": "dcaa1afa4caf83d3fb5359c1d384469e2f0bb809a48dcce645893f93a174d545",
+            "text": "Velge og Forhåndsvisninging ÔÇö [chapter:selecting_and_previewing]"
+          },
+          {
+            "id": "topic_index.copying_and_moving",
+            "source_sha256": "d439134119d88ce4d1728bbf520f1855578ba9e0e85bbaf480a60a626344f26c",
+            "text": "Kopiere og flytte ÔÇö [chapter:copying_and_moving]"
+          },
+          {
+            "id": "topic_index.smart_collections",
+            "source_sha256": "497f5371f88656a6629fdab4f4a433d4d9f4bc360680765c65bac19426e50cad",
+            "text": "Smarte Samlinger: Lagrede Søkeresultater ÔÇö [chapter:smart_collections]"
+          },
+          {
+            "id": "topic_index.duplicates_and_comparison",
+            "source_sha256": "bc7a386de1f53414fd714586f4309ed4082731697a1928637001ad61f6b93657",
+            "text": "Duplikater Og Sammenligning – [chapter:duplicates_and_comparison]"
+          },
+          {
+            "id": "topic_index.video_conversion",
+            "source_sha256": "87541c8126b7efe82872889b78979b23a37056c7a88de8c8847df6a8d172d292",
+            "text": "Videokonvertering ÔÇö [chapter:video_conversion]"
+          },
+          {
+            "id": "topic_index.media_reports",
+            "source_sha256": "88f5be9c7f544bd30958395250596ef1e6d7269236323741b0d581860c896994",
+            "text": "Eksportere en medierapport ÔÇö [chapter:media_reports]"
+          },
+          {
+            "id": "topic_index.embedded_metadata",
+            "source_sha256": "c43d4127a8b410091566783a394e9819305712159510d96c02ddbb7ee7bc0352",
+            "text": "Visning av innebygd metadata ÔÇö [chapter:embedded_metadata]"
+          },
+          {
+            "id": "topic_index.media_integrity",
+            "source_sha256": "a9696b3a52d78f01ec30371ab6e369b1b794257eada141cd26b7fcbc28def24e",
+            "text": "Sjekker medieintegritet – [chapter:media_integrity]"
+          },
+          {
+            "id": "topic_index.video_contact_sheets",
+            "source_sha256": "d8c3d3d7bfb6f6240bd2dff740e17dea7096558eed8132d688fce5b8a7d38f73",
+            "text": "Opprette et video kontaktark – [chapter:video_contact_sheets]"
+          },
+          {
+            "id": "topic_index.folder_synchronization",
+            "source_sha256": "c5ffb5dcb3df4777df924d496bf92af4c0c309f7dc6571a8f95f2c8efb528e08",
+            "text": "Mappe Synkronisering – [chapter:folder_synchronization]"
+          },
+          {
+            "id": "topic_index.folder_organization_rules",
+            "source_sha256": "1306acd5de57ef19675cac113a607091b30225a064b0b38a632584586670cbad",
+            "text": "Mappe Organisasjonsregler – [chapter:folder_organization_rules]"
+          },
+          {
+            "id": "topic_index.transfer_queue",
+            "source_sha256": "6c218104ba617d50d4666bcf2e5e70b9635d64f83ea5e74719da6042dc1c5851",
+            "text": "Administrere overføringskøen ÔÇö [chapter:transfer_queue]"
+          },
+          {
+            "id": "topic_index.safe_file_actions",
+            "source_sha256": "5ddc3613ad7b87ccfee060d77a71fadb05a457f0de7ac987a4405385b7803b59",
+            "text": "Sikre filhandlinger ÔÇö [chapter:safe_file_actions]"
+          },
+          {
+            "id": "topic_index.workspaces_and_cache",
+            "source_sha256": "9bedfb9cdb5f7f673cb6f702accaf18c7be93438596d081884e6616cbb751195",
+            "text": "Arbeidsområder og cache – [chapter:workspaces_and_cache]"
+          },
+          {
+            "id": "topic_index.language",
+            "source_sha256": "57d2d6a2b519f2d4a908f2c480625bc9d06f02a72c79d74aae29f6de3818a779",
+            "text": "Språk ÔÇö [chapter:language]"
+          },
+          {
+            "id": "topic_index.glossary",
+            "source_sha256": "c7a062c88b48c29ae512bf610ce2700dd67290004652c38e6af6dce5c9f29f8b",
+            "text": "Begrepsliste ÔÇö [chapter:glossary]"
+          },
+          {
+            "id": "topic_index.support_the_project",
+            "source_sha256": "01ccc57e26166b3a3a356d1ef2192f8c832175b4c003038bb1692f5f94473ebe",
+            "text": "Støtt Prosjektet ÔÇö [chapter:support_the_project]"
+          }
+        ],
+        "body": "Rask Start – [chapter:quick_start]\n\nFår Started – [chapter:getting_started]\n\nDetaljer Og Minibilder – [chapter:details_and_thumbnails]\n\nSkanning og filtrering – [chapter:scanning_and_filtering]\n\nVelge og Forhåndsvisninging ÔÇö [chapter:selecting_and_previewing]\n\nKopiere og flytte ÔÇö [chapter:copying_and_moving]\n\nSmarte Samlinger: Lagrede Søkeresultater ÔÇö [chapter:smart_collections]\n\nDuplikater Og Sammenligning – [chapter:duplicates_and_comparison]\n\nVideokonvertering ÔÇö [chapter:video_conversion]\n\nEksportere en medierapport ÔÇö [chapter:media_reports]\n\nVisning av innebygd metadata ÔÇö [chapter:embedded_metadata]\n\nSjekker medieintegritet – [chapter:media_integrity]\n\nOpprette et video kontaktark – [chapter:video_contact_sheets]\n\nMappe Synkronisering – [chapter:folder_synchronization]\n\nMappe Organisasjonsregler – [chapter:folder_organization_rules]\n\nAdministrere overføringskøen ÔÇö [chapter:transfer_queue]\n\nSikre filhandlinger ÔÇö [chapter:safe_file_actions]\n\nArbeidsområder og cache – [chapter:workspaces_and_cache]\n\nSpråk ÔÇö [chapter:language]\n\nBegrepsliste ÔÇö [chapter:glossary]\n\nStøtt Prosjektet ÔÇö [chapter:support_the_project]"
+      },
+      {
+        "id": "getting_started",
+        "title": "Få Started",
+        "paragraphs": [
+          {
+            "id": "getting_started.p001",
+            "source_sha256": "5f188741bf38dafbb6803c0d32c5c55281c418b27b6b6204c2b4b9470484371b",
+            "text": "Hver side av vinduet er en uavhengig mappenettleser. Bruk Bla gjennom, mappetreet, baneboksen eller Opp for å velge mapper. Klikk inne i en rute for å gjøre den aktiv."
+          },
+          {
+            "id": "getting_started.p002",
+            "source_sha256": "5c862d90858ec952be55c182a8161ba52748f10b89bab70f8f5f595c38c95370",
+            "text": "Vis > Utseende og tekststørrelse tilbyr System, Lys, Mørk og Høy kontrast temaer pluss 100 %, 125 %, 150 %, 175 % og 200 % grensesnitt. Endrer forhåndsvisning umiddelbart gjennom eksisterende kontroller. Lagre beholder valget for fremtidige lanseringer, Avbryt eller lukking av vinduet gjenoppretter de tidligere innstillingene, og Gjenopprett systemstandard går tilbake til operativsystemets tema på 100 %. Disse innstillingene endrer kun presentasjon, aldri media eller bibliotekdata."
+          },
+          {
+            "id": "getting_started.p003",
+            "source_sha256": "716b38f3fc587aa8c148a51715d481a35d5c135e6211016faa710ce34b4bf55a",
+            "text": "Hver rute har sin egen kompakte navigasjonsstripe i Explorer-stil: ← går tilbake, → går fremover, ↑ åpner den overordnede mappen og ↻ Oppdaterer mappetreet og gjeldende skanning. Åpning av en annen mappe etter å ha gått tilbake starter en ny videresendingshistorikk fra det tidspunktet."
+          },
+          {
+            "id": "getting_started.p004",
+            "source_sha256": "b34bc532ebe9785101efd80988074ed03a0c0fbf0e349d6133d31620e8a8ad3f",
+            "text": "Mappetreet følger alltid rutens nåværende plassering: det utvider de overordnede mappene, velger den nøyaktige skannestartmappen og ruller den mappen til visning. Den gjeldende mappen forblir lukket inntil du utvider den, og forhindrer at en midlertidig Lasting plassholder vises. Dette skjer også etter å ha gjenopprettet et arbeidsområde eller skrevet inn en bane, slik at en stasjonsrot ikke blir uthevet mens en dypere mappe skannes. Inkluder undermapper begynner ved den valgte/gjeldende mappen som vises i den ruten, ikke ved stasjonsroten over den."
+          },
+          {
+            "id": "getting_started.p005",
+            "source_sha256": "90fbbedebb973bad42d26e8534c1fdab61604a30d9ead7a4ce4c88ea2cc4012a",
+            "text": "Hver rute har uavhengige tilbake-, forover-, opp- og Oppdater-kontroller, filtre, sortering, miniatyrbilder, info og Forhåndsvisning. Videoforhåndsvisning starter med 4× hastighet. Komma og punkt flyttes ti prosent bakover eller fremover. Forhåndsvisning og Info forblir av til de er aktivert for å redusere bakgrunnsarbeid."
+          },
+          {
+            "id": "getting_started.tree_alignment_1272",
+            "source_sha256": "04feb6a3e71761ee4884be7564bb8832204338d93939bf1fdd67aa20f7e62380",
+            "text": "Mappetreet justerer automatisk de synlige grenene for å unngå bortkastet innrykk. Når du ruller ned i dypere grener, forskyves det horisontalt; når du ruller tilbake opp til forfedre, returnerer det til venstre uten å kreve et klikk. Hele hierarkiet forblir tilgjengelig, og den horisontale rullefeltet under treet tillater manuell horisontal visning."
+          }
+        ],
+        "body": "Hver side av vinduet er en uavhengig mappenettleser. Bruk Bla gjennom, mappetreet, baneboksen eller Opp for å velge mapper. Klikk inne i en rute for å gjøre den aktiv.\n\nVis > Utseende og tekststørrelse tilbyr System, Lys, Mørk og Høy kontrast temaer pluss 100 %, 125 %, 150 %, 175 % og 200 % grensesnitt. Endrer forhåndsvisning umiddelbart gjennom eksisterende kontroller. Lagre beholder valget for fremtidige lanseringer, Avbryt eller lukking av vinduet gjenoppretter de tidligere innstillingene, og Gjenopprett systemstandard går tilbake til operativsystemets tema på 100 %. Disse innstillingene endrer kun presentasjon, aldri media eller bibliotekdata.\n\nHver rute har sin egen kompakte navigasjonsstripe i Explorer-stil: ← går tilbake, → går fremover, ↑ åpner den overordnede mappen og ↻ Oppdaterer mappetreet og gjeldende skanning. Åpning av en annen mappe etter å ha gått tilbake starter en ny videresendingshistorikk fra det tidspunktet.\n\nMappetreet følger alltid rutens nåværende plassering: det utvider de overordnede mappene, velger den nøyaktige skannestartmappen og ruller den mappen til visning. Den gjeldende mappen forblir lukket inntil du utvider den, og forhindrer at en midlertidig Lasting plassholder vises. Dette skjer også etter å ha gjenopprettet et arbeidsområde eller skrevet inn en bane, slik at en stasjonsrot ikke blir uthevet mens en dypere mappe skannes. Inkluder undermapper begynner ved den valgte/gjeldende mappen som vises i den ruten, ikke ved stasjonsroten over den.\n\nHver rute har uavhengige tilbake-, forover-, opp- og Oppdater-kontroller, filtre, sortering, miniatyrbilder, info og Forhåndsvisning. Videoforhåndsvisning starter med 4× hastighet. Komma og punkt flyttes ti prosent bakover eller fremover. Forhåndsvisning og Info forblir av til de er aktivert for å redusere bakgrunnsarbeid.\n\nMappetreet justerer automatisk de synlige grenene for å unngå bortkastet innrykk. Når du ruller ned i dypere grener, forskyves det horisontalt; når du ruller tilbake opp til forfedre, returnerer det til venstre uten å kreve et klikk. Hele hierarkiet forblir tilgjengelig, og den horisontale rullefeltet under treet tillater manuell horisontal visning."
+      },
+      {
+        "id": "details_and_thumbnails",
+        "title": "Detaljer Og Minibilder",
+        "paragraphs": [
+          {
+            "id": "details_and_thumbnails.p001",
+            "source_sha256": "0d7fe0d7d10b204c166baf479099c908e17fbe87952b9f9f35dd9cf1de776edb",
+            "text": "Bruk visningsvelgeren øverst i enten rute, eller Vis-menyen, for å bytte den ruten mellom Detaljer og Minibilder. Begge visninger viser de samme filene og deler utvalget sitt. Miniatyrvisning respekterer Inkluder undermapper, mediebrytere, søk, oppløsning, avanserte filtre og sortering. Sorteringsmenyen gir en nøyaktig retning for Navn (A–Å/Å–A), Dato endret (eldste/nyeste), Filstørrelse, Lengde, Kodek, Oppløsning, Type, Bitrate, Bilder per sekund, og Vurdering. Hver rute sorterer uavhengig, knappen viser den aktive rekkefølgen, og lagrede arbeidsområder og smarte samlinger gjenoppretter den.Detaljeroverskrifter forblir klikkbare for rask sortering.Relativ stis vises under miniatyrbilder under rekursive skanninger. Bruk skyveknappen for miniatyrstørrelse ved siden av visningsvelgeren. Navngitte størrelsesinnstillinger forblir under Vis >Miniatyrbildestørrelse. Kontinuerliger standard miniatyrbilde-nettleser: en rullefelt dekker hele den filtrerte samlingen, mens programmet kun oppretter synlige kort pluss en liten buffer og resirkulerer dem under rulling. Dette holder widget- og bildeminne begrenset for svært store biblioteker. Velg Sidevisved siden av det når som helst for å gjenopprette det etablerte sideoppsettet; velg Auto, 200, 500 eller 1 000 kort per side og bruk de kompakte ÔåÉ og ÔåÆ kontrollene. Auto bruker 200 når videoer utgjør minst halvparten av de filtrerte resultatene og 500 når bilder utgjør flertallet. Hvert panel og lagret arbeidsområde husker sitt nettleservalget."
+          },
+          {
+            "id": "details_and_thumbnails.p002",
+            "source_sha256": "f88d676b4ba78ef8e5f3064d34755f67ce646a0965745c31f8a74570a37bd2d4",
+            "text": "Miniatyrgitteret måler den faktiske nettleserbredden før første gjengivelse og omflyter automatisk når et panel eller mappen/ nettleserdeleren endres i størrelse. I Sidevis-modus bruker side 1 derfor samme kolonneantall som senere sider for en gitt panelbredde og miniatyrstørrelse. I Kontinuerlig-modus beregnes virtuelle rader på nytt ved endring av størrelse uten å bygge hele samlingen. Rull musehjulet hvor som helst over et miniatyrpanel—inkludert over et kort, bilde eller filnavn—for å rulle panelet opp og ned; de to panelene ruller uavhengig av hverandre."
+          },
+          {
+            "id": "details_and_thumbnails.p003",
+            "source_sha256": "878f1f9405d3cda5132d953b07e64ce5639125896f32cdb19341e4c2156fd898",
+            "text": "I Detaljer-modus er standardrekkefølgen Navn, Kodek, Oppløsning, Videolengde, Filstørrelse, MB/min, FPS, Dato endret, Type, Bitrate, Lyd, HDR, Megapiksler, Etikett, Tags og Vurdering. Dra skillelinjen mellom overskrifter for å endre størrelsen på en kolonne med hvilken som helst mengde; den horisontale endringsmarkøren vises når skillelinjen er klar. Dra selve overskriften for å omorganisere den – ingen tastaturmodifikator er nødvendig. Et enkelt klikk på overskriften sorterer fortsatt. Kolonner beholder sine valgte bredder, og den horisontale rullefeltet dekker felt utenfor ruten. For presis kontroll, velg Vis > Konfigurer kolonner eller høyreklikk en overskrift; Kolonne-vinduet kan flytte felt, sette eksakte bredder og gjenopprette standarder. Eksisterende personlig arrangerte og lagrede kolonneordre beholdes. Lange rekursive stier forkortes i midten slik at filnavnet forblir synlig."
+          },
+          {
+            "id": "details_and_thumbnails.p004",
+            "source_sha256": "88415a6236cebbf0ce6211ef333a7271672023a2bdae6ccdc38584b6cce810d6",
+            "text": "Videominiatyrbilder blir hentet 15 % inn i klippet for å unngå urepresentative åpningsbilder. Hvis varighetsmetadata ikke er tilgjengelig, bruker applikasjonen en ett-sekunders reserve. Genererte miniatyrbilder blir bufret for raskere gjentatt gjennomgang."
+          },
+          {
+            "id": "details_and_thumbnails.p005",
+            "source_sha256": "7a726d60e44b6a6ccdb5c196cf1f81af226094ce2b8f43f72c1bf065feb34ad5",
+            "text": "Vanlige bildekoblinger dekodes effektivt i prosessen med Pillow; FFmpeg brukes for videoframes og som en reserve for uvanlige bildeformater. Minibildefunksjonens dekoding bruker en liten arbeidsgruppe, slik at en stor mappe ikke kan starte et overdrevent antall dekodere. Bufrede bilder skrives atomisk og sjekkes før visning; ufullstendige eller korrupte bufrede minibilder ignoreres og genereres på nytt, mens resultater som tilhører et eldre rutenett trygt kastes."
+          },
+          {
+            "id": "details_and_thumbnails.p006",
+            "source_sha256": "ea382833a32b1bb5c8dac172f29751f48d27aead08969ef699cca6142fddc69f",
+            "text": "Genererte miniatyrbilder forblir tilgjengelige etter at programmet lukkes, så det å åpne en uendret fil på nytt bruker vanligvis det mellomlagrede bildet umiddelbart. Verktøy > Cache og skanning styrer maksimal størrelse på miniatyrbildebufferen som en prosentandel av operativsystemets stasjon; standarden er 1%. Gjenbrukte miniatyrbilder markeres som nylige, og når grensen overskrides, fjernes de minst nylig brukte oppføringene først. Grensen kan settes fra 0,1 % til 10 % og håndheves umiddelbart. Tøm miniatyrbilder viser gjeldende antall og størrelse før bekreftelse, og fjerner deretter kun genererte miniatyrbilder – ikke original medier eller mellomlagret teknisk metadata. Tøm all cache fjerner både miniatyrbilder og metadata."
+          },
+          {
+            "id": "details_and_thumbnails.size_slider_1272",
+            "source_sha256": "f73fba2585edabe7710a59372a59bce3e3509092c20423aeed2583c4bc430100",
+            "text": "Miniatyrbilde-slideren vises bare i Minibilder; Detaljer skjuler den. Å flytte den justerer miniatyrstørrelsen kontinuerlig, og ved å bytte visning beholdes innstillingen. Pause kort tid etter at den dras, for at rutenettet skal flyte om; de større bildene beholder sitt sideforhold og gjeldende størrelse lagres med ruteinnstillinger. Navngitte størrelsesforhåndsinnstillinger er fortsatt tilgjengelige i Vis-menyen; det finnes ingen duplikat-størrelsesrullegardin i ruteoverskriften."
+          }
+        ],
+        "body": "Bruk visningsvelgeren øverst i enten rute, eller Vis-menyen, for å bytte den ruten mellom Detaljer og Minibilder. Begge visninger viser de samme filene og deler utvalget sitt. Miniatyrvisning respekterer Inkluder undermapper, mediebrytere, søk, oppløsning, avanserte filtre og sortering. Sorteringsmenyen gir en nøyaktig retning for Navn (A–Å/Å–A), Dato endret (eldste/nyeste), Filstørrelse, Lengde, Kodek, Oppløsning, Type, Bitrate, Bilder per sekund, og Vurdering. Hver rute sorterer uavhengig, knappen viser den aktive rekkefølgen, og lagrede arbeidsområder og smarte samlinger gjenoppretter den.Detaljeroverskrifter forblir klikkbare for rask sortering.Relativ stis vises under miniatyrbilder under rekursive skanninger. Bruk skyveknappen for miniatyrstørrelse ved siden av visningsvelgeren. Navngitte størrelsesinnstillinger forblir under Vis >Miniatyrbildestørrelse. Kontinuerliger standard miniatyrbilde-nettleser: en rullefelt dekker hele den filtrerte samlingen, mens programmet kun oppretter synlige kort pluss en liten buffer og resirkulerer dem under rulling. Dette holder widget- og bildeminne begrenset for svært store biblioteker. Velg Sidevisved siden av det når som helst for å gjenopprette det etablerte sideoppsettet; velg Auto, 200, 500 eller 1 000 kort per side og bruk de kompakte ÔåÉ og ÔåÆ kontrollene. Auto bruker 200 når videoer utgjør minst halvparten av de filtrerte resultatene og 500 når bilder utgjør flertallet. Hvert panel og lagret arbeidsområde husker sitt nettleservalget.\n\nMiniatyrgitteret måler den faktiske nettleserbredden før første gjengivelse og omflyter automatisk når et panel eller mappen/ nettleserdeleren endres i størrelse. I Sidevis-modus bruker side 1 derfor samme kolonneantall som senere sider for en gitt panelbredde og miniatyrstørrelse. I Kontinuerlig-modus beregnes virtuelle rader på nytt ved endring av størrelse uten å bygge hele samlingen. Rull musehjulet hvor som helst over et miniatyrpanel—inkludert over et kort, bilde eller filnavn—for å rulle panelet opp og ned; de to panelene ruller uavhengig av hverandre.\n\nI Detaljer-modus er standardrekkefølgen Navn, Kodek, Oppløsning, Videolengde, Filstørrelse, MB/min, FPS, Dato endret, Type, Bitrate, Lyd, HDR, Megapiksler, Etikett, Tags og Vurdering. Dra skillelinjen mellom overskrifter for å endre størrelsen på en kolonne med hvilken som helst mengde; den horisontale endringsmarkøren vises når skillelinjen er klar. Dra selve overskriften for å omorganisere den – ingen tastaturmodifikator er nødvendig. Et enkelt klikk på overskriften sorterer fortsatt. Kolonner beholder sine valgte bredder, og den horisontale rullefeltet dekker felt utenfor ruten. For presis kontroll, velg Vis > Konfigurer kolonner eller høyreklikk en overskrift; Kolonne-vinduet kan flytte felt, sette eksakte bredder og gjenopprette standarder. Eksisterende personlig arrangerte og lagrede kolonneordre beholdes. Lange rekursive stier forkortes i midten slik at filnavnet forblir synlig.\n\nVideominiatyrbilder blir hentet 15 % inn i klippet for å unngå urepresentative åpningsbilder. Hvis varighetsmetadata ikke er tilgjengelig, bruker applikasjonen en ett-sekunders reserve. Genererte miniatyrbilder blir bufret for raskere gjentatt gjennomgang.\n\nVanlige bildekoblinger dekodes effektivt i prosessen med Pillow; FFmpeg brukes for videoframes og som en reserve for uvanlige bildeformater. Minibildefunksjonens dekoding bruker en liten arbeidsgruppe, slik at en stor mappe ikke kan starte et overdrevent antall dekodere. Bufrede bilder skrives atomisk og sjekkes før visning; ufullstendige eller korrupte bufrede minibilder ignoreres og genereres på nytt, mens resultater som tilhører et eldre rutenett trygt kastes.\n\nGenererte miniatyrbilder forblir tilgjengelige etter at programmet lukkes, så det å åpne en uendret fil på nytt bruker vanligvis det mellomlagrede bildet umiddelbart. Verktøy > Cache og skanning styrer maksimal størrelse på miniatyrbildebufferen som en prosentandel av operativsystemets stasjon; standarden er 1%. Gjenbrukte miniatyrbilder markeres som nylige, og når grensen overskrides, fjernes de minst nylig brukte oppføringene først. Grensen kan settes fra 0,1 % til 10 % og håndheves umiddelbart. Tøm miniatyrbilder viser gjeldende antall og størrelse før bekreftelse, og fjerner deretter kun genererte miniatyrbilder – ikke original medier eller mellomlagret teknisk metadata. Tøm all cache fjerner både miniatyrbilder og metadata.\n\nMiniatyrbilde-slideren vises bare i Minibilder; Detaljer skjuler den. Å flytte den justerer miniatyrstørrelsen kontinuerlig, og ved å bytte visning beholdes innstillingen. Pause kort tid etter at den dras, for at rutenettet skal flyte om; de større bildene beholder sitt sideforhold og gjeldende størrelse lagres med ruteinnstillinger. Navngitte størrelsesforhåndsinnstillinger er fortsatt tilgjengelige i Vis-menyen; det finnes ingen duplikat-størrelsesrullegardin i ruteoverskriften."
+      },
+      {
+        "id": "scanning_and_filtering",
+        "title": "Skanning og filtrering",
+        "paragraphs": [
+          {
+            "id": "scanning_and_filtering.p001",
+            "source_sha256": "c4712ae8d144d44f4ec6a47e8ad4b477c14275c9c493ace31eef65a7a8b9168d",
+            "text": "Aktiver Inkluder undermapper for å skanne rekursivt. Bruk Finn for filnavn, Oppløsning for en eksakt oppløsning, og Flere filtre for dimensjoner, filstørrelse, varighet, kodek, orientering og dato. Avbryt stopper en lang skanning. Cache og skanning-innstillinger under Verktøy styrer parallelle arbeidere og ekskluderte mønstre."
+          },
+          {
+            "id": "scanning_and_filtering.p002",
+            "source_sha256": "5f55a7b5ecdce4426e11fdc93539a0e0a436839a62d94bc8019a50af3c1deae6",
+            "text": "For å lagre skanneresultatene som et regneark eller dokument, se [chapter:media_reports]."
+          },
+          {
+            "id": "scanning_and_filtering.p003",
+            "source_sha256": "6296398bb5bd08c4d57ca8f2606a7b6164825f670f0bfa1fd408f26fca05c53e",
+            "text": "Storrekursive skanninger samler resultater uten å gjentatte ganger bygge opp den voksende nettleseren. Når skanningen er ferdig, Detaljerrader legges til i korte partier, så Play/Pause, navigasjon, maleri og vindus-kontroller forblir responsive. Miniatyrvisegallerier oppdateres også ved fullført skanning. Vellykkede kopierings-, flytte- og slettekommandoer oppdaterer nå bare de berørte inn-memory-oppføringene i stedet for å skanne begge mapper på nytt; ukjente filer droppet fra utenfor applikasjonen utløser fortsatt kun en sikkerhetsskanning i den berørte ruten. Lagring av metadata-cache kjører i bakgrunnen, og stoppetFFmpegforhåndsvisningsprosesser blir ryddet opp raskt.Verktøy > Cache og skanning gir Rolig, Balansert, og raske ytelsesprofiler.Balansertbeholder den etablerte oppførselen.Rolig reduserer skanning og miniatyrbildekonkurranse og sikter på 8 forhåndsvisningsbilder per sekund; Rask øker konkurransen og sikter på 15 bilder per sekund. Rolig og Balansertplanlegg nye ikke-bufferte sonder og miniatyrdekodinger mens en forhåndsvisning spilles av eller spoles, og gi interaktivt arbeid prioritet.Bufret Resultater blir aldri forsinket med vilje. Feltet metadata-arbeider forblir justerbart etter å ha valgt en profil."
+          },
+          {
+            "id": "scanning_and_filtering.p004",
+            "source_sha256": "cfc2a88e50877f4251ec58b90265b0c4485c3899666c8cdd2dcd43cc0541aa04",
+            "text": "Hver side har uavhengig avspilling, tidslinje, hastighet, lyd/mute, rammebuffer og dekoderprosesser. Skrapevideoavspilling er bevisst tilpasset sanntid ved 12 bilder per sekund. Dette holder forhåndsvisningene jevne samtidig som det unngår tung CPU-bruk forårsaket av dekoding av resten av en klipp raskere enn forhåndsvisningen kan vise det, spesielt mens en stor mappeskanning pågår."
+          },
+          {
+            "id": "scanning_and_filtering.p005",
+            "source_sha256": "6d2351f7d55b8f5bf804e7ab66908fd915359b92794340ef24a0429900443a62",
+            "text": "Klikk hvor som helst på en av forhåndsvisningens tidslinjer for å flytte markøren direkte til den posisjonen og fortsette avspillingen der. Du kan også trykke og dra markøren for kontinuerlig skrubbing. Skrubbing avbryter en eldre rammeforespørsel så snart en ny posisjon blir forespurt, noe som forhindrer at flere FFmpeg-dekodere konkurrerer i bakgrunnen. Nylig besøkte posisjoner lagres i kvartsekundskritt, slik at det er umiddelbart å gå tilbake til dem. Slipp skyveknappen for å fortsette avspillingen fra den valgte posisjonen."
+          },
+          {
+            "id": "scanning_and_filtering.p006",
+            "source_sha256": "fe8d26dfc3bcebb327cad49202bcc0288ca9ad0b75babe71c0d04dfab8ac9fea",
+            "text": "Forhåndsvisning av video er som standard satt til 4× hastighet for raskere gjennomgang. Bruk 1×, 2×, 4×, 6×, 8× og 16× knappene under tidslinjen for å endre avspillingshastighet. Den aktive hastighetsknappen er deaktivert for å gjøre gjeldende innstilling tydelig. Lyd er dempet som standard; velg Lydløs for å aktivere synkronisert lyd, og velg Lyd for å dempe den igjen. Endring av hastighet under avspilling starter video og lyd på nytt samtidig fra gjeldende posisjon på tidslinjen."
+          },
+          {
+            "id": "scanning_and_filtering.p007",
+            "source_sha256": "3214a4d4fd458bb76deb51ff30947b215ded0ce500221cb3511bf25da94d6a74",
+            "text": "Bruk |ÔùÇ og ÔûÂ| ved siden av lydknappen for å gå ett bilde bakover eller fremover. Applikasjonen bruker videons rapporterte bildefrekvens, med en fallback på 25 fps når den metadataen ikke er tilgjengelig, og utfører et presist søk for det resulterende stillbildet. Velg ⤓ PNG for å eksportere gjeldende videoposisjon som en PNG i full kilderesolusjon; avspillingen stopper på akkurat den posisjonen, utdata skrives gjennom en midlertidig fil, og videoen endres aldri."
+          },
+          {
+            "id": "scanning_and_filtering.p008",
+            "source_sha256": "2427ebd091d494c4bd3cbf71c48a081ab4ee23a5f549571ceeb7c12ea2c351d6",
+            "text": "Med fokus utenfor et skrivefelt, trykk komma (,) for å hoppe det aktive panelets videoforhåndsvisning bakover med 10 % av total varighet, eller punktum (.) for å hoppe fremover med 10 %. Det aktive panelet er siden som sist ble klikket. En avspillende forhåndsvisning fortsetter å spille fra den nye posisjonen; en pausert forhåndsvisning forblir pauset og viser nøyaktig målramme. Tastene skriver normalt i sti-, søke-, filter- og dialogfelt."
+          },
+          {
+            "id": "scanning_and_filtering.p009",
+            "source_sha256": "decded439831addc29ee74040e8bfff01524b194d15c0468751e96d11df67309",
+            "text": "Oppdater aktiv rute eller Oppdater begge paneler under Vis etter at mapper eller filer er endret i Filutforsker eller en annen applikasjon. Oppdater bygger opp mappestrukturen på nytt samt skanner medier på nytt. Det er også tilgjengelig via F5, verktøylinjen og høyreklikkmenyer i nettleseren og mappestrukturen. Alternativt kan du aktivere Live uavhengig i enten ruten for å automatisk overvåke den gjeldende mappen. Live følger navigering og bruker samme omfang som Inkluder undermapper. Perioder med opprettelser, endringer, omdøpinger og slettinger kombineres før oppdatering; mappeendringer oppdaterer også trestrukturen. En Live-indikator vises i fullført skannestatus. Live er som standard av, og å fjerne haken umiddelbart gjenoppretter manuell oppdateringsatferd."
+          }
+        ],
+        "body": "Aktiver Inkluder undermapper for å skanne rekursivt. Bruk Finn for filnavn, Oppløsning for en eksakt oppløsning, og Flere filtre for dimensjoner, filstørrelse, varighet, kodek, orientering og dato. Avbryt stopper en lang skanning. Cache og skanning-innstillinger under Verktøy styrer parallelle arbeidere og ekskluderte mønstre.\n\nFor å lagre skanneresultatene som et regneark eller dokument, se [chapter:media_reports].\n\nStorrekursive skanninger samler resultater uten å gjentatte ganger bygge opp den voksende nettleseren. Når skanningen er ferdig, Detaljerrader legges til i korte partier, så Play/Pause, navigasjon, maleri og vindus-kontroller forblir responsive. Miniatyrvisegallerier oppdateres også ved fullført skanning. Vellykkede kopierings-, flytte- og slettekommandoer oppdaterer nå bare de berørte inn-memory-oppføringene i stedet for å skanne begge mapper på nytt; ukjente filer droppet fra utenfor applikasjonen utløser fortsatt kun en sikkerhetsskanning i den berørte ruten. Lagring av metadata-cache kjører i bakgrunnen, og stoppetFFmpegforhåndsvisningsprosesser blir ryddet opp raskt.Verktøy > Cache og skanning gir Rolig, Balansert, og raske ytelsesprofiler.Balansertbeholder den etablerte oppførselen.Rolig reduserer skanning og miniatyrbildekonkurranse og sikter på 8 forhåndsvisningsbilder per sekund; Rask øker konkurransen og sikter på 15 bilder per sekund. Rolig og Balansertplanlegg nye ikke-bufferte sonder og miniatyrdekodinger mens en forhåndsvisning spilles av eller spoles, og gi interaktivt arbeid prioritet.Bufret Resultater blir aldri forsinket med vilje. Feltet metadata-arbeider forblir justerbart etter å ha valgt en profil.\n\nHver side har uavhengig avspilling, tidslinje, hastighet, lyd/mute, rammebuffer og dekoderprosesser. Skrapevideoavspilling er bevisst tilpasset sanntid ved 12 bilder per sekund. Dette holder forhåndsvisningene jevne samtidig som det unngår tung CPU-bruk forårsaket av dekoding av resten av en klipp raskere enn forhåndsvisningen kan vise det, spesielt mens en stor mappeskanning pågår.\n\nKlikk hvor som helst på en av forhåndsvisningens tidslinjer for å flytte markøren direkte til den posisjonen og fortsette avspillingen der. Du kan også trykke og dra markøren for kontinuerlig skrubbing. Skrubbing avbryter en eldre rammeforespørsel så snart en ny posisjon blir forespurt, noe som forhindrer at flere FFmpeg-dekodere konkurrerer i bakgrunnen. Nylig besøkte posisjoner lagres i kvartsekundskritt, slik at det er umiddelbart å gå tilbake til dem. Slipp skyveknappen for å fortsette avspillingen fra den valgte posisjonen.\n\nForhåndsvisning av video er som standard satt til 4× hastighet for raskere gjennomgang. Bruk 1×, 2×, 4×, 6×, 8× og 16× knappene under tidslinjen for å endre avspillingshastighet. Den aktive hastighetsknappen er deaktivert for å gjøre gjeldende innstilling tydelig. Lyd er dempet som standard; velg Lydløs for å aktivere synkronisert lyd, og velg Lyd for å dempe den igjen. Endring av hastighet under avspilling starter video og lyd på nytt samtidig fra gjeldende posisjon på tidslinjen.\n\nBruk |ÔùÇ og ÔûÂ| ved siden av lydknappen for å gå ett bilde bakover eller fremover. Applikasjonen bruker videons rapporterte bildefrekvens, med en fallback på 25 fps når den metadataen ikke er tilgjengelig, og utfører et presist søk for det resulterende stillbildet. Velg ⤓ PNG for å eksportere gjeldende videoposisjon som en PNG i full kilderesolusjon; avspillingen stopper på akkurat den posisjonen, utdata skrives gjennom en midlertidig fil, og videoen endres aldri.\n\nMed fokus utenfor et skrivefelt, trykk komma (,) for å hoppe det aktive panelets videoforhåndsvisning bakover med 10 % av total varighet, eller punktum (.) for å hoppe fremover med 10 %. Det aktive panelet er siden som sist ble klikket. En avspillende forhåndsvisning fortsetter å spille fra den nye posisjonen; en pausert forhåndsvisning forblir pauset og viser nøyaktig målramme. Tastene skriver normalt i sti-, søke-, filter- og dialogfelt.\n\nOppdater aktiv rute eller Oppdater begge paneler under Vis etter at mapper eller filer er endret i Filutforsker eller en annen applikasjon. Oppdater bygger opp mappestrukturen på nytt samt skanner medier på nytt. Det er også tilgjengelig via F5, verktøylinjen og høyreklikkmenyer i nettleseren og mappestrukturen. Alternativt kan du aktivere Live uavhengig i enten ruten for å automatisk overvåke den gjeldende mappen. Live følger navigering og bruker samme omfang som Inkluder undermapper. Perioder med opprettelser, endringer, omdøpinger og slettinger kombineres før oppdatering; mappeendringer oppdaterer også trestrukturen. En Live-indikator vises i fullført skannestatus. Live er som standard av, og å fjerne haken umiddelbart gjenoppretter manuell oppdateringsatferd."
+      },
+      {
+        "id": "selecting_and_previewing",
+        "title": "Velge og Forhåndsvisninging",
+        "paragraphs": [
+          {
+            "id": "selecting_and_previewing.p001",
+            "source_sha256": "3cb30411bb6f6a0807c08da889783687297f5427e72f356e38a6f0de5a9fedf2",
+            "text": "Hvert rutevindu har en uavhengig handling for avkrysningsbokser. Klikk på ÔÿÉ/Ôÿæ-boksen ved siden av en Detaljer-rad eller på et miniatyrkort, eller fokuser på en Detaljer-rad og trykk mellomrom. Avkryssingene forblir samlet mens du markerer og forhåndsviser andre filer, sorterer rutevinduet eller endrer filtre. Telleverket under nettleseren viser totalen, inkludert filer som er avkrysset, men som for øyeblikket er skjult av et filter. Klikk på Ô£ô Detaljer-overskriften eller Ô£ô Alt vist i Minibilder for å avkrysse alle filer som vises for øyeblikket; gjenta det for å fjerne avkrysningen for den viste gruppen. Fjern merker fjerner hele gruppen. Kopier ings-, flytte-, dra-, slette-, gi nytt navn-, vurderings-, merking-, sammenlignings-, integritets- og konverteringshandlinger bruker alle avkryssede filer når noen finnes; uten avkryssinger brukes de vanlige markerte radene. Å endre det rutevinduet til en annen mappe eller stasjon fjerner avkryssingene, og avkryssingene lagres ikke etter at programmet lukkes."
+          },
+          {
+            "id": "selecting_and_previewing.checkbox_accuracy_1272",
+            "source_sha256": "ec45605bac64df9520c7b16b9f54eb0ff1645c2f120d0e06da004d853d0a3acc",
+            "text": "Avkrysingsbokser endres bare når du klikker og slipper på boksen uten å dra. Tomt område ved siden av en boks er ikke en del av dens klikkbare område. Å bevege mer enn noen få piksler starter i stedet et markeringutvalg og lar avkrysningene være uendret, selv når draingen startet på en avkrysingsboks. Bruk de eksplisitte Merk utvalg- og Opphev merking-kontrollene for å endre en hel markert gruppe."
+          },
+          {
+            "id": "selecting_and_previewing.p007",
+            "source_sha256": "fe2df6bc40914fca7346780d043258bca3ac75b0c0da69d7d7c7af1921420d95",
+            "text": "Dra fra tom nettleserplass over rader eller miniatyrkort for å fremheve en gruppe med et uthevet valgrektangel. Dette merker eller fjerner ikke merking av noen filer. Et vanlig drag starter en ny fremhevet gruppe; hold Ctrl nede mens du starter draget for å legge til eksisterende uthevinger.Startpå tomt miniatyrområde, ikke et bilde eller filnavn, fordi det å dra en miniatyrfil starter en overføring i stedet. I Detaljerdu kan også dra vertikalt over rader for å markere en gruppe; dra mot den andre ruten for en overføring. Overskrifter beholder sine vanlige størrelsesendrings- og ombestillingsbevegelser. Bruk Merk utvalgå legge til de uthevede filene i den eksisterende avmerkede handlingsgruppen. Bruk Opphev merking for å fjerne bare de uthevede filene fra den gruppen. Begge knappene finnes øverst i hver nettleser ved siden av Sorter,Velg alle som vises og Fjern merker; styrer innpakning på smalere paneler. Begge kommandoene er også tilgjengelige i høyreklikkmenyene. Andre avmerkninger, inkludert filer skjult av filtre, beholdes. Filhandlinger fortsetter å foretrekke alle avmerkninger når noen finnes, så bruk disse eksplisitte kontrollene før kopiering eller flytting hvis du ønsker å endre handlingsgruppen."
+          },
+          {
+            "id": "selecting_and_previewing.p002",
+            "source_sha256": "7f32ecf04dddbc0b538a4d33856b7ca37e281994235e853d6806e565759f3fb5",
+            "text": "Hver nettleserrute har sin egen store ÔûÂ Forhåndsvisning-bryter, som som standard er slått av for å unngå unødvendig dekoding. Aktiver Forhåndsvisning på venstre, høyre eller begge sider for å åpne separate justerte forhåndsvisningspaneler under nettleserne. Knappen har en tydelig valgt tilstand, slik at aktiverte forhåndsvisninger er lett å se. Når begge bryterne er av, kollapser forhåndsvisningsområdet helt, og nettleserne bruker hele vinduets høyde. Klikk på en fil for å forhåndsvise den på sin egen side. Utheving er uavhengig av avkrysningsbokser, slik at du kan inspisere eller forhåndsvise en annen fil uten å miste handlingsgruppen. Hold Ctrl mens du klikker på miniatyrbilder eller detaljrader for å utheve flere filer. Velg samsvarende uthever hvert resultat som for øyeblikket vises. Dobbeltklikk åpner den uthevede filen i sitt vanlige program."
+          },
+          {
+            "id": "selecting_and_previewing.p006",
+            "source_sha256": "ea7ee844c5a71c70be45874efacd2698bc3f2f6056cb1188f3f135038fbcd31c",
+            "text": "Bilder og videorammer bruker automatisk den største størrelsen som passer til deres eget forhåndsvisningspanel samtidig som den opprinnelige bredde-til-høyde-forholdet beholdes. Endring av størrelsen på hovedvinduet eller enten forhåndsvisningsdeleren oppdaterer bildet etter en kort forsinkelse, og unngår gjentatte dekoderoppstarter mens deleren dras."
+          },
+          {
+            "id": "selecting_and_previewing.p003",
+            "source_sha256": "6da9585bae76a4d0447bfa50948712331a0b66f7d19639b6472395a5337a1281",
+            "text": "Hver rute har også en stor uavhengig Ôôÿ Info-bryter. Den er som standard av og legger til en sammenleggbar inspektør på høyre kant av den ruten. Hvis en fil allerede er valgt, vises den umiddelbart når Info aktiveres—det er ikke nødvendig å velge den igjen. Inspektøren følger senere valg i Detaljer, Kontinuerligminiatyrbilder, og Sidevisminiatyrbilder og viser den fullstendige banen, dimensjoner, størrelse, datoer, varighet, kodek, bildefrekvens, bitrate, pikselformat, HDR, lyd, årsak til ulesbarhet, vurdering, farge og merkelapper.Kopier stiplasserer hele banen på utklippstavlen; Åpne og Avslørbruk de vanlige filhandlingene. Å slå av Info fjerner inspektøren helt, og lagrede arbeidsområder husker tilstanden. Info åpnes med en kompakt startbredde på omtrent 180 piksler. De øverste Sortering- og utvalgskontrollene er uavhengige av Info-delingen, så å åpne Info presser ikke disse knappene. Dra deleren ved siden av inspektøren for å endre bredden; å slå Info av og på gjenoppretter den bredden, og lagrede panel-/arbeidsområdeinnstillinger beholder den. På smale vinduer er bredden begrenset for å gi litt plass til navigering."
+          },
+          {
+            "id": "selecting_and_previewing.p004",
+            "source_sha256": "f69ab2d999168d40676e34589ed911761ef8a4e8e683955ccaa9c471fc373e01",
+            "text": "Vis i Filutforsker/Avslør fungerer med hele utvalget. Med opptil fem valgte filer sender den en egen visningsforespørsel for hver sti. Over fem vises en advarsel med det eksakte antallet fordi operasjonen kan åpne mange filbehandler-vinduer. Velg Ja for å vise hver valgt fil, eller Nei for å vise bare den første. Windows og macOS velger hver enkelt fil nøyaktig; Linux åpner mappen som inneholder hver fil gjennom systemets filbehandler."
+          },
+          {
+            "id": "selecting_and_previewing.p005",
+            "source_sha256": "78c83927ab22cd560e580cbf1dbe270da8c554ef8357eb67fdc828600c7f856a",
+            "text": "For kamerainformasjon, EXIF-felter eller videokontainer-/strømtagger, se [chapter:embedded_metadata]."
+          }
+        ],
+        "body": "Hvert rutevindu har en uavhengig handling for avkrysningsbokser. Klikk på ÔÿÉ/Ôÿæ-boksen ved siden av en Detaljer-rad eller på et miniatyrkort, eller fokuser på en Detaljer-rad og trykk mellomrom. Avkryssingene forblir samlet mens du markerer og forhåndsviser andre filer, sorterer rutevinduet eller endrer filtre. Telleverket under nettleseren viser totalen, inkludert filer som er avkrysset, men som for øyeblikket er skjult av et filter. Klikk på Ô£ô Detaljer-overskriften eller Ô£ô Alt vist i Minibilder for å avkrysse alle filer som vises for øyeblikket; gjenta det for å fjerne avkrysningen for den viste gruppen. Fjern merker fjerner hele gruppen. Kopier ings-, flytte-, dra-, slette-, gi nytt navn-, vurderings-, merking-, sammenlignings-, integritets- og konverteringshandlinger bruker alle avkryssede filer når noen finnes; uten avkryssinger brukes de vanlige markerte radene. Å endre det rutevinduet til en annen mappe eller stasjon fjerner avkryssingene, og avkryssingene lagres ikke etter at programmet lukkes.\n\nAvkrysingsbokser endres bare når du klikker og slipper på boksen uten å dra. Tomt område ved siden av en boks er ikke en del av dens klikkbare område. Å bevege mer enn noen få piksler starter i stedet et markeringutvalg og lar avkrysningene være uendret, selv når draingen startet på en avkrysingsboks. Bruk de eksplisitte Merk utvalg- og Opphev merking-kontrollene for å endre en hel markert gruppe.\n\nDra fra tom nettleserplass over rader eller miniatyrkort for å fremheve en gruppe med et uthevet valgrektangel. Dette merker eller fjerner ikke merking av noen filer. Et vanlig drag starter en ny fremhevet gruppe; hold Ctrl nede mens du starter draget for å legge til eksisterende uthevinger.Startpå tomt miniatyrområde, ikke et bilde eller filnavn, fordi det å dra en miniatyrfil starter en overføring i stedet. I Detaljerdu kan også dra vertikalt over rader for å markere en gruppe; dra mot den andre ruten for en overføring. Overskrifter beholder sine vanlige størrelsesendrings- og ombestillingsbevegelser. Bruk Merk utvalgå legge til de uthevede filene i den eksisterende avmerkede handlingsgruppen. Bruk Opphev merking for å fjerne bare de uthevede filene fra den gruppen. Begge knappene finnes øverst i hver nettleser ved siden av Sorter,Velg alle som vises og Fjern merker; styrer innpakning på smalere paneler. Begge kommandoene er også tilgjengelige i høyreklikkmenyene. Andre avmerkninger, inkludert filer skjult av filtre, beholdes. Filhandlinger fortsetter å foretrekke alle avmerkninger når noen finnes, så bruk disse eksplisitte kontrollene før kopiering eller flytting hvis du ønsker å endre handlingsgruppen.\n\nHver nettleserrute har sin egen store ÔûÂ Forhåndsvisning-bryter, som som standard er slått av for å unngå unødvendig dekoding. Aktiver Forhåndsvisning på venstre, høyre eller begge sider for å åpne separate justerte forhåndsvisningspaneler under nettleserne. Knappen har en tydelig valgt tilstand, slik at aktiverte forhåndsvisninger er lett å se. Når begge bryterne er av, kollapser forhåndsvisningsområdet helt, og nettleserne bruker hele vinduets høyde. Klikk på en fil for å forhåndsvise den på sin egen side. Utheving er uavhengig av avkrysningsbokser, slik at du kan inspisere eller forhåndsvise en annen fil uten å miste handlingsgruppen. Hold Ctrl mens du klikker på miniatyrbilder eller detaljrader for å utheve flere filer. Velg samsvarende uthever hvert resultat som for øyeblikket vises. Dobbeltklikk åpner den uthevede filen i sitt vanlige program.\n\nBilder og videorammer bruker automatisk den største størrelsen som passer til deres eget forhåndsvisningspanel samtidig som den opprinnelige bredde-til-høyde-forholdet beholdes. Endring av størrelsen på hovedvinduet eller enten forhåndsvisningsdeleren oppdaterer bildet etter en kort forsinkelse, og unngår gjentatte dekoderoppstarter mens deleren dras.\n\nHver rute har også en stor uavhengig Ôôÿ Info-bryter. Den er som standard av og legger til en sammenleggbar inspektør på høyre kant av den ruten. Hvis en fil allerede er valgt, vises den umiddelbart når Info aktiveres—det er ikke nødvendig å velge den igjen. Inspektøren følger senere valg i Detaljer, Kontinuerligminiatyrbilder, og Sidevisminiatyrbilder og viser den fullstendige banen, dimensjoner, størrelse, datoer, varighet, kodek, bildefrekvens, bitrate, pikselformat, HDR, lyd, årsak til ulesbarhet, vurdering, farge og merkelapper.Kopier stiplasserer hele banen på utklippstavlen; Åpne og Avslørbruk de vanlige filhandlingene. Å slå av Info fjerner inspektøren helt, og lagrede arbeidsområder husker tilstanden. Info åpnes med en kompakt startbredde på omtrent 180 piksler. De øverste Sortering- og utvalgskontrollene er uavhengige av Info-delingen, så å åpne Info presser ikke disse knappene. Dra deleren ved siden av inspektøren for å endre bredden; å slå Info av og på gjenoppretter den bredden, og lagrede panel-/arbeidsområdeinnstillinger beholder den. På smale vinduer er bredden begrenset for å gi litt plass til navigering.\n\nVis i Filutforsker/Avslør fungerer med hele utvalget. Med opptil fem valgte filer sender den en egen visningsforespørsel for hver sti. Over fem vises en advarsel med det eksakte antallet fordi operasjonen kan åpne mange filbehandler-vinduer. Velg Ja for å vise hver valgt fil, eller Nei for å vise bare den første. Windows og macOS velger hver enkelt fil nøyaktig; Linux åpner mappen som inneholder hver fil gjennom systemets filbehandler.\n\nFor kamerainformasjon, EXIF-felter eller videokontainer-/strømtagger, se [chapter:embedded_metadata]."
+      },
+      {
+        "id": "copying_and_moving",
+        "title": "Kopiere og flytte",
+        "paragraphs": [
+          {
+            "id": "copying_and_moving.p001",
+            "source_sha256": "74a10eb18d51cae10f7fdd8931b1ad7feb8157e134c2e2f50071b7b2d30f5f1b",
+            "text": "Velg filer i én rute og bruk verktøylinjen, Rediger-menyen, høyreklikkmenyen, hurtigtaster eller dra-og-slipp. For å sende flere valgte filer til en annen applikasjon som Shutter, dra det store ↗ Dra valgt-håndtaket ved siden av navigasjonskontrollene i den ruten med venstre museknapp. Det eksporterer hele utvalget ved å bruke det normale operativsystemets filist-format og fungerer både i Detaljer og Minibilder uten å forstyrre kolonneendringer. Den andre ruten er destinasjonen for overføringer i appen. Overføringer går inn i en kø med fremdrift, hastighet, gjenværende tid, pause, avbryt, prøv på nytt og konflikthåndtering. Ruteoverføringer lar deg velge om du vil bevare relative mapper eller bare kopiere filene."
+          },
+          {
+            "id": "copying_and_moving.p002",
+            "source_sha256": "a438870a1a1fa7c4edc46d8f19aa10034df90810c0e6118e2c2f94828359328d",
+            "text": "Rediger > Batch-gi nytt navnvalgt åpner en fullstendig forhåndsvisning før du endrer noen navn. Forhåndsvisningen oppdateres automatisk etter at du har endret mønster, finn/erstatt-tekst, bruk av store/små bokstaver, startnummer eller fylling;Oppdater forhåndsvisninger også tilgjengelig. Bygg navn med {name}for den originale stammen,{n} for et nummer med utfylt sekvens, {ext} for utvidelsen uten et punktum, og {dotext}for utvidelsen inkludert punktumet. Valgfri søk/erstatt kan være store- og småbokstavfølsomt eller ikke, og nummerering har justerbar start og utfylling. Ugyldige Windows-navn, dupliserte utdata og konflikter med ikke-valgte filer deaktiveres Bruk. En bekreftet batch bruker midlertidige navn internt slik at bytter og sykluser ikke kan overskrive hverandre; en avbrutt batch rulles tilbake der det er mulig. Den vellykkede batchen er en Ctrl+Zangre handling, inkludert vurderinger og merkelapper.F2eller Gi nytt navnpå én fil åpnes en levende filnavnforhåndsvisning;Gi nytt navner kun aktivert for et gyldig, tilgjengelig nytt navn."
+          },
+          {
+            "id": "copying_and_moving.p003",
+            "source_sha256": "dc2923a823a7109741512e0c6e1a2302310ba36b9dbfaa6379ae5acf0c73c9e9",
+            "text": "For gjentakbare kopierings-/flyttebetingelser med gjennomgang før bruk, se [chapter:folder_organization_rules]. For å pause, avbryte eller prøve på nytt ventende overføringer, se [chapter:transfer_queue]."
+          },
+          {
+            "id": "copying_and_moving.p004",
+            "source_sha256": "2c1a1fe656902fb987c4f1a88cd0f8d6ec8ead7edc9b2cf0817ce2b6e82f724b",
+            "text": "Høyreklikk en eller flere valgte filer for å tildele en null-til-fem-stjerners vurdering, en Rød/Gul/Grønn/Blå/Lilla fargemerking, eller komma-separerte tagger. Fjern vurdering, Ingen, og en tom taggliste reverserer disse endringene. Disse merknadene lagres kun i applikasjonsdatabasen; originalt medier og innebygd metadata endres aldri. Detaljer-modus gir sorterbare Vurdering, Etikett, og Tag-kolonner. Miniatyrbildetekster viser vurderinger/tagger og bruker fargemerking som deres uvalgte omriss. Flere filtre kan kreve minimumsvurdering, farge (inkludert Umerket), eller tag-tekst. Interne operasjoner som gi nytt navn, kopiere, flytte, og angre overfører merknader til den resulterende banen. Tøm all cache fjerner tekniske cache-data, men beholder med vilje brukermerknader."
+          },
+          {
+            "id": "copying_and_moving.p005",
+            "source_sha256": "4ea753522d03bb48eab43c172373c00d21303828abeacab783fb94f7d41faa41",
+            "text": "I Detaljer-modus beholder individuelle rader fil-dragging med høyre knapp; et vanlig høyreklikk åpner fortsatt kontekstmenyen. Du kan også dra en rad eller valgt gruppe med venstre knapp inn i motsatt panel. Et slipp gir tydelig merkede Kopier, Flytt og Avbryt-knapper. Kopier eller Flytt åpner overføringsforhåndsvisningen; Avbryt eller lukking av vinduet etterlater filene uendret. Endring av kolonnebredde og omorganisering av overskrifter forblir uavhengig. For vanlig dragging med venstre knapp inn i et annet program, bruk ↗ Dra valgt. Miniatyrkort støtter også vanlig venstre knapp-fildragging."
+          },
+          {
+            "id": "copying_and_moving.p006",
+            "source_sha256": "c09e896f93f4539ea5e39ce1ef9cf109147040645409d8f026ce228b0ae864d8",
+            "text": "Kopier, flytt, gi nytt navn til, send filer til papirkurven eller søppelkurven, gjennomgå duplikater, bruk merker og vurderinger, eksporter rapporter og opprett kontaktark. Konvertering støtter H.264, H.265 og AV1 med kompatibel maskinvareakselerasjon. Kilde-filer beholdes, og delvis mislykkede utdata fjernes."
+          },
+          {
+            "id": "copying_and_moving.p007",
+            "source_sha256": "88a277d5f920b679b295acc60e5e72f6b72f48d3630880924c349e271f7ab3aa",
+            "text": "Ny mappe s: velg Fil > Ny mappe…, trykk Ctrl+Shift+N, eller høyreklikk i et panel og velg Ny mappe…. Skriv inn navnet på en enkelt ny mappe. Mappen opprettes inne i det aktive panelets gjeldende mappe, og nettleseren oppdateres; dette flytter ikke dine valgte filer. Tomme, reservert og ugyldige navn blir avvist, og en eksisterende mappe blir aldri erstattet."
+          },
+          {
+            "id": "copying_and_moving.p008",
+            "source_sha256": "cfa3700591ec389ae4438a32b015736c27e74632cc56284e786898fee744198b",
+            "text": "Kopi/ flytte-eksempel: aktiver Inkluder undermapper i kildepanelet, merk filer i flere undermapper, og klikk Kopier valgt → annet panel eller Flytt valgte → annen rute. I forhåndsvisningen velg Bevar mappestrukturen for å beholde banene under kildemappen, eller Filkun (ingen undermapper) for å plassere filer direkte i destinasjonen. Den første standarden beholder mapper; senere overføringer husker ditt siste valg. Les kolonnene Kilde, Destinasjon og Status før du legger i kø. Bla gjennom… endrer destinasjonen; Ny mappe… oppretter og velger en mappe uten å forlate forhåndsvisningen. Åpnedestinasjon når fullført åpner den mappen bare etter en vellykket, ikke-avbrutt overføring. Klikk Køkopi eller Køflytt for å fortsette, eller Avbryt for å la filene være uendret. Lim inn og droppede filer bruker også denne forhåndsvisningen."
+          },
+          {
+            "id": "copying_and_moving.p009",
+            "source_sha256": "6f5fea1b68edde18db0247441f47c2ad2c00ad93e2b1f52f9b191e04d8ccde05",
+            "text": "Konflikter: Spør om hver konflikt tilbyr Behold begge, Erstatt, Hopp over og Avbryt, med Bruktil alle gjenværende konflikter. Alternativt velg en policy i forhåndsvisningen før du legger i kø. Behold begge finner et tilgjengelig nummerert filnavn, som clip (2).mp4, inkludert kollisjoner mellom valgte filer fra forskjellige undermapper. Erstatt tillater eksplisitt erstatning og beholder den tidligere destinasjonen i øktens angreområde. Hopp over lar den eksisterende destinasjonen være uendret. En destinasjon som er en av de valgte kildefilene, er blokkert: velg en annen mappe. Køen sjekker destinasjoner på nytt, så en fil som dukker opp etter forhåndsvisning, blir ikke overskrevet stille. Angre er begrenset til de siste 20 støttede handlingene i denne økten og er ikke en permanent sikkerhetskopi. Ikke rediger overførte filer før du bruker Angre; å angre en kopiering fjerner den kopierte filen."
+          },
+          {
+            "id": "copying_and_moving.p010",
+            "source_sha256": "fd0ec5c6b05d49ff78891f64ea627a2fe1d7435cbdf0008018ace12f664e8341",
+            "text": "Utvalgskurv: bruk Utvalgskurv-verktøylinjeknappen, Fil > Utvalgskurv…, eller høyreklikk på valgte filer og velg Legg til i utvalgskurv. Kurven er et sammenleggbart panel over begge nettlesere, ikke et eget vindu. Skjul kurv eller verktøylinjeknappen skjuler den uten å fjerne referansene. Legg til rutevalg samler panelens avkryssede handlingsgruppe, eller de markererte filene når ingen avkryssinger finnes. Besøk andre mapper og legg til flere filer; hver originalbane vises kun én gang. Kurven inneholder referanser, ikke kopier, og tømmes når programmet lukkes. Fjern referanser eller Fjernkurv sletter ikke originale filer. Velg kurvrader og velg Kopiertil aktiv rute eller Flytttil aktiv rute; når ingen kurvrader er valgt, brukes alle oppføringer. Gjennomgå forhåndsvisningen av overføringen som vanlig. Kurvfiler uten en delt nettleserrot bruker filnavnene sine i stedet for en kombinert mappestruktur. Manglende originaler er merket [mangler] og kan ikke overføres før de er tilgjengelige."
+          }
+        ],
+        "body": "Velg filer i én rute og bruk verktøylinjen, Rediger-menyen, høyreklikkmenyen, hurtigtaster eller dra-og-slipp. For å sende flere valgte filer til en annen applikasjon som Shutter, dra det store ↗ Dra valgt-håndtaket ved siden av navigasjonskontrollene i den ruten med venstre museknapp. Det eksporterer hele utvalget ved å bruke det normale operativsystemets filist-format og fungerer både i Detaljer og Minibilder uten å forstyrre kolonneendringer. Den andre ruten er destinasjonen for overføringer i appen. Overføringer går inn i en kø med fremdrift, hastighet, gjenværende tid, pause, avbryt, prøv på nytt og konflikthåndtering. Ruteoverføringer lar deg velge om du vil bevare relative mapper eller bare kopiere filene.\n\nRediger > Batch-gi nytt navnvalgt åpner en fullstendig forhåndsvisning før du endrer noen navn. Forhåndsvisningen oppdateres automatisk etter at du har endret mønster, finn/erstatt-tekst, bruk av store/små bokstaver, startnummer eller fylling;Oppdater forhåndsvisninger også tilgjengelig. Bygg navn med {name}for den originale stammen,{n} for et nummer med utfylt sekvens, {ext} for utvidelsen uten et punktum, og {dotext}for utvidelsen inkludert punktumet. Valgfri søk/erstatt kan være store- og småbokstavfølsomt eller ikke, og nummerering har justerbar start og utfylling. Ugyldige Windows-navn, dupliserte utdata og konflikter med ikke-valgte filer deaktiveres Bruk. En bekreftet batch bruker midlertidige navn internt slik at bytter og sykluser ikke kan overskrive hverandre; en avbrutt batch rulles tilbake der det er mulig. Den vellykkede batchen er en Ctrl+Zangre handling, inkludert vurderinger og merkelapper.F2eller Gi nytt navnpå én fil åpnes en levende filnavnforhåndsvisning;Gi nytt navner kun aktivert for et gyldig, tilgjengelig nytt navn.\n\nFor gjentakbare kopierings-/flyttebetingelser med gjennomgang før bruk, se [chapter:folder_organization_rules]. For å pause, avbryte eller prøve på nytt ventende overføringer, se [chapter:transfer_queue].\n\nHøyreklikk en eller flere valgte filer for å tildele en null-til-fem-stjerners vurdering, en Rød/Gul/Grønn/Blå/Lilla fargemerking, eller komma-separerte tagger. Fjern vurdering, Ingen, og en tom taggliste reverserer disse endringene. Disse merknadene lagres kun i applikasjonsdatabasen; originalt medier og innebygd metadata endres aldri. Detaljer-modus gir sorterbare Vurdering, Etikett, og Tag-kolonner. Miniatyrbildetekster viser vurderinger/tagger og bruker fargemerking som deres uvalgte omriss. Flere filtre kan kreve minimumsvurdering, farge (inkludert Umerket), eller tag-tekst. Interne operasjoner som gi nytt navn, kopiere, flytte, og angre overfører merknader til den resulterende banen. Tøm all cache fjerner tekniske cache-data, men beholder med vilje brukermerknader.\n\nI Detaljer-modus beholder individuelle rader fil-dragging med høyre knapp; et vanlig høyreklikk åpner fortsatt kontekstmenyen. Du kan også dra en rad eller valgt gruppe med venstre knapp inn i motsatt panel. Et slipp gir tydelig merkede Kopier, Flytt og Avbryt-knapper. Kopier eller Flytt åpner overføringsforhåndsvisningen; Avbryt eller lukking av vinduet etterlater filene uendret. Endring av kolonnebredde og omorganisering av overskrifter forblir uavhengig. For vanlig dragging med venstre knapp inn i et annet program, bruk ↗ Dra valgt. Miniatyrkort støtter også vanlig venstre knapp-fildragging.\n\nKopier, flytt, gi nytt navn til, send filer til papirkurven eller søppelkurven, gjennomgå duplikater, bruk merker og vurderinger, eksporter rapporter og opprett kontaktark. Konvertering støtter H.264, H.265 og AV1 med kompatibel maskinvareakselerasjon. Kilde-filer beholdes, og delvis mislykkede utdata fjernes.\n\nNy mappe s: velg Fil > Ny mappe…, trykk Ctrl+Shift+N, eller høyreklikk i et panel og velg Ny mappe…. Skriv inn navnet på en enkelt ny mappe. Mappen opprettes inne i det aktive panelets gjeldende mappe, og nettleseren oppdateres; dette flytter ikke dine valgte filer. Tomme, reservert og ugyldige navn blir avvist, og en eksisterende mappe blir aldri erstattet.\n\nKopi/ flytte-eksempel: aktiver Inkluder undermapper i kildepanelet, merk filer i flere undermapper, og klikk Kopier valgt → annet panel eller Flytt valgte → annen rute. I forhåndsvisningen velg Bevar mappestrukturen for å beholde banene under kildemappen, eller Filkun (ingen undermapper) for å plassere filer direkte i destinasjonen. Den første standarden beholder mapper; senere overføringer husker ditt siste valg. Les kolonnene Kilde, Destinasjon og Status før du legger i kø. Bla gjennom… endrer destinasjonen; Ny mappe… oppretter og velger en mappe uten å forlate forhåndsvisningen. Åpnedestinasjon når fullført åpner den mappen bare etter en vellykket, ikke-avbrutt overføring. Klikk Køkopi eller Køflytt for å fortsette, eller Avbryt for å la filene være uendret. Lim inn og droppede filer bruker også denne forhåndsvisningen.\n\nKonflikter: Spør om hver konflikt tilbyr Behold begge, Erstatt, Hopp over og Avbryt, med Bruktil alle gjenværende konflikter. Alternativt velg en policy i forhåndsvisningen før du legger i kø. Behold begge finner et tilgjengelig nummerert filnavn, som clip (2).mp4, inkludert kollisjoner mellom valgte filer fra forskjellige undermapper. Erstatt tillater eksplisitt erstatning og beholder den tidligere destinasjonen i øktens angreområde. Hopp over lar den eksisterende destinasjonen være uendret. En destinasjon som er en av de valgte kildefilene, er blokkert: velg en annen mappe. Køen sjekker destinasjoner på nytt, så en fil som dukker opp etter forhåndsvisning, blir ikke overskrevet stille. Angre er begrenset til de siste 20 støttede handlingene i denne økten og er ikke en permanent sikkerhetskopi. Ikke rediger overførte filer før du bruker Angre; å angre en kopiering fjerner den kopierte filen.\n\nUtvalgskurv: bruk Utvalgskurv-verktøylinjeknappen, Fil > Utvalgskurv…, eller høyreklikk på valgte filer og velg Legg til i utvalgskurv. Kurven er et sammenleggbart panel over begge nettlesere, ikke et eget vindu. Skjul kurv eller verktøylinjeknappen skjuler den uten å fjerne referansene. Legg til rutevalg samler panelens avkryssede handlingsgruppe, eller de markererte filene når ingen avkryssinger finnes. Besøk andre mapper og legg til flere filer; hver originalbane vises kun én gang. Kurven inneholder referanser, ikke kopier, og tømmes når programmet lukkes. Fjern referanser eller Fjernkurv sletter ikke originale filer. Velg kurvrader og velg Kopiertil aktiv rute eller Flytttil aktiv rute; når ingen kurvrader er valgt, brukes alle oppføringer. Gjennomgå forhåndsvisningen av overføringen som vanlig. Kurvfiler uten en delt nettleserrot bruker filnavnene sine i stedet for en kombinert mappestruktur. Manglende originaler er merket [mangler] og kan ikke overføres før de er tilgjengelige."
+      },
+      {
+        "id": "smart_collections",
+        "title": "Smartere samlinger: Lagrede søk",
+        "paragraphs": [
+          {
+            "id": "smart_collections.p001",
+            "source_sha256": "c8a00acd2ba2c17799572b74c47c2659ecb5a65fb4782693cbe786544ac1e764",
+            "text": "HVA SMARTE SAMLINGER LAGRER"
+          },
+          {
+            "id": "smart_collections.p002",
+            "source_sha256": "d366ab29cfd1f77bae1f8b286cca63d76a5e46d73bdbf4329d2cfb31a1b3694a",
+            "text": "En smart samling er en navngitt, lagret søk og visning for ett nettleservindu. Den husker hvordan man finner og viser filer i en kildemappe. Den refererer til de originale filene; oppretting, åpning, gi nytt navn til eller slette en samling kopierer, flytter, gir nytt navn, sletter eller kommenterer ikke disse mediefilene. Bruk den når du gjentatte ganger gjennomgår det samme biblioteket med bestemte filtre og sortering, i stedet for å skrive inn disse innstillingene på nytt ved hvert besøk. Et lagret arbeidsområde gjenoppretter begge vinduene og deres oppsett; en smart samling endrer kun det aktive vinduet."
+          },
+          {
+            "id": "smart_collections.p003",
+            "source_sha256": "006322e9c7ac283bd37b6dbb958c936304cc5977a4803b31ea4c4da238a217f2",
+            "text": "Hver samling har nøyaktig én startmappe. Inkluder undermapper søker gjennom alle mappene under den roten. Den kan ikke kombinere vilkårlige, uknyttede mapper, separate stasjoner eller flere startroter til én samling. Velg deres nærmeste felles overordnede mappe når det er praktisk, eller lag separate samlinger og åpne dem i de to rutene. Ved å velge en stasjonsrot med Inkluder undermapper kan du skanne hele stasjonen; velg den smaleste nyttige overordnede mappen."
+          },
+          {
+            "id": "smart_collections.p004",
+            "source_sha256": "20491128f8f22d658bb8601b6511411ea9d469ce4a9681d99090382d74cfc3cf",
+            "text": "De lagrede innstillingene er mappestien, Inkluder undermapper, Videoer og Bilder-brytere, Finn tekst, Oppløsning-utvalg, alle Verdier for Flere filtre, sorteringsfelt og retning, Detaljer eller Minibilder, miniatyrstørrelse og Kontinuerlig eller Sidevis-modus. Den lagrer ikke avkryssede filer, uthevede utvalg, forhåndsvisningsavspilling, sanntidsovervåking, den andre ruten, kolonnebredder/-rekkefølge, rutedelere eller miniatyrsidekapasitet. Disse forblir uavhengige innstillinger. Samlinger lagres lokalt i smart_collections.json i applikasjonsinnstillingskatalogen."
+          },
+          {
+            "id": "smart_collections.p005",
+            "source_sha256": "b11ace0b241e6cfceeaf8409069c6872f849fb89e4d9c2acab35996a93e19059",
+            "text": "OPPRETT EN SAMLING"
+          },
+          {
+            "id": "smart_collections.p006",
+            "source_sha256": "83c8a710973dcf1308b8fd867f872bf84624f939b91047eea47405238718426e",
+            "text": "1. Klikk inne i ruten du vil konfigurere. Dette gjør den til den aktive ruten for Verktøykommandoer.\n2. Bruk Bla gjennom…eller stiboksen for å åpne den tiltenkte kilde-mappen.Aktiver Inkluder undermapperom nestede mapper skal inngå i søket.\n3. Kryss av Videoer, Bilder, eller begge deler. Sett Søk etter en filnavn- eller relativ-stiangivelsesdel som ikke skiller mellom store og små bokstaver, og velg Oppløsning for en nøyaktig bredde × høyde der ønsket. Skjermen viser Oppløsning:Alt når ingen eksakt oppløsningsbegrensning er påført.\n4. Åpne Flere filtre…for orientering, kodek-understreng, tagg-understreng, minimumsvurdering, fargemerke, minimum/maksimum bredde og høyde, filstørrelse, varighet og endringsdatoer. Tomme felt setter ingen begrensning; alle ikke-tomme begrensninger må samsvare. Skriv inn Brukå bruke filtrene.Fjern tilbakestiller de avanserte filterverdiene. Dette er ikke et eget vilkårlig-utvidelsesfilter; bruk Videoer/Bilderbrytere og, der det er passende, en filnavndel som .mp4.\n5. Vent på skanningen og velg ønsket rekkefølge. I Detaljer, klikk på en kolonneoverskrift; klikk igjen for å snu retningen. I Minibilder, bruk Sorter og undermenyen for felt/retning. Begge visninger bruker det samme filtrerte mediet og rekkefølgen.\n6. Velg Verktøy > Lagre aktiv smart samling…og skriv inn et beskrivende samlingsnavn. Å lagre et eksisterende navn spør Erstatt smartsamling; enes bare hvis det gjeldende panelet skal erstatte den lagrede definisjonen. Lagring oppretter en forhåndsinnstilling, ikke en kopi av de viste filene."
+          },
+          {
+            "id": "smart_collections.p007",
+            "source_sha256": "cc9c90b0168ad0ec1cefb3b33388495dd4c350d67628c7413d8a0ee240b4ae7b",
+            "text": "ÅPNE OG OPPDATERE EN KOLLEKSJON"
+          },
+          {
+            "id": "smart_collections.p008",
+            "source_sha256": "89904bdaa8286ca4ca8546e5136bc9ff5b7688ac0147d82ee8a66fd4caa61afa",
+            "text": "Velg destinasjonspanelet først. Åpne Verktøy > Administrer smarte samlinger…, velg en lagret oppføring, og klikk Bruk eller dobbeltklikk raden. Det aktive panelet navigerer til den lagrede startmappen, gjenoppretter de lagrede filtrene, sorteringen og presentasjonen, og skanner den deretter. Det motsatte panelet forblir uendret. Hvis mappen er frakoblet, flyttet eller ikke lenger finnes, forklarer Samlemappe utilgjengelig den lagrede stien; koble den til igjen eller lagre en erstatning ved hjelp av en gyldig mappe."
+          },
+          {
+            "id": "smart_collections.p009",
+            "source_sha256": "1668c49611305d33e2b5780a8b4c6910237f09146c4967272ffd9cf9df5477ae",
+            "text": "Resultats viser filer som for øyeblikket finnes når panelet skanner, i stedet for en frossen liste som ble lagret da forhåndsinnstillingen ble lagret. Bruk panelets Ôå╗-knapp, Vis > Oppdater aktiv rute, eller F5 for begge paneler etter eksterne filendringer. Live kan overvåke den nåværende mappen, men Live er ikke en del av en lagret samling. Endringer i filtrering eller sortering påvirker den nåværende visningen umiddelbart; endringer i kildeområdet krever tilsvarende skanning. Avbryt stopper en skanning. Stor rekursive samlinger bruker samme metadata-buffer og ytelsesprofiler som vanlig gjennomgang."
+          },
+          {
+            "id": "smart_collections.p010",
+            "source_sha256": "5d0ba8ba1b4e449868d9118559c323b524f2ed494ba01573aee4d4176bc9d605",
+            "text": "Det finnes ingen separat knapp for redigering av samling. For å endre en eksisterende samling, Bruk den, juster mappen, omfanget, filtrene eller rekkefølgen i det panelet, og velg deretter Verktøy > Lagre aktiv smart samling… med samme navn og bekreft erstatning. I manageren, Lagre gjeldende lagrer de gjeldende innstillingene for aktivt panel og ber om et navn; det redigerer ikke automatisk den valgte raden. Omdøping lagrer ingen endringer gjort på et panels filtre."
+          },
+          {
+            "id": "smart_collections.p011",
+            "source_sha256": "6e88b549b05defa2d24fa8d186b6ba7aea252c5d474f37b1bb4d2e876fbcdbfd",
+            "text": "GI NYTT NAVN, SLETT OG GJENOPPRETT"
+          },
+          {
+            "id": "smart_collections.p012",
+            "source_sha256": "2a100ef5ff5e82d9b023158669f5f05a1ef343719fe452c2e74a2589cd33091a",
+            "text": "I Verktøy > Administrer smarte samlinger…, velg en oppføring og klikk Gi nytt navn. Skriv inn Nytt navn: og bekreft erstatning dersom en annen samling allerede har det navnet. Slett ber om bekreftelse og fjerner kun forhåndsinnstillingen. Angre sletting gjenoppretter den sist slettede forhåndsinnstillingen mens dette manager-vinduet er åpent. Å lukke manageren mister denne midlertidige angrelisten. Hvis en samling med samme navn er opprettet etterpå, vil gjenoppretting av den slettede oppføringen erstatte den navnet sin forhåndsinnstilling, så bruk ulike navn når begge skal bevares. Lukk avslutter uten å bruke en valgt rad. Ctrl+Z er for filoperasjoner, ikke sletting i samlingsmanageren."
+          },
+          {
+            "id": "smart_collections.p013",
+            "source_sha256": "fc23ad3b8bc9134b6679c107990040938242a050929d015a037c6128ec0433d6",
+            "text": "EKSEMPEL: SORTER BILDER PÅ TVERS AV UNDERMAPPER ETTER OPPLØSNING"
+          },
+          {
+            "id": "smart_collections.p014",
+            "source_sha256": "71fd063332ef48d1b7ce3c83f9cdbc8f08084a1965687f4f382f46399b47cc96",
+            "text": "1. I venstre rute, Bla gjennom… til din Bilder overordnede mappe, aktiver Inkluder undermapper og Bilder, og slå av Videoer.\n2. Fjern Finn og sett Oppløsning til Alle hvis du vil sammenligne alle dimensjoner. Åpne Flere filtre… og Fjern/Bruk hvis gamle begrensninger skal fjernes.\n3. I Detaljer, klikk Oppløsning til ønsket stigende eller synkende rekkefølge vises. Eller velg Minibilder og Sorter > Oppløsning > Minste først eller Største først. Oppløsning sortering bruker pikselsområde (bredde × høyde), med bredde og høyde som bryter likt-område-bånd; det er ikke en enkel bredde-only sortering. En eksakt Oppløsning filter begrenser seg i stedet til ett spesifikt dimensjonpar.\n4. Lagre den aktive ruten som Bilder etter oppløsning. Senere Bruk denne oppføringen i hvilken som helst rute for å gjenta søket, inkludert nylig tilføyde matchende filer etter skanning."
+          },
+          {
+            "id": "smart_collections.p015",
+            "source_sha256": "ff3bb0c443412ace673aef6b3b1dd606e3214fe0e515419f44b8de1c6e8f7ee7",
+            "text": "EKSEMPEL: SE HØYOPPLØSELIGE VIDEOER"
+          },
+          {
+            "id": "smart_collections.p016",
+            "source_sha256": "58ddf88adee5ea950a3c3cc66a1975d861ac600276d297a9190c5cd96961d30b",
+            "text": "1. Bla gjennom…til en Videoeroverordnet mappe, aktiver Inkluder undermapper og Videoer, og sving Bilderav.\n2. I Flere filtre…, sett Minimum bredde (piksler) til 1920 og Minimal høyde (piksler) til 1080 hvis du vil ha videoer som oppfyller BEGGE dimensjonene. Dette ekskluderer portrettvideoer smalere enn 1920, selv når de har høye pikselantall; juster grensene eller bruk Orienteringi henhold til målet ditt.\n3. Forlat Oppløsningå inkludere forskjellige kvalifiserende dimensjoner i det hele tatt. Valgfritt å sette Kodek inneholder til HEVC for å samsvare med den lagrede HEVC-codecetiketten, eller H.264 for H.264. Filteret samsvarer bokstavelig med den viste codecetiketten, uavhengig av bokstavstorrelse; h264 uten punktum samsvarer ikke med H.264. Bruk Info for å se en fils faktiske codec hvis et filter ikke finner noe.\n4. Sorter etter Oppløsning i Detaljer eller Minibilder. Andre støttede sorteringsfelt inkluderer Navn, Dato endret, Filstørrelse, Lengde, Kodek, Type, Bitrate, Bilder per sekund og Vurdering. Lagre som videoer i høy oppløsning. Bruk Forhåndsvisning eller informasjon når det er nødvendig for å gjennomgå individuelle resultater; å aktivere dem er uavhengig av samlingsdefinisjonen."
+          },
+          {
+            "id": "smart_collections.p017",
+            "source_sha256": "582f628c0fa7f236fedaf4a03501cc2af09cc29bf57550102597d7d8e626b747",
+            "text": "BEGRENSNINGER OG FILHANDLINGER"
+          },
+          {
+            "id": "smart_collections.p018",
+            "source_sha256": "9722f0d4824f0d75e2aa03fd474ccaa99cbe4abb11cf0728857e688af3d85f7a",
+            "text": "En samling er en forhåndsinnstilling over tilgjengelige filer, ikke et indeksert bibliotek som spenner over frakoblede stasjoner, en bakgrunnsautomatisk regel, en spilleliste, en duplikatgruppe eller en fysisk mappe. Endring av en forhåndsinnstilling reorganiserer aldri filer automatisk. Filkopierings-/flytte-/slettkommandoer du bevisst utfører på resultatene, handler fortsatt på de opprinnelige mediene. Eksisterende merkinger har forrang over markering og kan inkludere filer som er skjult av filtre; sjekk telleverket for merking og Fjern merker før du utfører handlinger på en uønsket gruppe. Navigering til en annen mappe fjerner merkene i det panelet. Bruk av samling kan beholde eksisterende merkinger når startmappen forblir den samme, så gå alltid gjennom dem før filhandlinger."
+          },
+          {
+            "id": "smart_collections.p019",
+            "source_sha256": "07532ce67ddc2c2b72a425c349151e1bfee9bb68f725bc867be341fef82f1f29",
+            "text": "Se også: [chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+          }
+        ],
+        "body": "HVA SMARTE SAMLINGER LAGRER\n\nEn smart samling er en navngitt, lagret søk og visning for ett nettleservindu. Den husker hvordan man finner og viser filer i en kildemappe. Den refererer til de originale filene; oppretting, åpning, gi nytt navn til eller slette en samling kopierer, flytter, gir nytt navn, sletter eller kommenterer ikke disse mediefilene. Bruk den når du gjentatte ganger gjennomgår det samme biblioteket med bestemte filtre og sortering, i stedet for å skrive inn disse innstillingene på nytt ved hvert besøk. Et lagret arbeidsområde gjenoppretter begge vinduene og deres oppsett; en smart samling endrer kun det aktive vinduet.\n\nHver samling har nøyaktig én startmappe. Inkluder undermapper søker gjennom alle mappene under den roten. Den kan ikke kombinere vilkårlige, uknyttede mapper, separate stasjoner eller flere startroter til én samling. Velg deres nærmeste felles overordnede mappe når det er praktisk, eller lag separate samlinger og åpne dem i de to rutene. Ved å velge en stasjonsrot med Inkluder undermapper kan du skanne hele stasjonen; velg den smaleste nyttige overordnede mappen.\n\nDe lagrede innstillingene er mappestien, Inkluder undermapper, Videoer og Bilder-brytere, Finn tekst, Oppløsning-utvalg, alle Verdier for Flere filtre, sorteringsfelt og retning, Detaljer eller Minibilder, miniatyrstørrelse og Kontinuerlig eller Sidevis-modus. Den lagrer ikke avkryssede filer, uthevede utvalg, forhåndsvisningsavspilling, sanntidsovervåking, den andre ruten, kolonnebredder/-rekkefølge, rutedelere eller miniatyrsidekapasitet. Disse forblir uavhengige innstillinger. Samlinger lagres lokalt i smart_collections.json i applikasjonsinnstillingskatalogen.\n\nOPPRETT EN SAMLING\n\n1. Klikk inne i ruten du vil konfigurere. Dette gjør den til den aktive ruten for Verktøykommandoer.\n2. Bruk Bla gjennom…eller stiboksen for å åpne den tiltenkte kilde-mappen.Aktiver Inkluder undermapperom nestede mapper skal inngå i søket.\n3. Kryss av Videoer, Bilder, eller begge deler. Sett Søk etter en filnavn- eller relativ-stiangivelsesdel som ikke skiller mellom store og små bokstaver, og velg Oppløsning for en nøyaktig bredde × høyde der ønsket. Skjermen viser Oppløsning:Alt når ingen eksakt oppløsningsbegrensning er påført.\n4. Åpne Flere filtre…for orientering, kodek-understreng, tagg-understreng, minimumsvurdering, fargemerke, minimum/maksimum bredde og høyde, filstørrelse, varighet og endringsdatoer. Tomme felt setter ingen begrensning; alle ikke-tomme begrensninger må samsvare. Skriv inn Brukå bruke filtrene.Fjern tilbakestiller de avanserte filterverdiene. Dette er ikke et eget vilkårlig-utvidelsesfilter; bruk Videoer/Bilderbrytere og, der det er passende, en filnavndel som .mp4.\n5. Vent på skanningen og velg ønsket rekkefølge. I Detaljer, klikk på en kolonneoverskrift; klikk igjen for å snu retningen. I Minibilder, bruk Sorter og undermenyen for felt/retning. Begge visninger bruker det samme filtrerte mediet og rekkefølgen.\n6. Velg Verktøy > Lagre aktiv smart samling…og skriv inn et beskrivende samlingsnavn. Å lagre et eksisterende navn spør Erstatt smartsamling; enes bare hvis det gjeldende panelet skal erstatte den lagrede definisjonen. Lagring oppretter en forhåndsinnstilling, ikke en kopi av de viste filene.\n\nÅPNE OG OPPDATERE EN KOLLEKSJON\n\nVelg destinasjonspanelet først. Åpne Verktøy > Administrer smarte samlinger…, velg en lagret oppføring, og klikk Bruk eller dobbeltklikk raden. Det aktive panelet navigerer til den lagrede startmappen, gjenoppretter de lagrede filtrene, sorteringen og presentasjonen, og skanner den deretter. Det motsatte panelet forblir uendret. Hvis mappen er frakoblet, flyttet eller ikke lenger finnes, forklarer Samlemappe utilgjengelig den lagrede stien; koble den til igjen eller lagre en erstatning ved hjelp av en gyldig mappe.\n\nResultats viser filer som for øyeblikket finnes når panelet skanner, i stedet for en frossen liste som ble lagret da forhåndsinnstillingen ble lagret. Bruk panelets Ôå╗-knapp, Vis > Oppdater aktiv rute, eller F5 for begge paneler etter eksterne filendringer. Live kan overvåke den nåværende mappen, men Live er ikke en del av en lagret samling. Endringer i filtrering eller sortering påvirker den nåværende visningen umiddelbart; endringer i kildeområdet krever tilsvarende skanning. Avbryt stopper en skanning. Stor rekursive samlinger bruker samme metadata-buffer og ytelsesprofiler som vanlig gjennomgang.\n\nDet finnes ingen separat knapp for redigering av samling. For å endre en eksisterende samling, Bruk den, juster mappen, omfanget, filtrene eller rekkefølgen i det panelet, og velg deretter Verktøy > Lagre aktiv smart samling… med samme navn og bekreft erstatning. I manageren, Lagre gjeldende lagrer de gjeldende innstillingene for aktivt panel og ber om et navn; det redigerer ikke automatisk den valgte raden. Omdøping lagrer ingen endringer gjort på et panels filtre.\n\nGI NYTT NAVN, SLETT OG GJENOPPRETT\n\nI Verktøy > Administrer smarte samlinger…, velg en oppføring og klikk Gi nytt navn. Skriv inn Nytt navn: og bekreft erstatning dersom en annen samling allerede har det navnet. Slett ber om bekreftelse og fjerner kun forhåndsinnstillingen. Angre sletting gjenoppretter den sist slettede forhåndsinnstillingen mens dette manager-vinduet er åpent. Å lukke manageren mister denne midlertidige angrelisten. Hvis en samling med samme navn er opprettet etterpå, vil gjenoppretting av den slettede oppføringen erstatte den navnet sin forhåndsinnstilling, så bruk ulike navn når begge skal bevares. Lukk avslutter uten å bruke en valgt rad. Ctrl+Z er for filoperasjoner, ikke sletting i samlingsmanageren.\n\nEKSEMPEL: SORTER BILDER PÅ TVERS AV UNDERMAPPER ETTER OPPLØSNING\n\n1. I venstre rute, Bla gjennom… til din Bilder overordnede mappe, aktiver Inkluder undermapper og Bilder, og slå av Videoer.\n2. Fjern Finn og sett Oppløsning til Alle hvis du vil sammenligne alle dimensjoner. Åpne Flere filtre… og Fjern/Bruk hvis gamle begrensninger skal fjernes.\n3. I Detaljer, klikk Oppløsning til ønsket stigende eller synkende rekkefølge vises. Eller velg Minibilder og Sorter > Oppløsning > Minste først eller Største først. Oppløsning sortering bruker pikselsområde (bredde × høyde), med bredde og høyde som bryter likt-område-bånd; det er ikke en enkel bredde-only sortering. En eksakt Oppløsning filter begrenser seg i stedet til ett spesifikt dimensjonpar.\n4. Lagre den aktive ruten som Bilder etter oppløsning. Senere Bruk denne oppføringen i hvilken som helst rute for å gjenta søket, inkludert nylig tilføyde matchende filer etter skanning.\n\nEKSEMPEL: SE HØYOPPLØSELIGE VIDEOER\n\n1. Bla gjennom…til en Videoeroverordnet mappe, aktiver Inkluder undermapper og Videoer, og sving Bilderav.\n2. I Flere filtre…, sett Minimum bredde (piksler) til 1920 og Minimal høyde (piksler) til 1080 hvis du vil ha videoer som oppfyller BEGGE dimensjonene. Dette ekskluderer portrettvideoer smalere enn 1920, selv når de har høye pikselantall; juster grensene eller bruk Orienteringi henhold til målet ditt.\n3. Forlat Oppløsningå inkludere forskjellige kvalifiserende dimensjoner i det hele tatt. Valgfritt å sette Kodek inneholder til HEVC for å samsvare med den lagrede HEVC-codecetiketten, eller H.264 for H.264. Filteret samsvarer bokstavelig med den viste codecetiketten, uavhengig av bokstavstorrelse; h264 uten punktum samsvarer ikke med H.264. Bruk Info for å se en fils faktiske codec hvis et filter ikke finner noe.\n4. Sorter etter Oppløsning i Detaljer eller Minibilder. Andre støttede sorteringsfelt inkluderer Navn, Dato endret, Filstørrelse, Lengde, Kodek, Type, Bitrate, Bilder per sekund og Vurdering. Lagre som videoer i høy oppløsning. Bruk Forhåndsvisning eller informasjon når det er nødvendig for å gjennomgå individuelle resultater; å aktivere dem er uavhengig av samlingsdefinisjonen.\n\nBEGRENSNINGER OG FILHANDLINGER\n\nEn samling er en forhåndsinnstilling over tilgjengelige filer, ikke et indeksert bibliotek som spenner over frakoblede stasjoner, en bakgrunnsautomatisk regel, en spilleliste, en duplikatgruppe eller en fysisk mappe. Endring av en forhåndsinnstilling reorganiserer aldri filer automatisk. Filkopierings-/flytte-/slettkommandoer du bevisst utfører på resultatene, handler fortsatt på de opprinnelige mediene. Eksisterende merkinger har forrang over markering og kan inkludere filer som er skjult av filtre; sjekk telleverket for merking og Fjern merker før du utfører handlinger på en uønsket gruppe. Navigering til en annen mappe fjerner merkene i det panelet. Bruk av samling kan beholde eksisterende merkinger når startmappen forblir den samme, så gå alltid gjennom dem før filhandlinger.\n\nSe også: [chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+      },
+      {
+        "id": "duplicates_and_comparison",
+        "title": "Duplikater Og sammenligning",
+        "paragraphs": [
+          {
+            "id": "duplicates_and_comparison.p001",
+            "source_sha256": "0782926d2c4bf15b6bc6546a84700657d47e97dec140144e01570bb40c129af6",
+            "text": "Verktøy > Finn duplikater finner eksakte treff i flere trinn. Filer av samme størrelse får et raskt fingeravtrykk hentet fra begynnelsen, midten og slutten; kun matchende kandidater leses deretter fullstendig og verifiseres med SHA-256. Begge fingeravtrykkene lagres i SQLite-cachen mens sti, størrelse og endringstid forblir uendret, noe som gjør senere søk mye raskere. Fremdriften vises i statuslinjen i det aktive panelet. Gjennomgangsvinduet viser to kopier side om side med stier, datoer og bevaringsetiketter. En strategi velger bare foreslåtte dupliserte filer – den sletter dem aldri automatisk. Sammenlign valgte viser to valgte filer og deres tekniske metadata."
+          },
+          {
+            "id": "duplicates_and_comparison.p002",
+            "source_sha256": "db002d92b3f1a118d7bb8aa101af8c1ae262721f09af95713962ae48eac85a4e",
+            "text": "Verktøy > Finn visuelt lignende bilder oppdager endrede størrelse, lett komprimerte på nytt, og på annen måte visuelt lignende bilder selv når filene deres ikke er byte-for-byte identiske. Velg Synlig eller Alle skannet og en toleranse fra 0–16; lavere verdier er strengere og 6 er standard. De 64-bits differansehasjene blir bufret mot sti, størrelse og endringsdato, og et BK-tre gjør matching praktisk på store samlinger. Resultat er estimater og åpnes i et kun-gjennomgangs-vindu med forhåndsvisninger og en Velg denne gruppen-handling. Verktøyet sletter eller endrer aldri filer; gjennomgå hver foreslått gruppe før du bruker vanlige filhandlinger."
+          },
+          {
+            "id": "duplicates_and_comparison.usage",
+            "source_sha256": "ff37fdb3497ad945d44131286606d3efc34ef09526591ecd559e63aaa9b6e4ca",
+            "text": "BRUKE ANMELDELSEVERKTØYENE\n\nFor nøyaktige duplikater, åpne kildemappen, aktiver Inkluder undermapperom nødvendig, vent på skanning og velg Verktøy > Finn duplikater…. Den undersøker alle medier som er skannet i det panelet, ikke bare fremhevede eller filter-synlige filer. Gå gjennom de grupperte stiene og side-ved-side forhåndsvisningene, og velg deretter en behold-strategi for å fremheve de foreslåtte doble kopiene i kildepanelet. Dette sletter dem ikke.Fjern eksisterende avkryssinger og inspiser de foreslåtte uthevingene før du kjører en filhandling.\n\nFor visuelt lignende bilder, velg Verktøy > Finn visuelt like bilder…, velg Omfang: Synlig eller Alle skannet, sett likhetstoleranse (0–16), og klikk Start. Begynn med 6; lavere er strengere. Velg et resultat for å forhåndsvise det; Velg denne gruppen i kildepaneletfremhever gruppen, inkludert referansebildet. Det er ikke en automatisk valg av kun uønskede kopier.\n\nFor å sammenligne et par direkte, fjern uønskede avmerkingsbokser, velg nøyaktig to filer i ett panel og velg Verktøy > Sammenlign valgte…. Sjekk forhåndsvisningene deres, stiene og egenskapene.Hold til venstre (resirkuler til høyre) og Hold høyre (resirkuler venstre) be om bekreftelse før du sender den andre filen til papirkurven. Å lukke uten å utføre noen av handlingene lar begge filene være uendret."
+          }
+        ],
+        "body": "Verktøy > Finn duplikater finner eksakte treff i flere trinn. Filer av samme størrelse får et raskt fingeravtrykk hentet fra begynnelsen, midten og slutten; kun matchende kandidater leses deretter fullstendig og verifiseres med SHA-256. Begge fingeravtrykkene lagres i SQLite-cachen mens sti, størrelse og endringstid forblir uendret, noe som gjør senere søk mye raskere. Fremdriften vises i statuslinjen i det aktive panelet. Gjennomgangsvinduet viser to kopier side om side med stier, datoer og bevaringsetiketter. En strategi velger bare foreslåtte dupliserte filer – den sletter dem aldri automatisk. Sammenlign valgte viser to valgte filer og deres tekniske metadata.\n\nVerktøy > Finn visuelt lignende bilder oppdager endrede størrelse, lett komprimerte på nytt, og på annen måte visuelt lignende bilder selv når filene deres ikke er byte-for-byte identiske. Velg Synlig eller Alle skannet og en toleranse fra 0–16; lavere verdier er strengere og 6 er standard. De 64-bits differansehasjene blir bufret mot sti, størrelse og endringsdato, og et BK-tre gjør matching praktisk på store samlinger. Resultat er estimater og åpnes i et kun-gjennomgangs-vindu med forhåndsvisninger og en Velg denne gruppen-handling. Verktøyet sletter eller endrer aldri filer; gjennomgå hver foreslått gruppe før du bruker vanlige filhandlinger.\n\nBRUKE ANMELDELSEVERKTØYENE\n\nFor nøyaktige duplikater, åpne kildemappen, aktiver Inkluder undermapperom nødvendig, vent på skanning og velg Verktøy > Finn duplikater…. Den undersøker alle medier som er skannet i det panelet, ikke bare fremhevede eller filter-synlige filer. Gå gjennom de grupperte stiene og side-ved-side forhåndsvisningene, og velg deretter en behold-strategi for å fremheve de foreslåtte doble kopiene i kildepanelet. Dette sletter dem ikke.Fjern eksisterende avkryssinger og inspiser de foreslåtte uthevingene før du kjører en filhandling.\n\nFor visuelt lignende bilder, velg Verktøy > Finn visuelt like bilder…, velg Omfang: Synlig eller Alle skannet, sett likhetstoleranse (0–16), og klikk Start. Begynn med 6; lavere er strengere. Velg et resultat for å forhåndsvise det; Velg denne gruppen i kildepaneletfremhever gruppen, inkludert referansebildet. Det er ikke en automatisk valg av kun uønskede kopier.\n\nFor å sammenligne et par direkte, fjern uønskede avmerkingsbokser, velg nøyaktig to filer i ett panel og velg Verktøy > Sammenlign valgte…. Sjekk forhåndsvisningene deres, stiene og egenskapene.Hold til venstre (resirkuler til høyre) og Hold høyre (resirkuler venstre) be om bekreftelse før du sender den andre filen til papirkurven. Å lukke uten å utføre noen av handlingene lar begge filene være uendret."
+      },
+      {
+        "id": "video_conversion",
+        "title": "Videokonvertering",
+        "paragraphs": [
+          {
+            "id": "video_conversion.p001",
+            "source_sha256": "b2ee9f6d3dced7fd286ca5ee1d093029d40566fbc9e29e283a2a3058d9c37b85",
+            "text": "Bruk Verktøy > Konverter valgte videoer… for å lage nye videofiler med en annen codec, beholder eller oppløsning. Originalene beholdes. Velg først et lite utvalg slik at du kan sammenligne kvaliteten, avspillingskompatibilitet, filstørrelse og konverteringstid før du behandler en stor gruppe."
+          },
+          {
+            "id": "video_conversion.p002",
+            "source_sha256": "d51cf66e935232f9f87c8254590a1e53247ff73d6b9a122efcfcfe2a026f48d9",
+            "text": "KONVERTER EN ELLER FLERE VIDEOS\n\n1. Åpne kildemappen i en av rutene.Aktiver Inkluder undermapper hvis videoene er spredt over undermappene, og vent på at skanningen skal bli ferdig.\n2. Merk av videoene som skal konverteres. Hvis det ikke er noen avmerkingsbokser, bruker kommandoen de uthevede filene i stedet.Fjern uønskede kryss først: en fil merket med kryss som er skjult av et filter, tilhører fortsatt handlingsgruppen.Bilderi gruppen blir ignorert av denne kommandoen.\n3. Velg Verktøy > Konverter valgte videoer…\n4. Velg forhåndsinnstilling Oppløsning, Kvalitet (CRF) og kodingsmotor som beskrevet nedenfor.\n5. Sjekk Utdatamappe. Den peker opprinnelig til den andre panelens mappe; bruk Bla gjennom…eller skriv inn et annet reisemål hvis nødvendig. Sjekk Behold mapper relativt til aktivt panelå beholde kilde-undermappestrukturen under den destinasjonen.\n6. Velg Hopp over eksisterende eller Behold begge. Klikk Oppdater forhåndsvisningetter å ha endret destinasjonen, mappebevaring eller eksisterende-fil policy. Les hver Kilde og Utdatasti og sjekk Statuskolonne. Bare Klarrader vil kjøre.\n7. Klikk Start konvertering…og gjennomgå bekreftelsen før du godtar. Følg med på fremdriften og per-fil Resultat. Når du er ferdig, åpne den konverterte filen og sjekk den før du bestemmer hva du vil gjøre med den originale."
+          },
+          {
+            "id": "video_conversion.p003",
+            "source_sha256": "13dffb3d18a13839d2bb6145a7313a3ee2144bcdd5305808500659c8a434c0a8",
+            "text": "VALG AV FORINNSTILT OPPSETT\n\nH.264 MP4 (kompatibel): et nyttig valg når bred kompatibilitet med spillere/enheter er viktig.\nH.265 MP4 (mindre): HEVC-koding, som kan redusere filstørrelsen, men krever en kompatibel spiller.\nAV1 MKV (minste): AV1-koding i en MKV-beholder; sjekk avspillingsstøtte og konverteringshastighet på datamaskinen din.\n720p H.264 proxy: en H.264-kopi med lavere oppløsning som er nyttig for raskere gjennomgang eller vurdering. Å velge dette forhåndsinnstilte alternativet setter Oppløsning til 720p; du kan endre dette før du starter.\nRemux til MKV (ingen re-koding): kopierer de eksisterende strømmene inn i MKV. Det endrer ikke videokodeken, oppløsning eller kvalitet, og er ikke en måte å konvertere H.264 til H.265 på. Navn på re-kodingsforhåndsinnstillinger garanterer ikke at hver utdata vil være mindre enn kilden."
+          },
+          {
+            "id": "video_conversion.p004",
+            "source_sha256": "31fe0e232d02cd89058578e2fccde72f21ae8fd0074c94698407be72fccf86ed",
+            "text": "OPPLØSNING OG KVALITET\n\nBehold kildeoppløsning beholder de opprinnelige rammedimensjonene ved re-koding. 1080p og 720p setter UT-HØYDEN til 1080 eller 720 piksler samtidig som de bevarer sideforholdet; de er ikke maksimum-bredde- eller automatisk nedskaleringsjusteringer. For eksempel blir en 3840 × 2160-video 1920 × 1080 med 1080p. En mindre kilde kan forstørres, noe som ikke gjenoppretter manglende detaljer. Portrett-videoer beholder proporsjonene sine i stedet for å bli landskap.\n\nKvalitet (CRF) aksepterer hele tall fra 18 til 35; standardverdien er 23. Lavere tall ber om høyere kvalitet og vanligvis større filer. Maskinvarenmotorer mapper denne verdien til sin egen kvalitetskontroll, så like verdier trenger ikke å gi identiske resultater på tvers av motorer. Prøv en prøve. Remux ignorerer kvalitet, endring av størrelse og akselerasjon."
+          },
+          {
+            "id": "video_conversion.p005",
+            "source_sha256": "2d17a4384e7cc6ceb233a92096824f99dc79d0d11c5f43d2c552d545e166b856",
+            "text": "KODING OG DEKODING\n\nAutomatisk (anbefalt) prøver tilgjengelige maskinvarekodingsalternativer og faller tilbake til alternativer for Programvare / CPU om nødvendig. Programvare / CPU bruker prosessoren. NVIDIA NVENC, Intel Quick Sync, AMD AMF og Linux VA-API tilbys der det støttes for det valgte forhåndsinnstilte alternativet. Oppsummeringen for deteksjon rapporterer FFmpeg-støtte; den valgte maskinvaren og driverne må også fungere. En eksplisitt valgt maskinvarenhet rapporterer feil i stedet for å stille stille over til en annen koder.\n\nBruk maskinvardekoding når tilgjengelig kontrollerer lesing av kilden uavhengig av utgangskoderen. Hvis en forespurt maskinvaredekoder ikke kan starte, prøves dekoding på nytt i programvaren mens den valgte koderen beholdes. Fjern avkrysningen når du ønsker programvarededekoding. Disse innstillingene endrer ikke den opprinnelige filen."
+          },
+          {
+            "id": "video_conversion.p006",
+            "source_sha256": "06ea5ef5426b40dc040f7227353e00d7437b8fc335a4e6ad48d27d5bbdcf8834",
+            "text": "UTDATA NAVN, FREMGANG OG AVBRYTELSE\n\nNye filnavn inkluderer et forhåndsinnstilt suffiks og, når valgt, utdataoppløsningen. Hopp over eksisterende lar en eksisterende målfil være urørt. Behold begge bruker et nummerert filnavn i stedet for å erstatte det. Sjekk forhåndsvisningen for hoppede filer, dupliserte utdatafilnavn eller andre problemer før du starter.\n\nVideoer behandles en om gangen. Avbryt konvertering stopper den nåværende konverteringen, fjerner uferdig utdata og stopper resten av køen. Fullførte utdata forblir. Å lukke dette konverteringsvinduet ber også om avbrytelse. Dens kø er separat fra Verktøy > Overføringskø…, som håndterer kopiering og flytting."
+          },
+          {
+            "id": "video_conversion.p007",
+            "source_sha256": "2305a1598d67013bd4f756c6d91dec721660a38e61ab32c2435ab8a104a9ee5b",
+            "text": "EKSEMPEL: H.264 TIL H.265 PÅ 1080p\n\nMerk noen H.264-videoer, åpne Verktøy > Konverter valgte videoer…, velg H.265 MP4 (mindre), sett Oppløsning til 1080p, la Kvalitet (CRF) stå på 23 for en første test, og velg Automatisk (anbefalt). Velg en utdata-mappe, klikk Oppdater forhåndsvisning, kontroller stiene, deretter Start konvertering…. Sammenlign de ferdige kopiene med originalene; juster kvalitet eller oppløsning og test igjen om nødvendig."
+          }
+        ],
+        "body": "Bruk Verktøy > Konverter valgte videoer… for å lage nye videofiler med en annen codec, beholder eller oppløsning. Originalene beholdes. Velg først et lite utvalg slik at du kan sammenligne kvaliteten, avspillingskompatibilitet, filstørrelse og konverteringstid før du behandler en stor gruppe.\n\nKONVERTER EN ELLER FLERE VIDEOS\n\n1. Åpne kildemappen i en av rutene.Aktiver Inkluder undermapper hvis videoene er spredt over undermappene, og vent på at skanningen skal bli ferdig.\n2. Merk av videoene som skal konverteres. Hvis det ikke er noen avmerkingsbokser, bruker kommandoen de uthevede filene i stedet.Fjern uønskede kryss først: en fil merket med kryss som er skjult av et filter, tilhører fortsatt handlingsgruppen.Bilderi gruppen blir ignorert av denne kommandoen.\n3. Velg Verktøy > Konverter valgte videoer…\n4. Velg forhåndsinnstilling Oppløsning, Kvalitet (CRF) og kodingsmotor som beskrevet nedenfor.\n5. Sjekk Utdatamappe. Den peker opprinnelig til den andre panelens mappe; bruk Bla gjennom…eller skriv inn et annet reisemål hvis nødvendig. Sjekk Behold mapper relativt til aktivt panelå beholde kilde-undermappestrukturen under den destinasjonen.\n6. Velg Hopp over eksisterende eller Behold begge. Klikk Oppdater forhåndsvisningetter å ha endret destinasjonen, mappebevaring eller eksisterende-fil policy. Les hver Kilde og Utdatasti og sjekk Statuskolonne. Bare Klarrader vil kjøre.\n7. Klikk Start konvertering…og gjennomgå bekreftelsen før du godtar. Følg med på fremdriften og per-fil Resultat. Når du er ferdig, åpne den konverterte filen og sjekk den før du bestemmer hva du vil gjøre med den originale.\n\nVALG AV FORINNSTILT OPPSETT\n\nH.264 MP4 (kompatibel): et nyttig valg når bred kompatibilitet med spillere/enheter er viktig.\nH.265 MP4 (mindre): HEVC-koding, som kan redusere filstørrelsen, men krever en kompatibel spiller.\nAV1 MKV (minste): AV1-koding i en MKV-beholder; sjekk avspillingsstøtte og konverteringshastighet på datamaskinen din.\n720p H.264 proxy: en H.264-kopi med lavere oppløsning som er nyttig for raskere gjennomgang eller vurdering. Å velge dette forhåndsinnstilte alternativet setter Oppløsning til 720p; du kan endre dette før du starter.\nRemux til MKV (ingen re-koding): kopierer de eksisterende strømmene inn i MKV. Det endrer ikke videokodeken, oppløsning eller kvalitet, og er ikke en måte å konvertere H.264 til H.265 på. Navn på re-kodingsforhåndsinnstillinger garanterer ikke at hver utdata vil være mindre enn kilden.\n\nOPPLØSNING OG KVALITET\n\nBehold kildeoppløsning beholder de opprinnelige rammedimensjonene ved re-koding. 1080p og 720p setter UT-HØYDEN til 1080 eller 720 piksler samtidig som de bevarer sideforholdet; de er ikke maksimum-bredde- eller automatisk nedskaleringsjusteringer. For eksempel blir en 3840 × 2160-video 1920 × 1080 med 1080p. En mindre kilde kan forstørres, noe som ikke gjenoppretter manglende detaljer. Portrett-videoer beholder proporsjonene sine i stedet for å bli landskap.\n\nKvalitet (CRF) aksepterer hele tall fra 18 til 35; standardverdien er 23. Lavere tall ber om høyere kvalitet og vanligvis større filer. Maskinvarenmotorer mapper denne verdien til sin egen kvalitetskontroll, så like verdier trenger ikke å gi identiske resultater på tvers av motorer. Prøv en prøve. Remux ignorerer kvalitet, endring av størrelse og akselerasjon.\n\nKODING OG DEKODING\n\nAutomatisk (anbefalt) prøver tilgjengelige maskinvarekodingsalternativer og faller tilbake til alternativer for Programvare / CPU om nødvendig. Programvare / CPU bruker prosessoren. NVIDIA NVENC, Intel Quick Sync, AMD AMF og Linux VA-API tilbys der det støttes for det valgte forhåndsinnstilte alternativet. Oppsummeringen for deteksjon rapporterer FFmpeg-støtte; den valgte maskinvaren og driverne må også fungere. En eksplisitt valgt maskinvarenhet rapporterer feil i stedet for å stille stille over til en annen koder.\n\nBruk maskinvardekoding når tilgjengelig kontrollerer lesing av kilden uavhengig av utgangskoderen. Hvis en forespurt maskinvaredekoder ikke kan starte, prøves dekoding på nytt i programvaren mens den valgte koderen beholdes. Fjern avkrysningen når du ønsker programvarededekoding. Disse innstillingene endrer ikke den opprinnelige filen.\n\nUTDATA NAVN, FREMGANG OG AVBRYTELSE\n\nNye filnavn inkluderer et forhåndsinnstilt suffiks og, når valgt, utdataoppløsningen. Hopp over eksisterende lar en eksisterende målfil være urørt. Behold begge bruker et nummerert filnavn i stedet for å erstatte det. Sjekk forhåndsvisningen for hoppede filer, dupliserte utdatafilnavn eller andre problemer før du starter.\n\nVideoer behandles en om gangen. Avbryt konvertering stopper den nåværende konverteringen, fjerner uferdig utdata og stopper resten av køen. Fullførte utdata forblir. Å lukke dette konverteringsvinduet ber også om avbrytelse. Dens kø er separat fra Verktøy > Overføringskø…, som håndterer kopiering og flytting.\n\nEKSEMPEL: H.264 TIL H.265 PÅ 1080p\n\nMerk noen H.264-videoer, åpne Verktøy > Konverter valgte videoer…, velg H.265 MP4 (mindre), sett Oppløsning til 1080p, la Kvalitet (CRF) stå på 23 for en første test, og velg Automatisk (anbefalt). Velg en utdata-mappe, klikk Oppdater forhåndsvisning, kontroller stiene, deretter Start konvertering…. Sammenlign de ferdige kopiene med originalene; juster kvalitet eller oppløsning og test igjen om nødvendig."
+      },
+      {
+        "id": "media_reports",
+        "title": "Eksportere en medierapport",
+        "paragraphs": [
+          {
+            "id": "media_reports.p001",
+            "source_sha256": "e5820c2e78ffa8b3b9ff09b57d59bc2adc0b1d92bf570493c0d4aa52c3ab7f5d",
+            "text": "Verktøy > Eksporter medierapport… lagrer et register over filer som allerede er skannet i det aktive panelet. Det kopierer, konverterer eller endrer ikke disse mediefilene. Bruk CSV for et regneark, JSON for strukturerte data, eller HTML for en rapport du kan åpne i en nettleser."
+          },
+          {
+            "id": "media_reports.p002",
+            "source_sha256": "94aceb1c124b99d41385988a2d8951dbf25dd5178e8759add72a545ebfbfd828",
+            "text": "LAG EN RAPPORT\n\n1. Åpne mappen du vil katalogisere. Aktiver Inkluder undermapper om nødvendig, og la skanningen fullføre.\n2. Bruk filtre hvis du vil ha en rapport for en bestemt gruppe, som H.265-videoer eller bilder med høy oppløsning. Klikk inne i det panelet for å aktivere det.\n3. Velg Verktøy > Eksporter medierapport….\n4. Sett Omfang til Valgt, Synlig eller Alle skannet.\n5. Velg Format: CSV, JSON eller HTML.\n6. La Inkluder fullstendige filbaner stå krysset for å registrere fullstendige plasseringer, eller fjern krysset for å bruke stier relative til den aktive mappen der det er mulig.\n7. Klikk Eksporter…, velg rapportens filnavn og destinasjon, og deretter Lagre. Vent på Rapport eksportert. Åpne den lagrede filen i det aktuelle regnearket, nettleseren eller datavisningsprogrammet."
+          },
+          {
+            "id": "media_reports.p003",
+            "source_sha256": "5537e045dec5259f000dbdf42606d0124a95734ebcc8c6f57073576f0b3bcd6d",
+            "text": "HVA OMFANG BETYR\n\nValgt bruker rutete filer i ruten når det finnes kryss; ellers bruker den uthevede filer. Skjulte kryss kan derfor inkluderes. Synlig betyr ALLE filer som samsvarer med de gjeldende rute-filtrene, ikke bare radene eller miniatyrene som vises på skjermen eller den gjeldende miniatyrsiden. Alle skannet inkluderer rutens skannede medier selv om gjeldende filtre skjuler dem. Ingen av disse alternativene skanner automatisk en annen stasjon eller mappe."
+          },
+          {
+            "id": "media_reports.p004",
+            "source_sha256": "5741554f0d983a0f0b711b553b0139e6d53ee97d55ac8ee048ac36b006cc85f4",
+            "text": "HVA RAPPORTEN INNEHOLDER\n\nHver post inkluderer navn og bane, medietype og filendelse, dimensjoner/oppløsning, størrelse, endringsdato, varighet, videokodek, bithastighet, bildefrekvens, lydkodek/kanaler, pixelformat, HDR, vurdering, fargeetikett, tagger og lesbar/feil-status der det er tilgjengelig. Manglende informasjon forblir manglende; eksportering utfører ikke en full integritetskontroll. JSON inkluderer et sammendrag og en liste over elementer. HTML inkluderer et sammendrag og tabell. CSV inneholder tabellen for hver fil."
+          },
+          {
+            "id": "media_reports.p005",
+            "source_sha256": "0c1aff0372dd91ebb6e6b1344e7ca59216b6cbc2432e03f36f180b7b9bd7118f",
+            "text": "EKSEMPEL OG AVBRYTELSE\n\nFor å liste store videoer på tvers av undermapper, åpne deres felles overordnede mappe, aktiver Videoer og Inkluder undermapper, sett størrelsesbegrensningen i Flere filtre…, og eksporter deretter med Omfang: Synlig og Format: CSV. Åpne CSV-filen i regnearket ditt og gjennomgå størrelser og stier.\n\nAvbryt eksport stopper en eksport som pågår; Lukk forespør også avbrudd. En rapport plasseres kun på sitt endelige filnavn når skrivingen er fullført, så avbrudd etterlater ikke en delvis skrevet endelig rapport. Gå gjennom stier før du deler en rapport: fullstendige filstier kan avsløre mappenavn."
+          }
+        ],
+        "body": "Verktøy > Eksporter medierapport… lagrer et register over filer som allerede er skannet i det aktive panelet. Det kopierer, konverterer eller endrer ikke disse mediefilene. Bruk CSV for et regneark, JSON for strukturerte data, eller HTML for en rapport du kan åpne i en nettleser.\n\nLAG EN RAPPORT\n\n1. Åpne mappen du vil katalogisere. Aktiver Inkluder undermapper om nødvendig, og la skanningen fullføre.\n2. Bruk filtre hvis du vil ha en rapport for en bestemt gruppe, som H.265-videoer eller bilder med høy oppløsning. Klikk inne i det panelet for å aktivere det.\n3. Velg Verktøy > Eksporter medierapport….\n4. Sett Omfang til Valgt, Synlig eller Alle skannet.\n5. Velg Format: CSV, JSON eller HTML.\n6. La Inkluder fullstendige filbaner stå krysset for å registrere fullstendige plasseringer, eller fjern krysset for å bruke stier relative til den aktive mappen der det er mulig.\n7. Klikk Eksporter…, velg rapportens filnavn og destinasjon, og deretter Lagre. Vent på Rapport eksportert. Åpne den lagrede filen i det aktuelle regnearket, nettleseren eller datavisningsprogrammet.\n\nHVA OMFANG BETYR\n\nValgt bruker rutete filer i ruten når det finnes kryss; ellers bruker den uthevede filer. Skjulte kryss kan derfor inkluderes. Synlig betyr ALLE filer som samsvarer med de gjeldende rute-filtrene, ikke bare radene eller miniatyrene som vises på skjermen eller den gjeldende miniatyrsiden. Alle skannet inkluderer rutens skannede medier selv om gjeldende filtre skjuler dem. Ingen av disse alternativene skanner automatisk en annen stasjon eller mappe.\n\nHVA RAPPORTEN INNEHOLDER\n\nHver post inkluderer navn og bane, medietype og filendelse, dimensjoner/oppløsning, størrelse, endringsdato, varighet, videokodek, bithastighet, bildefrekvens, lydkodek/kanaler, pixelformat, HDR, vurdering, fargeetikett, tagger og lesbar/feil-status der det er tilgjengelig. Manglende informasjon forblir manglende; eksportering utfører ikke en full integritetskontroll. JSON inkluderer et sammendrag og en liste over elementer. HTML inkluderer et sammendrag og tabell. CSV inneholder tabellen for hver fil.\n\nEKSEMPEL OG AVBRYTELSE\n\nFor å liste store videoer på tvers av undermapper, åpne deres felles overordnede mappe, aktiver Videoer og Inkluder undermapper, sett størrelsesbegrensningen i Flere filtre…, og eksporter deretter med Omfang: Synlig og Format: CSV. Åpne CSV-filen i regnearket ditt og gjennomgå størrelser og stier.\n\nAvbryt eksport stopper en eksport som pågår; Lukk forespør også avbrudd. En rapport plasseres kun på sitt endelige filnavn når skrivingen er fullført, så avbrudd etterlater ikke en delvis skrevet endelig rapport. Gå gjennom stier før du deler en rapport: fullstendige filstier kan avsløre mappenavn."
+      },
+      {
+        "id": "embedded_metadata",
+        "title": "Visning av innebygd metadata",
+        "paragraphs": [
+          {
+            "id": "embedded_metadata.p001",
+            "source_sha256": "de02fc927d80ae28a81ef73fc00493e9dc09ed4f5766dfd6f65805e4b99c9abd",
+            "text": "Verktøy > Vis innleiret metadata… les informasjon lagret i ett bilde eller en video. Dette er annerledes enn applikasjonens egne vurderinger, fargemerker og etiketter, som ikke endrer mediefilen."
+          },
+          {
+            "id": "embedded_metadata.p002",
+            "source_sha256": "84dddde141e5b461ca97772fda91dd9488b49ce2db3f0100540c7e90cefcf078",
+            "text": "1. Fjern uønskede flått, velg deretter nøyaktig ett bilde eller video i det aktive panelet.\n2. Velg Verktøy > Vis innleiret metadata…og vent på at feltene skal vises.\n3. Les kolonnene Seksjon, Felt og Verdi.Bilderkan inkludere kamera-/dato-EXIF-informasjon og GPS-felt når de er til stede; videoer kan inkludere container- og strømmermerker. Ikke alle filer inneholder disse feltene.\n4. Skriv inn i Søk for å begrense de viste radene etter seksjon, felt eller verdi.\n5. Velg rader og klikk Kopier valgt/alt for å kopiere dem. Uten at noen rad er valgt, kopierer den alle radene som vises for øyeblikket.\n6. Klikk Eksporter JSON…for å lagre all hentet metadata, inkludert rader skjult av Finn. Velg et filnavn og Lagre.\n7. Lukk vinduet når ferdig. Visning, kopiering og eksport av metadata redigerer ikke innebygd informasjon i den originale filen."
+          }
+        ],
+        "body": "Verktøy > Vis innleiret metadata… les informasjon lagret i ett bilde eller en video. Dette er annerledes enn applikasjonens egne vurderinger, fargemerker og etiketter, som ikke endrer mediefilen.\n\n1. Fjern uønskede flått, velg deretter nøyaktig ett bilde eller video i det aktive panelet.\n2. Velg Verktøy > Vis innleiret metadata…og vent på at feltene skal vises.\n3. Les kolonnene Seksjon, Felt og Verdi.Bilderkan inkludere kamera-/dato-EXIF-informasjon og GPS-felt når de er til stede; videoer kan inkludere container- og strømmermerker. Ikke alle filer inneholder disse feltene.\n4. Skriv inn i Søk for å begrense de viste radene etter seksjon, felt eller verdi.\n5. Velg rader og klikk Kopier valgt/alt for å kopiere dem. Uten at noen rad er valgt, kopierer den alle radene som vises for øyeblikket.\n6. Klikk Eksporter JSON…for å lagre all hentet metadata, inkludert rader skjult av Finn. Velg et filnavn og Lagre.\n7. Lukk vinduet når ferdig. Visning, kopiering og eksport av metadata redigerer ikke innebygd informasjon i den originale filen."
+      },
+      {
+        "id": "media_integrity",
+        "title": "Sjekker medieintegritet",
+        "paragraphs": [
+          {
+            "id": "media_integrity.p001",
+            "source_sha256": "97deea524f7dd0dcdc0cd44429f4c4d29e3e5d71f7a4e9ca6240aaad7b295631",
+            "text": "Verktøy > Bekreft medienes integritet… sjekker om media kan dekodes, i stedet for å bare stole på filnavnet eller den tekniske overskriften. Bruk det til å undersøke uleste filer eller sjekke en batch før arkivering. Å lese hele videoer kan ta betydelig tid. Det reparerer eller endrer aldri originalene."
+          },
+          {
+            "id": "media_integrity.p002",
+            "source_sha256": "e788bb47cbc4c2ead78a958e6e1e23990943c61731afbfeeb2cda9b82c34fd3c",
+            "text": "1. Åpne kilde-mappen, sett Inkluder undermapperetter behov, og la skanningen fullføres.\n2. Velg Verktøy > Bekreft medienes integritet….\n3. Sett Omfang: Valgt for merkede/fremhevede filer, Synlig for alle filer som matcher filteret, eller Alle skannet for å inkludere filer skjult av filtre.\n4. Merk Tving ny kontroll hvis du vil ha en ny sjekk selv når et tidligere resultat er bufret.\n5. Klikk Start. Vurder Status, Bufret, sti og Detaljermens resultatene kommer inn.Godkjent betyr at dekoderen fullførte kontrollen sin; Mislyktesregistrerer et avkodings- eller tilgangsproblem. Det er ikke en garanti for visuell kvalitet, korrekt innhold eller fravær av skadelig programvare.\n6. Bruk Avbrytå stoppe videre sjekking.Resultatallerede samlet forblir tilgjengelig.\n7. Klikk Eksporter CSV…å lagre de innsamlede resultatene, inkludert når en sjekk ble avbrutt.Velg mislyktesmarkerer mislykkede filer tilbake i kildepanelet og lukker resultatvinduet; den sletter dem ikke."
+          },
+          {
+            "id": "media_integrity.p003",
+            "source_sha256": "1ae255df200b724240135bb169ad32364b4431dd787322cf203b44e9ce3e8323",
+            "text": "Før du handler på uthevede feil, inspiser detaljene deres og sjekk Fjern merker: eksisterende merker har fortsatt prioritet for påfølgende filkommandoer. En feil kan skyldes tillatelser, manglende stasjoner eller dekoderstøtte, samt skadede data. Ikke slett filer kun fordi en kontroll mislyktes."
+          }
+        ],
+        "body": "Verktøy > Bekreft medienes integritet… sjekker om media kan dekodes, i stedet for å bare stole på filnavnet eller den tekniske overskriften. Bruk det til å undersøke uleste filer eller sjekke en batch før arkivering. Å lese hele videoer kan ta betydelig tid. Det reparerer eller endrer aldri originalene.\n\n1. Åpne kilde-mappen, sett Inkluder undermapperetter behov, og la skanningen fullføres.\n2. Velg Verktøy > Bekreft medienes integritet….\n3. Sett Omfang: Valgt for merkede/fremhevede filer, Synlig for alle filer som matcher filteret, eller Alle skannet for å inkludere filer skjult av filtre.\n4. Merk Tving ny kontroll hvis du vil ha en ny sjekk selv når et tidligere resultat er bufret.\n5. Klikk Start. Vurder Status, Bufret, sti og Detaljermens resultatene kommer inn.Godkjent betyr at dekoderen fullførte kontrollen sin; Mislyktesregistrerer et avkodings- eller tilgangsproblem. Det er ikke en garanti for visuell kvalitet, korrekt innhold eller fravær av skadelig programvare.\n6. Bruk Avbrytå stoppe videre sjekking.Resultatallerede samlet forblir tilgjengelig.\n7. Klikk Eksporter CSV…å lagre de innsamlede resultatene, inkludert når en sjekk ble avbrutt.Velg mislyktesmarkerer mislykkede filer tilbake i kildepanelet og lukker resultatvinduet; den sletter dem ikke.\n\nFør du handler på uthevede feil, inspiser detaljene deres og sjekk Fjern merker: eksisterende merker har fortsatt prioritet for påfølgende filkommandoer. En feil kan skyldes tillatelser, manglende stasjoner eller dekoderstøtte, samt skadede data. Ikke slett filer kun fordi en kontroll mislyktes."
+      },
+      {
+        "id": "video_contact_sheets",
+        "title": "Opprette et video kontaktark",
+        "paragraphs": [
+          {
+            "id": "video_contact_sheets.p001",
+            "source_sha256": "dfbcc6d5b6648c41111ac2cc655dcf84740fdf1c9bdd8173582892799fbf4a42",
+            "text": "Et kontaktskjema er en PNG som inneholder et rutenett av stillbilder fra en video. Det gir en oversikt uten å spille av hele klippet. Verktøy > Opprett videokontaktark… endrer ikke kildevideoen."
+          },
+          {
+            "id": "video_contact_sheets.p002",
+            "source_sha256": "fe5c1944466bf890d4109983ffb85dd4dd70b26b039fb244122ff3be4f7462b1",
+            "text": "1. Fjern uønskede avmerkingsbokser og velg en video i det aktive panelet.\n2. Velg Verktøy > Opprett videokontaktark…\n3. Sett antall bilder (4–48), kolonner (2–8) og bildebredden (piksler) (160–640). Standardverdiene er 12 bilder, 4 kolonner og 320 piksler.\n4. La Vis bildenumre og tidsstemplerhaket av hvis du vil ha bildetekster under rammene.\n5. Klikk Opprett…, velg PNG-filnavnet og destinasjonen, og klikk på Lagre.\n6. Vent på Kontaktark fullført, åpne deretter den lagrede PNG-filen i en bildefremviser.Avbryt stopper utvinning; Lukk ber også om kansellering."
+          },
+          {
+            "id": "video_contact_sheets.p003",
+            "source_sha256": "f7a7ce26c0b8bef736351a923a83f5889983daaf7968b4a4afe9f42a47d89af6",
+            "text": "Rammer blir jevnt valgt gjennom klippet, og unngår dets eksakte første og siste rammer. Dette er ikke scenedeteksjon, og verktøyet trenger en lesbar videolengde. Storr rutenett og rammer tar lengre tid og lager et større bilde. For en rask oversikt, start med standard 12-rammers ark."
+          }
+        ],
+        "body": "Et kontaktskjema er en PNG som inneholder et rutenett av stillbilder fra en video. Det gir en oversikt uten å spille av hele klippet. Verktøy > Opprett videokontaktark… endrer ikke kildevideoen.\n\n1. Fjern uønskede avmerkingsbokser og velg en video i det aktive panelet.\n2. Velg Verktøy > Opprett videokontaktark…\n3. Sett antall bilder (4–48), kolonner (2–8) og bildebredden (piksler) (160–640). Standardverdiene er 12 bilder, 4 kolonner og 320 piksler.\n4. La Vis bildenumre og tidsstemplerhaket av hvis du vil ha bildetekster under rammene.\n5. Klikk Opprett…, velg PNG-filnavnet og destinasjonen, og klikk på Lagre.\n6. Vent på Kontaktark fullført, åpne deretter den lagrede PNG-filen i en bildefremviser.Avbryt stopper utvinning; Lukk ber også om kansellering.\n\nRammer blir jevnt valgt gjennom klippet, og unngår dets eksakte første og siste rammer. Dette er ikke scenedeteksjon, og verktøyet trenger en lesbar videolengde. Storr rutenett og rammer tar lengre tid og lager et større bilde. For en rask oversikt, start med standard 12-rammers ark."
+      },
+      {
+        "id": "folder_synchronization",
+        "title": "Mappe Synkronisering",
+        "paragraphs": [
+          {
+            "id": "folder_synchronization.p001",
+            "source_sha256": "6a5c3c71a212781f6a6c74fac70303224fcbeac3c7d2b4e7c00e810e71cdd110",
+            "text": "Åpne mappene du vil sammenligne i venstre og høyre rute, og velg deretter Verktøy > Sammenlign / synkroniser mapper. Gå gjennom Kun venstre, Kun høyre, Nyere og Forskjellige oppføringer før du legger til en enveissynkronisering i kø."
+          },
+          {
+            "id": "folder_synchronization.steps",
+            "source_sha256": "cf1597a5ccfc3cc7b73f8f7e2f000fa029816c676a9967854c22cd7d39862515",
+            "text": "1. Åpne de to mappene i venstre og høyre paneler. Sett Inkluder undermapperuavhengig for hver side hvis nødvendig.\n2. Velg Verktøy > Sammenlign / synkroniser mapper…\n3. Vurdering Relativ sti og Status: Bare venstre, bare høyre, lik, venstre nyere, høyre nyere eller ulik. Denne sammenligningen bruker støttede mediefiler, filstørrelser og modifikasjonstider; Lik er ikke en full innholdshash-sjekk. Den lager en oversikt over mappene uavhengig av panelenes søk-/medievisningsfiltre.\n4. Marker bestemte rader for å begrense operasjonen. Hvis ingen rader er markert, vurderer retningsknappene hele sammenligningen.\n5. Klikk Kopier manglende/nyere → høyre eller Kopier manglende/nyere → venstre. Kun gjeldende manglende, nyere eller forskjellige filer i den retningen foreslås. Les og bekreft filantallet før køing.\n6. Følg fremdriften i Verktøy > Overføringskø…. Dette kopierer filer i én retning; det fjerner ikke ekstra filer på destinasjonen eller utfører automatisk toveis speiling. Kjør sammenligningen på nytt etter kopiering hvis du ønsker en oppdatert resultatliste."
+          }
+        ],
+        "body": "Åpne mappene du vil sammenligne i venstre og høyre rute, og velg deretter Verktøy > Sammenlign / synkroniser mapper. Gå gjennom Kun venstre, Kun høyre, Nyere og Forskjellige oppføringer før du legger til en enveissynkronisering i kø.\n\n1. Åpne de to mappene i venstre og høyre paneler. Sett Inkluder undermapperuavhengig for hver side hvis nødvendig.\n2. Velg Verktøy > Sammenlign / synkroniser mapper…\n3. Vurdering Relativ sti og Status: Bare venstre, bare høyre, lik, venstre nyere, høyre nyere eller ulik. Denne sammenligningen bruker støttede mediefiler, filstørrelser og modifikasjonstider; Lik er ikke en full innholdshash-sjekk. Den lager en oversikt over mappene uavhengig av panelenes søk-/medievisningsfiltre.\n4. Marker bestemte rader for å begrense operasjonen. Hvis ingen rader er markert, vurderer retningsknappene hele sammenligningen.\n5. Klikk Kopier manglende/nyere → høyre eller Kopier manglende/nyere → venstre. Kun gjeldende manglende, nyere eller forskjellige filer i den retningen foreslås. Les og bekreft filantallet før køing.\n6. Følg fremdriften i Verktøy > Overføringskø…. Dette kopierer filer i én retning; det fjerner ikke ekstra filer på destinasjonen eller utfører automatisk toveis speiling. Kjør sammenligningen på nytt etter kopiering hvis du ønsker en oppdatert resultatliste."
+      },
+      {
+        "id": "folder_organization_rules",
+        "title": "Mappe Organisasjonsregler",
+        "paragraphs": [
+          {
+            "id": "folder_organization_rules.p001",
+            "source_sha256": "0bafa187b865c37f918aac231d07f9cd0755fcf9049ab3d6462fd49cfa5b59dd",
+            "text": "Verktøy > Regler for mappeorganisering… lagrer repeterbare Kopier eller Flytt-regler. I motsetning til Smarte Samlinger, endrer bruk av disse reglene virkelig filplasseringer eller lager kopier. Regler kjører ikke automatisk i bakgrunnen: gjennomgå forhåndsvisningen og bekreft Bruk… hver gang."
+          },
+          {
+            "id": "folder_organization_rules.p002",
+            "source_sha256": "45964b262f5d8c5b49ac1274b9996e504d695e52fbadd425b9ecb861df577756",
+            "text": "OPPRETT ELLER REDIGER EN REGEL\n\n1. Klikk på ruten som inneholder filene du vil organisere, og velg deretter Verktøy > Regler for mappeorganisering…\n2. Klikk Legg til. Skriv inn regelenavn, velg Handling: Kopier eller Flytt, og angi Destinasjonsmappe ved hjelp av Bla gjennom…om nødvendig. Sjekk Handling nøye: en ny regel bruker opprinnelig Flytt.\n3. Sett Medietype til Alle,Bilder eller Videoer. Valgfrie betingelser er utvidelser (kommaseparert), Filnavn inneholder, Kodek inneholder, Minimum vurdering (0–5), og Krev eksakt tag. La ubrukte betingelser være tomme; 0 innebærer ingen minimum vurderingsbegrensning. Alle oppgitte betingelser må samsvare.Filnavnog codec-matching ignorerer bokstavsammenheng; taggen må samsvare med en hel tildelt tag, ikke en del av en.\n4. La Regel aktivertmerket av hvis regelen skal delta, deretter klikk Lagre regel\n5. Velg en eksisterende regel og rediger for å endre den. Bruk ↑ og ↓ for å endre prioritet: den første aktiverte matchende regelen vinner.Slett fjerner en regel etter bekreftelse, ikke dens medier;Angre slettinger tilgjengelig mens denne lederen forblir åpen."
+          },
+          {
+            "id": "folder_organization_rules.p003",
+            "source_sha256": "c7c9d8a141f4adb1d8ac99b1211bd67950395855319313f7bcc29474683eae6c",
+            "text": "FORHÅNDSVISNING OG BRUK\n\n1. Sett kildervinduets filtre hvis du vil begrense hvilke filer som vurderes.\n2. I regelbehandleren, klikk på Forhåndsvis aktivt panel….\n3. Velg Omfang: Synlig for vinduets filter-matching filer eller Alle skannet for hele det skannede settet. Dette verktøyet har ikke en Valgt-omfang.\n4. Velg om du vil Behold mapper relativt til aktivt panel. Huk av beholder relative undermapper under hver regeldestinasjon; ikke huket bruker bare filnavnet.\n5. Klikk Oppdater forhåndsvisning etter å ha endret disse kontrollene. Gjennomgå Regel, Handling, Kilde, Destinasjon og Status. Ikke-matchende filer settes ikke i kø. Løs problemer som duplisert mål før du bruker.\n6. Klikk Bruk… og bekreft det foreslåtte antallet handlinger. Kopier/flytt arbeid går inn i den vanlige overføringskøen; eksisterende mål bruker de vanlige konflikthåndteringsvalgene. Lukk lar deg forlate forhåndsvisningen uten å bruke den."
+          },
+          {
+            "id": "folder_organization_rules.p004",
+            "source_sha256": "f28b27db9fb710652715db25a211de3d6a9cef8f4fd15378e38e9f06d8fd4343",
+            "text": "EKSEMPEL\n\nFor å kopiere MP4-videoer til en vurderingsmappe, legg til en regel kalt MP4 vurderingskopier, velg Kopier, velg vurderingsdestinasjonen, sett Medietype til Videoer og Filutvidelser til mp4, deretter Lagre regel. Forhåndsvis aktivt panel… med Omfang: Synlig, inspiser stiene og Bruk…. Dette oppretter kopier; velg Flytt bare når du har til hensikt å flytte originalene."
+          }
+        ],
+        "body": "Verktøy > Regler for mappeorganisering… lagrer repeterbare Kopier eller Flytt-regler. I motsetning til Smarte Samlinger, endrer bruk av disse reglene virkelig filplasseringer eller lager kopier. Regler kjører ikke automatisk i bakgrunnen: gjennomgå forhåndsvisningen og bekreft Bruk… hver gang.\n\nOPPRETT ELLER REDIGER EN REGEL\n\n1. Klikk på ruten som inneholder filene du vil organisere, og velg deretter Verktøy > Regler for mappeorganisering…\n2. Klikk Legg til. Skriv inn regelenavn, velg Handling: Kopier eller Flytt, og angi Destinasjonsmappe ved hjelp av Bla gjennom…om nødvendig. Sjekk Handling nøye: en ny regel bruker opprinnelig Flytt.\n3. Sett Medietype til Alle,Bilder eller Videoer. Valgfrie betingelser er utvidelser (kommaseparert), Filnavn inneholder, Kodek inneholder, Minimum vurdering (0–5), og Krev eksakt tag. La ubrukte betingelser være tomme; 0 innebærer ingen minimum vurderingsbegrensning. Alle oppgitte betingelser må samsvare.Filnavnog codec-matching ignorerer bokstavsammenheng; taggen må samsvare med en hel tildelt tag, ikke en del av en.\n4. La Regel aktivertmerket av hvis regelen skal delta, deretter klikk Lagre regel\n5. Velg en eksisterende regel og rediger for å endre den. Bruk ↑ og ↓ for å endre prioritet: den første aktiverte matchende regelen vinner.Slett fjerner en regel etter bekreftelse, ikke dens medier;Angre slettinger tilgjengelig mens denne lederen forblir åpen.\n\nFORHÅNDSVISNING OG BRUK\n\n1. Sett kildervinduets filtre hvis du vil begrense hvilke filer som vurderes.\n2. I regelbehandleren, klikk på Forhåndsvis aktivt panel….\n3. Velg Omfang: Synlig for vinduets filter-matching filer eller Alle skannet for hele det skannede settet. Dette verktøyet har ikke en Valgt-omfang.\n4. Velg om du vil Behold mapper relativt til aktivt panel. Huk av beholder relative undermapper under hver regeldestinasjon; ikke huket bruker bare filnavnet.\n5. Klikk Oppdater forhåndsvisning etter å ha endret disse kontrollene. Gjennomgå Regel, Handling, Kilde, Destinasjon og Status. Ikke-matchende filer settes ikke i kø. Løs problemer som duplisert mål før du bruker.\n6. Klikk Bruk… og bekreft det foreslåtte antallet handlinger. Kopier/flytt arbeid går inn i den vanlige overføringskøen; eksisterende mål bruker de vanlige konflikthåndteringsvalgene. Lukk lar deg forlate forhåndsvisningen uten å bruke den.\n\nEKSEMPEL\n\nFor å kopiere MP4-videoer til en vurderingsmappe, legg til en regel kalt MP4 vurderingskopier, velg Kopier, velg vurderingsdestinasjonen, sett Medietype til Videoer og Filutvidelser til mp4, deretter Lagre regel. Forhåndsvis aktivt panel… med Omfang: Synlig, inspiser stiene og Bruk…. Dette oppretter kopier; velg Flytt bare når du har til hensikt å flytte originalene."
+      },
+      {
+        "id": "transfer_queue",
+        "title": "Administrere overføringskøen",
+        "paragraphs": [
+          {
+            "id": "transfer_queue.p001",
+            "source_sha256": "4c74b2e240612a64b07641c0bd71035726be26f6a6731e266ba7363531a03670",
+            "text": "Verktøy > Overføringskø… viser fremdrift for køet kopierings- og flyttearbeid, inkludert overføringer startet av mappesynkronisering og organiseringsregler. Videokonvertering har sitt eget separate fremdriftsvindu."
+          },
+          {
+            "id": "transfer_queue.p002",
+            "source_sha256": "28ed18a8e1ee5a8d11f642e0b6267d950ad0adcf8efa7da73b9228138757b48c",
+            "text": "1. Start kopier eller flytt ved å bruke panelkontrollene eller filkommandoene. Åpne Verktøy > Overføringskø… hvis fremdriftsvinduet ikke allerede er synlig.\n2. Les den nåværende operasjonen, fremdrift, antall i kø og overføringsdetaljer.\n3. Klikk Pause for å sette kopiering på pause på et trygt punkt; knappen blir til Gjenoppta. Gjenoppta fortsetter overføringen. En flytting som allerede utføres må kanskje fullføres før den kan svare.\n4. Avbryt nåværende ber om at den aktive jobben stoppes. Den fjerner ikke alle ventende jobber, og vellykket fullførte filer blir ikke automatisk angret.\n5. Prøv igjen mislyktes legger filer som feilet i den siste mislykkede overføringen tilbake i køen. Sjekk den rapporterte feilen og destinasjonen først.\n6. Lukk skjuler fremdriftsvinduet; det avbryter ikke kopiering eller flytting. Åpne det på nytt fra Verktøy for å sjekke fremdriften. Bruk Ctrl+Z separat for å angre en støttet fullført filoperasjon."
+          }
+        ],
+        "body": "Verktøy > Overføringskø… viser fremdrift for køet kopierings- og flyttearbeid, inkludert overføringer startet av mappesynkronisering og organiseringsregler. Videokonvertering har sitt eget separate fremdriftsvindu.\n\n1. Start kopier eller flytt ved å bruke panelkontrollene eller filkommandoene. Åpne Verktøy > Overføringskø… hvis fremdriftsvinduet ikke allerede er synlig.\n2. Les den nåværende operasjonen, fremdrift, antall i kø og overføringsdetaljer.\n3. Klikk Pause for å sette kopiering på pause på et trygt punkt; knappen blir til Gjenoppta. Gjenoppta fortsetter overføringen. En flytting som allerede utføres må kanskje fullføres før den kan svare.\n4. Avbryt nåværende ber om at den aktive jobben stoppes. Den fjerner ikke alle ventende jobber, og vellykket fullførte filer blir ikke automatisk angret.\n5. Prøv igjen mislyktes legger filer som feilet i den siste mislykkede overføringen tilbake i køen. Sjekk den rapporterte feilen og destinasjonen først.\n6. Lukk skjuler fremdriftsvinduet; det avbryter ikke kopiering eller flytting. Åpne det på nytt fra Verktøy for å sjekke fremdriften. Bruk Ctrl+Z separat for å angre en støttet fullført filoperasjon."
+      },
+      {
+        "id": "safe_file_actions",
+        "title": "Sikre filhandlinger",
+        "paragraphs": [
+          {
+            "id": "safe_file_actions.p001",
+            "source_sha256": "4ed845375e5d90b2ef4791690f07c1a09210904cf1686aec2715d733a377226d",
+            "text": "Slett sender filer til operativsystemets papirkurv eller søppel. Etter en sletting eller flytting blir filen som følger det fjernede utvalget i den aktive sorteringsrekkefølgen automatisk valgt og vist; hvis de fjernede filene var på slutten, blir den nye siste filen valgt. Gi nytt navn og oppdatering beholder også en nyttig nåværende fil, og denne oppførselen deles av Detaljer og Minibilder. Angre reverserer nylige kopier, flyttinger, erstatninger, enkelt omdøpinger og komplette batch-omdøpinger. Konflikter ved Erstatt ment tilbyr Erstatt, Hopp over eller Behold begge, med et valg om å bruke svaret på alle gjenværende konflikter."
+          },
+          {
+            "id": "safe_file_actions.undo_busy_1273",
+            "source_sha256": "ff2548c8d5b9c336f23e02624d99be111f63b741dd5e9d8d94c87c038febd3a8",
+            "text": "Angre kjører i bakgrunnen slik at vinduet forblir responsivt. Det stopper midlertidig forhåndsvisningene og pauser nye metadata- og miniatyrfilavlesninger mens eksisterende avlesninger fullføres, og gjenoppretter deretter filene. Du trenger ikke å vente på at en mappeskanning skal fullføres først. Korte Windows-fil-deling-låser forsøkes automatisk på nytt. Hvis et annet program fortsatt holder en fil, eller en gjenopprettet kilde ville erstatte en nylig opprettet fil, stopper Angre og rapporterer problemet i stedet for å overskrive det. Fullførte gjenopprettingssteg beholdes; ufullstendige steg og opprinnelige erstatningssikkerhetskopier forblir tilgjengelige. Lukk applikasjonen som bruker den berørte filen eller løse den rapporterte konflikten, og trykk deretter Angre igjen for å fortsette. Køede overføringer venter mens gjenopprettingen er ufullstendig. Ikke slett gjenopprettingssikkerhetskopier eller rediger de berørte filene mens gjenopprettingen er ufullstendig. Forhåndsvisning-velgere forblir som valgt; velg en fil igjen etter gjenoppretting for å fortsette forhåndsvisningen."
+          }
+        ],
+        "body": "Slett sender filer til operativsystemets papirkurv eller søppel. Etter en sletting eller flytting blir filen som følger det fjernede utvalget i den aktive sorteringsrekkefølgen automatisk valgt og vist; hvis de fjernede filene var på slutten, blir den nye siste filen valgt. Gi nytt navn og oppdatering beholder også en nyttig nåværende fil, og denne oppførselen deles av Detaljer og Minibilder. Angre reverserer nylige kopier, flyttinger, erstatninger, enkelt omdøpinger og komplette batch-omdøpinger. Konflikter ved Erstatt ment tilbyr Erstatt, Hopp over eller Behold begge, med et valg om å bruke svaret på alle gjenværende konflikter.\n\nAngre kjører i bakgrunnen slik at vinduet forblir responsivt. Det stopper midlertidig forhåndsvisningene og pauser nye metadata- og miniatyrfilavlesninger mens eksisterende avlesninger fullføres, og gjenoppretter deretter filene. Du trenger ikke å vente på at en mappeskanning skal fullføres først. Korte Windows-fil-deling-låser forsøkes automatisk på nytt. Hvis et annet program fortsatt holder en fil, eller en gjenopprettet kilde ville erstatte en nylig opprettet fil, stopper Angre og rapporterer problemet i stedet for å overskrive det. Fullførte gjenopprettingssteg beholdes; ufullstendige steg og opprinnelige erstatningssikkerhetskopier forblir tilgjengelige. Lukk applikasjonen som bruker den berørte filen eller løse den rapporterte konflikten, og trykk deretter Angre igjen for å fortsette. Køede overføringer venter mens gjenopprettingen er ufullstendig. Ikke slett gjenopprettingssikkerhetskopier eller rediger de berørte filene mens gjenopprettingen er ufullstendig. Forhåndsvisning-velgere forblir som valgt; velg en fil igjen etter gjenoppretting for å fortsette forhåndsvisningen."
+      },
+      {
+        "id": "workspaces_and_cache",
+        "title": "Arbeidsområder og hurtigbuffer",
+        "paragraphs": [
+          {
+            "id": "workspaces_and_cache.p001",
+            "source_sha256": "9546017780aef5e7077c76d71f514132c6cabc5dd92f56a8dc2863641361fe9f",
+            "text": "Lagrede arbeidsområder husker mapper, filtre, visningsmoduser, kolonner, inspektører og layout. Smarte samlinger under Verktøy er mindre en-panels forhåndsinnstillinger: de lagrer mappen, Inkluder undermapper og mediebrytere, filnavn og avanserte filtre, oppløsning, sortering, Detaljer/Minibilder-visning, miniatyrestørrelse og Kontinuerlig/Sidevis-valg. Bruking en påvirker bare det aktive panelet. Administratoren kan gi nytt navn til eller slette forhåndsinnstillinger; sletting krever bekreftelse, og Angre sletting gjenoppretter den mens manageren forblir åpen. Smarte samlinger flytter, sletter eller merker aldri media. Bufret-metadata og miniatyrbilder gjør fremtidige besøk raskere; Verktøy > Cache og skanning kan inspisere, beskjære eller tømme dem."
+          },
+          {
+            "id": "workspaces_and_cache.workspace_steps",
+            "source_sha256": "dff5cc601aa1e01667f72fd065cd8e4b55ae77974639503d66c69592dd802aa7",
+            "text": "LAGRE OG LAST INN ET ARBEIDSOMRÅDE\n\n1. Ordne begge panelene med mappene, filtrene, visningene og oppsettet du vil gjenbruke.\n2. Velg Verktøy > Lagre arbeidsområde… og skriv inn arbeidsområde-navn. Å gjenbruke et navn erstatter det arbeidsområdet uten en separat erstatningsmelding; bruk et nytt navn for å bevare det tidligere oppsettet.\n3. Senere velg Verktøy > Last inn arbeidsområde…. Meldingen viser lagrede navn. Skriv inn nøyaktig navn som vises, og bekreft for å gjenopprette begge panelene. Avbryt lar det nåværende arbeidsområdet være uendret.\n\nBruk [chapter:smart_collections] i stedet når du bare vil gjenopprette søk og visning i ett panel."
+          },
+          {
+            "id": "workspaces_and_cache.cache_steps",
+            "source_sha256": "db9e5a5210a5fdc95458f3dd3a9b9cd62b82de37c69b195a47a3e595ebe17bc3",
+            "text": "CACHE- OG SKANNINGKONTROLLER\n\nÅpne Verktøy > Cache og skanning… for å se metadataoppføringer og miniatyrbilde-lagring. I Skann innstillinger, velg Ytelsesprofil: Rolig for lavere bakgrunnsbelastning, Balansert for vanlig bruk, eller Rask for høyere gjennomstrømning. Juster Parallel metadata-arbeidere (1–16) om nødvendig. Ekskluder mønstre (semikolonseparert) kan utelate samsvarende stier; eksempler vist i vinduet inkluderer *.tmp; proxy/*; @eaDir/*. Klikk Brukå lagre innstillingene.Oppdaterruten for å kjøre en skanning ved bruk av endrede ekskluderinger.\n\nI Miniatyrbilde lagring, Maksimal prosentandel av operativsystemets stasjon er standard på 1 % og aksepterer 0,1 %–10 %.Bruk lagrer grensen;Håndhev grense nåfjerner de minst nylig brukte bufrede miniatyrbildene til grensen er nådd.Fjern utdaterte oppføringerrydder opp utdaterte metadataoppføringer.Tøm miniatyrbilderber om bekreftelse, og sletter deretter bare genererte miniatyrbilder; de vil bli gjenoppbygget etter behov.Tøm all cachebekrefter fjerning av tekniske cache-data og miniatyrbilder, så fremtidige besøk krever ny skanning/dekoding. Disse cache-kontrollene sletter ikke originalmedia eller brukervurderinger, fargemerker og etiketter."
+          }
+        ],
+        "body": "Lagrede arbeidsområder husker mapper, filtre, visningsmoduser, kolonner, inspektører og layout. Smarte samlinger under Verktøy er mindre en-panels forhåndsinnstillinger: de lagrer mappen, Inkluder undermapper og mediebrytere, filnavn og avanserte filtre, oppløsning, sortering, Detaljer/Minibilder-visning, miniatyrestørrelse og Kontinuerlig/Sidevis-valg. Bruking en påvirker bare det aktive panelet. Administratoren kan gi nytt navn til eller slette forhåndsinnstillinger; sletting krever bekreftelse, og Angre sletting gjenoppretter den mens manageren forblir åpen. Smarte samlinger flytter, sletter eller merker aldri media. Bufret-metadata og miniatyrbilder gjør fremtidige besøk raskere; Verktøy > Cache og skanning kan inspisere, beskjære eller tømme dem.\n\nLAGRE OG LAST INN ET ARBEIDSOMRÅDE\n\n1. Ordne begge panelene med mappene, filtrene, visningene og oppsettet du vil gjenbruke.\n2. Velg Verktøy > Lagre arbeidsområde… og skriv inn arbeidsområde-navn. Å gjenbruke et navn erstatter det arbeidsområdet uten en separat erstatningsmelding; bruk et nytt navn for å bevare det tidligere oppsettet.\n3. Senere velg Verktøy > Last inn arbeidsområde…. Meldingen viser lagrede navn. Skriv inn nøyaktig navn som vises, og bekreft for å gjenopprette begge panelene. Avbryt lar det nåværende arbeidsområdet være uendret.\n\nBruk [chapter:smart_collections] i stedet når du bare vil gjenopprette søk og visning i ett panel.\n\nCACHE- OG SKANNINGKONTROLLER\n\nÅpne Verktøy > Cache og skanning… for å se metadataoppføringer og miniatyrbilde-lagring. I Skann innstillinger, velg Ytelsesprofil: Rolig for lavere bakgrunnsbelastning, Balansert for vanlig bruk, eller Rask for høyere gjennomstrømning. Juster Parallel metadata-arbeidere (1–16) om nødvendig. Ekskluder mønstre (semikolonseparert) kan utelate samsvarende stier; eksempler vist i vinduet inkluderer *.tmp; proxy/*; @eaDir/*. Klikk Brukå lagre innstillingene.Oppdaterruten for å kjøre en skanning ved bruk av endrede ekskluderinger.\n\nI Miniatyrbilde lagring, Maksimal prosentandel av operativsystemets stasjon er standard på 1 % og aksepterer 0,1 %–10 %.Bruk lagrer grensen;Håndhev grense nåfjerner de minst nylig brukte bufrede miniatyrbildene til grensen er nådd.Fjern utdaterte oppføringerrydder opp utdaterte metadataoppføringer.Tøm miniatyrbilderber om bekreftelse, og sletter deretter bare genererte miniatyrbilder; de vil bli gjenoppbygget etter behov.Tøm all cachebekrefter fjerning av tekniske cache-data og miniatyrbilder, så fremtidige besøk krever ny skanning/dekoding. Disse cache-kontrollene sletter ikke originalmedia eller brukervurderinger, fargemerker og etiketter."
+      },
+      {
+        "id": "language",
+        "title": "Språk",
+        "paragraphs": [
+          {
+            "id": "language.p001",
+            "source_sha256": "76d36cb87d53e68bd8a17b59b3d7bf1868001f1323f01fa67c901dda96cf4779",
+            "text": "Ved første oppstart følger applikasjonen operativsystemets språk når det støttes. Velg Verktøy > Språk for å overstyre det eller gå tilbake til Systemstandard. Start applikasjonen på nytt etter å ha endret språk."
+          }
+        ],
+        "body": "Ved første oppstart følger applikasjonen operativsystemets språk når det støttes. Velg Verktøy > Språk for å overstyre det eller gå tilbake til Systemstandard. Start applikasjonen på nytt etter å ha endret språk."
+      },
+      {
+        "id": "glossary",
+        "title": "Ordliste",
+        "paragraphs": [
+          {
+            "id": "glossary.p001",
+            "source_sha256": "de56ad1538a95954142a64a6faf297c48d96564544c6f1ea1947a5a7a1974bf5",
+            "text": "Aktiv rute: Venstre eller høyre nettleser som sist mottok et klikk. Meny- og tastaturhandlinger gjelder vanligvis der."
+          },
+          {
+            "id": "glossary.p002",
+            "source_sha256": "9e944202497daf57a892e77418fbcd6ddd948febb6e71fdac6b8f66941692f17",
+            "text": "Kodek: Metoden som brukes til å kode video eller lyd, som H.264, H.265/HEVC, AV1, AAC eller Opus. En beholder som MP4 eller MKV kan holde én eller flere kodede strømmer."
+          },
+          {
+            "id": "glossary.p003",
+            "source_sha256": "672c8a727345c58eb445fec2a58768fb80215d8aa50e1aedf274abd854620d39",
+            "text": "Remux: Kopierer eksisterende video-/lydstrømmer til en annen beholder uten å re-enkode. Det er raskt og tapsfritt, men endrer ikke kodeken."
+          },
+          {
+            "id": "glossary.p004",
+            "source_sha256": "5b4c2520b2fcb4ed201a6f159e1d6042244f198a9d54ca2e7e50b21b6430ad98",
+            "text": "CRF/kvalitet: Et mål for konstant kvalitet ved nykoding. Lavere tall krever høyere kvalitet og større filer. Maskinvarekodere oversetter det til deres nærmeste kvalitetskontroll."
+          },
+          {
+            "id": "glossary.p005",
+            "source_sha256": "57f6a48371b1e7d33ef4389ca76d13c11dc500afbed5245024c4eb6695646f8c",
+            "text": "Metadata-cache: Lagrede tekniske resultater som unngår å gjentatte ganger sjekke uendrede filer. Den er separat fra vurderinger, etiketter og merkelapper."
+          },
+          {
+            "id": "glossary.p006",
+            "source_sha256": "a1bb6a1d6960bc4e1441baca24dc3ae68ea222ac01e819b3e083fcd1a166e6f7",
+            "text": "Miniatyrbildecache: Genererte forhåndsvisningsbilder lagres på disken for raskere fremtidige besøk og begrenses gjennom Verktøy > Cache og skanning."
+          },
+          {
+            "id": "glossary.p007",
+            "source_sha256": "fa7be14671267800c9e3a8d8f85ceaf1d75c18d830685a91819c692490061aab",
+            "text": "Rekursiv/Inkluder undermapper: Skann den valgte mappen og alle undermapper. Det betyr aldri hele stasjonen med mindre rotmappen på stasjonen selv er valgt."
+          },
+          {
+            "id": "glossary.p008",
+            "source_sha256": "97af76d3a80e273362782d714bf88bcdcc83ab072222a8994eb06977af0de44c",
+            "text": "Smart Samling: En lagret visningsdefinisjon som inneholder en plassering, filtre, sortering og presentasjonsinnstillinger. Den kopierer eller flytter ikke filer."
+          }
+        ],
+        "body": "Aktiv rute: Venstre eller høyre nettleser som sist mottok et klikk. Meny- og tastaturhandlinger gjelder vanligvis der.\n\nKodek: Metoden som brukes til å kode video eller lyd, som H.264, H.265/HEVC, AV1, AAC eller Opus. En beholder som MP4 eller MKV kan holde én eller flere kodede strømmer.\n\nRemux: Kopierer eksisterende video-/lydstrømmer til en annen beholder uten å re-enkode. Det er raskt og tapsfritt, men endrer ikke kodeken.\n\nCRF/kvalitet: Et mål for konstant kvalitet ved nykoding. Lavere tall krever høyere kvalitet og større filer. Maskinvarekodere oversetter det til deres nærmeste kvalitetskontroll.\n\nMetadata-cache: Lagrede tekniske resultater som unngår å gjentatte ganger sjekke uendrede filer. Den er separat fra vurderinger, etiketter og merkelapper.\n\nMiniatyrbildecache: Genererte forhåndsvisningsbilder lagres på disken for raskere fremtidige besøk og begrenses gjennom Verktøy > Cache og skanning.\n\nRekursiv/Inkluder undermapper: Skann den valgte mappen og alle undermapper. Det betyr aldri hele stasjonen med mindre rotmappen på stasjonen selv er valgt.\n\nSmart Samling: En lagret visningsdefinisjon som inneholder en plassering, filtre, sortering og presentasjonsinnstillinger. Den kopierer eller flytter ikke filer."
+      },
+      {
+        "id": "support_the_project",
+        "title": "Støtt prosjektet",
+        "paragraphs": [
+          {
+            "id": "support_the_project.p001",
+            "source_sha256": "62b207421228680770777e66598c8ce79ee121aaee8cd232e847e65dd28e2122",
+            "text": "Oppløsning Filbehandler leveres som en frittstående applikasjon uten krav om abonnement. Hvis du finner den nyttig og ønsker å støtte fortsatt utvikling, velg Hjelp > Hvis du liker dette, kjøp en kaffe til John. Den samme valgfrie støttekappen vises i Hjelp > Om og åpner den offentlige JohnPerky-siden i din vanlige nettleser:"
+          },
+          {
+            "id": "support_the_project.p002",
+            "source_sha256": "f625bc04cc8dea0548e7e06bf6f5a1bf75532166728133d0f26049dc60b5f0ee",
+            "text": "https://buymeacoffee.com/johnperky"
+          },
+          {
+            "id": "support_the_project.p003",
+            "source_sha256": "f3433f015e63332b4aeaca246443618a7f7f6614bafc5941d7509c71ca191619",
+            "text": "Å støtte prosjektet er helt valgfritt. Applikasjonen åpner ikke siden automatisk, samler inn betalingsinformasjon, sporer om du besøker den, eller endrer noen funksjon basert på støtte."
+          },
+          {
+            "id": "support_the_project.p004",
+            "source_sha256": "fb8e1f1b4be83a666d0f808238dffefa4cc8b5369dc8b4d25aa74a5d499c5f7a",
+            "text": "VURDERINGER OG VALGFRIE PÅMINNELSER"
+          },
+          {
+            "id": "support_the_project.reminder_timing",
+            "source_sha256": "b00a39416f2e0c07132850cca60bde12e893c16cbfd085f4b8a29fe722bf6d8e",
+            "text": "Etter fem oppstarter fordelt på minst tre dager, kan appen invitere deg til å vurdere den i Microsoft Store. Senere utsetter forespørselen med ti oppstarter. Den valgfrie kaffepåminnelsen starter ved oppstart 11 og gjentas hver 11. oppstart kun etter Kanskje senere. \\n Ikke spør igjen deaktiverer enten påminnelsen; Verktøy > Påminnelser kan aktivere den igjen. En side åpnes bare etter at du trykker på den eksplisitte knappen."
+          },
+          {
+            "id": "support_the_project.reminder_settings",
+            "source_sha256": "aeec7ca97a52107645156aa31a220d7a33d6f136fde87d37a08a2729e511a24e",
+            "text": "Velg Verktøy > Påminnelser… for å kontrollere vurderings- og støttemeldinger separat. Kryss av en melding for å aktivere den, eller fjern krysset for å deaktivere den, og trykk deretter Lagre. Avbryt lar nåværende valg forbli uendret."
+          }
+        ],
+        "body": "Oppløsning Filbehandler leveres som en frittstående applikasjon uten krav om abonnement. Hvis du finner den nyttig og ønsker å støtte fortsatt utvikling, velg Hjelp > Hvis du liker dette, kjøp en kaffe til John. Den samme valgfrie støttekappen vises i Hjelp > Om og åpner den offentlige JohnPerky-siden i din vanlige nettleser:\n\nhttps://buymeacoffee.com/johnperky\n\nÅ støtte prosjektet er helt valgfritt. Applikasjonen åpner ikke siden automatisk, samler inn betalingsinformasjon, sporer om du besøker den, eller endrer noen funksjon basert på støtte.\n\nVURDERINGER OG VALGFRIE PÅMINNELSER\n\nEtter fem oppstarter fordelt på minst tre dager, kan appen invitere deg til å vurdere den i Microsoft Store. Senere utsetter forespørselen med ti oppstarter. Den valgfrie kaffepåminnelsen starter ved oppstart 11 og gjentas hver 11. oppstart kun etter Kanskje senere. \\n Ikke spør igjen deaktiverer enten påminnelsen; Verktøy > Påminnelser kan aktivere den igjen. En side åpnes bare etter at du trykker på den eksplisitte knappen.\n\nVelg Verktøy > Påminnelser… for å kontrollere vurderings- og støttemeldinger separat. Kryss av en melding for å aktivere den, eller fjern krysset for å deaktivere den, og trykk deretter Lagre. Avbryt lar nåværende valg forbli uendret."
+      }
+    ]
+  },
+  "literals": {
+    "Confirm": "Bekreft",
+    "Move {field0} to the Recycle Bin / Trash?": "Flytt {field0} til papirkurven / søpla?",
+    "Synchronize preview": "Synkroniser forhåndsvisning",
+    "Queue {field0} file(s) for copying to the {field1} pane?": "Kø {field0} fil(er) for kopiering til {field1}-panelet?",
+    "Keyboard shortcuts": "Tastekombinasjoner",
+    "Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file": "Ctrl+A   Velg alt som vises\nCtrl+C   Kopier valgt\nCtrl+X   Klipp valgt\nCtrl+V   Lim inn i aktiv rute\nCtrl+Z   Angre siste filoperasjon\nDelete   Flytt valgte filer til papirkurv\nF2       Gi valgt fil nytt navn\nF5       Oppdater begge ruter\nBackspace   Gå opp ett nivå i mappen\n, (komma)   Aktiv forhåndsvisning tilbake 10%\n. (punktum)   Aktiv forhåndsvisning frem 10%\nDobbeltklikk   Åpne fil",
+    "Folder not found": "Mappe ikke funnet",
+    "This folder does not exist:\n{field0}": "Denne mappen finnes ikke:\n{field0}",
+    "Not enough videos": "Ikke nok videoer",
+    "At least two visible videos with readable durations are needed for comparison.": "Minst to synlige videoer med lesbar varighet er nødvendig for sammenligning.",
+    "No size outliers": "Ingen størrelse-avvik",
+    "No visible video is at least {field0}× the average data rate of {field1} MB/min.": "Ingen synlige videoer er minst {field0}× gjennomsnittlig datahastighet på {field1} MB/min.",
+    "Some dropped files failed": "Noen droppede filer mislyktes",
+    "Could not reveal some files": "Kunne ikke avsløre noen filer",
+    "Select one file": "Velg én fil",
+    "Select exactly one file to rename.": "Velg nøyaktig én fil for å gi nytt navn.",
+    "Invalid filename": "Ugyldig filnavn",
+    "Enter a filename without folder separators.": "Skriv inn et filnavn uten mappeseparatorer.",
+    "File already exists": "Filen finnes allerede",
+    "A file named {field0} already exists.": "En fil med navnet {field0} finnes allerede.",
+    "Nothing selected": "Ingen valgt",
+    "Select one or more files in the active pane first.": "Velg én eller flere filer i den aktive ruten først.",
+    "Confirm {field0}": "Bekreft {field0}",
+    "{field0} {field1} file(s) to:\n{field2}?": "{field0} {field1} fil(er) til:\n{field2}?",
+    "Some files failed": "Noen filer mislyktes",
+    "Finished": "Ferdig",
+    "Successfully {field0} {field1} file(s).": "Lyktes med {field0} {field1} fil(er).",
+    "Unknown choice": "Ukjent valg",
+    "Use replace, skip, keep both, or newer.": "Bruk erstatt, hopp over, behold begge eller nyere.",
+    "Batch rename": "Batch-gi nytt navn",
+    "Select one or more files first.": "Velg en eller flere filer først.",
+    "Batch rename complete": "Batch-omdøping fullført",
+    "Renamed {field0} file(s). Use Ctrl+Z to undo the batch.": "Omdøpt {field0} fil(er). Bruk Ctrl+Z for å angre batchen.",
+    "Nothing to retry": "Ingenting å prøve igjen",
+    "The last transfer had no failed files.": "Den siste overføringen hadde ingen mislykkede filer.",
+    "Transfer active": "Overføring aktiv",
+    "Wait for the current transfer to finish before undoing.": "Vent til den nåværende overføringen er ferdig før du angrer.",
+    "Nothing to undo": "Ingenting å angre",
+    "There are no recent copy, move, replacement, or rename actions.": "Det er ingen nylige kopierings-, flytte-, erstatnings- eller gi nytt navn-handlinger.",
+    "Undo incomplete": "Angre ufullstendig",
+    "Undo complete": "Angre fullført",
+    "The most recent file operation was undone.": "Den siste filoperasjonen ble angret.",
+    "Move to Recycle Bin": "Flytt til papirkurv",
+    "Move {field0} selected file(s) to the Recycle Bin / Trash?": "Flytt {field0} valgte fil(er) til papirkurv?",
+    "Some files could not be removed": "Noen filer kunne ikke fjernes",
+    "Embedded metadata": "Innebygd metadata",
+    "Select exactly one image or video first.": "Velg nøyaktig ett bilde eller én video først.",
+    "Create video contact sheet": "Lag videokontaktark",
+    "Select exactly one video first.": "Velg nøyaktig én video først.",
+    "Similar image search": "Søk etter lignende bilder",
+    "No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).": "Ingen visuelt lignende grupper funnet ved toleranse {field0}.\n\n{field1} bufrede hash(er); {field2} uleselige bilde(r).",
+    "Select two files": "Velg to filer",
+    "Select exactly two files to compare.": "Velg nøyaktig to filer for å sammenligne.",
+    "Nothing to synchronize": "Ingenting å synkronisere",
+    "No selected files need copying in that direction.": "Ingen valgte filer trenger å kopieres i den retningen.",
+    "No workspaces": "Ingen arbeidsområder",
+    "Save a workspace first.": "Lagre et arbeidsområde først.",
+    "Collection folder unavailable": "Samlemappe utilgjengelig",
+    "The saved folder does not currently exist:\n{field0}": "Den lagrede mappen finnes ikke for øyeblikket:\n{field0}",
+    "Cache pruned": "Cache ryddet",
+    "Removed {field0} stale entry/entries.": "Fjernet {field0} utdaterte oppføring(er).",
+    "Clear cache": "Tøm cache",
+    "Clear all cached metadata? Files will be rescanned next time.": "Tømme all bufret metadata? Filene vil bli skannet på nytt neste gang.",
+    "Clear thumbnail cache": "Tøm miniatyrbilde-cache",
+    "Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.": "Slette {field0} lagret miniatyrbilde(r) ved hjelp av {field1}?\n\nOriginale mediefiler og metadata vil ikke bli endret.",
+    "Settings": "Innstillinger",
+    "{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.": "{field0} ytelsesinnstillinger, skannealternativer og miniatyrbilde-buffergrensen ble lagret. Buffergrensen håndheves i bakgrunnen.",
+    "Live updates unavailable": "Direkteoppdateringer er ikke tilgjengelige",
+    "The folder-monitoring component is not installed.": "Mappeovervåkingskomponenten er ikke installert.",
+    "Reveal many files?": "Vise mange filer?",
+    "{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.": "{field0} filer er valgt. Å vise alle kan åpne et stort antall filbehandler-vinduer.\n\nVelg Ja for å vise hver valgte fil, eller Nei for å vise kun den første.",
+    "Rename failed": "Omdøping mislyktes",
+    "Confirm batch rename": "Bekreft masseomdøping",
+    "Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.": "Omdøp {field0} fil(er) nøyaktig som forhåndsvist?\n\nHele batchen kan angres med Ctrl+Z.",
+    "Batch rename failed": "Masseomdøping mislyktes",
+    "No completed rename was kept where rollback was possible.\n\n{field0}": "Ingen fullført omdøping ble beholdt der tilbakestilling var mulig.\n\n{field0}",
+    "Nothing to export": "Ingenting å eksportere",
+    "The chosen scope contains no media files.": "Det valgte omfanget inneholder ingen mediefiler.",
+    "Nothing to verify": "Ingenting å verifisere",
+    "Not enough images": "Ikke nok bilder",
+    "The chosen scope contains fewer than two images.": "Det valgte omfanget inneholder færre enn to bilder.",
+    "Could not save workspace": "Kunne ikke lagre arbeidsområde",
+    "Replace smart collection": "Erstatt smartsamling",
+    "Replace the existing collection named {field0}?": "Erstatt den eksisterende samlingen med navn {field0}?",
+    "Could not save collection": "Kunne ikke lagre samling",
+    "Invalid rule": "Ugyldig regel",
+    "Enter a rule name.": "Skriv inn et regelenavn.",
+    "Choose a destination folder.": "Velg en destinasjonsmappe.",
+    "Apply folder rules": "Bruk mapperegler",
+    "Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.": "Legg {field0} planlagt kopierings-/flyttehandling(er) i kø?\n\nEksisterende mål vil bruke de vanlige konfliktvalgene. Flyttinger og erstatninger kan fortsatt angres.",
+    "Delete rule": "Slett regel",
+    "Delete rule '{field0}'?": "Slett regel '{field0}'?",
+    "Cache cleared": "Cache tømt",
+    "Removed {field0} metadata entries and cached thumbnails.": "Fjernet {field0} metadataoppføringer og bufrede miniatyrbilder.",
+    "Thumbnail cache": "Miniatyrbildecache",
+    "The thumbnail cache is already empty.": "Miniatyrbildecachen er allerede tom.",
+    "Thumbnail cache cleared": "Miniatyrbildecache tømt",
+    "Deleted {field0} thumbnail(s) and freed {field1}.": "Slettet {field0} miniatyr(er) og frigjorde {field1}.",
+    "Could not monitor folder": "Kunne ikke overvåke mappe",
+    "Live updates could not be enabled for:\n{field0}\n\n{field1}": "Live-oppdateringer kunne ikke aktiveres for:\n{field0}\n\n{field1}",
+    "Could not open file": "Kunne ikke åpne fil",
+    "Frame exported": "Ramme eksportert",
+    "Metadata exported": "Metadata eksportert",
+    "Saved {field0} field(s).": "Lagret {field0} felt(er).",
+    "Metadata unavailable": "Metadata ikke tilgjengelig",
+    "Report exported": "Rapport eksportert",
+    "Saved {field0} result(s).": "Lagret {field0} resultat(er).",
+    "Invalid settings": "Ugyldige innstillinger",
+    "Use whole numbers for frames, columns, and width.": "Bruk hele tall for rammer, kolonner og bredde.",
+    "Invalid tolerance": "Ugyldig toleranse",
+    "Enter a whole number from 0 to 16.": "Skriv inn et helt tall fra 0 til 16.",
+    "Replace collection": "Erstatt samling",
+    "Replace {field0}?": "Erstatt {field0}?",
+    "Delete smart collection": "Slett smart samling",
+    "Delete {field0}?\n\nNo media files or annotations will be changed.": "Slett {field0}?\n\nIngen mediainnhold eller annotasjoner vil bli endret.",
+    "Invalid rating": "Ugyldig vurdering",
+    "Minimum rating must be a whole number from 0 to 5.": "Minimumsvurdering må være et helt tall fra 0 til 5.",
+    "Frame export failed": "Rammeeksport mislyktes",
+    "Could not export metadata": "Kunne ikke eksportere metadata",
+    "Could not export report": "Kunne ikke eksportere rapport",
+    "Contact sheet complete": "Kontaktark fullført",
+    "Report export failed": "Rapporteksport mislyktes",
+    "Contact sheet failed": "Kontaktark mislyktes",
+    "Removed {field0} least-recently-used thumbnail(s).": "Fjernet {field0} minst nylig brukte miniatyrbilde(r).",
+    "Add": "Legg til",
+    "All non-empty conditions must match. Rules are checked from top to bottom; the first match wins.": "Alle ikke-tomme betingelser må samsvare. Regler sjekkes fra topp til bunn; den første samsvaret vinner.",
+    "Appearance and accessibility": "Utseende og tilgjengelighet",
+    "Appearance and text size": "Utseende og tekststørrelse",
+    "Apply": "Bruk",
+    "Apply rename": "Bruk nytt navn",
+    "Applying a collection changes only the active pane's folder, filters, sorting, and view.": "Anvendelse av en samling endrer kun den aktive panelens mappe, filtre, sortering og visning.",
+    "Apply…": "Bruk…",
+    "Batch rename selected files": "Endre navn på valgte filer i batch",
+    "Browse…": "Bla gjennom…",
+    "Cache and scanning": "Cache og skanning",
+    "Cached": "Bufret",
+    "Cancel": "Avbryt",
+    "Cancel current": "Avbryt nåværende",
+    "Cancel export": "Avbryt eksport",
+    "Case sensitive": "Store og små bokstaver teller",
+    "Changes are previewed immediately. Cancel restores the previous appearance.": "Endringer vises umiddelbart. Avbestill gjenoppretter det forrige utseendet.",
+    "Choose rule destination": "Velg regelens destinasjon",
+    "Clear all cache": "Tøm all cache",
+    "Clear thumbnails": "Tøm miniatyrbilder",
+    "Close": "Lukk",
+    "Collection name:": "Samlingens navn:",
+    "Compare files": "Sammenlign filer",
+    "Contents": "Innhold",
+    "Copy missing/newer → left": "Kopier manglende/nyere → venstre",
+    "Copy missing/newer → right": "Kopier manglende/nyere → høyre",
+    "Copy selected/all": "Kopier valgt/alt",
+    "Create…": "Opprett…",
+    "Current name": "Nåværende navn",
+    "Delete": "Slett",
+    "Details": "Detaljer",
+    "Edit": "Rediger",
+    "Edit tags": "Rediger merkelapper",
+    "Enforce limit now": "Håndhev grense nå",
+    "Examples: *.tmp; proxy/*; @eaDir/*": "Eksempler: *.tmp; proxy/*; @eaDir/*",
+    "Exclude patterns (semicolon separated):": "Ekskluder mønstre (semikolon-separert):",
+    "Export CSV…": "Eksporter CSV…",
+    "Export current video frame": "Eksporter gjeldende videoramme",
+    "Export embedded metadata": "Eksporter innebygd metadata",
+    "Export integrity report": "Eksporter integritetsrapport",
+    "Export JSON…": "Eksporter JSON…",
+    "Export media report": "Eksporter medierapport",
+    "Exports technical details, annotations, file status, and a library summary without changing media.": "Eksporterer tekniske detaljer, kommentarer, filstatus og et biblioteksoversikt uten å endre medier.",
+    "Export…": "Eksporter…",
+    "File conflicts": "Filkonflikter",
+    "Filename.jpg   1920 × 1080   H.265 / HEVC": "Filnavn.jpg   1920 × 1080   H.265 / HEVC",
+    "Find visually similar images": "Finn visuelt lignende bilder",
+    "Find:": "Finn:",
+    "Folder": "Mappe",
+    "Folder comparison and synchronization": "Mappe sammenligning og synkronisering",
+    "Folder organization rules": "Regler for mappeorganisering",
+    "Force recheck": "Tving ny kontroll",
+    "Format:": "Format:",
+    "Include full file paths": "Inkluder fullstendige filbaner",
+    "Interface scale:": "Grensesnittskala:",
+    "Keep left (recycle right)": "Hold til venstre (resirkuler til høyre)",
+    "Keep right (recycle left)": "Hold høyre (resirkuler venstre)",
+    "Load workspace": "Last arbeidsområde",
+    "Loading preview…": "Laster forhåndsvisning…",
+    "Lower values are stricter. 6 is a useful starting point for resized or lightly recompressed copies.": "Lavere verdier er strengere. 6 er et nyttig utgangspunkt for endrede eller lett omkomprimerte kopier.",
+    "Maximum percentage of operating-system drive:": "Maksimal prosentandel av operativsystemdisk:",
+    "Media integrity verification": "Verifikasjon av medieintegritet",
+    "Media inventory report": "Mediebeholdningsrapport",
+    "Move left": "Flytt til venstre",
+    "Move right": "Flytt til høyre",
+    "Name": "Navn",
+    "New filename:": "Nytt filnavn:",
+    "New name": "Nytt navn",
+    "New name:": "Nytt navn:",
+    "Number padding:": "Nummerutfylling:",
+    "Parallel metadata workers (1–16):": "Parallell metadata-arbeidere (1–16):",
+    "Path": "Sti",
+    "Pause": "Pause",
+    "Perceptual image matching": "Perseptuell bildesammenligning",
+    "Performance profile:": "Ytelsesprofil:",
+    "Preserve folders relative to the active pane": "Bevar mapper i forhold til det aktive panelet",
+    "Preview": "Forhåndsvisning",
+    "Preview active pane…": "Forhåndsvis aktivt panel…",
+    "Preview folder organization rules": "Forhåndsvisningsregler for mappeorganisering",
+    "Preview only until Apply is confirmed. The first enabled matching rule wins.": "Forhåndsvisning bare til Bruk er bekreftet. Den første aktive samsvarende regelen vinner.",
+    "Query": "Forespørsel",
+    "Refresh preview": "Oppdater forhåndsvisning",
+    "Relative path": "Relativ sti",
+    "Remove stale entries": "Fjern utdaterte oppføringer",
+    "Rename": "Gi nytt navn",
+    "Rename file": "Gi nytt navn til fil",
+    "Rename pattern": "Gi nytt navn til mønster",
+    "Rename smart collection": "Gi nytt navn til smart samling",
+    "Replace:": "Erstatt:",
+    "Reset widths": "Tilbakestill bredder",
+    "Resolution File Manager": "Resolution Filbehandler",
+    "Restore system default": "Gjenopprett systemstandard",
+    "Retry failed": "Prøv igjen mislyktes",
+    "Review visually similar images": "Gjennomgå visuelt lignende bilder",
+    "Review-only: this tool never deletes or changes files.": "Kun gjennomgang: dette verktøyet sletter eller endrer aldri filer.",
+    "Rule enabled": "Regel aktivert",
+    "Rules are evaluated from top to bottom. Files are never changed until a preview is reviewed and Apply is confirmed.": "Regler evalueres fra topp til bunn. Filer endres aldri før en forhåndsvisning er vurdert og Bruk er bekreftet.",
+    "Sample button": "Eksempelknapp",
+    "Save": "Lagre",
+    "Save contact sheet": "Lagre kontaktark",
+    "Save current": "Lagre gjeldende",
+    "Save media report": "Lagre medierapport",
+    "Save rule": "Lagre regel",
+    "Save smart collection": "Lagre smart samling",
+    "Save workspace": "Lagre arbeidsområde",
+    "Saved one-pane searches": "Lagrede ett-fane søk",
+    "Scan settings": "Skann innstillinger",
+    "Scope:": "Omfang:",
+    "Select a column, then move it or set its width.": "Velg en kolonne, og flytt den eller sett bredden.",
+    "Select an image": "Velg et bilde",
+    "Select failed": "Velg mislyktes",
+    "Select this group in source pane": "Velg denne gruppen i kildepanelet",
+    "Set width": "Angi bredde",
+    "Show frame numbers and timestamps": "Vis bildenumre og tidsstempler",
+    "Similarity is an estimate. Review files before taking any action; this window cannot delete them.": "Likhet er et estimat. Gå gjennom filer før du tar noen handling; dette vinduet kan ikke slette dem.",
+    "Similarity tolerance (0–16):": "Likhetstoleranse (0–16):",
+    "Smart collections": "Smarte samlinger",
+    "Some files already exist. Enter: replace, skip, keep both, or newer": "Noen filer finnes allerede. Skriv inn: erstatte, hopp over, behold begge, eller nyere",
+    "Start": "Start",
+    "Start number:": "Startnummer:",
+    "Status": "Status",
+    "Template:": "Mal:",
+    "Theme:": "Tema:",
+    "Thumbnail storage": "Miniatyrbilde lagring",
+    "Tokens: {name} original name, {n} number, {ext} extension, {dotext} extension including dot": "Tegn: {name} originalt navn, {n} nummer, {ext} filtype, {dotext} filtype inkludert punktum",
+    "Transfer queue": "Overføringskø",
+    "Undo delete": "Angre sletting",
+    "Verify media integrity": "Verifiser medieintegritet",
+    "Width:": "Bredde:",
+    "Workspace name:": "Arbeidsområde navn:",
+    "⤓ PNG": "⤓ PNG",
+    "🔇 Unavailable": "🔇 Utilgjengelig",
+    "Thumbnails": "Minibilder",
+    "Ready": "Klar",
+    "Keep both": "Behold begge",
+    "Filename": "Filnavn",
+    "Move": "Flytt",
+    "Copy": "Kopier",
+    "Cancelled": "Avbrutt",
+    "Add to selection basket": "Legg til i utvalgskurv",
+    "New folder…": "Ny mappe…",
+    "Selection basket…": "Utvalgskurv…",
+    "Selection basket": "Utvalgskurv",
+    "Highlighted files:": "Uthevede filer:",
+    "Tick selection": "Merk utvalg",
+    "Untick selection": "Opphev merking",
+    "Undo in progress…": "Angrepågående…",
+    "\nUnfinished recovery steps and backups were retained. Close applications using these files, then press Undo again.": "\nUfullstendige gjenopprettingssteg og sikkerhetskopier ble beholdt.Lukkapplikasjoner som bruker disse filene, trykk deretterAngreigjen.",
+    "Undo would overwrite an existing file: {target}. Both files were retained.": "Angrevil overskrive en eksisterende fil: {target}. Begge filene ble beholdt.",
+    "Undo target is missing; recovery retained: {target}": "Angremålet mangler; gjenoppretting beholdt: {target}",
+    "Undo backup is missing: {backup}": "Angresikkerhetskopi mangler: {backup}",
+    "New folder": "Ny mappe",
+    "Folder name:": "Mappenavn:",
+    "Filename conflict": "Filnavnkonflikt",
+    "Rename file — live preview": "Gi nytt navn til fil— live forhåndsvisning",
+    "Could not create folder": "Kunne ikke opprette mappe",
+    "Select or tick files first.": "Velg eller merk filer først.",
+    "Move files": "Flyttfiler",
+    "Copy files": "Kopier filer",
+    "Ask for each conflict": "Spør om hver konflikt",
+    "keep both": "behold begge",
+    "Replace": "Erstatt",
+    "Skip": "Hopp over",
+    "Selection basket — temporary references": "Valgbasket – midlertidige referanser",
+    "Original location": "Opprinnelig plassering",
+    "Add pane selection": "Legg til rutevalg",
+    "Remove references": "Fjern referanser",
+    "Clear basket": "Fjernkurv",
+    "Copy to active pane": "Kopiertil aktiv rute",
+    "Move to active pane": "Flytttil aktiv rute",
+    "Source missing": "Kilde mangler",
+    " files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "filer. Konflikter blir gjennomgått før kølegging. Erstatning beholder en angre-backup for denne økten.",
+    "Queue move": "Køflytt",
+    "Queue copy": "Køkopi",
+    "Unsafe destination": "Usikker destinasjon",
+    "A destination is one of the selected source files. Choose another folder.": "En destinasjon er en av de valgte kildefilene. Velg en annen mappe.",
+    "New filename: ": "Nytt filnavn:",
+    "Destination now exists. Choose another name.": "Mål finnes allerede. Velg et annet navn.",
+    "Destination folder:": "Målmappe:",
+    "Preserve folder structure": "Bevar mappestrukturen",
+    "Files only (no subfolders)": "Filkun (ingen undermapper)",
+    "If a destination filename already exists:": "Hvis et destinasjonsfilnavn allerede finnes:",
+    "Open destination when complete": "Åpnedestinasjon når fullført",
+    "Destination is a selected source": "Destinasjon er en valgt kilde",
+    "Apply to all remaining conflicts": "Bruktil alle gjenværende konflikter",
+    "Hide basket": "Skjul kurv",
+    "Treeview": "Trevisning",
+    "Destination is a folder": "Destinasjonen er en mappe",
+    " to ": "til",
+    "Source: ": "Kilde:",
+    "\n\nDestination: ": "\nDestinasjon:",
+    "\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "\nBehold beggelager et nummerert filnavn. Erstatt sikkerhetskopierer destinasjonen for øktenAngre",
+    "Current filename: ": "Gjeldende filnavn:",
+    "Duplicate destination name": "Duplikat destinasjonsnavn",
+    " [missing]": "[mangler]",
+    "Existing destination": "Eksisterende destinasjon",
+    "Enter a valid folder name without slashes, reserved names or trailing spaces/dots.": "Angi et gyldig mappenavn uten skråstreker, reservert navn eller avsluttende mellomrom/punkter.",
+    "Source and destination are the same file; nothing was changed.": "Kildeog destinasjon er samme fil; ingenting ble endret.",
+    "Undo would overwrite an existing file: ": "Angrevil overskrive en eksisterende fil:",
+    "Undo stopped because this file changed after transfer: ": "Angrestoppet fordi denne filen endret seg etter overføring:",
+    "Source changed during transfer; retained original. Retry after writing finishes.": "Kildeble endret under overføring; beholdt originalen. Prøv på nytt etter at skrivingen er fullført.",
+    "Undo target is missing; recovery retained: ": "Angremål mangler; gjenoppretting beholdt:",
+    "Undo backup is missing: ": "Angre sikkerhetskopi mangler:",
+    "Destination changed; retry: ": "Destinasjon endret; prøv igjen:",
+    "{count} files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "{count}filer. Konflikter gjennomgås før køing. Erstatt beholder en angre-sikkerhetskopi for denne økten.",
+    "Source: {source}\n\nDestination: {target}\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "Kilde: {source}Destinasjon: {target}\n\nBehold beggelager et nummerert filnavn. Erstatt sikkerhetskopierer destinasjonen for øktenAngre.",
+    "Current filename: {name}": "Nåværende filnavn: {name}",
+    "New filename: {name}\n{status}": "Nytt filnavn: {name}\n{status}",
+    "Source": "Kilde",
+    "Destination": "Destinasjon",
+    "[missing]": "[ingen]",
+    "Unchanged": "Uendret",
+    "Name cannot be empty": "Navn kan ikke være tom",
+    "Name contains a forbidden character": "Navn inneholder et forbudt tegn",
+    "Name cannot end with a space or dot": "Navn kan ikke slutte med mellomrom eller punktum",
+    "Reserved Windows filename": "Reservert Windows-filnavn",
+    "Duplicate output name": "Duplisert utdatafilnavn navn",
+    "A file with this name already exists": "En fil med dette navnet finnes allerede",
+    "Invalid template: {error}": "Ugyldig mal: {error}",
+    "Undo stopped because this file changed after transfer: {path}. The file was retained.": "Angrestoppet fordi denne filen endret seg etter overføring:{path}. Filen ble beholdt.",
+    "Destination changed; retry: {target}": "Destinasjon endret; prøv igjen:{target}",
+    "{ready} file(s) ready · {unchanged} unchanged · {problems} problem(s)": "{ready} fil(er) klare ┬À {unchanged} uendret ┬À {problems} problem(er)",
+    "Start and padding must be whole numbers.": "Start og utfylling må være heltall."
+  }
+}

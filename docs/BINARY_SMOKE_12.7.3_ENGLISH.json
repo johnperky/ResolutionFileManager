@@ -1,0 +1,9 @@
+{
+  "executable": "C:\\Users\\johnp\\Desktop\\ResolutionFileManager-v12.7.3-English-Review.exe",
+  "sha256": "53448a9e491e2f96011e3ea6e13892da055ba5642cc47a894be2053181a286ae",
+  "language": "en",
+  "startup_liveness_passed": true,
+  "observation_seconds": 15,
+  "stderr": "",
+  "scope": "Startup/liveness only; visual and feature checks reported separately."
+}

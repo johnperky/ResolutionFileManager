@@ -1,0 +1,6 @@
+test_all_languages_have_explicit_buttons_and_correct_actions (test_drop_dialog.DropDialogTests.test_all_languages_have_explicit_buttons_and_correct_actions) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 6.806s
+
+OK

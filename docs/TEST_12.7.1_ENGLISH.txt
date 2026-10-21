@@ -1,0 +1,697 @@
+test_merge_settings_preserves_unrelated_existing_values (test_app_integration.AppIntegrationHelperTests.test_merge_settings_preserves_unrelated_existing_values) ... ok
+test_resource_directory_uses_source_and_pyinstaller_roots (test_app_integration.AppIntegrationHelperTests.test_resource_directory_uses_source_and_pyinstaller_roots) ... ok
+test_store_destinations_use_official_product_id (test_app_integration.AppIntegrationHelperTests.test_store_destinations_use_official_product_id) ... ok
+test_full_historical_guide_archive_is_preserved (test_help_integrity.FullHelpTests.test_full_historical_guide_archive_is_preserved) ... ok
+test_master_and_every_language_pass_completeness_validation (test_help_integrity.FullHelpTests.test_master_and_every_language_pass_completeness_validation) ... FAIL
+test_short_summary_cannot_override_full_english (test_help_integrity.FullHelpTests.test_short_summary_cannot_override_full_english) ... ok
+test_smart_collections_explains_limits_and_exact_functions (test_help_integrity.FullHelpTests.test_smart_collections_explains_limits_and_exact_functions) ... ok
+test_does_not_add_missing_step_or_modify_unrelated_words (test_help_translation_format.HelpTranslationFormatTests.test_does_not_add_missing_step_or_modify_unrelated_words) ... ok
+test_does_not_split_normal_arabic_words_or_generic_menu_nouns (test_help_translation_format.HelpTranslationFormatTests.test_does_not_split_normal_arabic_words_or_generic_menu_nouns) ... ok
+test_glossary_replacement_does_not_join_neighbouring_words (test_help_translation_format.HelpTranslationFormatTests.test_glossary_replacement_does_not_join_neighbouring_words) ... ok
+test_latin_ui_boundaries_keep_natural_short_inflection_suffixes (test_help_translation_format.HelpTranslationFormatTests.test_latin_ui_boundaries_keep_natural_short_inflection_suffixes) ... ok
+test_natural_latin_compounds_are_not_split (test_help_translation_format.HelpTranslationFormatTests.test_natural_latin_compounds_are_not_split) ... ok
+test_preserves_localised_digits_while_restoring_lines (test_help_translation_format.HelpTranslationFormatTests.test_preserves_localised_digits_while_restoring_lines) ... ok
+test_restores_numbered_lines_without_changing_decimals_or_codecs (test_help_translation_format.HelpTranslationFormatTests.test_restores_numbered_lines_without_changing_decimals_or_codecs) ... ok
+test_separates_joined_rtl_ui_labels (test_help_translation_format.HelpTranslationFormatTests.test_separates_joined_rtl_ui_labels) ... ok
+test_step_detection_ignores_extension_digits_and_rating_ranges (test_help_translation_format.HelpTranslationFormatTests.test_step_detection_ignores_extension_digits_and_rating_ranges) ... ok
+test_urdu_markers_and_missing_space_after_number (test_help_translation_format.HelpTranslationFormatTests.test_urdu_markers_and_missing_space_after_number) ... ok
+test_language_subset_checks_only_requested_language (test_help_validator.HelpValidatorRegressionTests.test_language_subset_checks_only_requested_language) ... ok
+test_missing_empty_summary_english_links_and_rtl_fail_validation (test_help_validator.HelpValidatorRegressionTests.test_missing_empty_summary_english_links_and_rtl_fail_validation) ... ok
+test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) ... 
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='zh-CN') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='nl') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='fr') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='de') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ja') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ko') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ru') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='es') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='sv') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='bg') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='th') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='id') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='el') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='fil') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='hi') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='pl') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='it') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ar') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='vi') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='uk') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='no') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='fi') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='da') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='hu') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ro') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='cs') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='pt-PT') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='pt-BR') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='tr') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='zh-TW') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ms') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='he') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='bn') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ur') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='fa') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='sk') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='hr') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='sr') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ca') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='et') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='lv') ... FAIL
+  test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='lt') ... FAIL
+test_regional_locales_map_to_supported_language (test_localization.LocalizationSelectionTests.test_regional_locales_map_to_supported_language) ... ok
+test_right_to_left_languages_are_identified (test_localization.LocalizationSelectionTests.test_right_to_left_languages_are_identified) ... ok
+test_saved_override_wins_and_system_restores_detection (test_localization.LocalizationSelectionTests.test_saved_override_wins_and_system_restores_detection) ... ok
+test_unknown_or_empty_locale_falls_back_to_english (test_localization.LocalizationSelectionTests.test_unknown_or_empty_locale_falls_back_to_english) ... ok
+test_absent_or_malformed_selected_pack_uses_english (test_localization.TranslatorTests.test_absent_or_malformed_selected_pack_uses_english) ... ok
+test_help_chapters_preserve_pack_order_with_english_fallback (test_localization.TranslatorTests.test_help_chapters_preserve_pack_order_with_english_fallback) ... ok
+test_localized_choices_display_translations_but_preserve_internal_values (test_localization.TranslatorTests.test_localized_choices_display_translations_but_preserve_internal_values) ... ok
+test_missing_key_and_bad_interpolation_are_safe_and_diagnostic (test_localization.TranslatorTests.test_missing_key_and_bad_interpolation_are_safe_and_diagnostic) ... ok
+test_selected_pack_overlays_english_and_missing_values_fall_back (test_localization.TranslatorTests.test_selected_pack_overlays_english_and_missing_values_fall_back) ... ok
+test_ui_text_translates_exact_and_dynamic_dialog_messages (test_localization.TranslatorTests.test_ui_text_translates_exact_and_dynamic_dialog_messages) ... ok
+test_conversion_choice_maps_cover_internal_values (test_localized_option_controls.LocalizedOptionControlTests.test_conversion_choice_maps_cover_internal_values) ... ok
+test_user_facing_combobox_choices_are_not_embedded_english_tuples (test_localized_option_controls.LocalizedOptionControlTests.test_user_facing_combobox_choices_are_not_embedded_english_tuples) ... ok
+test_probe_verify_convert_remux_and_cancellation_preserve_originals (test_media_regression.MediaRegressionTests.test_probe_verify_convert_remux_and_cancellation_preserve_originals) ... ok
+test_release_version_is_consistent (test_packaging_assets.PackagingAssetTests.test_release_version_is_consistent) ... ok
+test_store_builder_rejects_an_executable_older_than_release_sources (test_packaging_assets.PackagingAssetTests.test_store_builder_rejects_an_executable_older_than_release_sources) ... ok
+test_store_builder_uses_the_project_release_version (test_packaging_assets.PackagingAssetTests.test_store_builder_uses_the_project_release_version) ... ok
+test_store_manifest_declares_12_6_language_expansion (test_packaging_assets.PackagingAssetTests.test_store_manifest_declares_12_6_language_expansion) ... 
+  test_store_manifest_declares_12_6_language_expansion (test_packaging_assets.PackagingAssetTests.test_store_manifest_declares_12_6_language_expansion) (language='sr-latn-rs') ... FAIL
+test_store_manifest_declares_italian (test_packaging_assets.PackagingAssetTests.test_store_manifest_declares_italian) ... ok
+test_validator_accepts_complete_locale_directory (test_packaging_assets.PackagingAssetTests.test_validator_accepts_complete_locale_directory) ... ok
+test_validator_reports_every_missing_pack (test_packaging_assets.PackagingAssetTests.test_validator_reports_every_missing_pack) ... ok
+test_versioned_archive_manifest_and_no_overwrite (test_project_snapshot.ProjectSnapshotTests.test_versioned_archive_manifest_and_no_overwrite) ... ok
+test_malformed_state_is_normalised_without_mutating_input (test_reminder_policy.ReminderHistoryTests.test_malformed_state_is_normalised_without_mutating_input) ... ok
+test_successful_launch_increments_once_and_keeps_three_distinct_dates (test_reminder_policy.ReminderHistoryTests.test_successful_launch_increments_once_and_keeps_three_distinct_dates) ... ok
+test_disable_is_independent (test_reminder_policy.ReminderPolicyTests.test_disable_is_independent) ... ok
+test_open_or_never_permanently_disables_automatic_prompt (test_reminder_policy.ReminderPolicyTests.test_open_or_never_permanently_disables_automatic_prompt) ... ok
+test_postpone_and_close_use_exact_intervals (test_reminder_policy.ReminderPolicyTests.test_postpone_and_close_use_exact_intervals) ... ok
+test_rating_requires_five_launches_and_three_days (test_reminder_policy.ReminderPolicyTests.test_rating_requires_five_launches_and_three_days) ... ok
+test_reenable_schedules_from_current_launch_without_fabricating_dates (test_reminder_policy.ReminderPolicyTests.test_reenable_schedules_from_current_launch_without_fabricating_dates) ... ok
+test_support_begins_at_eleven_and_rating_has_priority (test_reminder_policy.ReminderPolicyTests.test_support_begins_at_eleven_and_rating_has_priority) ... ok
+test_combobox_width_fits_longest_translated_choice (test_responsive_layout.ResponsiveLayoutTests.test_combobox_width_fits_longest_translated_choice) ... ok
+test_filter_toolbar_uses_two_rows_to_protect_long_translations (test_responsive_layout.ResponsiveLayoutTests.test_filter_toolbar_uses_two_rows_to_protect_long_translations) ... ok
+test_windows_keeps_logical_text_and_linux_shapes_once (test_rtl_display.RtlDisplayTests.test_windows_keeps_logical_text_and_linux_shapes_once) ... ok
+test_wrapping_and_mapping_preserve_exact_logical_match_across_lines (test_rtl_display.RtlDisplayTests.test_wrapping_and_mapping_preserve_exact_logical_match_across_lines) ... ok
+test_missing_root_does_not_navigate_or_apply_changes (test_smart_collections.SmartCollectionTests.test_missing_root_does_not_navigate_or_apply_changes) ... ok
+test_save_apply_edit_rename_delete_restore_without_touching_media (test_smart_collections.SmartCollectionTests.test_save_apply_edit_rename_delete_restore_without_touching_media) ... ok
+test_every_static_widget_label_is_catalogued (test_static_ui_localization.StaticUiLocalizationTests.test_every_static_widget_label_is_catalogued) ... ok
+test_file_dialog_translates_title_keyword (test_static_ui_localization.StaticUiLocalizationTests.test_file_dialog_translates_title_keyword) ... ok
+test_standard_input_dialog_translates_title_and_prompt (test_static_ui_localization.StaticUiLocalizationTests.test_standard_input_dialog_translates_title_and_prompt) ... ok
+test_actual_conversion_collision_is_localized_without_changing_plan (test_store_ui_fixes.StoreUiFixTests.test_actual_conversion_collision_is_localized_without_changing_plan) ... ok
+test_heading_width_adapts_once_but_keeps_same_language_custom_resize (test_store_ui_fixes.StoreUiFixTests.test_heading_width_adapts_once_but_keeps_same_language_custom_resize) ... ok
+test_preview_existing_and_same_source_statuses_are_localized (test_store_ui_fixes.StoreUiFixTests.test_preview_existing_and_same_source_statuses_are_localized) ... ok
+test_tick_counter_uses_existing_language_and_updates_count (test_store_ui_fixes.StoreUiFixTests.test_tick_counter_uses_existing_language_and_updates_count) ... ok
+test_highlight_is_used_when_no_files_are_ticked (test_tick_selection.TickSelectionTests.test_highlight_is_used_when_no_files_are_ticked) ... ok
+test_removed_files_are_also_removed_from_ticks (test_tick_selection.TickSelectionTests.test_removed_files_are_also_removed_from_ticks) ... ok
+test_ticks_override_highlight_and_include_hidden_filtered_files (test_tick_selection.TickSelectionTests.test_ticks_override_highlight_and_include_hidden_filtered_files) ... ok
+test_toggle_all_affects_only_visible_files (test_tick_selection.TickSelectionTests.test_toggle_all_affects_only_visible_files) ... ok
+test_apply_all_only_prompts_once (test_transfer_upgrade.TransferUpgradeTests.test_apply_all_only_prompts_once) ... ok
+test_batch_keep_both_reserves_names_before_execution (test_transfer_upgrade.TransferUpgradeTests.test_batch_keep_both_reserves_names_before_execution) ... ok
+test_cancel_does_not_replace_or_remove_source (test_transfer_upgrade.TransferUpgradeTests.test_cancel_does_not_replace_or_remove_source) ... ok
+test_failure_publishing_restores_replacement (test_transfer_upgrade.TransferUpgradeTests.test_failure_publishing_restores_replacement) ... ok
+test_folder_modes_and_collision_reservations (test_transfer_upgrade.TransferUpgradeTests.test_folder_modes_and_collision_reservations) ... ok
+test_inspector_release_clamps_actual_sash_not_only_saved_width (test_transfer_upgrade.TransferUpgradeTests.test_inspector_release_clamps_actual_sash_not_only_saved_width) ... ok
+test_invalid_folder_names (test_transfer_upgrade.TransferUpgradeTests.test_invalid_folder_names) ... ok
+test_keep_both_skip_and_replace_backup (test_transfer_upgrade.TransferUpgradeTests.test_keep_both_skip_and_replace_backup) ... ok
+test_mid_copy_cancel_restores_destination_and_move_source (test_transfer_upgrade.TransferUpgradeTests.test_mid_copy_cancel_restores_destination_and_move_source) ... ok
+test_move_does_not_remove_source_changed_during_transfer (test_transfer_upgrade.TransferUpgradeTests.test_move_does_not_remove_source_changed_during_transfer) ... ok
+test_same_path_never_destroys_source (test_transfer_upgrade.TransferUpgradeTests.test_same_path_never_destroys_source) ... ok
+test_undo_guard_rejects_modified_target (test_transfer_upgrade.TransferUpgradeTests.test_undo_guard_rejects_modified_target) ... ok
+test_windows_publishes_staged_data_without_second_copy (test_transfer_upgrade.TransferUpgradeTests.test_windows_publishes_staged_data_without_second_copy) ... ok
+
+======================================================================
+FAIL: test_master_and_every_language_pass_completeness_validation (test_help_integrity.FullHelpTests.test_master_and_every_language_pass_completeness_validation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_help_integrity.py", line 39, in test_master_and_every_language_pass_completeness_validation
+    self.assertEqual(validate()["errors"],[])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['zh-CN: stale master hash', 'zh-CN/detail[10602 chars]rce'] != []
+
+First list contains 210 additional elements.
+First extra element 0:
+'zh-CN: stale master hash'
+
+Diff is 11284 characters long. Set self.maxDiff to None to see it.
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='zh-CN')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='nl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='fr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='de')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ja')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ko')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ru')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='es')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='sv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='bg')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='th')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='el')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='fil')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='hi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='pl')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='it')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ar')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='vi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='uk')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='no')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='fi')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='da')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='hu')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ro')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='cs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='pt-PT')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='pt-BR')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='tr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='zh-TW')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ms')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='he')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='bn')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ur')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='fa')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='sk')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='hr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='sr')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='ca')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='et')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='lv')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_all_supported_packs_have_required_keys_and_help_chapters (test_locale_packs.LocalePackParityTests.test_all_supported_packs_have_required_keys_and_help_chapters) (code='lt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_locale_packs.py", line 88, in test_all_supported_packs_have_required_keys_and_help_chapters
+    self.assertEqual(set(literals), set(english_literals))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Items in the second set but not the first:
+'New folder�'
+'Selection basket�'
+'Selection basket'
+'Add to selection basket'
+
+======================================================================
+FAIL: test_store_manifest_declares_12_6_language_expansion (test_packaging_assets.PackagingAssetTests.test_store_manifest_declares_12_6_language_expansion) (language='sr-latn-rs')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "F:\Resolution File Manager project\ResolutionFileManager-Project-v6\test_packaging_assets.py", line 67, in test_store_manifest_declares_12_6_language_expansion
+    self.assertIn(f'<Resource Language="{language}" />', manifest)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '<Resource Language="sr-latn-rs" />' not found in '<?xml version="1.0" encoding="utf-8"?>\n<Package\n  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"\n  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"\n  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"\n  IgnorableNamespaces="uap rescap">\n  <Identity\n    Name="__IDENTITY_NAME__"\n    Publisher="__PUBLISHER__"\n    Version="__VERSION__"\n    ProcessorArchitecture="x64" />\n  <Properties>\n    <DisplayName>Resolution File Manager</DisplayName>\n    <PublisherDisplayName>__PUBLISHER_DISPLAY_NAME__</PublisherDisplayName>\n    <Description>Fast dual-pane organisation, review and conversion for large image and video collections.</Description>\n    <Logo>Assets\\StoreLogo.png</Logo>\n  </Properties>\n  <Resources>\n    <Resource Language="en-gb" />\n    <Resource Language="bg-bg" />\n    <Resource Language="de-de" />\n    <Resource Language="el-gr" />\n    <Resource Language="es-es" />\n    <Resource Language="fil-ph" />\n    <Resource Language="fr-fr" />\n    <Resource Language="hi-in" />\n    <Resource Language="id-id" />\n    <Resource Language="it-it" />\n    <Resource Language="ar-sa" />\n    <Resource Language="vi-vn" />\n    <Resource Language="uk-ua" />\n    <Resource Language="nb-no" />\n    <Resource Language="fi-fi" />\n    <Resource Language="da-dk" />\n    <Resource Language="hu-hu" />\n    <Resource Language="ro-ro" />\n    <Resource Language="cs-cz" />\n    <Resource Language="pt-pt" />\n    <Resource Language="pt-br" />\n    <Resource Language="tr-tr" />\n    <Resource Language="zh-tw" />\n    <Resource Language="ms-my" />\n    <Resource Language="he-il" />\n    <Resource Language="bn-bd" />\n    <Resource Language="ur-pk" />\n    <Resource Language="fa-ir" />\n    <Resource Language="sk-sk" />\n    <Resource Language="hr-hr" />\n    <Resource Language="sr-cyrl-rs" />\n    <Resource Language="ca-es" />\n    <Resource Language="et-ee" />\n    <Resource Language="lv-lv" />\n    <Resource Language="lt-lt" />\n    <Resource Language="ja-jp" />\n    <Resource Language="ko-kr" />\n    <Resource Language="nl-nl" />\n    <Resource Language="pl-pl" />\n    <Resource Language="ru-ru" />\n    <Resource Language="sv-se" />\n    <Resource Language="th-th" />\n    <Resource Language="zh-cn" />\n  </Resources>\n  <Dependencies>\n    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.26100.0" />\n  </Dependencies>\n  <Applications>\n    <Application Id="ResolutionFileManager" Executable="ResolutionFileManager.exe" EntryPoint="Windows.FullTrustApplication">\n      <uap:VisualElements\n        AppListEntry="default"\n        DisplayName="Resolution File Manager"\n        Description="Fast dual-pane media organisation, review and conversion."\n        BackgroundColor="transparent"\n        Square44x44Logo="Assets\\Square44x44Logo.png"\n        Square150x150Logo="Assets\\Square150x150Logo.png">\n        <uap:DefaultTile\n          ShortName="Resolution File Manager"\n          Wide310x150Logo="Assets\\Wide310x150Logo.png"\n          Square310x310Logo="Assets\\Square310x310Logo.png" />\n      </uap:VisualElements>\n    </Application>\n  </Applications>\n  <Capabilities>\n    <rescap:Capability Name="runFullTrust" />\n  </Capabilities>\n</Package>\n'
+
+----------------------------------------------------------------------
+Ran 79 tests in 9.150s
+
+FAILED (failures=44)

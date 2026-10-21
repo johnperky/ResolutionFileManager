@@ -1,0 +1,1561 @@
+{
+  "meta": {
+    "language": "Српски"
+  },
+  "strings": {
+    "app.title": "Resolution File Manager {version}",
+    "menu.file": "Датотека",
+    "menu.edit": "Уреди",
+    "menu.view": "Прикажи",
+    "menu.tools": "Алатке",
+    "menu.help": "Помоћ",
+    "menu.browse": "Прегледај активни панел…",
+    "menu.refresh": "Освежи",
+    "menu.exit": "Излаз",
+    "menu.copy": "Копирај",
+    "menu.cut": "Исеци",
+    "menu.paste": "Налепи",
+    "menu.undo": "Опозови",
+    "menu.rename": "Премену имена…",
+    "menu.batch_rename": "Промена имена групно за изабране…",
+    "menu.delete": "Премести у корпу за отпатке / на отпад",
+    "menu.select_all": "Изабери све приказано",
+    "menu.details": "Детаљи у активном панелу",
+    "menu.thumbnails": "Сличице у активном панелу",
+    "menu.thumbnail_size": "Величина сличица",
+    "menu.columns": "Подешавање колона…",
+    "menu.appearance": "Изглед и величина текста…",
+    "menu.refresh_active": "Освежи активни панел",
+    "menu.refresh_both": "Освежи оба прозора",
+    "menu.go_up": "Иди горе",
+    "menu.verify": "Проверите интегритет медија…",
+    "menu.contact_sheet": "Креирај видео контакт листу…",
+    "menu.export_report": "Извези извештај о медијима…",
+    "menu.metadata": "Погледај уграђене метаподака…",
+    "menu.convert": "Конвертуј изабране видеe…",
+    "menu.duplicates": "Пронађи дупликате…",
+    "menu.similar": "Пронађи визуелно сличне слике…",
+    "menu.compare": "Упореди изабрано…",
+    "menu.sync": "Упореди / синхронизуј фасцикле…",
+    "menu.save_workspace": "Сачувај радни простор…",
+    "menu.load_workspace": "Учитај радни простор…",
+    "menu.save_collection": "Сачувај активну паметну колекцију…",
+    "menu.manage_collections": "Управљај паметним колекцијама…",
+    "menu.folder_rules": "Правила организације фасцикли…",
+    "menu.cache": "Кеширање и скенирање…",
+    "menu.queue": "Ред трансфера…",
+    "menu.language": "Језик",
+    "menu.reminders": "Подсетници…",
+    "menu.how_to": "Како користити Resolution File Manager",
+    "menu.shortcuts": "Пречице на тастатури",
+    "menu.coffee": "☕ Ако вам се ово свиђа, купите Џону кафу…",
+    "menu.about": "О апликацији",
+    "context.copy_other": "Копирај у други панел",
+    "context.move_other": "Премести у други панел",
+    "context.open": "Отвори",
+    "context.reveal": "Прикажи у File Explorer-у",
+    "context.rename": "Преименуј…",
+    "context.clear_rating": "Очисти оцену",
+    "context.rating": "Оцена",
+    "context.none": "Ниједан",
+    "context.colour": "Боја ознаке",
+    "context.edit_tags": "Уреди ознаке…",
+    "context.recycle": "Премести у корпу за отпатке",
+    "context.select_all": "Изабери све приказано",
+    "context.clear_ticks": "Очисти ознаке",
+    "context.find_duplicates": "Пронађи дупликате",
+    "context.compare": "Упореди изабрано",
+    "context.refresh_pane": "Освежи овај панел",
+    "context.refresh_both": "Освежи оба панела",
+    "context.open_folder": "Отвори фасциклу",
+    "context.red": "Црвена",
+    "context.yellow": "Жута",
+    "context.green": "Зелена",
+    "context.blue": "Плава",
+    "context.purple": "Љубичаста",
+    "context.configure_columns": "Постави колоне…",
+    "context.reset_columns": "Ресетуј ширину колона",
+    "context.files_suffix": "({count} фајлова)",
+    "sort.sort": "Сортирај",
+    "sort.name": "Име",
+    "sort.modified": "Датум измене",
+    "sort.size": "Величина фајла",
+    "sort.duration": "Дужина",
+    "sort.codec": "Кодек",
+    "sort.resolution": "Резолуција",
+    "sort.type": "Тип",
+    "sort.bitrate": "Битрате",
+    "sort.fps": "Фрејмреит",
+    "sort.rating": "Оцена",
+    "sort.a_z": "Од А до Ш",
+    "sort.z_a": "Од Ш до А",
+    "sort.oldest": "Најстарије прво",
+    "sort.newest": "Najnovije prvo",
+    "sort.smallest": "Najmanje prvo",
+    "sort.largest": "Najveće prvo",
+    "sort.shortest": "Najkraće prvo",
+    "sort.longest": "Najduže prvo",
+    "sort.ascending": "Rastuće",
+    "sort.descending": "Opadajuće",
+    "toolbar.guide": "Izaberite datoteke u bilo kom prozoru, a zatim ih pošaljite u drugi prozor.",
+    "toolbar.refresh": "Osveži",
+    "toolbar.move": "Premesti izabrano → drugi prozor",
+    "toolbar.copy": "Копирај изабрано → други панел",
+    "toolbar.undo": "Опозови",
+    "pane.left": "Леви панел",
+    "pane.right": "Десни панел",
+    "pane.preview": "Преглед",
+    "pane.info": "Информације",
+    "pane.browse": "Претражуј…",
+    "pane.drag": "↗ Повуци изабрано",
+    "pane.show": "Прикажи:",
+    "pane.videos": "Видео снимке",
+    "pane.images": "Слике",
+    "pane.find": "Претражи:",
+    "pane.live": "Уживо",
+    "pane.subfolders": "Укључи подфолдере",
+    "pane.resolution": "Резолуција:",
+    "pane.all": "Сви",
+    "pane.select_matching": "Изабери одговарајуће",
+    "pane.more_filters": "Више филтера…",
+    "pane.outliers": "Изабери величинске отпаце",
+    "pane.scanning": "Скенирање медија…",
+    "pane.cancel": "Откажи",
+    "pane.no_files": "Нема одговарајућих медија",
+    "pane.checked": "{count} означено",
+    "pane.clear_ticks": "Очисти ознаке",
+    "view.details": "Детаљи",
+    "view.thumbnails": "Преглед сличица",
+    "size.small": "Мало",
+    "size.medium": "Средње",
+    "size.large": "Велико",
+    "browse.continuous": "Континуирано",
+    "browse.paged": "Странице",
+    "browse.auto": "Аутоматски",
+    "browse.per_page": "По страници:",
+    "column.name": "Име / релативна путања",
+    "column.codec": "Кодек",
+    "column.resolution": "Резолуција",
+    "column.duration": "Дужина видео записа",
+    "column.size": "Величина фајла",
+    "column.rate": "MB/мин",
+    "column.fps": "FPS",
+    "column.modified": "Датум измене",
+    "column.type": "Тип",
+    "column.bitrate": "Брзина преноса података",
+    "column.audio": "Аудио",
+    "column.hdr": "HDR",
+    "column.pixels": "Мегапиксели",
+    "column.color": "Етикета",
+    "column.tags": "Ознаке",
+    "column.rating": "Рејтинг",
+    "status.ready": "Спремно",
+    "status.scanning_progress": "Скенирање {current} од {total}… · {cached} из кеша",
+    "status.scan_complete_folder": "{count} медијских фајлова у овој фасцикли",
+    "status.scan_complete_subfolders": "{count} медијских фајлова укључујући подфасцикле",
+    "status.unreadable": "{count} нечитљивих",
+    "status.from_cache": "{count} из кеша",
+    "status.scan_cancelled": "Скенирање је отказано након {count} фајлова",
+    "status.skipped_file": "Прескочен фајл: {error}",
+    "status.scan_failed": "Није могуће скенирати: {error}",
+    "status.cancelling": "Отказивање скенирања…",
+    "status.live_on": "Лајв ажурирања укључена",
+    "status.live_off": "Лајв ажурирања искључена",
+    "status.loading": "Учитавање…",
+    "outlier.moderate": "Умерено (1.4×)",
+    "outlier.large": "Велико (1.75×)",
+    "outlier.extreme": "Екстремно (2.5×)",
+    "inspector.title": "Инспектор",
+    "inspector.no_file": "Нема одабраног фајла",
+    "inspector.select_file": "Изаберите медијску датотеку да бисте видели њене детаље.",
+    "inspector.copy_path": "Копирај путању",
+    "inspector.open": "Отвори",
+    "inspector.reveal": "Прикажи",
+    "preview.off": "Преглед искључен",
+    "preview.is_off": "Преглед је искључен",
+    "preview.select": "Изаберите датотеку за преглед",
+    "preview.select_side": "Изаберите слику или видео са ове стране",
+    "preview.play": "Пуштај",
+    "preview.pause": "Паузирај",
+    "preview.skim": "Прелистај:",
+    "preview.speed": "Брзина:",
+    "preview.muted": "Искључен звук",
+    "preview.unmuted": "Звук укључен",
+    "preview.still": "Статична слика",
+    "preview.unavailable": "Преглед није доступан",
+    "preview.read_failed": "Није могуће прочитати фрејм",
+    "convert.title": "Конвертуј изабране видео записе",
+    "convert.select_first_title": "Конвертуј видео записе",
+    "convert.select_first": "Прво изаберите један или више видео фајлова.",
+    "convert.settings": "Подешавања конверзије",
+    "convert.preset": "Пресет:",
+    "convert.quality": "Квалитет (CRF):",
+    "convert.resolution": "Резолуција:",
+    "convert.resolution_help": "1080p и 720p постављају висину излаза уз задржавање односа ширине и висине.",
+    "convert.quality_help": "Ниже вредности квалитета захтевају већи квалитет; хардверски механизми мапирају ову вредност на свој контролни систем. Remux игнорише квалитет и резолуцију.",
+    "convert.engine": "Енкодинг механизам:",
+    "convert.hardware_decode": "Користите хардверско декодирање када је доступно",
+    "convert.output_folder": "Излазна фасцикла:",
+    "convert.choose_output": "Изаберите фасциклу за излазну конверзију",
+    "convert.preserve_folders": "Сачувајте фасцикле у односу на активни панел",
+    "convert.skip_existing": "Прескочи постојеће",
+    "convert.keep_both": "Задржи оба",
+    "convert.originals_retained": "Оригинални видео снимци се увек чувају. Прегледајте сваки излазни пут пре него што започнете.",
+    "convert.status": "Статус",
+    "convert.source": "Извор",
+    "convert.output": "Излаз",
+    "convert.result": "Резултат",
+    "convert.remux_help": "Remux копира токове директно; кодирање, мењање величине и хардверско декодирање се не користе.",
+    "convert.none_reported": "није пријављено",
+    "convert.cpu_fallback": "нема; Аутоматски ће користити CPU",
+    "convert.capabilities": "Подршка FFmpeg хардверског кодера: {hardware} · Методе декодирања: {decode}",
+    "convert.capability_failed": "Провера могућности није успела: {error} · Софтверско кодирање остаје доступно",
+    "convert.choose_folder": "Изаберите фолдер за резултате.",
+    "convert.preview_summary": "{ready} спремно · {skipped} прескачено/проблем · величина извора {size}",
+    "convert.invalid_quality": "Неисправан квалитет",
+    "convert.invalid_quality_body": "CRF мора бити цео број од 18 до 35.",
+    "convert.engine_unavailable": "Енкодирајући мотор није доступан",
+    "convert.engine_unavailable_body": "{engine} није доступан за {preset}. Изаберите други мотор.",
+    "convert.unchanged": "Непромењено (копирање стрима)",
+    "convert.decode_unused": "nije korišćeno (kopija toka)",
+    "convert.decode_fallback": "zatraženo sa sigurnim rezervnim izborom",
+    "convert.off": "isključeno",
+    "convert.confirm_title": "Pokreni konverziju video zapisa",
+    "convert.confirm_body": "Kreirati {count} novi/nove video fajl(e)?\n\nKodiranje: {engine}\nRezolucija: {resolution}\nHardversko dekodiranje: {decode}\n\nOriginalni fajlovi će biti sačuvani. Otkaži uklanja trenutni delimični izlaz i zaustavlja preostali red čekanja.",
+    "convert.progress": "Конвертује се фајл {current} од {total} · {percent}%",
+    "convert.complete": "Завршено · {created} креирано · {failed} није успело · {cancelled} отказано",
+    "convert.refresh": "Освежи преглед",
+    "convert.start": "Почни конверзију…",
+    "convert.cancel": "Откажи конверзију",
+    "duplicates.title": "Дупликати",
+    "duplicates.none_candidates": "Нису пронађени кандидати за дупликате исте величине.",
+    "duplicates.quick_start": "Брза провера {count} дупликат(а) кандидата…",
+    "duplicates.quick_progress": "Брза провера дупликата {current} од {total}…",
+    "duplicates.verify_progress": "Верификација тачних поклапања {current} од {total}…",
+    "duplicates.complete_title": "Претрага дупликата завршена",
+    "duplicates.none": "Ниједан тачан дупликат није пронађен.",
+    "duplicates.none_status": "Ниједан тачан дупликат није пронађен · {cached} привремено сачуван(а/о) потпис(а)",
+    "duplicates.groups_status": "{groups} тачно идентична група(е) · {cached} сачуван отпечатак(а)",
+    "duplicates.first": "Први",
+    "duplicates.newest": "Најновији",
+    "duplicates.oldest": "Најстарији",
+    "duplicates.smallest": "Најмањи",
+    "duplicates.largest": "Највећи",
+    "duplicates.review_title": "Преглед тачних дупликата",
+    "duplicates.found": "Пронађено је {count} тачно идентична група(е). Изаберите ред да бисте прегледали поред друге копије из исте групе.",
+    "duplicates.explanation": "Tačne duplikate imaju identičan sadržaj i veličinu fajla, tako da će Najmanji i Najveći obično biti jednaki. Datumi i lokacije i dalje mogu da se razlikuju.",
+    "duplicates.preview": "Pregled {number}",
+    "duplicates.select": "Izaberite duplikat",
+    "duplicates.group": "Grupa",
+    "duplicates.filename": "Naziv fajla",
+    "duplicates.folder": "Fascikla",
+    "duplicates.size": "Veličina",
+    "duplicates.modified": "Izmenjeno",
+    "duplicates.reason": "Zašto može biti zadržan",
+    "duplicates.loading": "Учитавање прегледа…",
+    "duplicates.keep_one": "Задржати један по групи:",
+    "duplicates.clear": "Обриши предлог",
+    "duplicates.close": "Затвори без измена",
+    "duplicates.proposal_status": "Дуплирани предлог: задржати {strategy} · изабрано {count} сувишних датотека за преглед",
+    "duplicates.applied_title": "Примењен дуплирани предлог",
+    "duplicates.applied_body": "Копија {strategy} у свакој групи је остављена неозначена.\n\n{count} вишка датотека је одабрано у главном прозору. Прегледајте их тамо пре него што било шта преместите или избришете.",
+    "browse.page_summary": "Страница {page} од {pages} · {count} датотека{automatic}",
+    "browse.auto_suffix": "· Ауто {count}/страница",
+    "browse.continuous_summary": "{count} датотека · {mode} · само видљиве картице",
+    "browse.all_shown": "Све приказано",
+    "common.system_default": "Подразумевано системско",
+    "common.restart_required": "Потребно је поновно покретање",
+    "common.ok": "У реду",
+    "common.cancel": "Откажи",
+    "common.close": "Затвори",
+    "common.save": "Сачувај",
+    "common.enable": "Омогући",
+    "common.disable": "Онемогући",
+    "common.never": "Никада",
+    "common.launch": "покрени {count}",
+    "language.title": "Језик",
+    "language.message": "Подешавање језика је сачувано. Поново покрените Resolution File Manager да би се применио свуда.",
+    "reminders.title": "Подешавања подсетника",
+    "reminders.rating": "Подсетник за оцењивање у Microsoft Store-у",
+    "reminders.support": "Подсетник Buy Me a Coffee",
+    "reminders.next": "Следећи дозвољени: {value}",
+    "reminders.saved": "Подешавања подсетника сачувана.",
+    "rating.title": "Уживате у Resolution File Manager-у?",
+    "rating.body": "Ако вам је Resolution File Manager био користан, да ли бисте желели да га оцените у Microsoft Store-у? Оцене помажу другим људима да га открију.",
+    "rating.rate": "Оцените у Microsoft Store",
+    "rating.later": "Касније",
+    "rating.never": "Не питај поново",
+    "support.title": "Подршка Резолуција Фајл Менаджер",
+    "support.body": "Ако вам је програм користан, слободно купите Џону кафу. Подршка је потпуно опциона.",
+    "support.open": "Купи ми кафу",
+    "support.later": "Можда касније",
+    "support.never": "Не питај поново",
+    "link.error_title": "Није било могуће отворити страницу",
+    "link.error_body": "Отворите ову адресу у вашем веб прегледачу:\n\n{url}\n\n{error}",
+    "about.title": "О апликацији Resolution File Manager",
+    "about.description": "Крос-платформска апликација са двоструким панелом за прегледање, преглед, анализу и организовање колекција слика и видео снимака.",
+    "about.support": "Подржите развој",
+    "about.optional": "Ако вам Resolution File Manager користи, можете купити Џону кафе. Подршка је потпуно добровољна.",
+    "help.title": "Помоћ за Resolution File Manager — {version}",
+    "help.search": "Претражите комплетан водич:",
+    "help.previous": "Претходно поглавље",
+    "help.next": "Сledeће поглавље",
+    "help.next_match": "Следеће подударање (F3)",
+    "help.clear": "Очисти претрагу",
+    "help.no_results": "Нема резултата",
+    "help.no_results_body": "Није пронађено ниједно поглавље помоћи које садржи „{query}“. Покушајте са краћим појмом.",
+    "status.folder_missing": "Фолдер није пронађен",
+    "status.select_files": "Прво изаберите један или више фајлова у активном прозору.",
+    "status.finished": "Завршено",
+    "status.error": "Грешка",
+    "filters.title": "Напредни филтери",
+    "filters.orientation": "Оријентација",
+    "filters.codec": "Кодек садржи",
+    "filters.tag": "Таг садржи",
+    "filters.min_rating": "Минимална оцена",
+    "filters.color": "Боја ознаке",
+    "filters.min_width": "Минимална ширина (пиксели)",
+    "filters.max_width": "Максимална ширина (пиксели)",
+    "filters.min_height": "Минимална висина (пиксели)",
+    "filters.max_height": "Максимална висина (пиксели)",
+    "filters.min_size": "Минимална величина (MB)",
+    "filters.max_size": "Максимална величина (MB)",
+    "filters.min_duration": "Минимална трајање (секунде)",
+    "filters.max_duration": "Максимална трајање (секунде)",
+    "filters.date_from": "Измењено од (ГГГГ-ММ-ДД)",
+    "filters.date_to": "Измењено до (ГГГГ-ММ-ДД)",
+    "filters.any": "Било који",
+    "filters.landscape": "Пејзаж",
+    "filters.portrait": "Портрет",
+    "filters.square": "Квадрат",
+    "filters.unlabelled": "Непотписано",
+    "filters.clear": "Очисти",
+    "filters.apply": "Примени",
+    "filters.rating_1": "1",
+    "filters.rating_2": "2",
+    "filters.rating_3": "3",
+    "filters.rating_4": "4",
+    "filters.rating_5": "5",
+    "convert.preset_h264": "H.264 MP4 (компатибилан)",
+    "convert.preset_h265": "H.265 MP4 (мањи)",
+    "convert.preset_av1": "AV1 MKV (најмањи)",
+    "convert.preset_proxy": "720p H.264 прокси",
+    "convert.preset_remux": "Ремукс у MKV (без ре-кодирања)",
+    "convert.resolution_source": "Задржи изворну резолуцију",
+    "convert.resolution_1080p": "1080p",
+    "convert.resolution_720p": "720p",
+    "convert.engine_automatic": "Аутоматски (препоручено)",
+    "convert.engine_software": "Софтвер / ЦПУ",
+    "convert.status_ready": "Спремно",
+    "convert.status_skipped": "Прескочено",
+    "convert.status_unknown_resolution": "Nepoznata rezolucija",
+    "convert.status_converting": "Konvertovanje",
+    "convert.status_passed": "Prošlo",
+    "convert.status_cancelled": "Otkazano",
+    "convert.status_failed": "Palo",
+    "choice.system": "Sistem",
+    "choice.light": "Svetlo",
+    "choice.dark": "Tamno",
+    "choice.high_contrast": "Visoki kontrast",
+    "choice.selected": "Izabrano",
+    "choice.visible": "Vidljivo",
+    "choice.all_scanned": "Skenirano sve",
+    "choice.copy": "Копирај",
+    "choice.move": "Премести",
+    "choice.any": "Било који",
+    "choice.images": "Слике",
+    "choice.videos": "Видео снимци",
+    "choice.quiet": "Тихо",
+    "choice.balanced": "Уравнотежено",
+    "choice.fast": "Брзо",
+    "convert.status_duplicate_output": "Дупли назив излазне датотеке",
+    "convert.status_same_source": "Исто као изворна датотека",
+    "inspector.channels": "{count}канал(и)",
+    "inspector.pixel_format": "Пикел формат",
+    "inspector.dynamic_range": "Динамички опсег",
+    "inspector.unknown": "Непознато",
+    "inspector.unrated": "Унратед",
+    "inspector.unreadable": "Нечитљиво"
+  },
+  "help": {
+    "schema": 2,
+    "master_sha256": "bd7b7615b744101897e361e188e64bd95e7d6173d11a1121a797d9d8cf6df279",
+    "direction": "ltr",
+    "translation_method": "machine translation with existing UI glossary; human linguistic review pending",
+    "chapters": [
+      {
+        "id": "quick_start",
+        "title": "Брз Почетак",
+        "paragraphs": [
+          {
+            "id": "quick_start.p001",
+            "source_sha256": "960121a7b5ea76c266026469e9fb06e35da0a7256799d3736a5fffadc23a744a",
+            "text": "1. Самостално изаберите фасциклу у сваком прозору помоћу Прегледа, стабла фасцикли или поља за пут.\n2. Укључите Укључи подфолдере само када желите да се скенира цео подређени систем те фасцикле.\n3. Користите Детаљи за сортабилне техничке информације или Преглед сличица за визуелно претраживање.\n4. Изаберите фајлове у једном прозору. Радње Копирај и Помери користе фасциклу приказану у другом прозору као одредиште.\n5. Укључите Преглед или Инфо само у прозору где су вам потребни. Оба су у старту искључена да би се уштедела процесорска снага.\n6. Акције промене фајлова приказују потврду или преглед где је то прикладно. Обриши користи корпу за отпатке/Trash, а Ctrl+Z поништава подржане недавне акције."
+          },
+          {
+            "id": "quick_start.p002",
+            "source_sha256": "e826944984faca1d9ef2ae01fac89df96998673ffbcb18c1a6dc76906714d5f9",
+            "text": "Поглавља са леве стране објашњавају сваки део програма. У поље Претражи сва поглавља укуцајте било коју реч или фразу и притисните Ентер. Поглавља која се поклапају и број поклапања појављују се на листи садржаја; користите Следеће поклапање да бисте прешли на свако означено појављивање."
+          },
+          {
+            "id": "quick_start.p003",
+            "source_sha256": "939c9b2348d95e362c7a750296c26c65e72efb3c8fd71071cf751214de3accaf",
+            "text": "Изаберите фасциклу у било ком панелу. Омогући, Видео снимке, Слике и Укључи подфолдере по потреби. Користите Детаљи или Преглед сличица, изаберите или отметните датотеке, прегледајте их, а затим их копирајте, преместите, анализирајте или конвертујте. Отмечене датотеке чине групу за извођење акције; истицање остаје доступно за преглед и прелиставање."
+          }
+        ],
+        "body": "1. Самостално изаберите фасциклу у сваком прозору помоћу Прегледа, стабла фасцикли или поља за пут.\n2. Укључите Укључи подфолдере само када желите да се скенира цео подређени систем те фасцикле.\n3. Користите Детаљи за сортабилне техничке информације или Преглед сличица за визуелно претраживање.\n4. Изаберите фајлове у једном прозору. Радње Копирај и Помери користе фасциклу приказану у другом прозору као одредиште.\n5. Укључите Преглед или Инфо само у прозору где су вам потребни. Оба су у старту искључена да би се уштедела процесорска снага.\n6. Акције промене фајлова приказују потврду или преглед где је то прикладно. Обриши користи корпу за отпатке/Trash, а Ctrl+Z поништава подржане недавне акције.\n\nПоглавља са леве стране објашњавају сваки део програма. У поље Претражи сва поглавља укуцајте било коју реч или фразу и притисните Ентер. Поглавља која се поклапају и број поклапања појављују се на листи садржаја; користите Следеће поклапање да бисте прешли на свако означено појављивање.\n\nИзаберите фасциклу у било ком панелу. Омогући, Видео снимке, Слике и Укључи подфолдере по потреби. Користите Детаљи или Преглед сличица, изаберите или отметните датотеке, прегледајте их, а затим их копирајте, преместите, анализирајте или конвертујте. Отмечене датотеке чине групу за извођење акције; истицање остаје доступно за преглед и прелиставање."
+      },
+      {
+        "id": "topic_index",
+        "title": "Индекс тема и линкови поглавља",
+        "paragraphs": [
+          {
+            "id": "topic_index.quick_start",
+            "source_sha256": "b69a25b79b167c5a7e40d38d5814f094716600a942de0f3ec6218b07b27489ca",
+            "text": "Quick Почетак – [chapter:quick_start]"
+          },
+          {
+            "id": "topic_index.getting_started",
+            "source_sha256": "9ac44a658d4ae090bae2481dfb1b5e9df78322e4632b50bacb4e99ccb098f22e",
+            "text": "Добијање Почетакed ÔÇö [chapter:getting_started]"
+          },
+          {
+            "id": "topic_index.details_and_thumbnails",
+            "source_sha256": "84d1aca1a733a359aa903a64b7b96947cc10eba572194f604180ee279e080f20",
+            "text": "Детаљи И Преглед сличица – [chapter:details_and_thumbnails]"
+          },
+          {
+            "id": "topic_index.scanning_and_filtering",
+            "source_sha256": "addcb00612695126e1840e75947c51d82d93657985581b6946e2e9058895aa52",
+            "text": "Скенирање и филтрирање ÔÇö [chapter:scanning_and_filtering]"
+          },
+          {
+            "id": "topic_index.selecting_and_previewing",
+            "source_sha256": "dcaa1afa4caf83d3fb5359c1d384469e2f0bb809a48dcce645893f93a174d545",
+            "text": "Одабир и Прегледing – [chapter:selecting_and_previewing]"
+          },
+          {
+            "id": "topic_index.copying_and_moving",
+            "source_sha256": "d439134119d88ce4d1728bbf520f1855578ba9e0e85bbaf480a60a626344f26c",
+            "text": "Копирање и померање ÔÇö [chapter:copying_and_moving]"
+          },
+          {
+            "id": "topic_index.smart_collections",
+            "source_sha256": "497f5371f88656a6629fdab4f4a433d4d9f4bc360680765c65bac19426e50cad",
+            "text": "Pametne Kolekcije: Sačuvane Pretrage ÔÇö [chapter:smart_collections]"
+          },
+          {
+            "id": "topic_index.duplicates_and_comparison",
+            "source_sha256": "bc7a386de1f53414fd714586f4309ed4082731697a1928637001ad61f6b93657",
+            "text": "Дупликати И Poređenje ÔÇö [chapter:duplicates_and_comparison]"
+          },
+          {
+            "id": "topic_index.video_conversion",
+            "source_sha256": "87541c8126b7efe82872889b78979b23a37056c7a88de8c8847df6a8d172d292",
+            "text": "Конверзија видеа ÔÇö [chapter:video_conversion]"
+          },
+          {
+            "id": "topic_index.media_reports",
+            "source_sha256": "88f5be9c7f544bd30958395250596ef1e6d7269236323741b0d581860c896994",
+            "text": "Извоз медијског извештаја ÔÇö [chapter:media_reports]"
+          },
+          {
+            "id": "topic_index.embedded_metadata",
+            "source_sha256": "c43d4127a8b410091566783a394e9819305712159510d96c02ddbb7ee7bc0352",
+            "text": "Поглед на уграђене метаподатке ÔÇö [chapter:embedded_metadata]"
+          },
+          {
+            "id": "topic_index.media_integrity",
+            "source_sha256": "a9696b3a52d78f01ec30371ab6e369b1b794257eada141cd26b7fcbc28def24e",
+            "text": "Провера интегритета медија ÔÇö [chapter:media_integrity]"
+          },
+          {
+            "id": "topic_index.video_contact_sheets",
+            "source_sha256": "d8c3d3d7bfb6f6240bd2dff740e17dea7096558eed8132d688fce5b8a7d38f73",
+            "text": "Прављење видео контакт листе ÔÇö [chapter:video_contact_sheets]"
+          },
+          {
+            "id": "topic_index.folder_synchronization",
+            "source_sha256": "c5ffb5dcb3df4777df924d496bf92af4c0c309f7dc6571a8f95f2c8efb528e08",
+            "text": "Fascikla Синхронизација – [chapter:folder_synchronization]"
+          },
+          {
+            "id": "topic_index.folder_organization_rules",
+            "source_sha256": "1306acd5de57ef19675cac113a607091b30225a064b0b38a632584586670cbad",
+            "text": "Правила организације Fascikla – [chapter:folder_organization_rules]"
+          },
+          {
+            "id": "topic_index.transfer_queue",
+            "source_sha256": "6c218104ba617d50d4666bcf2e5e70b9635d64f83ea5e74719da6042dc1c5851",
+            "text": "Управљање редом преноса ÔÇö [chapter:transfer_queue]"
+          },
+          {
+            "id": "topic_index.safe_file_actions",
+            "source_sha256": "5ddc3613ad7b87ccfee060d77a71fadb05a457f0de7ac987a4405385b7803b59",
+            "text": "Sigurne Akcije Sa Fajlovima ÔÇö [chapter:safe_file_actions]"
+          },
+          {
+            "id": "topic_index.workspaces_and_cache",
+            "source_sha256": "9bedfb9cdb5f7f673cb6f702accaf18c7be93438596d081884e6616cbb751195",
+            "text": "Radni Prostori I Keš ÔÇö [chapter:workspaces_and_cache]"
+          },
+          {
+            "id": "topic_index.language",
+            "source_sha256": "57d2d6a2b519f2d4a908f2c480625bc9d06f02a72c79d74aae29f6de3818a779",
+            "text": "Језик ÔÇö [chapter:language]"
+          },
+          {
+            "id": "topic_index.glossary",
+            "source_sha256": "c7a062c88b48c29ae512bf610ce2700dd67290004652c38e6af6dce5c9f29f8b",
+            "text": "Rečnik ÔÇö [chapter:glossary]"
+          },
+          {
+            "id": "topic_index.support_the_project",
+            "source_sha256": "01ccc57e26166b3a3a356d1ef2192f8c832175b4c003038bb1692f5f94473ebe",
+            "text": "Podržite Projekat ÔÇö [chapter:support_the_project]"
+          }
+        ],
+        "body": "Quick Почетак – [chapter:quick_start]\n\nДобијање Почетакed ÔÇö [chapter:getting_started]\n\nДетаљи И Преглед сличица – [chapter:details_and_thumbnails]\n\nСкенирање и филтрирање ÔÇö [chapter:scanning_and_filtering]\n\nОдабир и Прегледing – [chapter:selecting_and_previewing]\n\nКопирање и померање ÔÇö [chapter:copying_and_moving]\n\nPametne Kolekcije: Sačuvane Pretrage ÔÇö [chapter:smart_collections]\n\nДупликати И Poređenje ÔÇö [chapter:duplicates_and_comparison]\n\nКонверзија видеа ÔÇö [chapter:video_conversion]\n\nИзвоз медијског извештаја ÔÇö [chapter:media_reports]\n\nПоглед на уграђене метаподатке ÔÇö [chapter:embedded_metadata]\n\nПровера интегритета медија ÔÇö [chapter:media_integrity]\n\nПрављење видео контакт листе ÔÇö [chapter:video_contact_sheets]\n\nFascikla Синхронизација – [chapter:folder_synchronization]\n\nПравила организације Fascikla – [chapter:folder_organization_rules]\n\nУправљање редом преноса ÔÇö [chapter:transfer_queue]\n\nSigurne Akcije Sa Fajlovima ÔÇö [chapter:safe_file_actions]\n\nRadni Prostori I Keš ÔÇö [chapter:workspaces_and_cache]\n\nЈезик ÔÇö [chapter:language]\n\nRečnik ÔÇö [chapter:glossary]\n\nPodržite Projekat ÔÇö [chapter:support_the_project]"
+      },
+      {
+        "id": "getting_started",
+        "title": "Добијање Почетак-ован",
+        "paragraphs": [
+          {
+            "id": "getting_started.p001",
+            "source_sha256": "5f188741bf38dafbb6803c0d32c5c55281c418b27b6b6204c2b4b9470484371b",
+            "text": "Svaka strana prozora je nezavisan pregledač fascikli. Koristite Dugme Pregledaj, stablo fascikli, okvir puta ili Idi gore da izaberete fascikle. Kliknite unutar okna da biste ga aktivirali."
+          },
+          {
+            "id": "getting_started.p002",
+            "source_sha256": "5c862d90858ec952be55c182a8161ba52748f10b89bab70f8f5f595c38c95370",
+            "text": "Prikaz > Изглед и величина текста nudi Sistem, Svetlo, Tamno i Visoki kontrast teme, plus skaliranje interfejsa od 100%, 125%, 150%, 175% i 200%. Promene se odmah prikazuju kroz postojeće kontrole. Sačuvaj čuva izbor za buduća pokretanja, Откажи ili zatvaranje prozora vraća prethodna podešavanja, a Врати подразумеване поставке система vraća se na temu operativnog sistema pri 100%. Ova podešavanja menjaju samo prikaz, nikada podatke medija ili biblioteke."
+          },
+          {
+            "id": "getting_started.p003",
+            "source_sha256": "716b38f3fc587aa8c148a51715d481a35d5c135e6211016faa710ce34b4bf55a",
+            "text": "Сваки сегмент има своју компактну траку за навигацију у стилу Експлорера: ÔåÉ иде назад, ÔåÆ иде напред, ↑ отвара родитељски фолдер, а Ôå╗ Освежи приказује стабло фолдера и тренутно скенирање. Отварање другог фолдера након враћања назад покреће нову историју напред од те тачке."
+          },
+          {
+            "id": "getting_started.p004",
+            "source_sha256": "b34bc532ebe9785101efd80988074ed03a0c0fbf0e349d6133d31620e8a8ad3f",
+            "text": "Структура фасцикли увек прати тренутну локацију панелија: проширује родитељске фасцикле, бира тачну фасциклу са које почиње скенирање и помера ту фасциклу у видљиви део екрана. Тренутна фасцикла остаје затворена док је не проширите, чиме се спречава привремено приказивање места за учитавање (Loading placeholders). Ово се такође дешава након враћања радног простора или укуцавања путање, тако да корен диска није истакнут док се скенира дубља фасцикла. Укључи подфолдере почиње од изабране/тренутне фасцикле приказане у том панелију, а не од корена диска изнад ње."
+          },
+          {
+            "id": "getting_started.p005",
+            "source_sha256": "90fbbedebb973bad42d26e8534c1fdab61604a30d9ead7a4ce4c88ea2cc4012a",
+            "text": "Свака плоча има независне контроле Назад, Напред, Горње и Освежи, филтере, сортирање, сличице, Информације и Преглед. Преглед видеа почиње брзином од 4├ù. Зарез и тачка померају уназад или унапред за десет процената. Преглед и Информације остају искључени док се не омогуће ради смањења позадинског рада."
+          },
+          {
+            "id": "getting_started.tree_alignment_1272",
+            "source_sha256": "04feb6a3e71761ee4884be7564bb8832204338d93939bf1fdd67aa20f7e62380",
+            "text": "Структура фасцикли аутоматски поравнава тренутно видљиве гранчице како би се избегло непотребно увлачење. Када скролујете надоле у дубље гранчице, она се помера хоризонтално; скроловање назад нагоре ка претцима враћа је лево без потребе за кликом. Цела хијерархија остаје доступна, а хоризонтални скролбар испод структуре фасцикли омогућава ручно хоризонтално прегледање."
+          }
+        ],
+        "body": "Svaka strana prozora je nezavisan pregledač fascikli. Koristite Dugme Pregledaj, stablo fascikli, okvir puta ili Idi gore da izaberete fascikle. Kliknite unutar okna da biste ga aktivirali.\n\nPrikaz > Изглед и величина текста nudi Sistem, Svetlo, Tamno i Visoki kontrast teme, plus skaliranje interfejsa od 100%, 125%, 150%, 175% i 200%. Promene se odmah prikazuju kroz postojeće kontrole. Sačuvaj čuva izbor za buduća pokretanja, Откажи ili zatvaranje prozora vraća prethodna podešavanja, a Врати подразумеване поставке система vraća se na temu operativnog sistema pri 100%. Ova podešavanja menjaju samo prikaz, nikada podatke medija ili biblioteke.\n\nСваки сегмент има своју компактну траку за навигацију у стилу Експлорера: ÔåÉ иде назад, ÔåÆ иде напред, ↑ отвара родитељски фолдер, а Ôå╗ Освежи приказује стабло фолдера и тренутно скенирање. Отварање другог фолдера након враћања назад покреће нову историју напред од те тачке.\n\nСтруктура фасцикли увек прати тренутну локацију панелија: проширује родитељске фасцикле, бира тачну фасциклу са које почиње скенирање и помера ту фасциклу у видљиви део екрана. Тренутна фасцикла остаје затворена док је не проширите, чиме се спречава привремено приказивање места за учитавање (Loading placeholders). Ово се такође дешава након враћања радног простора или укуцавања путање, тако да корен диска није истакнут док се скенира дубља фасцикла. Укључи подфолдере почиње од изабране/тренутне фасцикле приказане у том панелију, а не од корена диска изнад ње.\n\nСвака плоча има независне контроле Назад, Напред, Горње и Освежи, филтере, сортирање, сличице, Информације и Преглед. Преглед видеа почиње брзином од 4├ù. Зарез и тачка померају уназад или унапред за десет процената. Преглед и Информације остају искључени док се не омогуће ради смањења позадинског рада.\n\nСтруктура фасцикли аутоматски поравнава тренутно видљиве гранчице како би се избегло непотребно увлачење. Када скролујете надоле у дубље гранчице, она се помера хоризонтално; скроловање назад нагоре ка претцима враћа је лево без потребе за кликом. Цела хијерархија остаје доступна, а хоризонтални скролбар испод структуре фасцикли омогућава ручно хоризонтално прегледање."
+      },
+      {
+        "id": "details_and_thumbnails",
+        "title": "Детаљи И Преглед сличица",
+        "paragraphs": [
+          {
+            "id": "details_and_thumbnails.p001",
+            "source_sha256": "0d7fe0d7d10b204c166baf479099c908e17fbe87952b9f9f35dd9cf1de776edb",
+            "text": "Користите селектор приказа на врху било ког панела, или мени Приказ, да бисте пребацили тај панел између Детаљи и Преглед сличица. Оба приказа показују исте датотеке и деле свој избор. Режим сличица поштује Укључи подфолдере, медијски прекидачи, претрага, резолуција, напредни филтри и сортирање. Његов мени Сортирање нуди тачан смер за Име (A–Z/Z–A), Датум измене (најстарије/најновије), Величина фајла, Дужина, Кодек, Резолуција, Тип, Битрате, Фрејмреит, и Оцена. Сваки панел се сортира независно, тастер показује активни редослед, а сачувани радни простори и Смарт колекције га враћају.Детаљинаслови остају кликабилни за брзо сортирање.Релативна путањасе појављују испод сличица током рекурзивних скенирања. Користите клизач за величину сличица поред селектора приказа. Именовани подразумевани формати остају испод Приказ >Величина сличица. Континуираноје подразумевани прегледач сличица: један клизач обухвата целу филтрирану колекцију, док програм креира само видљиве картице плус мали бафер и рециклира их током померања. Ово одржава меморију виџета и слика ограничену за веома велике библиотеке. Изаберите Страницепоред њега у било ком тренутку за враћање успостављене мреже страница; изаберите Ауто, 200, 500 или 1.000 картица по страници и користите компактне контроле ÔåÉ и ÔåÆ. Ауто користи 200 када су видео снимци најмање половина филтрираних резултата и 500 када су слике већина. Свака плоча и сачувани радни простор памте свој избор прегледача."
+          },
+          {
+            "id": "details_and_thumbnails.p002",
+            "source_sha256": "f88d676b4ba78ef8e5f3064d34755f67ce646a0965745c31f8a74570a37bd2d4",
+            "text": "Mreža sličica meri stvarnu širinu pregledača pre svog prvog prikaza i automatski se prelama kada se promeni veličina panela ili dela pregledača/foldera. U Странице režimu, stranica 1 stoga koristi isti broj kolona kao kasnije stranice za datu širinu panela i veličinu sličice. U Континуирано režimu, promene veličine ponovo izračunavaju virtuelne redove bez kreiranja cele kolekcije. Okrenite točkić miša bilo gde iznad panela sličica — uključujući preko kartice, slike ili imena fajla — da pomerate taj panel gore i dole; oba panela se pomeraju nezavisno."
+          },
+          {
+            "id": "details_and_thumbnails.p003",
+            "source_sha256": "878f1f9405d3cda5132d953b07e64ce5639125896f32cdb19341e4c2156fd898",
+            "text": "U režimu Детаљи, podrazumevani redosled je Ime, Кодек, Резолуција, Дужина видео записа, Величина фајла, MB/мин, FPS, Датум измене, Tip, Битрате, Аудио, HDR, Мегапиксели, Етикета, Oznake i Оцена. Prevucite razdelnik između zaglavlja da biste promenili širinu kolone za bilo koji iznos; kursor za horizontalno menjanje veličine se pojavljuje kada je razdelnik spreman. Prevucite samo zaglavlje da biste ga prerazvrstali—nije potreban nikakav taster modifikator. Jednostavan klik na zaglavlje i dalje sortira. Kolone zadržavaju izabrane širine, a horizontalna traka za skrolovanje doseže polja van panela. Za preciznu kontrolu, izaberite Prikaz > Konfiguriši kolone ili kliknite desnim klikom na zaglavlje; prozor Kolone može premestiti polja, postaviti tačne širine i vratiti podrazumevana podešavanja. Postojeći lično raspoređeni i sačuvani redosledi kolona su sačuvani. Dugi rekurzivni putevi se skraćuju u sredini tako da ime fajla ostane vidljivo."
+          },
+          {
+            "id": "details_and_thumbnails.p004",
+            "source_sha256": "88415a6236cebbf0ce6211ef333a7271672023a2bdae6ccdc38584b6cce810d6",
+            "text": "Минијатуре видеа се узимају на 15% трајања клипа како би се избегли неформирани почетни кадрови. Ако метаподаци о трајању нису доступни, апликација користи једносекундну резерву. Генерисане минијатуре се кеширају за брже поновно прегледање."
+          },
+          {
+            "id": "details_and_thumbnails.p005",
+            "source_sha256": "7a726d60e44b6a6ccdb5c196cf1f81af226094ce2b8f43f72c1bf065feb34ad5",
+            "text": "Обичне минијатуре слика се ефикасно декодују у процесу помоћу Pillow-а; FFmpeg се користи за видео кадрове и као резервна опција за необичне формате слика. Декодирање минијатура користи мали број радника, тако да велики фолдер не може покренути превише декодера. Кеширане слике се записују атомски и проверавају пре приказа; непотпунe или оштећенe кеширане минијатуре се игноришу и поново генеришу, док резултати који припадају старијој мрежи безбедно бивају одбачени."
+          },
+          {
+            "id": "details_and_thumbnails.p006",
+            "source_sha256": "ea382833a32b1bb5c8dac172f29751f48d27aead08969ef699cca6142fddc69f",
+            "text": "Генерисане минијатуре остају доступне након што програм буде затворен, тако да поновно отварање непромењене датотеке обично одмах користи њену кеширану слику. Алатке > Кеш и скенирање контролише максималну величину кеша минијатура као проценат погона оперативног система; подразумевано је 1%. Поново коришћене минијатуре се означавају као недавне, а када је лимит прекорачен, најмање недавно коришћени уноси се уклањају први. Лимит се може подесити од 0.1% до 10% и примењује се одмах. Јасни сличице пријављује тренутни број и величину пре потврде, затим уклања само генерисане минијатуре — не оригиналне медије или кеширану техничку метаподатке. Очисти све кеш уклања и минијатуре и метаподатке."
+          },
+          {
+            "id": "details_and_thumbnails.size_slider_1272",
+            "source_sha256": "f73fba2585edabe7710a59372a59bce3e3509092c20423aeed2583c4bc430100",
+            "text": "Регулатор величине сличица се појављује само у Преглед сличица; Детаљи га скрива. Померање регулатора континуирано мења величину сличица, а прелазак између приказа задржава његово подешавање. Паузирај се кратко појављује након превлачења ради поновног распореда мреже; веће слике задржавају свој однос ширине и висине, а текућа величина се чува са подешавањима прозора. Називи унапред дефинисаних величина и даље су доступни у менију Приказ; у заглављу прозора нема дуплираног падајућег менија за величину."
+          }
+        ],
+        "body": "Користите селектор приказа на врху било ког панела, или мени Приказ, да бисте пребацили тај панел између Детаљи и Преглед сличица. Оба приказа показују исте датотеке и деле свој избор. Режим сличица поштује Укључи подфолдере, медијски прекидачи, претрага, резолуција, напредни филтри и сортирање. Његов мени Сортирање нуди тачан смер за Име (A–Z/Z–A), Датум измене (најстарије/најновије), Величина фајла, Дужина, Кодек, Резолуција, Тип, Битрате, Фрејмреит, и Оцена. Сваки панел се сортира независно, тастер показује активни редослед, а сачувани радни простори и Смарт колекције га враћају.Детаљинаслови остају кликабилни за брзо сортирање.Релативна путањасе појављују испод сличица током рекурзивних скенирања. Користите клизач за величину сличица поред селектора приказа. Именовани подразумевани формати остају испод Приказ >Величина сличица. Континуираноје подразумевани прегледач сличица: један клизач обухвата целу филтрирану колекцију, док програм креира само видљиве картице плус мали бафер и рециклира их током померања. Ово одржава меморију виџета и слика ограничену за веома велике библиотеке. Изаберите Страницепоред њега у било ком тренутку за враћање успостављене мреже страница; изаберите Ауто, 200, 500 или 1.000 картица по страници и користите компактне контроле ÔåÉ и ÔåÆ. Ауто користи 200 када су видео снимци најмање половина филтрираних резултата и 500 када су слике већина. Свака плоча и сачувани радни простор памте свој избор прегледача.\n\nMreža sličica meri stvarnu širinu pregledača pre svog prvog prikaza i automatski se prelama kada se promeni veličina panela ili dela pregledača/foldera. U Странице režimu, stranica 1 stoga koristi isti broj kolona kao kasnije stranice za datu širinu panela i veličinu sličice. U Континуирано režimu, promene veličine ponovo izračunavaju virtuelne redove bez kreiranja cele kolekcije. Okrenite točkić miša bilo gde iznad panela sličica — uključujući preko kartice, slike ili imena fajla — da pomerate taj panel gore i dole; oba panela se pomeraju nezavisno.\n\nU režimu Детаљи, podrazumevani redosled je Ime, Кодек, Резолуција, Дужина видео записа, Величина фајла, MB/мин, FPS, Датум измене, Tip, Битрате, Аудио, HDR, Мегапиксели, Етикета, Oznake i Оцена. Prevucite razdelnik između zaglavlja da biste promenili širinu kolone za bilo koji iznos; kursor za horizontalno menjanje veličine se pojavljuje kada je razdelnik spreman. Prevucite samo zaglavlje da biste ga prerazvrstali—nije potreban nikakav taster modifikator. Jednostavan klik na zaglavlje i dalje sortira. Kolone zadržavaju izabrane širine, a horizontalna traka za skrolovanje doseže polja van panela. Za preciznu kontrolu, izaberite Prikaz > Konfiguriši kolone ili kliknite desnim klikom na zaglavlje; prozor Kolone može premestiti polja, postaviti tačne širine i vratiti podrazumevana podešavanja. Postojeći lično raspoređeni i sačuvani redosledi kolona su sačuvani. Dugi rekurzivni putevi se skraćuju u sredini tako da ime fajla ostane vidljivo.\n\nМинијатуре видеа се узимају на 15% трајања клипа како би се избегли неформирани почетни кадрови. Ако метаподаци о трајању нису доступни, апликација користи једносекундну резерву. Генерисане минијатуре се кеширају за брже поновно прегледање.\n\nОбичне минијатуре слика се ефикасно декодују у процесу помоћу Pillow-а; FFmpeg се користи за видео кадрове и као резервна опција за необичне формате слика. Декодирање минијатура користи мали број радника, тако да велики фолдер не може покренути превише декодера. Кеширане слике се записују атомски и проверавају пре приказа; непотпунe или оштећенe кеширане минијатуре се игноришу и поново генеришу, док резултати који припадају старијој мрежи безбедно бивају одбачени.\n\nГенерисане минијатуре остају доступне након што програм буде затворен, тако да поновно отварање непромењене датотеке обично одмах користи њену кеширану слику. Алатке > Кеш и скенирање контролише максималну величину кеша минијатура као проценат погона оперативног система; подразумевано је 1%. Поново коришћене минијатуре се означавају као недавне, а када је лимит прекорачен, најмање недавно коришћени уноси се уклањају први. Лимит се може подесити од 0.1% до 10% и примењује се одмах. Јасни сличице пријављује тренутни број и величину пре потврде, затим уклања само генерисане минијатуре — не оригиналне медије или кеширану техничку метаподатке. Очисти све кеш уклања и минијатуре и метаподатке.\n\nРегулатор величине сличица се појављује само у Преглед сличица; Детаљи га скрива. Померање регулатора континуирано мења величину сличица, а прелазак између приказа задржава његово подешавање. Паузирај се кратко појављује након превлачења ради поновног распореда мреже; веће слике задржавају свој однос ширине и висине, а текућа величина се чува са подешавањима прозора. Називи унапред дефинисаних величина и даље су доступни у менију Приказ; у заглављу прозора нема дуплираног падајућег менија за величину."
+      },
+      {
+        "id": "scanning_and_filtering",
+        "title": "Скенирање и филтрирање",
+        "paragraphs": [
+          {
+            "id": "scanning_and_filtering.p001",
+            "source_sha256": "c4712ae8d144d44f4ec6a47e8ad4b477c14275c9c493ace31eef65a7a8b9168d",
+            "text": "Омогући Укључи подфолдере за рекурзивно скенирање. Користите Претражи за имена фајлова, Резолуција за тачну резолуцију и Више филтера за димензије, величину фајла, трајање, кодек, оријентацију и датум. Откажи зауставља дуго скенирање. Кеш и скенирање подешавања у оквиру Алатке контролишу паралелне раднике и искључене обрасце."
+          },
+          {
+            "id": "scanning_and_filtering.p002",
+            "source_sha256": "5f55a7b5ecdce4426e11fdc93539a0e0a436839a62d94bc8019a50af3c1deae6",
+            "text": "Да бисте сачували резултате скенирања као табеларни документ или документ, погледајте [chapter:media_reports]."
+          },
+          {
+            "id": "scanning_and_filtering.p003",
+            "source_sha256": "6296398bb5bd08c4d57ca8f2606a7b6164825f670f0bfa1fd408f26fca05c53e",
+            "text": "Великорекурзивне претраге прикупљају резултате без поновног изградње растућег претраживача. Када претрага заврши,Детаљиредови се додају у кратким серијама тако да Плаи/Паузирај, навигација, сликање и контроле прозора остају одзивни. Мреже сличица такође се ажурирају након завршетка скенирања. Успешне команде копирања, померања и брисања сада ажурирају само погођене ставке у меморији уместо да поново скенирају оба фолдера; непознати фајлови који се бацају изван апликације и даље покрећу безбедносно скенирање само у погођеном панелу. Чување кеша метаподатака се извршава у позадини, а заустављено FFmpegпреглед процеса се брзо очисти.Алатке > Кеш и скенирањепружа Тихо, Уравнотежено, и брзи профили перформанси.Уравнотеженозадржава успостављено понашање.Тихосмањује истовремену обраду скенирања и слика са сличицама и циља на 8 слика у секунди за преглед; Брзо повећава истовременост и циља на 15 слика у секунди.Тихо и Уравнотеженопоставља нове некеширане промене и декодирање минијатура док се преглед репродукује или претражује, дајући приоритет интерактивном раду.Кеширанорезултати никада нису намерно одложени. Поље metadata-worker остаје подесиво након одабира профила."
+          },
+          {
+            "id": "scanning_and_filtering.p004",
+            "source_sha256": "cfc2a88e50877f4251ec58b90265b0c4485c3899666c8cdd2dcd43cc0541aa04",
+            "text": "Svaka strana ima nezavisno reprodukovanje, vremensku liniju, brzinu, audio/isključen zvuk, keš frejmova i dekoder procese. Reprodukcija probnog videa je namerno tempirana u realnom vremenu na 12 frejmova u sekundi. Ovo održava pregled glatkim dok se izbegava veliko korišćenje CPU-a koje izaziva dekodiranje ostatka klipa brže nego što ga pregled može prikazati, posebno dok se vrši skeniranje velike fascikle."
+          },
+          {
+            "id": "scanning_and_filtering.p005",
+            "source_sha256": "6d2351f7d55b8f5bf804e7ab66908fd915359b92794340ef24a0429900443a62",
+            "text": "Кликните било где на било ком прегледном временском траку да бисте померили његову ознаку директно на ту позицију и наставили репродукцију одатле. Такође можете да притиснете и превучете ознаку за континуирано пребацивање. Пребацивање отказује старији захтев за оквир чим се затражи нова позиција, спречавајући да више FFmpeg декодера такмиче у позадини. Недавно посећене позиције се кеширају у корацима од четврт секунде, тако да је повратак на њих тренутан. Отпустите клизач да бисте наставили репродукцију са изабране позиције."
+          },
+          {
+            "id": "scanning_and_filtering.p006",
+            "source_sha256": "fe8d26dfc3bcebb327cad49202bcc0288ca9ad0b75babe71c0d04dfab8ac9fea",
+            "text": "Pregled videa podrazumevano je postavljen na 4× brzinu za brže pregledanje. Koristite dugmad 1×, 2×, 4×, 6×, 8× i 16× ispod vremenske linije da promenite brzinu reprodukcije. Aktivno dugme za brzinu je onemogućeno kako bi trenutna postavka bila jasna. Аудио je podrazumevano isključen; izaberite ­ƒöç Искључен звук da omogućite sinhronizovani zvuk, i izaberite ­ƒöè Аудио da ga ponovo isključite. Promena brzine tokom reprodukcije ponovo pokreće video i zvuk zajedno na trenutnoj poziciji u vremenskoj liniji."
+          },
+          {
+            "id": "scanning_and_filtering.p007",
+            "source_sha256": "3214a4d4fd458bb76deb51ff30947b215ded0ce500221cb3511bf25da94d6a74",
+            "text": "Користите |ÔùÇ и ÔûÂ| поред дугмета за аудио да бисте се померали назад или напред за један фрејм. Апликација користи пријављену фреквенцију фрејмова видеа, са резервном вредношћу од 25 fps када ти метаподатци нису доступни, и изводи прецизно тражење за добијени статични кадар. Изаберите ⤓ PNG да бисте извезли тренутну позицију видеа као PNG у пуној резолуцији извора; репродукција се зауставља на тој тачној позицији, излаз се записује преко привремене датотеке, и видео никада није изменјен."
+          },
+          {
+            "id": "scanning_and_filtering.p008",
+            "source_sha256": "2427ebd091d494c4bd3cbf71c48a081ab4ee23a5f549571ceeb7c12ea2c351d6",
+            "text": "Kada je fokus van polja za kucanje, pritisnite zarez (,) da pomerite prikaz video zapisa aktivnog panela unazad za 10% ukupnog trajanja, ili tačku (.) da ga pomerite unapred za 10%. Aktivni panel je onaj koji je poslednji put kliknut. Trajanje reprodukcije prikaza, ako je u toku, nastavlja se od nove pozicije; pauzirani prikaz ostaje pauziran i prikazuje tačan okvir na koji ste skočili. Tasteri se normalno kucaju u poljima za putanje, pretragu, filter i dijaloge."
+          },
+          {
+            "id": "scanning_and_filtering.p009",
+            "source_sha256": "decded439831addc29ee74040e8bfff01524b194d15c0468751e96d11df67309",
+            "text": "Освежи активни панел или Освежи оба прозора у Приказу након што се фасцикле или фајлови промене у Фајл Експлореру или другој апликацији. Освежи поново гради стабло фасцикли као и скенирање медија. Такође је доступан преко F5, траке са алаткама и менија десним кликом у прегледачу и стаблу фасцикли. Алтернативно, омогућите Лајв независно у било којем панелу да аутоматски гледате тренутну фасциклу. Лајв прати навигацију и користи исту област као Укључи подфолдере. Експлозије креирања, измена, преименовања и брисања комбинују се пре освежавања; промене фасцикли такође ажурирају стабло. Ознака Лајв се појављује у статусу завршеног скенирања. Лајв је подразумевано искључен, а брисање ознаке тренутно враћа понашање ручног освежавања."
+          }
+        ],
+        "body": "Омогући Укључи подфолдере за рекурзивно скенирање. Користите Претражи за имена фајлова, Резолуција за тачну резолуцију и Више филтера за димензије, величину фајла, трајање, кодек, оријентацију и датум. Откажи зауставља дуго скенирање. Кеш и скенирање подешавања у оквиру Алатке контролишу паралелне раднике и искључене обрасце.\n\nДа бисте сачували резултате скенирања као табеларни документ или документ, погледајте [chapter:media_reports].\n\nВеликорекурзивне претраге прикупљају резултате без поновног изградње растућег претраживача. Када претрага заврши,Детаљиредови се додају у кратким серијама тако да Плаи/Паузирај, навигација, сликање и контроле прозора остају одзивни. Мреже сличица такође се ажурирају након завршетка скенирања. Успешне команде копирања, померања и брисања сада ажурирају само погођене ставке у меморији уместо да поново скенирају оба фолдера; непознати фајлови који се бацају изван апликације и даље покрећу безбедносно скенирање само у погођеном панелу. Чување кеша метаподатака се извршава у позадини, а заустављено FFmpegпреглед процеса се брзо очисти.Алатке > Кеш и скенирањепружа Тихо, Уравнотежено, и брзи профили перформанси.Уравнотеженозадржава успостављено понашање.Тихосмањује истовремену обраду скенирања и слика са сличицама и циља на 8 слика у секунди за преглед; Брзо повећава истовременост и циља на 15 слика у секунди.Тихо и Уравнотеженопоставља нове некеширане промене и декодирање минијатура док се преглед репродукује или претражује, дајући приоритет интерактивном раду.Кеширанорезултати никада нису намерно одложени. Поље metadata-worker остаје подесиво након одабира профила.\n\nSvaka strana ima nezavisno reprodukovanje, vremensku liniju, brzinu, audio/isključen zvuk, keš frejmova i dekoder procese. Reprodukcija probnog videa je namerno tempirana u realnom vremenu na 12 frejmova u sekundi. Ovo održava pregled glatkim dok se izbegava veliko korišćenje CPU-a koje izaziva dekodiranje ostatka klipa brže nego što ga pregled može prikazati, posebno dok se vrši skeniranje velike fascikle.\n\nКликните било где на било ком прегледном временском траку да бисте померили његову ознаку директно на ту позицију и наставили репродукцију одатле. Такође можете да притиснете и превучете ознаку за континуирано пребацивање. Пребацивање отказује старији захтев за оквир чим се затражи нова позиција, спречавајући да више FFmpeg декодера такмиче у позадини. Недавно посећене позиције се кеширају у корацима од четврт секунде, тако да је повратак на њих тренутан. Отпустите клизач да бисте наставили репродукцију са изабране позиције.\n\nPregled videa podrazumevano je postavljen na 4× brzinu za brže pregledanje. Koristite dugmad 1×, 2×, 4×, 6×, 8× i 16× ispod vremenske linije da promenite brzinu reprodukcije. Aktivno dugme za brzinu je onemogućeno kako bi trenutna postavka bila jasna. Аудио je podrazumevano isključen; izaberite ­ƒöç Искључен звук da omogućite sinhronizovani zvuk, i izaberite ­ƒöè Аудио da ga ponovo isključite. Promena brzine tokom reprodukcije ponovo pokreće video i zvuk zajedno na trenutnoj poziciji u vremenskoj liniji.\n\nКористите |ÔùÇ и ÔûÂ| поред дугмета за аудио да бисте се померали назад или напред за један фрејм. Апликација користи пријављену фреквенцију фрејмова видеа, са резервном вредношћу од 25 fps када ти метаподатци нису доступни, и изводи прецизно тражење за добијени статични кадар. Изаберите ⤓ PNG да бисте извезли тренутну позицију видеа као PNG у пуној резолуцији извора; репродукција се зауставља на тој тачној позицији, излаз се записује преко привремене датотеке, и видео никада није изменјен.\n\nKada je fokus van polja za kucanje, pritisnite zarez (,) da pomerite prikaz video zapisa aktivnog panela unazad za 10% ukupnog trajanja, ili tačku (.) da ga pomerite unapred za 10%. Aktivni panel je onaj koji je poslednji put kliknut. Trajanje reprodukcije prikaza, ako je u toku, nastavlja se od nove pozicije; pauzirani prikaz ostaje pauziran i prikazuje tačan okvir na koji ste skočili. Tasteri se normalno kucaju u poljima za putanje, pretragu, filter i dijaloge.\n\nОсвежи активни панел или Освежи оба прозора у Приказу након што се фасцикле или фајлови промене у Фајл Експлореру или другој апликацији. Освежи поново гради стабло фасцикли као и скенирање медија. Такође је доступан преко F5, траке са алаткама и менија десним кликом у прегледачу и стаблу фасцикли. Алтернативно, омогућите Лајв независно у било којем панелу да аутоматски гледате тренутну фасциклу. Лајв прати навигацију и користи исту област као Укључи подфолдере. Експлозије креирања, измена, преименовања и брисања комбинују се пре освежавања; промене фасцикли такође ажурирају стабло. Ознака Лајв се појављује у статусу завршеног скенирања. Лајв је подразумевано искључен, а брисање ознаке тренутно враћа понашање ручног освежавања."
+      },
+      {
+        "id": "selecting_and_previewing",
+        "title": "Селектовање И Прегледing",
+        "paragraphs": [
+          {
+            "id": "selecting_and_previewing.p001",
+            "source_sha256": "3cb30411bb6f6a0807c08da889783687297f5427e72f356e38a6f0de5a9fedf2",
+            "text": "Сваки панел има независну групу радњи са пољима за ознаку. Кликните на поље ÔÿÉ/Ôÿæ поред реда Детаљи или на минијатурну картицу, или фокусирајте ред Детаљи и притисните Space. Ознаке остају сачуване док истичете и прегледате друге фајлове, сортирате панел или мењате филтере. Бројач испод претраживача приказује укупан број, укључујући означене фајлове које тренутно сакрива филтер. Кликните на наслов Ô£ô Детаљи или Ô£ô Све приказано у Преглед сличица да означите сваки тренутно приказани фајл; поновите да поништите ознаку те приказане групе. Очисти ознаке уклања целу групу. Копирање, померање, превлачење, брисање, преименовање, оцењивање, означавање, поређење, провера интегритета и конверзија користе све означене фајлове када постоје; без ознака користе обично истакнуте редове. Промена тог панела на други фолдер или диск брише његове ознаке, и ознаке се не чувају након затварања апликације."
+          },
+          {
+            "id": "selecting_and_previewing.checkbox_accuracy_1272",
+            "source_sha256": "ec45605bac64df9520c7b16b9f54eb0ff1645c2f120d0e06da004d853d0a3acc",
+            "text": "Чекбоксови се мењају само када кликнете и отпустите на кутији без превлачења. Празан простор поред кутије није део кликабилне области. Померање више од неколико пиксела уместо тога покреће избор наглашавањем и оставља ознаке непромењене, чак и када је превлачење почело на чекбоксу. Користите експлицитне контроле Означи селекцију и Поништи селекцију да бисте променили целу наглашену групу."
+          },
+          {
+            "id": "selecting_and_previewing.p007",
+            "source_sha256": "fe2df6bc40914fca7346780d043258bca3ac75b0c0da69d7d7c7af1921420d95",
+            "text": "Повуците са празног простора прегледача преко редова или минијатурних картица да бисте означили групу оквиром за селекцију. Ово не означава или поништава ознаку ниједне датотеке. Обично повлачење започиње нову означену групу; држите Ctrl док започињете повлачење да бисте додали постојећим ознакама.Почетакна празан простор минијатуре, не на слику или назив датотеке, јер превлачење датотеке минијатуре уместо тога покреће пренос. У Детаљитакође можете превлаčiti вертикално кроз редове да бисте означили групу; превуците ка другом панелу за пренос. Заглавља задржавају своје нормалне geste за промену величине и редослед. Користите Означи селекцијуда додате истакнуте датотеке у постојећу означену групу акција. Користите Поништи селекцијуда уклоните само оне истакнуте датотеке из те групе. Оба дугмета се налазе на врху сваког прегледача поред Сортирај,Изабери све приказано и Очисти ознаке; контролише оматање на ужим панелима. Оба наредбе су такође доступна у менијима који се отварају десним кликом. Остали ознаке, укључујући датотеке скривене филтерима, остају сачуване. Акције са датотекама и даље преферирају све ознаке када било које постоје, па користите ове експлицитне контроле пре копирања или премештања ако желите да промените групу акција."
+          },
+          {
+            "id": "selecting_and_previewing.p002",
+            "source_sha256": "7f32ecf04dddbc0b538a4d33856b7ca37e281994235e853d6806e565759f3fb5",
+            "text": "Svaki prozor pregledača ima svoj veliki ÔûÂ Преглед prekidač, koji je podrazumevano isključen da bi se izbeglo nepotrebno dekodiranje. Омогући Преглед na levoj, desnoj ili obe strane za otvaranje odvojenih poravnatih panela pregleda ispod pregledača. Dugme ima poseban selektovani status, tako da je lako uočiti omogućene preglede. Kada su oba prekidača isključena, područje pregleda se potpuno skuplja i pregledači koriste punu visinu prozora. Kliknite na fajl da biste ga pregledali na njegovoj strani. Isticanje je nezavisno od čekiranja, tako da možete pregledati ili pregledati drugi fajl bez gubljenja grupe akcija. Držite Ctrl dok klikćete na sličice ili detaljne redove da biste istakli više fajlova. Изабери одговарајуће ističe svaki trenutno prikazani rezultat. Dupli klik otvara istaknuti fajl u njegovoj uobičajenoj aplikaciji."
+          },
+          {
+            "id": "selecting_and_previewing.p006",
+            "source_sha256": "ea7ee844c5a71c70be45874efacd2698bc3f2f6056cb1188f3f135038fbcd31c",
+            "text": "Слике и видео фрејмови аутоматски користе највећу величину која се уклапа у њихов панел за преглед док задржавају оригинални однос ширине и висине. Промена величине главног прозора или било ког разделника за преглед ажурира слику након кратког одлагања, избегавајући поновна покретања декодера док се разделник превлачи."
+          },
+          {
+            "id": "selecting_and_previewing.p003",
+            "source_sha256": "6da9585bae76a4d0447bfa50948712331a0b66f7d19639b6472395a5337a1281",
+            "text": "Свака панела такође има велики независни taster 'Инфо'. Подразумевано је искључен и додаје склопиви инспектор на десни ивиц те панеле. Ако је датотека већ изабрана, укључивање 'Инфо' приказује је одмах – није потребно поново је изабирати. Инспектор прати каснији избор у Детаљи, Континуираноминијатуре, и Страницеминијатуре и приказује путању, димензије, величину, датуме, трајање, кодек, фреквенцију кадрова, битрејт, пиксели формат, HDR, аудио, разлог непознатости, оцену, боју и ознаке.Копирај путањуставља пуну путању у клипборд; Отвори и Прикажикористите уобичајене радње са датотекама. Искључивање Инфо-а потпуно уклања инспектор, а сачувани радни простори памте његово стање. Инфо се отвара са компактном почетном ширином од око 180 пиксела. Контроле за сортирање и избор на врху су независне од Инфо делиоца, тако да отварање Инфо-а не стежe те дугмиће. Превуците делилац поред инспектора да бисте променили његову ширину; искључивање и укључивање Инфо-а враћа ту ширину, а сачувана подешавања панела/радног простора је задржавају. На уским прозорима ширина је ограничена како би остало мало простора за прегледање."
+          },
+          {
+            "id": "selecting_and_previewing.p004",
+            "source_sha256": "f69ab2d999168d40676e34589ed911761ef8a4e8e683955ccaa9c471fc373e01",
+            "text": "Прикажи у Датотека Explorer-у/Прикажи radi sa kompletnim izborom. Sa do pet izabranih fajlova, šalje poseban zahtev za otkrivanje za svaki putanju. Za više od pet, upozorenje prikazuje tačan broj jer operacija može otvoriti mnogo prozora upravnika fajlova. Izaberite Da da biste otkrili svaki izabrani fajl ili Ne da biste otkrili samo prvi. Windows i macOS selektuju svaki tačan fajl; Linux otvara folder koji sadrži fajl kroz sistemski upravnik fajlova."
+          },
+          {
+            "id": "selecting_and_previewing.p005",
+            "source_sha256": "78c83927ab22cd560e580cbf1dbe270da8c554ef8357eb67fdc828600c7f856a",
+            "text": "За информације о камери, EXIF поља или тагове видео контејнера/стрима, погледајте [chapter:embedded_metadata]."
+          }
+        ],
+        "body": "Сваки панел има независну групу радњи са пољима за ознаку. Кликните на поље ÔÿÉ/Ôÿæ поред реда Детаљи или на минијатурну картицу, или фокусирајте ред Детаљи и притисните Space. Ознаке остају сачуване док истичете и прегледате друге фајлове, сортирате панел или мењате филтере. Бројач испод претраживача приказује укупан број, укључујући означене фајлове које тренутно сакрива филтер. Кликните на наслов Ô£ô Детаљи или Ô£ô Све приказано у Преглед сличица да означите сваки тренутно приказани фајл; поновите да поништите ознаку те приказане групе. Очисти ознаке уклања целу групу. Копирање, померање, превлачење, брисање, преименовање, оцењивање, означавање, поређење, провера интегритета и конверзија користе све означене фајлове када постоје; без ознака користе обично истакнуте редове. Промена тог панела на други фолдер или диск брише његове ознаке, и ознаке се не чувају након затварања апликације.\n\nЧекбоксови се мењају само када кликнете и отпустите на кутији без превлачења. Празан простор поред кутије није део кликабилне области. Померање више од неколико пиксела уместо тога покреће избор наглашавањем и оставља ознаке непромењене, чак и када је превлачење почело на чекбоксу. Користите експлицитне контроле Означи селекцију и Поништи селекцију да бисте променили целу наглашену групу.\n\nПовуците са празног простора прегледача преко редова или минијатурних картица да бисте означили групу оквиром за селекцију. Ово не означава или поништава ознаку ниједне датотеке. Обично повлачење започиње нову означену групу; држите Ctrl док започињете повлачење да бисте додали постојећим ознакама.Почетакна празан простор минијатуре, не на слику или назив датотеке, јер превлачење датотеке минијатуре уместо тога покреће пренос. У Детаљитакође можете превлаčiti вертикално кроз редове да бисте означили групу; превуците ка другом панелу за пренос. Заглавља задржавају своје нормалне geste за промену величине и редослед. Користите Означи селекцијуда додате истакнуте датотеке у постојећу означену групу акција. Користите Поништи селекцијуда уклоните само оне истакнуте датотеке из те групе. Оба дугмета се налазе на врху сваког прегледача поред Сортирај,Изабери све приказано и Очисти ознаке; контролише оматање на ужим панелима. Оба наредбе су такође доступна у менијима који се отварају десним кликом. Остали ознаке, укључујући датотеке скривене филтерима, остају сачуване. Акције са датотекама и даље преферирају све ознаке када било које постоје, па користите ове експлицитне контроле пре копирања или премештања ако желите да промените групу акција.\n\nSvaki prozor pregledača ima svoj veliki ÔûÂ Преглед prekidač, koji je podrazumevano isključen da bi se izbeglo nepotrebno dekodiranje. Омогући Преглед na levoj, desnoj ili obe strane za otvaranje odvojenih poravnatih panela pregleda ispod pregledača. Dugme ima poseban selektovani status, tako da je lako uočiti omogućene preglede. Kada su oba prekidača isključena, područje pregleda se potpuno skuplja i pregledači koriste punu visinu prozora. Kliknite na fajl da biste ga pregledali na njegovoj strani. Isticanje je nezavisno od čekiranja, tako da možete pregledati ili pregledati drugi fajl bez gubljenja grupe akcija. Držite Ctrl dok klikćete na sličice ili detaljne redove da biste istakli više fajlova. Изабери одговарајуће ističe svaki trenutno prikazani rezultat. Dupli klik otvara istaknuti fajl u njegovoj uobičajenoj aplikaciji.\n\nСлике и видео фрејмови аутоматски користе највећу величину која се уклапа у њихов панел за преглед док задржавају оригинални однос ширине и висине. Промена величине главног прозора или било ког разделника за преглед ажурира слику након кратког одлагања, избегавајући поновна покретања декодера док се разделник превлачи.\n\nСвака панела такође има велики независни taster 'Инфо'. Подразумевано је искључен и додаје склопиви инспектор на десни ивиц те панеле. Ако је датотека већ изабрана, укључивање 'Инфо' приказује је одмах – није потребно поново је изабирати. Инспектор прати каснији избор у Детаљи, Континуираноминијатуре, и Страницеминијатуре и приказује путању, димензије, величину, датуме, трајање, кодек, фреквенцију кадрова, битрејт, пиксели формат, HDR, аудио, разлог непознатости, оцену, боју и ознаке.Копирај путањуставља пуну путању у клипборд; Отвори и Прикажикористите уобичајене радње са датотекама. Искључивање Инфо-а потпуно уклања инспектор, а сачувани радни простори памте његово стање. Инфо се отвара са компактном почетном ширином од око 180 пиксела. Контроле за сортирање и избор на врху су независне од Инфо делиоца, тако да отварање Инфо-а не стежe те дугмиће. Превуците делилац поред инспектора да бисте променили његову ширину; искључивање и укључивање Инфо-а враћа ту ширину, а сачувана подешавања панела/радног простора је задржавају. На уским прозорима ширина је ограничена како би остало мало простора за прегледање.\n\nПрикажи у Датотека Explorer-у/Прикажи radi sa kompletnim izborom. Sa do pet izabranih fajlova, šalje poseban zahtev za otkrivanje za svaki putanju. Za više od pet, upozorenje prikazuje tačan broj jer operacija može otvoriti mnogo prozora upravnika fajlova. Izaberite Da da biste otkrili svaki izabrani fajl ili Ne da biste otkrili samo prvi. Windows i macOS selektuju svaki tačan fajl; Linux otvara folder koji sadrži fajl kroz sistemski upravnik fajlova.\n\nЗа информације о камери, EXIF поља или тагове видео контејнера/стрима, погледајте [chapter:embedded_metadata]."
+      },
+      {
+        "id": "copying_and_moving",
+        "title": "Копирање и премештање",
+        "paragraphs": [
+          {
+            "id": "copying_and_moving.p001",
+            "source_sha256": "74a10eb18d51cae10f7fdd8931b1ad7feb8157e134c2e2f50071b7b2d30f5f1b",
+            "text": "Изаберите фајлове у једном панелу и користите траку са алаткама, мени Уреди, мени десним кликом миша, пречице на тастатури или превлачење и испуштање. Да бисте послали више изабраних фајлова у другу апликацију као што је Shutter, превуците велики ↗ Повуци изабрано ручку поред контрола навигације тог панела левим тастером миша. Он извози комплетан избор користећи нормалан формат листе фајлова оперативног система и ради у оба Детаљи и Преглед сличица без мешања са променом величине колона. Други панел је одредиште за пренос у оквиру апликације. Преноси улазе у ред са напретком, брзином, преосталим временом, паузом, отказивањем, поновним покушајем и опцијама за конфликте. Пренос из панела омогућава вам да изаберете да ли ћете задржати релативне фасцикле или копирати само фајлове."
+          },
+          {
+            "id": "copying_and_moving.p002",
+            "source_sha256": "a438870a1a1fa7c4edc46d8f19aa10034df90810c0e6118e2c2f94828359328d",
+            "text": "Уреди >Пакетно преименовањеизабрано отвара потпуни преглед пре него што промените било која имена. Преглед се аутоматски ажурира након што промените образац, текст за проналажење/замену, осетљивост на велика и мала слова, почетни број или попуњавање;Освежи преглед је такође доступан. Направите имена са {name}за оригинални стабљику,{n}за низ са нумерацијом са попуњавањем, {ext}за екстензију без тачке, и{dotext}за наставак укључујући тачку. Опционално проналажење/замена може бити осетљиво или неосетљиво на велика и мала слова, а нумерисање има прилагодљив почетак и пуњење. Неважећа имена у Виндовсу, дуплирани резултати и конфликти са неисабраним датотекама онемогућавају Примени. Потврђена серија користи привремена имена унутар система тако да замене и циклуси не могу једни друге да препишу; прекинута серија се, где је могуће, враћа назад. Успешна серија је онаCtrl+Zпоништи акцију, укључујући оцене и ознаке.F2или Преименујна једном фајлу отвара преглед именика уживо;Преименујје омогућено само за важеће, доступно ново име."
+          },
+          {
+            "id": "copying_and_moving.p003",
+            "source_sha256": "dc2923a823a7109741512e0c6e1a2302310ba36b9dbfaa6379ae5acf0c73c9e9",
+            "text": "За поновљиве услове копирања/премештања са прегледом пре примене, видети [chapter:folder_organization_rules]. Да бисте паузирали, отказали или поновили ставке у реду за пренос, видети [chapter:transfer_queue]."
+          },
+          {
+            "id": "copying_and_moving.p004",
+            "source_sha256": "2c1a1fe656902fb987c4f1a88cd0f8d6ec8ead7edc9b2cf0817ce2b6e82f724b",
+            "text": "Кликните десним тастером миша на један или више одабраних фајлова да бисте доделили оцјену од нуле до пет звездица, ознаку боје Црвена/Жута/Зелена/Плава/Љубичаста или ознаке одвојене зарезом. Очисти оцену, Ниједна, и празна листа ознака поништавају те измене. Ове анотације се чувају само у бази података апликације; оригинални медији и уграђени метаподаци никада се не мењају. Детаљи режим приказује сортиране Оцена, Етикета и колоне Ознаке. Натписи на сличицама приказују оцене/ознаке и користе боју ознаке као њихов оквир када нису одабрани. Више филтера може захтевати минималну оцену, боју (укључујући Непотписано) или текст ознаке. Интерне операције преименовања, копирања, премештања и поништавања преносе анотације на резултујућу путању. Очисти све кеш уклања техничке кеш податке али намерно задржава корисничке анотације."
+          },
+          {
+            "id": "copying_and_moving.p005",
+            "source_sha256": "4ea753522d03bb48eab43c172373c00d21303828abeacab783fb94f7d41faa41",
+            "text": "U Детаљи režimu, pojedinačni redovi zadržavaju prevlačenje fajlova desnim tasterom; običan desni klik i dalje otvara kontekst meni. Takođe možete prevući red ili izabranu grupu levim tasterom u suprotnu oblast. Padajući meni nudi jasno označene dugmiće Kopiraj, Premesti i Откажи. Kopiraj ili Premesti otvara pregled prenosa; Откажи ili zatvaranje upita ostavlja fajlove nepromenjene. Promena veličine i premeštanje zaglavlja ostaju nezavisni. Za konvencionalno prevlačenje levim tasterom u drugi program, koristite ↗ Повуци изабрано. Kartice sa sličicama takođe podržavaju uobičajeno prevlačenje fajlova levim tasterom."
+          },
+          {
+            "id": "copying_and_moving.p006",
+            "source_sha256": "c09e896f93f4539ea5e39ce1ef9cf109147040645409d8f026ce228b0ae864d8",
+            "text": "Копирајте, преместите, преименујте, пошаљите датотеке у Корпу за отпатке или смеће, прегледајте дупликате, примените ознаке и оцене, извезите извештаје и креирајте контакт листе. Конверзија подржава H.264, H.265 и AV1 уз компатибилно хардверско убрзање. Извор датотеке се задржавају, а делимично неуспели резултати се уклањају."
+          },
+          {
+            "id": "copying_and_moving.p007",
+            "source_sha256": "88a277d5f920b679b295acc60e5e72f6b72f48d3630880924c349e271f7ab3aa",
+            "text": "Нова фасцикла s: изаберите Датотека > Нови фолдер…, притисните Ctrl+Shift+N, или кликните десним тастером миша у панелу и изаберите Нови фолдер…. Унесите назив једног новог фолдера. Фолдер се креира унутар тренутног фолдера активног панела и прегледач се освежава; ово не помера ваше изабране датотеке. Празни, резервисани и неважећи називи се одбијају, и постојећи фолдер никада није замењен."
+          },
+          {
+            "id": "copying_and_moving.p008",
+            "source_sha256": "cfa3700591ec389ae4438a32b015736c27e74632cc56284e786898fee744198b",
+            "text": "Пример копирања/премештања: омогућите Укључи подфолдере у изворној панелу, означите фајлове у неколико подфолдера и кликните Копирај изабрано → други панел или Premesti izabrano → drugi prozor. У прегледу одаберите Очувати структуру фасцикли да бисте сачували путање испод изворне фасцикле, или Датотекасамо (без подфолдера) да бисте фајлове ставили директно у одредиште. Први подразумевани чува фасцикле; каснији преноси памте ваш последњи избор. Прочитајте Извор, Odredište и Статус колоне пре стављања у ред. Претражуј… мења одредиште; Нови фолдер… креира и одабира фасциклу без напуштања прегледа. Отвориодредиште када је завршено отвори ту фасциклу само након успешног, неотказаног преноса. Кликните Копирање у ред или Премештање у ред да наставите, или Откажи да оставите фајлове непромењене. Налепи и преузети фајлови такође користе овај преглед."
+          },
+          {
+            "id": "copying_and_moving.p009",
+            "source_sha256": "6f5fea1b68edde18db0247441f47c2ad2c00ad93e2b1f52f9b191e04d8ccde05",
+            "text": "Конфликти: Питај за сваки конфликт нуди Задржи оба, Замени, Прескочи и Откажи, са Примениза све преостале конфликте. Другачије, изаберите политику у прегледу пре стављања у ред. Задржи оба налази доступно именовано име фајла као што је clip (2).mp4, укључујући сударе између изабраних фајлова из различитих подфолдера. Замени изричито дозвољава замену и чува претходну дестинацију у области за поништавање у овој сесији. Прескочи оставља постојећу дестинацију непромењену. Дестинација која је један од изабраних изворних фајлова је блокирана: изаберите други фолдер. Ред поново проверава дестинације, тако да фајл који се појави после прегледа није тихо преписан. Поништавање је ограничено на последњих 20 подржаних радњи у овој сесији и није трајна резервна копија. Не уређујте прењете фајлове пре коришћења Поништи; поништавање копије уклања копирани фајл."
+          },
+          {
+            "id": "copying_and_moving.p010",
+            "source_sha256": "fd0ec5c6b05d49ff78891f64ea627a2fe1d7435cbdf0008018ace12f664e8341",
+            "text": "Корпа за селекцију: користите дугме на траци алата Корпа за селекцију, Файл > Корпа за селекцију…, или кликните десним тастером на изабране датотеке и изаберите Додај у корпу за селекцију. Корпа је преклопна плоча изнад оба прегледача, а не посебан прозор. Сакриј корпу или дугме на траци алата је скрива без брисања њених референци. Додај избор панела сакупља означену групу акција плоче, или њене истакнуте датотеке када нема означених. Посетите друге фолдере и додајте више датотека; сваки оригинални пут се појављује само једном. Корпа садржи референце, а не копије, и брише се када се апликација затвори. Уклони референце или Очистикорпа не брише оригинале. Изаберите редове корпе и изаберите Копирају активни прозор или Преместиу активни прозор; када ниједан ред корпе није изабран, користе се све ставке. Прегледајте нормалан преглед преноса. Датотеке у корпи без заједничког корена за преглед користе своје имена уместо комбинованог стабла фолдера. Недостајући оригинали су обележени [недостаје] и не могу се пренети док не постану доступни."
+          }
+        ],
+        "body": "Изаберите фајлове у једном панелу и користите траку са алаткама, мени Уреди, мени десним кликом миша, пречице на тастатури или превлачење и испуштање. Да бисте послали више изабраних фајлова у другу апликацију као што је Shutter, превуците велики ↗ Повуци изабрано ручку поред контрола навигације тог панела левим тастером миша. Он извози комплетан избор користећи нормалан формат листе фајлова оперативног система и ради у оба Детаљи и Преглед сличица без мешања са променом величине колона. Други панел је одредиште за пренос у оквиру апликације. Преноси улазе у ред са напретком, брзином, преосталим временом, паузом, отказивањем, поновним покушајем и опцијама за конфликте. Пренос из панела омогућава вам да изаберете да ли ћете задржати релативне фасцикле или копирати само фајлове.\n\nУреди >Пакетно преименовањеизабрано отвара потпуни преглед пре него што промените било која имена. Преглед се аутоматски ажурира након што промените образац, текст за проналажење/замену, осетљивост на велика и мала слова, почетни број или попуњавање;Освежи преглед је такође доступан. Направите имена са {name}за оригинални стабљику,{n}за низ са нумерацијом са попуњавањем, {ext}за екстензију без тачке, и{dotext}за наставак укључујући тачку. Опционално проналажење/замена може бити осетљиво или неосетљиво на велика и мала слова, а нумерисање има прилагодљив почетак и пуњење. Неважећа имена у Виндовсу, дуплирани резултати и конфликти са неисабраним датотекама онемогућавају Примени. Потврђена серија користи привремена имена унутар система тако да замене и циклуси не могу једни друге да препишу; прекинута серија се, где је могуће, враћа назад. Успешна серија је онаCtrl+Zпоништи акцију, укључујући оцене и ознаке.F2или Преименујна једном фајлу отвара преглед именика уживо;Преименујје омогућено само за важеће, доступно ново име.\n\nЗа поновљиве услове копирања/премештања са прегледом пре примене, видети [chapter:folder_organization_rules]. Да бисте паузирали, отказали или поновили ставке у реду за пренос, видети [chapter:transfer_queue].\n\nКликните десним тастером миша на један или више одабраних фајлова да бисте доделили оцјену од нуле до пет звездица, ознаку боје Црвена/Жута/Зелена/Плава/Љубичаста или ознаке одвојене зарезом. Очисти оцену, Ниједна, и празна листа ознака поништавају те измене. Ове анотације се чувају само у бази података апликације; оригинални медији и уграђени метаподаци никада се не мењају. Детаљи режим приказује сортиране Оцена, Етикета и колоне Ознаке. Натписи на сличицама приказују оцене/ознаке и користе боју ознаке као њихов оквир када нису одабрани. Више филтера може захтевати минималну оцену, боју (укључујући Непотписано) или текст ознаке. Интерне операције преименовања, копирања, премештања и поништавања преносе анотације на резултујућу путању. Очисти све кеш уклања техничке кеш податке али намерно задржава корисничке анотације.\n\nU Детаљи režimu, pojedinačni redovi zadržavaju prevlačenje fajlova desnim tasterom; običan desni klik i dalje otvara kontekst meni. Takođe možete prevući red ili izabranu grupu levim tasterom u suprotnu oblast. Padajući meni nudi jasno označene dugmiće Kopiraj, Premesti i Откажи. Kopiraj ili Premesti otvara pregled prenosa; Откажи ili zatvaranje upita ostavlja fajlove nepromenjene. Promena veličine i premeštanje zaglavlja ostaju nezavisni. Za konvencionalno prevlačenje levim tasterom u drugi program, koristite ↗ Повуци изабрано. Kartice sa sličicama takođe podržavaju uobičajeno prevlačenje fajlova levim tasterom.\n\nКопирајте, преместите, преименујте, пошаљите датотеке у Корпу за отпатке или смеће, прегледајте дупликате, примените ознаке и оцене, извезите извештаје и креирајте контакт листе. Конверзија подржава H.264, H.265 и AV1 уз компатибилно хардверско убрзање. Извор датотеке се задржавају, а делимично неуспели резултати се уклањају.\n\nНова фасцикла s: изаберите Датотека > Нови фолдер…, притисните Ctrl+Shift+N, или кликните десним тастером миша у панелу и изаберите Нови фолдер…. Унесите назив једног новог фолдера. Фолдер се креира унутар тренутног фолдера активног панела и прегледач се освежава; ово не помера ваше изабране датотеке. Празни, резервисани и неважећи називи се одбијају, и постојећи фолдер никада није замењен.\n\nПример копирања/премештања: омогућите Укључи подфолдере у изворној панелу, означите фајлове у неколико подфолдера и кликните Копирај изабрано → други панел или Premesti izabrano → drugi prozor. У прегледу одаберите Очувати структуру фасцикли да бисте сачували путање испод изворне фасцикле, или Датотекасамо (без подфолдера) да бисте фајлове ставили директно у одредиште. Први подразумевани чува фасцикле; каснији преноси памте ваш последњи избор. Прочитајте Извор, Odredište и Статус колоне пре стављања у ред. Претражуј… мења одредиште; Нови фолдер… креира и одабира фасциклу без напуштања прегледа. Отвориодредиште када је завршено отвори ту фасциклу само након успешног, неотказаног преноса. Кликните Копирање у ред или Премештање у ред да наставите, или Откажи да оставите фајлове непромењене. Налепи и преузети фајлови такође користе овај преглед.\n\nКонфликти: Питај за сваки конфликт нуди Задржи оба, Замени, Прескочи и Откажи, са Примениза све преостале конфликте. Другачије, изаберите политику у прегледу пре стављања у ред. Задржи оба налази доступно именовано име фајла као што је clip (2).mp4, укључујући сударе између изабраних фајлова из различитих подфолдера. Замени изричито дозвољава замену и чува претходну дестинацију у области за поништавање у овој сесији. Прескочи оставља постојећу дестинацију непромењену. Дестинација која је један од изабраних изворних фајлова је блокирана: изаберите други фолдер. Ред поново проверава дестинације, тако да фајл који се појави после прегледа није тихо преписан. Поништавање је ограничено на последњих 20 подржаних радњи у овој сесији и није трајна резервна копија. Не уређујте прењете фајлове пре коришћења Поништи; поништавање копије уклања копирани фајл.\n\nКорпа за селекцију: користите дугме на траци алата Корпа за селекцију, Файл > Корпа за селекцију…, или кликните десним тастером на изабране датотеке и изаберите Додај у корпу за селекцију. Корпа је преклопна плоча изнад оба прегледача, а не посебан прозор. Сакриј корпу или дугме на траци алата је скрива без брисања њених референци. Додај избор панела сакупља означену групу акција плоче, или њене истакнуте датотеке када нема означених. Посетите друге фолдере и додајте више датотека; сваки оригинални пут се појављује само једном. Корпа садржи референце, а не копије, и брише се када се апликација затвори. Уклони референце или Очистикорпа не брише оригинале. Изаберите редове корпе и изаберите Копирају активни прозор или Преместиу активни прозор; када ниједан ред корпе није изабран, користе се све ставке. Прегледајте нормалан преглед преноса. Датотеке у корпи без заједничког корена за преглед користе своје имена уместо комбинованог стабла фолдера. Недостајући оригинали су обележени [недостаје] и не могу се пренети док не постану доступни."
+      },
+      {
+        "id": "smart_collections",
+        "title": "Паметне колекције: Сачуване претраге",
+        "paragraphs": [
+          {
+            "id": "smart_collections.p001",
+            "source_sha256": "c8a00acd2ba2c17799572b74c47c2659ecb5a65fb4782693cbe786544ac1e764",
+            "text": "ШТА ПАМЕТНЕ КОЛЕКЦИЈЕ ЧУВАЈУ"
+          },
+          {
+            "id": "smart_collections.p002",
+            "source_sha256": "d366ab29cfd1f77bae1f8b286cca63d76a5e46d73bdbf4329d2cfb31a1b3694a",
+            "text": "Паметна колекција је именована, сачувана претрага и приказ за један прегледачки панел. Она памти како да пронађе и приказује датотеке у изворној фасцикли. Поступа са оригиналним датотекама; креирање, отварање, преименовање или брисање колекције не копира, не помера, не преименује, не брише нити не додаје коментаре тим медијским датотекама. Користите је када више пута прегледате исту библиотеку са одређеним филтерима и сортирањем, уместо да сваки пут поново уносите те поставке. Сачувано радно окружење враћа оба панела и њихов распоред; Паметна колекција мења само активни панел."
+          },
+          {
+            "id": "smart_collections.p003",
+            "source_sha256": "006322e9c7ac283bd37b6dbb958c936304cc5977a4803b31ea4c4da238a217f2",
+            "text": "Svaka kolekcija ima tačno jedan početni folder. Укључи подфолдере pretražuje sve foldere ispod te korenske fascikle. Ne može da kombinuje proizvoljne nepovezane foldere, odvojene diskove ili više početnih korena u jednu kolekciju. Izaberite njihov najbliži zajednički roditeljski folder kada je to praktično, ili sačuvajte odvojene kolekcije i otvorite ih u dve prozorske ploče. Odabirom korena diska sa Укључи подфолдере moguće je skenirati ceo disk; izaberite najuži koristan roditeljski folder."
+          },
+          {
+            "id": "smart_collections.p004",
+            "source_sha256": "20491128f8f22d658bb8601b6511411ea9d469ce4a9681d99090382d74cfc3cf",
+            "text": "Sačuvana podešavanja su putanja do fascikle, Укључи подфолдере, Видео снимке i Слике prekidači, Pronađi tekst, Резолуција selekcija, svaka vrednost Više filtera, polje i pravac sortiranja, Детаљи ili Преглед сличица, veličina sličica, i Континуирано ili Странице režim. Ne čuva označene fajlove, istaknute selekcije, reprodukciju pregleda, praćenje uživo, drugi prozor, širine/redosled kolona, delioce prozora ili kapacitet stranice sa sličicama. Ova podešavanja ostaju nezavisna. Kolekcije se čuvaju lokalno u smart_collections.json u direktorijumu sa podešavanjima aplikacije."
+          },
+          {
+            "id": "smart_collections.p005",
+            "source_sha256": "b11ace0b241e6cfceeaf8409069c6872f849fb89e4d9c2acab35996a93e19059",
+            "text": "НАПРАВИТЕ КОЛЕКЦИЈУ"
+          },
+          {
+            "id": "smart_collections.p006",
+            "source_sha256": "83c8a710973dcf1308b8fd867f872bf84624f939b91047eea47405238718426e",
+            "text": "1. Кликните унутар панела који желите да конфигуришете. Ово га чини активним панелом за Алаткекоманде.\n2. Користите Претражуј…или у пољу путање да бисте отворили намењени изворни фолдер.Омогући Укључи подфолдереако унутрашње фасцикле припадају претрази.\n3. ОзначиВидео снимке, Слике, или обoje. Поставите Проналажење за име фајла или подниз релативне путање без разлике између великих и малих слова, и изаберите Резолуцијаза тачну ширину ├ù висину где је потребно. Приказ каже Резолуција:Све када не важи ограничење на тачну резолуцију.\n4. Отвори Више филтера… за оријентацију, кодек подниз, ознаку подниз, минималну оцену, боју етикете, минималну/максималну ширину и висину, величину датотеке, трајање и датуме измене. Празна поља не наметају ограничења; сва непразна ограничења морају се поклапати. Унесите Применида користите филтере.Очисти ресетује вредности напредног филтра. Ово није посебан филтер произвољног проширења; користитеВидео снимке/Сликепрекидачи и, где је прикладно, подниз назива датотеке као што је .mp4.\n5. Саčekајте скенирање и изаберите тражени редослед. У Детаљи, кликните на заглавље колоне; кликните поново да бисте променили смер. У Преглед сличица, користите Сортирање и његов подмени по пољу/смеру. Оба приказа користе исти филтрирани медијум и редослед.\n6. Изаберите Алатке > Сачувај активну паметну колекцију…и унесите описан назив Колекције. Чување постојећег назива тражи Zameni pametnu kolekciju; слажем се само ако тренутни панел треба да замени ту сачувану дефиницију. Чување креира претпоставку, а не копију приказаних фајлова."
+          },
+          {
+            "id": "smart_collections.p007",
+            "source_sha256": "cc9c90b0168ad0ec1cefb3b33388495dd4c350d67628c7413d8a0ee240b4ae7b",
+            "text": "ОТВОРИТЕ И АЖУРИРАЈТЕ КОЛЕКЦИЈУ"
+          },
+          {
+            "id": "smart_collections.p008",
+            "source_sha256": "89904bdaa8286ca4ca8546e5136bc9ff5b7688ac0147d82ee8a66fd4caa61afa",
+            "text": "Прво изаберите одредишни панел. Отворите Алатке > Управљај паметним колекцијама…, изаберите сачувани унос и кликните на Примени или двоструко кликните на ред. Активни панел се пребацује на сачувани почетни фолдер, враћа сачуване филтере, сортирање и приказ, затим га скенира. Супротни панел остаје непромењен. Ако је фолдер искључен, премештен или више не постоји, Фасцикла колекције није доступна објашњава сачувану путању; поново га повежите или сачувајте замену користећи важећи фолдер."
+          },
+          {
+            "id": "smart_collections.p009",
+            "source_sha256": "1668c49611305d33e2b5780a8b4c6910237f09146c4967272ffd9cf9df5477ae",
+            "text": "Резултатs одражавају фајлове који су тренутно пронађени када панел скенира, уместо замрзнуте листе снимљене када је пресет сачуван. Користите тастер панела Ôå╗, Прикажи > Освежи активни панел, или F5 за оба панела након спољних промена фајлова. Уживо може пратити тренутну фасциклу, али Уживо није део сачуване колекције. Промене филтрирања или сортирања утичу на тренутни приказ одмах; промене опсега извора захтевају одговарајуће скенирање. Откажи зауставља скенирање. Велико рекурзивне колекције користе исти кеш метаподатака и профиле перформанси као обично прегледање."
+          },
+          {
+            "id": "smart_collections.p010",
+            "source_sha256": "5d0ba8ba1b4e449868d9118559c323b524f2ed494ba01573aee4d4176bc9d605",
+            "text": "Не постоји посебно дугме за уређивање колекције. Да бисте променили постојећу колекцију, Примени је, подесите фасциклу, опсег, филтере или редослед у том панелу, затим изаберите Алатке > Сачувај активну паметну колекцију… са истим именом и потврдите замену. У менаџеру, Сачувај тренутно чува тренутна подешавања активног панела и тражи име; не уређује аутоматски изабрани ред. Промену имена не чува никакве измене направљене у филтерима панела."
+          },
+          {
+            "id": "smart_collections.p011",
+            "source_sha256": "6e88b549b05defa2d24fa8d186b6ba7aea252c5d474f37b1bb4d2e876fbcdbfd",
+            "text": "ПРЕИМЕНУЈ, ОБРИШИ И ОБНОВИ"
+          },
+          {
+            "id": "smart_collections.p012",
+            "source_sha256": "2a100ef5ff5e82d9b023158669f5f05a1ef343719fe452c2e74a2589cd33091a",
+            "text": "U Алатке > Управљај паметним колекцијама…, izaberite unos i kliknite Преименуј. Unesite Ново име: i potvrdite zamenu ako druga kolekcija već ima to ime. Обриши traži potvrdu i uklanja samo unapred podešeni element. Опозови брисање vraća poslednji obrisani unapred podešen element dok je ovaj prozor menadžera otvoren. Zatvaranjem menadžera se gubi ovaj privremeni stek opoziva. Ako je kolekcija sa istim imenom naknadno kreirana, vraćanjem obrisanog unosa se zamenjuje unapred podešeni element tog imena, pa koristite različita imena kada želite da sačuvate oba. Затвори izlazi bez primene odabrane stavke. Ctrl+Z je za rad sa fajlovima, a ne za brisanje u menadžeru kolekcija."
+          },
+          {
+            "id": "smart_collections.p013",
+            "source_sha256": "fc23ad3b8bc9134b6679c107990040938242a050929d015a037c6128ec0433d6",
+            "text": "ПРИМЕР: СОРТИРАЈТЕ СЛИКЕ ПО РЕЗОЛУЦИЈИ УНУТАР ПОДФОЛДЕРА"
+          },
+          {
+            "id": "smart_collections.p014",
+            "source_sha256": "71fd063332ef48d1b7ce3c83f9cdbc8f08084a1965687f4f382f46399b47cc96",
+            "text": "1. У левом панелу,Претражуј…у фасциклу родитеља ваших Слика, омогући Укључи подфолдере и Слике, и окрени Видео снимкеискључено.\n2. Очисти Пронађи и подеси Резолуцијаза све ако желите да упоредите све димензије. Отворите Више филтера…и Очисти/Примени ако треба уклонити старе рестрикције.\n3. У Детаљи, кликните Резолуцијадок се не појави жељени растући или опадајући редослед. Или изаберите Преглед сличица и Сортирај > Резолуција > Najmanje prvo или Najveće prvo. Резолуцијасортирање користи површину пиксела (ширина × висина), при чему ширина и висина разграђују везе код једнаке површине; то није једноставно сортирање само по ширини. Тачан Резолуцијафилтер ограничава на један конкретан пар димензија уместо тога.\n4. Сачувај активни панел као Сликерезолуцијом.Касније Примени овaj унос у било којем панелу да понови претрагу, укључујући недавно додате одговарајуће фајлове након скенирања."
+          },
+          {
+            "id": "smart_collections.p015",
+            "source_sha256": "ff3bb0c443412ace673aef6b3b1dd606e3214fe0e515419f44b8de1c6e8f7ee7",
+            "text": "PRIMER: ПРЕГЛЕДАЈТЕ ВИШЕРЕЗОЛУЦИОНЕ ВИДЕОСНИМКЕ"
+          },
+          {
+            "id": "smart_collections.p016",
+            "source_sha256": "58ddf88adee5ea950a3c3cc66a1975d861ac600276d297a9190c5cd96961d30b",
+            "text": "1. Претражуј… ка Видео снимкеродитељски фолдер, омогући Укључи подфолдере иВидео снимке, и окренути Сликеискључено.\n2. У Више филтера…, скуп Минимална ширина (пиксели) до 1920. и Минимална висина (пиксели) на 1080 ако желите видео записе који задовољавају ОБЕ димензије. Ово искључује портретне видео записе који су ужи од 1920, чак и када имају велики број пиксела; прилагодите границе или користите Оријентацијапрема вашем циљу.\n3. Оставите Резолуцијауопште да укључи различите квалификационе димензије. По избору подесите Кодек садржиу HEVC да би се поклопио са сачуваном HEVC ознаком кодека, или H.264 за H.264. Филтер поклапа приказану ознаку кодека дословно, игноришући велика и мала слова; h264 без тачке се не поклапа са H.264. Користите Информације да видите стварни кодек датотеке ако филтер не пронађе ништа.\n4. Сортирај по Резолуција у Детаљи или Преглед сличица. Остала подржана поља за сортирање укључују Име,Датум измене, Величина фајла, Дужина, Кодек, Тип, Битрате, Фрејмреит иОцена. Сачувај као видео високог квалитета. Користи Прегледили информације када је потребно прегледати појединачне резултате; њихово омогућавање је независно од дефиниције колекције."
+          },
+          {
+            "id": "smart_collections.p017",
+            "source_sha256": "582f628c0fa7f236fedaf4a03501cc2af09cc29bf57550102597d7d8e626b747",
+            "text": "ОГРАНИЧЕЊА И АКЦИЈЕ СА ФАЈЛОВИМА"
+          },
+          {
+            "id": "smart_collections.p018",
+            "source_sha256": "9722f0d4824f0d75e2aa03fd474ccaa99cbe4abb11cf0728857e688af3d85f7a",
+            "text": "Колекција је претходно подешена група доступних фајлова, а не индексирана библиотека која обухвата раздвојене дискове, позадинско аутоматско правило, листу песама, групу дупликата или физички фолдер. Променa претходно подешеног није аутоматски реорганизаује фајлове. Команде за копирање/премештање/брисање фајлова које намерно покренете на њеним резултатима и даље делују на оригинални медијум. Постојеће ознаке имају предност у односу на истицање и могу укључивати фајлове сакривене филтерима; проверите бројач ознака и Очисти ознаке пре него што делујете на непожељну групу. Навигација до другог фолдера брише ознаке у том панелу. Примена колекције може оставити постојеће ознаке када почетни фолдер остане исти, зато их увек прегледајте пре акција над фајловима."
+          },
+          {
+            "id": "smart_collections.p019",
+            "source_sha256": "07532ce67ddc2c2b72a425c349151e1bfee9bb68f725bc867be341fef82f1f29",
+            "text": "Види такође: [chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+          }
+        ],
+        "body": "ШТА ПАМЕТНЕ КОЛЕКЦИЈЕ ЧУВАЈУ\n\nПаметна колекција је именована, сачувана претрага и приказ за један прегледачки панел. Она памти како да пронађе и приказује датотеке у изворној фасцикли. Поступа са оригиналним датотекама; креирање, отварање, преименовање или брисање колекције не копира, не помера, не преименује, не брише нити не додаје коментаре тим медијским датотекама. Користите је када више пута прегледате исту библиотеку са одређеним филтерима и сортирањем, уместо да сваки пут поново уносите те поставке. Сачувано радно окружење враћа оба панела и њихов распоред; Паметна колекција мења само активни панел.\n\nSvaka kolekcija ima tačno jedan početni folder. Укључи подфолдере pretražuje sve foldere ispod te korenske fascikle. Ne može da kombinuje proizvoljne nepovezane foldere, odvojene diskove ili više početnih korena u jednu kolekciju. Izaberite njihov najbliži zajednički roditeljski folder kada je to praktično, ili sačuvajte odvojene kolekcije i otvorite ih u dve prozorske ploče. Odabirom korena diska sa Укључи подфолдере moguće je skenirati ceo disk; izaberite najuži koristan roditeljski folder.\n\nSačuvana podešavanja su putanja do fascikle, Укључи подфолдере, Видео снимке i Слике prekidači, Pronađi tekst, Резолуција selekcija, svaka vrednost Više filtera, polje i pravac sortiranja, Детаљи ili Преглед сличица, veličina sličica, i Континуирано ili Странице režim. Ne čuva označene fajlove, istaknute selekcije, reprodukciju pregleda, praćenje uživo, drugi prozor, širine/redosled kolona, delioce prozora ili kapacitet stranice sa sličicama. Ova podešavanja ostaju nezavisna. Kolekcije se čuvaju lokalno u smart_collections.json u direktorijumu sa podešavanjima aplikacije.\n\nНАПРАВИТЕ КОЛЕКЦИЈУ\n\n1. Кликните унутар панела који желите да конфигуришете. Ово га чини активним панелом за Алаткекоманде.\n2. Користите Претражуј…или у пољу путање да бисте отворили намењени изворни фолдер.Омогући Укључи подфолдереако унутрашње фасцикле припадају претрази.\n3. ОзначиВидео снимке, Слике, или обoje. Поставите Проналажење за име фајла или подниз релативне путање без разлике између великих и малих слова, и изаберите Резолуцијаза тачну ширину ├ù висину где је потребно. Приказ каже Резолуција:Све када не важи ограничење на тачну резолуцију.\n4. Отвори Више филтера… за оријентацију, кодек подниз, ознаку подниз, минималну оцену, боју етикете, минималну/максималну ширину и висину, величину датотеке, трајање и датуме измене. Празна поља не наметају ограничења; сва непразна ограничења морају се поклапати. Унесите Применида користите филтере.Очисти ресетује вредности напредног филтра. Ово није посебан филтер произвољног проширења; користитеВидео снимке/Сликепрекидачи и, где је прикладно, подниз назива датотеке као што је .mp4.\n5. Саčekајте скенирање и изаберите тражени редослед. У Детаљи, кликните на заглавље колоне; кликните поново да бисте променили смер. У Преглед сличица, користите Сортирање и његов подмени по пољу/смеру. Оба приказа користе исти филтрирани медијум и редослед.\n6. Изаберите Алатке > Сачувај активну паметну колекцију…и унесите описан назив Колекције. Чување постојећег назива тражи Zameni pametnu kolekciju; слажем се само ако тренутни панел треба да замени ту сачувану дефиницију. Чување креира претпоставку, а не копију приказаних фајлова.\n\nОТВОРИТЕ И АЖУРИРАЈТЕ КОЛЕКЦИЈУ\n\nПрво изаберите одредишни панел. Отворите Алатке > Управљај паметним колекцијама…, изаберите сачувани унос и кликните на Примени или двоструко кликните на ред. Активни панел се пребацује на сачувани почетни фолдер, враћа сачуване филтере, сортирање и приказ, затим га скенира. Супротни панел остаје непромењен. Ако је фолдер искључен, премештен или више не постоји, Фасцикла колекције није доступна објашњава сачувану путању; поново га повежите или сачувајте замену користећи важећи фолдер.\n\nРезултатs одражавају фајлове који су тренутно пронађени када панел скенира, уместо замрзнуте листе снимљене када је пресет сачуван. Користите тастер панела Ôå╗, Прикажи > Освежи активни панел, или F5 за оба панела након спољних промена фајлова. Уживо може пратити тренутну фасциклу, али Уживо није део сачуване колекције. Промене филтрирања или сортирања утичу на тренутни приказ одмах; промене опсега извора захтевају одговарајуће скенирање. Откажи зауставља скенирање. Велико рекурзивне колекције користе исти кеш метаподатака и профиле перформанси као обично прегледање.\n\nНе постоји посебно дугме за уређивање колекције. Да бисте променили постојећу колекцију, Примени је, подесите фасциклу, опсег, филтере или редослед у том панелу, затим изаберите Алатке > Сачувај активну паметну колекцију… са истим именом и потврдите замену. У менаџеру, Сачувај тренутно чува тренутна подешавања активног панела и тражи име; не уређује аутоматски изабрани ред. Промену имена не чува никакве измене направљене у филтерима панела.\n\nПРЕИМЕНУЈ, ОБРИШИ И ОБНОВИ\n\nU Алатке > Управљај паметним колекцијама…, izaberite unos i kliknite Преименуј. Unesite Ново име: i potvrdite zamenu ako druga kolekcija već ima to ime. Обриши traži potvrdu i uklanja samo unapred podešeni element. Опозови брисање vraća poslednji obrisani unapred podešen element dok je ovaj prozor menadžera otvoren. Zatvaranjem menadžera se gubi ovaj privremeni stek opoziva. Ako je kolekcija sa istim imenom naknadno kreirana, vraćanjem obrisanog unosa se zamenjuje unapred podešeni element tog imena, pa koristite različita imena kada želite da sačuvate oba. Затвори izlazi bez primene odabrane stavke. Ctrl+Z je za rad sa fajlovima, a ne za brisanje u menadžeru kolekcija.\n\nПРИМЕР: СОРТИРАЈТЕ СЛИКЕ ПО РЕЗОЛУЦИЈИ УНУТАР ПОДФОЛДЕРА\n\n1. У левом панелу,Претражуј…у фасциклу родитеља ваших Слика, омогући Укључи подфолдере и Слике, и окрени Видео снимкеискључено.\n2. Очисти Пронађи и подеси Резолуцијаза све ако желите да упоредите све димензије. Отворите Више филтера…и Очисти/Примени ако треба уклонити старе рестрикције.\n3. У Детаљи, кликните Резолуцијадок се не појави жељени растући или опадајући редослед. Или изаберите Преглед сличица и Сортирај > Резолуција > Najmanje prvo или Najveće prvo. Резолуцијасортирање користи површину пиксела (ширина × висина), при чему ширина и висина разграђују везе код једнаке површине; то није једноставно сортирање само по ширини. Тачан Резолуцијафилтер ограничава на један конкретан пар димензија уместо тога.\n4. Сачувај активни панел као Сликерезолуцијом.Касније Примени овaj унос у било којем панелу да понови претрагу, укључујући недавно додате одговарајуће фајлове након скенирања.\n\nPRIMER: ПРЕГЛЕДАЈТЕ ВИШЕРЕЗОЛУЦИОНЕ ВИДЕОСНИМКЕ\n\n1. Претражуј… ка Видео снимкеродитељски фолдер, омогући Укључи подфолдере иВидео снимке, и окренути Сликеискључено.\n2. У Више филтера…, скуп Минимална ширина (пиксели) до 1920. и Минимална висина (пиксели) на 1080 ако желите видео записе који задовољавају ОБЕ димензије. Ово искључује портретне видео записе који су ужи од 1920, чак и када имају велики број пиксела; прилагодите границе или користите Оријентацијапрема вашем циљу.\n3. Оставите Резолуцијауопште да укључи различите квалификационе димензије. По избору подесите Кодек садржиу HEVC да би се поклопио са сачуваном HEVC ознаком кодека, или H.264 за H.264. Филтер поклапа приказану ознаку кодека дословно, игноришући велика и мала слова; h264 без тачке се не поклапа са H.264. Користите Информације да видите стварни кодек датотеке ако филтер не пронађе ништа.\n4. Сортирај по Резолуција у Детаљи или Преглед сличица. Остала подржана поља за сортирање укључују Име,Датум измене, Величина фајла, Дужина, Кодек, Тип, Битрате, Фрејмреит иОцена. Сачувај као видео високог квалитета. Користи Прегледили информације када је потребно прегледати појединачне резултате; њихово омогућавање је независно од дефиниције колекције.\n\nОГРАНИЧЕЊА И АКЦИЈЕ СА ФАЈЛОВИМА\n\nКолекција је претходно подешена група доступних фајлова, а не индексирана библиотека која обухвата раздвојене дискове, позадинско аутоматско правило, листу песама, групу дупликата или физички фолдер. Променa претходно подешеног није аутоматски реорганизаује фајлове. Команде за копирање/премештање/брисање фајлова које намерно покренете на њеним резултатима и даље делују на оригинални медијум. Постојеће ознаке имају предност у односу на истицање и могу укључивати фајлове сакривене филтерима; проверите бројач ознака и Очисти ознаке пре него што делујете на непожељну групу. Навигација до другог фолдера брише ознаке у том панелу. Примена колекције може оставити постојеће ознаке када почетни фолдер остане исти, зато их увек прегледајте пре акција над фајловима.\n\nВиди такође: [chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+      },
+      {
+        "id": "duplicates_and_comparison",
+        "title": "Дупликати и упоређење",
+        "paragraphs": [
+          {
+            "id": "duplicates_and_comparison.p001",
+            "source_sha256": "0782926d2c4bf15b6bc6546a84700657d47e97dec140144e01570bb40c129af6",
+            "text": "Алатке > Пронађи дупликате pronalazi tačne podudarnosti u fazama. Datoteke iste veličine dobijaju brzi otisak prsta uzorkovan sa početka, sredine i kraja; samo kandidati koji se poklapaju se zatim potpuno čitaju i proveravaju sa SHA-256. Obe otiske prsta zadržava keš SQLite dok putanja, veličina i vreme izmene ostaju nepromenjeni, što kasnije pretrage čini mnogo bržim. Napredak se pojavljuje u statusnoj liniji aktivnog panela. Prozor za pregled prikazuje dve kopije jedna pored druge sa putanjama, datumima i oznakama zadržavanja. Strategija samo bira predložene redundantne datoteke – nikada ih ne briše automatski. Упореди изабрано prikazuje dve odabrane datoteke i njihove tehničke metapodatke."
+          },
+          {
+            "id": "duplicates_and_comparison.p002",
+            "source_sha256": "db002d92b3f1a118d7bb8aa101af8c1ae262721f09af95713962ae48eac85a4e",
+            "text": "Алатке > Пронађи визуелно сличне слике detektuje slike koje su promenjene u veličini, blago recompressovane i vizuelno gotovo identične, čak i kada njihovi fajlovi nisu identični bajt-po-bajt. Odaberite Vidljivo ili Skenirano sve i toleranciju od 0–16; niže vrednosti su strože, a 6 je podrazumevana. 64-bitne hash vrednosti razlike se keširaju prema putanji, veličini i datumu izmene, a BK-stablo omogućava praktično pretraživanje u velikim kolekcijama. Резултат su procene i otvaraju se u prozoru samo za pregled sa prikazom pregleda i opcijom Odaberi ovu grupu. Alat nikada ne briše niti menja fajlove; pregledajte svaku predloženu grupu pre korišćenja normalnih akcija nad fajlovima."
+          },
+          {
+            "id": "duplicates_and_comparison.usage",
+            "source_sha256": "ff37fdb3497ad945d44131286606d3efc34ef09526591ecd559e63aaa9b6e4ca",
+            "text": "КОРИШЋЕЊЕ АЛАТКИ ЗА ПРЕГЛЕД\n\nЗа тачне дупликате, отворите изворни фолдер, омогућите Укључи подфолдереако је потребно, сачекајте скенирање и изаберите Алатке > Пронађи дупликате…. Испитује све медије скениране у том панелу, не само истакнуте или датотеке видљиве кроз филтер. Прегледајте груписане путеве и прегледе један поред другог, затим изаберите стратегију задржавања да бисте означили предложене дупликате у изворном панелу. Ово их не брише.Очисти постојеће ознаке и прегледајте предложене нагласке пре извршавања акције са фајлом.\n\nЗа визуелно сличне слике, одаберите Алатке > Пронађи визуелно сличне слике…, изаберите Опсег: Vidljivo или Skenirano sve, подесите толеранцију сличности (0–16), и кликните Почетак. Почните са 6; нижи број је строг. Изаберите резултат да бисте га прегледали; Изаберите ову групу у панелу извораистиче групу, укључујући референтну слику. То није аутоматски избор само непожељних копија.\n\nДа бисте упоредили пар директно, очистите непожељне ознаке, изаберите тачно два фајла у једном прозору и изаберите Алатке > Упореди изабрано…. Проверите њихове прегледе, путеве и својства.Држите се лево (рециклста десно) и Држите се десно (рециклирајте лево) затражите потврду пре слања друге датотеке у Корпу за отпатке / Отпад. Затварање без било које акције оставља обе датотеке непромењене."
+          }
+        ],
+        "body": "Алатке > Пронађи дупликате pronalazi tačne podudarnosti u fazama. Datoteke iste veličine dobijaju brzi otisak prsta uzorkovan sa početka, sredine i kraja; samo kandidati koji se poklapaju se zatim potpuno čitaju i proveravaju sa SHA-256. Obe otiske prsta zadržava keš SQLite dok putanja, veličina i vreme izmene ostaju nepromenjeni, što kasnije pretrage čini mnogo bržim. Napredak se pojavljuje u statusnoj liniji aktivnog panela. Prozor za pregled prikazuje dve kopije jedna pored druge sa putanjama, datumima i oznakama zadržavanja. Strategija samo bira predložene redundantne datoteke – nikada ih ne briše automatski. Упореди изабрано prikazuje dve odabrane datoteke i njihove tehničke metapodatke.\n\nАлатке > Пронађи визуелно сличне слике detektuje slike koje su promenjene u veličini, blago recompressovane i vizuelno gotovo identične, čak i kada njihovi fajlovi nisu identični bajt-po-bajt. Odaberite Vidljivo ili Skenirano sve i toleranciju od 0–16; niže vrednosti su strože, a 6 je podrazumevana. 64-bitne hash vrednosti razlike se keširaju prema putanji, veličini i datumu izmene, a BK-stablo omogućava praktično pretraživanje u velikim kolekcijama. Резултат su procene i otvaraju se u prozoru samo za pregled sa prikazom pregleda i opcijom Odaberi ovu grupu. Alat nikada ne briše niti menja fajlove; pregledajte svaku predloženu grupu pre korišćenja normalnih akcija nad fajlovima.\n\nКОРИШЋЕЊЕ АЛАТКИ ЗА ПРЕГЛЕД\n\nЗа тачне дупликате, отворите изворни фолдер, омогућите Укључи подфолдереако је потребно, сачекајте скенирање и изаберите Алатке > Пронађи дупликате…. Испитује све медије скениране у том панелу, не само истакнуте или датотеке видљиве кроз филтер. Прегледајте груписане путеве и прегледе један поред другог, затим изаберите стратегију задржавања да бисте означили предложене дупликате у изворном панелу. Ово их не брише.Очисти постојеће ознаке и прегледајте предложене нагласке пре извршавања акције са фајлом.\n\nЗа визуелно сличне слике, одаберите Алатке > Пронађи визуелно сличне слике…, изаберите Опсег: Vidljivo или Skenirano sve, подесите толеранцију сличности (0–16), и кликните Почетак. Почните са 6; нижи број је строг. Изаберите резултат да бисте га прегледали; Изаберите ову групу у панелу извораистиче групу, укључујући референтну слику. То није аутоматски избор само непожељних копија.\n\nДа бисте упоредили пар директно, очистите непожељне ознаке, изаберите тачно два фајла у једном прозору и изаберите Алатке > Упореди изабрано…. Проверите њихове прегледе, путеве и својства.Држите се лево (рециклста десно) и Држите се десно (рециклирајте лево) затражите потврду пре слања друге датотеке у Корпу за отпатке / Отпад. Затварање без било које акције оставља обе датотеке непромењене."
+      },
+      {
+        "id": "video_conversion",
+        "title": "Конверзија видео записа",
+        "paragraphs": [
+          {
+            "id": "video_conversion.p001",
+            "source_sha256": "b2ee9f6d3dced7fd286ca5ee1d093029d40566fbc9e29e283a2a3058d9c37b85",
+            "text": "Користите Алатке > Конвертуј изабране видеe… да бисте креирали нове видео фајлове са другим кодеком, контејнером или резолуцијом. Оригинали се чувају. Прво изаберите мали узорак како бисте могли да упоредите његов квалитет, компатибилност репродукције, величину фајла и време конверзије пре обраде велике групе."
+          },
+          {
+            "id": "video_conversion.p002",
+            "source_sha256": "d51cf66e935232f9f87c8254590a1e53247ff73d6b9a122efcfcfe2a026f48d9",
+            "text": "КОНВЕРТУЈТЕ ЈЕДАН ИЛИ ВИШЕ ВИДЕО СНИМАКА\n\n1. Отворите изворни фолдер у било којем панелу.Омогући Укључи подфолдереако су видео записи распоређени по његовим подфолдерима, и сачекајте да скенирање буде завршено.\n2. Ознаците видео записе за конвертовање. Ако нема ознака, команда користи истакнуте датотеке уместо тога.Очисти нежељене ознаке прво: фајл са ознаком који је сакривен филтером и даље припада групи радњи.Сликеу групи се игноришу овом командом.\n3. Изабери Алатке > Конвертуј изабране видеe…\n4. Изаберите предефинисану поставку,Резолуција, Квалитет (CRF) и енкодинг мотор као што је описано испод.\n5. Проверите Излазфолдер. Она у почетку показује на фолдер другог панела; користите Претражуј…или унесите другу дестинацију ако је потребно. Проверите Сачувајте фасцикле у односу на активни панелда задржите структуру подфолдера извора испод те дестинације.\n6. Изаберите Прескочи постојеће или Задржи оба. Клик Освежи преглед након промене одредишта, задржавања фасцикле или политике постојећих датотека. Прочитајте сваки Извор и Излазпутању и проверите Статусколона. Само Спремноредови ће се извршавати.\n7. Кликните Почни конверзију…и прегледајте потврду пре него што се сложите. Пратите напредак и по датотеци Резултат. Када завршите, отворите конвертовану датотеку и проверите је пре него што одлучите шта да урадите са оригиналом."
+          },
+          {
+            "id": "video_conversion.p003",
+            "source_sha256": "13dffb3d18a13839d2bb6145a7313a3ee2144bcdd5305808500659c8a434c0a8",
+            "text": "ИЗБОР ПРЕСЕТА\n\nH.264 MP4 (компатибилан): користан избор када је важна широка компатибилност уређаја/плејера.\nH.265 MP4 (мањи): HEVC кодирање, које може смањити величину фајла али је потребан компатибилни плејер.\nAV1 MKV (најмањи): AV1 кодирање у MKV контејнеру; проверите подршку за репродукцију и брзину конверзије на вашем рачунару.\n720p H.264 прокси: копија H.264 ниже резолуције, корисна за брже прегледање или ревизију. Избор овог пресета подешава Резолуција на 720p; можете то променити пре покретања.\nРемукс у MKV (без ре-кодирања): копира постојеће токове у MKV. Не мења видео кодек, резолуцију или квалитет и није начин за конверзију H.264 у H.265. Имена пресета за ре-кодирање нису гаранција да ће сваки излаз бити мањи од свог извора."
+          },
+          {
+            "id": "video_conversion.p004",
+            "source_sha256": "31fe0e232d02cd89058578e2fccde72f21ae8fd0074c94698407be72fccf86ed",
+            "text": "РЕЗОЛУЦИЈА И КВАЛИТЕТ\n\nЗадржи изворну резолуцију задржава оригиналне димензије оквира при поновном кодирању. 1080p и 720p постављају излазну ВИСИНУ на 1080 или 720 пиксела уз очување односа стране; они нису подешавања за максималну ширину или само аутоматско смањење. На пример, 3840 × 2160 видео постаје 1920 × 1080 при 1080p. Мањи извор може бити увећан, што не враћа изгубљене детаље. Портрет видео снимци задржавају своје пропорције уместо да постану пејзаж.\n\nКвалитет (CRF) прихвата целе бројеве од 18 до 35; подразумевана вредност је 23. Нижи бројеви траже виши квалитет и обично веће датотеке. Хардверски мотори мапирају ову вредност у сопствену контролу квалитета, па једнаке вредности не морају да дају идентичне резултате на различитим моторима. Пробајте узорак. Remux игнорише квалитет, промену величине и убрзање."
+          },
+          {
+            "id": "video_conversion.p005",
+            "source_sha256": "2d17a4384e7cc6ceb233a92096824f99dc79d0d11c5f43d2c552d545e166b856",
+            "text": "ЕНКОДИРАЊЕ И ДЕКОДИРАЊЕ\n\nАутоматски (препоручено) испробава доступне опције хардверског енкодирања и, ако је потребно, прелази на алтернативе до Софтвер / ЦПУ. Софтвер / ЦПУ користи процесор. NVIDIA NVENC, Intel Quick Sync, AMD AMF и Linux VA-API се нуде тамо где су подржани за изабрани пресет. Сажетак откривања пријављује подршку FFmpeg; изабрани хардвер и драјвери такође морају радити. Јасно изабрани хардверски мотор пријављује неуспех уместо да се тихо пребаци на други енкодер.\n\nКористите хардверско декодирање када је доступно контролише читање извора независно од излазног енкодера. Ако тражени хардверски декодер не може да стартује, декодирање се поново покреће у софтверу уз очување изабраног енкодера. По потреби га искључите ако желите софтверско декодирање. Ова подешавања не мењају оригиналну датотеку."
+          },
+          {
+            "id": "video_conversion.p006",
+            "source_sha256": "06ea5ef5426b40dc040f7227353e00d7437b8fc335a4e6ad48d27d5bbdcf8834",
+            "text": "IZLAZNA IMENA, NAPREDAK I OTKAZIVANJE\n\nNova imena fajlova uključuju unapred podešeni sufiks i, kada je izabrano, izlaznu rezoluciju. Прескочи постојеће ostavlja postojeći cilj netaknut. Задржи оба koristi numerisano ime fajla umesto da ga zameni. Proverite pregled za preskočene fajlove, duple izlazne nazive ili druge probleme pre početka.\n\nВидео снимке se obrađuju jedan po jedan. Откажи конверзију zaustavlja trenutnu konverziju, uklanja njen nezavršeni izlaz i zaustavlja preostali red. Završeni izlazi ostaju. Zatvaranje ovog prozora za konverziju takođe zahteva otkazivanje. Njegov red je odvojen od Алатке > Ред трансфера…, koji upravlja kopiranjem i premještanjem."
+          },
+          {
+            "id": "video_conversion.p007",
+            "source_sha256": "2305a1598d67013bd4f756c6d91dec721660a38e61ab32c2435ab8a104a9ee5b",
+            "text": "PRIMER: H.264 U H.265 NA 1080p\n\nOznačite nekoliko H.264 video snimaka, otvorite Алатке > Конвертуј изабране видеe…, izaberite H.265 MP4 (мањи), podesite Резолуција na 1080p, ostavite Kvalitet (CRF) na 23 za početno ispitivanje, i izaberite Аутоматски (препоручено). Izaberite izlazni folder, kliknite Освежи преглед, proverite putanje, zatim Почни конверзију…. Uporedite završene kopije sa originalima; po potrebi prilagodite kvalitet ili rezoluciju i testirajte ponovo."
+          }
+        ],
+        "body": "Користите Алатке > Конвертуј изабране видеe… да бисте креирали нове видео фајлове са другим кодеком, контејнером или резолуцијом. Оригинали се чувају. Прво изаберите мали узорак како бисте могли да упоредите његов квалитет, компатибилност репродукције, величину фајла и време конверзије пре обраде велике групе.\n\nКОНВЕРТУЈТЕ ЈЕДАН ИЛИ ВИШЕ ВИДЕО СНИМАКА\n\n1. Отворите изворни фолдер у било којем панелу.Омогући Укључи подфолдереако су видео записи распоређени по његовим подфолдерима, и сачекајте да скенирање буде завршено.\n2. Ознаците видео записе за конвертовање. Ако нема ознака, команда користи истакнуте датотеке уместо тога.Очисти нежељене ознаке прво: фајл са ознаком који је сакривен филтером и даље припада групи радњи.Сликеу групи се игноришу овом командом.\n3. Изабери Алатке > Конвертуј изабране видеe…\n4. Изаберите предефинисану поставку,Резолуција, Квалитет (CRF) и енкодинг мотор као што је описано испод.\n5. Проверите Излазфолдер. Она у почетку показује на фолдер другог панела; користите Претражуј…или унесите другу дестинацију ако је потребно. Проверите Сачувајте фасцикле у односу на активни панелда задржите структуру подфолдера извора испод те дестинације.\n6. Изаберите Прескочи постојеће или Задржи оба. Клик Освежи преглед након промене одредишта, задржавања фасцикле или политике постојећих датотека. Прочитајте сваки Извор и Излазпутању и проверите Статусколона. Само Спремноредови ће се извршавати.\n7. Кликните Почни конверзију…и прегледајте потврду пре него што се сложите. Пратите напредак и по датотеци Резултат. Када завршите, отворите конвертовану датотеку и проверите је пре него што одлучите шта да урадите са оригиналом.\n\nИЗБОР ПРЕСЕТА\n\nH.264 MP4 (компатибилан): користан избор када је важна широка компатибилност уређаја/плејера.\nH.265 MP4 (мањи): HEVC кодирање, које може смањити величину фајла али је потребан компатибилни плејер.\nAV1 MKV (најмањи): AV1 кодирање у MKV контејнеру; проверите подршку за репродукцију и брзину конверзије на вашем рачунару.\n720p H.264 прокси: копија H.264 ниже резолуције, корисна за брже прегледање или ревизију. Избор овог пресета подешава Резолуција на 720p; можете то променити пре покретања.\nРемукс у MKV (без ре-кодирања): копира постојеће токове у MKV. Не мења видео кодек, резолуцију или квалитет и није начин за конверзију H.264 у H.265. Имена пресета за ре-кодирање нису гаранција да ће сваки излаз бити мањи од свог извора.\n\nРЕЗОЛУЦИЈА И КВАЛИТЕТ\n\nЗадржи изворну резолуцију задржава оригиналне димензије оквира при поновном кодирању. 1080p и 720p постављају излазну ВИСИНУ на 1080 или 720 пиксела уз очување односа стране; они нису подешавања за максималну ширину или само аутоматско смањење. На пример, 3840 × 2160 видео постаје 1920 × 1080 при 1080p. Мањи извор може бити увећан, што не враћа изгубљене детаље. Портрет видео снимци задржавају своје пропорције уместо да постану пејзаж.\n\nКвалитет (CRF) прихвата целе бројеве од 18 до 35; подразумевана вредност је 23. Нижи бројеви траже виши квалитет и обично веће датотеке. Хардверски мотори мапирају ову вредност у сопствену контролу квалитета, па једнаке вредности не морају да дају идентичне резултате на различитим моторима. Пробајте узорак. Remux игнорише квалитет, промену величине и убрзање.\n\nЕНКОДИРАЊЕ И ДЕКОДИРАЊЕ\n\nАутоматски (препоручено) испробава доступне опције хардверског енкодирања и, ако је потребно, прелази на алтернативе до Софтвер / ЦПУ. Софтвер / ЦПУ користи процесор. NVIDIA NVENC, Intel Quick Sync, AMD AMF и Linux VA-API се нуде тамо где су подржани за изабрани пресет. Сажетак откривања пријављује подршку FFmpeg; изабрани хардвер и драјвери такође морају радити. Јасно изабрани хардверски мотор пријављује неуспех уместо да се тихо пребаци на други енкодер.\n\nКористите хардверско декодирање када је доступно контролише читање извора независно од излазног енкодера. Ако тражени хардверски декодер не може да стартује, декодирање се поново покреће у софтверу уз очување изабраног енкодера. По потреби га искључите ако желите софтверско декодирање. Ова подешавања не мењају оригиналну датотеку.\n\nIZLAZNA IMENA, NAPREDAK I OTKAZIVANJE\n\nNova imena fajlova uključuju unapred podešeni sufiks i, kada je izabrano, izlaznu rezoluciju. Прескочи постојеће ostavlja postojeći cilj netaknut. Задржи оба koristi numerisano ime fajla umesto da ga zameni. Proverite pregled za preskočene fajlove, duple izlazne nazive ili druge probleme pre početka.\n\nВидео снимке se obrađuju jedan po jedan. Откажи конверзију zaustavlja trenutnu konverziju, uklanja njen nezavršeni izlaz i zaustavlja preostali red. Završeni izlazi ostaju. Zatvaranje ovog prozora za konverziju takođe zahteva otkazivanje. Njegov red je odvojen od Алатке > Ред трансфера…, koji upravlja kopiranjem i premještanjem.\n\nPRIMER: H.264 U H.265 NA 1080p\n\nOznačite nekoliko H.264 video snimaka, otvorite Алатке > Конвертуј изабране видеe…, izaberite H.265 MP4 (мањи), podesite Резолуција na 1080p, ostavite Kvalitet (CRF) na 23 za početno ispitivanje, i izaberite Аутоматски (препоручено). Izaberite izlazni folder, kliknite Освежи преглед, proverite putanje, zatim Почни конверзију…. Uporedite završene kopije sa originalima; po potrebi prilagodite kvalitet ili rezoluciju i testirajte ponovo."
+      },
+      {
+        "id": "media_reports",
+        "title": "Извоз медијског извештаја",
+        "paragraphs": [
+          {
+            "id": "media_reports.p001",
+            "source_sha256": "e5820c2e78ffa8b3b9ff09b57d59bc2adc0b1d92bf570493c0d4aa52c3ab7f5d",
+            "text": "Алатке > Извези извештај о медијима… čuva inventar fajlova koji su već skenirani u aktivnom prozoru. Ne kopira, ne konvertuje niti menja te medijske fajlove. Koristite CSV za tabelu, JSON za strukturirane podatke, ili HTML za izveštaj koji možete otvoriti u veb pregledaču."
+          },
+          {
+            "id": "media_reports.p002",
+            "source_sha256": "94aceb1c124b99d41385988a2d8951dbf25dd5178e8759add72a545ebfbfd828",
+            "text": "NAPRAVI IZVEŠTAJ\n\n1. Otvorite fasciklu koju želite da katalogizujete. Омогући Укључи подфолдере ako je potrebno i sačekajte da skeniranje završi.\n2. Примени filtere ako želite izveštaj o određenoj grupi, kao što su H.265 video snimci ili slike visoke rezolucije. Kliknite unutar tog okvira da bi bio aktivan.\n3. Izaberite Алатке > Извези извештај о медијима….\n4. Podesite Opseg na Izabrano, Vidljivo ili Skenirano sve.\n5. Izaberite Формат: CSV, JSON ili HTML.\n6. Ostavite Укључи целе путање до фајлова čekirano da biste zabeležili kompletne lokacije, ili ga odčekirajte da biste koristili putanje relativne u odnosu na aktivnu fasciklu gde je moguće.\n7. Kliknite Извези…, izaberite ime fajla izveštaja i odredišnu lokaciju, zatim Sačuvajte. Sačekajte Извештај измењен. Otvorite sačuvani fajl u odgovarajućem programu za proračunske tabele, pregledaču ili pregledniku podataka."
+          },
+          {
+            "id": "media_reports.p003",
+            "source_sha256": "5537e045dec5259f000dbdf42606d0124a95734ebcc8c6f57073576f0b3bcd6d",
+            "text": "ШТА ЗНАЧИ ОБИМ\n\nIzabrano користи означене фајлове у панелу када постоје ознаке; у противном користи истакнуте фајлове. Сакривене ознаке могу стога бити укључене. Vidljivo значи СВЕ фајлове који одговарају тренутним филтерима панела, не само редове или сличице које су тренутно на екрану или тренутној страници сличица. Skenirano sve укључује скенирани медиј панела чак и ако их тренутни филтери сакривају. Ниједна од ових опција аутоматски не скенира други диск или фасциклу."
+          },
+          {
+            "id": "media_reports.p004",
+            "source_sha256": "5741554f0d983a0f0b711b553b0139e6d53ee97d55ac8ee048ac36b006cc85f4",
+            "text": "ШТА ИЗВЕШТАЈ САДРЖИ\n\nСвака ставка укључује своје име и пут, врсту медија и екстензију, димензије/резолуцију, величину, датум измене, трајање, видео кодек, битрејт, фрејм рейт, аудио кодек/канале, пиксел формат, HDR, оцену, бојни етикет, ознаке и статус читања/грешке где је доступно. Недостајуће информације остају недостајуће; извоз не извршава потпуну проверу интегритета. JSON укључује резиме и листу ставки. HTML укључује резиме и табелу. CSV садржи табелу по фајлу."
+          },
+          {
+            "id": "media_reports.p005",
+            "source_sha256": "0c1aff0372dd91ebb6e6b1344e7ca59216b6cbc2432e03f36f180b7b9bd7118f",
+            "text": "ПРИМЕР И ОТКАЗИВАЊЕ\n\nДа бисте навели велике видео снимке у подфолдерима, отворите њихов заједнички родитељски фолдер, омогућите Видео снимке и Укључи подфолдере, подесите ограничење величине у Више филтера…, а затим извозите са Опсег: Vidljivo и Формат: CSV. Отворите CSV у својој табели и прегледајте величине и путеве.\n\nОткажи извоз зауставља извоз у току; Затвори такође захтева отказивање. Извештај се поставља на коначни фајл само када је писање завршено, тако да отказивање не оставља делимично написан коначни извештај. Прегледајте путеве пре него што делите извештај: пуне путање файла могу открити имена фолдера."
+          }
+        ],
+        "body": "Алатке > Извези извештај о медијима… čuva inventar fajlova koji su već skenirani u aktivnom prozoru. Ne kopira, ne konvertuje niti menja te medijske fajlove. Koristite CSV za tabelu, JSON za strukturirane podatke, ili HTML za izveštaj koji možete otvoriti u veb pregledaču.\n\nNAPRAVI IZVEŠTAJ\n\n1. Otvorite fasciklu koju želite da katalogizujete. Омогући Укључи подфолдере ako je potrebno i sačekajte da skeniranje završi.\n2. Примени filtere ako želite izveštaj o određenoj grupi, kao što su H.265 video snimci ili slike visoke rezolucije. Kliknite unutar tog okvira da bi bio aktivan.\n3. Izaberite Алатке > Извези извештај о медијима….\n4. Podesite Opseg na Izabrano, Vidljivo ili Skenirano sve.\n5. Izaberite Формат: CSV, JSON ili HTML.\n6. Ostavite Укључи целе путање до фајлова čekirano da biste zabeležili kompletne lokacije, ili ga odčekirajte da biste koristili putanje relativne u odnosu na aktivnu fasciklu gde je moguće.\n7. Kliknite Извези…, izaberite ime fajla izveštaja i odredišnu lokaciju, zatim Sačuvajte. Sačekajte Извештај измењен. Otvorite sačuvani fajl u odgovarajućem programu za proračunske tabele, pregledaču ili pregledniku podataka.\n\nШТА ЗНАЧИ ОБИМ\n\nIzabrano користи означене фајлове у панелу када постоје ознаке; у противном користи истакнуте фајлове. Сакривене ознаке могу стога бити укључене. Vidljivo значи СВЕ фајлове који одговарају тренутним филтерима панела, не само редове или сличице које су тренутно на екрану или тренутној страници сличица. Skenirano sve укључује скенирани медиј панела чак и ако их тренутни филтери сакривају. Ниједна од ових опција аутоматски не скенира други диск или фасциклу.\n\nШТА ИЗВЕШТАЈ САДРЖИ\n\nСвака ставка укључује своје име и пут, врсту медија и екстензију, димензије/резолуцију, величину, датум измене, трајање, видео кодек, битрејт, фрејм рейт, аудио кодек/канале, пиксел формат, HDR, оцену, бојни етикет, ознаке и статус читања/грешке где је доступно. Недостајуће информације остају недостајуће; извоз не извршава потпуну проверу интегритета. JSON укључује резиме и листу ставки. HTML укључује резиме и табелу. CSV садржи табелу по фајлу.\n\nПРИМЕР И ОТКАЗИВАЊЕ\n\nДа бисте навели велике видео снимке у подфолдерима, отворите њихов заједнички родитељски фолдер, омогућите Видео снимке и Укључи подфолдере, подесите ограничење величине у Више филтера…, а затим извозите са Опсег: Vidljivo и Формат: CSV. Отворите CSV у својој табели и прегледајте величине и путеве.\n\nОткажи извоз зауставља извоз у току; Затвори такође захтева отказивање. Извештај се поставља на коначни фајл само када је писање завршено, тако да отказивање не оставља делимично написан коначни извештај. Прегледајте путеве пре него што делите извештај: пуне путање файла могу открити имена фолдера."
+      },
+      {
+        "id": "embedded_metadata",
+        "title": "Преглед уграђених метаподатака",
+        "paragraphs": [
+          {
+            "id": "embedded_metadata.p001",
+            "source_sha256": "de02fc927d80ae28a81ef73fc00493e9dc09ed4f5766dfd6f65805e4b99c9abd",
+            "text": "Алатке > Погледај уграђене метаподака… чита информације сачуване унутар једне слике или видеа. Ово је различито од сопствених оцена апликације, ознака боја и ознака, које не мењају медијски фајл."
+          },
+          {
+            "id": "embedded_metadata.p002",
+            "source_sha256": "84dddde141e5b461ca97772fda91dd9488b49ce2db3f0100540c7e90cefcf078",
+            "text": "1. Очисти нежељене крпеље, затим изаберите тачно једну слику или видео у активном паноу.\n2. Изаберите Алатке > Погледај уграђене метаподака…и сачекајте да поља буду видљива.\n3. Прочитајте колоне Секција, Поље и Вредност.Сликеможе да укључује информације о камери/датуму у EXIF-у и GPS поља када су присутна; видео записи могу да укључују тагове контејнера и стрима. Не сваки фајл садржи ова поља.\n4. Укуцајте у Претрази да бисте сузили приказане редове по њиховом одељку, пољу или вредности.\n5. Изаберите редове и кликните Копирај изабрано/сведа их копирате. Без изабраног реда, копира све тренутно приказане редове.\n6. Кликните Извези JSON…да бисте сачували све издвојене метаподатке, укључујући редове скривене помоћу функције Пронађи. Изаберите име датотеке и Сачувајте.\n7. Затвори прозор када завршите. Прегледање, копирање и извоз метаподатака не уређује уграђене информације у оригиналном фајлу."
+          }
+        ],
+        "body": "Алатке > Погледај уграђене метаподака… чита информације сачуване унутар једне слике или видеа. Ово је различито од сопствених оцена апликације, ознака боја и ознака, које не мењају медијски фајл.\n\n1. Очисти нежељене крпеље, затим изаберите тачно једну слику или видео у активном паноу.\n2. Изаберите Алатке > Погледај уграђене метаподака…и сачекајте да поља буду видљива.\n3. Прочитајте колоне Секција, Поље и Вредност.Сликеможе да укључује информације о камери/датуму у EXIF-у и GPS поља када су присутна; видео записи могу да укључују тагове контејнера и стрима. Не сваки фајл садржи ова поља.\n4. Укуцајте у Претрази да бисте сузили приказане редове по њиховом одељку, пољу или вредности.\n5. Изаберите редове и кликните Копирај изабрано/сведа их копирате. Без изабраног реда, копира све тренутно приказане редове.\n6. Кликните Извези JSON…да бисте сачували све издвојене метаподатке, укључујући редове скривене помоћу функције Пронађи. Изаберите име датотеке и Сачувајте.\n7. Затвори прозор када завршите. Прегледање, копирање и извоз метаподатака не уређује уграђене информације у оригиналном фајлу."
+      },
+      {
+        "id": "media_integrity",
+        "title": "Проверa интегритета медија",
+        "paragraphs": [
+          {
+            "id": "media_integrity.p001",
+            "source_sha256": "97deea524f7dd0dcdc0cd44429f4c4d29e3e5d71f7a4e9ca6240aaad7b295631",
+            "text": "Алатке > Проверите интегритет медија… proverava da li se mediji mogu dekodirati, umesto da se oslanja samo na ime fajla ili tehnički zaglavlje. Koristite ga za istraživanje nečitljivih fajlova ili proveru serije pre arhiviranja. Čitanje celih video zapisa može potrajati značajno vreme. Nikada ne popravlja niti menja originale."
+          },
+          {
+            "id": "media_integrity.p002",
+            "source_sha256": "e788bb47cbc4c2ead78a958e6e1e23990943c61731afbfeeb2cda9b82c34fd3c",
+            "text": "1. Отворите изворну фасциклу, подесите Укључи подфолдерепо потреби, и пустите да скенирање заврши.\n2. Изаберите Алатке > Проверите интегритет медија….\n3. Постави Опсег: Izabranoза означене/истакнуте датотеке,Vidljivoза све датотеке које одговарају филтру, или Skenirano sveда укључи датотеке сакривене филтерима.\n4. Означите Принудна поновна провераако желите нову проверу чак и када је претходни резултат сачуван у кешу.\n5. Кликните Почетак. Преглед Статус, Кеширано, Путања и Детаљикако резултати стижу.Prošloзначи да је декодер завршио своју проверу;Palo бележи проблем са декодирањем или приступом. То није гаранција визуелног квалитета, тачног садржаја или одсуства малвера.\n6. Користите Откажида се заустави даље проверавање.Резултатвећ прикупљени остају доступни.\n7. Кликните Извези CSV… да сачувате прикупљене резултате, укључујући и када је проверa отказана. Избор није успеоистиче неуспеле фајлове назад у изворном прозору и затвара прозор са резултатима; не брише их."
+          },
+          {
+            "id": "media_integrity.p003",
+            "source_sha256": "1ae255df200b724240135bb169ad32364b4431dd787322cf203b44e9ce3e8323",
+            "text": "Пре него што поступите по истакнутим грешкама, прегледајте њихове детаље и проверите Очисти ознаке: постојећи тикови и даље имају предност за следеће команде за датотеке. Грешка може одражавати дозволе, недостајуће дискове или подршку декодера као и оштећене податке. Не бришите датотеке само зато што је једна провера заостала."
+          }
+        ],
+        "body": "Алатке > Проверите интегритет медија… proverava da li se mediji mogu dekodirati, umesto da se oslanja samo na ime fajla ili tehnički zaglavlje. Koristite ga za istraživanje nečitljivih fajlova ili proveru serije pre arhiviranja. Čitanje celih video zapisa može potrajati značajno vreme. Nikada ne popravlja niti menja originale.\n\n1. Отворите изворну фасциклу, подесите Укључи подфолдерепо потреби, и пустите да скенирање заврши.\n2. Изаберите Алатке > Проверите интегритет медија….\n3. Постави Опсег: Izabranoза означене/истакнуте датотеке,Vidljivoза све датотеке које одговарају филтру, или Skenirano sveда укључи датотеке сакривене филтерима.\n4. Означите Принудна поновна провераако желите нову проверу чак и када је претходни резултат сачуван у кешу.\n5. Кликните Почетак. Преглед Статус, Кеширано, Путања и Детаљикако резултати стижу.Prošloзначи да је декодер завршио своју проверу;Palo бележи проблем са декодирањем или приступом. То није гаранција визуелног квалитета, тачног садржаја или одсуства малвера.\n6. Користите Откажида се заустави даље проверавање.Резултатвећ прикупљени остају доступни.\n7. Кликните Извези CSV… да сачувате прикупљене резултате, укључујући и када је проверa отказана. Избор није успеоистиче неуспеле фајлове назад у изворном прозору и затвара прозор са резултатима; не брише их.\n\nПре него што поступите по истакнутим грешкама, прегледајте њихове детаље и проверите Очисти ознаке: постојећи тикови и даље имају предност за следеће команде за датотеке. Грешка може одражавати дозволе, недостајуће дискове или подршку декодера као и оштећене податке. Не бришите датотеке само зато што је једна провера заостала."
+      },
+      {
+        "id": "video_contact_sheets",
+        "title": "Прављење видео контакт листа",
+        "paragraphs": [
+          {
+            "id": "video_contact_sheets.p001",
+            "source_sha256": "dfbcc6d5b6648c41111ac2cc655dcf84740fdf1c9bdd8173582892799fbf4a42",
+            "text": "Контактни лист је један PNG који садржи решетку статичних кадрова из видеа. Она пружа преглед без репродуковања целог клипа. Алатке > Креирај видео контакт листу… не мења изворни видео."
+          },
+          {
+            "id": "video_contact_sheets.p002",
+            "source_sha256": "fe5c1944466bf890d4109983ffb85dd4dd70b26b039fb244122ff3be4f7462b1",
+            "text": "1. Очисти нежељене крпеље и изаберите један видео у активном прозору.\n2. Изаберите Алатке > Креирај видео контакт листу…\n3. Поставите број кадрова (4–48), колоне (2–8) и ширину кадра (пиксели) (160–640). Подразумевано је 12 кадрова, 4 колоне и 320 пиксела.\n4. Оставите Прикажи бројеве кадрова и временске ознакеозначено ако желите титлове испод кадрова.\n5. Кликните Креирај…, изаберите име PNG фајла и одредиште, и сачувајте.\n6. Сачекајте за Контакт листа завршена, затим отворите сачувани PNG у приказивачу слика.Откажи зауставља екстракцију;Затвори такође тражи отказивање."
+          },
+          {
+            "id": "video_contact_sheets.p003",
+            "source_sha256": "f7a7ce26c0b8bef736351a923a83f5889983daaf7968b4a4afe9f42a47d89af6",
+            "text": "Фрејмови се узимају равномерно кроз снимак, избегавајући његов први и последњи фрејм. Ово није детекција сцена, и алатке је потребно читљиво трајање видеа. Великоr мреже и фрејмови трају дуже и стварају већу слику. За брз преглед, почните са подразумеваним листом од 12 фрејмова."
+          }
+        ],
+        "body": "Контактни лист је један PNG који садржи решетку статичних кадрова из видеа. Она пружа преглед без репродуковања целог клипа. Алатке > Креирај видео контакт листу… не мења изворни видео.\n\n1. Очисти нежељене крпеље и изаберите један видео у активном прозору.\n2. Изаберите Алатке > Креирај видео контакт листу…\n3. Поставите број кадрова (4–48), колоне (2–8) и ширину кадра (пиксели) (160–640). Подразумевано је 12 кадрова, 4 колоне и 320 пиксела.\n4. Оставите Прикажи бројеве кадрова и временске ознакеозначено ако желите титлове испод кадрова.\n5. Кликните Креирај…, изаберите име PNG фајла и одредиште, и сачувајте.\n6. Сачекајте за Контакт листа завршена, затим отворите сачувани PNG у приказивачу слика.Откажи зауставља екстракцију;Затвори такође тражи отказивање.\n\nФрејмови се узимају равномерно кроз снимак, избегавајући његов први и последњи фрејм. Ово није детекција сцена, и алатке је потребно читљиво трајање видеа. Великоr мреже и фрејмови трају дуже и стварају већу слику. За брз преглед, почните са подразумеваним листом од 12 фрејмова."
+      },
+      {
+        "id": "folder_synchronization",
+        "title": "Fascikla Синхронизација",
+        "paragraphs": [
+          {
+            "id": "folder_synchronization.p001",
+            "source_sha256": "6a5c3c71a212781f6a6c74fac70303224fcbeac3c7d2b4e7c00e810e71cdd110",
+            "text": "Отворите фасцикле које желите да упоредите у левом и десном прозору, затим одаберите Алатке > Упореди / синхронизуј фасцикле. Прегледајте ставке које се налазе само лево, само десно, новије и различите пре него што пошаљете једносмерну синхронизацију у ред."
+          },
+          {
+            "id": "folder_synchronization.steps",
+            "source_sha256": "cf1597a5ccfc3cc7b73f8f7e2f000fa029816c676a9967854c22cd7d39862515",
+            "text": "1. Отворите две фасцикле у левом и десном панелу. Поставите Укључи подфолдеренезависно за сваку страну ако је потребно.\n2. Изаберите Алатке > Упореди / синхронизуј фасцикле….\n3. Преглед Релативна путања и Статус: Само лево, Само десно, Исто, Лево новије, Десно новије или Различито. Ово поређење користи подржане медијске фајлове, величине фајлова и време измене; Исто није провера пуне хеш вредности садржаја. Оно пописује фасцикле независно од филтера приказа Претрага/медија у панелу.\n4. Истакните одређене редове како бисте ограничили операцију. Ако ниједан ред није истакнут, дугмад за смер разматрају цело поређење.\n5. Кликните Копирај недостајуће/новије → десно или Копирај недостајуће/новије → лево. Предлажу се само недостајући, новији или различити фајлови у том правцу. Прочитајте и потврдите број фајлова пре реда.\n6. Пратите напредак у Алатке > Ред трансфера…. Ово копира фајлове у једном смеру; не уклања додатне фајлове на одредишту нити извршава аутоматску двосмерну синхронизацију. Покрените поређење поново након копирања ако желите ажурирану листу резултата."
+          }
+        ],
+        "body": "Отворите фасцикле које желите да упоредите у левом и десном прозору, затим одаберите Алатке > Упореди / синхронизуј фасцикле. Прегледајте ставке које се налазе само лево, само десно, новије и различите пре него што пошаљете једносмерну синхронизацију у ред.\n\n1. Отворите две фасцикле у левом и десном панелу. Поставите Укључи подфолдеренезависно за сваку страну ако је потребно.\n2. Изаберите Алатке > Упореди / синхронизуј фасцикле….\n3. Преглед Релативна путања и Статус: Само лево, Само десно, Исто, Лево новије, Десно новије или Различито. Ово поређење користи подржане медијске фајлове, величине фајлова и време измене; Исто није провера пуне хеш вредности садржаја. Оно пописује фасцикле независно од филтера приказа Претрага/медија у панелу.\n4. Истакните одређене редове како бисте ограничили операцију. Ако ниједан ред није истакнут, дугмад за смер разматрају цело поређење.\n5. Кликните Копирај недостајуће/новије → десно или Копирај недостајуће/новије → лево. Предлажу се само недостајући, новији или различити фајлови у том правцу. Прочитајте и потврдите број фајлова пре реда.\n6. Пратите напредак у Алатке > Ред трансфера…. Ово копира фајлове у једном смеру; не уклања додатне фајлове на одредишту нити извршава аутоматску двосмерну синхронизацију. Покрените поређење поново након копирања ако желите ажурирану листу резултата."
+      },
+      {
+        "id": "folder_organization_rules",
+        "title": "Правила организације Fascikla",
+        "paragraphs": [
+          {
+            "id": "folder_organization_rules.p001",
+            "source_sha256": "0bafa187b865c37f918aac231d07f9cd0755fcf9049ab3d6462fd49cfa5b59dd",
+            "text": "Алатке > Правила организације фасцикли… čuva ponovljive pravila Kopiraj ili Premesti. Za razliku od Pametnih kolekcija, primena ovih pravila zaista menja lokacije fajlova ili stvara kopije. Pravila se ne izvršavaju automatski u pozadini: pregledajte pregled i potvrdite Примени… svaki put."
+          },
+          {
+            "id": "folder_organization_rules.p002",
+            "source_sha256": "45964b262f5d8c5b49ac1274b9996e504d695e52fbadd425b9ecb861df577756",
+            "text": "НАПРАВИТЕ ИЛИ УРЕДИТЕ ПРАВИЛО\n\n1. Кликните на прозор који садржи фајлове које желите да организујете, затим изаберите Алатке > Правила организације фасцикли….\n2. Кликните Додај. Унесите име правила, одаберите Акцију: Копирај или Премести, и подесите Одредишну фасциклу користећи Претражуј…ако је потребно. Pažljivo proverite Akciju: novo pravilo inicijalno koristi Pomeri.\n3. Podesite vrstu Medija na Bilo koju,Слике илиВидео снимке. Опцијални услови су Екстензије (одвојене зарезом), Naziv fajla садржи, Кодек садржи, Минимална оцена (0–5), и Потребна тачна ознака. Оставите неискоришћене услове празне; 0 не намета ограничење минималне оцене. Сви унети услови морају се подударати.Naziv fajlaа кодек и поклапање кодека игноришу величину слова; ознака мора да се поклапа са целом додељеном ознаком, а не делимично.\n4. Оставите Правило омогућеноозначено ако правило треба да учествује, затем кликните Сачувај правило\n5. Изаберите постојеће правило и уредите га да бисте га променили. Користите ↑ и ↓ да бисте променили приоритет: прво омогућено правило које се поклапа побеђује.Обриши уклања правило након потврде, а не његове медије;Опозови брисањеје доступно док је овај менаџер отворен."
+          },
+          {
+            "id": "folder_organization_rules.p003",
+            "source_sha256": "c7c9d8a141f4adb1d8ac99b1211bd67950395855319313f7bcc29474683eae6c",
+            "text": "ПРЕГЛЕД И ПРИМЕНА\n\n1. Подесите филтере у прозору извора ако желите да ограничите разматрање датотека.\n2. У управнику правила, кликните на Преглед активног панела….\n3. Изаберите Опсег: Vidljivo за датотеке које одговарају филтеру прозора или Skenirano sve за цео скенирани скуп. Овој алатки не постоји Izabrano опсег.\n4. Изаберите да ли желите да Сачувајте фасцикле у односу на активни панел. Штиклирано задржава релативне подфолдере испод одредишта сваког правила; нештриклирано користи само назив датотеке.\n5. Кликните Освежи преглед након измене ових контрола. Прегледајте правило, акцију, Извор, одредиште и Статус. Датотеке које се не подударају нису стављене у ред. Решите проблеме као што је дуплицирано одредиште пре примене.\n6. Кликните Примени… и потврдите предложени број акција. Копирање/премештање иде у нормални ред за пренос; постојеће одредиште користи нормалне изборе за конфликт. Затвори напушта преглед без примене."
+          },
+          {
+            "id": "folder_organization_rules.p004",
+            "source_sha256": "f28b27db9fb710652715db25a211de3d6a9cef8f4fd15378e38e9f06d8fd4343",
+            "text": "PRIMER\n\nDa biste kopirali MP4 video zapise u fasciklu za pregled, dodajte pravilo pod nazivom Kopije MP4 pregleda, izaberite Kopiraj, izaberite destinaciju za pregled, postavite Vrstu medija na Видео снимке i Ekstenzije na mp4, zatim Сачувај правило. Преглед активног панела… sa Опсег: Vidljivo, proverite putanje i Примени…. Ovo kreira kopije; izaberite Premesti samo kada planirate da premestite originalne fajlove."
+          }
+        ],
+        "body": "Алатке > Правила организације фасцикли… čuva ponovljive pravila Kopiraj ili Premesti. Za razliku od Pametnih kolekcija, primena ovih pravila zaista menja lokacije fajlova ili stvara kopije. Pravila se ne izvršavaju automatski u pozadini: pregledajte pregled i potvrdite Примени… svaki put.\n\nНАПРАВИТЕ ИЛИ УРЕДИТЕ ПРАВИЛО\n\n1. Кликните на прозор који садржи фајлове које желите да организујете, затим изаберите Алатке > Правила организације фасцикли….\n2. Кликните Додај. Унесите име правила, одаберите Акцију: Копирај или Премести, и подесите Одредишну фасциклу користећи Претражуј…ако је потребно. Pažljivo proverite Akciju: novo pravilo inicijalno koristi Pomeri.\n3. Podesite vrstu Medija na Bilo koju,Слике илиВидео снимке. Опцијални услови су Екстензије (одвојене зарезом), Naziv fajla садржи, Кодек садржи, Минимална оцена (0–5), и Потребна тачна ознака. Оставите неискоришћене услове празне; 0 не намета ограничење минималне оцене. Сви унети услови морају се подударати.Naziv fajlaа кодек и поклапање кодека игноришу величину слова; ознака мора да се поклапа са целом додељеном ознаком, а не делимично.\n4. Оставите Правило омогућеноозначено ако правило треба да учествује, затем кликните Сачувај правило\n5. Изаберите постојеће правило и уредите га да бисте га променили. Користите ↑ и ↓ да бисте променили приоритет: прво омогућено правило које се поклапа побеђује.Обриши уклања правило након потврде, а не његове медије;Опозови брисањеје доступно док је овај менаџер отворен.\n\nПРЕГЛЕД И ПРИМЕНА\n\n1. Подесите филтере у прозору извора ако желите да ограничите разматрање датотека.\n2. У управнику правила, кликните на Преглед активног панела….\n3. Изаберите Опсег: Vidljivo за датотеке које одговарају филтеру прозора или Skenirano sve за цео скенирани скуп. Овој алатки не постоји Izabrano опсег.\n4. Изаберите да ли желите да Сачувајте фасцикле у односу на активни панел. Штиклирано задржава релативне подфолдере испод одредишта сваког правила; нештриклирано користи само назив датотеке.\n5. Кликните Освежи преглед након измене ових контрола. Прегледајте правило, акцију, Извор, одредиште и Статус. Датотеке које се не подударају нису стављене у ред. Решите проблеме као што је дуплицирано одредиште пре примене.\n6. Кликните Примени… и потврдите предложени број акција. Копирање/премештање иде у нормални ред за пренос; постојеће одредиште користи нормалне изборе за конфликт. Затвори напушта преглед без примене.\n\nPRIMER\n\nDa biste kopirali MP4 video zapise u fasciklu za pregled, dodajte pravilo pod nazivom Kopije MP4 pregleda, izaberite Kopiraj, izaberite destinaciju za pregled, postavite Vrstu medija na Видео снимке i Ekstenzije na mp4, zatim Сачувај правило. Преглед активног панела… sa Опсег: Vidljivo, proverite putanje i Примени…. Ovo kreira kopije; izaberite Premesti samo kada planirate da premestite originalne fajlove."
+      },
+      {
+        "id": "transfer_queue",
+        "title": "Управљање редом преноса",
+        "paragraphs": [
+          {
+            "id": "transfer_queue.p001",
+            "source_sha256": "4c74b2e240612a64b07641c0bd71035726be26f6a6731e266ba7363531a03670",
+            "text": "Алатке > Ред трансфера… показује напредак за ред додатог копирања и премештања послова, укључујући трансфере који су покренути синхронизацијом фолдера и правилима организације. Конверзија видеа има свој посебан прозор за напредак."
+          },
+          {
+            "id": "transfer_queue.p002",
+            "source_sha256": "28ed18a8e1ee5a8d11f642e0b6267d950ad0adcf8efa7da73b9228138757b48c",
+            "text": "1. Почетак копирајте или преместите користећи контроле панела или команде за фајлове. Отворите Алатке > Ред трансфера… ако прозор са напредком већ није видљив.\n2. Прочитајте тренутну операцију, напредак, број у реду и детаље преноса.\n3. Кликните Паузирај да зауставите копирање на безбедној тачки; дугме постаје Настави. Настави наставља пренос. Могуће је да премештање које је већ у току мора да се заврши пре наставка.\n4. Откажи тренутни тражи да се активни задатак заустави. Не брише све предстојеће задатке и успешно завршени фајлови се аутоматски не поништавају.\n5. Понови неуспело поново ставља у ред фајлове који су пропали у најновијем неуспешном преносу. Прво проверите пријављену грешку и одредиште.\n6. Затвори сакрива прозор са напредком; не отказује копирање или премештање. Поново га отворите из Алатке да бисте проверили напредак. Користите Ctrl+Z одвојено за поништавање подржане завршене операције фајла."
+          }
+        ],
+        "body": "Алатке > Ред трансфера… показује напредак за ред додатог копирања и премештања послова, укључујући трансфере који су покренути синхронизацијом фолдера и правилима организације. Конверзија видеа има свој посебан прозор за напредак.\n\n1. Почетак копирајте или преместите користећи контроле панела или команде за фајлове. Отворите Алатке > Ред трансфера… ако прозор са напредком већ није видљив.\n2. Прочитајте тренутну операцију, напредак, број у реду и детаље преноса.\n3. Кликните Паузирај да зауставите копирање на безбедној тачки; дугме постаје Настави. Настави наставља пренос. Могуће је да премештање које је већ у току мора да се заврши пре наставка.\n4. Откажи тренутни тражи да се активни задатак заустави. Не брише све предстојеће задатке и успешно завршени фајлови се аутоматски не поништавају.\n5. Понови неуспело поново ставља у ред фајлове који су пропали у најновијем неуспешном преносу. Прво проверите пријављену грешку и одредиште.\n6. Затвори сакрива прозор са напредком; не отказује копирање или премештање. Поново га отворите из Алатке да бисте проверили напредак. Користите Ctrl+Z одвојено за поништавање подржане завршене операције фајла."
+      },
+      {
+        "id": "safe_file_actions",
+        "title": "Безбедне радње са фајловима",
+        "paragraphs": [
+          {
+            "id": "safe_file_actions.p001",
+            "source_sha256": "4ed845375e5d90b2ef4791690f07c1a09210904cf1686aec2715d733a377226d",
+            "text": "Обриши šalje fajlove u operativnom sistemu Kantu za otpatke ili Korpu za smeće. Nakon brisanja ili premještanja, fajl koji sledi nakon uklonjene selekcije u aktivnom redosledu sortiranja se automatski selektuje i prikazuje; ako su uklonjeni fajlovi bili na kraju, novi poslednji fajl se selektuje. Преименуј i osvežavanje takođe zadržavaju koristan trenutni fajl, a ovo ponašanje dele Детаљи i Преглед сличица. Poništi vraća nedavna kopiranja, premještanja, zamene, pojedinačna preimenovanja i kompletna masovna preimenovanja. Konflikti Замени ment nude Замени, Preskoči ili Задржи оба, sa mogućnošću da se odgovor primeni na sve preostale konflikte."
+          },
+          {
+            "id": "safe_file_actions.undo_busy_1273",
+            "source_sha256": "ff2548c8d5b9c336f23e02624d99be111f63b741dd5e9d8d94c87c038febd3a8",
+            "text": "Опозови radi u pozadini tako da prozor ostaje odzivan. Privremeno zaustavlja prikaze i pauzira čitanje novih podataka i minijatura dok se postojeća čitanja ne završe, a zatim obnavlja fajlove. Nije potrebno čekati da skeniranje fascikle prvo završi. Kratkotrajna Windows zaključavanja fajlova se automatski pokušavaju ponovo. Ako drugi program i dalje drži fajl, ili bi obnovljeni izvor zamenio novo kreirani fajl, Опозови se zaustavlja i prijavljuje problem umesto da ga prepisuje. Završene korake oporavka se čuvaju; nezavršeni koraci i originalne rezervne kopije zamenjenih fajlova ostaju dostupni. Затвори zatvorite aplikaciju koja koristi pogođeni fajl ili rešite prijavljeni konflikt, zatim ponovo pritisnite Опозови da nastavite. Red čekanja za transfere čeka dok oporavak nije završen. Ne brišite rezervne kopije oporavka niti ne uređujte pogođene fajlove dok oporavak nije završen. Преглед prekidači ostaju izabrani; izaberite fajl ponovo nakon oporavka da nastavite sa prikazom."
+          }
+        ],
+        "body": "Обриши šalje fajlove u operativnom sistemu Kantu za otpatke ili Korpu za smeće. Nakon brisanja ili premještanja, fajl koji sledi nakon uklonjene selekcije u aktivnom redosledu sortiranja se automatski selektuje i prikazuje; ako su uklonjeni fajlovi bili na kraju, novi poslednji fajl se selektuje. Преименуј i osvežavanje takođe zadržavaju koristan trenutni fajl, a ovo ponašanje dele Детаљи i Преглед сличица. Poništi vraća nedavna kopiranja, premještanja, zamene, pojedinačna preimenovanja i kompletna masovna preimenovanja. Konflikti Замени ment nude Замени, Preskoči ili Задржи оба, sa mogućnošću da se odgovor primeni na sve preostale konflikte.\n\nОпозови radi u pozadini tako da prozor ostaje odzivan. Privremeno zaustavlja prikaze i pauzira čitanje novih podataka i minijatura dok se postojeća čitanja ne završe, a zatim obnavlja fajlove. Nije potrebno čekati da skeniranje fascikle prvo završi. Kratkotrajna Windows zaključavanja fajlova se automatski pokušavaju ponovo. Ako drugi program i dalje drži fajl, ili bi obnovljeni izvor zamenio novo kreirani fajl, Опозови se zaustavlja i prijavljuje problem umesto da ga prepisuje. Završene korake oporavka se čuvaju; nezavršeni koraci i originalne rezervne kopije zamenjenih fajlova ostaju dostupni. Затвори zatvorite aplikaciju koja koristi pogođeni fajl ili rešite prijavljeni konflikt, zatim ponovo pritisnite Опозови da nastavite. Red čekanja za transfere čeka dok oporavak nije završen. Ne brišite rezervne kopije oporavka niti ne uređujte pogođene fajlove dok oporavak nije završen. Преглед prekidači ostaju izabrani; izaberite fajl ponovo nakon oporavka da nastavite sa prikazom."
+      },
+      {
+        "id": "workspaces_and_cache",
+        "title": "Радни простори и кеш",
+        "paragraphs": [
+          {
+            "id": "workspaces_and_cache.p001",
+            "source_sha256": "9546017780aef5e7077c76d71f514132c6cabc5dd92f56a8dc2863641361fe9f",
+            "text": "Сачувани радни простори памте фасцикле, филтере, режим приказа, колоне, инспекторе и распоред. Паметне колекције под Алатке су мање једнопанелске предлошке: оне памте фасциклу, Укључи подфолдере и медијске прелазе, назив датотеке и напредне филтере, резолуцију, сортирање, Детаљи/Преглед сличица приказ, величину сличица и Континуирано/Странице избор. Примени једног утиче само на активни панел. Менаџер може преименовати или избрисати предлошке; брисање захтева потврду и Опозови брисање га враћа док је менаџер отворен. Паметне колекције никада не померају, не бришу и не коментаришу медије. Кеширано метаподаци и сличице убрзавају будуће посете; Алатке > Кеш и скенирање може их прегледати, обрезати или очистити."
+          },
+          {
+            "id": "workspaces_and_cache.workspace_steps",
+            "source_sha256": "dff5cc601aa1e01667f72fd065cd8e4b55ae77974639503d66c69592dd802aa7",
+            "text": "SAČUVAJTE I UČITAJTE RADNI PROSTOR\n\n1. Rasporedite oba panela sa fasciklama, filtrima, prikazima i rasporedom koji želite ponovo koristiti.\n2. Izaberite Алатке > Сачувај радни простор… i unesite ime radnog prostora. Ponovna upotreba imena zamenjuje taj radni prostor bez posebnog upita za zamenu; koristite novo ime da sačuvate prethodni raspored.\n3. Касније izaberite Алатке > Учитај радни простор…. Upit prikazuje sačuvana imena. Unesite tačno ime prikazano i potvrdite da biste obnovili oba panela. Откажи ostavlja trenutni radni prostor nepromenjen.\n\nKoristite [chapter:smart_collections] umesto toga kada želite da obnovite samo pretragu i prikaz jednog panela."
+          },
+          {
+            "id": "workspaces_and_cache.cache_steps",
+            "source_sha256": "db9e5a5210a5fdc95458f3dd3a9b9cd62b82de37c69b195a47a3e595ebe17bc3",
+            "text": "КЕШ И КОНТРОЛЕ СКЕНИРАЊА\n\nОтвори Алатке > Кеширање и скенирање…да видите уносе метаподатака и складиште минијатура. У Подешавања скенирања, изаберите Профил перформанси: Тихоза ниже оптерећење позадине, Уравнотеженоза нормалну употребу, или Брзо за већи проток података. Подесите Паралелне раднике за метаподатке (1–16) ако је потребно. Обрасце за изузимање (одвојене тачком и зарезом) могу прескочити одговарајуће путање; примери приказани у прозору укључују *.tmp; proxy/*; @eaDir/*. Кликните Применида сачувате подешавања.Освежипанел за покретање скенирања користећи промењене изузетке.\n\nУ Складиште сличица, Максимални проценат погона оперативног система подразумевано је 1% и прихвата 0,1%–10%.Примени чува лимит;Примени ограничење одмахуклања најмање недавно коришћене кеширанe сличице док се не достигне лимит.Уклони застареле уносебрише застареле уносе метаподатака.Јасни сличицетражи потврду, затим брише само генерисане минијатурне слике; оне ће бити поново изграђене по потреби.Очисти све кешпотврђује уклањање техничких података кеша и сличица, тако да будуће посете захтевају ново скенирање/декодирање. Ова контролa кеша не брише оригинални медиј или корисничке оцене, цветне ознаке и тегове."
+          }
+        ],
+        "body": "Сачувани радни простори памте фасцикле, филтере, режим приказа, колоне, инспекторе и распоред. Паметне колекције под Алатке су мање једнопанелске предлошке: оне памте фасциклу, Укључи подфолдере и медијске прелазе, назив датотеке и напредне филтере, резолуцију, сортирање, Детаљи/Преглед сличица приказ, величину сличица и Континуирано/Странице избор. Примени једног утиче само на активни панел. Менаџер може преименовати или избрисати предлошке; брисање захтева потврду и Опозови брисање га враћа док је менаџер отворен. Паметне колекције никада не померају, не бришу и не коментаришу медије. Кеширано метаподаци и сличице убрзавају будуће посете; Алатке > Кеш и скенирање може их прегледати, обрезати или очистити.\n\nSAČUVAJTE I UČITAJTE RADNI PROSTOR\n\n1. Rasporedite oba panela sa fasciklama, filtrima, prikazima i rasporedom koji želite ponovo koristiti.\n2. Izaberite Алатке > Сачувај радни простор… i unesite ime radnog prostora. Ponovna upotreba imena zamenjuje taj radni prostor bez posebnog upita za zamenu; koristite novo ime da sačuvate prethodni raspored.\n3. Касније izaberite Алатке > Учитај радни простор…. Upit prikazuje sačuvana imena. Unesite tačno ime prikazano i potvrdite da biste obnovili oba panela. Откажи ostavlja trenutni radni prostor nepromenjen.\n\nKoristite [chapter:smart_collections] umesto toga kada želite da obnovite samo pretragu i prikaz jednog panela.\n\nКЕШ И КОНТРОЛЕ СКЕНИРАЊА\n\nОтвори Алатке > Кеширање и скенирање…да видите уносе метаподатака и складиште минијатура. У Подешавања скенирања, изаберите Профил перформанси: Тихоза ниже оптерећење позадине, Уравнотеженоза нормалну употребу, или Брзо за већи проток података. Подесите Паралелне раднике за метаподатке (1–16) ако је потребно. Обрасце за изузимање (одвојене тачком и зарезом) могу прескочити одговарајуће путање; примери приказани у прозору укључују *.tmp; proxy/*; @eaDir/*. Кликните Применида сачувате подешавања.Освежипанел за покретање скенирања користећи промењене изузетке.\n\nУ Складиште сличица, Максимални проценат погона оперативног система подразумевано је 1% и прихвата 0,1%–10%.Примени чува лимит;Примени ограничење одмахуклања најмање недавно коришћене кеширанe сличице док се не достигне лимит.Уклони застареле уносебрише застареле уносе метаподатака.Јасни сличицетражи потврду, затим брише само генерисане минијатурне слике; оне ће бити поново изграђене по потреби.Очисти све кешпотврђује уклањање техничких података кеша и сличица, тако да будуће посете захтевају ново скенирање/декодирање. Ова контролa кеша не брише оригинални медиј или корисничке оцене, цветне ознаке и тегове."
+      },
+      {
+        "id": "language",
+        "title": "Језик",
+        "paragraphs": [
+          {
+            "id": "language.p001",
+            "source_sha256": "76d36cb87d53e68bd8a17b59b3d7bf1868001f1323f01fa67c901dda96cf4779",
+            "text": "При првом покретању апликација прати језик оперативног система када је подржан. Изаберите Алатке > Језик да бисте га променили или се вратите на Подразумевано системско. Поново покрените апликацију након промене језика."
+          }
+        ],
+        "body": "При првом покретању апликација прати језик оперативног система када је подржан. Изаберите Алатке > Језик да бисте га променили или се вратите на Подразумевано системско. Поново покрените апликацију након промене језика."
+      },
+      {
+        "id": "glossary",
+        "title": "Речник",
+        "paragraphs": [
+          {
+            "id": "glossary.p001",
+            "source_sha256": "de56ad1538a95954142a64a6faf297c48d96564544c6f1ea1947a5a7a1974bf5",
+            "text": "Активни панел: Леви или десни прегледач који је недавно примио клик. Мени и тастатурне акције обично се примењују тамо."
+          },
+          {
+            "id": "glossary.p002",
+            "source_sha256": "9e944202497daf57a892e77418fbcd6ddd948febb6e71fdac6b8f66941692f17",
+            "text": "Кодек: Метода која се користи за кодирање видео или аудио садржаја, као што су H.264, H.265/HEVC, AV1, AAC или Opus. Контејнер као што је MP4 или MKV може да садржи један или више кодираних токова."
+          },
+          {
+            "id": "glossary.p003",
+            "source_sha256": "672c8a727345c58eb445fec2a58768fb80215d8aa50e1aedf274abd854620d39",
+            "text": "Ремукс: Копирање постојећих видео/аудио токова у други контејнер без поновног кодирања. Брзо је и без губитка квалитета, али не мења кодек."
+          },
+          {
+            "id": "glossary.p004",
+            "source_sha256": "5b4c2520b2fcb4ed201a6f159e1d6042244f198a9d54ca2e7e50b21b6430ad98",
+            "text": "CRF/квалитет: Циљ константног квалитета за ре-кодирање. Нижи бројеви захтевају већи квалитет и веће фајлове. Хардверски енкодери то преводе у најближу контролу квалитета."
+          },
+          {
+            "id": "glossary.p005",
+            "source_sha256": "57f6a48371b1e7d33ef4389ca76d13c11dc500afbed5245024c4eb6695646f8c",
+            "text": "Мета-подаци кеш: Складиш тецхничке резултате који избегавају понављано испитивање непромењених фајлова. Одвојено је од оцена, ознака и тагова."
+          },
+          {
+            "id": "glossary.p006",
+            "source_sha256": "a1bb6a1d6960bc4e1441baca24dc3ae68ea222ac01e819b3e083fcd1a166e6f7",
+            "text": "Кеш минијатура: Генерисане претпрегледне слике задржане су на диску ради бржих будућих посета и ограничене кроз Алатке > Кеш и скенирање."
+          },
+          {
+            "id": "glossary.p007",
+            "source_sha256": "fa7be14671267800c9e3a8d8f85ceaf1d75c18d830685a91819c692490061aab",
+            "text": "Рекурзивно/Укључи подфолдере: Скенирај изабрани фолдер и сваки фолдер испод њега. То никада не значи цео диск осим ако сам корен диска није изабран."
+          },
+          {
+            "id": "glossary.p008",
+            "source_sha256": "97af76d3a80e273362782d714bf88bcdcc83ab072222a8994eb06977af0de44c",
+            "text": "Паметна колекција: Сачувана дефиниција приказа која садржи локацију, филтере, сортирање и подешавања приказа. Не копира и не помера фајлове."
+          }
+        ],
+        "body": "Активни панел: Леви или десни прегледач који је недавно примио клик. Мени и тастатурне акције обично се примењују тамо.\n\nКодек: Метода која се користи за кодирање видео или аудио садржаја, као што су H.264, H.265/HEVC, AV1, AAC или Opus. Контејнер као што је MP4 или MKV може да садржи један или више кодираних токова.\n\nРемукс: Копирање постојећих видео/аудио токова у други контејнер без поновног кодирања. Брзо је и без губитка квалитета, али не мења кодек.\n\nCRF/квалитет: Циљ константног квалитета за ре-кодирање. Нижи бројеви захтевају већи квалитет и веће фајлове. Хардверски енкодери то преводе у најближу контролу квалитета.\n\nМета-подаци кеш: Складиш тецхничке резултате који избегавају понављано испитивање непромењених фајлова. Одвојено је од оцена, ознака и тагова.\n\nКеш минијатура: Генерисане претпрегледне слике задржане су на диску ради бржих будућих посета и ограничене кроз Алатке > Кеш и скенирање.\n\nРекурзивно/Укључи подфолдере: Скенирај изабрани фолдер и сваки фолдер испод њега. То никада не значи цео диск осим ако сам корен диска није изабран.\n\nПаметна колекција: Сачувана дефиниција приказа која садржи локацију, филтере, сортирање и подешавања приказа. Не копира и не помера фајлове."
+      },
+      {
+        "id": "support_the_project",
+        "title": "Подржи пројекат",
+        "paragraphs": [
+          {
+            "id": "support_the_project.p001",
+            "source_sha256": "62b207421228680770777e66598c8ce79ee121aaee8cd232e847e65dd28e2122",
+            "text": "Менаџер датотека резолуције se pruža kao samostalna aplikacija bez potrebe za pretplatom. Ako vam je korisna i želite da podržite dalji razvoj, izaberite Pomoć > Ako vam se ovo sviđa, kupite Džonu kafu. Isti opcioni dugme za podršku pojavljuje se u Pomoć > О апликацији i otvara javnu stranicu JohnPerky u vašem uobičajenom veb pregledaču:"
+          },
+          {
+            "id": "support_the_project.p002",
+            "source_sha256": "f625bc04cc8dea0548e7e06bf6f5a1bf75532166728133d0f26049dc60b5f0ee",
+            "text": "https://buymeacoffee.com/johnperky"
+          },
+          {
+            "id": "support_the_project.p003",
+            "source_sha256": "f3433f015e63332b4aeaca246443618a7f7f6614bafc5941d7509c71ca191619",
+            "text": "Подршка пројекту је у потпуности опционална. Апликација не отвара страницу аутоматски, не прикупља информације о плаћању, не прати да ли је посећујете и не мења ниједну функцију на основу подршке."
+          },
+          {
+            "id": "support_the_project.p004",
+            "source_sha256": "fb8e1f1b4be83a666d0f808238dffefa4cc8b5369dc8b4d25aa74a5d499c5f7a",
+            "text": "ОЦЕНЕ И ОПЦИОНАЛНА ПОДСЕЋАЊА"
+          },
+          {
+            "id": "support_the_project.reminder_timing",
+            "source_sha256": "b00a39416f2e0c07132850cca60bde12e893c16cbfd085f4b8a29fe722bf6d8e",
+            "text": "Након пет покретања у најмање три дана, апликација може да вас позове да је оцените у Microsoft Store-у. Касније одлаже захтев за десет покретања. Опциони подсетник за кафу почиње при покретању 11 и понавља се сваких 11 покретања само након Можда касније. Не питај поново онемогућава било који подсетник; Алатке > Подсетници могу га поново омогућити. Страница се отвара само након што притиснете њен изричити тастер."
+          },
+          {
+            "id": "support_the_project.reminder_settings",
+            "source_sha256": "aeec7ca97a52107645156aa31a220d7a33d6f136fde87d37a08a2729e511a24e",
+            "text": "Изаберите Алатке > Подсетници… да бисте контролисали подстицаје за оцену и подршку одвојено. Означите подстицај да бисте га омогућили или поништите ознаку да бисте га онемогућили, затим сачувајте. Откажи оставља тренутне изборе непромењене."
+          }
+        ],
+        "body": "Менаџер датотека резолуције se pruža kao samostalna aplikacija bez potrebe za pretplatom. Ako vam je korisna i želite da podržite dalji razvoj, izaberite Pomoć > Ako vam se ovo sviđa, kupite Džonu kafu. Isti opcioni dugme za podršku pojavljuje se u Pomoć > О апликацији i otvara javnu stranicu JohnPerky u vašem uobičajenom veb pregledaču:\n\nhttps://buymeacoffee.com/johnperky\n\nПодршка пројекту је у потпуности опционална. Апликација не отвара страницу аутоматски, не прикупља информације о плаћању, не прати да ли је посећујете и не мења ниједну функцију на основу подршке.\n\nОЦЕНЕ И ОПЦИОНАЛНА ПОДСЕЋАЊА\n\nНакон пет покретања у најмање три дана, апликација може да вас позове да је оцените у Microsoft Store-у. Касније одлаже захтев за десет покретања. Опциони подсетник за кафу почиње при покретању 11 и понавља се сваких 11 покретања само након Можда касније. Не питај поново онемогућава било који подсетник; Алатке > Подсетници могу га поново омогућити. Страница се отвара само након што притиснете њен изричити тастер.\n\nИзаберите Алатке > Подсетници… да бисте контролисали подстицаје за оцену и подршку одвојено. Означите подстицај да бисте га омогућили или поништите ознаку да бисте га онемогућили, затим сачувајте. Откажи оставља тренутне изборе непромењене."
+      }
+    ]
+  },
+  "literals": {
+    "Confirm": "Потврди",
+    "Move {field0} to the Recycle Bin / Trash?": "Преместити {field0} у канту/корпу за отпатке?",
+    "Synchronize preview": "Синхронизуј преглед",
+    "Queue {field0} file(s) for copying to the {field1} pane?": "Ставити {field0} датотеку(е) у ред за копирање на {field1} панел?",
+    "Keyboard shortcuts": "Пречице на тастатури",
+    "Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file": "Ctrl+A   Изабери све приказано\nCtrl+C   Копирај изабрано\nCtrl+X   Исеци изабрано\nCtrl+V   Налепи у активни прозор\nCtrl+Z   Поништи последњу операцију са фајлом\nDelete   Премести изабране фајлове у Овај погон / Кош за отпад\nF2       Преименуј изабрани фајл\nF5       Освежи оба прозора\nBackspace   Иди на један фолдер више\n, (зарез)   Активни преглед уназад 10%\n. (тачка)   Активни преглед унапред 10%\nДвоструки клик   Отвори фајл",
+    "Folder not found": "Фолдер није пронађен",
+    "This folder does not exist:\n{field0}": "Ова фасцикла не постоји:\n{field0}",
+    "Not enough videos": "Недовољно видео снимака",
+    "At least two visible videos with readable durations are needed for comparison.": "За поређење је потребна најмање два видљива видео снимака са читљивим трајањем.",
+    "No size outliers": "Нема аутлиера по величини",
+    "No visible video is at least {field0}× the average data rate of {field1} MB/min.": "Ниједан видљиви видео нема најмање {field0}× просечне брзине података од {field1} MB/min.",
+    "Some dropped files failed": "Неки одбачени фајлови нису успели",
+    "Could not reveal some files": "Није било могуће открити неке фајлове",
+    "Select one file": "Изаберите један фајл",
+    "Select exactly one file to rename.": "Изаберите тачно један фајл за преименовање.",
+    "Invalid filename": "Неважеће име фајла",
+    "Enter a filename without folder separators.": "Унесите име фајла без разделника фолдера.",
+    "File already exists": "Фајл већ постоји",
+    "A file named {field0} already exists.": "Фајл са именом {field0} већ постоји.",
+    "Nothing selected": "Ништа није изабрано",
+    "Select one or more files in the active pane first.": "Прво изаберите један или више фајлова у активном приказу.",
+    "Confirm {field0}": "Потврдите {field0}",
+    "{field0} {field1} file(s) to:\n{field2}?": "{field0} {field1} датотеку(е) у:\n{field2}?",
+    "Some files failed": "Неколико датотека није прошло",
+    "Finished": "Завршено",
+    "Successfully {field0} {field1} file(s).": "Успешно {field0} {field1} датотеку(е).",
+    "Unknown choice": "Непознат избор",
+    "Use replace, skip, keep both, or newer.": "Користите замени, прескочи, сачувај обе или новију.",
+    "Batch rename": "Пакетно преименовање",
+    "Select one or more files first.": "Прво изаберите једну или више датотека.",
+    "Batch rename complete": "Пакетно преименовање завршено",
+    "Renamed {field0} file(s). Use Ctrl+Z to undo the batch.": "Преименовано {field0} фајл(ова). Користите Ctrl+Z за опозив пакетне операције.",
+    "Nothing to retry": "Нема ништа за покушај поново",
+    "The last transfer had no failed files.": "Последњи пренос није имао неуспелих фајлова.",
+    "Transfer active": "Пренос је активан",
+    "Wait for the current transfer to finish before undoing.": "Сачекајте да тренутни пренос заврши пре него што опозовете.",
+    "Nothing to undo": "Нема ништа за опозив",
+    "There are no recent copy, move, replacement, or rename actions.": "Нема недавних радњи копирања, премештања, замене или преименовања.",
+    "Undo incomplete": "Поништавање је непотпуно",
+    "Undo complete": "Поништавање је завршено",
+    "The most recent file operation was undone.": "Најновија операција над фајлом је поништена.",
+    "Move to Recycle Bin": "Премести у корпу за отпатке",
+    "Move {field0} selected file(s) to the Recycle Bin / Trash?": "Преместити {field0} изабран(их) фајл(ова) у корпу за отпатке / смеће?",
+    "Some files could not be removed": "Неке датотеке нису могле бити уклоњене",
+    "Embedded metadata": "Уграђени метаподаци",
+    "Select exactly one image or video first.": "Прво изаберите тачно једну слику или видео.",
+    "Create video contact sheet": "Направите видео контакт листу",
+    "Select exactly one video first.": "Прво изаберите тачно један видео.",
+    "Similar image search": "Претрага сличних слика",
+    "No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).": "Ниједна визуелно слична група није пронађена при толеранцији {field0}.\n\n{field1} кеширан хеш(еви); {field2} нечитљива слика(е).",
+    "Select two files": "Изаберите два фајла",
+    "Select exactly two files to compare.": "Изаберите тачно два фајла за поређење.",
+    "Nothing to synchronize": "Нема ништа за синхронизацију",
+    "No selected files need copying in that direction.": "Нема изабраних фајлова који треба копирати у том правцу.",
+    "No workspaces": "Нема радних простора",
+    "Save a workspace first.": "Прво сачувајте радни простор.",
+    "Collection folder unavailable": "Фасцикла колекције није доступна",
+    "The saved folder does not currently exist:\n{field0}": "Сачувана фасцикла тренутно не постоји:\n{field0}",
+    "Cache pruned": "Кеш је обришен",
+    "Removed {field0} stale entry/entries.": "Уклоњено {field0} застарелих уноса.",
+    "Clear cache": "Очисти кеш",
+    "Clear all cached metadata? Files will be rescanned next time.": "Очистити све сачуване метаподатке? Фајлови ће бити поново скенирани следећи пут.",
+    "Clear thumbnail cache": "Очисти кеш сличица",
+    "Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.": "Обрисати {field0} сачуваних сличица користећи {field1}?\n\nОригинални медијски фајлови и метаподатке неће бити промењени.",
+    "Settings": "Подешавања",
+    "{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.": "{field0} подешавања перформанси, опције скенирања и лимит кеша сличица су сачувани. Лимит кеша се спроводи у позадини.",
+    "Live updates unavailable": "Живе информације нису доступне",
+    "The folder-monitoring component is not installed.": "Компонента за праћење фолдера није инсталирана.",
+    "Reveal many files?": "Приказати многе датотеке?",
+    "{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.": "{field0} фајлова је изабрано. Откривање свих њих може отворити велики број прозора управљача фајловима.\n\nИзаберите Да да бисте открили сваки изабрани фајл, или Не да бисте открили само први.",
+    "Rename failed": "Промена имена није успела",
+    "Confirm batch rename": "Потврдите групну промену имена",
+    "Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.": "Променити име {field0} фајла/ова тачно као што је приказано у прегледу?\n\nЦелу групну операцију можете поништити са Ctrl+Z.",
+    "Batch rename failed": "Групна промена имена није успела",
+    "No completed rename was kept where rollback was possible.\n\n{field0}": "Nije sačuvano kompletno preimenovanje tamo gde je vraćanje bilo moguće.\n\n{field0}",
+    "Nothing to export": "Nema ničega za izvoz",
+    "The chosen scope contains no media files.": "Odabrani opseg ne sadrži medijske fajlove.",
+    "Nothing to verify": "Nema ničega za proveru",
+    "Not enough images": "Nema dovoljno slika",
+    "The chosen scope contains fewer than two images.": "Odabrani opseg sadrži manje od dve slike.",
+    "Could not save workspace": "Nije moguće sačuvati radni prostor",
+    "Replace smart collection": "Zameni pametnu kolekciju",
+    "Replace the existing collection named {field0}?": "Да ли да замените постојећу колекцију под именом {field0}?",
+    "Could not save collection": "Није могуће сачувати колекцију",
+    "Invalid rule": "Неважи правило",
+    "Enter a rule name.": "Унесите име правила.",
+    "Choose a destination folder.": "Изаберите одредишну фасциклу.",
+    "Apply folder rules": "Примени правила фасцикле",
+    "Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.": "Ставити у ред {field0} планирану акцију копирања/премештања?\n\nПостојеће циљеве ће користити уобичајена решења за конфликте. Премештања и заменске акције остају могуће опозвати.",
+    "Delete rule": "Избриши правило",
+    "Delete rule '{field0}'?": "Да ли желите да избришете правило '{field0}'?",
+    "Cache cleared": "Кеш је очишћен",
+    "Removed {field0} metadata entries and cached thumbnails.": "Уклоњено {field0} метаподака и кешираних минијатура.",
+    "Thumbnail cache": "Кеш минијатура",
+    "The thumbnail cache is already empty.": "Кеш минијатура је већ празан.",
+    "Thumbnail cache cleared": "Кеш минијатура је очишћен",
+    "Deleted {field0} thumbnail(s) and freed {field1}.": "Обрисано {field0} минијатура и ослобођено {field1}.",
+    "Could not monitor folder": "Није могуће пратити фасциклу",
+    "Live updates could not be enabled for:\n{field0}\n\n{field1}": "Није било могуће омогућити ажурирања у реалном времену за:\n{field0}\n\n{field1}",
+    "Could not open file": "Није могуће отворити фајл",
+    "Frame exported": "Фрејм измењен",
+    "Metadata exported": "Мета-подаци измењени",
+    "Saved {field0} field(s).": "Сачувано {field0} поље(а).",
+    "Metadata unavailable": "Мета-подаци недоступни",
+    "Report exported": "Извештај измењен",
+    "Saved {field0} result(s).": "Сачувано {field0} резултат(а).",
+    "Invalid settings": "Неважећа подешавања",
+    "Use whole numbers for frames, columns, and width.": "Користите целе бројеве за фрејмове, колоне и ширину.",
+    "Invalid tolerance": "Неважећа толеранција",
+    "Enter a whole number from 0 to 16.": "Унесите цео број од 0 до 16.",
+    "Replace collection": "Замените колекцију",
+    "Replace {field0}?": "Заменити {field0}?",
+    "Delete smart collection": "Избришите паметну колекцију",
+    "Delete {field0}?\n\nNo media files or annotations will be changed.": "Избришите {field0}?\n\nНиједна медијска датотека или белешке неће бити промењене.",
+    "Invalid rating": "Неважећа оцена",
+    "Minimum rating must be a whole number from 0 to 5.": "Минимална оцена мора бити цео број од 0 до 5.",
+    "Frame export failed": "Извоз оквира није успео",
+    "Could not export metadata": "Није могуће извозити метаподатке",
+    "Could not export report": "Није могуће извозити извештај",
+    "Contact sheet complete": "Контакт листа завршена",
+    "Report export failed": "Извоз извештаја није успео",
+    "Contact sheet failed": "Извоз контакт листе није успео",
+    "Removed {field0} least-recently-used thumbnail(s).": "Уклоњен {field0} најмање недавно коришћени сличица(е).",
+    "Add": "Додај",
+    "All non-empty conditions must match. Rules are checked from top to bottom; the first match wins.": "Сви непразни услови морају се поклапати. Правила се проверавају од врха ка дну; прво поклапање је победничко.",
+    "Appearance and accessibility": "Изглед и приступачност",
+    "Appearance and text size": "Изглед и величина текста",
+    "Apply": "Примени",
+    "Apply rename": "Примени преименовање",
+    "Applying a collection changes only the active pane's folder, filters, sorting, and view.": "Примена колекције мења само фасциклу, филтере, сортирање и приказ активног панела.",
+    "Apply…": "Примени…",
+    "Batch rename selected files": "Масовно преименуј изабране фајлове",
+    "Browse…": "Прегледајте…",
+    "Cache and scanning": "Кеш и скенирање",
+    "Cached": "Кеширано",
+    "Cancel": "Откажи",
+    "Cancel current": "Откажи тренутни",
+    "Cancel export": "Откажи извоз",
+    "Case sensitive": "Осећајно на велика и мала слова",
+    "Changes are previewed immediately. Cancel restores the previous appearance.": "Промене се одмах приказују. Откажи враћа претходни изглед.",
+    "Choose rule destination": "Изаберите одредиште правила",
+    "Clear all cache": "Очисти све кеш",
+    "Clear thumbnails": "Јасни сличице",
+    "Close": "Затвори",
+    "Collection name:": "Назив колекције:",
+    "Compare files": "Упореди датотеке",
+    "Contents": "Садржај",
+    "Copy missing/newer → left": "Копирај недостајуће/новије → лево",
+    "Copy missing/newer → right": "Копирај недостајуће/новије → десно",
+    "Copy selected/all": "Копирај изабрано/све",
+    "Create…": "Креирај…",
+    "Current name": "Тренутно име",
+    "Delete": "Обриши",
+    "Details": "Детаљи",
+    "Edit": "Уреди",
+    "Edit tags": "Уреди ознаке",
+    "Enforce limit now": "Примени ограничење одмах",
+    "Examples: *.tmp; proxy/*; @eaDir/*": "Примери: *.tmp; proxy/*; @eaDir/*",
+    "Exclude patterns (semicolon separated):": "Искључи шаблоне (раздвојене тачком и зарезом):",
+    "Export CSV…": "Извези CSV…",
+    "Export current video frame": "Извези тренутни видео фрејм",
+    "Export embedded metadata": "Извези уграђене метаподатке",
+    "Export integrity report": "Извези извештај о интегритету",
+    "Export JSON…": "Извези JSON…",
+    "Export media report": "Извези извештај о медијима",
+    "Exports technical details, annotations, file status, and a library summary without changing media.": "Извози техничке детаље, белешке, статус фајла и резиме библиотеке без измене медија.",
+    "Export…": "Извези…",
+    "File conflicts": "Конфликти фајлова",
+    "Filename.jpg   1920 × 1080   H.265 / HEVC": "Filename.jpg   1920 × 1080   H.265 / HEVC",
+    "Find visually similar images": "Пронађи визуелно сличне слике",
+    "Find:": "Пронађи:",
+    "Folder": "Фолдер",
+    "Folder comparison and synchronization": "Поређење и синхронизација фолдера",
+    "Folder organization rules": "Правила за организацију фолдера",
+    "Force recheck": "Принудна поновна провера",
+    "Format:": "Формат:",
+    "Include full file paths": "Укључи целе путање до фајлова",
+    "Interface scale:": "Мерење интерфејса:",
+    "Keep left (recycle right)": "Држите се лево (рециклста десно)",
+    "Keep right (recycle left)": "Држите се десно (рециклирајте лево)",
+    "Load workspace": "Учитајте радни простор",
+    "Loading preview…": "Учитавање прегледа…",
+    "Lower values are stricter. 6 is a useful starting point for resized or lightly recompressed copies.": "Ниже вредности су строже. 6 је корисна полазна тачка за прерађене или благо поново компримоване копије.",
+    "Maximum percentage of operating-system drive:": "Максимални проценат диска оперативног система:",
+    "Media integrity verification": "Провера интегритета медија",
+    "Media inventory report": "Извештај о медијској инвентаризацији",
+    "Move left": "Помери лево",
+    "Move right": "Помери десно",
+    "Name": "Име",
+    "New filename:": "Ново име датотеке:",
+    "New name": "Ново име",
+    "New name:": "Ново име:",
+    "Number padding:": "Попуњавање бројева:",
+    "Parallel metadata workers (1–16):": "Паралелни радници метаподатака (1–16):",
+    "Path": "Путања",
+    "Pause": "Паузирање",
+    "Perceptual image matching": "Перцепцијско упоређивање слика",
+    "Performance profile:": "Профил перформанси:",
+    "Preserve folders relative to the active pane": "Сачувајте фасцикле релативно у односу на активни панел",
+    "Preview": "Преглед",
+    "Preview active pane…": "Преглед активног панела…",
+    "Preview folder organization rules": "Преглед правила организације фасцикли",
+    "Preview only until Apply is confirmed. The first enabled matching rule wins.": "Преглед само док се не потврди Примена. Прво омогућено правило поклапања побеђује.",
+    "Query": "Упит",
+    "Refresh preview": "Освежи преглед",
+    "Relative path": "Релативна путања",
+    "Remove stale entries": "Уклони застареле уносе",
+    "Rename": "Преименуј",
+    "Rename file": "Преименуј датотеку",
+    "Rename pattern": "Преименуј образац",
+    "Rename smart collection": "Преименуј паметну колекцију",
+    "Replace:": "Замени:",
+    "Reset widths": "Ресетуј ширине",
+    "Resolution File Manager": "Менаџер датотека резолуције",
+    "Restore system default": "Врати подразумеване поставке система",
+    "Retry failed": "Понови неуспело",
+    "Review visually similar images": "Прегледај визуелно сличне слике",
+    "Review-only: this tool never deletes or changes files.": "Само за преглед: овај алат никада не брише или мења фајлове.",
+    "Rule enabled": "Правило омогућено",
+    "Rules are evaluated from top to bottom. Files are never changed until a preview is reviewed and Apply is confirmed.": "Правила се процењују од врха ка дну. Фајлови се никада не мењају док се преглед не прегледа и не потврди Примени.",
+    "Sample button": "Пример дугмe",
+    "Save": "Сачувај",
+    "Save contact sheet": "Сачувај контакт листу",
+    "Save current": "Сачувај тренутно",
+    "Save media report": "Сачувај извештај медија",
+    "Save rule": "Сачувај правило",
+    "Save smart collection": "Сачувај паметну колекцију",
+    "Save workspace": "Сачувај радни простор",
+    "Saved one-pane searches": "Сачуване претраге једног панела",
+    "Scan settings": "Подешавања скенирања",
+    "Scope:": "Опсег:",
+    "Select a column, then move it or set its width.": "Изаберите колону, затим је померите или подесите њену ширину.",
+    "Select an image": "Изаберите слику",
+    "Select failed": "Избор није успео",
+    "Select this group in source pane": "Изаберите ову групу у панелу извора",
+    "Set width": "Подеси ширину",
+    "Show frame numbers and timestamps": "Прикажи бројеве кадрова и временске ознаке",
+    "Similarity is an estimate. Review files before taking any action; this window cannot delete them.": "Сличност је процена. Прегледајте фајлове пре него што предузмете било какву радњу; овај прозор их не може избрисати.",
+    "Similarity tolerance (0–16):": "Толеранција сличности (0–16):",
+    "Smart collections": "Паметне колекције",
+    "Some files already exist. Enter: replace, skip, keep both, or newer": "Неки фајлови већ постоје. Унесите: замени, прескочи, задржи оба или новији",
+    "Start": "Почетак",
+    "Start number:": "Почетни број:",
+    "Status": "Статус",
+    "Template:": "Шаблон:",
+    "Theme:": "Тема:",
+    "Thumbnail storage": "Складиште сличица",
+    "Tokens: {name} original name, {n} number, {ext} extension, {dotext} extension including dot": "Токени: {name} оригинално име, {n} број, {ext} екстензија, {dotext} екстензија са тачком",
+    "Transfer queue": "Ред преноса",
+    "Undo delete": "Опозови брисање",
+    "Verify media integrity": "Проверите интегритет медија",
+    "Width:": "Ширина:",
+    "Workspace name:": "Име радног простора:",
+    "⤓ PNG": "⤓ PNG",
+    "🔇 Unavailable": "🔇 Непошљиво",
+    "Thumbnails": "Преглед сличица",
+    "Ready": "Спремно",
+    "Keep both": "Задржи оба",
+    "Filename": "Naziv fajla",
+    "Move": "Премести",
+    "Copy": "Копирај",
+    "Cancelled": "Otkazano",
+    "Add to selection basket": "Додај у корпу за селекцију",
+    "New folder…": "Нови фолдер…",
+    "Selection basket…": "Корпа за селекцију…",
+    "Selection basket": "Корпа за селекцију",
+    "Highlighted files:": "Означене датотеке:",
+    "Tick selection": "Означи селекцију",
+    "Untick selection": "Поништи селекцију",
+    "Undo in progress…": "Опозовиу току…",
+    "\nUnfinished recovery steps and backups were retained. Close applications using these files, then press Undo again.": "\nНепотпуне кораке за опоравак и резервне копије су сачуване.Затвориапликације које користе ове фајлове, затим притисните Опозовипоново.",
+    "Undo would overwrite an existing file: {target}. Both files were retained.": "Опозовибило би прекривено постојећи фајл: {target}. Обе датотеке су сачуване.",
+    "Undo target is missing; recovery retained: {target}": "Опозови циљ недостаје; опоравак задржан: {target}",
+    "Undo backup is missing: {backup}": "Опозовирезервна копија недостаје: {backup}",
+    "New folder": "Нова фасцикла",
+    "Folder name:": "Фолдериме:",
+    "Filename conflict": "Naziv fajlaконфликт",
+    "Rename file — live preview": "Преименуј датотекуÔÇö преглед уживо",
+    "Could not create folder": "Није било могуће креирати фасциклу",
+    "Select or tick files first.": "Прво изаберите или означите датотеке.",
+    "Move files": "Преместифајлови",
+    "Copy files": "Копирајфайлови",
+    "Ask for each conflict": "Питај за сваки конфликт",
+    "keep both": "задржи оба",
+    "Replace": "Замени",
+    "Skip": "Прескочи",
+    "Selection basket — temporary references": "Корпа за селекцију – привремене референце",
+    "Original location": "Оригинална локација",
+    "Add pane selection": "Додај избор панела",
+    "Remove references": "Уклони референце",
+    "Clear basket": "Очистикорпа",
+    "Copy to active pane": "Копирају активни прозор",
+    "Move to active pane": "Преместиу активни прозор",
+    "Source missing": "Изворнедостају",
+    " files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "фајлови. Конфликти се прегледају пре стављања у ред. Замена чува бацкуп за овај сесију.",
+    "Queue move": "Премештање у ред",
+    "Queue copy": "Копирање у ред",
+    "Unsafe destination": "Незаписана дестинација",
+    "A destination is one of the selected source files. Choose another folder.": "Дестинација је један од изабраних изворних фајлова. Изаберите другу фасциклу.",
+    "New filename: ": "Ново име датотеке:",
+    "Destination now exists. Choose another name.": "Одредиште већ постоји. Изаберите друго име.",
+    "Destination folder:": "Фасцикла одредишта:",
+    "Preserve folder structure": "Очувати структуру фасцикли",
+    "Files only (no subfolders)": "Датотекасамо (без подфолдера)",
+    "If a destination filename already exists:": "Ако одредиште већ има име датотеке:",
+    "Open destination when complete": "Отвориодредиште када је завршено",
+    "Destination is a selected source": "Одредиште је изабрани извор",
+    "Apply to all remaining conflicts": "Примениза све преостале конфликте",
+    "Hide basket": "Сакриј корпу",
+    "Treeview": "Приказ стабла",
+    "Destination is a folder": "Одредиште је фасцикла",
+    " to ": "у",
+    "Source: ": "Извор:",
+    "\n\nDestination: ": "\nОдредиште:",
+    "\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "\nЗадржи обаправи нумерисано име датотеке. Замењује прави резервну копију одредишта за сесијуОпозови",
+    "Current filename: ": "Тренутно име датотеке:",
+    "Duplicate destination name": "Дуплирано име одредишта",
+    " [missing]": "[недостаје]",
+    "Existing destination": "Постојеће одредиште",
+    "Enter a valid folder name without slashes, reserved names or trailing spaces/dots.": "Унесите важеће име фасцикле без косих црта, резервисаних имена или завршних размакоа/тачака.",
+    "Source and destination are the same file; nothing was changed.": "Извори одредишна локација је исти фајл; ништа није промењено.",
+    "Undo would overwrite an existing file: ": "Опозовиби преписао постојећу датотеку:",
+    "Undo stopped because this file changed after transfer: ": "Опозовизаустављено јер је овај фајл промењен након преноса:",
+    "Source changed during transfer; retained original. Retry after writing finishes.": "Изворпромењено током преноса; задржано оригинално. Покушајте поново након завршетка писања.",
+    "Undo target is missing; recovery retained: ": "Опозовициљ недостаје; опоравак сачуван:",
+    "Undo backup is missing: ": "Опозовирезервна копија недостаје:",
+    "Destination changed; retry: ": "Одредиште промењено; покушај поново:",
+    "{count} files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "{count}фајлови. Суитације сувиђају се пре стављања у ред. Замена чува резервну копију за поништавање током ове сесије.",
+    "Source: {source}\n\nDestination: {target}\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "Извор: {source}Одредиште: {target}\n\nЗадржи обаправи нумерисано име датотеке. Замењује прави резервну копију одредишта за сесијуОпозови.",
+    "Current filename: {name}": "Тренутни naziv fajla: {name}",
+    "New filename: {name}\n{status}": "Ново име датотеке: {name}\n{status}",
+    "Source": "Извор",
+    "Destination": "Odredište",
+    "[missing]": "[nedostaje]",
+    "Unchanged": "Nepromenjeno",
+    "Name cannot be empty": "Име ne može biti prazno",
+    "Name contains a forbidden character": "Име sadrži zabranjeni karakter",
+    "Name cannot end with a space or dot": "Име ne može se završiti razmakom ili tačkom",
+    "Reserved Windows filename": "Rezervisano ime Windows fajla",
+    "Duplicate output name": "Дупли назив излазне датотеке ime",
+    "A file with this name already exists": "Fajl sa ovim imenom već postoji",
+    "Invalid template: {error}": "Nevažeći šablon: {error}",
+    "Undo stopped because this file changed after transfer: {path}. The file was retained.": "Опозовизаустављено јер је овај фајл промењен након преноса:{path}. Фајл је сачуван.",
+    "Destination changed; retry: {target}": "Одредиште промењено; покушај поново:{target}",
+    "{ready} file(s) ready · {unchanged} unchanged · {problems} problem(s)": "{ready} датотека(е) спремна ┬À {unchanged} непромењено ┬À {problems} проблем(и)",
+    "Start and padding must be whole numbers.": "Почетак и пуњење морају бити целобројни."
+  }
+}

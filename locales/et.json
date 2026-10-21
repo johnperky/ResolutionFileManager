@@ -1,0 +1,1561 @@
+{
+  "meta": {
+    "language": "Eesti"
+  },
+  "strings": {
+    "app.title": "Resolution File Manager {version}",
+    "menu.file": "Fail",
+    "menu.edit": "Muuda",
+    "menu.view": "Vaade",
+    "menu.tools": "Tööriistad",
+    "menu.help": "Abi",
+    "menu.browse": "Sirvi aktiivset paani…",
+    "menu.refresh": "Värskenda",
+    "menu.exit": "Välju",
+    "menu.copy": "Kopeeri",
+    "menu.cut": "Lõika",
+    "menu.paste": "Kleebi",
+    "menu.undo": "Võta tagasi",
+    "menu.rename": "Nimeta ümber…",
+    "menu.batch_rename": "Valitud korraga ümbernimetamine…",
+    "menu.delete": "Lohista prügikasti / Prügikasti",
+    "menu.select_all": "Vali kõik kuvatud",
+    "menu.details": "Üksikasjad aktiivses paanis",
+    "menu.thumbnails": "Pisipildid aktiivses paanis",
+    "menu.thumbnail_size": "Pisipiltide suurus",
+    "menu.columns": "Seadista veerud…",
+    "menu.appearance": "Välimus ja teksti suurus…",
+    "menu.refresh_active": "Värskenda aktiivset paani",
+    "menu.refresh_both": "Värskenda mõlemad paneelid",
+    "menu.go_up": "Mine üles",
+    "menu.verify": "Kontrolli meedia terviklikkust…",
+    "menu.contact_sheet": "Loo videokontaktleht…",
+    "menu.export_report": "Ekspordi meediaraport…",
+    "menu.metadata": "Vaata manustatud metadatut…",
+    "menu.convert": "Konverteeri valitud videod…",
+    "menu.duplicates": "Leia dubleeritud failid…",
+    "menu.similar": "Leia visuaalselt sarnased pildid…",
+    "menu.compare": "Võrdle valitud…",
+    "menu.sync": "Võrdle / sünkroniseeri kaustad…",
+    "menu.save_workspace": "Salvesta tööruum…",
+    "menu.load_workspace": "Laadi tööruum…",
+    "menu.save_collection": "Salvesta aktiivne nutikogu…",
+    "menu.manage_collections": "Halda nutikogusid…",
+    "menu.folder_rules": "Kausta organiseerimise reeglid…",
+    "menu.cache": "Vahemälu ja skannimine…",
+    "menu.queue": "Ülekandmisjärjekord…",
+    "menu.language": "Keel",
+    "menu.reminders": "Meeldetuletused…",
+    "menu.how_to": "Kuidas kasutada lahenduse failihaldurit",
+    "menu.shortcuts": "Klaviatuuri otseteed",
+    "menu.coffee": "☕ Kui see meeldib sulle, osta Johnile kohvi…",
+    "menu.about": "Teave",
+    "context.copy_other": "Kopeeri teise paneeli",
+    "context.move_other": "Liiguta teise paneeli",
+    "context.open": "Ava",
+    "context.reveal": "Kuva failihalduris",
+    "context.rename": "Nimeta ümber…",
+    "context.clear_rating": "Tühista hinnang",
+    "context.rating": "Hinnang",
+    "context.none": "Puudub",
+    "context.colour": "Värvimärk",
+    "context.edit_tags": "Muuda silte…",
+    "context.recycle": "Liiguta prügikasti",
+    "context.select_all": "Vali kõik kuvatud",
+    "context.clear_ticks": "Tühista valikud",
+    "context.find_duplicates": "Leia dubleeritud",
+    "context.compare": "Võrdle valitud",
+    "context.refresh_pane": "Värskenda seda paani",
+    "context.refresh_both": "Värskenda mõlemad paanid",
+    "context.open_folder": "Ava kaust",
+    "context.red": "Punane",
+    "context.yellow": "Kollane",
+    "context.green": "Roheline",
+    "context.blue": "Sinine",
+    "context.purple": "Lilla",
+    "context.configure_columns": "Seadista veerud…",
+    "context.reset_columns": "Lähtesta veeru laiused",
+    "context.files_suffix": "({count} faili)",
+    "sort.sort": "Sorteeri",
+    "sort.name": "Nimi",
+    "sort.modified": "Muudetud kuupäev",
+    "sort.size": "Faili suurus",
+    "sort.duration": "Pikkus",
+    "sort.codec": "Koodek",
+    "sort.resolution": "Resolutsioon",
+    "sort.type": "Tüüp",
+    "sort.bitrate": "Bitikiirus",
+    "sort.fps": "Kaaderkiirus",
+    "sort.rating": "Hinnang",
+    "sort.a_z": "A-st Z-ni",
+    "sort.z_a": "Z-st A-ni",
+    "sort.oldest": "Kõige vanemad esimesena",
+    "sort.newest": "Uusimad ees",
+    "sort.smallest": "Kleinaimad ees",
+    "sort.largest": "Suurimad ees",
+    "sort.shortest": "Lühimad ees",
+    "sort.longest": "Pikimad ees",
+    "sort.ascending": "Kasvavalt",
+    "sort.descending": "Kahanevalt",
+    "toolbar.guide": "Valige failid kummastki paneelist, seejärel saatke need teise paneeli.",
+    "toolbar.refresh": "Värskenda",
+    "toolbar.move": "Liiguta valitud → teise paneeli",
+    "toolbar.copy": "Kopeeri valitud → teine paan",
+    "toolbar.undo": "Võta tagasi",
+    "pane.left": "Vasak paan",
+    "pane.right": "Parem paan",
+    "pane.preview": "Eelvaade",
+    "pane.info": "Info",
+    "pane.browse": "Sirvi…",
+    "pane.drag": "↗ Lohista valitud",
+    "pane.show": "Näita:",
+    "pane.videos": "Videod",
+    "pane.images": "Pildid",
+    "pane.find": "Otsi:",
+    "pane.live": "Otseülekanne",
+    "pane.subfolders": "Kaasa alamkaustad",
+    "pane.resolution": "Lahutus:",
+    "pane.all": "Kõik",
+    "pane.select_matching": "Vali sobivad",
+    "pane.more_filters": "Rohkem filtreid…",
+    "pane.outliers": "Vali suuruse erandid",
+    "pane.scanning": "Meediumite skannimine…",
+    "pane.cancel": "Tühista",
+    "pane.no_files": "Sobivaid meediumifaile puudub",
+    "pane.checked": "{count} valitud",
+    "pane.clear_ticks": "Tühjenda linnukesed",
+    "view.details": "Detailid",
+    "view.thumbnails": "Pisipildid",
+    "size.small": "Väike",
+    "size.medium": "Keskmine",
+    "size.large": "Suur",
+    "browse.continuous": "Jätkuv",
+    "browse.paged": "Leheküljeline",
+    "browse.auto": "Automaatne",
+    "browse.per_page": "Lehekülje kohta:",
+    "column.name": "Nimi / suhteline rada",
+    "column.codec": "Koodek",
+    "column.resolution": "Resolutsioon",
+    "column.duration": "Videopikkus",
+    "column.size": "Faili suurus",
+    "column.rate": "MB/min",
+    "column.fps": "FPS",
+    "column.modified": "Muudetud kuupäev",
+    "column.type": "Tüüp",
+    "column.bitrate": "Bitikiirus",
+    "column.audio": "Heli",
+    "column.hdr": "HDR",
+    "column.pixels": "Megapikslit",
+    "column.color": "Silt",
+    "column.tags": "Sildid",
+    "column.rating": "Hinnang",
+    "status.ready": "Valmis",
+    "status.scanning_progress": "Skaneeritakse {current} / {total}… · {cached} vahemälust",
+    "status.scan_complete_folder": "Selles kaustas on {count} meediumifail(i)",
+    "status.scan_complete_subfolders": "{count} meediumifail(i) koos alamkaustadega",
+    "status.unreadable": "{count} loetamatu",
+    "status.from_cache": "{count} vahemälust",
+    "status.scan_cancelled": "Skaneerimine tühistati pärast {count} faili",
+    "status.skipped_file": "Fail jäi vahele: {error}",
+    "status.scan_failed": "Skannida ei õnnestunud: {error}",
+    "status.cancelling": "Skaneerimine tühistatakse…",
+    "status.live_on": "Otsevärskendused sisse",
+    "status.live_off": "Otsevärskendused välja",
+    "status.loading": "Laadimine…",
+    "outlier.moderate": "Keskmine (1.4×)",
+    "outlier.large": "Suur (1.75×)",
+    "outlier.extreme": "Ekstreemne (2.5×)",
+    "inspector.title": "Inspektor",
+    "inspector.no_file": "Faili pole valitud",
+    "inspector.select_file": "Vali meediumifail, et näha selle üksikasju.",
+    "inspector.copy_path": "Kopeeri tee",
+    "inspector.open": "Ava",
+    "inspector.reveal": "Näita",
+    "preview.off": "Eelvaade välja",
+    "preview.is_off": "Eelvaade on välja lülitatud",
+    "preview.select": "Vali eelvaatamiseks fail",
+    "preview.select_side": "Vali sellelt poolt pilt või video",
+    "preview.play": "Esita",
+    "preview.pause": "Pauseeri",
+    "preview.skim": "Kerimine:",
+    "preview.speed": "Kiirus:",
+    "preview.muted": "Vaigistatud",
+    "preview.unmuted": "Heli sees",
+    "preview.still": "Pilt paigal",
+    "preview.unavailable": "Eelvaade pole saadaval",
+    "preview.read_failed": "Raami ei saanud lugeda",
+    "convert.title": "Konverteeri valitud videod",
+    "convert.select_first_title": "Konverteeri videod",
+    "convert.select_first": "Valige kõigepealt üks või mitu videofaili.",
+    "convert.settings": "Konverteerimise seaded",
+    "convert.preset": "Eelsätted:",
+    "convert.quality": "Kvaliteet (CRF):",
+    "convert.resolution": "Resolutsioon:",
+    "convert.resolution_help": "1080p ja 720p määravad väljundi kõrguse, säilitades samal ajal kuvasuhte.",
+    "convert.quality_help": "Madalamad kvaliteediväärtused nõuavad kõrgemat kvaliteeti; riistvaramootorid tõlgendavad seda väärtust oma juhtimisena. Remux ignoreerib kvaliteeti ja resolutsiooni.",
+    "convert.engine": "Kodeerimismootor:",
+    "convert.hardware_decode": "Kasuta riistvaralist dekodeerimist, kui see on saadaval",
+    "convert.output_folder": "Väljundkaust:",
+    "convert.choose_output": "Vali teisenduse väljundkaust",
+    "convert.preserve_folders": "Säilita kaustad aktiivse paani suhtes",
+    "convert.skip_existing": "Jäta olemasolevad vahele",
+    "convert.keep_both": "Hoia mõlemad",
+    "convert.originals_retained": "Algvideoid hoitakse alati. Vaata enne alustamist üle iga väljundtee.",
+    "convert.status": "Staatus",
+    "convert.source": "Allikas",
+    "convert.output": "Väljund",
+    "convert.result": "Tulemus",
+    "convert.remux_help": "Remux kopeerib voogusid otse; kodeerimist, suuruse muutmist ja riistvaralist dekodeerimist ei kasutata.",
+    "convert.none_reported": "pole teatatud",
+    "convert.cpu_fallback": "puudub; Automaatne kasutab CPU-d",
+    "convert.capabilities": "FFmpeg riistvarakodeerija tugi: {hardware} · Dekodeerimismeetodid: {decode}",
+    "convert.capability_failed": "Võimekuse kontroll ebaõnnestus: {error} · Tarkvaraline kodeerimine on endiselt saadaval",
+    "convert.choose_folder": "Vali väljundkaust.",
+    "convert.preview_summary": "{ready} valmis · {skipped} vahele jäetud / probleem · lähtefaili suurus {size}",
+    "convert.invalid_quality": "Vale kvaliteet",
+    "convert.invalid_quality_body": "CRF peab olema täisarv vahemikus 18 kuni 35.",
+    "convert.engine_unavailable": "Kodeerimismootor pole saadaval",
+    "convert.engine_unavailable_body": "{engine} pole saadaval {preset} jaoks. Vali teine mootor.",
+    "convert.unchanged": "Muutmata (voo koopia)",
+    "convert.decode_unused": "mitte kasutusel (voo koopia)",
+    "convert.decode_fallback": "nõutud turvalise tagavaraga",
+    "convert.off": "väljas",
+    "convert.confirm_title": "Alusta video konverteerimist",
+    "convert.confirm_body": "Loo {count} uus(t) videofail(i)?\n\nKodeerimine: {engine}\nResolutsioon: {resolution}\nRiidvara dekodeerimine: {decode}\n\nAlgfaile hoitakse alles. Tühista eemaldab praeguse osalise väljundi ja peatab ülejäänud järjekorra.",
+    "convert.progress": "Faili {current} konverteerimine {total} · {percent}%",
+    "convert.complete": "Valmis · loodud {created} · ebaõnnestunud {failed} · tühistatud {cancelled}",
+    "convert.refresh": "Värskenda eelvaadet",
+    "convert.start": "Alusta konverteerimist…",
+    "convert.cancel": "Tühista konverteerimine",
+    "duplicates.title": "Duplikaadid",
+    "duplicates.none_candidates": "Sama suurusega duplikaatkandidaate ei leitud.",
+    "duplicates.quick_start": "Kiire kontroll {count} duplikaatkandidaadi(-te) puhul…",
+    "duplicates.quick_progress": "Duplikaatide kiire kontroll {current} / {total}…",
+    "duplicates.verify_progress": "Täpsete vaste kontroll {current} / {total}…",
+    "duplicates.complete_title": "Duplikaadi otsing lõpetatud",
+    "duplicates.none": "Täpseid topeltkirjeid ei leitud.",
+    "duplicates.none_status": "Täpseid topeltkirjeid ei leitud · {cached} salvestatud sõrmejälge",
+    "duplicates.groups_status": "{groups} täpset duplikaatrühma · {cached} vahemälus olevat sõrmejälge",
+    "duplicates.first": "Esimene",
+    "duplicates.newest": "Uusim",
+    "duplicates.oldest": "Kõige vanem",
+    "duplicates.smallest": "Kõige väiksem",
+    "duplicates.largest": "Kõige suurem",
+    "duplicates.review_title": "Vaata täpseid duplikaate",
+    "duplicates.found": "Leiti {count} täpset duplikaatrühma. Vali rida, et eelvaadet näha kõrval mõnest teisest sama rühma koopiast.",
+    "duplicates.explanation": "Täpsed koopiad on identsed sisu ja failisuuruse poolest, seega on Tavaliselt Väikseim ja Suurim seotud. Kuupäevad ja asukohad võivad siiski erineda.",
+    "duplicates.preview": "Eelvaade {number}",
+    "duplicates.select": "Vali koopia",
+    "duplicates.group": "Rühm",
+    "duplicates.filename": "Failinimi",
+    "duplicates.folder": "Kaust",
+    "duplicates.size": "Suurus",
+    "duplicates.modified": "Muudetud",
+    "duplicates.reason": "Miks see võib alles jääda",
+    "duplicates.loading": "Laadimine eelvaade…",
+    "duplicates.keep_one": "Hoidke üks iga grupi kohta:",
+    "duplicates.clear": "Tühjenda ettepanek",
+    "duplicates.close": "Sulge muudatusteta",
+    "duplicates.proposal_status": "Duplikaadi ettepanek: hoidke {strategy} · valitud {count} üleliigset faili läbivaatamiseks",
+    "duplicates.applied_title": "Duplikaadi ettepanek rakendatud",
+    "duplicates.applied_body": "{strategy} koopiat igas grupis ei valitud.\n\nPeapaanil on valitud {count} üleliigset faili. Vaadake need seal läbi enne millegi liigutamist või kustutamist.",
+    "browse.page_summary": "Lehekülg {page} / {pages} · {count} faili{automatic}",
+    "browse.auto_suffix": "· Automaatne {count}/lehekülg",
+    "browse.continuous_summary": "{count} faili · {mode} · ainult nähtavad kaardid",
+    "browse.all_shown": "Kõik kuvatud",
+    "common.system_default": "Süsteemi vaikeväärtus",
+    "common.restart_required": "Taaskäivitamine vajalik",
+    "common.ok": "OK",
+    "common.cancel": "Tühista",
+    "common.close": "Sulge",
+    "common.save": "Salvesta",
+    "common.enable": "Luba",
+    "common.disable": "Keela",
+    "common.never": "Mitte kunagi",
+    "common.launch": "käivita {count}",
+    "language.title": "Keel",
+    "language.message": "Keelesäte on salvestatud. Rakenda seda kõikjal, taaskäivita Resolution File Manager.",
+    "reminders.title": "Mälestuste seaded",
+    "reminders.rating": "Microsoft Store'i hinnangu meeldetuletus",
+    "reminders.support": "Osta mulle kohvi meeldetuletus",
+    "reminders.next": "Järgmine sobiv aeg: {value}",
+    "reminders.saved": "Mälestuste seaded on salvestatud.",
+    "rating.title": "Kas naudite Resolution File Managerit?",
+    "rating.body": "Kui Resolution File Manager on olnud kasulik, kas soovite hinnata seda Microsoft Store'is? Hinnangud aitavad teistel inimestel seda avastada.",
+    "rating.rate": "Hinda Microsoft Store'is",
+    "rating.later": "Hiljem",
+    "rating.never": "Ära küsi uuesti",
+    "support.title": "Tugiresolutsioonifailide haldur",
+    "support.body": "Kui programm on teile kasulik, võite vabalt osta Johnile kohvi. Tugi on täiesti vabatahtlik.",
+    "support.open": "Osta mulle kohvi",
+    "support.later": "Võib-olla hiljem",
+    "support.never": "Ära küsi uuesti",
+    "link.error_title": "Lehte ei saanud avada",
+    "link.error_body": "Ava see aadress oma veebibrauseris:\n\n{url}\n\n{error}",
+    "about.title": "Teave Resolution File Manageri kohta",
+    "about.description": "Platvormideülese topeltpaneeliga rakendus piltide ja videokogude sirvimiseks, eelvaatamiseks, analüüsimiseks ja organiseerimiseks.",
+    "about.support": "Arenduse toetamine",
+    "about.optional": "Kui Resolution File Manager on sulle kasulik, võid Johnile kohvi osta. Toetus on täiesti vabatahtlik.",
+    "help.title": "Resolutsioonifailihalduri abi — {version}",
+    "help.search": "Otsi kogu juhendist:",
+    "help.previous": "Eelmine peatükk",
+    "help.next": "Järgmine peatükk",
+    "help.next_match": "Järgmine vaste (F3)",
+    "help.clear": "Tühjenda otsing",
+    "help.no_results": "Tulemusi ei leitud",
+    "help.no_results_body": "Üheski abipeatükis ei ole „{query}“. Proovi lühemat otsisõna.",
+    "status.folder_missing": "Kausta ei leitud",
+    "status.select_files": "Vali esmalt aktiivses paanis üks või rohkem faili.",
+    "status.finished": "Valmis",
+    "status.error": "Viga",
+    "filters.title": "Täiustatud filtrid",
+    "filters.orientation": "Orientatsioon",
+    "filters.codec": "Koodek sisaldab",
+    "filters.tag": "Silt sisaldab",
+    "filters.min_rating": "Minimaalne hinnang",
+    "filters.color": "Värviline märge",
+    "filters.min_width": "Minimaalne laius (pikslites)",
+    "filters.max_width": "Maksimaalne laius (piksleid)",
+    "filters.min_height": "Minimaalne kõrgus (piksleid)",
+    "filters.max_height": "Maksimaalne kõrgus (piksleid)",
+    "filters.min_size": "Minimaalne suurus (MB)",
+    "filters.max_size": "Maksimaalne suurus (MB)",
+    "filters.min_duration": "Minimaalne kestus (sekundites)",
+    "filters.max_duration": "Maksimaalne kestus (sekundites)",
+    "filters.date_from": "Muudetud alates (AAAA-KK-PP)",
+    "filters.date_to": "Muudetud kuni (AAAA-KK-PP)",
+    "filters.any": "Kõik",
+    "filters.landscape": "Maastik",
+    "filters.portrait": "Portree",
+    "filters.square": "Ruut",
+    "filters.unlabelled": "Sildistamata",
+    "filters.clear": "Kustuta",
+    "filters.apply": "Rakenda",
+    "filters.rating_1": "1",
+    "filters.rating_2": "2",
+    "filters.rating_3": "3",
+    "filters.rating_4": "4",
+    "filters.rating_5": "5",
+    "convert.preset_h264": "H.264 MP4 (ühilduv)",
+    "convert.preset_h265": "H.265 MP4 (väiksem)",
+    "convert.preset_av1": "AV1 MKV (kõige väiksem)",
+    "convert.preset_proxy": "720p H.264 proxy",
+    "convert.preset_remux": "Remux MKV-ks (ilma ümberkodeerimiseta)",
+    "convert.resolution_source": "Hoia allika lahutusvõimet",
+    "convert.resolution_1080p": "1080p",
+    "convert.resolution_720p": "720p",
+    "convert.engine_automatic": "Automaatne (soovitatav)",
+    "convert.engine_software": "Tarkvara / CPU",
+    "convert.status_ready": "Valmis",
+    "convert.status_skipped": "Vahele jäetud",
+    "convert.status_unknown_resolution": "Tundmatu lahendus",
+    "convert.status_converting": "Teisendamine",
+    "convert.status_passed": "Läbitud",
+    "convert.status_cancelled": "Tühistatud",
+    "convert.status_failed": "Ebaõnnestunud",
+    "choice.system": "Süsteem",
+    "choice.light": "Hele",
+    "choice.dark": "Tume",
+    "choice.high_contrast": "Kõrge kontrastsus",
+    "choice.selected": "Valitud",
+    "choice.visible": "Nähtav",
+    "choice.all_scanned": "Kõik skaneeritud",
+    "choice.copy": "Kopeeri",
+    "choice.move": "Liiguta",
+    "choice.any": "Mõni",
+    "choice.images": "Pildid",
+    "choice.videos": "Videod",
+    "choice.quiet": "Vaikne",
+    "choice.balanced": "Tasakaalustatud",
+    "choice.fast": "Kiire",
+    "convert.status_duplicate_output": "Korduv väljundfaili nimi",
+    "convert.status_same_source": "Sama mis lähtefail",
+    "inspector.channels": "{count} kanal(id)",
+    "inspector.pixel_format": "Pikslivorming",
+    "inspector.dynamic_range": "Dünaamiline ulatus",
+    "inspector.unknown": "Tundmatu",
+    "inspector.unrated": "Hindamata",
+    "inspector.unreadable": "Lugematu"
+  },
+  "help": {
+    "schema": 2,
+    "master_sha256": "bd7b7615b744101897e361e188e64bd95e7d6173d11a1121a797d9d8cf6df279",
+    "direction": "ltr",
+    "translation_method": "machine translation with existing UI glossary; human linguistic review pending",
+    "chapters": [
+      {
+        "id": "quick_start",
+        "title": "Kiire Alusta",
+        "paragraphs": [
+          {
+            "id": "quick_start.p001",
+            "source_sha256": "960121a7b5ea76c266026469e9fb06e35da0a7256799d3736a5fffadc23a744a",
+            "text": "1. Valige iga paani puhul kaust iseseisvalt, kasutades Sirvi, kaustade puu või teekasti.\n2. Lülitage Kaasa alamkaustad sisse ainult siis, kui soovite, et selle kausta all olev kogu puu skannitakse.\n3. Kasutage Detailid sorteeritava tehnilise teabe jaoks või Pisipildid visuaalse sirvimise jaoks.\n4. Valige failid ühes paanis. Kopeeri ja Liiguta kasutavad sihtkoha kaustana teises paanis kuvatavat kausta.\n5. Lülitage Eelvaade või Info sisse ainult selles paanis, kus neid vajate. Mõlemad on vaikimisi välja lülitatud, et säästa arvutusvõimsust.\n6. Failide muutmise toimingud näitavad vajaduse korral kinnitust või eelvaadet. Kustuta kasutab Prügikasti, ja Ctrl+Z tühistab toetatud viimased toimingud."
+          },
+          {
+            "id": "quick_start.p002",
+            "source_sha256": "e826944984faca1d9ef2ae01fac89df96998673ffbcb18c1a6dc76906714d5f9",
+            "text": "Vasakul olevad peatükid selgitavad programmi iga osa. Tippige mis tahes sõna või fraas jaotises Otsi kõigist peatükidest ning vajutage Enter. Sobivad peatükid ja vaste arv ilmuvad sisukorra loendis; kasutage Järgmine vaste, et liikuda läbi iga esile tõstetud vaste."
+          },
+          {
+            "id": "quick_start.p003",
+            "source_sha256": "939c9b2348d95e362c7a750296c26c65e72efb3c8fd71071cf751214de3accaf",
+            "text": "Vali kaust kumbki paan. Kasuta vajadusel Luba, Videod, Pildid ja Kaasa alamkaustad. Kasuta Detailid või Pisipildid, vali või märgi failid, eelvaade neid, seejärel kopeeri, liigu, analüüsi või teisenda neid. Märgitud failid moodustavad tegevusgrupi; esiletõstmine jääb sirvimiseks ja eelvaateks saadaval."
+          }
+        ],
+        "body": "1. Valige iga paani puhul kaust iseseisvalt, kasutades Sirvi, kaustade puu või teekasti.\n2. Lülitage Kaasa alamkaustad sisse ainult siis, kui soovite, et selle kausta all olev kogu puu skannitakse.\n3. Kasutage Detailid sorteeritava tehnilise teabe jaoks või Pisipildid visuaalse sirvimise jaoks.\n4. Valige failid ühes paanis. Kopeeri ja Liiguta kasutavad sihtkoha kaustana teises paanis kuvatavat kausta.\n5. Lülitage Eelvaade või Info sisse ainult selles paanis, kus neid vajate. Mõlemad on vaikimisi välja lülitatud, et säästa arvutusvõimsust.\n6. Failide muutmise toimingud näitavad vajaduse korral kinnitust või eelvaadet. Kustuta kasutab Prügikasti, ja Ctrl+Z tühistab toetatud viimased toimingud.\n\nVasakul olevad peatükid selgitavad programmi iga osa. Tippige mis tahes sõna või fraas jaotises Otsi kõigist peatükidest ning vajutage Enter. Sobivad peatükid ja vaste arv ilmuvad sisukorra loendis; kasutage Järgmine vaste, et liikuda läbi iga esile tõstetud vaste.\n\nVali kaust kumbki paan. Kasuta vajadusel Luba, Videod, Pildid ja Kaasa alamkaustad. Kasuta Detailid või Pisipildid, vali või märgi failid, eelvaade neid, seejärel kopeeri, liigu, analüüsi või teisenda neid. Märgitud failid moodustavad tegevusgrupi; esiletõstmine jääb sirvimiseks ja eelvaateks saadaval."
+      },
+      {
+        "id": "topic_index",
+        "title": "Teemade indeks ja peatükkide lingid",
+        "paragraphs": [
+          {
+            "id": "topic_index.quick_start",
+            "source_sha256": "b69a25b79b167c5a7e40d38d5814f094716600a942de0f3ec6218b07b27489ca",
+            "text": "Kiire Alusta – [chapter:quick_start]"
+          },
+          {
+            "id": "topic_index.getting_started",
+            "source_sha256": "9ac44a658d4ae090bae2481dfb1b5e9df78322e4632b50bacb4e99ccb098f22e",
+            "text": "Saamine Alusta Ø– [chapter:getting_started]"
+          },
+          {
+            "id": "topic_index.details_and_thumbnails",
+            "source_sha256": "84d1aca1a733a359aa903a64b7b96947cc10eba572194f604180ee279e080f20",
+            "text": "Detailid Ja Pisipildid – [chapter:details_and_thumbnails]"
+          },
+          {
+            "id": "topic_index.scanning_and_filtering",
+            "source_sha256": "addcb00612695126e1840e75947c51d82d93657985581b6946e2e9058895aa52",
+            "text": "Skaneerimine ja filtreerimine ÔÇö [chapter:scanning_and_filtering]"
+          },
+          {
+            "id": "topic_index.selecting_and_previewing",
+            "source_sha256": "dcaa1afa4caf83d3fb5359c1d384469e2f0bb809a48dcce645893f93a174d545",
+            "text": "Valimine ja Eelvaadeing – [chapter:selecting_and_previewing]"
+          },
+          {
+            "id": "topic_index.copying_and_moving",
+            "source_sha256": "d439134119d88ce4d1728bbf520f1855578ba9e0e85bbaf480a60a626344f26c",
+            "text": "Kopeerimine ja liigutamine ÔÇö [chapter:copying_and_moving]"
+          },
+          {
+            "id": "topic_index.smart_collections",
+            "source_sha256": "497f5371f88656a6629fdab4f4a433d4d9f4bc360680765c65bac19426e50cad",
+            "text": "Targad kogumikud: salvestatud otsingud ÔÇö [chapter:smart_collections]"
+          },
+          {
+            "id": "topic_index.duplicates_and_comparison",
+            "source_sha256": "bc7a386de1f53414fd714586f4309ed4082731697a1928637001ad61f6b93657",
+            "text": "Duplikaadid Ja Võrdlus – [chapter:duplicates_and_comparison]"
+          },
+          {
+            "id": "topic_index.video_conversion",
+            "source_sha256": "87541c8126b7efe82872889b78979b23a37056c7a88de8c8847df6a8d172d292",
+            "text": "Video konverteerimine ÔÇö [chapter:video_conversion]"
+          },
+          {
+            "id": "topic_index.media_reports",
+            "source_sha256": "88f5be9c7f544bd30958395250596ef1e6d7269236323741b0d581860c896994",
+            "text": "Meediaraporti eksportimine ÔÇö [chapter:media_reports]"
+          },
+          {
+            "id": "topic_index.embedded_metadata",
+            "source_sha256": "c43d4127a8b410091566783a394e9819305712159510d96c02ddbb7ee7bc0352",
+            "text": "Manustatud metaandmete vaatamine ÔÇö [chapter:embedded_metadata]"
+          },
+          {
+            "id": "topic_index.media_integrity",
+            "source_sha256": "a9696b3a52d78f01ec30371ab6e369b1b794257eada141cd26b7fcbc28def24e",
+            "text": "Meedia terviklikkuse kontrollimine ÔÇö [chapter:media_integrity]"
+          },
+          {
+            "id": "topic_index.video_contact_sheets",
+            "source_sha256": "d8c3d3d7bfb6f6240bd2dff740e17dea7096558eed8132d688fce5b8a7d38f73",
+            "text": "Videokontaktlehe loomine ÔÇö [chapter:video_contact_sheets]"
+          },
+          {
+            "id": "topic_index.folder_synchronization",
+            "source_sha256": "c5ffb5dcb3df4777df924d496bf92af4c0c309f7dc6571a8f95f2c8efb528e08",
+            "text": "Kaust Sünkroniseerimine – [chapter:folder_synchronization]"
+          },
+          {
+            "id": "topic_index.folder_organization_rules",
+            "source_sha256": "1306acd5de57ef19675cac113a607091b30225a064b0b38a632584586670cbad",
+            "text": "Kaust Organisatsiooni reeglid – [chapter:folder_organization_rules]"
+          },
+          {
+            "id": "topic_index.transfer_queue",
+            "source_sha256": "6c218104ba617d50d4666bcf2e5e70b9635d64f83ea5e74719da6042dc1c5851",
+            "text": "Ülekanderea haldamine ÔÇö [chapter:transfer_queue]"
+          },
+          {
+            "id": "topic_index.safe_file_actions",
+            "source_sha256": "5ddc3613ad7b87ccfee060d77a71fadb05a457f0de7ac987a4405385b7803b59",
+            "text": "Failide turvaline käsitlemine ÔÇö [chapter:safe_file_actions]"
+          },
+          {
+            "id": "topic_index.workspaces_and_cache",
+            "source_sha256": "9bedfb9cdb5f7f673cb6f702accaf18c7be93438596d081884e6616cbb751195",
+            "text": "Tööalad ja vahemälu ÔÇö [chapter:workspaces_and_cache]"
+          },
+          {
+            "id": "topic_index.language",
+            "source_sha256": "57d2d6a2b519f2d4a908f2c480625bc9d06f02a72c79d74aae29f6de3818a779",
+            "text": "Keel ÔÇö [chapter:language]"
+          },
+          {
+            "id": "topic_index.glossary",
+            "source_sha256": "c7a062c88b48c29ae512bf610ce2700dd67290004652c38e6af6dce5c9f29f8b",
+            "text": "Sõnastik ÔÇö [chapter:glossary]"
+          },
+          {
+            "id": "topic_index.support_the_project",
+            "source_sha256": "01ccc57e26166b3a3a356d1ef2192f8c832175b4c003038bb1692f5f94473ebe",
+            "text": "Projekti toetamine ÔÇö [chapter:support_the_project]"
+          }
+        ],
+        "body": "Kiire Alusta – [chapter:quick_start]\n\nSaamine Alusta Ø– [chapter:getting_started]\n\nDetailid Ja Pisipildid – [chapter:details_and_thumbnails]\n\nSkaneerimine ja filtreerimine ÔÇö [chapter:scanning_and_filtering]\n\nValimine ja Eelvaadeing – [chapter:selecting_and_previewing]\n\nKopeerimine ja liigutamine ÔÇö [chapter:copying_and_moving]\n\nTargad kogumikud: salvestatud otsingud ÔÇö [chapter:smart_collections]\n\nDuplikaadid Ja Võrdlus – [chapter:duplicates_and_comparison]\n\nVideo konverteerimine ÔÇö [chapter:video_conversion]\n\nMeediaraporti eksportimine ÔÇö [chapter:media_reports]\n\nManustatud metaandmete vaatamine ÔÇö [chapter:embedded_metadata]\n\nMeedia terviklikkuse kontrollimine ÔÇö [chapter:media_integrity]\n\nVideokontaktlehe loomine ÔÇö [chapter:video_contact_sheets]\n\nKaust Sünkroniseerimine – [chapter:folder_synchronization]\n\nKaust Organisatsiooni reeglid – [chapter:folder_organization_rules]\n\nÜlekanderea haldamine ÔÇö [chapter:transfer_queue]\n\nFailide turvaline käsitlemine ÔÇö [chapter:safe_file_actions]\n\nTööalad ja vahemälu ÔÇö [chapter:workspaces_and_cache]\n\nKeel ÔÇö [chapter:language]\n\nSõnastik ÔÇö [chapter:glossary]\n\nProjekti toetamine ÔÇö [chapter:support_the_project]"
+      },
+      {
+        "id": "getting_started",
+        "title": "Saamine Alusta-iks",
+        "paragraphs": [
+          {
+            "id": "getting_started.p001",
+            "source_sha256": "5f188741bf38dafbb6803c0d32c5c55281c418b27b6b6204c2b4b9470484371b",
+            "text": "Iga akna pool on sõltumatu kaustade sirvija. Kasuta sirvimist, kaustade puud, aadressikasti või Üles, et valida kaustu. Klõpsa paneeli sees, et see aktiivseks muuta."
+          },
+          {
+            "id": "getting_started.p002",
+            "source_sha256": "5c862d90858ec952be55c182a8161ba52748f10b89bab70f8f5f595c38c95370",
+            "text": "Vaade > Välimus ja teksti suurus pakub Süsteem, Hele, Tume ja Kõrge kontrastsus teemasid ning 100%, 125%, 150%, 175% ja 200% liidese skaala. Muudatuste eelvaade kuvatakse kohe kõigis olemasolevates juhtnuppudes. Salvesta hoiab valiku tulevaste käivitamiste jaoks, Tühista või akna sulgemine taastab eelmised seaded ning Taasta süsteemi vaikeväärtused taastab operatsioonisüsteemi teema 100%-l. Need sätted muudavad ainult esitlust, mitte kunagi meedia- ega teegandmeid."
+          },
+          {
+            "id": "getting_started.p003",
+            "source_sha256": "716b38f3fc587aa8c148a51715d481a35d5c135e6211016faa710ce34b4bf55a",
+            "text": "Igal paanil on oma kompaktne Exploreri-stiilis navigeerimisriba: ÔåÉ läheb tagasi, ÔåÆ läheb edasi, ↑ avab ülemkausta ja Ôå╗ Värskenda kuvab kaustapuu ja praeguse skannimise. Teise kausta avamine pärast tagasiminekut alustab sellest punktist uut edasiminekute ajalugu."
+          },
+          {
+            "id": "getting_started.p004",
+            "source_sha256": "b34bc532ebe9785101efd80988074ed03a0c0fbf0e349d6133d31620e8a8ad3f",
+            "text": "Kaustapuu järgib alati paani praegust asukohta: see avab vanemkaustad, valib täpse skannimise algkausta ning kerib selle kausta nähtavale. Praegune kaust jääb suletuks kuni selle avamiseni, vältides ajutise Laadimine kohatäitja kuvamist. Sama juhtub ka tööruumi taastamisel või tee sisestamisel, nii et draivi juurkaust ei jää esile tõstetuks, kui sügavam kaust skannitakse. Kaasa alamkaustad alustab valitud/praegusest kaustast, mis on selles paanis nähtav, mitte selle kohalolevast draivi juurkaustast."
+          },
+          {
+            "id": "getting_started.p005",
+            "source_sha256": "90fbbedebb973bad42d26e8534c1fdab61604a30d9ead7a4ce4c88ea2cc4012a",
+            "text": "Igal aknal on sõltumatud Tagasi, Edasi, Üles ja Värskenda juhtelemendid, filtrid, sorteerimine, pisipildid, Teave ja Eelvaade. Video eelvaade algab kiirusel 4├ù. Komaga ja punktiga liigutatakse tagasi või edasi kümme protsenti. Eelvaade ja Teave jäävad välja lülitatuks, kuni need on lubatud, et vähendada taustatööd."
+          },
+          {
+            "id": "getting_started.tree_alignment_1272",
+            "source_sha256": "04feb6a3e71761ee4884be7564bb8832204338d93939bf1fdd67aa20f7e62380",
+            "text": "Kaustade puu joondab automaatselt praegu nähtavad oksad, et vältida raisatud taanet. Kui kerite sügavamatesse oksadesse, nihkub see horisontaalselt; kerides tagasi üles liikides vanemate juurde, naaseb see vasakule ilma klõpsuta. Täielik hierarhia on endiselt kättesaadav ning puu all olev horisontaalne kerimisriba võimaldab käsitsi horisontaalset vaatamist."
+          }
+        ],
+        "body": "Iga akna pool on sõltumatu kaustade sirvija. Kasuta sirvimist, kaustade puud, aadressikasti või Üles, et valida kaustu. Klõpsa paneeli sees, et see aktiivseks muuta.\n\nVaade > Välimus ja teksti suurus pakub Süsteem, Hele, Tume ja Kõrge kontrastsus teemasid ning 100%, 125%, 150%, 175% ja 200% liidese skaala. Muudatuste eelvaade kuvatakse kohe kõigis olemasolevates juhtnuppudes. Salvesta hoiab valiku tulevaste käivitamiste jaoks, Tühista või akna sulgemine taastab eelmised seaded ning Taasta süsteemi vaikeväärtused taastab operatsioonisüsteemi teema 100%-l. Need sätted muudavad ainult esitlust, mitte kunagi meedia- ega teegandmeid.\n\nIgal paanil on oma kompaktne Exploreri-stiilis navigeerimisriba: ÔåÉ läheb tagasi, ÔåÆ läheb edasi, ↑ avab ülemkausta ja Ôå╗ Värskenda kuvab kaustapuu ja praeguse skannimise. Teise kausta avamine pärast tagasiminekut alustab sellest punktist uut edasiminekute ajalugu.\n\nKaustapuu järgib alati paani praegust asukohta: see avab vanemkaustad, valib täpse skannimise algkausta ning kerib selle kausta nähtavale. Praegune kaust jääb suletuks kuni selle avamiseni, vältides ajutise Laadimine kohatäitja kuvamist. Sama juhtub ka tööruumi taastamisel või tee sisestamisel, nii et draivi juurkaust ei jää esile tõstetuks, kui sügavam kaust skannitakse. Kaasa alamkaustad alustab valitud/praegusest kaustast, mis on selles paanis nähtav, mitte selle kohalolevast draivi juurkaustast.\n\nIgal aknal on sõltumatud Tagasi, Edasi, Üles ja Värskenda juhtelemendid, filtrid, sorteerimine, pisipildid, Teave ja Eelvaade. Video eelvaade algab kiirusel 4├ù. Komaga ja punktiga liigutatakse tagasi või edasi kümme protsenti. Eelvaade ja Teave jäävad välja lülitatuks, kuni need on lubatud, et vähendada taustatööd.\n\nKaustade puu joondab automaatselt praegu nähtavad oksad, et vältida raisatud taanet. Kui kerite sügavamatesse oksadesse, nihkub see horisontaalselt; kerides tagasi üles liikides vanemate juurde, naaseb see vasakule ilma klõpsuta. Täielik hierarhia on endiselt kättesaadav ning puu all olev horisontaalne kerimisriba võimaldab käsitsi horisontaalset vaatamist."
+      },
+      {
+        "id": "details_and_thumbnails",
+        "title": "Detailid ja Pisipildid",
+        "paragraphs": [
+          {
+            "id": "details_and_thumbnails.p001",
+            "source_sha256": "0d7fe0d7d10b204c166baf479099c908e17fbe87952b9f9f35dd9cf1de776edb",
+            "text": "Kasuta vaate valijat kas kummagi paani ülaosas või vaate menüüd, et vahetada see paan vahel Detailid ja Pisipildid. Mõlemad vaated näitavad samu faile ja jagavad nende valikut. Pisipiltide režiim arvestab Kaasa alamkaustad, meediasaadete lülitid, otsing, resolutsioon, täpsemad filtrid ja sortimine. Selle Sort-menüü pakub täpset suunda nime järgi (A–Z/Z–A),Muudetud kuupäev (vanim/uutim), Faili suurus, Pikkus, Koodek, Resolutsioon, Tüüp, Bitikiirus, Kaaderkiirus, ja Hinnang. Iga paan sorteerib sõltumatult, nupp näitab aktiivset järjestust ning salvestatud tööruumid ja Nutikogud taastavad selle.Detailid Pealkirjad jäävad kiireks sortimiseks klikitavaks.Suhteline tees ilmuvad pisipiltide alla rekursiivsete skannimiste ajal. Kasutage pisipildi suuruse liugurit vaatevalija kõrval. Nimelised suuruse eelseadistused jäävad menüü Vaade > alla Pisipiltide suurus. Jätkuvon vaikimisi pisipiltide sirvija: üks kerimisriba hõlmab kogu filtreeritud kogumise, samas kui programm loob ainult nähtavad kaardid koos väikese puhvri ja taaskasutab neid kerimisel. See hoiab vidina ja pildimälu väga suurte raamatukogude puhul piiratud. Valige Leheküljelinekõrval igal ajal, et taastada kehtestatud lehevõrk; vali Automaatne, 200, 500 või 1 000 kaarti lehe kohta ja kasuta kompaktseid Õige ja Vasak kontrollnuppe. Automaatne seadistus kasutab 200, kui videod on vähemalt pooled filtreeritud tulemustest ja 500, kui enamus on pilte. Iga paan ja salvestatud tööruum mäletab oma brauseri valikut."
+          },
+          {
+            "id": "details_and_thumbnails.p002",
+            "source_sha256": "f88d676b4ba78ef8e5f3064d34755f67ce646a0965745c31f8a74570a37bd2d4",
+            "text": "Pisipiltide võre mõõdab tegelikku brauseri laiust enne esimest kuvamist ja jaotub automaatselt ümber, kui paneeli või kausta/brauseri jagajat muudetakse. Leheküljeline režiimis kasutab lehekülg 1 seega sama veergude arvu kui hilisemad lehed antud paneeli laiuse ja pisipildi suuruse korral. Jätkuv režiimis arvutatakse suuruse muutmisel virtuaalsed read ümber ilma kogu kogumit üles ehitamata. Kerige hiirerattaga ükskõik kus pisipiltpaneelil—sh kaardi, pildi või failinime kohal—et kerida seda paneeli üles ja alla; kaks paneeli kerivad sõltumatult."
+          },
+          {
+            "id": "details_and_thumbnails.p003",
+            "source_sha256": "878f1f9405d3cda5132d953b07e64ce5639125896f32cdb19341e4c2156fd898",
+            "text": "Detailid režiimis on vaikejärjestus järgmine: Nimi, Koodek, Resolutsioon, Videopikkus, Faili suurus, MB/min, FPS, Muudetud kuupäev, Tüüp, Bitikiirus, Heli, HDR, Megapikslit, Silt, Sildid ja Hinnang. Lohistage veerude vahel olev jagaja, et muuta veeru laiust mis tahes ulatuses; horisontaalse muutmisikoon ilmub, kui jagaja on valmis. Lohistage ise veerupäist, et muuta selle järjekorda—klaviatuuri lisanuppu ei ole vaja. Lihtne veeru päise klõpsimine sorteerib endiselt. Veerud säilitavad valitud laiused ja horisontaalne kerimisriba ulatub paneeli väljaspool asuvate väljadesse. Täpseks juhtimiseks valige Vaade > Veerudega seadistamine või paremklõpsake veerupäisel; aknas Veerud saab välju liigutada, määrata täpseid laiuseid ja taastada vaikeseaded. Olemasolevad isiklikult korraldatud ja salvestatud veerujärjestused säilitatakse. Pikad rekursiivsed teeviited lühendatakse keskel, et failinimi jääks nähtavaks."
+          },
+          {
+            "id": "details_and_thumbnails.p004",
+            "source_sha256": "88415a6236cebbf0ce6211ef333a7271672023a2bdae6ccdc38584b6cce810d6",
+            "text": "Videote pisipildid valitakse klipist 15% ulatuses, et vältida ebaesinduslikke avaraame. Kui kestuse metaandmed puuduvad, kasutab rakendus ühesekundilist varuvarianti. Genereeritud pisipildid vahemällu salvestatakse, et korrata sirvimist kiiremini."
+          },
+          {
+            "id": "details_and_thumbnails.p005",
+            "source_sha256": "7a726d60e44b6a6ccdb5c196cf1f81af226094ce2b8f43f72c1bf065feb34ad5",
+            "text": "Tavalised pildithumbnailid dekrüpteeritakse tõhusalt protsessis Pillow abil; FFmpeg on kasutusel videokaadrite jaoks ja ebatavaliste pildifailide tagavara puhul. Thumbnailide dekrüpteerimine kasutab väikest töötlusvõrku, nii et suur kaust ei saa käivitada liigset arvu dekoodereid. Vahemällu salvestatud pildid kirjutatakse aatomiliselt ja kontrollitakse enne kuvamist; puudulikud või rikutud vahemälu thumbnailid ignoreeritakse ja genereeritakse uuesti, samal ajal kui vanale võrgule kuuluvad tulemused kõrvaldatakse turvaliselt."
+          },
+          {
+            "id": "details_and_thumbnails.p006",
+            "source_sha256": "ea382833a32b1bb5c8dac172f29751f48d27aead08969ef699cca6142fddc69f",
+            "text": "Genereeritud pisipildid on saadaval ka pärast programmi sulgemist, nii et muutuva faili uuesti avamine kasutab tavaliselt kohe selle vahemälus olevat pilti. Tööriistad > Vahemälu ja skaneerimine kontrollib maksimaalset pisipiltide vahemälu suurust operatsioonisüsteemi draivi protsendina; vaikimisi on see 1%. Taaskasutatud pisipildid märgitakse hiljutisteks ja kui piir ületatakse, eemaldatakse esimesena kõige harvemini kasutatud kirjed. Piiri saab seada vahemikku 0,1% kuni 10% ja see rakendub kohe. Kustuta pisipildid teatab praeguse arvu ja suuruse enne kinnitamist ning eemaldab seejärel ainult genereeritud pisipildid – mitte originaalmeediat ega vahemälus olevaid tehnilisi metaandmeid. Tühjenda kogu vahemälu eemaldab nii pisipildid kui ka metaandmed."
+          },
+          {
+            "id": "details_and_thumbnails.size_slider_1272",
+            "source_sha256": "f73fba2585edabe7710a59372a59bce3e3509092c20423aeed2583c4bc430100",
+            "text": "Miniatuuride suuruse liugur ilmub ainult Pisipildid-s; Detailid peidab selle. Liigutamine reguleerib miniatuuri suurust pidevalt ning vaate vahetamine säilitab selle seade. Pauseeri teeb pärast liigutamist väikese pausi, et võrk uuesti korraldada; suuremad pildid säilitavad oma proportsioonid ja praegune suurus salvestatakse paani seadistustega. Nimelised suuruse eelseaded jäävad kättesaadavaks Vaade menüüs; paani päises ei ole duplikaat-suuruse rippmenüüd."
+          }
+        ],
+        "body": "Kasuta vaate valijat kas kummagi paani ülaosas või vaate menüüd, et vahetada see paan vahel Detailid ja Pisipildid. Mõlemad vaated näitavad samu faile ja jagavad nende valikut. Pisipiltide režiim arvestab Kaasa alamkaustad, meediasaadete lülitid, otsing, resolutsioon, täpsemad filtrid ja sortimine. Selle Sort-menüü pakub täpset suunda nime järgi (A–Z/Z–A),Muudetud kuupäev (vanim/uutim), Faili suurus, Pikkus, Koodek, Resolutsioon, Tüüp, Bitikiirus, Kaaderkiirus, ja Hinnang. Iga paan sorteerib sõltumatult, nupp näitab aktiivset järjestust ning salvestatud tööruumid ja Nutikogud taastavad selle.Detailid Pealkirjad jäävad kiireks sortimiseks klikitavaks.Suhteline tees ilmuvad pisipiltide alla rekursiivsete skannimiste ajal. Kasutage pisipildi suuruse liugurit vaatevalija kõrval. Nimelised suuruse eelseadistused jäävad menüü Vaade > alla Pisipiltide suurus. Jätkuvon vaikimisi pisipiltide sirvija: üks kerimisriba hõlmab kogu filtreeritud kogumise, samas kui programm loob ainult nähtavad kaardid koos väikese puhvri ja taaskasutab neid kerimisel. See hoiab vidina ja pildimälu väga suurte raamatukogude puhul piiratud. Valige Leheküljelinekõrval igal ajal, et taastada kehtestatud lehevõrk; vali Automaatne, 200, 500 või 1 000 kaarti lehe kohta ja kasuta kompaktseid Õige ja Vasak kontrollnuppe. Automaatne seadistus kasutab 200, kui videod on vähemalt pooled filtreeritud tulemustest ja 500, kui enamus on pilte. Iga paan ja salvestatud tööruum mäletab oma brauseri valikut.\n\nPisipiltide võre mõõdab tegelikku brauseri laiust enne esimest kuvamist ja jaotub automaatselt ümber, kui paneeli või kausta/brauseri jagajat muudetakse. Leheküljeline režiimis kasutab lehekülg 1 seega sama veergude arvu kui hilisemad lehed antud paneeli laiuse ja pisipildi suuruse korral. Jätkuv režiimis arvutatakse suuruse muutmisel virtuaalsed read ümber ilma kogu kogumit üles ehitamata. Kerige hiirerattaga ükskõik kus pisipiltpaneelil—sh kaardi, pildi või failinime kohal—et kerida seda paneeli üles ja alla; kaks paneeli kerivad sõltumatult.\n\nDetailid režiimis on vaikejärjestus järgmine: Nimi, Koodek, Resolutsioon, Videopikkus, Faili suurus, MB/min, FPS, Muudetud kuupäev, Tüüp, Bitikiirus, Heli, HDR, Megapikslit, Silt, Sildid ja Hinnang. Lohistage veerude vahel olev jagaja, et muuta veeru laiust mis tahes ulatuses; horisontaalse muutmisikoon ilmub, kui jagaja on valmis. Lohistage ise veerupäist, et muuta selle järjekorda—klaviatuuri lisanuppu ei ole vaja. Lihtne veeru päise klõpsimine sorteerib endiselt. Veerud säilitavad valitud laiused ja horisontaalne kerimisriba ulatub paneeli väljaspool asuvate väljadesse. Täpseks juhtimiseks valige Vaade > Veerudega seadistamine või paremklõpsake veerupäisel; aknas Veerud saab välju liigutada, määrata täpseid laiuseid ja taastada vaikeseaded. Olemasolevad isiklikult korraldatud ja salvestatud veerujärjestused säilitatakse. Pikad rekursiivsed teeviited lühendatakse keskel, et failinimi jääks nähtavaks.\n\nVideote pisipildid valitakse klipist 15% ulatuses, et vältida ebaesinduslikke avaraame. Kui kestuse metaandmed puuduvad, kasutab rakendus ühesekundilist varuvarianti. Genereeritud pisipildid vahemällu salvestatakse, et korrata sirvimist kiiremini.\n\nTavalised pildithumbnailid dekrüpteeritakse tõhusalt protsessis Pillow abil; FFmpeg on kasutusel videokaadrite jaoks ja ebatavaliste pildifailide tagavara puhul. Thumbnailide dekrüpteerimine kasutab väikest töötlusvõrku, nii et suur kaust ei saa käivitada liigset arvu dekoodereid. Vahemällu salvestatud pildid kirjutatakse aatomiliselt ja kontrollitakse enne kuvamist; puudulikud või rikutud vahemälu thumbnailid ignoreeritakse ja genereeritakse uuesti, samal ajal kui vanale võrgule kuuluvad tulemused kõrvaldatakse turvaliselt.\n\nGenereeritud pisipildid on saadaval ka pärast programmi sulgemist, nii et muutuva faili uuesti avamine kasutab tavaliselt kohe selle vahemälus olevat pilti. Tööriistad > Vahemälu ja skaneerimine kontrollib maksimaalset pisipiltide vahemälu suurust operatsioonisüsteemi draivi protsendina; vaikimisi on see 1%. Taaskasutatud pisipildid märgitakse hiljutisteks ja kui piir ületatakse, eemaldatakse esimesena kõige harvemini kasutatud kirjed. Piiri saab seada vahemikku 0,1% kuni 10% ja see rakendub kohe. Kustuta pisipildid teatab praeguse arvu ja suuruse enne kinnitamist ning eemaldab seejärel ainult genereeritud pisipildid – mitte originaalmeediat ega vahemälus olevaid tehnilisi metaandmeid. Tühjenda kogu vahemälu eemaldab nii pisipildid kui ka metaandmed.\n\nMiniatuuride suuruse liugur ilmub ainult Pisipildid-s; Detailid peidab selle. Liigutamine reguleerib miniatuuri suurust pidevalt ning vaate vahetamine säilitab selle seade. Pauseeri teeb pärast liigutamist väikese pausi, et võrk uuesti korraldada; suuremad pildid säilitavad oma proportsioonid ja praegune suurus salvestatakse paani seadistustega. Nimelised suuruse eelseaded jäävad kättesaadavaks Vaade menüüs; paani päises ei ole duplikaat-suuruse rippmenüüd."
+      },
+      {
+        "id": "scanning_and_filtering",
+        "title": "Skaneerimine ja filtreerimine",
+        "paragraphs": [
+          {
+            "id": "scanning_and_filtering.p001",
+            "source_sha256": "c4712ae8d144d44f4ec6a47e8ad4b477c14275c9c493ace31eef65a7a8b9168d",
+            "text": "Luba Kaasa alamkaustad rekursiivseks skannimiseks. Failinimede leidmiseks kasutage Otsi, täpse lahenduse jaoks Resolutsioon ja täiendavaid filtreid mõõtmete, faili suuruse, kestuse, koodeki, orientatsiooni ja kuupäeva jaoks. Tühista peatab pika skanni. Vahemälu ja skaneerimine seaded Tööriistad all kontrollivad paralleelseid töötajaid ja välistatud mustreid."
+          },
+          {
+            "id": "scanning_and_filtering.p002",
+            "source_sha256": "5f55a7b5ecdce4426e11fdc93539a0e0a436839a62d94bc8019a50af3c1deae6",
+            "text": "Skanneerimistulemuste salvestamiseks tabelina või dokumendina vaadake [chapter:media_reports]."
+          },
+          {
+            "id": "scanning_and_filtering.p003",
+            "source_sha256": "6296398bb5bd08c4d57ca8f2606a7b6164825f670f0bfa1fd408f26fca05c53e",
+            "text": "Suurrekursiivsed skaneeringud koguvad tulemusi ilma kasvavat brauserit korduvalt uuesti üles ehitamata. Kui skaneerimine lõpeb,Detailidreadid lisatakse lühikestes partiides, nii et Esita/Pauseeri, navigeerimine, maalimine ja aknajuhtimine jäävad reageerimiseks võimekaks. Ka pisipiltide võrgustikud uuenevad skannimise lõppedes. Eduks osutunud kopeerimise, liigutamise ja kustutamise käsud uuendavad nüüd ainult mõjutatud mälus olevaid kirjeid, selle asemel et töödelda mõlemaid kaustu uuesti; rakenduse väljast laetud tundmatud failid käivitavad turvakontrolli ainult mõjutatud paanis. Metaandmete vahemälu salvestamine toimub taustal ja peatatud FFmpegeelvaate protsessid puhastatakse kiiresti.Tööriistad > Vahemälu ja skaneeriminepakub Vaikne, Tasakaalustatud, ja kiired jõudluse profiilid.Tasakaalustatud säilitab kehtestatud käitumise. Vaikne vähendab skannimise ja pisipildi samaaegsust ning seab eesmärgiks 8 eelvaate kaadrit sekundis; Kiire suurendab samaaegsust ja seab eesmärgiks 15 kaadrit sekundis.Vaikne ja Tasakaalustatudkäivitage uusi vahemällu salvestamata uuringuid ja pisipildi dekodeeringuid, kui eelvaade mängib või kerib, andes interaktiivsele tööle prioriteedi.Vahemällu salvestatud Tulemusi ei viivitatata kunagi tahtlikult. Metadata-töötaja väli jääb profiili valimisel reguleeritavaks."
+          },
+          {
+            "id": "scanning_and_filtering.p004",
+            "source_sha256": "cfc2a88e50877f4251ec58b90265b0c4485c3899666c8cdd2dcd43cc0541aa04",
+            "text": "Igal poolel on sõltumatu taasesitus, ajaskaala, kiirus, heli/summutamine, kaadri vahemälu ja dekoodri protsessid. Kriimustusvideo taasesitus on teadlikult ajas võetud kiirusega 12 kaadrit sekundis. See hoiab eelvaated sujuvad, vältides samal ajal tugevat protsessori kasutust, mis tekib ülejäänud klipi dekodeerimisel kiiremini, kui eelvaade suudab seda kuvada, eriti suurte kaustaskannimiste ajal."
+          },
+          {
+            "id": "scanning_and_filtering.p005",
+            "source_sha256": "6d2351f7d55b8f5bf804e7ab66908fd915359b92794340ef24a0429900443a62",
+            "text": "Klõpsake eelvaate ajateljel suvalises kohas, et viia selle marker otse sinna asendisse ja jätkata mängimist sealt. Samuti saate markerit vajutada ja lohistada pidevaks kerimiseks. Kerimine tühistab vanema kaadri taotluse kohe, kui küsitakse uut asendit, takistades mitmel FFmpeg dekrüptoril taustal konkureerimast. Hiljuti külastatud positsioonid salvestatakse neljandiku sekundi sammudesse, nii et nende juurde tagasiliikumine on kohene. Tõstke liugur üles, et jätkata mängimist valitud positsioonist."
+          },
+          {
+            "id": "scanning_and_filtering.p006",
+            "source_sha256": "fe8d26dfc3bcebb327cad49202bcc0288ca9ad0b75babe71c0d04dfab8ac9fea",
+            "text": "Video eelvaade on vaikimisi 4× kiirusel, et kiiremini läbi vaadata. Kasutage ajajoone all olevaid 1×, 2×, 4×, 6×, 8× ja 16× nuppe, et muuta esituse kiirust. Aktiivne kiirusnupp on keelatud, et praegune seade oleks selge. Heli on vaikimisi vaigistatud; valige Vaigistatud, et lubada sünkroonitud heli, ja valige Heli, et see uuesti vaigistada. Kiiruse muutmine esitamise ajal taaskäivitab video ja heli koos praeguses ajajoone asukohas."
+          },
+          {
+            "id": "scanning_and_filtering.p007",
+            "source_sha256": "3214a4d4fd458bb76deb51ff30947b215ded0ce500221cb3511bf25da94d6a74",
+            "text": "Kasutage |ÔùÇ ja ÔûÂ| heli nupu kõrval, et liikuda ühe kaadri võrra tagasi või edasi. Rakendus kasutab video seaduslikku kaadrisagedust ning kui see metaandmete puudumisel on 25 kaadrit sekundis, ja teeb täpse otsingu tulemuseks oleva staatilise kaadri saamiseks. Valige ⤓ PNG, et eksportida jooksva video positsioon täiskvaliteediga algallika PNG-na; esitamine peatub täpselt sellel positsioonil, väljund kirjutatakse ajutisse faili ja videot ei muudeta kunagi."
+          },
+          {
+            "id": "scanning_and_filtering.p008",
+            "source_sha256": "2427ebd091d494c4bd3cbf71c48a081ab4ee23a5f549571ceeb7c12ea2c351d6",
+            "text": "Kui fookus on väljaspool tippimisvälja, vajutage koma (,) aktiveeritud paani video eelvaate tagasihüppeks 10% võrra selle kogu kestusest või punkt (.) edasihüppeks 10%. Aktiivne paneel on see, mida klikiti viimasena. Mängiv eelvaade jätkab mängimist uuest asukohast; pausil olev eelvaade jääb pausile ja kuvab täpselt sihtraami. Nupud töötavad tavapäraselt tee-, otsingu-, filtri- ja dialoogiväljade puhul."
+          },
+          {
+            "id": "scanning_and_filtering.p009",
+            "source_sha256": "decded439831addc29ee74040e8bfff01524b194d15c0468751e96d11df67309",
+            "text": "Värskenda aktiivset paani või Värskenda mõlemad paneelid Kuvamise all pärast kaustade või failide muutmist Fail Exploreris või mõnes teises rakenduses. Värskenda ehitab kaustapuu uuesti üles ja skänneerib meediat uuesti. See on saadaval ka F5 kaudu, tööriistaribal ning brauseri ja kaustapuu kontekstimenüüdes. Teise võimalusena võimaldage Otseülekanne sõltumatult kummaski paanis, et jälgida oma praegust kausta automaatselt. Otseülekanne jälgib navigeerimist ja kasutab sama ulatust kui Kaasa alamkaustad. Loodud, muudetud, ümbernimetatud ja kustutatud objektide pursked kombineeritakse enne värskendamist; kaustamuudatused uuendavad ka puud. Otseülekanne märgis ilmub lõpetatud skannimise staatusele. Otseülekanne on vaikimisi välja lülitatud ja selle märkeruudu tühjendamine taastab kohe käsitsi värskendamise käitumise."
+          }
+        ],
+        "body": "Luba Kaasa alamkaustad rekursiivseks skannimiseks. Failinimede leidmiseks kasutage Otsi, täpse lahenduse jaoks Resolutsioon ja täiendavaid filtreid mõõtmete, faili suuruse, kestuse, koodeki, orientatsiooni ja kuupäeva jaoks. Tühista peatab pika skanni. Vahemälu ja skaneerimine seaded Tööriistad all kontrollivad paralleelseid töötajaid ja välistatud mustreid.\n\nSkanneerimistulemuste salvestamiseks tabelina või dokumendina vaadake [chapter:media_reports].\n\nSuurrekursiivsed skaneeringud koguvad tulemusi ilma kasvavat brauserit korduvalt uuesti üles ehitamata. Kui skaneerimine lõpeb,Detailidreadid lisatakse lühikestes partiides, nii et Esita/Pauseeri, navigeerimine, maalimine ja aknajuhtimine jäävad reageerimiseks võimekaks. Ka pisipiltide võrgustikud uuenevad skannimise lõppedes. Eduks osutunud kopeerimise, liigutamise ja kustutamise käsud uuendavad nüüd ainult mõjutatud mälus olevaid kirjeid, selle asemel et töödelda mõlemaid kaustu uuesti; rakenduse väljast laetud tundmatud failid käivitavad turvakontrolli ainult mõjutatud paanis. Metaandmete vahemälu salvestamine toimub taustal ja peatatud FFmpegeelvaate protsessid puhastatakse kiiresti.Tööriistad > Vahemälu ja skaneeriminepakub Vaikne, Tasakaalustatud, ja kiired jõudluse profiilid.Tasakaalustatud säilitab kehtestatud käitumise. Vaikne vähendab skannimise ja pisipildi samaaegsust ning seab eesmärgiks 8 eelvaate kaadrit sekundis; Kiire suurendab samaaegsust ja seab eesmärgiks 15 kaadrit sekundis.Vaikne ja Tasakaalustatudkäivitage uusi vahemällu salvestamata uuringuid ja pisipildi dekodeeringuid, kui eelvaade mängib või kerib, andes interaktiivsele tööle prioriteedi.Vahemällu salvestatud Tulemusi ei viivitatata kunagi tahtlikult. Metadata-töötaja väli jääb profiili valimisel reguleeritavaks.\n\nIgal poolel on sõltumatu taasesitus, ajaskaala, kiirus, heli/summutamine, kaadri vahemälu ja dekoodri protsessid. Kriimustusvideo taasesitus on teadlikult ajas võetud kiirusega 12 kaadrit sekundis. See hoiab eelvaated sujuvad, vältides samal ajal tugevat protsessori kasutust, mis tekib ülejäänud klipi dekodeerimisel kiiremini, kui eelvaade suudab seda kuvada, eriti suurte kaustaskannimiste ajal.\n\nKlõpsake eelvaate ajateljel suvalises kohas, et viia selle marker otse sinna asendisse ja jätkata mängimist sealt. Samuti saate markerit vajutada ja lohistada pidevaks kerimiseks. Kerimine tühistab vanema kaadri taotluse kohe, kui küsitakse uut asendit, takistades mitmel FFmpeg dekrüptoril taustal konkureerimast. Hiljuti külastatud positsioonid salvestatakse neljandiku sekundi sammudesse, nii et nende juurde tagasiliikumine on kohene. Tõstke liugur üles, et jätkata mängimist valitud positsioonist.\n\nVideo eelvaade on vaikimisi 4× kiirusel, et kiiremini läbi vaadata. Kasutage ajajoone all olevaid 1×, 2×, 4×, 6×, 8× ja 16× nuppe, et muuta esituse kiirust. Aktiivne kiirusnupp on keelatud, et praegune seade oleks selge. Heli on vaikimisi vaigistatud; valige Vaigistatud, et lubada sünkroonitud heli, ja valige Heli, et see uuesti vaigistada. Kiiruse muutmine esitamise ajal taaskäivitab video ja heli koos praeguses ajajoone asukohas.\n\nKasutage |ÔùÇ ja ÔûÂ| heli nupu kõrval, et liikuda ühe kaadri võrra tagasi või edasi. Rakendus kasutab video seaduslikku kaadrisagedust ning kui see metaandmete puudumisel on 25 kaadrit sekundis, ja teeb täpse otsingu tulemuseks oleva staatilise kaadri saamiseks. Valige ⤓ PNG, et eksportida jooksva video positsioon täiskvaliteediga algallika PNG-na; esitamine peatub täpselt sellel positsioonil, väljund kirjutatakse ajutisse faili ja videot ei muudeta kunagi.\n\nKui fookus on väljaspool tippimisvälja, vajutage koma (,) aktiveeritud paani video eelvaate tagasihüppeks 10% võrra selle kogu kestusest või punkt (.) edasihüppeks 10%. Aktiivne paneel on see, mida klikiti viimasena. Mängiv eelvaade jätkab mängimist uuest asukohast; pausil olev eelvaade jääb pausile ja kuvab täpselt sihtraami. Nupud töötavad tavapäraselt tee-, otsingu-, filtri- ja dialoogiväljade puhul.\n\nVärskenda aktiivset paani või Värskenda mõlemad paneelid Kuvamise all pärast kaustade või failide muutmist Fail Exploreris või mõnes teises rakenduses. Värskenda ehitab kaustapuu uuesti üles ja skänneerib meediat uuesti. See on saadaval ka F5 kaudu, tööriistaribal ning brauseri ja kaustapuu kontekstimenüüdes. Teise võimalusena võimaldage Otseülekanne sõltumatult kummaski paanis, et jälgida oma praegust kausta automaatselt. Otseülekanne jälgib navigeerimist ja kasutab sama ulatust kui Kaasa alamkaustad. Loodud, muudetud, ümbernimetatud ja kustutatud objektide pursked kombineeritakse enne värskendamist; kaustamuudatused uuendavad ka puud. Otseülekanne märgis ilmub lõpetatud skannimise staatusele. Otseülekanne on vaikimisi välja lülitatud ja selle märkeruudu tühjendamine taastab kohe käsitsi värskendamise käitumise."
+      },
+      {
+        "id": "selecting_and_previewing",
+        "title": "Valimine ja Eelvaadeimine",
+        "paragraphs": [
+          {
+            "id": "selecting_and_previewing.p001",
+            "source_sha256": "3cb30411bb6f6a0807c08da889783687297f5427e72f356e38a6f0de5a9fedf2",
+            "text": "Igal paanil on sõltumatu märkeruudu tegevusgrupp. Klõpsake Detailid rea kõrvale või pisipildi kaardil olevat ÔÿÉ/Ôÿæ ruutu või keskenduge Detailid reale ja vajutage tühikuklahvi. Märkeruudud jäävad kogutuks, kui esiletõstate ja eelvaatate teisi faile, sorteerite paani või muudate filtreid. Brauseri all olev loendur näitab kogusummat, sealhulgas filtreeritud ja praegu varjatud faile. Klõpsake Detailid päist või Kõik kuvatud Pisipildid sees, et märkida kõik praegu kuvatavad failid; korrake, et selle kuvatud grupi märkimine tühistada. Tühista valikud eemaldab kogu grupi. Kopeeri mise, liigutamise, lohistamise, kustutamise, ümbernimetamise, hindamise, märgistamise, võrdluse, terviklikkuse ja konverteerimise toimingud kasutavad kõiki märgitud faile, kui neid on; ilma märkideta kasutatakse tavapäraseid esiletõstetud ridu. Kui paani vahetada teise kausta või draivi peale, tühistatakse selle märkeruudud ja märkeruudud ei salvestata pärast rakenduse sulgemist."
+          },
+          {
+            "id": "selecting_and_previewing.checkbox_accuracy_1272",
+            "source_sha256": "ec45605bac64df9520c7b16b9f54eb0ff1645c2f120d0e06da004d853d0a3acc",
+            "text": "Märgistuskastid muutuvad ainult siis, kui klõpsate kastil ja vabastate selle ilma lohistamata. Kasti kõrval olev tühi ala ei ole osa selle klõpsatavast alast. Kui liigutate rohkem kui paar pikslit, algab selle asemel esiletõstetud valik ja linnukesed jäävad muutumatuks, isegi kui lohistamine algas märgistuskastil. Kasutage tervet esiletõstetud rühma muutmiseks otseseid Valiku märkimine ja Valiku tühistamine juhtnuppe."
+          },
+          {
+            "id": "selecting_and_previewing.p007",
+            "source_sha256": "fe2df6bc40914fca7346780d043258bca3ac75b0c0da69d7d7c7af1921420d95",
+            "text": "Lohistage tühjalt brauseri alalt üle ridade või pisipiltide kaartide, et esile tõsta grupp ääristatud valikukastiga. See ei märgi ega tühista ühegi faili valikut. Lihtne lohistamine alustab uut esile tõstetud gruppi; hoidke lohistamise alustamisel all Ctrl, et lisada olemasolevatele esiletõstetele.Alustaon tühi pisipiltide ala, mitte pilt ega failinimi, sest pisipildifaili lohistamine alustab selle asemel ülekannet. Sisse Detailidsaate ka ridade ulatuses vertikaalselt lohistada, et esile tõsta rühm; lohistage teise paneeli suunas, et teha ülekandmine. Veerupäised säilitavad oma tavalised suuruse muutmise ja ümberjärjestamise žestid. Kasutage Valiku märkiminetõstetud failide lisamiseks olemasolevale linnutatud tegevusgrupile. Kasuta Valiku tühistamineeemaldada ainult need esile tõstetud failid sellest rühmast. Mõlemad nupud asuvad iga brauseri ülaosas Sorti kõrval.Vali kõik kuvatud jaTühista valikud; kontrollib murrangut kitsamatel paanidel. Mõlemad käsud on saadaval ka paremklõpsu menüüdes. Muud linnukesed, sealhulgas filtrite poolt peidetud failid, säilitatakse. Failitoimingud eelistavad jätkuvalt kõiki linnukesi, kui neid on, seega kasuta neid spetsiifilisi juhtnuppe enne kopeerimist või liigutamist, kui soovid toimingurühma muuta."
+          },
+          {
+            "id": "selecting_and_previewing.p002",
+            "source_sha256": "7f32ecf04dddbc0b538a4d33856b7ca37e281994235e853d6806e565759f3fb5",
+            "text": "Igal brauseripaanil on oma suur Eelvaade lüliti, mis on vaikimisi välja lülitatud, et vältida liigset dekodeerimist. Luba Eelvaade vasakul, paremal või mõlemal poolel avamaks eraldi joondatud eelvaate paneele brauserite all. Nupul on selgelt eristatav valitud olek, nii et lubatud eelvaated on kergesti märgatavad. Kui mõlemad lülitid on väljas, kokkutõmbub eelvaate ala täielikult ja brauserid kasutavad kogu akna kõrgust. Klõpsake faili, et eelvaade avaneks selle oma poolel. Märkimine on sõltumatu linnukestest, nii et saate teist faili kontrollida või eelvaadata ilma tegevusgruppi kaotamata. Hoidke Ctrl all klõpsates pisipilte või detailridu, et esile tuua mitu faili. Vali sobivad esile toob iga praegu kuvatava tulemuse. Topeltklõps avab esile tõstetud faili tavapärases rakenduses."
+          },
+          {
+            "id": "selecting_and_previewing.p006",
+            "source_sha256": "ea7ee844c5a71c70be45874efacd2698bc3f2f6056cb1188f3f135038fbcd31c",
+            "text": "Pildid ja videokaadrid kasutavad automaatselt suurimat suurust, mis mahub nende enda eelvaatepaneeli, säilitades samal ajal algse laiuse ja kõrguse suhte. Peaakna või ühegi eelvaate jagaja suuruse muutmine värskendab pilti pärast lühikest viivitust, vältides dekoodri korduvaid taaskäivitusi jagajat lohistades."
+          },
+          {
+            "id": "selecting_and_previewing.p003",
+            "source_sha256": "6da9585bae76a4d0447bfa50948712331a0b66f7d19639b6472395a5337a1281",
+            "text": "Iga paneeli kohta on olemas ka suur iseseisev Õôÿ Info lüliti. See on vaikimisi välja lülitatud ja lisab kokkupandava inspektori selle paneeli paremale servale. Kui fail on juba valitud, kuvab Info selle koheselt—pole vaja seda uuesti valida. Inspektor järgib hilisemat valikut selles Detailid, Jätkuvpisipildid ja Leheküljelinepisipildid ja kuvab kogu teekonna, mõõtmed, suuruse, kuupäevad, kestuse, koodeki, kaadrite arvu, bitikiiruse, piksli formaadi, HDR-i, heli, loetamatu põhjuse, hinde, värvi ja sildid.Kopeeri teepaneb täieliku tee lõikelauale; Ava ja Näitakasutage tavalisi faili toiminguid. Info väljalülitamine eemaldab inspektori täielikult ja salvestatud tööruumid mäletavad selle olekut. Info avaneb umbes 180 piksli laiuse kompaktse algusega. Ülemised Sorteeri ja valiku juhtnupud on Info jagajast sõltumatud, nii et Info avamine ei suru neid nuppe kokku. Lohistage jagajat inspektori kõrvale, et muuta selle laiust; Info väljalülitamine ja uuesti sisselülitamine taastab selle laiuse ning salvestatud paani/tööruumi seaded säilitavad selle. Kitsastel akendel on laius piiratud, et jätta sirvimiseks ruumi."
+          },
+          {
+            "id": "selecting_and_previewing.p004",
+            "source_sha256": "f69ab2d999168d40676e34589ed911761ef8a4e8e683955ccaa9c471fc373e01",
+            "text": "Kuva failihalduris/Näita töötab kogu valikuga. Kuni viie valitud faili korral saadab see iga tee jaoks eraldi kuvamise taotluse. Üle viie faili puhul näitab hoiatusteade täpset arvu, kuna toiming võib avada palju failihalduri aknaid. Valige Jah, et kuvada iga valitud fail, või Ei, et kuvada ainult esimene. Windows ja macOS valivad iga täpse faili; Linux avab iga faili sisaldava kausta süsteemi failihalduri kaudu."
+          },
+          {
+            "id": "selecting_and_previewing.p005",
+            "source_sha256": "78c83927ab22cd560e580cbf1dbe270da8c554ef8357eb67fdc828600c7f856a",
+            "text": "Kaamera teabe, EXIF-väljade või video konteineri/voo siltide kohta vaadake [chapter:embedded_metadata]."
+          }
+        ],
+        "body": "Igal paanil on sõltumatu märkeruudu tegevusgrupp. Klõpsake Detailid rea kõrvale või pisipildi kaardil olevat ÔÿÉ/Ôÿæ ruutu või keskenduge Detailid reale ja vajutage tühikuklahvi. Märkeruudud jäävad kogutuks, kui esiletõstate ja eelvaatate teisi faile, sorteerite paani või muudate filtreid. Brauseri all olev loendur näitab kogusummat, sealhulgas filtreeritud ja praegu varjatud faile. Klõpsake Detailid päist või Kõik kuvatud Pisipildid sees, et märkida kõik praegu kuvatavad failid; korrake, et selle kuvatud grupi märkimine tühistada. Tühista valikud eemaldab kogu grupi. Kopeeri mise, liigutamise, lohistamise, kustutamise, ümbernimetamise, hindamise, märgistamise, võrdluse, terviklikkuse ja konverteerimise toimingud kasutavad kõiki märgitud faile, kui neid on; ilma märkideta kasutatakse tavapäraseid esiletõstetud ridu. Kui paani vahetada teise kausta või draivi peale, tühistatakse selle märkeruudud ja märkeruudud ei salvestata pärast rakenduse sulgemist.\n\nMärgistuskastid muutuvad ainult siis, kui klõpsate kastil ja vabastate selle ilma lohistamata. Kasti kõrval olev tühi ala ei ole osa selle klõpsatavast alast. Kui liigutate rohkem kui paar pikslit, algab selle asemel esiletõstetud valik ja linnukesed jäävad muutumatuks, isegi kui lohistamine algas märgistuskastil. Kasutage tervet esiletõstetud rühma muutmiseks otseseid Valiku märkimine ja Valiku tühistamine juhtnuppe.\n\nLohistage tühjalt brauseri alalt üle ridade või pisipiltide kaartide, et esile tõsta grupp ääristatud valikukastiga. See ei märgi ega tühista ühegi faili valikut. Lihtne lohistamine alustab uut esile tõstetud gruppi; hoidke lohistamise alustamisel all Ctrl, et lisada olemasolevatele esiletõstetele.Alustaon tühi pisipiltide ala, mitte pilt ega failinimi, sest pisipildifaili lohistamine alustab selle asemel ülekannet. Sisse Detailidsaate ka ridade ulatuses vertikaalselt lohistada, et esile tõsta rühm; lohistage teise paneeli suunas, et teha ülekandmine. Veerupäised säilitavad oma tavalised suuruse muutmise ja ümberjärjestamise žestid. Kasutage Valiku märkiminetõstetud failide lisamiseks olemasolevale linnutatud tegevusgrupile. Kasuta Valiku tühistamineeemaldada ainult need esile tõstetud failid sellest rühmast. Mõlemad nupud asuvad iga brauseri ülaosas Sorti kõrval.Vali kõik kuvatud jaTühista valikud; kontrollib murrangut kitsamatel paanidel. Mõlemad käsud on saadaval ka paremklõpsu menüüdes. Muud linnukesed, sealhulgas filtrite poolt peidetud failid, säilitatakse. Failitoimingud eelistavad jätkuvalt kõiki linnukesi, kui neid on, seega kasuta neid spetsiifilisi juhtnuppe enne kopeerimist või liigutamist, kui soovid toimingurühma muuta.\n\nIgal brauseripaanil on oma suur Eelvaade lüliti, mis on vaikimisi välja lülitatud, et vältida liigset dekodeerimist. Luba Eelvaade vasakul, paremal või mõlemal poolel avamaks eraldi joondatud eelvaate paneele brauserite all. Nupul on selgelt eristatav valitud olek, nii et lubatud eelvaated on kergesti märgatavad. Kui mõlemad lülitid on väljas, kokkutõmbub eelvaate ala täielikult ja brauserid kasutavad kogu akna kõrgust. Klõpsake faili, et eelvaade avaneks selle oma poolel. Märkimine on sõltumatu linnukestest, nii et saate teist faili kontrollida või eelvaadata ilma tegevusgruppi kaotamata. Hoidke Ctrl all klõpsates pisipilte või detailridu, et esile tuua mitu faili. Vali sobivad esile toob iga praegu kuvatava tulemuse. Topeltklõps avab esile tõstetud faili tavapärases rakenduses.\n\nPildid ja videokaadrid kasutavad automaatselt suurimat suurust, mis mahub nende enda eelvaatepaneeli, säilitades samal ajal algse laiuse ja kõrguse suhte. Peaakna või ühegi eelvaate jagaja suuruse muutmine värskendab pilti pärast lühikest viivitust, vältides dekoodri korduvaid taaskäivitusi jagajat lohistades.\n\nIga paneeli kohta on olemas ka suur iseseisev Õôÿ Info lüliti. See on vaikimisi välja lülitatud ja lisab kokkupandava inspektori selle paneeli paremale servale. Kui fail on juba valitud, kuvab Info selle koheselt—pole vaja seda uuesti valida. Inspektor järgib hilisemat valikut selles Detailid, Jätkuvpisipildid ja Leheküljelinepisipildid ja kuvab kogu teekonna, mõõtmed, suuruse, kuupäevad, kestuse, koodeki, kaadrite arvu, bitikiiruse, piksli formaadi, HDR-i, heli, loetamatu põhjuse, hinde, värvi ja sildid.Kopeeri teepaneb täieliku tee lõikelauale; Ava ja Näitakasutage tavalisi faili toiminguid. Info väljalülitamine eemaldab inspektori täielikult ja salvestatud tööruumid mäletavad selle olekut. Info avaneb umbes 180 piksli laiuse kompaktse algusega. Ülemised Sorteeri ja valiku juhtnupud on Info jagajast sõltumatud, nii et Info avamine ei suru neid nuppe kokku. Lohistage jagajat inspektori kõrvale, et muuta selle laiust; Info väljalülitamine ja uuesti sisselülitamine taastab selle laiuse ning salvestatud paani/tööruumi seaded säilitavad selle. Kitsastel akendel on laius piiratud, et jätta sirvimiseks ruumi.\n\nKuva failihalduris/Näita töötab kogu valikuga. Kuni viie valitud faili korral saadab see iga tee jaoks eraldi kuvamise taotluse. Üle viie faili puhul näitab hoiatusteade täpset arvu, kuna toiming võib avada palju failihalduri aknaid. Valige Jah, et kuvada iga valitud fail, või Ei, et kuvada ainult esimene. Windows ja macOS valivad iga täpse faili; Linux avab iga faili sisaldava kausta süsteemi failihalduri kaudu.\n\nKaamera teabe, EXIF-väljade või video konteineri/voo siltide kohta vaadake [chapter:embedded_metadata]."
+      },
+      {
+        "id": "copying_and_moving",
+        "title": "Kopeerimine ja liigutamine",
+        "paragraphs": [
+          {
+            "id": "copying_and_moving.p001",
+            "source_sha256": "74a10eb18d51cae10f7fdd8931b1ad7feb8157e134c2e2f50071b7b2d30f5f1b",
+            "text": "Valige failid ühes paanis ja kasutage tööriistariba, Muuda menüüd, paremklõpsu menüüd, klaviatuuri otseteid või lohistamist. Mitme valitud faili saatmiseks teise rakendusse, näiteks Shutterisse, lohistage selle paani navigeerimiskontrollide kõrvale suur ↗ Lohista valitud käepide vasaku hiire nupuga. See ekspordib kogu valiku tavalise operatsioonisüsteemi failide loendi vormingus ja töötab nii Detailid kui ka Pisipildid puhul, kahjustamata veergude suuruse muutmist. Teine paan on sihtkoht rakendusesiseste ülekannete jaoks. Ülekanded sisenevad järjekorda koos edenemise, kiiruse, ülejäänud aja, pausimise, tühistamise, uuesti proovimise ja konflikti valikutega. Paani ülekanded võimaldavad valida, kas säilitada suhtelised kaustad või kopeerida ainult failid."
+          },
+          {
+            "id": "copying_and_moving.p002",
+            "source_sha256": "a438870a1a1fa7c4edc46d8f19aa10034df90810c0e6118e2c2f94828359328d",
+            "text": "Redigeeri > Partii ümbernimetaminevalitud avab täieliku eelvaate enne nimede muutmist. Eelvaade värskendatakse automaatselt pärast mustri, leia/asenda teksti, suur- ja väiketähe tundlikkuse, algusnumbri või täienduse muutmist;Värskenda eelvaadeton samuti saadaval. Koosta nimesid koos{name}originaalse varsiosa jaoks,{n}täidetud järjestusnumbri jaoks{ext}laiendi jaoks ilma punktita, ja{dotext}laienduse jaoks koos selle punktiga. Valikuline otsi/asenda võib olla tõstutundlik või tõstutundetu ning nummerdamisel on reguleeritav algus ja täitmine. Kehtetud Windowsi nimed, duplikaatidena väljundid ja konfliktid valimata failidega keelavad Rakenda. Kinnitatud partii kasutab sisemiselt ajutisi nimesid, nii et vahetused ja tsüklid ei saa üksteist üle kirjutada; katkestatud partii tagasipööratakse, kui võimalik. Edukas partii on seeCtrl+Zvõta tegevus tagasi, sealhulgas hinnangud ja sildid.F2 või Nimeta ümber ühel failil avab elava failinime eelvaate; Nimeta ümberon lubatud ainult kehtiva ja kättesaadava uue nime puhul."
+          },
+          {
+            "id": "copying_and_moving.p003",
+            "source_sha256": "dc2923a823a7109741512e0c6e1a2302310ba36b9dbfaa6379ae5acf0c73c9e9",
+            "text": "Korduvate kopeerimise/edastamise tingimuste puhul, kus rakendamise eel on ülevaatus, vt [chapter:folder_organization_rules]. Järjekorda pandud ülekannete peatamiseks, tühistamiseks või uuesti proovimiseks vt [chapter:transfer_queue]."
+          },
+          {
+            "id": "copying_and_moving.p004",
+            "source_sha256": "2c1a1fe656902fb987c4f1a88cd0f8d6ec8ead7edc9b2cf0817ce2b6e82f724b",
+            "text": "Paremklõpsake ühel või mitmel valitud failil, et määrata nullist viieni ulatuv hinnang, punane/Kollane/Roheline/sinine/Lilla värvisilt või komadega eraldatud märksõnad. Tühista hinnang, Puudub ja tühi märksõnade nimekiri tühistavad need muudatused. Need märkused salvestatakse ainult rakenduse andmebaasi; algset meediat ja manustatud metaandmeid ei muuda kunagi. Detailid režiim pakub sorteeritavaid Hinnang, Silt ja Märksõnade veerge. Pisipiltide pealdised kuvavad hinnanguid/märksõnu ja kasutavad värvisilti nende valimata äärisena. Rohkem filtrid võivad nõuda minimaalset hinnangut, värvi (sealhulgas Sildistamata) või märksõna teksti. Sisemised ümbernimetamise, kopeerimise, liigutamise ja tagasi võtmise toimingud kannavad märkusi tulemuste teele. Tühjenda kogu vahemälu eemaldab tehnilised vahemälude andmed, kuid säilitab teadlikult kasutaja märkused."
+          },
+          {
+            "id": "copying_and_moving.p005",
+            "source_sha256": "4ea753522d03bb48eab43c172373c00d21303828abeacab783fb94f7d41faa41",
+            "text": "Detailid režiimis säilitavad üksikread parema nupu failide lohistamise; tavaline paremklõps avab endiselt kontekstimenüü. Samuti saab rida või valitud rühma lohistada vasaku nupuga teise paani. Lohistamisel kuvatakse selgelt märgistatud koopia, liigutamise ja Tühista nupud. Kopeeri või Liiguta avab ülekande eelvaate; Tühista või viiba sulgemine jätab failid muutmata. Päise suuruse muutmine ja järjekorra muutmine jäävad endiselt sõltumatuks. Tavalise vasaku nupuga lohistamiseks teise programmi kasutage ↗ Lohista valitud. Ka pisipiltide kaardid toetavad ka tavapärast vasaku nupuga failide lohistamist."
+          },
+          {
+            "id": "copying_and_moving.p006",
+            "source_sha256": "c09e896f93f4539ea5e39ce1ef9cf109147040645409d8f026ce228b0ae864d8",
+            "text": "Kopeeri, liigu, nimeta ümber, saada failid prügikasti või prügikasti, vaata dubleeritud faile, kasuta silte ja hinnanguid, ekspordi aruandeid ja loo kontaktlehti. Konverteerimine toetab H.264, H.265 ja AV1 ühilduva riistvarakiirendusega. Allikas faile hoitakse ja osaliselt ebaõnnestunud väljundid eemaldatakse."
+          },
+          {
+            "id": "copying_and_moving.p007",
+            "source_sha256": "88a277d5f920b679b295acc60e5e72f6b72f48d3630880924c349e271f7ab3aa",
+            "text": "Uus kaust s: vali Fail > Uus kaust..., vajuta Ctrl+Shift+N või paremklõpsa paanis ja vali Uus kaust.... Sisesta ühe uue kausta nimi. Kaust luuakse aktiivse paani praeguse kausta sisse ja brauser värskendub; see ei liigut, valitud faile. Tühjad, reserveeritud ja sobimatud nimed lükatakse tagasi ning olemasolevat kausta ei asendata kunagi."
+          },
+          {
+            "id": "copying_and_moving.p008",
+            "source_sha256": "cfa3700591ec389ae4438a32b015736c27e74632cc56284e786898fee744198b",
+            "text": "Kopeeri/liiguta näide: lubage allika paanis Kaasa alamkaustad, valige failid mitmes alamkaustas ja klõpsake Kopeeri valitud → teine paan või Liiguta valitud → teise paneeli. Eelvaates valige Säilita kaustastruktuur, et hoida teed allikakausta all, või Failainult (ilma alamkaustadeta), et panna failid otse sihtkohta. Esimene vaikeseade säilitab kaustad; hilisemad edastused mäletavad teie viimast valikut. Lugeda Allikas, Sihtkoht ja Staatus veerud enne järjekorda panemist. Sirvi… muudab sihtkohta; Uus kaust... loob ja valib kausta ilma eelvaadet katkestamata. Avasihtkoht, kui lõpetatud avab selle kausta alles pärast edukat, tühistamata edastust. Klõpsake Järjekorda kopeerimine või Järjekorda liigutamine, et jätkata, või Tühista, et jätta failid muutmata. Kleebi ja lohistatud failid kasutavad samuti seda eelvaadet."
+          },
+          {
+            "id": "copying_and_moving.p009",
+            "source_sha256": "6f5fea1b68edde18db0247441f47c2ad2c00ad93e2b1f52f9b191e04d8ccde05",
+            "text": "Konfliktid: Küsi iga konflikti kohta pakub Hoia mõlemad, Asenda, Jäta vahele ja Tühista koos Rakendakõigile ülejäänud konfliktidele. Alternatiivselt vali järjekorda panemise eelvaates poliitika. Hoia mõlemad leiab saadaval oleva nummerdatud failinime, näiteks clip (2).mp4, kaasa arvatud kokkupõrked valitud failide vahel eri alamkaustadest. Asenda lubab selgesõnaliselt asendamist ja hoiab eelmise sihtkoha sessiooni tagasi-võtu alal. Jäta vahele jätab olemasoleva sihtkoha muutmata. Sihtkoht, mis on üks valitud lähtefailidest, on blokeeritud: vali teine kaust. Järjekord kontrollib sihtkohtasid uuesti, seega faili, mis ilmub pärast eelvaadet, ei kirjutata vaikselt üle. Tagasi-võtmine on piiratud sel sessioonil toetatud viimase 20 toimingu võrra ega ole püsiv varukoopia. Ärge muutke üle kantud faile enne, kui kasutate tagasi-võtmist; koopia tagasi-võtmine eemaldab kopeeritud faili."
+          },
+          {
+            "id": "copying_and_moving.p010",
+            "source_sha256": "fd0ec5c6b05d49ff78891f64ea627a2fe1d7435cbdf0008018ace12f664e8341",
+            "text": "Valikukorv: kasuta Valikukorv tööriistariba nuppu, Fail > Valikukorv... või paremklõpsake valitud failidel ja valige Lisa valikukorvi. Korv on kokkuvolditav paneel mõlema brauseri kohal, mitte eraldi aken. Peida korv või tööriistariba nupp peidab selle ilma selle viiteid kustutamata. Lisa paani valik kogub paneeli märgitud tegevusgrupi või selle esile tõstetud failid, kui mingeid märkeruute pole. Külasta teisi kaustu ja lisa rohkem faile; iga originaalteed kuvatakse ainult üks kord. Korv sisaldab viiteid, mitte koopiaid, ja tühjendatakse rakenduse sulgemisel. Eemalda viited või Kustutakorv ei kustuta originaale. Vali korvi read ja vali Kopeeriaktiivsele paanile või Liigutaaktiivsesse paneeli; kui korvi ridu ei ole valitud, kasutatakse kõiki kirjeid. Vaata tavapärast ülekande eelvaadet. Korvi failid ilma ühise sirvimisjuurteta kasutavad nende failinimesid, mitte kombineeritud kaustapuu. Puuduvad originaalid on märgitud [puhub] ja neid ei saa üle kanda enne, kui need on saadaval."
+          }
+        ],
+        "body": "Valige failid ühes paanis ja kasutage tööriistariba, Muuda menüüd, paremklõpsu menüüd, klaviatuuri otseteid või lohistamist. Mitme valitud faili saatmiseks teise rakendusse, näiteks Shutterisse, lohistage selle paani navigeerimiskontrollide kõrvale suur ↗ Lohista valitud käepide vasaku hiire nupuga. See ekspordib kogu valiku tavalise operatsioonisüsteemi failide loendi vormingus ja töötab nii Detailid kui ka Pisipildid puhul, kahjustamata veergude suuruse muutmist. Teine paan on sihtkoht rakendusesiseste ülekannete jaoks. Ülekanded sisenevad järjekorda koos edenemise, kiiruse, ülejäänud aja, pausimise, tühistamise, uuesti proovimise ja konflikti valikutega. Paani ülekanded võimaldavad valida, kas säilitada suhtelised kaustad või kopeerida ainult failid.\n\nRedigeeri > Partii ümbernimetaminevalitud avab täieliku eelvaate enne nimede muutmist. Eelvaade värskendatakse automaatselt pärast mustri, leia/asenda teksti, suur- ja väiketähe tundlikkuse, algusnumbri või täienduse muutmist;Värskenda eelvaadeton samuti saadaval. Koosta nimesid koos{name}originaalse varsiosa jaoks,{n}täidetud järjestusnumbri jaoks{ext}laiendi jaoks ilma punktita, ja{dotext}laienduse jaoks koos selle punktiga. Valikuline otsi/asenda võib olla tõstutundlik või tõstutundetu ning nummerdamisel on reguleeritav algus ja täitmine. Kehtetud Windowsi nimed, duplikaatidena väljundid ja konfliktid valimata failidega keelavad Rakenda. Kinnitatud partii kasutab sisemiselt ajutisi nimesid, nii et vahetused ja tsüklid ei saa üksteist üle kirjutada; katkestatud partii tagasipööratakse, kui võimalik. Edukas partii on seeCtrl+Zvõta tegevus tagasi, sealhulgas hinnangud ja sildid.F2 või Nimeta ümber ühel failil avab elava failinime eelvaate; Nimeta ümberon lubatud ainult kehtiva ja kättesaadava uue nime puhul.\n\nKorduvate kopeerimise/edastamise tingimuste puhul, kus rakendamise eel on ülevaatus, vt [chapter:folder_organization_rules]. Järjekorda pandud ülekannete peatamiseks, tühistamiseks või uuesti proovimiseks vt [chapter:transfer_queue].\n\nParemklõpsake ühel või mitmel valitud failil, et määrata nullist viieni ulatuv hinnang, punane/Kollane/Roheline/sinine/Lilla värvisilt või komadega eraldatud märksõnad. Tühista hinnang, Puudub ja tühi märksõnade nimekiri tühistavad need muudatused. Need märkused salvestatakse ainult rakenduse andmebaasi; algset meediat ja manustatud metaandmeid ei muuda kunagi. Detailid režiim pakub sorteeritavaid Hinnang, Silt ja Märksõnade veerge. Pisipiltide pealdised kuvavad hinnanguid/märksõnu ja kasutavad värvisilti nende valimata äärisena. Rohkem filtrid võivad nõuda minimaalset hinnangut, värvi (sealhulgas Sildistamata) või märksõna teksti. Sisemised ümbernimetamise, kopeerimise, liigutamise ja tagasi võtmise toimingud kannavad märkusi tulemuste teele. Tühjenda kogu vahemälu eemaldab tehnilised vahemälude andmed, kuid säilitab teadlikult kasutaja märkused.\n\nDetailid režiimis säilitavad üksikread parema nupu failide lohistamise; tavaline paremklõps avab endiselt kontekstimenüü. Samuti saab rida või valitud rühma lohistada vasaku nupuga teise paani. Lohistamisel kuvatakse selgelt märgistatud koopia, liigutamise ja Tühista nupud. Kopeeri või Liiguta avab ülekande eelvaate; Tühista või viiba sulgemine jätab failid muutmata. Päise suuruse muutmine ja järjekorra muutmine jäävad endiselt sõltumatuks. Tavalise vasaku nupuga lohistamiseks teise programmi kasutage ↗ Lohista valitud. Ka pisipiltide kaardid toetavad ka tavapärast vasaku nupuga failide lohistamist.\n\nKopeeri, liigu, nimeta ümber, saada failid prügikasti või prügikasti, vaata dubleeritud faile, kasuta silte ja hinnanguid, ekspordi aruandeid ja loo kontaktlehti. Konverteerimine toetab H.264, H.265 ja AV1 ühilduva riistvarakiirendusega. Allikas faile hoitakse ja osaliselt ebaõnnestunud väljundid eemaldatakse.\n\nUus kaust s: vali Fail > Uus kaust..., vajuta Ctrl+Shift+N või paremklõpsa paanis ja vali Uus kaust.... Sisesta ühe uue kausta nimi. Kaust luuakse aktiivse paani praeguse kausta sisse ja brauser värskendub; see ei liigut, valitud faile. Tühjad, reserveeritud ja sobimatud nimed lükatakse tagasi ning olemasolevat kausta ei asendata kunagi.\n\nKopeeri/liiguta näide: lubage allika paanis Kaasa alamkaustad, valige failid mitmes alamkaustas ja klõpsake Kopeeri valitud → teine paan või Liiguta valitud → teise paneeli. Eelvaates valige Säilita kaustastruktuur, et hoida teed allikakausta all, või Failainult (ilma alamkaustadeta), et panna failid otse sihtkohta. Esimene vaikeseade säilitab kaustad; hilisemad edastused mäletavad teie viimast valikut. Lugeda Allikas, Sihtkoht ja Staatus veerud enne järjekorda panemist. Sirvi… muudab sihtkohta; Uus kaust... loob ja valib kausta ilma eelvaadet katkestamata. Avasihtkoht, kui lõpetatud avab selle kausta alles pärast edukat, tühistamata edastust. Klõpsake Järjekorda kopeerimine või Järjekorda liigutamine, et jätkata, või Tühista, et jätta failid muutmata. Kleebi ja lohistatud failid kasutavad samuti seda eelvaadet.\n\nKonfliktid: Küsi iga konflikti kohta pakub Hoia mõlemad, Asenda, Jäta vahele ja Tühista koos Rakendakõigile ülejäänud konfliktidele. Alternatiivselt vali järjekorda panemise eelvaates poliitika. Hoia mõlemad leiab saadaval oleva nummerdatud failinime, näiteks clip (2).mp4, kaasa arvatud kokkupõrked valitud failide vahel eri alamkaustadest. Asenda lubab selgesõnaliselt asendamist ja hoiab eelmise sihtkoha sessiooni tagasi-võtu alal. Jäta vahele jätab olemasoleva sihtkoha muutmata. Sihtkoht, mis on üks valitud lähtefailidest, on blokeeritud: vali teine kaust. Järjekord kontrollib sihtkohtasid uuesti, seega faili, mis ilmub pärast eelvaadet, ei kirjutata vaikselt üle. Tagasi-võtmine on piiratud sel sessioonil toetatud viimase 20 toimingu võrra ega ole püsiv varukoopia. Ärge muutke üle kantud faile enne, kui kasutate tagasi-võtmist; koopia tagasi-võtmine eemaldab kopeeritud faili.\n\nValikukorv: kasuta Valikukorv tööriistariba nuppu, Fail > Valikukorv... või paremklõpsake valitud failidel ja valige Lisa valikukorvi. Korv on kokkuvolditav paneel mõlema brauseri kohal, mitte eraldi aken. Peida korv või tööriistariba nupp peidab selle ilma selle viiteid kustutamata. Lisa paani valik kogub paneeli märgitud tegevusgrupi või selle esile tõstetud failid, kui mingeid märkeruute pole. Külasta teisi kaustu ja lisa rohkem faile; iga originaalteed kuvatakse ainult üks kord. Korv sisaldab viiteid, mitte koopiaid, ja tühjendatakse rakenduse sulgemisel. Eemalda viited või Kustutakorv ei kustuta originaale. Vali korvi read ja vali Kopeeriaktiivsele paanile või Liigutaaktiivsesse paneeli; kui korvi ridu ei ole valitud, kasutatakse kõiki kirjeid. Vaata tavapärast ülekande eelvaadet. Korvi failid ilma ühise sirvimisjuurteta kasutavad nende failinimesid, mitte kombineeritud kaustapuu. Puuduvad originaalid on märgitud [puhub] ja neid ei saa üle kanda enne, kui need on saadaval."
+      },
+      {
+        "id": "smart_collections",
+        "title": "Nutikollektsioonid: Salvestatud otsingud",
+        "paragraphs": [
+          {
+            "id": "smart_collections.p001",
+            "source_sha256": "c8a00acd2ba2c17799572b74c47c2659ecb5a65fb4782693cbe786544ac1e764",
+            "text": "MIDA NUTIKAD KOGUMID SALVESTAVAD"
+          },
+          {
+            "id": "smart_collections.p002",
+            "source_sha256": "d366ab29cfd1f77bae1f8b286cca63d76a5e46d73bdbf4329d2cfb31a1b3694a",
+            "text": "Tark Kogum on nimetatud, salvestatud otsing ja vaade ühe brauseri paani jaoks. See mäletab, kuidas leida ja kuvada faile lähtekaustast. See viitab originaalsetele failidele; kogumi loomine, avamine, ümbernimetamine või kustutamine ei kopeeri, liigu, nimeta ümber, kustuta ega märgi neid meediafaile. Kasutage seda, kui vaatate korduvalt sama kogu kindlate filterite ja sortimisega, selle asemel et iga kord need seaded uuesti sisestada. Salvestatud tööruum taastab mõlemad paanid ja nende paigutuse; Tark Kogum muudab ainult aktiivset paani."
+          },
+          {
+            "id": "smart_collections.p003",
+            "source_sha256": "006322e9c7ac283bd37b6dbb958c936304cc5977a4803b31ea4c4da238a217f2",
+            "text": "Igal kogu-l on täpselt üks alguskataloog. Kaasa alamkaustad otsib kõiki kaustu selle juurkausta alt. See ei saa kombineerida suvalisi mitteseotud kaustu, eraldi draive ega mitut algusjuurt üheks kogu-l. Valige praktilisel juhul nende lähim ühiskasutatav vanemkaust või salvestage eraldi kogu-d ja avage need kahes paanis. Kaasa alamkaustad jaoks juur-draivi valides saab skannida kogu draivi; valige kitsaim kasulik vanemkaust."
+          },
+          {
+            "id": "smart_collections.p004",
+            "source_sha256": "20491128f8f22d658bb8601b6511411ea9d469ce4a9681d99090382d74cfc3cf",
+            "text": "Salvestatud seaded on kausta tee, Kaasa alamkaustad, Videod ja Pildid lülitid, Otsi teksti, Resolutsioon valik, iga Rohkem filtrite väärtus, sortimisväli ja -suund, Detailid või Pisipildid, pisipiltide suurus ja Jätkuv või Leheküljeline režiim. See ei salvesta linnukesega faile, esile tõstetud valikuid, eelvaate taasesitust, reaalajas jälgimist, teist paani, veeru laiuseid/järjestust, paanide eraldajaid ega pisipiltide lehe mahutavust. Need jäävad sõltumatuteks seadistusteks. Kogumid on salvestatud lokaalselt smart_collections.json rakenduse seadete kataloogis."
+          },
+          {
+            "id": "smart_collections.p005",
+            "source_sha256": "b11ace0b241e6cfceeaf8409069c6872f849fb89e4d9c2acab35996a93e19059",
+            "text": "LOO KOLLEKTSIOON"
+          },
+          {
+            "id": "smart_collections.p006",
+            "source_sha256": "83c8a710973dcf1308b8fd867f872bf84624f939b91047eea47405238718426e",
+            "text": "1. Klõpsake paanil, mida soovite kohandada. See muudab selle aktiivseks paaniks Tööriistadkäsklused.\n2. Kasuta Sirvi…või tee kast, et avada soovitud allikakaust.Luba Kaasa alamkaustadkas pesastatud kaustad kuuluvad otsingusse.\n3. Märkige Videod, Pildid, või mõlemad. Määra Otsi suur- ja väiketähtede suhtes tundetu failinime või suhtelise tee alamstringi jaoks ja vali Resolutsioontäpse laiuse × kõrguse jaoks, kus soovitud. Ekraan ütlebLahutus:Kõik juhul, kui täpset resolutsiooni piirangut ei rakendata.\n4. Ava Rohkem filtreid…orientatsiooni, koodeki alamstringi, sildi alamstringi, minimaalse hinnangu, värvilise sildi, minimaalse/maksimaalse laiuse ja kõrguse, failisuuruse, kestuse ja muutmiskuupäevade jaoks. Tühjad väljad ei sea piiranguid; kõik mitte-tühjad piirangud peavad klappima. Sisestage Rakenda filtrite kasutamiseks.Kustuta lähtestab täpsema filtri väärtused. See ei ole eraldi suvaline laienduse filter; kasuta Videod/Pildidlülitid ja, kus sobib, faili nime alamsõne, nagu .mp4.\n5. Oodake skannimist ja valige vajalik järjekord. Selles Detailid, klõpsake veeru päisel; klõpsake uuesti, et muuta suunda. Pisipildid, kasutage Sorteeri ja selle välja/suunamenüüd. Mõlemad vaated kasutavad sama filtreeritud meediat ja järjekorda.\n6. Valige Tööriistad > Salvesta aktiivne nutikogu…ja sisestage kirjeldav kogu nimi. Olemasoleva nime salvestamine küsib Asenda nutikogu; nõustu ainult siis, kui praegune paan peaks asendama salvestatud definitsiooni. Salvesta mine loob eelseadistuse, mitte ei loo kuvatud failidest koopiat."
+          },
+          {
+            "id": "smart_collections.p007",
+            "source_sha256": "cc9c90b0168ad0ec1cefb3b33388495dd4c350d67628c7413d8a0ee240b4ae7b",
+            "text": "AVADA JA UUENDADA KOGU"
+          },
+          {
+            "id": "smart_collections.p008",
+            "source_sha256": "89904bdaa8286ca4ca8546e5136bc9ff5b7688ac0147d82ee8a66fd4caa61afa",
+            "text": "Vali kõigepealt sihtkoha paan. Ava Tööriistad > Halda nutikogusid…, vali salvestatud kirje ja klõpsa Rakenda või topeltklõpsa real. Aktiivne paan navigeerib salvestatud algkausta, taastab salvestatud filtrid, sortimise ja esitluse ning seejärel skannib selle. Vastupidine paan jääb muutumatuks. Kui kaust on lahti ühendatud, liigutatud või enam ei eksisteeri, selgitab Kogumikukaust pole saadaval salvestatud teed; ühenda see uuesti või salvesta asendus kehtiva kausta abil."
+          },
+          {
+            "id": "smart_collections.p009",
+            "source_sha256": "1668c49611305d33e2b5780a8b4c6910237f09146c4967272ffd9cf9df5477ae",
+            "text": "Tulemuss kajastavad faile, mis leitakse praegusel skaneerimisel, mitte külmutatud loendit, mis salvestati eelseade salvestamisel. Kasutage paneeli nuppu Ôå╗, Vaade > Värskenda aktiivset paani või F5 mõlema paneeli jaoks pärast väliste failide muutmist. Otseülekanne saab jälgida praegust kausta, kuid Otseülekanne ei ole osa salvestatud kollektsioonist. Filtreerimise või sortimise muutused mõjutavad praegust vaadet kohe; lähteulatuvuse muutused nõuavad vastavat skaneerimist. Tühista peatab skaneerimise. Suur rekursiivsete kollektsioonide puhul kasutatakse sama metaandmete vahemälu ja jõudlusprofiile nagu tavalise sirvimise puhul."
+          },
+          {
+            "id": "smart_collections.p010",
+            "source_sha256": "5d0ba8ba1b4e449868d9118559c323b524f2ed494ba01573aee4d4176bc9d605",
+            "text": "Eraldi kogumite redigeerimise nuppu ei ole. Olemasoleva kogumi muutmiseks Rakenda seda, kohanda jaotises kausta, ulatust, filtreid või järjestust ning seejärel vali Tööriistad > Salvesta aktiivne nutikogu… sama nimega ja kinnita asendamine. Halduseisundis Salvesta praegune salvestab praeguse aktiivse jaotise seaded ja küsib nime; see ei muuda automaatselt valitud rida. Nimemuutmine ei salvesta üheski jaotises tehtud filtrite muudatusi."
+          },
+          {
+            "id": "smart_collections.p011",
+            "source_sha256": "6e88b549b05defa2d24fa8d186b6ba7aea252c5d474f37b1bb4d2e876fbcdbfd",
+            "text": "NIMETA UUESTI, KUSTUTA JA TAASLÕHETA"
+          },
+          {
+            "id": "smart_collections.p012",
+            "source_sha256": "2a100ef5ff5e82d9b023158669f5f05a1ef343719fe452c2e74a2589cd33091a",
+            "text": "Tööriistad > Halda nutikogusid…, valige kirje ja klõpsake Nimeta ümber. Sisestage Uus nimi: ja kinnitage asendamine, kui mõni teine kogumik kannab juba seda nime. Kustuta küsib kinnitust ja eemaldab ainult eelhäälestuse. Tühista kustutamine taastab viimati kustutatud eelhäälestuse, kui see halduri aken on avatud. Halduri sulgemisel kaob see ajutine tagasivõtmise virn. Kui on hiljem loodud samanimeline kogumik, asendab kustutatud kirje taastamine selle nime eelhäälestuse, seega kasutage mõlema säilitamisel erinevaid nimesid. Sulge väljub, ilma et valitud rida rakendataks. Ctrl+Z on mõeldud failitoiminguteks, mitte kogumite halduri kustutamiseks."
+          },
+          {
+            "id": "smart_collections.p013",
+            "source_sha256": "fc23ad3b8bc9134b6679c107990040938242a050929d015a037c6128ec0433d6",
+            "text": "NÄIDE: SORTIGE PILTE ALIKAUSTADES RESOLUTSIOONI JÄRGI"
+          },
+          {
+            "id": "smart_collections.p014",
+            "source_sha256": "71fd063332ef48d1b7ce3c83f9cdbc8f08084a1965687f4f382f46399b47cc96",
+            "text": "1. Vasakul paanil minge Sirvi… oma Piltide ülemkausta, lubage Kaasa alamkaustad ja Pildid ning lülitage Videod välja.\n2. Kustuta Leidke ja seadke Resolutsioon väärtuseks Kõik, kui soovite võrrelda kõiki mõõtmeid. Avage Rohkem filtreid… ja Kustuta/Rakenda, kui vanad piirangud tuleks eemaldada.\n3. Detailid klõpsake Resolutsioon, kuni ilmub soovitud kasvav või kahanev järjekord. Või valige Pisipildid ja Sorteeri > Resolutsioon > Kleinaimad ees või Suurimad ees. Resolutsioon sorteerimine kasutab piksliala (laius × kõrgus), kus laiuse ja kõrguse võrdsed alad lahendatakse nende mõõtude järgi; see ei ole lihtne ainult laiuse järgi sorteerimine. Täpne Resolutsioon filter piirab hoopis ühe kindla mõõtmete paari.\n4. Salvestage aktiivne paan Pildid kaupa eraldusvõime järgi. Hiljem Rakenda seda kirjet mõlemas paanis, et otsingut korrata, sealhulgas pärast skannimist lisatud uute vastavate failide puhul."
+          },
+          {
+            "id": "smart_collections.p015",
+            "source_sha256": "ff3bb0c443412ace673aef6b3b1dd606e3214fe0e515419f44b8de1c6e8f7ee7",
+            "text": "NÄIDE: VAATA KÕRGE LAHUTUSVÕIMEGA VIDEOSID"
+          },
+          {
+            "id": "smart_collections.p016",
+            "source_sha256": "58ddf88adee5ea950a3c3cc66a1975d861ac600276d297a9190c5cd96961d30b",
+            "text": "1. Sirvi… juurde Videodülemkaust, lubama Kaasa alamkaustad ja Videod, ja keerata Pildid väljas.\n2. Sisse Rohkem filtreid…, seadista Minimaalne laius (pikslites) kuni 1920. aastani ja Minimaalne kõrgus (piksleid) kuni 1080, kui soovite videoid, mis vastavad MÕLEMATELE mõõtmetele. See välistab portreevideod, mis on kitsamad kui 1920, isegi kui neil on kõrged pikslite arvud; kohandage piiranguid või kasutage Orientatsioonvastavalt teie eesmärgile.\n3. Jätke Resolutsioonkõikide erinevate kriteeriumite hõlmamiseks. Valikuliselt määrata Koodek sisaldab HEVC-ks, et see vastaks salvestatud HEVC koodeki sildile, või H.264 H.264 jaoks. Filter vastab kuvatud koodeki sildile täpselt, ignoreerides tähe suurust; h264 ilma punktita ei vasta H.264-le. Kasutage faili tegeliku koodeki nägemiseks Info, kui filter ei leia midagi.\n4. Sorteeri  Resolutsioon sisse Detailid või Pisipildid. Muud toetatud sortimise väljad hõlmavad Nimi,Muudetud kuupäev, Faili suurus, Pikkus, Koodek, Tüüp, Bitikiirus, Kaaderkiirus ja Hinnang. Salvesta kõrglahutusega videona. Kasuta Eelvaadevõi teabe saamiseks, kui on vaja üksikuid tulemusi läbi vaadata; nende lubamine on kogumise määratlusest sõltumatu."
+          },
+          {
+            "id": "smart_collections.p017",
+            "source_sha256": "582f628c0fa7f236fedaf4a03501cc2af09cc29bf57550102597d7d8e626b747",
+            "text": "PIIRANGUD JA FAILI TOIMINGUD"
+          },
+          {
+            "id": "smart_collections.p018",
+            "source_sha256": "9722f0d4824f0d75e2aa03fd474ccaa99cbe4abb11cf0728857e688af3d85f7a",
+            "text": "Kogum on seadistatud valik kättesaadavatest failidest, mitte indekseeritud teek, mis hõlmab eraldi draive, taustal töötav automaatne reegel, esitusloend, dubleeritud failide grupp ega füüsiline kaust. Seadistuse muutmine ei korralda faile automaatselt ümber. Failide kopeerimise/liigutamise/kustutamise käsud, mida te teadlikult selle tulemuste peal käivitate, toimivad siiski originaalmeedial. Olemasolevad linnukesed omavad prioriteeti esiletõstmise ees ja võivad sisaldada filtreid mööda vaatevjustatud faile; enne ettemääramata grupi toimingu tegemist kontrollige linnukeste loendit ja Tühista valikud. Teise kausta navigeerimine tühjendab selle paani linnukesed. Kogumi rakendamine võib jätta olemasolevad linnukesed alles, kui algkaust jääb samaks, seega kontrollige neid alati enne failitoimingute sooritamist."
+          },
+          {
+            "id": "smart_collections.p019",
+            "source_sha256": "07532ce67ddc2c2b72a425c349151e1bfee9bb68f725bc867be341fef82f1f29",
+            "text": "Vaata ka: [chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+          }
+        ],
+        "body": "MIDA NUTIKAD KOGUMID SALVESTAVAD\n\nTark Kogum on nimetatud, salvestatud otsing ja vaade ühe brauseri paani jaoks. See mäletab, kuidas leida ja kuvada faile lähtekaustast. See viitab originaalsetele failidele; kogumi loomine, avamine, ümbernimetamine või kustutamine ei kopeeri, liigu, nimeta ümber, kustuta ega märgi neid meediafaile. Kasutage seda, kui vaatate korduvalt sama kogu kindlate filterite ja sortimisega, selle asemel et iga kord need seaded uuesti sisestada. Salvestatud tööruum taastab mõlemad paanid ja nende paigutuse; Tark Kogum muudab ainult aktiivset paani.\n\nIgal kogu-l on täpselt üks alguskataloog. Kaasa alamkaustad otsib kõiki kaustu selle juurkausta alt. See ei saa kombineerida suvalisi mitteseotud kaustu, eraldi draive ega mitut algusjuurt üheks kogu-l. Valige praktilisel juhul nende lähim ühiskasutatav vanemkaust või salvestage eraldi kogu-d ja avage need kahes paanis. Kaasa alamkaustad jaoks juur-draivi valides saab skannida kogu draivi; valige kitsaim kasulik vanemkaust.\n\nSalvestatud seaded on kausta tee, Kaasa alamkaustad, Videod ja Pildid lülitid, Otsi teksti, Resolutsioon valik, iga Rohkem filtrite väärtus, sortimisväli ja -suund, Detailid või Pisipildid, pisipiltide suurus ja Jätkuv või Leheküljeline režiim. See ei salvesta linnukesega faile, esile tõstetud valikuid, eelvaate taasesitust, reaalajas jälgimist, teist paani, veeru laiuseid/järjestust, paanide eraldajaid ega pisipiltide lehe mahutavust. Need jäävad sõltumatuteks seadistusteks. Kogumid on salvestatud lokaalselt smart_collections.json rakenduse seadete kataloogis.\n\nLOO KOLLEKTSIOON\n\n1. Klõpsake paanil, mida soovite kohandada. See muudab selle aktiivseks paaniks Tööriistadkäsklused.\n2. Kasuta Sirvi…või tee kast, et avada soovitud allikakaust.Luba Kaasa alamkaustadkas pesastatud kaustad kuuluvad otsingusse.\n3. Märkige Videod, Pildid, või mõlemad. Määra Otsi suur- ja väiketähtede suhtes tundetu failinime või suhtelise tee alamstringi jaoks ja vali Resolutsioontäpse laiuse × kõrguse jaoks, kus soovitud. Ekraan ütlebLahutus:Kõik juhul, kui täpset resolutsiooni piirangut ei rakendata.\n4. Ava Rohkem filtreid…orientatsiooni, koodeki alamstringi, sildi alamstringi, minimaalse hinnangu, värvilise sildi, minimaalse/maksimaalse laiuse ja kõrguse, failisuuruse, kestuse ja muutmiskuupäevade jaoks. Tühjad väljad ei sea piiranguid; kõik mitte-tühjad piirangud peavad klappima. Sisestage Rakenda filtrite kasutamiseks.Kustuta lähtestab täpsema filtri väärtused. See ei ole eraldi suvaline laienduse filter; kasuta Videod/Pildidlülitid ja, kus sobib, faili nime alamsõne, nagu .mp4.\n5. Oodake skannimist ja valige vajalik järjekord. Selles Detailid, klõpsake veeru päisel; klõpsake uuesti, et muuta suunda. Pisipildid, kasutage Sorteeri ja selle välja/suunamenüüd. Mõlemad vaated kasutavad sama filtreeritud meediat ja järjekorda.\n6. Valige Tööriistad > Salvesta aktiivne nutikogu…ja sisestage kirjeldav kogu nimi. Olemasoleva nime salvestamine küsib Asenda nutikogu; nõustu ainult siis, kui praegune paan peaks asendama salvestatud definitsiooni. Salvesta mine loob eelseadistuse, mitte ei loo kuvatud failidest koopiat.\n\nAVADA JA UUENDADA KOGU\n\nVali kõigepealt sihtkoha paan. Ava Tööriistad > Halda nutikogusid…, vali salvestatud kirje ja klõpsa Rakenda või topeltklõpsa real. Aktiivne paan navigeerib salvestatud algkausta, taastab salvestatud filtrid, sortimise ja esitluse ning seejärel skannib selle. Vastupidine paan jääb muutumatuks. Kui kaust on lahti ühendatud, liigutatud või enam ei eksisteeri, selgitab Kogumikukaust pole saadaval salvestatud teed; ühenda see uuesti või salvesta asendus kehtiva kausta abil.\n\nTulemuss kajastavad faile, mis leitakse praegusel skaneerimisel, mitte külmutatud loendit, mis salvestati eelseade salvestamisel. Kasutage paneeli nuppu Ôå╗, Vaade > Värskenda aktiivset paani või F5 mõlema paneeli jaoks pärast väliste failide muutmist. Otseülekanne saab jälgida praegust kausta, kuid Otseülekanne ei ole osa salvestatud kollektsioonist. Filtreerimise või sortimise muutused mõjutavad praegust vaadet kohe; lähteulatuvuse muutused nõuavad vastavat skaneerimist. Tühista peatab skaneerimise. Suur rekursiivsete kollektsioonide puhul kasutatakse sama metaandmete vahemälu ja jõudlusprofiile nagu tavalise sirvimise puhul.\n\nEraldi kogumite redigeerimise nuppu ei ole. Olemasoleva kogumi muutmiseks Rakenda seda, kohanda jaotises kausta, ulatust, filtreid või järjestust ning seejärel vali Tööriistad > Salvesta aktiivne nutikogu… sama nimega ja kinnita asendamine. Halduseisundis Salvesta praegune salvestab praeguse aktiivse jaotise seaded ja küsib nime; see ei muuda automaatselt valitud rida. Nimemuutmine ei salvesta üheski jaotises tehtud filtrite muudatusi.\n\nNIMETA UUESTI, KUSTUTA JA TAASLÕHETA\n\nTööriistad > Halda nutikogusid…, valige kirje ja klõpsake Nimeta ümber. Sisestage Uus nimi: ja kinnitage asendamine, kui mõni teine kogumik kannab juba seda nime. Kustuta küsib kinnitust ja eemaldab ainult eelhäälestuse. Tühista kustutamine taastab viimati kustutatud eelhäälestuse, kui see halduri aken on avatud. Halduri sulgemisel kaob see ajutine tagasivõtmise virn. Kui on hiljem loodud samanimeline kogumik, asendab kustutatud kirje taastamine selle nime eelhäälestuse, seega kasutage mõlema säilitamisel erinevaid nimesid. Sulge väljub, ilma et valitud rida rakendataks. Ctrl+Z on mõeldud failitoiminguteks, mitte kogumite halduri kustutamiseks.\n\nNÄIDE: SORTIGE PILTE ALIKAUSTADES RESOLUTSIOONI JÄRGI\n\n1. Vasakul paanil minge Sirvi… oma Piltide ülemkausta, lubage Kaasa alamkaustad ja Pildid ning lülitage Videod välja.\n2. Kustuta Leidke ja seadke Resolutsioon väärtuseks Kõik, kui soovite võrrelda kõiki mõõtmeid. Avage Rohkem filtreid… ja Kustuta/Rakenda, kui vanad piirangud tuleks eemaldada.\n3. Detailid klõpsake Resolutsioon, kuni ilmub soovitud kasvav või kahanev järjekord. Või valige Pisipildid ja Sorteeri > Resolutsioon > Kleinaimad ees või Suurimad ees. Resolutsioon sorteerimine kasutab piksliala (laius × kõrgus), kus laiuse ja kõrguse võrdsed alad lahendatakse nende mõõtude järgi; see ei ole lihtne ainult laiuse järgi sorteerimine. Täpne Resolutsioon filter piirab hoopis ühe kindla mõõtmete paari.\n4. Salvestage aktiivne paan Pildid kaupa eraldusvõime järgi. Hiljem Rakenda seda kirjet mõlemas paanis, et otsingut korrata, sealhulgas pärast skannimist lisatud uute vastavate failide puhul.\n\nNÄIDE: VAATA KÕRGE LAHUTUSVÕIMEGA VIDEOSID\n\n1. Sirvi… juurde Videodülemkaust, lubama Kaasa alamkaustad ja Videod, ja keerata Pildid väljas.\n2. Sisse Rohkem filtreid…, seadista Minimaalne laius (pikslites) kuni 1920. aastani ja Minimaalne kõrgus (piksleid) kuni 1080, kui soovite videoid, mis vastavad MÕLEMATELE mõõtmetele. See välistab portreevideod, mis on kitsamad kui 1920, isegi kui neil on kõrged pikslite arvud; kohandage piiranguid või kasutage Orientatsioonvastavalt teie eesmärgile.\n3. Jätke Resolutsioonkõikide erinevate kriteeriumite hõlmamiseks. Valikuliselt määrata Koodek sisaldab HEVC-ks, et see vastaks salvestatud HEVC koodeki sildile, või H.264 H.264 jaoks. Filter vastab kuvatud koodeki sildile täpselt, ignoreerides tähe suurust; h264 ilma punktita ei vasta H.264-le. Kasutage faili tegeliku koodeki nägemiseks Info, kui filter ei leia midagi.\n4. Sorteeri  Resolutsioon sisse Detailid või Pisipildid. Muud toetatud sortimise väljad hõlmavad Nimi,Muudetud kuupäev, Faili suurus, Pikkus, Koodek, Tüüp, Bitikiirus, Kaaderkiirus ja Hinnang. Salvesta kõrglahutusega videona. Kasuta Eelvaadevõi teabe saamiseks, kui on vaja üksikuid tulemusi läbi vaadata; nende lubamine on kogumise määratlusest sõltumatu.\n\nPIIRANGUD JA FAILI TOIMINGUD\n\nKogum on seadistatud valik kättesaadavatest failidest, mitte indekseeritud teek, mis hõlmab eraldi draive, taustal töötav automaatne reegel, esitusloend, dubleeritud failide grupp ega füüsiline kaust. Seadistuse muutmine ei korralda faile automaatselt ümber. Failide kopeerimise/liigutamise/kustutamise käsud, mida te teadlikult selle tulemuste peal käivitate, toimivad siiski originaalmeedial. Olemasolevad linnukesed omavad prioriteeti esiletõstmise ees ja võivad sisaldada filtreid mööda vaatevjustatud faile; enne ettemääramata grupi toimingu tegemist kontrollige linnukeste loendit ja Tühista valikud. Teise kausta navigeerimine tühjendab selle paani linnukesed. Kogumi rakendamine võib jätta olemasolevad linnukesed alles, kui algkaust jääb samaks, seega kontrollige neid alati enne failitoimingute sooritamist.\n\nVaata ka: [chapter:scanning_and_filtering] ┬À [chapter:details_and_thumbnails] ┬À [chapter:workspaces_and_cache] ┬À [chapter:safe_file_actions]"
+      },
+      {
+        "id": "duplicates_and_comparison",
+        "title": "Duplikaadid Ja Võrdlus",
+        "paragraphs": [
+          {
+            "id": "duplicates_and_comparison.p001",
+            "source_sha256": "0782926d2c4bf15b6bc6546a84700657d47e97dec140144e01570bb40c129af6",
+            "text": "Tööriistad > Leia dubleeritud leiab etappe täpsed vasteid. Sama suurusega failid saavad kiire sõrmejälje, mis on valitud faili algusest, keskmest ja lõpust; ainult sobivad kandidaadid loetakse seejärel täielikult ja kontrollitakse SHA-256 abil. Mõlemad sõrmejäljed säilitatakse SQLite vahemälus, samal ajal kui tee, suurus ja muutmisaeg jäävad muutumatuks, mis teeb hilisemad otsingud palju kiiremaks. Edenemine kuvatakse aktiivse paneeli olekuribal. Ülevaateaken näitab kahte koopiat kõrvuti koos teede, kuupäevade ja säilitussiltidega. Strateegia valib ainult soovitatud liigsed failid – see kunagi ei kustuta neid automaatselt. Võrdle valitud näitab kahte valitud faili ja nende tehnilisi metaandmeid."
+          },
+          {
+            "id": "duplicates_and_comparison.p002",
+            "source_sha256": "db002d92b3f1a118d7bb8aa101af8c1ae262721f09af95713962ae48eac85a4e",
+            "text": "Tööriistad > Leia visuaalselt sarnased pildid tuvastab mõõdetud, kergelt uuesti pakitud ja muul viisil visuaalselt sarnased pildid isegi siis, kui nende failid ei ole bait-baiti identset. Valige Nähtav või Kõik skaneeritud ja tolerants vahemikus 0–16; madalamad väärtused on rangemad ja vaikimisi on 6. 64-bitised erinevuse räsiandmed salvestatakse vahemälusse tee, suuruse ja muudatuse kuupäeva alusel, ning BK-puu hoiab sobitamise suurte kogu puhul praktilisena. Tulemus-d on hinnangulised ja avanevad ainult ülevaatamiseks mõeldud aknas, kus on eelvaated ja valik „Vali see grupp” tegevus. Tööriist ei kustuta ega muuda kunagi faile; vaadake üle iga ettepanekutav grupp enne tavapäraste failitoimingute kasutamist."
+          },
+          {
+            "id": "duplicates_and_comparison.usage",
+            "source_sha256": "ff37fdb3497ad945d44131286606d3efc34ef09526591ecd559e63aaa9b6e4ca",
+            "text": "ÜLEVAATUSTE TÖÖRIISTADE KASUTAMINE\n\nTäielike duplikaatide korral avage lähtekaust, lubage Kaasa alamkaustadvajadusel oota skaneerimist ja vali Tööriistad > Leia dubleeritud failid…. See uurib kõiki selles paanis skaneeritud meediume, mitte ainult esile tõstetud või filtri abil nähtavaid faile. Vaadake rühmitatud teid ja kõrvuti eelvaateid ning seejärel valige säilitamisstrateegia, et esile tõsta allikapaanis soovitatud liigsed koopiad. See ei kustuta neid.Kustuta olemasolevad linnukesed ja kontrollige pakutud esiletõsteid enne faili toimingu käivitamist.\n\nVisuaalselt sarnaste piltide puhul valige Tööriistad > Leia visuaalselt sarnased pildid…, vali Ulatus: Nähtav või Kõik skaneeritud, määrake sarnasuse tolerants (0–16) ja klõpsake Alusta. Alustage 6-st; madalam on rangem. Valige tulemuse eelvaateks; Valige see rühm source-paneelistõstab esile grupi, sealhulgas viitepildi. See ei ole ainult soovimatute koopiate automaatne valik.\n\nOtse paari võrdlemiseks tühjendage soovimatud valikud, valige täpselt kaks faili ühes paanis ja valige Tööriistad > Võrdle valitud…. Kontrollige nende eelvaateid, radu ja omadusi.Hoidke vasakul (taaskasutage paremal) ja Hoidke paremal (taaskasutage vasakul) taotlusta kinnitust enne teise faili saatmist prügikasti. Sulgemine ilma ühegi tegevuseta jätab mõlemad failid muutmata."
+          }
+        ],
+        "body": "Tööriistad > Leia dubleeritud leiab etappe täpsed vasteid. Sama suurusega failid saavad kiire sõrmejälje, mis on valitud faili algusest, keskmest ja lõpust; ainult sobivad kandidaadid loetakse seejärel täielikult ja kontrollitakse SHA-256 abil. Mõlemad sõrmejäljed säilitatakse SQLite vahemälus, samal ajal kui tee, suurus ja muutmisaeg jäävad muutumatuks, mis teeb hilisemad otsingud palju kiiremaks. Edenemine kuvatakse aktiivse paneeli olekuribal. Ülevaateaken näitab kahte koopiat kõrvuti koos teede, kuupäevade ja säilitussiltidega. Strateegia valib ainult soovitatud liigsed failid – see kunagi ei kustuta neid automaatselt. Võrdle valitud näitab kahte valitud faili ja nende tehnilisi metaandmeid.\n\nTööriistad > Leia visuaalselt sarnased pildid tuvastab mõõdetud, kergelt uuesti pakitud ja muul viisil visuaalselt sarnased pildid isegi siis, kui nende failid ei ole bait-baiti identset. Valige Nähtav või Kõik skaneeritud ja tolerants vahemikus 0–16; madalamad väärtused on rangemad ja vaikimisi on 6. 64-bitised erinevuse räsiandmed salvestatakse vahemälusse tee, suuruse ja muudatuse kuupäeva alusel, ning BK-puu hoiab sobitamise suurte kogu puhul praktilisena. Tulemus-d on hinnangulised ja avanevad ainult ülevaatamiseks mõeldud aknas, kus on eelvaated ja valik „Vali see grupp” tegevus. Tööriist ei kustuta ega muuda kunagi faile; vaadake üle iga ettepanekutav grupp enne tavapäraste failitoimingute kasutamist.\n\nÜLEVAATUSTE TÖÖRIISTADE KASUTAMINE\n\nTäielike duplikaatide korral avage lähtekaust, lubage Kaasa alamkaustadvajadusel oota skaneerimist ja vali Tööriistad > Leia dubleeritud failid…. See uurib kõiki selles paanis skaneeritud meediume, mitte ainult esile tõstetud või filtri abil nähtavaid faile. Vaadake rühmitatud teid ja kõrvuti eelvaateid ning seejärel valige säilitamisstrateegia, et esile tõsta allikapaanis soovitatud liigsed koopiad. See ei kustuta neid.Kustuta olemasolevad linnukesed ja kontrollige pakutud esiletõsteid enne faili toimingu käivitamist.\n\nVisuaalselt sarnaste piltide puhul valige Tööriistad > Leia visuaalselt sarnased pildid…, vali Ulatus: Nähtav või Kõik skaneeritud, määrake sarnasuse tolerants (0–16) ja klõpsake Alusta. Alustage 6-st; madalam on rangem. Valige tulemuse eelvaateks; Valige see rühm source-paneelistõstab esile grupi, sealhulgas viitepildi. See ei ole ainult soovimatute koopiate automaatne valik.\n\nOtse paari võrdlemiseks tühjendage soovimatud valikud, valige täpselt kaks faili ühes paanis ja valige Tööriistad > Võrdle valitud…. Kontrollige nende eelvaateid, radu ja omadusi.Hoidke vasakul (taaskasutage paremal) ja Hoidke paremal (taaskasutage vasakul) taotlusta kinnitust enne teise faili saatmist prügikasti. Sulgemine ilma ühegi tegevuseta jätab mõlemad failid muutmata."
+      },
+      {
+        "id": "video_conversion",
+        "title": "Video teisendamine",
+        "paragraphs": [
+          {
+            "id": "video_conversion.p001",
+            "source_sha256": "b2ee9f6d3dced7fd286ca5ee1d093029d40566fbc9e29e283a2a3058d9c37b85",
+            "text": "Kasuta Tööriistad > Konverteeri valitud videod…, et luua uusi videofaile erineva koodeki, konteineri või resolutsiooniga. Originaalid säilitatakse. Alusta kõigepealt väikese prooviga, et saaksid võrrelda selle kvaliteeti, taasesitusühilduvust, failisuurust ja teisendusaega enne suurema grupi töötlemist."
+          },
+          {
+            "id": "video_conversion.p002",
+            "source_sha256": "d51cf66e935232f9f87c8254590a1e53247ff73d6b9a122efcfcfe2a026f48d9",
+            "text": "MUUDA ÜKSI VÕI MITU VIDEOT\n\n1. Ava lähtekaust kumbagi paani kasutades.Luba Kaasa alamkaustadkui videod on jaotatud alamkaustadesse, ja oodake skannimise lõpetamist.\n2. Märkige videod, mida teisendada. Kui märke pole, kasutab käskudega esile tõstetud faile.Kustuta eemaldage kõigepealt soovimatud tikid: filtreerimisega peidetud tikkidega fail kuulub siiski tegevusgruppi.Pildidrühmas jäetakse see käsk tähelepanuta.\n3. Valige Tööriistad > Konverteeri valitud videod….\n4. Vali eelhäälestus Resolutsioon, Kvaliteet (CRF) ja kodeerimise mootor nagu allpool kirjeldatud.\n5. Kontrolli Väljundkaust. See viitab algselt teise paani kaustale; kasuta Sirvi…või sisestage vajaduse korral teine sihtkoht. Kontrollige Säilita kaustad aktiivse paani suhtessäilitada allika alamkaustade struktuur selle sihtkoha all.\n6. Valige Jäta olemasolevad vahele või Hoia mõlemad. Klõpsa Värskenda eelvaadetpärast sihtkoha muutmist, kausta säilitamise või olemasoleva faili poliitikat. Loe iga Allikas ja Väljundrada ja kontrolli Staatusveeru. Ainult Valmisridu jooksma.\n7. Klõpsa Alusta konverteerimist…ja vaadake kinnitus üle enne nõustumist. Jälgige edenemist ja faili kohta Tulemus. Kui lõpetatud, avage konverteeritud fail ja kontrollige seda enne, kui otsustate, mida teha originaaliga."
+          },
+          {
+            "id": "video_conversion.p003",
+            "source_sha256": "13dffb3d18a13839d2bb6145a7313a3ee2144bcdd5305808500659c8a434c0a8",
+            "text": "EELVALMISTUSE VALIMINE\n\nH.264 MP4 (ühilduv): kasulik valik, kui on oluline lai mängija/seadme ühilduvus.\nH.265 MP4 (väiksem): HEVC kodeerimine, mis võib vähendada faili suurust, kuid nõuab ühilduvat mängijat.\nAV1 MKV (kõige väiksem): AV1 kodeerimine MKV konteineris; kontrollige oma arvutis taasesituse tuge ja konverteerimise kiirust.\n720p H.264 proxy: madalama eraldusvõimega H.264 koopia, mis on kasulik kiireks sirvimiseks või ülevaatamiseks. Selle eelvaliku valimine määrab Resolutsioon eraldusvõimeks 720p; saate seda enne alustamist muuta.\nRemux MKV-ks (ilma ümberkodeerimiseta): kopeerib olemasolevad voogud MKV-sse. See ei muuda video koodekit, eraldusvõimet ega kvaliteeti ning ei ole viis H.264 H.265-ks konverteerimiseks. Ümbersalvestamise eelvalikute nimed ei garanteeri, et iga väljund oleks väiksem kui selle lähtefail."
+          },
+          {
+            "id": "video_conversion.p004",
+            "source_sha256": "31fe0e232d02cd89058578e2fccde72f21ae8fd0074c94698407be72fccf86ed",
+            "text": "RESOLUTSIOON JA KVALITEET\n\nHoia allika lahutusvõimet säilitab ümberkodeerimisel algsed kaadri mõõtmed. 1080p ja 720p seavad väljundi KÕRGUSE 1080 või 720 pikslile, säilitades samal ajal kuvasuhte; need ei ole maksimaalse laiusega ega ainult automaatse vähendamise seaded. Näiteks 3840 × 2160 video muutub 1080p puhul 1920 × 1080. Väiksemat allikat saab suurendada, mis ei taasta puuduvat detaili. Portree videod säilitavad oma proportsioonid, selle asemel et muutuda maastikuks.\n\nKvaliteet (CRF) aktsepteerib terviknumbreid vahemikus 18 kuni 35; vaikimisi on 23. Madalamad numbrid nõuavad kõrgemat kvaliteeti ja tavaliselt suuremaid faile. Riistvara mootorid kaardistavad selle väärtuse oma kvaliteedikontrollile, seega võrdsed väärtused ei pruugi mootorite vahel identseid tulemusi anda. Proovi näidist. Remux ignoreerib kvaliteeti, suurust ja kiirendust."
+          },
+          {
+            "id": "video_conversion.p005",
+            "source_sha256": "2d17a4384e7cc6ceb233a92096824f99dc79d0d11c5f43d2c552d545e166b856",
+            "text": "KOODIMINE JA DEKOODIMINE\n\nAutomaatne (soovitatav) proovib saadaolevaid riistvarapõhiseid kodeerimisvõimalusi ja vajadusel lülitub alternatiividele Tarkvara / CPU. Tarkvara / CPU kasutab protsessorit. NVIDIA NVENC, Intel Quick Sync, AMD AMF ja Linux VA-API pakutakse, kui valitud eelseadistus neid toetab. Tuvastuse kokkuvõte teatab FFmpeg toe olemasolust; valitud riistvara ja draiverid peavad samuti töötama. Selgelt valitud riistvaramootor teatab veast selle asemel, et vaikselt eri kodeerijale lülituda.\n\nKasuta riistvaralist dekodeerimist, kui see on saadaval juhib allika lugemist sõltumatult väljundi kodeerijast. Kui nõutud riistvaradekooder ei saa käivituda, proovib dekodeerimine tarkvaras uuesti, hoides valitud kodeerijat. Tühjendage see, kui soovite tarkvarapõhist dekodeerimist. Need seaded ei muuda originaalfaili."
+          },
+          {
+            "id": "video_conversion.p006",
+            "source_sha256": "06ea5ef5426b40dc040f7227353e00d7437b8fc335a4e6ad48d27d5bbdcf8834",
+            "text": "VÄLJUNDI NIMED, EDUSAMM JA TÄHISTAMINE\n\nUutel failinimedel on eelmääratud järelliide ja valiku korral ka väljundi resolutsioon. Jäta olemasolevad vahele jätab olemasoleva sihtkoha muutmata. Hoia mõlemad kasutab nummerdatud failinime, selle asemel et seda asendada. Kontrollige eelvaadet, et leida vahele jäetud failid, korduvad väljundi nimed või muud probleemid enne alustamist.\n\nVideod töödeldakse ühe kaupa. Tühista konverteerimine peatab praeguse teisenduse, eemaldab selle lõpetamata väljundi ja peatab ülejäänud järjekorra. Valmis väljundid jäävad alles. Selle teisendusakna sulgemine esitab samuti tühistamise taotluse. Selle järjekord on eraldiseisev Tööriistad > Ülekandmisjärjekord…-st, mis haldab kopeerimist ja teisaldamist."
+          },
+          {
+            "id": "video_conversion.p007",
+            "source_sha256": "2305a1598d67013bd4f756c6d91dec721660a38e61ab32c2435ab8a104a9ee5b",
+            "text": "NÄIDE: H.264 H.265KS 1080p\n\nMärgi mõned H.264 videod, ava Tööriistad > Konverteeri valitud videod…, vali H.265 MP4 (väiksem), sea Resolutsioon väärtusele 1080p, jäta Kvaliteet (CRF) 23-le esialgseks prooviks ja vali Automaatne (soovitatav). Vali väljundkaust, klõpsa Värskenda eelvaadet, kontrolli teid, seejärel Alusta konverteerimist…. Võrdle valminud koopiaid originaalidega; vajadusel kohanda kvaliteeti või eraldusvõimet ja testi uuesti."
+          }
+        ],
+        "body": "Kasuta Tööriistad > Konverteeri valitud videod…, et luua uusi videofaile erineva koodeki, konteineri või resolutsiooniga. Originaalid säilitatakse. Alusta kõigepealt väikese prooviga, et saaksid võrrelda selle kvaliteeti, taasesitusühilduvust, failisuurust ja teisendusaega enne suurema grupi töötlemist.\n\nMUUDA ÜKSI VÕI MITU VIDEOT\n\n1. Ava lähtekaust kumbagi paani kasutades.Luba Kaasa alamkaustadkui videod on jaotatud alamkaustadesse, ja oodake skannimise lõpetamist.\n2. Märkige videod, mida teisendada. Kui märke pole, kasutab käskudega esile tõstetud faile.Kustuta eemaldage kõigepealt soovimatud tikid: filtreerimisega peidetud tikkidega fail kuulub siiski tegevusgruppi.Pildidrühmas jäetakse see käsk tähelepanuta.\n3. Valige Tööriistad > Konverteeri valitud videod….\n4. Vali eelhäälestus Resolutsioon, Kvaliteet (CRF) ja kodeerimise mootor nagu allpool kirjeldatud.\n5. Kontrolli Väljundkaust. See viitab algselt teise paani kaustale; kasuta Sirvi…või sisestage vajaduse korral teine sihtkoht. Kontrollige Säilita kaustad aktiivse paani suhtessäilitada allika alamkaustade struktuur selle sihtkoha all.\n6. Valige Jäta olemasolevad vahele või Hoia mõlemad. Klõpsa Värskenda eelvaadetpärast sihtkoha muutmist, kausta säilitamise või olemasoleva faili poliitikat. Loe iga Allikas ja Väljundrada ja kontrolli Staatusveeru. Ainult Valmisridu jooksma.\n7. Klõpsa Alusta konverteerimist…ja vaadake kinnitus üle enne nõustumist. Jälgige edenemist ja faili kohta Tulemus. Kui lõpetatud, avage konverteeritud fail ja kontrollige seda enne, kui otsustate, mida teha originaaliga.\n\nEELVALMISTUSE VALIMINE\n\nH.264 MP4 (ühilduv): kasulik valik, kui on oluline lai mängija/seadme ühilduvus.\nH.265 MP4 (väiksem): HEVC kodeerimine, mis võib vähendada faili suurust, kuid nõuab ühilduvat mängijat.\nAV1 MKV (kõige väiksem): AV1 kodeerimine MKV konteineris; kontrollige oma arvutis taasesituse tuge ja konverteerimise kiirust.\n720p H.264 proxy: madalama eraldusvõimega H.264 koopia, mis on kasulik kiireks sirvimiseks või ülevaatamiseks. Selle eelvaliku valimine määrab Resolutsioon eraldusvõimeks 720p; saate seda enne alustamist muuta.\nRemux MKV-ks (ilma ümberkodeerimiseta): kopeerib olemasolevad voogud MKV-sse. See ei muuda video koodekit, eraldusvõimet ega kvaliteeti ning ei ole viis H.264 H.265-ks konverteerimiseks. Ümbersalvestamise eelvalikute nimed ei garanteeri, et iga väljund oleks väiksem kui selle lähtefail.\n\nRESOLUTSIOON JA KVALITEET\n\nHoia allika lahutusvõimet säilitab ümberkodeerimisel algsed kaadri mõõtmed. 1080p ja 720p seavad väljundi KÕRGUSE 1080 või 720 pikslile, säilitades samal ajal kuvasuhte; need ei ole maksimaalse laiusega ega ainult automaatse vähendamise seaded. Näiteks 3840 × 2160 video muutub 1080p puhul 1920 × 1080. Väiksemat allikat saab suurendada, mis ei taasta puuduvat detaili. Portree videod säilitavad oma proportsioonid, selle asemel et muutuda maastikuks.\n\nKvaliteet (CRF) aktsepteerib terviknumbreid vahemikus 18 kuni 35; vaikimisi on 23. Madalamad numbrid nõuavad kõrgemat kvaliteeti ja tavaliselt suuremaid faile. Riistvara mootorid kaardistavad selle väärtuse oma kvaliteedikontrollile, seega võrdsed väärtused ei pruugi mootorite vahel identseid tulemusi anda. Proovi näidist. Remux ignoreerib kvaliteeti, suurust ja kiirendust.\n\nKOODIMINE JA DEKOODIMINE\n\nAutomaatne (soovitatav) proovib saadaolevaid riistvarapõhiseid kodeerimisvõimalusi ja vajadusel lülitub alternatiividele Tarkvara / CPU. Tarkvara / CPU kasutab protsessorit. NVIDIA NVENC, Intel Quick Sync, AMD AMF ja Linux VA-API pakutakse, kui valitud eelseadistus neid toetab. Tuvastuse kokkuvõte teatab FFmpeg toe olemasolust; valitud riistvara ja draiverid peavad samuti töötama. Selgelt valitud riistvaramootor teatab veast selle asemel, et vaikselt eri kodeerijale lülituda.\n\nKasuta riistvaralist dekodeerimist, kui see on saadaval juhib allika lugemist sõltumatult väljundi kodeerijast. Kui nõutud riistvaradekooder ei saa käivituda, proovib dekodeerimine tarkvaras uuesti, hoides valitud kodeerijat. Tühjendage see, kui soovite tarkvarapõhist dekodeerimist. Need seaded ei muuda originaalfaili.\n\nVÄLJUNDI NIMED, EDUSAMM JA TÄHISTAMINE\n\nUutel failinimedel on eelmääratud järelliide ja valiku korral ka väljundi resolutsioon. Jäta olemasolevad vahele jätab olemasoleva sihtkoha muutmata. Hoia mõlemad kasutab nummerdatud failinime, selle asemel et seda asendada. Kontrollige eelvaadet, et leida vahele jäetud failid, korduvad väljundi nimed või muud probleemid enne alustamist.\n\nVideod töödeldakse ühe kaupa. Tühista konverteerimine peatab praeguse teisenduse, eemaldab selle lõpetamata väljundi ja peatab ülejäänud järjekorra. Valmis väljundid jäävad alles. Selle teisendusakna sulgemine esitab samuti tühistamise taotluse. Selle järjekord on eraldiseisev Tööriistad > Ülekandmisjärjekord…-st, mis haldab kopeerimist ja teisaldamist.\n\nNÄIDE: H.264 H.265KS 1080p\n\nMärgi mõned H.264 videod, ava Tööriistad > Konverteeri valitud videod…, vali H.265 MP4 (väiksem), sea Resolutsioon väärtusele 1080p, jäta Kvaliteet (CRF) 23-le esialgseks prooviks ja vali Automaatne (soovitatav). Vali väljundkaust, klõpsa Värskenda eelvaadet, kontrolli teid, seejärel Alusta konverteerimist…. Võrdle valminud koopiaid originaalidega; vajadusel kohanda kvaliteeti või eraldusvõimet ja testi uuesti."
+      },
+      {
+        "id": "media_reports",
+        "title": "Meediaruande eksportimine",
+        "paragraphs": [
+          {
+            "id": "media_reports.p001",
+            "source_sha256": "e5820c2e78ffa8b3b9ff09b57d59bc2adc0b1d92bf570493c0d4aa52c3ab7f5d",
+            "text": "Tööriistad > Ekspordi meediaraport… salvestab loendi failidest, mis on juba aktiivses paanis skannitud. See ei kopeeri, muuda ega teisenda neid meediafaile. Kasutage CSV-d arvutustabeli jaoks, JSON-i struktureeritud andmete jaoks või HTML-i aruande jaoks, mida saate avada veebibrauseris."
+          },
+          {
+            "id": "media_reports.p002",
+            "source_sha256": "94aceb1c124b99d41385988a2d8951dbf25dd5178e8759add72a545ebfbfd828",
+            "text": "LOO ARUANNE\n\n1. Ava kaust, mida soovid kataloogi lisada. Luba Kaasa alamkaustad, kui vaja, ja oota, kuni skannimine lõpeb.\n2. Rakenda filtrid, kui soovid aruannet konkreetsest rühmast, näiteks H.265 videod või kõrge eraldusvõimega pildid. Klõpsa sellel paneelil, et see aktiivseks teha.\n3. Vali Tööriistad > Ekspordi meediaraport….\n4. Sea ulatus (Scope) Valitud, Nähtav või Kõik skaneeritud.\n5. Vali Vorming: CSV, JSON või HTML.\n6. Jäta Lisa täielikud failiteed märgitud, et salvestada täielikud asukohad, või eemalda märge, et kasutada võimalusel aktiivse kausta suhtelisi teid.\n7. Klõpsa Eksport…, vali aruande failinimi ja sihtkoht, seejärel Salvesta (Salvesta). Oota Aruanne eksporditud. Ava salvestatud fail sobivas tabelarvutusprogrammis, brauseris või andmevaaturis."
+          },
+          {
+            "id": "media_reports.p003",
+            "source_sha256": "5537e045dec5259f000dbdf42606d0124a95734ebcc8c6f57073576f0b3bcd6d",
+            "text": "MIDA SÕNA SCOPE TÄHENDAB\n\nValitud kasutab paneeli märgitud faile, kui linnukesed on olemas; muul juhul kasutatakse esiletõstetud faile. Seetõttu võivad olla kaasatud ka peidetud linnukesed. Nähtav tähendab KÕIKI faile, mis vastavad praegustele paneeli filtritele, mitte ainult ridu või pisipilte, mis hetkel ekraanil või praegusel pisipildi lehel on. Kõik skaneeritud hõlmab paneeli skannitud meediat, isegi kui praegused filtrid neid peidavad. Ükski neist valikutest ei skanni automaatselt teist ketast ega kausta."
+          },
+          {
+            "id": "media_reports.p004",
+            "source_sha256": "5741554f0d983a0f0b711b553b0139e6d53ee97d55ac8ee048ac36b006cc85f4",
+            "text": "MIDA ARUANNE SISALDAB\n\nIga kirje sisaldab nime ja rada, meediumitüüpi ja laiendit, mõõtmeid/resolutsiooni, suurust, muutmise kuupäeva, kestust, videokoodekit, bitikiirust, kaadrisagedust, helikoodekit/kanaleid, piksliformaati, HDR-i, hinnangut, värvimärget, silte ning loetavat/veatähistust, kui see on saadaval. Puuduvad andmed jäävad puudu; eksportimine ei käivita täielikku terviklikkuse kontrolli. JSON sisaldab kokkuvõtet ja kirjelduse nimekirja. HTML sisaldab kokkuvõtet ja tabelit. CSV sisaldab faili-tabelit."
+          },
+          {
+            "id": "media_reports.p005",
+            "source_sha256": "0c1aff0372dd91ebb6e6b1344e7ca59216b6cbc2432e03f36f180b7b9bd7118f",
+            "text": "NAIDE JA TÕRKE TAASTAMINE\n\nSuurte videote loetlemiseks alamkaustades avage nende ühine vanemkaust, lubage Videod ja Kaasa alamkaustad, seadistage suuruse piirang Rohkem filtreid…-s ning seejärel eksportige Ulatus: Nähtav ja Vorming: CSV abil. Avage CSV oma tabelarvutusprogrammis ja vaadake suurusi ning radu.\n\nTühista eksport peatab käimasoleva ekspordi; Sulge taotleb samuti tühistamist. Aruanne paigutatakse lõppfaili nimele alles kirjutamise lõpetamisel, seega tühistamine ei jäta osaliselt kirjutatud lõpparuannet. Kontrollige teid enne raporti jagamist: täielikud failiteed võivad paljastada kaustade nimesid."
+          }
+        ],
+        "body": "Tööriistad > Ekspordi meediaraport… salvestab loendi failidest, mis on juba aktiivses paanis skannitud. See ei kopeeri, muuda ega teisenda neid meediafaile. Kasutage CSV-d arvutustabeli jaoks, JSON-i struktureeritud andmete jaoks või HTML-i aruande jaoks, mida saate avada veebibrauseris.\n\nLOO ARUANNE\n\n1. Ava kaust, mida soovid kataloogi lisada. Luba Kaasa alamkaustad, kui vaja, ja oota, kuni skannimine lõpeb.\n2. Rakenda filtrid, kui soovid aruannet konkreetsest rühmast, näiteks H.265 videod või kõrge eraldusvõimega pildid. Klõpsa sellel paneelil, et see aktiivseks teha.\n3. Vali Tööriistad > Ekspordi meediaraport….\n4. Sea ulatus (Scope) Valitud, Nähtav või Kõik skaneeritud.\n5. Vali Vorming: CSV, JSON või HTML.\n6. Jäta Lisa täielikud failiteed märgitud, et salvestada täielikud asukohad, või eemalda märge, et kasutada võimalusel aktiivse kausta suhtelisi teid.\n7. Klõpsa Eksport…, vali aruande failinimi ja sihtkoht, seejärel Salvesta (Salvesta). Oota Aruanne eksporditud. Ava salvestatud fail sobivas tabelarvutusprogrammis, brauseris või andmevaaturis.\n\nMIDA SÕNA SCOPE TÄHENDAB\n\nValitud kasutab paneeli märgitud faile, kui linnukesed on olemas; muul juhul kasutatakse esiletõstetud faile. Seetõttu võivad olla kaasatud ka peidetud linnukesed. Nähtav tähendab KÕIKI faile, mis vastavad praegustele paneeli filtritele, mitte ainult ridu või pisipilte, mis hetkel ekraanil või praegusel pisipildi lehel on. Kõik skaneeritud hõlmab paneeli skannitud meediat, isegi kui praegused filtrid neid peidavad. Ükski neist valikutest ei skanni automaatselt teist ketast ega kausta.\n\nMIDA ARUANNE SISALDAB\n\nIga kirje sisaldab nime ja rada, meediumitüüpi ja laiendit, mõõtmeid/resolutsiooni, suurust, muutmise kuupäeva, kestust, videokoodekit, bitikiirust, kaadrisagedust, helikoodekit/kanaleid, piksliformaati, HDR-i, hinnangut, värvimärget, silte ning loetavat/veatähistust, kui see on saadaval. Puuduvad andmed jäävad puudu; eksportimine ei käivita täielikku terviklikkuse kontrolli. JSON sisaldab kokkuvõtet ja kirjelduse nimekirja. HTML sisaldab kokkuvõtet ja tabelit. CSV sisaldab faili-tabelit.\n\nNAIDE JA TÕRKE TAASTAMINE\n\nSuurte videote loetlemiseks alamkaustades avage nende ühine vanemkaust, lubage Videod ja Kaasa alamkaustad, seadistage suuruse piirang Rohkem filtreid…-s ning seejärel eksportige Ulatus: Nähtav ja Vorming: CSV abil. Avage CSV oma tabelarvutusprogrammis ja vaadake suurusi ning radu.\n\nTühista eksport peatab käimasoleva ekspordi; Sulge taotleb samuti tühistamist. Aruanne paigutatakse lõppfaili nimele alles kirjutamise lõpetamisel, seega tühistamine ei jäta osaliselt kirjutatud lõpparuannet. Kontrollige teid enne raporti jagamist: täielikud failiteed võivad paljastada kaustade nimesid."
+      },
+      {
+        "id": "embedded_metadata",
+        "title": "Sisseehitatud metaandmete vaatamine",
+        "paragraphs": [
+          {
+            "id": "embedded_metadata.p001",
+            "source_sha256": "de02fc927d80ae28a81ef73fc00493e9dc09ed4f5766dfd6f65805e4b99c9abd",
+            "text": "Tööriistad > Vaata manustatud metadatut… loeb teavet, mis on salvestatud ühe pildi või video sisse. See erineb rakenduse enda hinnangutest, värvilistest märgistusest ja siltidest, mis ei muuda meediumifaili."
+          },
+          {
+            "id": "embedded_metadata.p002",
+            "source_sha256": "84dddde141e5b461ca97772fda91dd9488b49ce2db3f0100540c7e90cefcf078",
+            "text": "1. Kustuta soovimatud linnukesed, seejärel vali aktiivses aknas täpselt üks pilt või video.\n2. Vali Tööriistad > Vaata manustatud metadatut… ja oota, kuni väljad kuvatakse.\n3. Loe veerge Sektsioon, Väli ja Väärtus. Pildid võib sisaldada kaamera/kuupäeva EXIF-infot ja GPS-välju, kui need on olemas; videotes võivad olla konteineri ja voo sildid. Kõik failid ei sisalda neid välju.\n4. Tüüpe Otsi lahtrisse, et kitsendada kuvatud ridu nende sektsiooni, välja või väärtuse järgi.\n5. Vali read ja klõpsa Kopeeri valitud/kõik, et need kopeerida. Kui ühtegi rida ei ole valitud, kopeeritakse kõik praegu kuvatud read.\n6. Klõpsa Ekspordi JSON…, et salvestada kõik eraldatud metaandmed, sealhulgas Otsi abil peidetud read. Vali failinimi ja Salvesta.\n7. Sulge aken pärast lõpetamist. Metaandmete vaatamine, kopeerimine ja eksportimine ei muuda originaalfailis sisalduvat infot."
+          }
+        ],
+        "body": "Tööriistad > Vaata manustatud metadatut… loeb teavet, mis on salvestatud ühe pildi või video sisse. See erineb rakenduse enda hinnangutest, värvilistest märgistusest ja siltidest, mis ei muuda meediumifaili.\n\n1. Kustuta soovimatud linnukesed, seejärel vali aktiivses aknas täpselt üks pilt või video.\n2. Vali Tööriistad > Vaata manustatud metadatut… ja oota, kuni väljad kuvatakse.\n3. Loe veerge Sektsioon, Väli ja Väärtus. Pildid võib sisaldada kaamera/kuupäeva EXIF-infot ja GPS-välju, kui need on olemas; videotes võivad olla konteineri ja voo sildid. Kõik failid ei sisalda neid välju.\n4. Tüüpe Otsi lahtrisse, et kitsendada kuvatud ridu nende sektsiooni, välja või väärtuse järgi.\n5. Vali read ja klõpsa Kopeeri valitud/kõik, et need kopeerida. Kui ühtegi rida ei ole valitud, kopeeritakse kõik praegu kuvatud read.\n6. Klõpsa Ekspordi JSON…, et salvestada kõik eraldatud metaandmed, sealhulgas Otsi abil peidetud read. Vali failinimi ja Salvesta.\n7. Sulge aken pärast lõpetamist. Metaandmete vaatamine, kopeerimine ja eksportimine ei muuda originaalfailis sisalduvat infot."
+      },
+      {
+        "id": "media_integrity",
+        "title": "Meedia terviklikkuse kontrollimine",
+        "paragraphs": [
+          {
+            "id": "media_integrity.p001",
+            "source_sha256": "97deea524f7dd0dcdc0cd44429f4c4d29e3e5d71f7a4e9ca6240aaad7b295631",
+            "text": "Tööriistad > Kontrolli meedia terviklikkust… kontrollib, kas meediat saab dekodeerida, selle asemel et tugineda ainult faili nimele või tehnilisele päisele. Kasutage seda loetamatute failide uurimiseks või partii kontrollimiseks enne arhiveerimist. Kogu videote lugemine võib võtta märkimisväärselt aega. See ei paranda ega muuda kunagi originaale."
+          },
+          {
+            "id": "media_integrity.p002",
+            "source_sha256": "e788bb47cbc4c2ead78a958e6e1e23990943c61731afbfeeb2cda9b82c34fd3c",
+            "text": "1. Ava lähtekaust, määra Kaasa alamkaustadvajadusel ja lase skaneerimisel lõppeda.\n2. Vali Tööriistad > Kontrolli meedia terviklikkust….\n3. Määra Ulatus: Valitudmärgitud/esile tõstetud failide jaoks,Nähtavkõigi filtri tingimustele vastavate failide jaoks või Kõik skaneeritudkaasa failid, mida filtrid peidavad.\n4. Märkige Sunnita uuesti kontrollimakui soovite uut kontrolli isegi siis, kui eelmine tulemus on vahemällu salvestatud.\n5. Klõpsake Alusta. Vaata üle Staatus, Vahemällu salvestatud, Tee ja Detailidnagu tulemused saabuvad.Läbitud tähendab, et dekooder lõpetas oma kontrolli; Ebaõnnestunudsalvestab dekodeerimise või juurdepääsu probleemi. See ei taga visuaalset kvaliteeti, õiget sisu ega pahavara puudumist.\n6. Kasutage Tühista edasisest kontrolli lõpetama.Tulemuss juba kogutud jäävad saadaval.\n7. Klõpsa Ekspordi CSV…kogutud tulemuste salvestamiseks, sh juhul, kui kontroll tühistati.Valimine ebaõnnestustõstab esile ebaõnnestunud failid allikapaneelis ja sulgeb tulemuste akna; see ei kustuta neid."
+          },
+          {
+            "id": "media_integrity.p003",
+            "source_sha256": "1ae255df200b724240135bb169ad32364b4431dd787322cf203b44e9ce3e8323",
+            "text": "Enne esile toodud vigade käsitlemist kontrollige nende üksikasju ja vaadake Tühista valikud: olemasolevad linnukesed on endiselt prioriteetsed järgnevate failikäsu puhul. Viga võib viidata õiguste, puuduvate draivide või dekooderi toe puudumisele ning ka kahjustatud andmetele. Ärge kustutage faile ainult selleks, et üks kontroll ebaõnnestus."
+          }
+        ],
+        "body": "Tööriistad > Kontrolli meedia terviklikkust… kontrollib, kas meediat saab dekodeerida, selle asemel et tugineda ainult faili nimele või tehnilisele päisele. Kasutage seda loetamatute failide uurimiseks või partii kontrollimiseks enne arhiveerimist. Kogu videote lugemine võib võtta märkimisväärselt aega. See ei paranda ega muuda kunagi originaale.\n\n1. Ava lähtekaust, määra Kaasa alamkaustadvajadusel ja lase skaneerimisel lõppeda.\n2. Vali Tööriistad > Kontrolli meedia terviklikkust….\n3. Määra Ulatus: Valitudmärgitud/esile tõstetud failide jaoks,Nähtavkõigi filtri tingimustele vastavate failide jaoks või Kõik skaneeritudkaasa failid, mida filtrid peidavad.\n4. Märkige Sunnita uuesti kontrollimakui soovite uut kontrolli isegi siis, kui eelmine tulemus on vahemällu salvestatud.\n5. Klõpsake Alusta. Vaata üle Staatus, Vahemällu salvestatud, Tee ja Detailidnagu tulemused saabuvad.Läbitud tähendab, et dekooder lõpetas oma kontrolli; Ebaõnnestunudsalvestab dekodeerimise või juurdepääsu probleemi. See ei taga visuaalset kvaliteeti, õiget sisu ega pahavara puudumist.\n6. Kasutage Tühista edasisest kontrolli lõpetama.Tulemuss juba kogutud jäävad saadaval.\n7. Klõpsa Ekspordi CSV…kogutud tulemuste salvestamiseks, sh juhul, kui kontroll tühistati.Valimine ebaõnnestustõstab esile ebaõnnestunud failid allikapaneelis ja sulgeb tulemuste akna; see ei kustuta neid.\n\nEnne esile toodud vigade käsitlemist kontrollige nende üksikasju ja vaadake Tühista valikud: olemasolevad linnukesed on endiselt prioriteetsed järgnevate failikäsu puhul. Viga võib viidata õiguste, puuduvate draivide või dekooderi toe puudumisele ning ka kahjustatud andmetele. Ärge kustutage faile ainult selleks, et üks kontroll ebaõnnestus."
+      },
+      {
+        "id": "video_contact_sheets",
+        "title": "Videokontaktlehe loomine",
+        "paragraphs": [
+          {
+            "id": "video_contact_sheets.p001",
+            "source_sha256": "dfbcc6d5b6648c41111ac2cc655dcf84740fdf1c9bdd8173582892799fbf4a42",
+            "text": "Kontaktleht on üks PNG, mis sisaldab videos olevate still-kaadrite võrku. See annab ülevaate ilma kogu klippi esitamata. Tööriistad > Loo videokontaktleht… ei muuda algset videot."
+          },
+          {
+            "id": "video_contact_sheets.p002",
+            "source_sha256": "fe5c1944466bf890d4109983ffb85dd4dd70b26b039fb244122ff3be4f7462b1",
+            "text": "1. Eemaldage Kustuta soovimatud linnukesed ja valige aktiivses paanis üks video.  \n2. Valige Tööriistad > Loo videokontaktleht….  \n3. Määrake kaadrite arv (4–48), veerud (2–8) ja kaadri laius (pikslites) (160–640). Vaikeväärtused on 12 kaadrit, 4 veergu ja 320 pikslit.  \n4. Jätke Kuva kaadri numbrid ja ajatempli märgitud, kui soovite kaadrite alla pealkirju.  \n5. Klõpsake Loo…, valige PNG-faili nimi ja sihtkoht ning klõpsake Salvesta.  \n6. Oodake Kontaktleht valmis, seejärel avage salvestatud PNG-pilt pildivaaturis. Tühista peatab ekstraktsiooni; Sulge palub samuti tühistamist."
+          },
+          {
+            "id": "video_contact_sheets.p003",
+            "source_sha256": "f7a7ce26c0b8bef736351a923a83f5889983daaf7968b4a4afe9f42a47d89af6",
+            "text": "Kaadreid valitakse klipi jooksul ühtlaselt, vältides selle täpseid esimest ja viimast kaadrit. See ei ole stseenituvastus ja tööriist vajab loetavat videopikkust. Suurr ruudustikud ja kaadrid võtavad kauem aega ja loovad suurema pildi. Kiireks ülevaatamiseks alustage vaikimisi 12-kaadri lehega."
+          }
+        ],
+        "body": "Kontaktleht on üks PNG, mis sisaldab videos olevate still-kaadrite võrku. See annab ülevaate ilma kogu klippi esitamata. Tööriistad > Loo videokontaktleht… ei muuda algset videot.\n\n1. Eemaldage Kustuta soovimatud linnukesed ja valige aktiivses paanis üks video.  \n2. Valige Tööriistad > Loo videokontaktleht….  \n3. Määrake kaadrite arv (4–48), veerud (2–8) ja kaadri laius (pikslites) (160–640). Vaikeväärtused on 12 kaadrit, 4 veergu ja 320 pikslit.  \n4. Jätke Kuva kaadri numbrid ja ajatempli märgitud, kui soovite kaadrite alla pealkirju.  \n5. Klõpsake Loo…, valige PNG-faili nimi ja sihtkoht ning klõpsake Salvesta.  \n6. Oodake Kontaktleht valmis, seejärel avage salvestatud PNG-pilt pildivaaturis. Tühista peatab ekstraktsiooni; Sulge palub samuti tühistamist.\n\nKaadreid valitakse klipi jooksul ühtlaselt, vältides selle täpseid esimest ja viimast kaadrit. See ei ole stseenituvastus ja tööriist vajab loetavat videopikkust. Suurr ruudustikud ja kaadrid võtavad kauem aega ja loovad suurema pildi. Kiireks ülevaatamiseks alustage vaikimisi 12-kaadri lehega."
+      },
+      {
+        "id": "folder_synchronization",
+        "title": "Kaust Sünkroniseerimine",
+        "paragraphs": [
+          {
+            "id": "folder_synchronization.p001",
+            "source_sha256": "6a5c3c71a212781f6a6c74fac70303224fcbeac3c7d2b4e7c00e810e71cdd110",
+            "text": "Ava kaustad, mida soovid võrrelda, vasakus ja paremas paanis, seejärel vali Tööriistad > Võrdle / sünkroniseeri kaustad. Vaata üle ainult vasakpoolseid, ainult parempoolseid, uuemaid ja erinevaid kirjeid enne ühesuunalise sünkroniseerimise järjekorda lisamist."
+          },
+          {
+            "id": "folder_synchronization.steps",
+            "source_sha256": "cf1597a5ccfc3cc7b73f8f7e2f000fa029816c676a9967854c22cd7d39862515",
+            "text": "1. Ava kaks kausta vasakus ja paremas paanis. Sea Kaasa alamkaustadvajadusel sõltumatult iga poole jaoks.\n2. Vali Tööriistad > Võrdle / sünkroniseeri kaustad…\n3. Ülevaade Suhteline tee ja Staatus: Ainult vasakul, ainult paremal, sama, vasak uuem, parem uuem või erinev. See võrdlus kasutab toetatud meediumifaile, failisuurusi ja muutmisaegu; Sama ei tähenda kogu sisu kontrolli räsi järgi. See loetleb kaustad sõltumatult paneeli Otsi/meediumi kuvamisfiltritest.\n4. Tõstke esile konkreetsed read, et piirata toimingut. Kui ridu ei ole esile tõstetud, arvestavad suunanuppud kogu võrdlust.\n5. Klõpsake Kopeeri puuduv/uus → parem või Kopeeri puuduv/uus → vasakule. Pakutakse ainult puuduvad, uuemad või teistsugused failid selles suunas. Loe ja kinnita failide arv enne järjekorda seadmist.\n6. Jälgi edenemist Tööriistad > Ülekandmisjärjekord…. See kopeerib faile ühes suunas; see ei eemalda sihtkoha lisafaile ega teosta automaatset kahepoolset peegeldamist. Kui soovite uuendatud tulemuste nimekirja, tehke kopeerimise järel võrdlus uuesti."
+          }
+        ],
+        "body": "Ava kaustad, mida soovid võrrelda, vasakus ja paremas paanis, seejärel vali Tööriistad > Võrdle / sünkroniseeri kaustad. Vaata üle ainult vasakpoolseid, ainult parempoolseid, uuemaid ja erinevaid kirjeid enne ühesuunalise sünkroniseerimise järjekorda lisamist.\n\n1. Ava kaks kausta vasakus ja paremas paanis. Sea Kaasa alamkaustadvajadusel sõltumatult iga poole jaoks.\n2. Vali Tööriistad > Võrdle / sünkroniseeri kaustad…\n3. Ülevaade Suhteline tee ja Staatus: Ainult vasakul, ainult paremal, sama, vasak uuem, parem uuem või erinev. See võrdlus kasutab toetatud meediumifaile, failisuurusi ja muutmisaegu; Sama ei tähenda kogu sisu kontrolli räsi järgi. See loetleb kaustad sõltumatult paneeli Otsi/meediumi kuvamisfiltritest.\n4. Tõstke esile konkreetsed read, et piirata toimingut. Kui ridu ei ole esile tõstetud, arvestavad suunanuppud kogu võrdlust.\n5. Klõpsake Kopeeri puuduv/uus → parem või Kopeeri puuduv/uus → vasakule. Pakutakse ainult puuduvad, uuemad või teistsugused failid selles suunas. Loe ja kinnita failide arv enne järjekorda seadmist.\n6. Jälgi edenemist Tööriistad > Ülekandmisjärjekord…. See kopeerib faile ühes suunas; see ei eemalda sihtkoha lisafaile ega teosta automaatset kahepoolset peegeldamist. Kui soovite uuendatud tulemuste nimekirja, tehke kopeerimise järel võrdlus uuesti."
+      },
+      {
+        "id": "folder_organization_rules",
+        "title": "Kaust organisatsiooni reeglid",
+        "paragraphs": [
+          {
+            "id": "folder_organization_rules.p001",
+            "source_sha256": "0bafa187b865c37f918aac231d07f9cd0755fcf9049ab3d6462fd49cfa5b59dd",
+            "text": "Tööriistad > Kausta organiseerimise reeglid… salvestab korduvaid Kopeeri või Liiguta reegleid. Erinevalt Nutikogudest muudab nende reeglite rakendamine tegelikult failide asukohti või loob koopiaid. Reeglid ei tööta automaatselt taustal: vaadake eelvaadet ja kinnitage Rakenda… iga kord."
+          },
+          {
+            "id": "folder_organization_rules.p002",
+            "source_sha256": "45964b262f5d8c5b49ac1274b9996e504d695e52fbadd425b9ecb861df577756",
+            "text": "LOO VÕI MUUDA REEGLIT\n\n1. Klõpsake paani, mis sisaldab faile, mida soovite organiseerida, seejärel valige Tööriistad > Kausta organiseerimise reeglid…\n2. Klõpsake Lisa. Sisestage reegli nimi, valige Toiming: Kopeeri või Liiguta ja määrake sihtkaust, kasutades Sirvi…vajadusel. Kontrolli tegevust hoolikalt: uus reegel kasutab algselt Liiguta.\n3. Sea meediumi tüüp mis tahes, Pildid või Videod. Valikulised tingimused on Laiendused (eraldatud komadega), Failinimi sisaldab, Koodek sisaldab, Minimaalne hinnang (0–5) ja nõutav täpne silt. Jäta kasutamata tingimused tühjaks; 0 ei sea minimaalset reitingunõuet. Kõik sisestatud tingimused peavad vastama.Failinimija koodeki sobitamisel ignoreerige tähe suurust; silt peab sobima kogu määratud sildiga, mitte ainult osaga sellest.\n4. Jätke Reegel lubatudmärgitud, kui reegel peaks osalema, seejärel klõpsake Salvesta reegel\n5. Valige olemasolev reegel ja muutke seda. Kasutage ↑ ja ↓ prioriteedi muutmiseks: esimene lubatud sobiv reegel võidab.Kustuta eemaldab reegli pärast kinnitust, mitte selle meedia;Tühista kustutamineon saadaval seni, kuni see haldur on avatud."
+          },
+          {
+            "id": "folder_organization_rules.p003",
+            "source_sha256": "c7c9d8a141f4adb1d8ac99b1211bd67950395855319313f7bcc29474683eae6c",
+            "text": "EELVAATE JA RAKENDAMINE\n\n1. Määrake allikupaani filtrid, kui soovite piirata arvestatavaid faile.\n2. Reeglite halduris klõpsake Eelvaade aktiivsel paanil….\n3. Valige Ulatus: Nähtav paani filtri sobivate failide jaoks või Kõik skaneeritud selle täieliku skaneeritud komplekti jaoks. Sellel tööriistal ei ole Valitud ulatust.\n4. Valige, kas Säilita kaustad aktiivse paani suhtes. Märgistatud säilitab iga reegli sihtkoha alla suhtelised alamkaustad; tühjaks märkimata kasutab ainult failinime.\n5. Klõpsake Värskenda eelvaadet pärast nende juhtimisseadete muutmist. Vaadake üle reegel, toiming, Allikas, sihtkoht ja Staatus. Mittesobivad failid ei lähe järjekorda. Lahendage probleemid, näiteks Duplikaatsed sihtkohad enne rakendamist.\n6. Klõpsake Rakenda… ja kinnitage ettepaneku tegevuste arv. Koopia-/liigutustöö jõuab tavapärasesse ülekandejärjekorda; olemasolevad sihtkohad kasutavad tavapäraseid konfliktivalikuid. Sulge lahkub eelvaatest rakendamata seda."
+          },
+          {
+            "id": "folder_organization_rules.p004",
+            "source_sha256": "f28b27db9fb710652715db25a211de3d6a9cef8f4fd15378e38e9f06d8fd4343",
+            "text": "NÄIDE\n\nMP4-video kopeerimiseks ülevaatamise kausta looge reegel nimega MP4 ülevaatuse koopiad, valige Kopeeri, valige ülevaatuse sihtkoht, määrake meediumi tüüp Videod ja laienduseks mp4, seejärel Salvesta reegel. Eelvaade aktiivsel paanil… koos Ulatus: Nähtav, kontrollige teid ja Rakenda…. See loob koopiad; valige Liiguta ainult siis, kui kavatsete algfailid teisaldada."
+          }
+        ],
+        "body": "Tööriistad > Kausta organiseerimise reeglid… salvestab korduvaid Kopeeri või Liiguta reegleid. Erinevalt Nutikogudest muudab nende reeglite rakendamine tegelikult failide asukohti või loob koopiaid. Reeglid ei tööta automaatselt taustal: vaadake eelvaadet ja kinnitage Rakenda… iga kord.\n\nLOO VÕI MUUDA REEGLIT\n\n1. Klõpsake paani, mis sisaldab faile, mida soovite organiseerida, seejärel valige Tööriistad > Kausta organiseerimise reeglid…\n2. Klõpsake Lisa. Sisestage reegli nimi, valige Toiming: Kopeeri või Liiguta ja määrake sihtkaust, kasutades Sirvi…vajadusel. Kontrolli tegevust hoolikalt: uus reegel kasutab algselt Liiguta.\n3. Sea meediumi tüüp mis tahes, Pildid või Videod. Valikulised tingimused on Laiendused (eraldatud komadega), Failinimi sisaldab, Koodek sisaldab, Minimaalne hinnang (0–5) ja nõutav täpne silt. Jäta kasutamata tingimused tühjaks; 0 ei sea minimaalset reitingunõuet. Kõik sisestatud tingimused peavad vastama.Failinimija koodeki sobitamisel ignoreerige tähe suurust; silt peab sobima kogu määratud sildiga, mitte ainult osaga sellest.\n4. Jätke Reegel lubatudmärgitud, kui reegel peaks osalema, seejärel klõpsake Salvesta reegel\n5. Valige olemasolev reegel ja muutke seda. Kasutage ↑ ja ↓ prioriteedi muutmiseks: esimene lubatud sobiv reegel võidab.Kustuta eemaldab reegli pärast kinnitust, mitte selle meedia;Tühista kustutamineon saadaval seni, kuni see haldur on avatud.\n\nEELVAATE JA RAKENDAMINE\n\n1. Määrake allikupaani filtrid, kui soovite piirata arvestatavaid faile.\n2. Reeglite halduris klõpsake Eelvaade aktiivsel paanil….\n3. Valige Ulatus: Nähtav paani filtri sobivate failide jaoks või Kõik skaneeritud selle täieliku skaneeritud komplekti jaoks. Sellel tööriistal ei ole Valitud ulatust.\n4. Valige, kas Säilita kaustad aktiivse paani suhtes. Märgistatud säilitab iga reegli sihtkoha alla suhtelised alamkaustad; tühjaks märkimata kasutab ainult failinime.\n5. Klõpsake Värskenda eelvaadet pärast nende juhtimisseadete muutmist. Vaadake üle reegel, toiming, Allikas, sihtkoht ja Staatus. Mittesobivad failid ei lähe järjekorda. Lahendage probleemid, näiteks Duplikaatsed sihtkohad enne rakendamist.\n6. Klõpsake Rakenda… ja kinnitage ettepaneku tegevuste arv. Koopia-/liigutustöö jõuab tavapärasesse ülekandejärjekorda; olemasolevad sihtkohad kasutavad tavapäraseid konfliktivalikuid. Sulge lahkub eelvaatest rakendamata seda.\n\nNÄIDE\n\nMP4-video kopeerimiseks ülevaatamise kausta looge reegel nimega MP4 ülevaatuse koopiad, valige Kopeeri, valige ülevaatuse sihtkoht, määrake meediumi tüüp Videod ja laienduseks mp4, seejärel Salvesta reegel. Eelvaade aktiivsel paanil… koos Ulatus: Nähtav, kontrollige teid ja Rakenda…. See loob koopiad; valige Liiguta ainult siis, kui kavatsete algfailid teisaldada."
+      },
+      {
+        "id": "transfer_queue",
+        "title": "Ülekande järjekorra haldamine",
+        "paragraphs": [
+          {
+            "id": "transfer_queue.p001",
+            "source_sha256": "4c74b2e240612a64b07641c0bd71035726be26f6a6731e266ba7363531a03670",
+            "text": "Tööriistad > Ülekandmisjärjekord… näitab järjekorda pandud kopeerimise ja liigutamise töö edenemist, sealhulgas kaustade sünkroonimise ja korraldusreeglite poolt alustatud ülekandeid. Videote konverteerimisel on oma eraldi edenemisaken."
+          },
+          {
+            "id": "transfer_queue.p002",
+            "source_sha256": "28ed18a8e1ee5a8d11f642e0b6267d950ad0adcf8efa7da73b9228138757b48c",
+            "text": "1. Alusta koopia või liigutamine kasutades paani juhtnuppe või failikäsklusi. Ava Tööriistad > Ülekandmisjärjekord…, kui selle edenemisakent pole juba nähtaval.\n2. Loe praegust toimingut, edenemist, järjekorras olevate arv ja ülekande üksikasju.\n3. Klõpsa Pauseeri, et peatada kopeerimine turvalisel kohal; nupp muutub Resume. Resume jätkab ülekannet. Tehtav liigutamine võib vajada lõpetamist enne, kui sellele reageeritakse.\n4. Tühista praegune palub aktiivsel tööl peatuda. See ei tühista kõiki ootel olevaid töid ja edukalt lõpetatud faile ei võeta automaatselt tagasi.\n5. Proovi ebaõnnestunud uuesti paneb failid, mis ebaõnnestusid viimases nurjunud ülekandes, uuesti järjekorda. Kontrolli kõigepealt teatatud viga ja sihtkohta.\n6. Sulge peidab edenemisakna; see ei tühista kopeerimist ega liigutamist. Ava see uuesti Tööriistad-st, et kontrollida edenemist. Kasuta Ctrl+Z eraldi toetatud lõpetatud failioperatsiooni tagasivõtmiseks."
+          }
+        ],
+        "body": "Tööriistad > Ülekandmisjärjekord… näitab järjekorda pandud kopeerimise ja liigutamise töö edenemist, sealhulgas kaustade sünkroonimise ja korraldusreeglite poolt alustatud ülekandeid. Videote konverteerimisel on oma eraldi edenemisaken.\n\n1. Alusta koopia või liigutamine kasutades paani juhtnuppe või failikäsklusi. Ava Tööriistad > Ülekandmisjärjekord…, kui selle edenemisakent pole juba nähtaval.\n2. Loe praegust toimingut, edenemist, järjekorras olevate arv ja ülekande üksikasju.\n3. Klõpsa Pauseeri, et peatada kopeerimine turvalisel kohal; nupp muutub Resume. Resume jätkab ülekannet. Tehtav liigutamine võib vajada lõpetamist enne, kui sellele reageeritakse.\n4. Tühista praegune palub aktiivsel tööl peatuda. See ei tühista kõiki ootel olevaid töid ja edukalt lõpetatud faile ei võeta automaatselt tagasi.\n5. Proovi ebaõnnestunud uuesti paneb failid, mis ebaõnnestusid viimases nurjunud ülekandes, uuesti järjekorda. Kontrolli kõigepealt teatatud viga ja sihtkohta.\n6. Sulge peidab edenemisakna; see ei tühista kopeerimist ega liigutamist. Ava see uuesti Tööriistad-st, et kontrollida edenemist. Kasuta Ctrl+Z eraldi toetatud lõpetatud failioperatsiooni tagasivõtmiseks."
+      },
+      {
+        "id": "safe_file_actions",
+        "title": "Ohutud failitoimingud",
+        "paragraphs": [
+          {
+            "id": "safe_file_actions.p001",
+            "source_sha256": "4ed845375e5d90b2ef4791690f07c1a09210904cf1686aec2715d733a377226d",
+            "text": "Kustuta saadab failid opsüsteemi Prügikasti või Korrastuskasti. Pärast kustutamist või teisaldamist valitakse ja kuvatakse automaatselt fail, mis järgneb eemaldatud valikule aktiivses järjestuses; kui eemaldatud failid olid lõpus, valitakse uus viimane fail. Nimeta ümber ja värskendus säilitavad samuti kasuliku praeguse faili ning seda käitumist jagavad Detailid ja Pisipildid. Vea tagasivõtmine tagasi keerab hiljutised kopeerimised, teisaldamised, asendamised, üksikute nimemuutmiste ja kogu partii nimemuutmised. Asenda-konfliktide lahendused pakuvad Asenda, Jäta vahele või Hoia mõlemad, kus on valik rakendada vastuse kõigile ülejäänud konfliktidele."
+          },
+          {
+            "id": "safe_file_actions.undo_busy_1273",
+            "source_sha256": "ff2548c8d5b9c336f23e02624d99be111f63b741dd5e9d8d94c87c038febd3a8",
+            "text": "Võta tagasi töötab taustal, nii et aken jääb reageerivaks. See peatab ajutiselt eelvaated ja peatab uute metainfo- ja pisipildi failide lugemise, kuni olemasolevad lugemised on lõppenud, ning taastab seejärel failid. Sul ei ole vaja oodata, kuni kausta skannimine lõpeb. Lühiajalisi Windowsi failijagamiste lukke proovib süsteem automaatselt uuesti. Kui mõni teine programm hoiab endiselt faili või taastatud lähtefail asendaks äsja loodud faili, peatub Võta tagasi ja teatab probleemist, selle asemel et faili üle kirjutada. Valminud taastamisetapid jäävad alles; lõpetamata etapid ja originaalsed varukoopiad jäävad kättesaadavaks. Sulge rakendus, mis kasutab mõjutatud faili, või lahenda teatatud konflikt, seejärel vajuta Võta tagasi uuesti, et jätkata. Järjekorda pandud ülekanded ootavad, kuni taastamine on lõpetatud. Ära kustuta taastamisvarukoopiaid ega muuda mõjutatud faile, kui taastamine pole lõpetatud. Eelvaade lülitid jäävad valituks; vali fail uuesti pärast taastamist, et jätkata eelvaate kuvamist."
+          }
+        ],
+        "body": "Kustuta saadab failid opsüsteemi Prügikasti või Korrastuskasti. Pärast kustutamist või teisaldamist valitakse ja kuvatakse automaatselt fail, mis järgneb eemaldatud valikule aktiivses järjestuses; kui eemaldatud failid olid lõpus, valitakse uus viimane fail. Nimeta ümber ja värskendus säilitavad samuti kasuliku praeguse faili ning seda käitumist jagavad Detailid ja Pisipildid. Vea tagasivõtmine tagasi keerab hiljutised kopeerimised, teisaldamised, asendamised, üksikute nimemuutmiste ja kogu partii nimemuutmised. Asenda-konfliktide lahendused pakuvad Asenda, Jäta vahele või Hoia mõlemad, kus on valik rakendada vastuse kõigile ülejäänud konfliktidele.\n\nVõta tagasi töötab taustal, nii et aken jääb reageerivaks. See peatab ajutiselt eelvaated ja peatab uute metainfo- ja pisipildi failide lugemise, kuni olemasolevad lugemised on lõppenud, ning taastab seejärel failid. Sul ei ole vaja oodata, kuni kausta skannimine lõpeb. Lühiajalisi Windowsi failijagamiste lukke proovib süsteem automaatselt uuesti. Kui mõni teine programm hoiab endiselt faili või taastatud lähtefail asendaks äsja loodud faili, peatub Võta tagasi ja teatab probleemist, selle asemel et faili üle kirjutada. Valminud taastamisetapid jäävad alles; lõpetamata etapid ja originaalsed varukoopiad jäävad kättesaadavaks. Sulge rakendus, mis kasutab mõjutatud faili, või lahenda teatatud konflikt, seejärel vajuta Võta tagasi uuesti, et jätkata. Järjekorda pandud ülekanded ootavad, kuni taastamine on lõpetatud. Ära kustuta taastamisvarukoopiaid ega muuda mõjutatud faile, kui taastamine pole lõpetatud. Eelvaade lülitid jäävad valituks; vali fail uuesti pärast taastamist, et jätkata eelvaate kuvamist."
+      },
+      {
+        "id": "workspaces_and_cache",
+        "title": "Tööruumid ja vahemälu",
+        "paragraphs": [
+          {
+            "id": "workspaces_and_cache.p001",
+            "source_sha256": "9546017780aef5e7077c76d71f514132c6cabc5dd92f56a8dc2863641361fe9f",
+            "text": "Salvestatud tööruumid mäletavad kaustu, filtreid, vaatenurki, veerge, inspekteerijaid ja paigutust. Smart Collections alla Tööriistad on väiksemad ühelehele seadistused: need salvestavad kausta, Kaasa alamkaustad ja meedia lülitused, faili nime ja täpsemad filtrid, lahutusvõime, sorteerimise, Detailid/Pisipildid vaate, pisipildi suuruse ja Jätkuv/Leheküljeline valiku. Rakendaimine mõjutab ainult aktiivset paneeli. Halduse kaudu saab eelseadeid ümber nimetada või kustutada; kustutamiseks on vaja kinnitust ja Tühista kustutamine taastab selle, kui haldur on avatud. Smart Collections ei liigu, kustuta ega märgi meediat. Vahemällu salvestatud metaandmed ja pisipildid kiirendavad tulevasi külastusi; Tööriistad > Vahemälu ja skaneerimine saab neid inspekteerida, kärpida või kustutada."
+          },
+          {
+            "id": "workspaces_and_cache.workspace_steps",
+            "source_sha256": "dff5cc601aa1e01667f72fd065cd8e4b55ae77974639503d66c69592dd802aa7",
+            "text": "SALVESTA JA LAADI TÖÖRUUM\n\n1. Paiguta mõlemad paneelid olevate kaustade, filtrite, vaadete ja paigutusega, mida soovid taaskasutada.\n2. Vali Tööriistad > Salvesta tööruum… ja sisesta Tööruumi nimi. Sama nime uuesti kasutamine asendab selle tööruumi ilma eraldi asenduskinnituse promptita; uue nime kasutamine säilitab varasema paigutuse.\n3. Hiljem vali Tööriistad > Laadi tööruum…. Prompt kuvab salvestatud nimed. Sisesta täpselt kuvatud nimi ja kinnita, et taastada mõlemad paneelid. Tühista jätab praeguse tööruumi muutmata.\n\nKasuta selle asemel [chapter:smart_collections], kui soovid taastada ainult ühe paneeli otsingut ja vaadet."
+          },
+          {
+            "id": "workspaces_and_cache.cache_steps",
+            "source_sha256": "db9e5a5210a5fdc95458f3dd3a9b9cd62b82de37c69b195a47a3e595ebe17bc3",
+            "text": "VAHENDUSE JA SKANEERIMISE JUHTIMISED\n\nAva Tööriistad > Vahemälu ja skannimine…metaveebi kirjete ja pisipiltide salvestuse nägemiseks. Sisse Skannimise seaded, vali Tulemusprofiil: Vaiknemadalama taustkoormuse jaoks,Tasakaalustatudtavakasutuseks või Kiireks suurema läbilaskevõime jaoks. Vajadusel reguleerige paralleelseid metaandmete töötajaid (1–16). Välistamise mustrid (eralda semikooloniga) võivad jätta sobivad teed vahele; aknas näidatud näited sisaldavad *.tmp; proxy/*; @eaDir/*. Klõpsa Rakenda seadete salvestamiseks.Värskendaaknas skaneerimise käivitamiseks kasutatud muudetud välistustega.\n\nSisse Thumbnailide salvestus, Operatsioonisüsteemi draivi maksimaalne protsent on vaikimisi 1% ja aktsepteerib 0,1%–10%.Rakenda salvestab piiri;Rakenda piirang koheeemaldab vahemälust kõige vähem hiljuti kasutatud pisipildid, kuni piir saavutatakse.Eemalda vananenud kirjedeemaldab aegunud metaandmete kirjed.Kustuta pisipildidpalub kinnitust, seejärel kustutab ainult loodud pisipildid; neid tahetakse vajadusel uuesti luua.Tühjenda kogu vahemälukinnitab tehnilise vahemälu andmete ja pisipiltide eemaldamise, nii et tulevikus külastamisel on vaja uut skannimist/dekodeerimist. Need vahemälu juhtimisvahendid ei kustuta originaalmeediat ega kasutaja hinnanguid, värvimärgiseid ja silte."
+          }
+        ],
+        "body": "Salvestatud tööruumid mäletavad kaustu, filtreid, vaatenurki, veerge, inspekteerijaid ja paigutust. Smart Collections alla Tööriistad on väiksemad ühelehele seadistused: need salvestavad kausta, Kaasa alamkaustad ja meedia lülitused, faili nime ja täpsemad filtrid, lahutusvõime, sorteerimise, Detailid/Pisipildid vaate, pisipildi suuruse ja Jätkuv/Leheküljeline valiku. Rakendaimine mõjutab ainult aktiivset paneeli. Halduse kaudu saab eelseadeid ümber nimetada või kustutada; kustutamiseks on vaja kinnitust ja Tühista kustutamine taastab selle, kui haldur on avatud. Smart Collections ei liigu, kustuta ega märgi meediat. Vahemällu salvestatud metaandmed ja pisipildid kiirendavad tulevasi külastusi; Tööriistad > Vahemälu ja skaneerimine saab neid inspekteerida, kärpida või kustutada.\n\nSALVESTA JA LAADI TÖÖRUUM\n\n1. Paiguta mõlemad paneelid olevate kaustade, filtrite, vaadete ja paigutusega, mida soovid taaskasutada.\n2. Vali Tööriistad > Salvesta tööruum… ja sisesta Tööruumi nimi. Sama nime uuesti kasutamine asendab selle tööruumi ilma eraldi asenduskinnituse promptita; uue nime kasutamine säilitab varasema paigutuse.\n3. Hiljem vali Tööriistad > Laadi tööruum…. Prompt kuvab salvestatud nimed. Sisesta täpselt kuvatud nimi ja kinnita, et taastada mõlemad paneelid. Tühista jätab praeguse tööruumi muutmata.\n\nKasuta selle asemel [chapter:smart_collections], kui soovid taastada ainult ühe paneeli otsingut ja vaadet.\n\nVAHENDUSE JA SKANEERIMISE JUHTIMISED\n\nAva Tööriistad > Vahemälu ja skannimine…metaveebi kirjete ja pisipiltide salvestuse nägemiseks. Sisse Skannimise seaded, vali Tulemusprofiil: Vaiknemadalama taustkoormuse jaoks,Tasakaalustatudtavakasutuseks või Kiireks suurema läbilaskevõime jaoks. Vajadusel reguleerige paralleelseid metaandmete töötajaid (1–16). Välistamise mustrid (eralda semikooloniga) võivad jätta sobivad teed vahele; aknas näidatud näited sisaldavad *.tmp; proxy/*; @eaDir/*. Klõpsa Rakenda seadete salvestamiseks.Värskendaaknas skaneerimise käivitamiseks kasutatud muudetud välistustega.\n\nSisse Thumbnailide salvestus, Operatsioonisüsteemi draivi maksimaalne protsent on vaikimisi 1% ja aktsepteerib 0,1%–10%.Rakenda salvestab piiri;Rakenda piirang koheeemaldab vahemälust kõige vähem hiljuti kasutatud pisipildid, kuni piir saavutatakse.Eemalda vananenud kirjedeemaldab aegunud metaandmete kirjed.Kustuta pisipildidpalub kinnitust, seejärel kustutab ainult loodud pisipildid; neid tahetakse vajadusel uuesti luua.Tühjenda kogu vahemälukinnitab tehnilise vahemälu andmete ja pisipiltide eemaldamise, nii et tulevikus külastamisel on vaja uut skannimist/dekodeerimist. Need vahemälu juhtimisvahendid ei kustuta originaalmeediat ega kasutaja hinnanguid, värvimärgiseid ja silte."
+      },
+      {
+        "id": "language",
+        "title": "Keel",
+        "paragraphs": [
+          {
+            "id": "language.p001",
+            "source_sha256": "76d36cb87d53e68bd8a17b59b3d7bf1868001f1323f01fa67c901dda96cf4779",
+            "text": "Rakenduse esmakordsel käivitamisel järgib see opsüsteemi keelt, kui see on toetatud. Valige Tööriistad > Keel, et seda muuta või naasta Süsteemi vaikeväärtus. Keele muutmise järel taaskäivitage rakendus."
+          }
+        ],
+        "body": "Rakenduse esmakordsel käivitamisel järgib see opsüsteemi keelt, kui see on toetatud. Valige Tööriistad > Keel, et seda muuta või naasta Süsteemi vaikeväärtus. Keele muutmise järel taaskäivitage rakendus."
+      },
+      {
+        "id": "glossary",
+        "title": "Terminiloend",
+        "paragraphs": [
+          {
+            "id": "glossary.p001",
+            "source_sha256": "de56ad1538a95954142a64a6faf297c48d96564544c6f1ea1947a5a7a1974bf5",
+            "text": "Aktiivne paneel: vasak või parem brauser, kuhu viimati tehti klõps. Menüü- ja klaviatuuritoimingud rakenduvad tavaliselt sinna."
+          },
+          {
+            "id": "glossary.p002",
+            "source_sha256": "9e944202497daf57a892e77418fbcd6ddd948febb6e71fdac6b8f66941692f17",
+            "text": "Koodek: Video- või heli kodeerimiseks kasutatud meetod, nagu H.264, H.265/HEVC, AV1, AAC või Opus. Konteiner, näiteks MP4 või MKV, võib sisaldada ühte või mitut kodeeritud voogu."
+          },
+          {
+            "id": "glossary.p003",
+            "source_sha256": "672c8a727345c58eb445fec2a58768fb80215d8aa50e1aedf274abd854620d39",
+            "text": "Remux: Olemasolevate video-/heli voogude kopeerimine teise konteinerisse ilma ümberkodeerimiseta. See on kiire ja kaotusteta, kuid ei muuda koodekit."
+          },
+          {
+            "id": "glossary.p004",
+            "source_sha256": "5b4c2520b2fcb4ed201a6f159e1d6042244f198a9d54ca2e7e50b21b6430ad98",
+            "text": "CRF/kvaliteet: Pideva kvaliteediga eesmärk ümberkodeerimiseks. Madalamad numbrid nõuavad kõrgemat kvaliteeti ja suuremaid faile. Riistvarakodeerijad tõlgendavad seda oma lähima kvaliteedikontrolli järgi."
+          },
+          {
+            "id": "glossary.p005",
+            "source_sha256": "57f6a48371b1e7d33ef4389ca76d13c11dc500afbed5245024c4eb6695646f8c",
+            "text": "Metaandmete vahemälu: Salvestatud tehnilised tulemused, mis väldivad korduvat muutumatute failide kontrollimist. See on eraldi hinnangutest, siltidest ja märgenditest."
+          },
+          {
+            "id": "glossary.p006",
+            "source_sha256": "a1bb6a1d6960bc4e1441baca24dc3ae68ea222ac01e819b3e083fcd1a166e6f7",
+            "text": "Pisipiltide vahemälu: Genereeritud eelvaatepildid salvestatakse kettale kiiremaks tulevikukülastuseks ja neid piiratakse läbi Tööriistad > Vahemälu ja skaneerimine."
+          },
+          {
+            "id": "glossary.p007",
+            "source_sha256": "fa7be14671267800c9e3a8d8f85ceaf1d75c18d830685a91819c692490061aab",
+            "text": "Rekursiivne/Kaasa alamkaustad: Skaneeri valitud kausta ja kõiki kaustasid allpool. See ei tähenda kunagi kogu draivi, kui ainult draivi juur ise ei ole valitud."
+          },
+          {
+            "id": "glossary.p008",
+            "source_sha256": "97af76d3a80e273362782d714bf88bcdcc83ab072222a8994eb06977af0de44c",
+            "text": "Tark kogumik: Salvestatud vaate definitsioon, mis sisaldab asukohta, filtreid, sorteerimist ja esituse seadeid. See ei kopeeri ega liigufaile."
+          }
+        ],
+        "body": "Aktiivne paneel: vasak või parem brauser, kuhu viimati tehti klõps. Menüü- ja klaviatuuritoimingud rakenduvad tavaliselt sinna.\n\nKoodek: Video- või heli kodeerimiseks kasutatud meetod, nagu H.264, H.265/HEVC, AV1, AAC või Opus. Konteiner, näiteks MP4 või MKV, võib sisaldada ühte või mitut kodeeritud voogu.\n\nRemux: Olemasolevate video-/heli voogude kopeerimine teise konteinerisse ilma ümberkodeerimiseta. See on kiire ja kaotusteta, kuid ei muuda koodekit.\n\nCRF/kvaliteet: Pideva kvaliteediga eesmärk ümberkodeerimiseks. Madalamad numbrid nõuavad kõrgemat kvaliteeti ja suuremaid faile. Riistvarakodeerijad tõlgendavad seda oma lähima kvaliteedikontrolli järgi.\n\nMetaandmete vahemälu: Salvestatud tehnilised tulemused, mis väldivad korduvat muutumatute failide kontrollimist. See on eraldi hinnangutest, siltidest ja märgenditest.\n\nPisipiltide vahemälu: Genereeritud eelvaatepildid salvestatakse kettale kiiremaks tulevikukülastuseks ja neid piiratakse läbi Tööriistad > Vahemälu ja skaneerimine.\n\nRekursiivne/Kaasa alamkaustad: Skaneeri valitud kausta ja kõiki kaustasid allpool. See ei tähenda kunagi kogu draivi, kui ainult draivi juur ise ei ole valitud.\n\nTark kogumik: Salvestatud vaate definitsioon, mis sisaldab asukohta, filtreid, sorteerimist ja esituse seadeid. See ei kopeeri ega liigufaile."
+      },
+      {
+        "id": "support_the_project",
+        "title": "Toeta projekti",
+        "paragraphs": [
+          {
+            "id": "support_the_project.p001",
+            "source_sha256": "62b207421228680770777e66598c8ce79ee121aaee8cd232e847e65dd28e2122",
+            "text": "Resolutsiooni failihaldur on saadaval iseseisva rakendusena ilma tellimuseta. Kui leiate seda kasulikuks ja soovite toetada edasist arendust, valige Abi > Kui teile see meeldib, ostke Johnile kohvi. Sama valikuline toetusnupp ilmub ka Abi > Teave ja avab teie tavapärases veebibrauseris avaliku JohnPerky lehe:"
+          },
+          {
+            "id": "support_the_project.p002",
+            "source_sha256": "f625bc04cc8dea0548e7e06bf6f5a1bf75532166728133d0f26049dc60b5f0ee",
+            "text": "https://buymeacoffee.com/johnperky"
+          },
+          {
+            "id": "support_the_project.p003",
+            "source_sha256": "f3433f015e63332b4aeaca246443618a7f7f6614bafc5941d7509c71ca191619",
+            "text": "Projekti toetamine on täiesti vabatahtlik. Rakendus ei ava lehte automaatselt, ei kogu makseandmeid, ei jälgi, kas te seda külastate, ega muuda ühtegi funktsiooni toetuse põhjal."
+          },
+          {
+            "id": "support_the_project.p004",
+            "source_sha256": "fb8e1f1b4be83a666d0f808238dffefa4cc8b5369dc8b4d25aa74a5d499c5f7a",
+            "text": "HINNANGUD JA VALIKULISED MEELDETULETUSED"
+          },
+          {
+            "id": "support_the_project.reminder_timing",
+            "source_sha256": "b00a39416f2e0c07132850cca60bde12e893c16cbfd085f4b8a29fe722bf6d8e",
+            "text": "Pärast viit käivitamist vähemalt kolme päeva jooksul võib rakendus paluda teil seda hinnata Microsoft Store'is. Hiljem lükkab taotluse edasi kümne käivitamise võrra. Valikuline kohvimärkus algab 11. käivitamisel ja kordub iga 11. käivitamise järel, ainult pärast Võib-olla hiljem. Ära küsi uuesti keelab kumbki meeldetuletuse; Tööriistad > Meeldetuletused võivad selle uuesti lubada. Leht avaneb alles siis, kui vajutate selle selget nuppu."
+          },
+          {
+            "id": "support_the_project.reminder_settings",
+            "source_sha256": "aeec7ca97a52107645156aa31a220d7a33d6f136fde87d37a08a2729e511a24e",
+            "text": "Valige Tööriistad > Meeldetuletused…, et kontrollida hinnangu ja toe käsuviipude kuvamist eraldi. Märkige käsuviip selle lubamiseks või tühjendage see, et keelata, seejärel salvestage. Tühista jätab praegused valikud muutmata."
+          }
+        ],
+        "body": "Resolutsiooni failihaldur on saadaval iseseisva rakendusena ilma tellimuseta. Kui leiate seda kasulikuks ja soovite toetada edasist arendust, valige Abi > Kui teile see meeldib, ostke Johnile kohvi. Sama valikuline toetusnupp ilmub ka Abi > Teave ja avab teie tavapärases veebibrauseris avaliku JohnPerky lehe:\n\nhttps://buymeacoffee.com/johnperky\n\nProjekti toetamine on täiesti vabatahtlik. Rakendus ei ava lehte automaatselt, ei kogu makseandmeid, ei jälgi, kas te seda külastate, ega muuda ühtegi funktsiooni toetuse põhjal.\n\nHINNANGUD JA VALIKULISED MEELDETULETUSED\n\nPärast viit käivitamist vähemalt kolme päeva jooksul võib rakendus paluda teil seda hinnata Microsoft Store'is. Hiljem lükkab taotluse edasi kümne käivitamise võrra. Valikuline kohvimärkus algab 11. käivitamisel ja kordub iga 11. käivitamise järel, ainult pärast Võib-olla hiljem. Ära küsi uuesti keelab kumbki meeldetuletuse; Tööriistad > Meeldetuletused võivad selle uuesti lubada. Leht avaneb alles siis, kui vajutate selle selget nuppu.\n\nValige Tööriistad > Meeldetuletused…, et kontrollida hinnangu ja toe käsuviipude kuvamist eraldi. Märkige käsuviip selle lubamiseks või tühjendage see, et keelata, seejärel salvestage. Tühista jätab praegused valikud muutmata."
+      }
+    ]
+  },
+  "literals": {
+    "Confirm": "Kinnita",
+    "Move {field0} to the Recycle Bin / Trash?": "Kas soovite {field0} teisaldada Prügikasti?",
+    "Synchronize preview": "Sünkrooni eelvaade",
+    "Queue {field0} file(s) for copying to the {field1} pane?": "Pandaksite {field0} faili(d) kopeerimiseks {field1} paani?",
+    "Keyboard shortcuts": "Klaviatuuri otseteed",
+    "Ctrl+A   Select all shown\nCtrl+C   Copy selected\nCtrl+X   Cut selected\nCtrl+V   Paste into active pane\nCtrl+Z   Undo last file operation\nDelete   Move selected files to Recycle Bin / Trash\nF2       Rename selected file\nF5       Refresh both panes\nBackspace   Go up one folder\n, (comma)   Active preview back 10%\n. (full stop)   Active preview forward 10%\nDouble-click   Open file": "Ctrl+A   Vali kõik näidatud\nCtrl+C   Kopeeri valitud\nCtrl+X   Lõika valitud\nCtrl+V   Kleepi aktiivsesse tööpaani\nCtrl+Z   Võta tagasi viimane failioperatsioon\nDelete   Liiguta valitud failid prügikasti\nF2       Nimeta valitud fail ümber\nF5       Värskenda mõlemat paani\nBackspace   Liigu ühe kausta võrra üles\n, (koma)   Aktiivne eelvaade tagasi 10%\n. (punkt)   Aktiivne eelvaade edasi 10%\nTopeltklõps   Ava fail",
+    "Folder not found": "Kausta ei leitud",
+    "This folder does not exist:\n{field0}": "See kaust ei eksisteeri:\n{field0}",
+    "Not enough videos": "Liiga vähe videoid",
+    "At least two visible videos with readable durations are needed for comparison.": "Võrdlemiseks on vaja vähemalt kahte nähtavat videot, mille kestus on loetav.",
+    "No size outliers": "Suuruse kõrvalekaldeid ei leitud",
+    "No visible video is at least {field0}× the average data rate of {field1} MB/min.": "Ükski nähtav video ei ole vähemalt {field0}× keskmisest andmeedastuskiirusest {field1} MB/min.",
+    "Some dropped files failed": "Mõned katkestatud failid ebaõnnestusid",
+    "Could not reveal some files": "Mõnda faili ei õnnestunud kuvada",
+    "Select one file": "Vali üks fail",
+    "Select exactly one file to rename.": "Vali täpselt üks fail ümbernimetamiseks.",
+    "Invalid filename": "Vigane failinimi",
+    "Enter a filename without folder separators.": "Sisesta failinimi ilma kaustajaoturiteta.",
+    "File already exists": "Fail on juba olemas",
+    "A file named {field0} already exists.": "Fail nimega {field0} on juba olemas.",
+    "Nothing selected": "Midagi pole valitud",
+    "Select one or more files in the active pane first.": "Esmalt vali aktiivses paanis üks või mitu faili.",
+    "Confirm {field0}": "Kinnita {field0}",
+    "{field0} {field1} file(s) to:\n{field2}?": "{field0} {field1} faili(d) sihtkohta:\n{field2}?",
+    "Some files failed": "Mõned failid ebaõnnestusid",
+    "Finished": "Valmis",
+    "Successfully {field0} {field1} file(s).": "{field0} {field1} faili(d) edukalt.",
+    "Unknown choice": "Tundmatu valik",
+    "Use replace, skip, keep both, or newer.": "Kasuta asendamist, vahelejätmist, mõlema säilitamist või uuemat.",
+    "Batch rename": "Partii ümbernimetamine",
+    "Select one or more files first.": "Vali esmalt üks või mitu faili.",
+    "Batch rename complete": "Partii ümbernimetamine lõpetatud",
+    "Renamed {field0} file(s). Use Ctrl+Z to undo the batch.": "Ümber nimetatud {field0} faili(d). Kasuta partii tühistamiseks Ctrl+Z.",
+    "Nothing to retry": "Mitte midagi uuesti proovida",
+    "The last transfer had no failed files.": "Viimasel ülekandel ei olnud ebaõnnestunud faile.",
+    "Transfer active": "Ülekanne aktiivne",
+    "Wait for the current transfer to finish before undoing.": "Oota, kuni praegune ülekandmine lõpeb, enne kui tühistad.",
+    "Nothing to undo": "Mitte midagi tühistada",
+    "There are no recent copy, move, replacement, or rename actions.": "Viimaseid koopiate, liigutuste, asenduste või ümbernimetamiste toiminguid ei ole.",
+    "Undo incomplete": "Tühista lõpetamata",
+    "Undo complete": "Tühista lõpetatud",
+    "The most recent file operation was undone.": "Kõige uuem failitoiming tühistati.",
+    "Move to Recycle Bin": "Kustutage Prügikasti",
+    "Move {field0} selected file(s) to the Recycle Bin / Trash?": "Kas liigutada {field0} valitud faili(d) Prügikasti / Prügi?",
+    "Some files could not be removed": "Mõnda faili ei õnnestunud eemaldada",
+    "Embedded metadata": "Manustatud metaandmed",
+    "Select exactly one image or video first.": "Vali kõigepealt täpselt üks pilt või video.",
+    "Create video contact sheet": "Loo video kontaktleht",
+    "Select exactly one video first.": "Vali kõigepealt täpselt üks video.",
+    "Similar image search": "Sarnaste piltide otsing",
+    "No visually similar groups found at tolerance {field0}.\n\n{field1} cached hash(es); {field2} unreadable image(s).": "Mingit visuaalselt sarnast gruppi ei leitud tolerantsil {field0}.\n\n{field1} vahemälu räs(ide)ga; {field2} loetamatut pilti.",
+    "Select two files": "Vali kaks faili",
+    "Select exactly two files to compare.": "Vali täpselt kaks faili võrdlemiseks.",
+    "Nothing to synchronize": "Midagi sünkroonida pole",
+    "No selected files need copying in that direction.": "Üheski valitud failis ei ole vaja selles suunas kopeerida.",
+    "No workspaces": "Tööruume pole",
+    "Save a workspace first.": "Salvesta kõigepealt tööruum.",
+    "Collection folder unavailable": "Kogumikukaust pole saadaval",
+    "The saved folder does not currently exist:\n{field0}": "Salvestatud kaust ei eksisteeri praegu:\n{field0}",
+    "Cache pruned": "Vahemälu kärbitud",
+    "Removed {field0} stale entry/entries.": "Eemaldatud {field0} aegunud kirje/kirjed.",
+    "Clear cache": "Tühjenda vahemälu",
+    "Clear all cached metadata? Files will be rescanned next time.": "Kustutada kõik vahemällu salvestatud metaandmed? Failid skannitakse järgmisel korral uuesti.",
+    "Clear thumbnail cache": "Tühjenda pisipiltide vahemälu",
+    "Delete {field0} stored thumbnail(s) using {field1}?\n\nOriginal media files and metadata will not be changed.": "Kustutada {field0} salvestatud pisipilt(i/d), kasutades {field1}?\n\nOriginaalfailid ja metaandmed ei muutu.",
+    "Settings": "Seaded",
+    "{field0} performance settings, scanning options, and the thumbnail-cache limit were saved. The cache limit is being enforced in the background.": "{field0} jõudluse seaded, skannimisvalikud ja pisipiltide vahemälu limiit salvestati. Vahemälu limiiti rakendatakse taustal.",
+    "Live updates unavailable": "Otseuuendused pole saadaval",
+    "The folder-monitoring component is not installed.": "Kausta jälgimise komponenti pole installitud.",
+    "Reveal many files?": "Näita palju faile?",
+    "{field0} files are selected. Revealing all of them may open a large number of file-manager windows.\n\nChoose Yes to reveal every selected file, or No to reveal only the first one.": "{field0} faili on valitud. Kõigi kuvamine võib avada suure hulga failihalduri aknaid.\n\nValige Jah, et kuvada kõik valitud failid, või Ei, et kuvada ainult esimene.",
+    "Rename failed": "Nime muutmine ebaõnnestus",
+    "Confirm batch rename": "Kinnita olevate failide massiline ümbernimetamine",
+    "Rename {field0} file(s) exactly as previewed?\n\nThe complete batch can be undone with Ctrl+Z.": "Kas muuta {field0} faili/d täpselt eelvaates näidatud nimeks?\n\nKogu massiline ümbernimetamine on võimalik tagasi võtta Ctrl+Z abil.",
+    "Batch rename failed": "Massiline nime muutmine ebaõnnestus",
+    "No completed rename was kept where rollback was possible.\n\n{field0}": "Ei salvestatud lõpetatud ümbernimetamist, kui tagasipööramine oli võimalik.\n\n{field0}",
+    "Nothing to export": "Mitte midagi eksportida",
+    "The chosen scope contains no media files.": "Valitud ulatus ei sisalda ühtegi meediafaili.",
+    "Nothing to verify": "Mitte midagi kontrollida",
+    "Not enough images": "Pilte on liiga vähe",
+    "The chosen scope contains fewer than two images.": "Valitud ulatus sisaldab vähem kui kahte pilti.",
+    "Could not save workspace": "Tööruumi ei õnnestunud salvestada",
+    "Replace smart collection": "Asenda nutikogu",
+    "Replace the existing collection named {field0}?": "Kas asendada olemasolev kogum nimega {field0}?",
+    "Could not save collection": "Kogumist ei õnnestunud salvestada",
+    "Invalid rule": "Kehtetu reegel",
+    "Enter a rule name.": "Sisestage reegli nimi.",
+    "Choose a destination folder.": "Valige sihtkaust.",
+    "Apply folder rules": "Rakenda kausta reeglid",
+    "Queue {field0} planned copy/move action(s)?\n\nExisting targets will use the normal conflict choices. Moves and replacements remain undoable.": "Plaanida järjekorda {field0} koopia/siirdamise toiming(ud)?\n\nOlemasolevad sihtmärgid kasutavad tavalisi konflikti valikuid. Liigutused ja asendused on endiselt tagasivõetavad.",
+    "Delete rule": "Kustuta reegel",
+    "Delete rule '{field0}'?": "Kustutada reegel '{field0}'?",
+    "Cache cleared": "Vahemälu tühjendatud",
+    "Removed {field0} metadata entries and cached thumbnails.": "Eemaldati {field0} metaandmete kirjet ja vahemälustatud pisipilte.",
+    "Thumbnail cache": "Pisipiltide vahemälu",
+    "The thumbnail cache is already empty.": "Pisipiltide vahemälu on juba tühi.",
+    "Thumbnail cache cleared": "Pisipiltide vahemälu tühjendatud",
+    "Deleted {field0} thumbnail(s) and freed {field1}.": "Kustutati {field0} pisipilt(e) ja vabastati {field1}.",
+    "Could not monitor folder": "Kausta ei õnnestunud jälgida",
+    "Live updates could not be enabled for:\n{field0}\n\n{field1}": "Otsevärskendusi ei saanud lubada järgmistele seadetele:\n{field0}\n\n{field1}",
+    "Could not open file": "Faili ei õnnestunud avada",
+    "Frame exported": "Kaader eksporditud",
+    "Metadata exported": "Metaandmed eksporditud",
+    "Saved {field0} field(s).": "Salvestatud {field0} väli(-d).",
+    "Metadata unavailable": "Metaandmed pole kättesaadavad",
+    "Report exported": "Aruanne eksporditud",
+    "Saved {field0} result(s).": "Salvestatud {field0} tulemus(-ed).",
+    "Invalid settings": "Vead seaded",
+    "Use whole numbers for frames, columns, and width.": "Kasutage kaadrite, veergude ja laiuse puhul täisarve.",
+    "Invalid tolerance": "Vigane tolerants",
+    "Enter a whole number from 0 to 16.": "Sisestage täisarv vahemikus 0 kuni 16.",
+    "Replace collection": "Asenda kollektsioon",
+    "Replace {field0}?": "Asendada {field0}?",
+    "Delete smart collection": "Kustuta nutikollektsioon",
+    "Delete {field0}?\n\nNo media files or annotations will be changed.": "Kustutada {field0}?\n\nÜhtegi meediafaili ega annotatsiooni ei muudeta.",
+    "Invalid rating": "Kehtetu hinnang",
+    "Minimum rating must be a whole number from 0 to 5.": "Miinimumpunkt peab olema täisarv vahemikus 0 kuni 5.",
+    "Frame export failed": "Raami eksport ebaõnnestus",
+    "Could not export metadata": "Metaandmete eksport ebaõnnestus",
+    "Could not export report": "Aruande eksport ebaõnnestus",
+    "Contact sheet complete": "Kontaktleht valmis",
+    "Report export failed": "Aruande eksport ebaõnnestus",
+    "Contact sheet failed": "Kontaktlehe loomine ebaõnnestus",
+    "Removed {field0} least-recently-used thumbnail(s).": "Eemaldati {field0} vähimkasutatud pisipilti.",
+    "Add": "Lisa",
+    "All non-empty conditions must match. Rules are checked from top to bottom; the first match wins.": "Kõik mitte-tühjad tingimused peavad vastama. Reegleid kontrollitakse ülevalt alla; esimene vaste võidab.",
+    "Appearance and accessibility": "Välimus ja ligipääsetavus",
+    "Appearance and text size": "Välimus ja teksti suurus",
+    "Apply": "Rakenda",
+    "Apply rename": "Rakenda nime muutmine",
+    "Applying a collection changes only the active pane's folder, filters, sorting, and view.": "Kogu rakendamine muudab ainult aktiivse paani kausta, filtreid, sorteerimist ja vaadet.",
+    "Apply…": "Rakenda…",
+    "Batch rename selected files": "Valitud failide hulgiümbernimetamine",
+    "Browse…": "Sirvi…",
+    "Cache and scanning": "Vahemälu ja skaneerimine",
+    "Cached": "Vahemällu salvestatud",
+    "Cancel": "Tühista",
+    "Cancel current": "Tühista praegune",
+    "Cancel export": "Tühista eksport",
+    "Case sensitive": "Tähtedele tundlik",
+    "Changes are previewed immediately. Cancel restores the previous appearance.": "Muudatused kuvatakse kohe. Tühista taastab eelneva välimuse.",
+    "Choose rule destination": "Vali reegli sihtkoht",
+    "Clear all cache": "Tühjenda kogu vahemälu",
+    "Clear thumbnails": "Kustuta pisipildid",
+    "Close": "Sulge",
+    "Collection name:": "Kogumise nimi:",
+    "Compare files": "Võrdle faile",
+    "Contents": "Sisu",
+    "Copy missing/newer → left": "Kopeeri puuduv/uus → vasakule",
+    "Copy missing/newer → right": "Kopeeri puuduv/uus → parem",
+    "Copy selected/all": "Kopeeri valitud/kõik",
+    "Create…": "Loo…",
+    "Current name": "Praegune nimi",
+    "Delete": "Kustuta",
+    "Details": "Detailid",
+    "Edit": "Redigeeri",
+    "Edit tags": "Redigeeri silte",
+    "Enforce limit now": "Rakenda piirang kohe",
+    "Examples: *.tmp; proxy/*; @eaDir/*": "Näited: *.tmp; proxy/*; @eaDir/*",
+    "Exclude patterns (semicolon separated):": "Välja jäetud mustrid (eralda semikooloniga):",
+    "Export CSV…": "Ekspordi CSV…",
+    "Export current video frame": "Ekspordi praegune video kaader",
+    "Export embedded metadata": "Ekspordi manustatud metaandmed",
+    "Export integrity report": "Ekspordi terviklikkuse aruanne",
+    "Export JSON…": "Ekspordi JSON…",
+    "Export media report": "Eksporti meediaraport",
+    "Exports technical details, annotations, file status, and a library summary without changing media.": "Eksportib tehnilisi üksikasju, annotatsioone, faili olekut ja raamatukogu kokkuvõtet, ilma et meediat muudetaks.",
+    "Export…": "Eksport…",
+    "File conflicts": "Failikonfliktid",
+    "Filename.jpg   1920 × 1080   H.265 / HEVC": "Filename.jpg   1920 × 1080   H.265 / HEVC",
+    "Find visually similar images": "Leia visuaalselt sarnased pildid",
+    "Find:": "Otsi:",
+    "Folder": "Kaust",
+    "Folder comparison and synchronization": "Kaustade võrdlemine ja sünkroonimine",
+    "Folder organization rules": "Kausta korralduse reeglid",
+    "Force recheck": "Sunnita uuesti kontrollima",
+    "Format:": "Vorming:",
+    "Include full file paths": "Lisa täielikud failiteed",
+    "Interface scale:": "Liidese skaala:",
+    "Keep left (recycle right)": "Hoidke vasakul (taaskasutage paremal)",
+    "Keep right (recycle left)": "Hoidke paremal (taaskasutage vasakul)",
+    "Load workspace": "Laadi tööruum",
+    "Loading preview…": "Eelvaate laadimine…",
+    "Lower values are stricter. 6 is a useful starting point for resized or lightly recompressed copies.": "Madalamad väärtused on rangemad. 6 on kasulik lähtepunkt suurendatud või kergekäeliselt uuesti tihendatud koopiate jaoks.",
+    "Maximum percentage of operating-system drive:": "Töötamissüsteemi ketta maksimaalne protsent:",
+    "Media integrity verification": "Meedia terviklikkuse kontroll",
+    "Media inventory report": "Meediavarude aruanne",
+    "Move left": "Liigu vasakule",
+    "Move right": "Liigu paremale",
+    "Name": "Nimi",
+    "New filename:": "Uus failinimi:",
+    "New name": "Uus nimi",
+    "New name:": "Uus nimi:",
+    "Number padding:": "Numbrite täitmine:",
+    "Parallel metadata workers (1–16):": "Paralleelsed metaandmete töötlejad (1–16):",
+    "Path": "Tee",
+    "Pause": "Pause",
+    "Perceptual image matching": "Perseptuaalne pildituvastus",
+    "Performance profile:": "Tulemusprofiil:",
+    "Preserve folders relative to the active pane": "Säilita kaustad aktiivse paani suhtes",
+    "Preview": "Eelvaade",
+    "Preview active pane…": "Eelvaade aktiivsel paanil…",
+    "Preview folder organization rules": "Kausta korraldusreeglite eelvaade",
+    "Preview only until Apply is confirmed. The first enabled matching rule wins.": "Eelvaade ainult kuni rakendamine on kinnitatud. Esimene lubatud sobiv reegel võidab.",
+    "Query": "Päring",
+    "Refresh preview": "Värskenda eelvaadet",
+    "Relative path": "Suhteline tee",
+    "Remove stale entries": "Eemalda vananenud kirjed",
+    "Rename": "Nimeta ümber",
+    "Rename file": "Nimeta fail ümber",
+    "Rename pattern": "Nimeta mustrit ümber",
+    "Rename smart collection": "Nimeta nutikogu ümber",
+    "Replace:": "Asenda:",
+    "Reset widths": "Lähtesta laiused",
+    "Resolution File Manager": "Resolutsiooni failihaldur",
+    "Restore system default": "Taasta süsteemi vaikeväärtused",
+    "Retry failed": "Proovi ebaõnnestunud uuesti",
+    "Review visually similar images": "Vaata visuaalselt sarnaseid pilte",
+    "Review-only: this tool never deletes or changes files.": "Ainult ülevaatamiseks: see tööriist ei kustuta ega muuda kunagi faile.",
+    "Rule enabled": "Reegel lubatud",
+    "Rules are evaluated from top to bottom. Files are never changed until a preview is reviewed and Apply is confirmed.": "Reegleid hinnatakse ülevalt alla. Faile ei muudetagi enne, kui eelvaade on üle vaadatud ja Rakenda on kinnitatud.",
+    "Sample button": "Näidiknupp",
+    "Save": "Salvesta",
+    "Save contact sheet": "Salvesta kontaktileht",
+    "Save current": "Salvesta praegune",
+    "Save media report": "Salvesta meediaraport",
+    "Save rule": "Salvesta reegel",
+    "Save smart collection": "Salvesta nutikogu",
+    "Save workspace": "Salvesta tööruum",
+    "Saved one-pane searches": "Salvestatud ühe paneeli otsingud",
+    "Scan settings": "Skannimise seaded",
+    "Scope:": "Ulatus:",
+    "Select a column, then move it or set its width.": "Valige veerg, seejärel liigutage seda või määrake selle laius.",
+    "Select an image": "Valige pilt",
+    "Select failed": "Valimine ebaõnnestus",
+    "Select this group in source pane": "Valige see rühm source-paneelis",
+    "Set width": "Määra laius",
+    "Show frame numbers and timestamps": "Kuva kaadri numbrid ja ajatempli",
+    "Similarity is an estimate. Review files before taking any action; this window cannot delete them.": "Sarnasuse hinnang. Kontrollige faile enne mistahes toimingu tegemist; see aken ei saa neid kustutada.",
+    "Similarity tolerance (0–16):": "Sarnasuse tolerants (0–16):",
+    "Smart collections": "Tarkade kogumid",
+    "Some files already exist. Enter: replace, skip, keep both, or newer": "Mõned failid on juba olemas. Sisesta: asenda, vahele jäta, hoia mõlemad või uuem",
+    "Start": "Alusta",
+    "Start number:": "Alustanumber:",
+    "Status": "Staatus",
+    "Template:": "Mall:",
+    "Theme:": "Teema:",
+    "Thumbnail storage": "Thumbnailide salvestus",
+    "Tokens: {name} original name, {n} number, {ext} extension, {dotext} extension including dot": "Märgid: {name} algne nimi, {n} number, {ext} laiend, {dotext} laiend koos punktiga",
+    "Transfer queue": "Ülekandekorraldus",
+    "Undo delete": "Tühista kustutamine",
+    "Verify media integrity": "Kontrolli meedia terviklikkust",
+    "Width:": "Laius:",
+    "Workspace name:": "Tööruumi nimi:",
+    "⤓ PNG": "⤓ PNG",
+    "🔇 Unavailable": "🔇 Pole saadaval",
+    "Thumbnails": "Pisipildid",
+    "Ready": "Valmis",
+    "Keep both": "Hoia mõlemad",
+    "Filename": "Failinimi",
+    "Move": "Liiguta",
+    "Copy": "Kopeeri",
+    "Cancelled": "Tühistatud",
+    "Add to selection basket": "Lisa valikukorvi",
+    "New folder…": "Uus kaust...",
+    "Selection basket…": "Valikukorv...",
+    "Selection basket": "Valikukorv",
+    "Highlighted files:": "Esiletõstetud failid:",
+    "Tick selection": "Valiku märkimine",
+    "Untick selection": "Valiku tühistamine",
+    "Undo in progress…": "Võta tagasikäimasÔÇª",
+    "\nUnfinished recovery steps and backups were retained. Close applications using these files, then press Undo again.": "\nPoolik taastamistegevus ja varukoopiad jäeti alles.Sulgerakendused, mis kasutavad neid faile, seejärel vajutageVõta tagasiuuesti.",
+    "Undo would overwrite an existing file: {target}. Both files were retained.": "Võta tagasi kirjutaks üle olemasoleva faili: {target}. Mõlemad failid säilitati.",
+    "Undo target is missing; recovery retained: {target}": "Võta tagasisihtmärk puudub; taastamine säilitati: {target}",
+    "Undo backup is missing: {backup}": "Võta tagasivarukoopia puudub: {backup}",
+    "New folder": "Uus kaust",
+    "Folder name:": "Kaustnimi:",
+    "Filename conflict": "Failinimikonflikt",
+    "Rename file — live preview": "Nimeta fail ümber– reaalajas eelvaade",
+    "Could not create folder": "Kausta ei õnnestunud luua",
+    "Select or tick files first.": "Vali või märgi esmalt failid.",
+    "Move files": "Liigutafailid",
+    "Copy files": "Kopeerifailid",
+    "Ask for each conflict": "Küsi iga konflikti kohta",
+    "keep both": "Hoia mõlemad",
+    "Replace": "Asenda",
+    "Skip": "Jäta vahele",
+    "Selection basket — temporary references": "Valikukorv – ajutised viited",
+    "Original location": "Originaalasukoht",
+    "Add pane selection": "Lisa paani valik",
+    "Remove references": "Eemalda viited",
+    "Clear basket": "Kustutakorv",
+    "Copy to active pane": "Kopeeriaktiivsele paanile",
+    "Move to active pane": "Liigutaaktiivsesse paneeli",
+    "Source missing": "Allikaspuudub",
+    " files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "failid. Konflikte vaadatakse üle enne järjekorda lisamist. Asendamine hoiab selle seansi jaoks tagasivõtmise varukoopia.",
+    "Queue move": "Järjekorda liigutamine",
+    "Queue copy": "Järjekorda kopeerimine",
+    "Unsafe destination": "Ebaturvaline sihtkoht",
+    "A destination is one of the selected source files. Choose another folder.": "Sihtkoht on üks valitud lähtefailidest. Valige teine kaust.",
+    "New filename: ": "Uus failinimi:",
+    "Destination now exists. Choose another name.": "Sihtkoht on juba olemas. Valige teine nimi.",
+    "Destination folder:": "Sihtkaust:",
+    "Preserve folder structure": "Säilita kaustastruktuur",
+    "Files only (no subfolders)": "Failainult (ilma alamkaustadeta)",
+    "If a destination filename already exists:": "Kui sihtfaili nimi juba eksisteerib:",
+    "Open destination when complete": "Avasihtkoht, kui lõpetatud",
+    "Destination is a selected source": "Sihtkoht on valitud allikas",
+    "Apply to all remaining conflicts": "Rakendakõigile ülejäänud konfliktidele",
+    "Hide basket": "Peida korv",
+    "Treeview": "Puuvaade",
+    "Destination is a folder": "Sihtkoht on kaust",
+    " to ": "kuni",
+    "Source: ": "Allikas:",
+    "\n\nDestination: ": "\nSihtkoht:",
+    "\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "\nHoia mõlemad loob nummerdatud failinime. Asendab varundab sihtkoha sessiooni jaoksVõta tagasi",
+    "Current filename: ": "Praegune failinimi:",
+    "Duplicate destination name": "Duplikaadi sihtkoha nimi",
+    " [missing]": "[puhub]",
+    "Existing destination": "Olemasolev sihtkoht",
+    "Enter a valid folder name without slashes, reserved names or trailing spaces/dots.": "Sisestage kehtiv kaustanime ilma kaldkriipsude, reserveeritud nimede või tühikute/punktideta lõpus.",
+    "Source and destination are the same file; nothing was changed.": "Allikasja sihtkoht on sama fail; midagi ei muudetud.",
+    "Undo would overwrite an existing file: ": "Võta tagasi kirjutaks üle olemasoleva faili:",
+    "Undo stopped because this file changed after transfer: ": "Võta tagasipeatati, sest see fail muutus pärast ülekandmist:",
+    "Source changed during transfer; retained original. Retry after writing finishes.": "Allikasmuudetud edastamise ajal; algne säilitati. Proovi uuesti, kui kirjutamine lõpeb.",
+    "Undo target is missing; recovery retained: ": "Võta tagasisihtmärk puudub; taastamine säilitati:",
+    "Undo backup is missing: ": "Võta tagasivarukoopia puudub:",
+    "Destination changed; retry: ": "Sihtkoht muutus; proovi uuesti:",
+    "{count} files. Conflicts are reviewed before queuing. Replace keeps an undo backup for this session.": "{count}failid. Konflikte kontrollitakse enne järjekorda lisamist. Asendamine hoiab selle seansi jaoks tagasivõtmise varukoopia.",
+    "Source: {source}\n\nDestination: {target}\n\nKeep both creates a numbered filename. Replace backs up the destination for session Undo.": "Allikas: {source}Sihtkoht: {target}\n\nHoia mõlemad loob nummerdatud failinime. Replace varundab sihtkoha sessiooni jaoksVõta tagasi.",
+    "Current filename: {name}": "Praegune failinimi: {name}",
+    "New filename: {name}\n{status}": "Uus failinimi: {name}\n{status}",
+    "Source": "Allikas",
+    "Destination": "Sihtkoht",
+    "[missing]": "[puudu]",
+    "Unchanged": "Muutmata",
+    "Name cannot be empty": "Nimi ei tohi olla tühi",
+    "Name contains a forbidden character": "Nimi sisaldab keelatud märki",
+    "Name cannot end with a space or dot": "Nimi ei tohi lõppeda tühiku või punktiga",
+    "Reserved Windows filename": "Reserveeritud Windowsi faili nimi",
+    "Duplicate output name": "Korduv väljundfaili nimi nimi",
+    "A file with this name already exists": "Sellise nimega fail on juba olemas",
+    "Invalid template: {error}": "Vale mall: {error}",
+    "Undo stopped because this file changed after transfer: {path}. The file was retained.": "Võta tagasipeatati, sest see fail muutus pärast ülekandmist:{path}. Fail säilitati.",
+    "Destination changed; retry: {target}": "Sihtkoht muutus; proovi uuesti:{target}",
+    "{ready} file(s) ready · {unchanged} unchanged · {problems} problem(s)": "{ready} fail(id) valmis ┬À {unchanged} muutmata ┬À {problems} probleem(id)",
+    "Start and padding must be whole numbers.": "Alusta ja täidis peavad olema täisarvud."
+  }
+}

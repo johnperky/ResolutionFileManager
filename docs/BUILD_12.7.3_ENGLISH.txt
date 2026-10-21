@@ -1,0 +1,95 @@
+English help validated; other languages intentionally await review approval.
+443 INFO: PyInstaller: 6.22.2, contrib hooks: 2026.6
+443 INFO: Python: 3.14.3
+487 INFO: Platform: Windows-11-10.0.26300-SP0
+487 INFO: Python environment: C:\Python314
+488 INFO: wrote F:\Resolution File Manager project\ResolutionFileManager-Project-v6\ResolutionFileManager-v12.7.3-English-Review.spec
+506 INFO: Removing temporary files and cleaning cache in C:\Users\johnp\AppData\Local\pyinstaller
+516 INFO: Module search paths (PYTHONPATH):
+['F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6',
+ 'C:\\Python314\\python314.zip',
+ 'C:\\Python314\\DLLs',
+ 'C:\\Python314\\Lib',
+ 'C:\\Python314',
+ 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages',
+ 'C:\\Python314\\Lib\\site-packages',
+ 'F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6']
+1329 INFO: Appending 'binaries' from .spec
+1331 INFO: Appending 'datas' from .spec
+1334 INFO: checking Analysis
+1334 INFO: Building Analysis because Analysis-00.toc is non existent
+1334 INFO: Looking for Python shared library...
+1334 INFO: Using Python shared library: C:\Python314\python314.dll
+1334 INFO: Running Analysis Analysis-00.toc
+1334 INFO: Target bytecode optimization level: 0
+1334 INFO: Initializing module dependency graph...
+1337 INFO: Initializing module graph hook caches...
+1375 INFO: Analyzing modules for base_library.zip ...
+4156 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+4900 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+6700 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+6716 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+6854 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+8744 INFO: Caching module dependency graph...
+8796 INFO: Analyzing F:\Resolution File Manager project\ResolutionFileManager-Project-v6\media_sorter.py
+9636 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+10241 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+10245 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+11134 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+11178 INFO: Processing standard module hook 'hook-webbrowser.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+11245 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+11252 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+11362 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+11669 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+12182 INFO: Processing standard module hook 'hook-tkinterdnd2.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+12245 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+12334 INFO: Processing pre-safe-import-module hook 'hook-win32com.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\_pyinstaller_hooks_contrib\\pre_safe_import_module'
+12494 INFO: Processing pre-safe-import-module hook 'hook-gi.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+12511 INFO: Processing standard module hook 'hook-PIL.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+12674 INFO: Processing standard module hook 'hook-PIL.Image.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+13406 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+13665 INFO: Processing standard module hook 'hook-PIL.ImageFilter.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+14679 INFO: Processing module hooks (post-graph stage)...
+15089 INFO: Processing standard module hook 'hook-PIL.SpiderImagePlugin.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+15243 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks'
+15254 INFO: Performing binary vs. data reclassification (983 entries)
+15537 INFO: Looking for ctypes DLLs
+15607 INFO: Analyzing run-time hooks ...
+15609 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks\\rthooks'
+15613 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks\\rthooks'
+15617 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks\\rthooks'
+15621 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\Users\\johnp\\AppData\\Roaming\\Python\\Python314\\site-packages\\PyInstaller\\hooks\\rthooks'
+15646 INFO: Creating base_library.zip...
+15666 INFO: Looking for dynamic libraries
+16219 INFO: Extra DLL search directories (AddDllDirectory): []
+16219 INFO: Extra DLL search directories (PATH): []
+17403 INFO: Warnings written to F:\Resolution File Manager project\ResolutionFileManager-Project-v6\build\windows-english-review-12.7.3\ResolutionFileManager-v12.7.3-English-Review\warn-ResolutionFileManager-v12.7.3-English-Review.txt
+17431 INFO: Graph cross-reference written to F:\Resolution File Manager project\ResolutionFileManager-Project-v6\build\windows-english-review-12.7.3\ResolutionFileManager-v12.7.3-English-Review\xref-ResolutionFileManager-v12.7.3-English-Review.html
+17471 INFO: checking PYZ
+17471 INFO: Building PYZ because PYZ-00.toc is non existent
+17471 INFO: Building PYZ (ZlibArchive) F:\Resolution File Manager project\ResolutionFileManager-Project-v6\build\windows-english-review-12.7.3\ResolutionFileManager-v12.7.3-English-Review\PYZ-00.pyz
+17672 INFO: Building PYZ (ZlibArchive) F:\Resolution File Manager project\ResolutionFileManager-Project-v6\build\windows-english-review-12.7.3\ResolutionFileManager-v12.7.3-English-Review\PYZ-00.pyz completed successfully.
+17698 INFO: checking PKG
+17699 INFO: Building PKG because PKG-00.toc is non existent
+17699 INFO: Building PKG (CArchive) ResolutionFileManager-v12.7.3-English-Review.pkg
+48256 INFO: Building PKG (CArchive) ResolutionFileManager-v12.7.3-English-Review.pkg completed successfully.
+48272 INFO: Bootloader C:\Users\johnp\AppData\Roaming\Python\Python314\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+48272 INFO: checking EXE
+48272 INFO: Building EXE because EXE-00.toc is non existent
+48273 INFO: Building EXE from EXE-00.toc
+48273 INFO: Copying bootloader EXE to F:\Resolution File Manager project\ResolutionFileManager-Project-v6\dist\english-review-12.7.3\ResolutionFileManager-v12.7.3-English-Review.exe
+48318 INFO: Copying icon to EXE
+48355 INFO: Copying 0 resources to EXE
+48355 INFO: Embedding manifest in EXE
+48390 INFO: Appending PKG archive to EXE
+48779 INFO: Fixing EXE headers
+54842 INFO: Building EXE from EXE-00.toc completed successfully.
+54857 INFO: Build complete! The results are available in: F:\Resolution File Manager project\ResolutionFileManager-Project-v6\dist\english-review-12.7.3
+
+Algorithm       Hash                                                                   Path                            
+---------       ----                                                                   ----                            
+SHA256          53448A9E491E2F96011E3EA6E13892DA055BA5642CC47A894BE2053181A286AE       F:\Resolution File Manager pr...
+SHA256          53448A9E491E2F96011E3EA6E13892DA055BA5642CC47A894BE2053181A286AE       C:\Users\johnp\Desktop\Resolu...
+Desktop review executable: C:\Users\johnp\Desktop\ResolutionFileManager-v12.7.3-English-Review.exe
+
+

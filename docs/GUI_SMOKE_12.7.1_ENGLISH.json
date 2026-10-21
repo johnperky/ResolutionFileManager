@@ -1,0 +1,11 @@
+[
+  {
+    "language": "en",
+    "version": "12.7.1",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  }
+]

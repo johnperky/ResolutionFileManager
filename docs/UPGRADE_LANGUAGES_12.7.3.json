@@ -1,0 +1,597 @@
+[
+  {
+    "language": "en",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "zh-CN",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "nl",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "fr",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "de",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ja",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ko",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ru",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "es",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "sv",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "bg",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "th",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "id",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "el",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "fil",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "hi",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "pl",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "it",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ar",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "vi",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "uk",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "no",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "fi",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "da",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "hu",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ro",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "cs",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "pt-PT",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "pt-BR",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "tr",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "zh-TW",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ms",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "he",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "bn",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ur",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "fa",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "sk",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "hr",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "sr",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ca",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "et",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "lv",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "lt",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated Skip retains originals and queues no transfer",
+      "selection toolbar and Info geometry",
+      "translated docked basket",
+      "translated live rename status",
+      "translated batch rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  }
+]

@@ -1,0 +1,84 @@
+zh-CN: 1/1 paragraphs/titles
+COMPLETE zh-CN: 22 chapters, UI unchanged
+nl: 1/1 paragraphs/titles
+COMPLETE nl: 22 chapters, UI unchanged
+ko: 1/1 paragraphs/titles
+COMPLETE ko: 22 chapters, UI unchanged
+fr: 1/1 paragraphs/titles
+COMPLETE fr: 22 chapters, UI unchanged
+ja: 1/1 paragraphs/titles
+COMPLETE ja: 22 chapters, UI unchanged
+de: 1/1 paragraphs/titles
+COMPLETE de: 22 chapters, UI unchanged
+es: 1/1 paragraphs/titles
+COMPLETE es: 22 chapters, UI unchanged
+sv: 1/1 paragraphs/titles
+COMPLETE sv: 22 chapters, UI unchanged
+bg: 1/1 paragraphs/titles
+COMPLETE bg: 22 chapters, UI unchanged
+th: 1/1 paragraphs/titles
+COMPLETE th: 22 chapters, UI unchanged
+id: 1/1 paragraphs/titles
+COMPLETE id: 22 chapters, UI unchanged
+ru: 1/1 paragraphs/titles
+COMPLETE ru: 22 chapters, UI unchanged
+el: 1/1 paragraphs/titles
+COMPLETE el: 22 chapters, UI unchanged
+hi: 1/1 paragraphs/titles
+COMPLETE hi: 22 chapters, UI unchanged
+ar: 1/1 paragraphs/titles
+COMPLETE ar: 22 chapters, UI unchanged
+fil: 1/1 paragraphs/titles
+COMPLETE fil: 22 chapters, UI unchanged
+it: 1/1 paragraphs/titles
+COMPLETE it: 22 chapters, UI unchanged
+pl: 1/1 paragraphs/titles
+COMPLETE pl: 22 chapters, UI unchanged
+vi: 1/1 paragraphs/titles
+COMPLETE vi: 22 chapters, UI unchanged
+no: 1/1 paragraphs/titles
+COMPLETE no: 22 chapters, UI unchanged
+uk: 1/1 paragraphs/titles
+COMPLETE uk: 22 chapters, UI unchanged
+fi: 1/1 paragraphs/titles
+COMPLETE fi: 22 chapters, UI unchanged
+da: 1/1 paragraphs/titles
+COMPLETE da: 22 chapters, UI unchanged
+hu: 1/1 paragraphs/titles
+COMPLETE hu: 22 chapters, UI unchanged
+cs: 1/1 paragraphs/titles
+COMPLETE cs: 22 chapters, UI unchanged
+ro: 1/1 paragraphs/titles
+COMPLETE ro: 22 chapters, UI unchanged
+pt-PT: 1/1 paragraphs/titles
+COMPLETE pt-PT: 22 chapters, UI unchanged
+tr: 1/1 paragraphs/titles
+COMPLETE tr: 22 chapters, UI unchanged
+pt-BR: 1/1 paragraphs/titles
+COMPLETE pt-BR: 22 chapters, UI unchanged
+zh-TW: 1/1 paragraphs/titles
+COMPLETE zh-TW: 22 chapters, UI unchanged
+ms: 1/1 paragraphs/titles
+COMPLETE ms: 22 chapters, UI unchanged
+he: 1/1 paragraphs/titles
+COMPLETE he: 22 chapters, UI unchanged
+bn: 1/1 paragraphs/titles
+COMPLETE bn: 22 chapters, UI unchanged
+ur: 1/1 paragraphs/titles
+COMPLETE ur: 22 chapters, UI unchanged
+fa: 1/1 paragraphs/titles
+COMPLETE fa: 22 chapters, UI unchanged
+hr: 1/1 paragraphs/titles
+COMPLETE hr: 22 chapters, UI unchanged
+sr: 1/1 paragraphs/titles
+COMPLETE sr: 22 chapters, UI unchanged
+sk: 1/1 paragraphs/titles
+COMPLETE sk: 22 chapters, UI unchanged
+ca: 1/1 paragraphs/titles
+COMPLETE ca: 22 chapters, UI unchanged
+et: 1/1 paragraphs/titles
+COMPLETE et: 22 chapters, UI unchanged
+lv: 1/1 paragraphs/titles
+COMPLETE lv: 22 chapters, UI unchanged
+lt: 1/1 paragraphs/titles
+COMPLETE lt: 22 chapters, UI unchanged

@@ -1,0 +1,24 @@
+{
+  "checks": [
+    "Files remain visible with oversized saved inspector/folder widths",
+    "Dragging Info to edge cannot hide files after release",
+    "Files fill pane after hiding inspector",
+    "Inspector width survives toggle",
+    "Files remain visible with oversized saved inspector/folder widths",
+    "Dragging Info to edge cannot hide files after release",
+    "Files fill pane after hiding inspector",
+    "Inspector width survives toggle",
+    "Rows available",
+    "Rectangle highlights files without ticking",
+    "Row drag highlights without ticking",
+    "Tick selection adds to existing ticks",
+    "Untick selection removes only highlighted group",
+    "Basket is docked in main window",
+    "Basket sits above browsers",
+    "Docked basket shows selected references",
+    "Basket can collapse",
+    "Thumbnail drag highlights without changing ticks",
+    "No callback exceptions"
+  ],
+  "errors": []
+}

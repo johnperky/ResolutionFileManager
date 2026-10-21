@@ -15,9 +15,10 @@ FFPLAY_PATH=$(command -v ffplay)
 VERSION=$(tr -d '[:space:]' < VERSION.txt)
 ARCH=$(uname -m)
 OUTPUT_NAME="ResolutionFileManager-v${VERSION}-linux-${ARCH}"
-VENV_DIR="$PROJECT_DIR/.venv-build"
+VENV_DIR="${RFM_BUILD_VENV:-$PROJECT_DIR/.venv-linux-build}"
 
 python3 verify_release_assets.py "$PROJECT_DIR"
+python3 tools/validate_help.py
 
 if [ ! -x "$VENV_DIR/bin/python" ]; then
     echo "Creating isolated Python build environment..."
@@ -34,6 +35,8 @@ echo "Building $OUTPUT_NAME..."
 "$VENV_PYTHON" -m PyInstaller \
     --noconfirm \
     --clean \
+    --workpath "${RFM_BUILD_WORK_DIR:-$PROJECT_DIR/build/linux}" \
+    --distpath "$PROJECT_DIR/dist/linux" \
     --onefile \
     --windowed \
     --name "$OUTPUT_NAME" \
@@ -44,7 +47,7 @@ echo "Building $OUTPUT_NAME..."
     --add-binary "$FFPLAY_PATH:." \
     media_sorter.py
 
-OUTPUT_PATH="$PROJECT_DIR/dist/$OUTPUT_NAME"
+OUTPUT_PATH="$PROJECT_DIR/dist/linux/$OUTPUT_NAME"
 test -f "$OUTPUT_PATH" || { echo "Build output was not created: $OUTPUT_PATH" >&2; exit 1; }
 chmod +x "$OUTPUT_PATH"
 echo "Portable Linux build complete: $OUTPUT_PATH"

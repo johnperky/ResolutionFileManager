@@ -1,0 +1,12 @@
+{
+  "backup_root": "F:\\Resolution File Manager project\\Recovery Backups\\2026-10-19-before-help-recovery",
+  "verified_files": 1314,
+  "windows_source_sha256": "c5177e0a72f66ca2bb38b742228ade60e09ad9927d21cd6522d557b93aafe487",
+  "separate_labels": [
+    "Latest-Windows-Source-12.6.0",
+    "Existing-F-Project-12.6.0",
+    "Existing-Linux-Source-12.3.0",
+    "Help-and-Translations-12.6.0"
+  ],
+  "windows_and_f_source_differences": []
+}

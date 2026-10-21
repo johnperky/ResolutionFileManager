@@ -1,0 +1,29 @@
+[
+  {
+    "language": "en",
+    "version": "12.7.4",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "de",
+    "version": "12.7.4",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ar",
+    "version": "12.7.4",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  }
+]

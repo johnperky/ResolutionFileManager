@@ -5,6 +5,14 @@ from pathlib import Path
 
 
 class LocalizationSelectionTests(unittest.TestCase):
+    def test_right_to_left_languages_are_identified(self):
+        from localization import is_rtl_language
+
+        for language in ("ar", "he", "ur", "fa"):
+            self.assertTrue(is_rtl_language(language), language)
+        for language in ("en", "pt-PT", "pt-BR", "zh-TW"):
+            self.assertFalse(is_rtl_language(language), language)
+
     def test_regional_locales_map_to_supported_language(self):
         from localization import normalise_locale
 
@@ -19,6 +27,53 @@ class LocalizationSelectionTests(unittest.TestCase):
             "German_Germany.1252": "de",
             "Spanish_Spain.1252": "es",
             "Chinese (Simplified)_China.936": "zh-CN",
+            "sv-SE": "sv",
+            "Swedish_Sweden.1252": "sv",
+            "bg-BG": "bg",
+            "Bulgarian_Bulgaria.1251": "bg",
+            "th-TH": "th",
+            "Thai_Thailand.874": "th",
+            "id-ID": "id",
+            "Indonesian_Indonesia.1252": "id",
+            "el-GR": "el",
+            "Greek_Greece.1253": "el",
+            "fil-PH": "fil",
+            "Filipino_Philippines.1252": "fil",
+            "hi-IN": "hi",
+            "Hindi_India.65001": "hi",
+            "pl-PL": "pl",
+            "Polish_Poland.1250": "pl",
+            "it-IT": "it",
+            "Italian_Italy.1252": "it",
+            "ar-SA": "ar",
+            "vi-VN": "vi",
+            "uk-UA": "uk",
+            "nb-NO": "no",
+            "Norwegian_Norway.1252": "no",
+            "fi-FI": "fi",
+            "da-DK": "da",
+            "hu-HU": "hu",
+            "ro-RO": "ro",
+            "cs-CZ": "cs",
+            "pt-BR": "pt-BR",
+            "pt-PT": "pt-PT",
+            "Portuguese_Portugal.1252": "pt-PT",
+            "Portuguese_Brazil.1252": "pt-BR",
+            "tr-TR": "tr",
+            "zh-TW": "zh-TW",
+            "zh-Hant-HK": "zh-TW",
+            "ms-MY": "ms",
+            "he-IL": "he",
+            "bn-BD": "bn",
+            "ur-PK": "ur",
+            "fa-IR": "fa",
+            "sk-SK": "sk",
+            "hr-HR": "hr",
+            "sr-Latn-RS": "sr",
+            "ca-ES": "ca",
+            "et-EE": "et",
+            "lv-LV": "lv",
+            "lt-LT": "lt",
         }
         for raw, expected in cases.items():
             with self.subTest(raw=raw):
@@ -27,7 +82,7 @@ class LocalizationSelectionTests(unittest.TestCase):
     def test_unknown_or_empty_locale_falls_back_to_english(self):
         from localization import normalise_locale
 
-        self.assertEqual(normalise_locale("pt-BR"), "en")
+        self.assertEqual(normalise_locale("zz-ZZ"), "en")
         self.assertEqual(normalise_locale(""), "en")
         self.assertEqual(normalise_locale(None), "en")
 

@@ -1,0 +1,30 @@
+Image scan True
+Info opens at compact default without hiding files True
+Info remembers adjusted width after toggle True
+Info width saved in workspace state True
+Thumbnail slider dimensions True
+Basket contains selected references True
+Basket leaves originals unchanged True
+Single rename live preview True
+Batch rename automatically updates preview True
+Details rubber-band highlights without ticking True
+Ordinary click collapses highlighted group True
+Internal drag retains selected group and opens preview True
+Drop action preserves Copy/Move meaning True
+Drop action preserves Copy/Move meaning True
+Cancel drop leaves transfer preview closed True
+Pane New Folder creates destination True
+Thumbnail rubber-band highlights without ticking True
+Transfer preview folder choices True
+Queue copied file and completed True
+Undo completes without blocking the event loop True
+Queue copy undo True
+Real video preview active before Undo True
+Undo waits for reader while UI remains responsive True
+Undo releases real preview and restores safely after reader finishes True
+Flattened duplicate replace move True
+Metadata scans active at replacement Undo True
+Repeated replacement move undo restores every original True
+Callback errors: []
+No Tk callback exceptions True
+{"version": "12.7.4", "checks": ["Image scan", "Info opens at compact default without hiding files", "Info remembers adjusted width after toggle", "Info width saved in workspace state", "Thumbnail slider dimensions", "Basket contains selected references", "Basket leaves originals unchanged", "Single rename live preview", "Batch rename automatically updates preview", "Details rubber-band highlights without ticking", "Ordinary click collapses highlighted group", "Internal drag retains selected group and opens preview", "Drop action preserves Copy/Move meaning", "Drop action preserves Copy/Move meaning", "Cancel drop leaves transfer preview closed", "Pane New Folder creates destination", "Thumbnail rubber-band highlights without ticking", "Transfer preview folder choices", "Queue copied file and completed", "Undo completes without blocking the event loop", "Queue copy undo", "Real video preview active before Undo", "Undo waits for reader while UI remains responsive", "Undo releases real preview and restores safely after reader finishes", "Flattened duplicate replace move", "Metadata scans active at replacement Undo", "Repeated replacement move undo restores every original", "No Tk callback exceptions"], "callback_errors": []}

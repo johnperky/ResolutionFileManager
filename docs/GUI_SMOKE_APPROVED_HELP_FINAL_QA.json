@@ -1,0 +1,56 @@
+[
+  {
+    "language": "fr",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "de",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ar",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "fi",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "th",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "el",
+    "version": "12.6.1",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  }
+]

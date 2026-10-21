@@ -1,0 +1,26 @@
+[
+  {
+    "language": "de",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  },
+  {
+    "language": "ar",
+    "passed": true,
+    "checks": [
+      "translated conflict choices preserve selection",
+      "translated preview status and labels",
+      "translated docked basket",
+      "translated live rename status",
+      "localized new-folder and error dialog routing"
+    ],
+    "errors": []
+  }
+]

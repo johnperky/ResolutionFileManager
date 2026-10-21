@@ -1,0 +1,389 @@
+[
+  {
+    "language": "en",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "zh-CN",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "nl",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "fr",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "de",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ja",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ko",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ru",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "es",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "sv",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "bg",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "th",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "id",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "el",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "fil",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "hi",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "pl",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "it",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ar",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "vi",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "uk",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "no",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "fi",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "da",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "hu",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ro",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "cs",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "pt-PT",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "pt-BR",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "tr",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "zh-TW",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ms",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "he",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "bn",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ur",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "fa",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": true,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "sk",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "hr",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "sr",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "ca",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "et",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "lv",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  },
+  {
+    "language": "lt",
+    "version": "12.6.2",
+    "scan_files": 4,
+    "help_chapters": 22,
+    "rtl": false,
+    "passed": true,
+    "visual_review": "not performed; geometry/text/navigation tested programmatically"
+  }
+]

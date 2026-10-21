@@ -1,0 +1,9 @@
+{
+  "executable": "F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6\\dist\\ResolutionFileManager.exe",
+  "sha256": "3e098402a965c8a071ec97fe99813a15b8a34028351fe7516589cd90d752aed1",
+  "language": "en",
+  "startup_liveness_passed": true,
+  "observation_seconds": 120,
+  "stderr": "",
+  "scope": "Startup/liveness only; visual and feature checks reported separately."
+}
