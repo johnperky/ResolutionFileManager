@@ -63,6 +63,8 @@ Serbian text is Cyrillic. `AppxManifest.template.xml`, listing-preparation mappi
 
 ## Prioritised next steps
 
+Scheduling and publication authorisation (21 October 2026, Europe/London): layout review at 10:40, followed by screenshots at 11:10 only when the exact source/binary has passed layout review. A conditional hourly follow-up at half past the hour checks release readiness quietly. User authorises publishing the newest Windows build to GitHub **after** review is complete, with validated screenshots, tests, matching release assets and checksums; do not publish the current review build prematurely. No Store or Linux publication is authorised. Record actual completion and release URL here; pause the publication follow-up after success.
+
 1. Read this file and current Git status; preserve the complete dirty/untracked source with a new verified snapshot before development.
 2. Fix German selector clipping; verify relevant regressions and record actual results here. Serbian test correction is complete; scheduled screenshot work must preserve it.
 3. Finish visual language/RTL review and remaining screenshot sets without repeating completed captures.
