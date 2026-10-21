@@ -1,0 +1,392 @@
+{
+  "version": "12.7.10",
+  "languages": {
+    "en": {
+      "releaseNotes": "New in version 12.7.10\n\n• Show or hide hidden files and folders from the Tools menu.\n• Expanded Help for folder organisation rules, including filename, codec, rating and tag examples.\n• More reliable undo, clearer transfer previews, filename conflict choices and file selection controls.\n• Better layouts for file information, video conversion settings, themes and enlarged text.\n• 43 interface languages, each with a full user guide. All media processing stays on your computer.",
+      "screenshotCaptions": [
+        "Details and file information",
+        "Independent media previews",
+        "Thumbnail browsing",
+        "Video conversion preview"
+      ]
+    },
+    "zh-CN": {
+      "releaseNotes": "新版本 12.7.10\n\n• 从“工具”菜单中显示或隐藏隐藏的文件和文件夹。\n• 文件夹组织规则的扩展帮助，包括文件名、编解码器、评级和标签示例。\n• 更可靠的撤消、更清晰的传输预览、文件名冲突选择和文件选择控件。\n• 文件信息、视频转换设置、主题和放大文本的更好布局。\n• 43 界面语言，每种语言都有完整的用户指南。所有媒体处理都保留在您的计算机上。",
+      "screenshotCaptions": [
+        "详细信息和文件信息",
+        "独立媒体预览",
+        "缩略图浏览",
+        "视频转换预览"
+      ]
+    },
+    "nl": {
+      "releaseNotes": "Nieuw in versie 12.7.10\n\n• Toon of verberg verborgen bestanden en mappen in het menu Extra.\n• Uitgebreide Help voor regels voor maporganisatie, inclusief bestandsnaam, codec, beoordeling en tagvoorbeelden.\n• Betrouwbaarder ongedaan maken, duidelijkere overdrachtsvoorbeelden, keuzes voor bestandsnaamconflicten en bedieningselementen voor bestandsselectie.\n• Betere lay-outs voor bestandsinformatie, videoconversie-instellingen, thema's en vergrote tekst.\n• 43-interfacetalen, elk met een volledige gebruikershandleiding. Alle mediaverwerking blijft op uw computer.",
+      "screenshotCaptions": [
+        "Details en bestandsinformatie",
+        "Onafhankelijke mediapreviews",
+        "Bladeren door miniaturen",
+        "Voorbeeld van videoconversie"
+      ]
+    },
+    "fr": {
+      "releaseNotes": "Nouvelle version 12.7.10\n\n• Afficher ou masquer les fichiers et dossiers cachés dans le menu Outils.\n• Aide étendue pour les règles d'organisation des dossiers, y compris des exemples de nom de fichier, de codec, de classification et de balise.\n• Annulation plus fiable, aperçus de transfert plus clairs, choix de conflits de noms de fichiers et contrôles de sélection de fichiers.\n• De meilleures mises en page pour les informations sur les fichiers, les paramètres de conversion vidéo, les thèmes et le texte agrandi.\n• Langues d'interface 43, chacune avec un guide d'utilisation complet. Tout le traitement multimédia reste sur votre ordinateur.",
+      "screenshotCaptions": [
+        "Détails et informations sur le dossier",
+        "Aperçus des médias indépendants",
+        "Navigation par vignettes",
+        "Aperçu de la conversion vidéo"
+      ]
+    },
+    "de": {
+      "releaseNotes": "Neu in der Version 12.7.10\n\n• Versteckte Dateien und Ordner im Menü „Extras“ ein- oder ausblenden.\n• Erweiterte Hilfe für Ordnerorganisationsregeln, einschließlich Beispielen für Dateinamen, Codec, Bewertung und Tags.\n• Zuverlässigeres Rückgängigmachen, klarere Übertragungsvorschauen, Optionen für Dateinamenkonflikte und Steuerelemente für die Dateiauswahl.\n• Bessere Layouts für Dateiinformationen, Videokonvertierungseinstellungen, Themen und vergrößerten Text.\n• 43-Schnittstellensprachen, jeweils mit einem vollständigen Benutzerhandbuch. Die gesamte Medienverarbeitung bleibt auf Ihrem Computer.",
+      "screenshotCaptions": [
+        "Details und Dateiinformationen",
+        "Unabhängige Medienvorschauen",
+        "Durchsuchen von Miniaturansichten",
+        "Vorschau der Videokonvertierung"
+      ]
+    },
+    "ja": {
+      "releaseNotes": "バージョン 12.7.10 の新機能\n\n• [ツール] メニューから隠しファイルと隠しフォルダーを表示または非表示にします。\n• ファイル名、コーデック、評価、タグの例を含むフォルダー編成ルールのヘルプが拡張されました。\n• より信頼性の高い取り消し、より明確な転送プレビュー、ファイル名の競合の選択、およびファイル選択のコントロール。\n• ファイル情報、ビデオ変換設定、テーマ、拡大されたテキストのレイアウトが改善されました。\n• 43 インターフェイス言語。それぞれに完全なユーザー ガイドが付属します。すべてのメディア処理はコンピュータ上で行われます。",
+      "screenshotCaptions": [
+        "詳細とファイル情報",
+        "独立したメディアのプレビュー",
+        "サムネイルの閲覧",
+        "ビデオ変換プレビュー"
+      ]
+    },
+    "ko": {
+      "releaseNotes": "12.7.10 버전의 새로운 기능\n\n• 도구 메뉴에서 숨겨진 파일 및 폴더를 표시하거나 숨깁니다.\n• 파일 이름, 코덱, 등급 및 태그 예제를 포함하여 폴더 구성 규칙에 대한 확장된 도움말입니다.\n• 보다 안정적인 실행 취소, 보다 명확한 전송 미리보기, 파일 이름 충돌 선택 및 파일 선택 제어.\n• 파일 정보, 비디오 변환 설정, 테마 및 확대된 텍스트에 대한 레이아웃이 향상되었습니다.\n• 43 인터페이스 언어, 각각 전체 사용자 가이드 포함. 모든 미디어 처리는 컴퓨터에 유지됩니다.",
+      "screenshotCaptions": [
+        "세부정보 및 파일정보",
+        "독립 미디어 미리보기",
+        "썸네일 탐색",
+        "비디오 변환 미리보기"
+      ]
+    },
+    "ru": {
+      "releaseNotes": "Новое в версии 12.7.10\n\n• Показать или скрыть скрытые файлы и папки в меню «Инструменты».\n• Расширенная справка по правилам организации папок, включая примеры имени файла, кодека, рейтинга и тегов.\n• Более надежная отмена, более четкий предварительный просмотр передачи, возможность выбора конфликтов имен файлов и элементы управления выбором файлов.\n• Улучшенные макеты информации о файлах, настройки преобразования видео, темы и увеличенный текст.\n• Языки интерфейса 43, каждый из которых имеет полное руководство пользователя. Вся обработка мультимедиа остается на вашем компьютере.",
+      "screenshotCaptions": [
+        "Подробности и информация о файле",
+        "Независимые медиапревью",
+        "Просмотр миниатюр",
+        "Предварительный просмотр конвертации видео"
+      ]
+    },
+    "es": {
+      "releaseNotes": "Nuevo en la versión 12.7.10\n\n• Muestra u oculta archivos y carpetas ocultos desde el menú Herramientas.\n• Ayuda ampliada para reglas de organización de carpetas, incluidos ejemplos de nombres de archivos, códecs, clasificaciones y etiquetas.\n• Deshacer más confiable, vistas previas de transferencias más claras, opciones de conflictos de nombres de archivos y controles de selección de archivos.\n• Mejores diseños para información de archivos, configuraciones de conversión de video, temas y texto ampliado.\n• Idiomas de interfaz 43, cada uno con una guía de usuario completa. Todo el procesamiento multimedia permanece en su computadora.",
+      "screenshotCaptions": [
+        "Detalles e información del archivo",
+        "Avances de medios independientes",
+        "Navegación en miniatura",
+        "Vista previa de conversión de vídeo"
+      ]
+    },
+    "sv": {
+      "releaseNotes": "Nytt i version 12.7.10\n\n• Visa eller dölj dolda filer och mappar från menyn Verktyg.\n• Utökad hjälp för mapporganisationsregler, inklusive filnamn, codec, betyg och taggexempel.\n• Mer tillförlitlig ångra, tydligare överföringsförhandsvisningar, val av filnamnskonflikter och kontroller för filval.\n• Bättre layouter för filinformation, videokonverteringsinställningar, teman och förstorad text.\n• 43 gränssnittsspråk, vart och ett med en fullständig användarguide. All mediebearbetning finns kvar på din dator.",
+      "screenshotCaptions": [
+        "Detaljer och filinformation",
+        "Oberoende media förhandsvisningar",
+        "Miniatyrsurfning",
+        "Förhandsgranskning av videokonvertering"
+      ]
+    },
+    "bg": {
+      "releaseNotes": "Ново във версия 12.7.10\n\n• Показване или скриване на скрити файлове и папки от менюто Инструменти.\n• Разширена помощ за правилата за организация на папките, включително име на файл, кодек, рейтинг и примери за тагове.\n• По-надеждна отмяна, по-ясни предварителни прегледи на прехвърляне, избор на конфликт на имена на файлове и контроли за избор на файлове.\n• По-добри оформления за файлова информация, настройки за видео конвертиране, теми и увеличен текст.\n• 43 езици на интерфейса, всеки с пълно ръководство за потребителя. Цялата медийна обработка остава на вашия компютър.",
+      "screenshotCaptions": [
+        "Подробности и информация за файла",
+        "Независими медийни визуализации",
+        "Разглеждане на миниатюри",
+        "Преглед на видео конвертиране"
+      ]
+    },
+    "th": {
+      "releaseNotes": "ใหม่ในเวอร์ชัน 12.7.10\n\n• แสดงหรือซ่อนไฟล์และโฟลเดอร์ที่ซ่อนจากเมนูเครื่องมือ\n• ความช่วยเหลือเพิ่มเติมสำหรับกฎการจัดระเบียบโฟลเดอร์ รวมถึงชื่อไฟล์ ตัวแปลงสัญญาณ การให้คะแนน และตัวอย่างแท็ก\n• การเลิกทำที่เชื่อถือได้มากขึ้น การแสดงตัวอย่างการถ่ายโอนที่ชัดเจนยิ่งขึ้น ตัวเลือกความขัดแย้งของชื่อไฟล์ และการควบคุมการเลือกไฟล์\n• รูปแบบที่ดีขึ้นสำหรับข้อมูลไฟล์ การตั้งค่าการแปลงวิดีโอ ธีม และข้อความที่ขยายใหญ่ขึ้น\n• ภาษาอินเทอร์เฟซ 43 แต่ละภาษามีคู่มือการใช้งานฉบับเต็ม การประมวลผลสื่อทั้งหมดจะยังคงอยู่ในคอมพิวเตอร์ของคุณ",
+      "screenshotCaptions": [
+        "รายละเอียดและข้อมูลไฟล์",
+        "ตัวอย่างสื่ออิสระ",
+        "การเรียกดูภาพขนาดย่อ",
+        "ดูตัวอย่างการแปลงวิดีโอ"
+      ]
+    },
+    "id": {
+      "releaseNotes": "Baru di versi 12.7.10\n\n• Menampilkan atau menyembunyikan file dan folder tersembunyi dari menu Alat.\n• Bantuan yang diperluas untuk aturan organisasi folder, termasuk contoh nama file, codec, rating, dan tag.\n• Pembatalan yang lebih andal, pratinjau transfer yang lebih jelas, pilihan konflik nama file, dan kontrol pemilihan file.\n• Tata letak yang lebih baik untuk informasi file, pengaturan konversi video, tema, dan teks yang diperbesar.\n• Bahasa antarmuka 43, masing-masing dengan panduan pengguna lengkap. Semua pemrosesan media tetap ada di komputer Anda.",
+      "screenshotCaptions": [
+        "Detail dan informasi file",
+        "Pratinjau media independen",
+        "Penjelajahan gambar kecil",
+        "Pratinjau konversi video"
+      ]
+    },
+    "el": {
+      "releaseNotes": "Νέο στην έκδοση 12.7.10\n\n• Εμφάνιση ή απόκρυψη κρυφών αρχείων και φακέλων από το μενού Εργαλεία.\n• Διευρυμένη Βοήθεια για κανόνες οργάνωσης φακέλων, συμπεριλαμβανομένων των παραδειγμάτων ονόματος αρχείου, κωδικοποιητή, βαθμολογίας και ετικετών.\n• Πιο αξιόπιστη αναίρεση, σαφέστερες προεπισκοπήσεις μεταφοράς, επιλογές διένεξης ονόματος αρχείου και στοιχεία ελέγχου επιλογής αρχείων.\n• Καλύτερες διατάξεις για πληροφορίες αρχείων, ρυθμίσεις μετατροπής βίντεο, θέματα και μεγεθυσμένο κείμενο.\n• 43 γλώσσες διεπαφής, καθεμία με πλήρη οδηγό χρήσης. Όλη η επεξεργασία πολυμέσων παραμένει στον υπολογιστή σας.",
+      "screenshotCaptions": [
+        "Λεπτομέρειες και πληροφορίες αρχείου",
+        "Προεπισκοπήσεις ανεξάρτητων μέσων",
+        "Περιήγηση μικρογραφιών",
+        "Προεπισκόπηση μετατροπής βίντεο"
+      ]
+    },
+    "fil": {
+      "releaseNotes": "Bago sa bersyong 12.7.10\n\n• Ipakita o itago ang mga nakatagong file at folder mula sa Tools menu.\n• Pinalawak na Tulong para sa mga panuntunan sa organisasyon ng folder, kabilang ang filename, codec, rating at mga halimbawa ng tag.\n• Mas maaasahang i-undo, mas malinaw na mga preview sa paglipat, mga pagpipilian sa pagsasalungat sa filename at mga kontrol sa pagpili ng file.\n• Mas mahusay na mga layout para sa impormasyon ng file, mga setting ng conversion ng video, mga tema at pinalaki na teksto.\n• 43 interface na mga wika, bawat isa ay may kumpletong gabay sa gumagamit. Ang lahat ng pagpoproseso ng media ay nananatili sa iyong computer.",
+      "screenshotCaptions": [
+        "Mga detalye at impormasyon ng file",
+        "Mga preview ng independent media",
+        "Pagba-browse ng thumbnail",
+        "Preview ng conversion ng video"
+      ]
+    },
+    "hi": {
+      "releaseNotes": "संस्करण 12.7.10 में नया\n\n• टूल्स मेनू से छुपी हुई फ़ाइलें और फ़ोल्डर्स दिखाएँ या छिपाएँ।\n• फ़ाइल नाम, कोडेक, रेटिंग और टैग उदाहरण सहित फ़ोल्डर संगठन नियमों के लिए विस्तारित सहायता।\n• अधिक विश्वसनीय पूर्ववत करें, स्पष्ट स्थानांतरण पूर्वावलोकन, फ़ाइल नाम विरोध विकल्प और फ़ाइल चयन नियंत्रण।\n• फ़ाइल जानकारी, वीडियो रूपांतरण सेटिंग्स, थीम और बढ़े हुए पाठ के लिए बेहतर लेआउट।\n• 43 इंटरफ़ेस भाषाएँ, प्रत्येक पूर्ण उपयोगकर्ता गाइड के साथ। सभी मीडिया प्रोसेसिंग आपके कंप्यूटर पर रहती है।",
+      "screenshotCaptions": [
+        "विवरण और फ़ाइल जानकारी",
+        "स्वतंत्र मीडिया पूर्वावलोकन",
+        "थंबनेल ब्राउज़िंग",
+        "वीडियो रूपांतरण पूर्वावलोकन"
+      ]
+    },
+    "pl": {
+      "releaseNotes": "Nowość w wersji 12.7.10\n\n• Pokaż lub ukryj ukryte pliki i foldery w menu Narzędzia.\n• Rozszerzona pomoc dotycząca zasad organizacji folderów, w tym nazw plików, kodeków, ocen i przykładów tagów.\n• Bardziej niezawodne cofanie, wyraźniejsze podglądy transferu, możliwość wyboru konfliktu nazw plików i kontrola wyboru plików.\n• Lepszy układ informacji o plikach, ustawień konwersji wideo, motywów i powiększonego tekstu.\n• Języki interfejsu 43, każdy z pełną instrukcją obsługi. Całe przetwarzanie multimediów pozostaje na Twoim komputerze.",
+      "screenshotCaptions": [
+        "Szczegóły i informacje o pliku",
+        "Niezależne podglądy mediów",
+        "Przeglądanie miniatur",
+        "Podgląd konwersji wideo"
+      ]
+    },
+    "it": {
+      "releaseNotes": "Nuovo nella versione 12.7.10\n\n• Mostra o nascondi file e cartelle nascosti dal menu Strumenti.\n• Guida estesa per le regole di organizzazione delle cartelle, inclusi esempi di nome file, codec, classificazione ed tag.\n• Annullamenti più affidabili, anteprime di trasferimento più chiare, scelte di conflitto di nomi di file e controlli di selezione dei file.\n• Layout migliori per informazioni sui file, impostazioni di conversione video, temi e testo ingrandito.\n• Lingue dell'interfaccia 43, ciascuna con una guida per l'utente completa. Tutta l'elaborazione multimediale rimane sul tuo computer.",
+      "screenshotCaptions": [
+        "Dettagli e informazioni sul file",
+        "Anteprime dei media indipendenti",
+        "Navigazione delle miniature",
+        "Anteprima della conversione video"
+      ]
+    },
+    "ar": {
+      "releaseNotes": "الجديد في الإصدار 12.7.10\n\n• إظهار أو إخفاء الملفات والمجلدات المخفية من قائمة الأدوات.\n• تعليمات موسعة لقواعد تنظيم المجلدات، بما في ذلك اسم الملف وبرنامج الترميز والتصنيف وأمثلة العلامات.\n• تراجع أكثر موثوقية ومعاينات نقل أكثر وضوحًا وخيارات تعارض أسماء الملفات وعناصر التحكم في اختيار الملف.\n• تخطيطات أفضل لمعلومات الملف وإعدادات تحويل الفيديو والموضوعات والنص الموسع.\n• لغات الواجهة 43، كل منها مزود بدليل مستخدم كامل. تظل جميع عمليات معالجة الوسائط على جهاز الكمبيوتر الخاص بك.",
+      "screenshotCaptions": [
+        "التفاصيل ومعلومات الملف",
+        "معاينات وسائل الإعلام المستقلة",
+        "تصفح الصور المصغرة",
+        "معاينة تحويل الفيديو"
+      ]
+    },
+    "vi": {
+      "releaseNotes": "Phiên bản mới 12.7.10\n\n• Hiển thị hoặc ẩn các tập tin và thư mục ẩn khỏi menu Công cụ.\n• Trợ giúp mở rộng cho các quy tắc tổ chức thư mục, bao gồm tên tệp, codec, xếp hạng và ví dụ về thẻ.\n• Hoàn tác đáng tin cậy hơn, xem trước chuyển rõ ràng hơn, lựa chọn xung đột tên tệp và kiểm soát lựa chọn tệp.\n• Bố cục tốt hơn cho thông tin tệp, cài đặt chuyển đổi video, chủ đề và văn bản phóng to.\n• Ngôn ngữ giao diện 43, mỗi ngôn ngữ đều có hướng dẫn sử dụng đầy đủ. Tất cả quá trình xử lý phương tiện vẫn ở trên máy tính của bạn.",
+      "screenshotCaptions": [
+        "Thông tin chi tiết và tập tin",
+        "Xem trước phương tiện truyền thông độc lập",
+        "Duyệt hình thu nhỏ",
+        "Xem trước chuyển đổi video"
+      ]
+    },
+    "uk": {
+      "releaseNotes": "Нове у версії 12.7.10\n\n• Показати або приховати приховані файли та папки в меню «Інструменти».\n• Розширена довідка щодо правил організації папок, включаючи приклади імен файлів, кодеків, оцінок і тегів.\n• Більш надійне скасування, чіткіший попередній перегляд передачі, вибір конфліктів імен файлів і керування вибором файлів.\n• Кращі макети для інформації про файли, налаштувань перетворення відео, тем і збільшеного тексту.\n• Мови інтерфейсу 43, кожна з яких містить повний посібник користувача. Уся обробка медіафайлів залишається на вашому комп’ютері.",
+      "screenshotCaptions": [
+        "Подробиці та інформація про файл",
+        "Незалежні медіа-превью",
+        "Перегляд ескізів",
+        "Попередній перегляд перетворення відео"
+      ]
+    },
+    "no": {
+      "releaseNotes": "Ny i versjon 12.7.10\n\n• Vis eller skjul skjulte filer og mapper fra Verktøy-menyen.\n• Utvidet hjelp for mappeorganiseringsregler, inkludert filnavn, kodek, vurdering og eksempler.\n• Mer pålitelig angre, klarere forhåndsvisninger av overføringer, valg av filnavnkonflikter og kontroller for filvalg.\n• Bedre oppsett for filinformasjon, videokonverteringsinnstillinger, temaer og forstørret tekst.\n• 43 grensesnittspråk, hver med en fullstendig brukerveiledning. All mediebehandling forblir på datamaskinen.",
+      "screenshotCaptions": [
+        "Detaljer og filinformasjon",
+        "Uavhengige medier forhåndsvisninger",
+        "Miniatyrsurfing",
+        "Forhåndsvisning av videokonvertering"
+      ]
+    },
+    "fi": {
+      "releaseNotes": "Uutta versiossa 12.7.10\n\n• Näytä tai piilota piilotetut tiedostot ja kansiot Työkalut-valikosta.\n• Laajennettu ohje kansioiden järjestämissäännöille, mukaan lukien tiedostonimi, koodekki, luokitus ja tunnisteesimerkit.\n• Luotettavampi kumoaminen, selkeämpi siirron esikatselu, tiedostonimien ristiriitojen valinnat ja tiedostojen valinnan säätimet.\n• Paremmat asettelut tiedostotiedoille, videon muunnosasetuksiin, teemoille ja suurennetulle tekstille.\n• 43 käyttöliittymäkielet, joista jokaisella on täydellinen käyttöopas. Kaikki mediakäsittely jää tietokoneellesi.",
+      "screenshotCaptions": [
+        "Yksityiskohdat ja tiedostotiedot",
+        "Riippumattoman median esikatselut",
+        "Pikkukuvien selaus",
+        "Videon muuntamisen esikatselu"
+      ]
+    },
+    "da": {
+      "releaseNotes": "Ny i version 12.7.10\n\n• Vis eller skjul skjulte filer og mapper fra menuen Værktøjer.\n• Udvidet hjælp til mappeorganisationsregler, herunder filnavn, codec, rating og tag-eksempler.\n• Mere pålidelig fortrydelse, klarere forhåndsvisninger af overførsel, valg af filnavnekonflikter og kontrolelementer til filvalg.\n• Bedre layout til filoplysninger, videokonverteringsindstillinger, temaer og forstørret tekst.\n• 43 grænsefladesprog, hver med en komplet brugervejledning. Al mediebehandling forbliver på din computer.",
+      "screenshotCaptions": [
+        "Detaljer og filoplysninger",
+        "Uafhængige medier forhåndsvisninger",
+        "Browsing med miniaturebilleder",
+        "Forhåndsvisning af videokonvertering"
+      ]
+    },
+    "hu": {
+      "releaseNotes": "Új a 12.7.10 verzióban\n\n• Rejtett fájlok és mappák megjelenítése vagy elrejtése az Eszközök menüben.\n• Kibővített súgó a mappaszervezési szabályokhoz, beleértve a fájlnév, kodek, minősítés és címkézés példáit.\n• Megbízhatóbb visszavonás, világosabb átviteli előnézetek, fájlnév-ütközések és fájlkiválasztási vezérlők.\n• Jobb elrendezések a fájlinformációkhoz, a videokonverziós beállításokhoz, a témákhoz és a kinagyított szöveghez.\n• 43 interfésznyelvek, mindegyikhez teljes használati útmutató tartozik. Minden médiafeldolgozás a számítógépen marad.",
+      "screenshotCaptions": [
+        "Részletek és fájlinformációk",
+        "Független média előzetesek",
+        "Miniatűr böngészés",
+        "Videókonverziós előnézet"
+      ]
+    },
+    "ro": {
+      "releaseNotes": "Nou în versiunea 12.7.10\n\n• Afișați sau ascundeți fișierele și folderele ascunse din meniul Instrumente.\n• Ajutor extins pentru regulile de organizare a folderelor, inclusiv nume de fișier, codec, evaluare și exemple de etichete.\n• Anulare mai fiabilă, previzualizări de transfer mai clare, opțiuni de conflict de nume de fișiere și controale de selecție a fișierelor.\n• Aspecte mai bune pentru informații despre fișiere, setări de conversie video, teme și text mărit.\n• Limbi de interfață 43, fiecare cu un ghid de utilizare complet. Toată procesarea media rămâne pe computer.",
+      "screenshotCaptions": [
+        "Detalii și informații despre fișier",
+        "Previzualizări media independente",
+        "Navigare prin miniaturi",
+        "Previzualizare conversie video"
+      ]
+    },
+    "cs": {
+      "releaseNotes": "Novinka ve verzi 12.7.10\n\n• Zobrazte nebo skryjte skryté soubory a složky z nabídky Nástroje.\n• Rozšířená nápověda pro pravidla organizace složek, včetně příkladů souborů, kodeků, hodnocení a značek.\n• Spolehlivější vrácení zpět, jasnější náhledy přenosu, volby konfliktu souborů a ovládací prvky výběru souborů.\n• Lepší rozvržení pro informace o souborech, nastavení převodu videa, motivy a zvětšený text.\n• Jazyky rozhraní 43, každý s úplnou uživatelskou příručkou. Veškeré zpracování médií zůstává na vašem počítači.",
+      "screenshotCaptions": [
+        "Podrobnosti a informace o souboru",
+        "Nezávislé náhledy médií",
+        "Procházení náhledů",
+        "Náhled převodu videa"
+      ]
+    },
+    "pt-PT": {
+      "releaseNotes": "Novo na versão 12.7.10\n\n• Mostrar ou ocultar ficheiros e pastas ocultos no menu Ferramentas.\n• Ajuda expandida para as regras de organização de pastas, incluindo nomes de ficheiros, codec, classificação e exemplos de etiquetas.\n• Desfazer mais fiável, visualizações de transferência mais claras, opções de conflito de nomes de ficheiros e controlos de seleção de ficheiros.\n• Melhores layouts para informações de ficheiros, definições de conversão de vídeo, temas e texto ampliado.\n• Idiomas de interface 43, cada um com um guia de utilizador completo. Todo o processamento de multimédia permanece no seu computador.",
+      "screenshotCaptions": [
+        "Detalhes e informações do ficheiro",
+        "Antevisões de mídia independente",
+        "Navegação em miniaturas",
+        "Pré-visualização da conversão de vídeo"
+      ]
+    },
+    "pt-BR": {
+      "releaseNotes": "Novo na versão 12.7.10\n\n• Mostre ou oculte arquivos e pastas ocultos no menu Ferramentas.\n• Ajuda expandida para regras de organização de pastas, incluindo nomes de arquivo, codec, classificação e exemplos de tags.\n• Desfazer mais confiável, visualizações de transferência mais claras, opções de conflito de nomes de arquivos e controles de seleção de arquivos.\n• Melhores layouts para informações de arquivos, configurações de conversão de vídeo, temas e texto ampliado.\n• Idiomas de interface 43, cada um com um guia do usuário completo. Todo o processamento de mídia permanece no seu computador.",
+      "screenshotCaptions": [
+        "Detalhes e informações do arquivo",
+        "Prévias de mídia independente",
+        "Navegação em miniaturas",
+        "Pré-visualização da conversão de vídeo"
+      ]
+    },
+    "tr": {
+      "releaseNotes": "12.7.10 sürümünde yeni\n\n• Araçlar menüsünden gizli dosya ve klasörleri gösterin veya gizleyin.\n• Dosya adı, codec bileşeni, derecelendirme ve etiket örnekleri de dahil olmak üzere klasör düzenleme kuralları için Genişletilmiş Yardım.\n• Daha güvenilir geri alma, daha net aktarım önizlemeleri, dosya adı çakışması seçenekleri ve dosya seçim kontrolleri.\n• Dosya bilgileri, video dönüştürme ayarları, temalar ve büyütülmüş metin için daha iyi düzenler.\n• 43 arayüz dillerinin her biri tam bir kullanıcı kılavuzuna sahiptir. Tüm medya işlemleri bilgisayarınızda kalır.",
+      "screenshotCaptions": [
+        "Ayrıntılar ve dosya bilgileri",
+        "Bağımsız medya önizlemeleri",
+        "Küçük resimlere göz atma",
+        "Video dönüştürme önizlemesi"
+      ]
+    },
+    "zh-TW": {
+      "releaseNotes": "新版 12.7.10\n\n• 從「工具」功能表中顯示或隱藏隱藏的檔案和資料夾。\n• 資料夾組織規則的擴充功能幫助，包括檔案名稱、編解碼器、評級和標籤範例。\n• 更可靠的撤銷、更清晰的傳輸預覽、檔案名稱衝突選擇和檔案選擇控制項。\n• 文件資訊、影片轉換設定、主題和放大文字的更好佈局。\n• 43 介面語言，每種語言都有完整的使用者指南。所有媒體處理都保留在您的電腦上。",
+      "screenshotCaptions": [
+        "詳細資訊和文件信息",
+        "獨立媒體預覽",
+        "縮圖瀏覽",
+        "影片轉換預覽"
+      ]
+    },
+    "ms": {
+      "releaseNotes": "Baharu dalam versi 12.7.10\n\n• Tunjukkan atau sembunyikan fail dan folder tersembunyi daripada menu Alat.\n• Bantuan Dikembangkan untuk peraturan organisasi folder, termasuk nama fail, codec, rating dan contoh teg.\n• Buat asal yang lebih dipercayai, pratonton pemindahan yang lebih jelas, pilihan konflik nama fail dan kawalan pemilihan fail.\n• Reka letak yang lebih baik untuk maklumat fail, tetapan penukaran video, tema dan teks yang diperbesarkan.\n• 43 bahasa antara muka, setiap satu dengan panduan pengguna penuh. Semua pemprosesan media kekal pada komputer anda.",
+      "screenshotCaptions": [
+        "Butiran dan maklumat fail",
+        "Pratonton media bebas",
+        "Semak imbas lakaran kenit",
+        "Pratonton penukaran video"
+      ]
+    },
+    "he": {
+      "releaseNotes": "חדש בגרסה 12.7.10\n\n• הצג או הסתר קבצים ותיקיות מוסתרים מתפריט הכלים.\n• עזרה מורחבת עבור כללי ארגון תיקיות, כולל שם קובץ, codec, דירוג ותגים דוגמאות.\n• ביטול אמין יותר, תצוגות מקדימות של העברה ברורות יותר, אפשרויות התנגשות של שמות קבצים ובקרות בחירת קבצים.\n• פריסות טובות יותר למידע על קבצים, הגדרות המרת וידאו, ערכות נושא וטקסט מוגדל.\n• שפות ממשק 43, כל אחת עם מדריך למשתמש מלא. כל עיבוד המדיה נשאר במחשב שלך.",
+      "screenshotCaptions": [
+        "פרטים ומידע על הקבצים",
+        "תצוגה מקדימה של מדיה עצמאית",
+        "גלישה בתמונה ממוזערת",
+        "תצוגה מקדימה של המרת וידאו"
+      ]
+    },
+    "bn": {
+      "releaseNotes": "12.7.10 সংস্করণে নতুন\n\n• টুলস মেনু থেকে লুকানো ফাইল এবং ফোল্ডার দেখান বা লুকান।\n• ফাইলের নাম, কোডেক, রেটিং এবং ট্যাগ উদাহরণ সহ ফোল্ডার সংস্থার নিয়মগুলির জন্য প্রসারিত সহায়তা।\n• আরও নির্ভরযোগ্য পূর্বাবস্থা, পরিষ্কার স্থানান্তর পূর্বরূপ, ফাইলের নাম দ্বন্দ্ব পছন্দ এবং ফাইল নির্বাচন নিয়ন্ত্রণ।\n• ফাইল তথ্য, ভিডিও রূপান্তর সেটিংস, থিম এবং বর্ধিত পাঠ্যের জন্য আরও ভাল লেআউট।\n• 43 ইন্টারফেস ভাষা, প্রতিটি একটি সম্পূর্ণ ব্যবহারকারীর নির্দেশিকা সহ। সমস্ত মিডিয়া প্রক্রিয়াকরণ আপনার কম্পিউটারে থাকে।",
+      "screenshotCaptions": [
+        "বিস্তারিত এবং ফাইল তথ্য",
+        "স্বাধীন মিডিয়া প্রিভিউ",
+        "থাম্বনেল ব্রাউজিং",
+        "ভিডিও রূপান্তর পূর্বরূপ"
+      ]
+    },
+    "ur": {
+      "releaseNotes": "ورژن 12.7.10 میں نیا\n\n• ٹولز مینو سے پوشیدہ فائلوں اور فولڈرز کو دکھائیں یا چھپائیں۔\n• فولڈر تنظیم کے قواعد کے لیے توسیعی مدد، بشمول فائل کا نام، کوڈیک، درجہ بندی اور ٹیگ کی مثالیں۔\n• مزید قابل اعتماد کالعدم، واضح منتقلی کے مناظر، فائل نام کے تنازعات کے انتخاب اور فائل کے انتخاب کے کنٹرول۔\n• فائل کی معلومات، ویڈیو کی تبدیلی کی ترتیبات، تھیمز اور توسیع شدہ متن کے لیے بہتر ترتیب۔\n• 43 انٹرفیس زبانیں، ہر ایک مکمل صارف گائیڈ کے ساتھ۔ تمام میڈیا پروسیسنگ آپ کے کمپیوٹر پر رہتی ہے۔",
+      "screenshotCaptions": [
+        "تفصیلات اور فائل کی معلومات",
+        "آزاد میڈیا کے مناظر",
+        "تھمب نیل براؤزنگ",
+        "ویڈیو تبادلوں کا پیش نظارہ"
+      ]
+    },
+    "fa": {
+      "releaseNotes": "جدید در نسخه 12.7.10\n\n• نمایش یا پنهان کردن فایل ها و پوشه های مخفی از منوی ابزار.\n• راهنمای گسترش یافته برای قوانین سازماندهی پوشه، از جمله نام فایل، کدک، رتبه بندی و نمونه های برچسب.\n• واگرد مطمئن تر، پیش نمایش های انتقال واضح تر، انتخاب های تضاد نام فایل و کنترل های انتخاب فایل.\n• طرح بندی بهتر برای اطلاعات فایل، تنظیمات تبدیل ویدیو، تم ها و متن بزرگ شده.\n• زبان‌های رابط 43، هر کدام با راهنمای کاربر کامل. تمام پردازش های رسانه ای در رایانه شما باقی می ماند.",
+      "screenshotCaptions": [
+        "جزئیات و اطلاعات فایل",
+        "پیش نمایش رسانه های مستقل",
+        "مرور تصاویر بند انگشتی",
+        "پیش نمایش تبدیل ویدیو"
+      ]
+    },
+    "sk": {
+      "releaseNotes": "Novinka vo verzii 12.7.10\n\n• Zobrazte alebo skryte skryté súbory a priečinky z ponuky Nástroje.\n• Rozšírený pomocník pre pravidlá organizácie priečinkov vrátane príkladov názvu súboru, kodeku, hodnotenia a značiek.\n• Spoľahlivejšie vrátenie späť, jasnejšie ukážky prenosu, voľby konfliktu názvov a ovládacie prvky výberu súborov.\n• Lepšie rozloženia pre informácie o súboroch, nastavenia konverzie videa, motívy a zväčšený text.\n• Jazyky rozhrania 43, každý s úplnou používateľskou príručkou. Všetko spracovanie médií zostáva na vašom počítači.",
+      "screenshotCaptions": [
+        "Podrobnosti a informácie o súbore",
+        "Nezávislé ukážky médií",
+        "Prehliadanie miniatúr",
+        "Ukážka konverzie videa"
+      ]
+    },
+    "hr": {
+      "releaseNotes": "Novo u verziji 12.7.10\n\n• Prikažite ili sakrijte skrivene datoteke i mape iz izbornika Alati.\n• Proširena pomoć za pravila organizacije mape, uključujući naziv datoteke, kodek, ocjenu i primjere oznaka.\n• Pouzdanije poništavanje, jasniji pregledi prijenosa, izbori sukoba naziva datoteka i kontrole odabira datoteka.\n• Bolji izgledi za informacije o datotekama, postavke video pretvorbe, teme i uvećani tekst.\n• 43 jezici sučelja, svaki s punim korisničkim vodičem. Sva obrada medija ostaje na vašem računalu.",
+      "screenshotCaptions": [
+        "Pojedinosti i podaci o datoteci",
+        "Pregledi nezavisnih medija",
+        "Pregledavanje sličica",
+        "Pregled video pretvorbe"
+      ]
+    },
+    "sr": {
+      "releaseNotes": "Ново у верзији12.7.10\n\n• Прикажите или сакријте скривене датотеке и фасцикле из менија Алатке.\n• Проширена помоћ за правила организације фасцикли, укључујући примере назива датотеке, кодека, оцена и ознака.\n• Поузданије поништавање, јаснији прегледи преноса, избори сукоба имена датотека и контроле избора датотека.\n• Бољи изгледи за информације о датотекама, подешавања видео конверзије, теме и увећани текст.\n• 43језици интерфејса, сваки са комплетним упутством за употребу. Сва обрада медија остаје на вашем рачунару.",
+      "screenshotCaptions": [
+        "Детаљи и информације о фајлу",
+        "Прегледи независних медија",
+        "Прегледање сличица",
+        "Преглед видео конверзије"
+      ]
+    },
+    "ca": {
+      "releaseNotes": "Nou a la versió 12.7.10\n\n• Mostra o amaga fitxers i carpetes ocults des del menú Eines.\n• Ajuda ampliada per a les regles d'organització de carpetes, com ara nom de fitxer, còdec, classificació i exemples d'etiquetes.\n• Desfer més fiable, visualitzacions prèvies de transferència més clares, opcions de conflicte de noms de fitxer i controls de selecció de fitxers.\n• Millors dissenys per a la informació dels fitxers, la configuració de conversió de vídeo, els temes i el text ampliat.\n• Idiomes de la interfície 43, cadascun amb una guia d'usuari completa. Tot el processament de mitjans es manté al vostre ordinador.",
+      "screenshotCaptions": [
+        "Detalls i informació del fitxer",
+        "Previsualitzacions de mitjans independents",
+        "Navegació per miniatures",
+        "Vista prèvia de conversió de vídeo"
+      ]
+    },
+    "et": {
+      "releaseNotes": "Uus versioonis 12.7.10\n\n• Peidetud failide ja kaustade kuvamine või peitmine menüüs Tööriistad.\n• Laiendatud spikker kaustade korraldamise reeglite jaoks, sealhulgas failinime, koodeki, reitingu ja siltide näited.\n• Usaldusväärsem tagasivõtmine, selgemad ülekande eelvaated, failinimede konflikti valikud ja failivaliku juhtelemendid.\n• Paremad paigutused failiteabe, videote teisendamise seadete, teemade ja suurendatud teksti jaoks.\n• 43 liidese keeled, millest igaühel on täielik kasutusjuhend. Kogu meediumitöötlus jääb teie arvutisse.",
+      "screenshotCaptions": [
+        "Üksikasjad ja failiteave",
+        "Sõltumatu meedia eelvaated",
+        "Pisipiltide sirvimine",
+        "Video teisendamise eelvaade"
+      ]
+    },
+    "lv": {
+      "releaseNotes": "Jaunums versijā 12.7.10\n\n• Rādīt vai paslēpt slēptos failus un mapes izvēlnē Rīki.\n• Paplašināta palīdzība mapju organizēšanas noteikumiem, tostarp faila nosaukuma, kodeku, vērtējuma un tagu piemēriem.\n• Drošāka atsaukšana, skaidrāki pārsūtīšanas priekšskatījumi, failu nosaukumu konfliktu izvēle un failu atlases vadīklas.\n• Labāki izkārtojumi faila informācijai, video konvertēšanas iestatījumiem, motīviem un palielinātam tekstam.\n• 43 interfeisa valodas, katra ar pilnu lietotāja rokasgrāmatu. Visa multivides apstrāde paliek jūsu datorā.",
+      "screenshotCaptions": [
+        "Sīkāka informācija un faila informācija",
+        "Neatkarīgo mediju priekšskatījumi",
+        "Sīktēlu pārlūkošana",
+        "Video konvertēšanas priekšskatījums"
+      ]
+    },
+    "lt": {
+      "releaseNotes": "Nauja versija 12.7.10\n\n• Rodyti arba slėpti paslėptus failus ir aplankus meniu Įrankiai.\n• Išplėstas žinynas, skirtas aplankų organizavimo taisyklėms, įskaitant failo pavadinimą, kodeką, įvertinimą ir žymų pavyzdžius.\n• Patikimesnis anuliavimas, aiškesnės perdavimo peržiūros, failų pavadinimų nesuderinamumo pasirinkimai ir failų pasirinkimo valdikliai.\n• Geresni failų informacijos, vaizdo įrašų konvertavimo nustatymų, temų ir padidinto teksto išdėstymai.\n• 43 sąsajos kalbos, kiekviena su visu vartotojo vadovu. Visas medijos apdorojimas lieka jūsų kompiuteryje.",
+      "screenshotCaptions": [
+        "Išsami informacija ir failo informacija",
+        "Nepriklausomos žiniasklaidos peržiūros",
+        "Miniatiūrų naršymas",
+        "Vaizdo įrašo konvertavimo peržiūra"
+      ]
+    }
+  }
+}
