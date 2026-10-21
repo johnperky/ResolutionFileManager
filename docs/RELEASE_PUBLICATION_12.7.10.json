@@ -1,0 +1,66 @@
+{
+  "version": "12.7.10",
+  "url": "https://github.com/johnperky/ResolutionFileManager/releases/tag/v12.7.10",
+  "tag": "v12.7.10",
+  "commit": "a6046d88a3c87524acba61b09e362a0665da49dd",
+  "binarySha256": "f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f",
+  "latest": true,
+  "assets": [
+    {
+      "name": "ResolutionFileManager-12.7.10-Source.zip",
+      "size": 4961976,
+      "digest": "sha256:963c896805470e953a224a1ccc5a702563f54a6261e4ab278d4c3c4542265549",
+      "browser_download_url": "https://github.com/johnperky/ResolutionFileManager/releases/download/v12.7.10/ResolutionFileManager-12.7.10-Source.zip"
+    },
+    {
+      "name": "ResolutionFileManager-12.7.10-Windows-x64.zip",
+      "size": 250121875,
+      "digest": "sha256:aa3cffb0d62aa857d86103a7af8fffec0dbc8fddcdc03a1d9213784d4ccf6688",
+      "browser_download_url": "https://github.com/johnperky/ResolutionFileManager/releases/download/v12.7.10/ResolutionFileManager-12.7.10-Windows-x64.zip"
+    },
+    {
+      "name": "ResolutionFileManager-12.7.10.exe",
+      "size": 251341772,
+      "digest": "sha256:f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f",
+      "browser_download_url": "https://github.com/johnperky/ResolutionFileManager/releases/download/v12.7.10/ResolutionFileManager-12.7.10.exe"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 322,
+      "digest": "sha256:6a975ecb7f4581b96598ffb446a753fb9a5d81e594d84c0a7323cc3fa9bb8e20",
+      "browser_download_url": "https://github.com/johnperky/ResolutionFileManager/releases/download/v12.7.10/SHA256SUMS.txt"
+    }
+  ],
+  "publicChecksumDownloadVerified": true,
+  "anonymousDownloadHeaders": [
+    {
+      "name": "ResolutionFileManager-12.7.10-Source.zip",
+      "publicStatus": 200,
+      "size": 4961976,
+      "downloadFilenameVerified": true,
+      "digest": "sha256:963c896805470e953a224a1ccc5a702563f54a6261e4ab278d4c3c4542265549"
+    },
+    {
+      "name": "ResolutionFileManager-12.7.10-Windows-x64.zip",
+      "publicStatus": 200,
+      "size": 250121875,
+      "downloadFilenameVerified": true,
+      "digest": "sha256:aa3cffb0d62aa857d86103a7af8fffec0dbc8fddcdc03a1d9213784d4ccf6688"
+    },
+    {
+      "name": "ResolutionFileManager-12.7.10.exe",
+      "publicStatus": 200,
+      "size": 251341772,
+      "downloadFilenameVerified": true,
+      "digest": "sha256:f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "publicStatus": 200,
+      "size": 322,
+      "downloadFilenameVerified": true,
+      "digest": "sha256:6a975ecb7f4581b96598ffb446a753fb9a5d81e594d84c0a7323cc3fa9bb8e20"
+    }
+  ],
+  "publicLatestPageVerified": true
+}

@@ -1,6 +1,6 @@
 # Resolution File Manager project
 
-Current version: 12.7.10 Windows review build (release verification in progress; read PROJECT_STATUS.md and docs/LAYOUT_REVIEW_CHECKPOINT.md). Includes the persistent Tools hidden-files toggle and scaled layout/theme corrections. All 43 translations and Help retained. Linux remains 12.6.1; no Store submission is authorised by this release task.
+Current version: **12.7.10 Windows**, published as GitHub Latest (https://github.com/johnperky/ResolutionFileManager/releases/tag/v12.7.10). Hidden-files toggle and layout corrections reviewed;89 unit tests, complete43-language Help,172 screenshots and exact-binary asset checks pass. Read PROJECT_STATUS.md and saved release/readiness evidence for scope and remaining tasks. Linux remains12.6.1; Store package/submission unchanged.
 
 21 October 2026: drag/drop prompt now has explicitly translated Copy, Move and Cancel buttons, reusing the existing action keys in all 43 languages. Cancel and closing the prompt do nothing; Copy/Move retain the existing transfer preview. Only the relevant transfer Help paragraph was updated across all 43 languages. See docs/DROP_BUTTON_FIX_12.7.4.md.
 

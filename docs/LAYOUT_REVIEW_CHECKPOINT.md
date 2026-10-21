@@ -28,3 +28,7 @@ readyForRelease: true
 - No unresolved release-blocking layout issue in the reviewed scope. Code/screenshot review is complete for this exact source/binary. Current 89 tests, full Help, source/embedded locales and Defender checks pass; initial package content checks pass.
 - `RELEASE_READINESS_12.7.10.json` records public review evidence. Before publication, freeze committed source/docs and require the external `release-output/12.7.10/RELEASE_READINESS.json` produced by `finalize_release_archives.py`; it binds final ZIP/EXE/checksum hashes, exact source commit and this review. Use `publish_reviewed_release.py`; never publish from a stale archive or unreviewed rebuild.
 - Tested on the current Windows11 host in isolated settings/system-only PATH; no separate clean-OS or Windows10 claim. Linux remains12.6.1, Store package/submission unchanged. No Store upload/submission or Linux release.
+
+## Publication complete
+
+Windows12.7.10 published and verified as Latest: https://github.com/johnperky/ResolutionFileManager/releases/tag/v12.7.10 . Tag `v12.7.10` points to `a6046d88a3c87524acba61b09e362a0665da49dd`. All four asset hashes and anonymous download names/sizes verified, plus public Latest redirect/checksum download. Exact binary hash is unchanged. See `RELEASE_PUBLICATION_12.7.10.json`. One-time publication monitor paused. No Store/Linux publication.

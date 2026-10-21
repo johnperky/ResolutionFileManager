@@ -4,11 +4,11 @@ Updated: 21 October 2026 (Europe/London). Read this and AGENTS.md before develop
 
 ## Current versions and release state
 
-- **Windows: 12.7.10, review complete, ready for Windows GitHub release.** Exact EXE: `dist/multilingual-review-12.7.10/ResolutionFileManager-v12.7.10-Multilingual-Review.exe`; SHA-256 `f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f`. Six modules and all 43 locales match source (`docs/EMBEDDED_REVIEW_12.7.10.json`). Older candidates/binaries preserved.
+- **Windows: 12.7.10, **published as GitHub Latest**, with review and asset gates complete.** Exact EXE: `dist/multilingual-review-12.7.10/ResolutionFileManager-v12.7.10-Multilingual-Review.exe`; SHA-256 `f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f`. Six modules and all 43 locales match source (`docs/EMBEDDED_REVIEW_12.7.10.json`). Older candidates/binaries preserved.
 - Final 89 unit tests and Defender custom scan pass. Complete Help validation has zero errors/review warnings. Native packaged checks pass System 100%, Dark 200% and High contrast 150%, with isolated settings and system-only PATH. Actual populated binary views inspected. A separate clean OS/Windows 10 was not tested; no claim of exhaustive device/scale/language coverage.
 - **Linux: 12.6.1 x86_64**, retained in `dist/linux`; current Windows changes have not been built/tested on Linux. Earlier Ubuntu checks do not establish Mint/laptop/driver/audio/drag/drop/Trash compatibility.
 - **Latest local Microsoft Store package: 12.6.2.0.** Submission 8 previously recorded as draft/package Validated, not submitted. Current live certification status remains unverified; no Store action in this release task.
-- GitHub's previous public Windows release is 12.3.0. Publication of 12.7.10 is authorised only after the exact candidate passes saved gates. Check `docs/LAYOUT_REVIEW_CHECKPOINT.md` and `docs/RELEASE_READINESS_12.7.10.json` when present; missing evidence means not ready.
+- **GitHub Windows release: [12.7.10](https://github.com/johnperky/ResolutionFileManager/releases/tag/v12.7.10)**, tag `v12.7.10`, released source commit `a6046d88a3c87524acba61b09e362a0665da49dd`. Portable ZIP, standalone EXE, full source ZIP and checksums uploaded; server SHA-256 values match, anonymous downloads return200 with correct filenames/sizes, checksum download and public Latest page verified. `readyForRelease: true`; evidence: `docs/RELEASE_PUBLICATION_12.7.10.json`. Previous releases preserved. Publication monitor is paused; future releases require a new request.
 
 ## Completed functionality and latest fixes
 
@@ -35,16 +35,17 @@ All have interface translations and 22 Help chapters/134 paragraphs. Existing co
 
 ## GitHub, packaging and important files
 
-- Repository: https://github.com/johnperky/ResolutionFileManager ; branch `main`. Last pushed checkpoint before this work: `980d4fa5b4c65942dc4e28a9d5f9ea9552f0bfee`. Reviewed source/evidence is being committed and frozen for the authorised Windows release; verify HEAD against origin/main before reporting synchronisation.
+- Repository: https://github.com/johnperky/ResolutionFileManager ; branch `main`. Released source/tag: `a6046d88a3c87524acba61b09e362a0665da49dd` / `v12.7.10`; final publication handover is synchronised on `main`. Use `git rev-parse HEAD` and `git ls-remote origin refs/heads/main` for the latest documentation commit without a self-referential hash here.
 - Main folder: `F:/Resolution File Manager project/ResolutionFileManager-Project-v6`; Desktop project is a junction, not an independent backup. Versioned Desktop review EXEs are retained.
 - Builds: `build_windows_multilingual_review.ps1`, `build_windows_release.ps1`, `build_linux.sh`, `run_linux.sh`. Release package: `release-output/12.7.10`; pre-footer package preserved separately. `-ReviewedExecutable` packages exact reviewed bytes without rebuilding and validates six modules/43 locales.
 - Finalise committed source/docs with `tools/finalize_release_archives.py`, verify ZIPs/licences/media tools/checksums with `verify_windows_package.py`, then publish with `publish_reviewed_release.py`. The external ignored release readiness gate binds all four asset hashes, the source commit and public review evidence; it avoids a self-referential source ZIP hash inside its own archive. Do not regenerate the binary after review.
 - Verified backups: project-parent `Recovery Backups/2026-10-21-before-release-gates/source` (+ZIP, 331 files) and `2026-10-21-before-toolbar-release-fix/source` (+ZIP, 345 files); earlier recovery/layout snapshots retained. Initial 12.7.10 candidate EXEs are preserved in their versioned dist subfolders.
 - Help master/manual: `docs/help/en.json`, `docs/help/ENGLISH_MANUAL.md`; app translations: `locales/`; Store manifest: `packaging/microsoft-store/AppxManifest.template.xml` (x64/full-trust desktop configuration, existing assigned identity supplied during packaging).
 
-## Prioritised remaining work
+## Prioritised next work
 
-1. Review is complete for the exact candidate: `readyForRelease: true` in the public review checkpoint. Freeze committed source/docs and require the external exact-asset gate before publication. See `docs/STORE_SCREENSHOT_REVIEW_12.7.10.md`; approval hash is recorded in the readiness JSON.
-2. Freeze and verify portable ZIP/EXE, committed source ZIP, licences/notices and checksums. Commit/push intended changes, tag matching source and publish authorised Windows GitHub release; verify downloads and Latest status. No Store or Linux publication is authorised here.
-3. For a future Store update, use the `microsoft-store-submission` skill: inspect/resume actual draft, package current approved binary, preserve existing languages/English (India), reconcile stale listing text, and import CSV/image batches of 10–11 listings (maximum 11), saving/verifying each. Current final screenshots have not been uploaded.
-4. Separately plan Linux rebuild/testing, Windows 10/clean-machine coverage, signing if a certificate becomes available, and wider human translation/device checks. Unsaved editor buffers cannot be established from disk inspection.
+Windows GitHub release is complete; no remaining blocker in its recorded review scope.
+
+1. A future Store update requires the `microsoft-store-submission` skill: inspect/resume the actual draft, package the approved binary, preserve existing languages/English (India), reconcile stale listing text, and import CSV/image batches of10–11 listings (maximum11), saving/verifying each. Final screenshots have not been uploaded; live certification remains unverified. No Store submission was made here.
+2. Separately plan the Linux rebuild and Ubuntu/Mint/hardware checks. Linux remains12.6.1 and was not released in this task.
+3. Broaden Windows10/clean-machine/device coverage, professional translation checks, and signing if a certificate becomes available. These limits are disclosed; do not describe untested systems as passing. Unsaved editor buffers cannot be established from disk inspection.
