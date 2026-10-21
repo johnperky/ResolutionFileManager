@@ -87,7 +87,7 @@ def protect(text, terms):
     replacements = {}
     # Exact UI terminology comes from the existing locale, not a new UI translation.
     patterns = sorted(terms, key=len, reverse=True)
-    technical = r"\[chapter:[a-z_]+\]|\{[A-Za-z_][A-Za-z_0-9]*\}|https?://[^\s]+|F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6|Ctrl(?:\+(?:Shift|Alt))*\+[A-Za-z]|F[235]|FFmpeg|FFprobe|FFplay|SQLite|[A-Za-z_][A-Za-z_0-9.-]*\.(?:py|json|ps1|sh|txt|md|exe)"
+    technical = r'"[^"\n]+"|' + r"\[chapter:[a-z_]+\]|\{[A-Za-z_][A-Za-z_0-9]*\}|https?://[^\s]+|F:\\Resolution File Manager project\\ResolutionFileManager-Project-v6|Ctrl(?:\+(?:Shift|Alt))*\+[A-Za-z]|F[235]|FFmpeg|FFprobe|FFplay|SQLite|[A-Za-z_][A-Za-z_0-9.-]*\.(?:py|json|ps1|sh|txt|md|exe)"
     pattern = re.compile(technical + ("|"+"|".join(re.escape(p) for p in patterns) if patterns else ""))
     def replace(match):
         token = f"ZXQKEEP{len(replacements):05d}QXZ"

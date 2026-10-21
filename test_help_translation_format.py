@@ -5,6 +5,13 @@ from tools.translate_help import unprotect
 
 
 class HelpTranslationFormatTests(unittest.TestCase):
+    def test_literal_search_examples_survive_translation_as_whole_values(self):
+        from tools.translate_help import protect
+        source = '"summer holiday" does not match "summer_holiday.mp4".'
+        prepared, replacements = protect(source, {"holiday": "Urlaub"})
+        self.assertEqual(list(replacements.values()), ['"summer holiday"', '"summer_holiday.mp4"'])
+        self.assertEqual(unprotect(prepared, replacements), source)
+
     def test_multi_modifier_shortcut_is_preserved_as_one_reference(self):
         from tools.translate_help import protect
         prepared,replacements=protect('Press Ctrl+Shift+N to create a folder.',{})

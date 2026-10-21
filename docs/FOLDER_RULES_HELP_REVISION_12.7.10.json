@@ -1,0 +1,37 @@
+{
+  "windowsVersion": "12.7.10",
+  "revision": "folder-rules-help-only",
+  "baseSourceTag": "v12.7.10",
+  "publishedBinarySha256": "f1424ea2b42efb8586886d8721ea2864e40bb9df1cdafe8aef1ec7ae3ac6d22f",
+  "helpRevisionBinary": "dist/help-review-12.7.10/ResolutionFileManager-v12.7.10-Help-Review.exe",
+  "helpRevisionBinarySha256": "ecc2b624c556aa923bcb132e937b3600abb11bdcc8b6a94a5d2e8f997f004419",
+  "unchangedApplicationModules": [
+    "media_sorter",
+    "transfer_engine",
+    "transfer_ui",
+    "localization",
+    "rtl_display",
+    "reminder_policy"
+  ],
+  "unchangedUiLocaleCount": 43,
+  "unchangedOtherHelpChapters": 21,
+  "helpChapterCount": 22,
+  "helpParagraphCount": 145,
+  "helpValidationErrors": 0,
+  "helpValidationReviewFlags": 0,
+  "matchingExamplesAssertions": 19,
+  "helpUnitTests": 18,
+  "nativeSourceGuiLanguages": [
+    "en",
+    "de",
+    "ar",
+    "ja"
+  ],
+  "machineTranslationsHumanProofreadingPending": true,
+  "reuseApprovedStoreScreenshots": true,
+  "storeUploaded": false,
+  "certificationSubmitted": false,
+  "publishedGitHubAssetsReplaced": false,
+  "packagedStartupLivenessPassed": true,
+  "packagedStartupSeconds": 15
+}
