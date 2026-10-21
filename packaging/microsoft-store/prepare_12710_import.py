@@ -83,6 +83,7 @@ def main():
     parser.add_argument("--export", type=Path)
     parser.add_argument("--translations-only", action="store_true")
     parser.add_argument("--languages", nargs="*")
+    parser.add_argument("--batch-size", type=int, choices=range(1, 13), default=12)
     parser.add_argument("--output", type=Path, default=ROOT.parent / "Store Preparation 12.7.10/Submission Folders Preserved")
     args = parser.parse_args()
     cache = ROOT / "packaging/microsoft-store/prepared-12.7.10/translation-cache"
@@ -156,9 +157,9 @@ def main():
         shutil.copy2(package, target_package)
     assert sha(target_package) == sha(package)
     batches = []
-    for start in range(0, len(locales), 11):
-        group = locales[start:start + 11]
-        folder = out / f"RFM-12.7.10-Import-Part-{start // 11 + 1}"
+    for start in range(0, len(locales), args.batch_size):
+        group = locales[start:start + args.batch_size]
+        folder = out / f"RFM-12.7.10-Import-Part-{start // args.batch_size + 1}"
         folder.mkdir(exist_ok=True)
         # Partner Center clears omitted list fields (features/search terms), even
         # when omitted scalar fields survive. Always send the complete export.

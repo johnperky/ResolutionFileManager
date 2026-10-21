@@ -28,6 +28,8 @@ Current source and the separate Windows Help revision have interface translation
 
 ## Screenshots and efficient automation
 
+- **Latest Store workflow preference (21 October): local preparation, manual upload by John.** Use four folders for 45 listings: **12/12/12/9** (up to 12 per folder). Give exact MSIX/folder paths and short ordered Import listings > Upload folder instructions, then stop. No remote Chrome upload/progress monitoring unless explicitly requested. Verify a user-supplied fresh export locally after completion. Earlier five-batch records below describe completed history; do not regenerate/reupload them. The user reported roughly 50% usage for the previous session; polling, repeated browser context and the CSV restoration work added avoidable cost, but their individual usage shares were not measured.
+
 - Default retained launcher: `Capture Store Screenshots.cmd`, runner `tools/batch_store_screenshots.py`; resume per-language manifests with isolated settings, E: sample media and read-only SQLite cache backup. No file operation or conversion is performed to stage UI.
 - **Final 12.7.10 capture/review is complete: 172 validated/reviewed PNGs in all 43 languages** under `F:/Resolution File Manager project/Store Preparation 12.7.10/Batch Candidates v3`. Source-native candidates are distinguished from packaged-process checks; version/hash provenance is mandatory.
 - Preserve reviewed 12.7.8 172-image set and 12.7.10 pre-footer candidates in `Batch Candidates v2`; never relabel these as final. New final captures use the corrected source/binary.
