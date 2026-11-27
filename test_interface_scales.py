@@ -4,11 +4,11 @@ import media_sorter as m
 
 
 class InterfaceScaleTests(unittest.TestCase):
-    def test_linux_has_no_200_percent_choice(self):
-        self.assertEqual(m.interface_scales("linux"), (100, 125, 150, 175))
+    def test_linux_choices_stop_at_150(self):
+        self.assertEqual(m.interface_scales("linux"), (100, 125, 150))
 
-    def test_windows_retains_existing_choices(self):
-        self.assertEqual(m.interface_scales("win32"), (100, 125, 150, 175, 200))
+    def test_windows_choices_stop_at_150(self):
+        self.assertEqual(m.interface_scales("win32"), (100, 125, 150))
 
 
 if __name__ == "__main__":

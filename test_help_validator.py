@@ -22,9 +22,15 @@ class HelpValidatorRegressionTests(unittest.TestCase):
     def test_missing_empty_summary_english_links_and_rtl_fail_validation(self):
         english=json.loads((ROOT/"locales/en.json").read_text(encoding="utf-8"))
         french=json.loads((ROOT/"locales/fr.json").read_text(encoding="utf-8"))
+        # Isolate validator mutations from deliberately deferred translations.
+        # Production chapter parity is checked separately by the locale gates.
+        master=json.loads((ROOT/"docs/help/en.json").read_text(encoding="utf-8"))
+        translated_ids={chapter["id"] for chapter in french["help"]["chapters"]}
+        master["chapters"]=[chapter for chapter in master["chapters"] if chapter["id"] in translated_ids]
+        english["help"]["chapters"]=[chapter for chapter in english["help"]["chapters"] if chapter["id"] in translated_ids]
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder); (root/"docs/help").mkdir(parents=True); (root/"locales").mkdir()
-            (root/"docs/help/en.json").write_bytes((ROOT/"docs/help/en.json").read_bytes())
+            (root/"docs/help/en.json").write_text(json.dumps(master),encoding="utf-8")
             (root/"locales/en.json").write_text(json.dumps(english),encoding="utf-8")
             mutations=("chapter","paragraph","empty","summary","english","links","rtl","steps")
             for mutation in mutations:

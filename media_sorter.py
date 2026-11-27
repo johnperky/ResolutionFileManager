@@ -37,6 +37,15 @@ from rtl_display import needs_visual_order, render_document, mapped_ranges
 from reminder_policy import apply_reminder_choice, eligible_reminder, normalise_state as normalise_reminder_state, record_successful_launch, set_reminder_enabled
 from transfer_engine import transfer_file, file_stamp, validate_undo_target, MEDIA_ACCESS, undo_transfer, retry_busy, move_without_replace
 from transfer_ui import UpgradeAppMixin, UpgradePaneMixin, open_folder
+from conversion_ui import bind_conversion_scrolling,grow_conversion_options_once,choose_conversion_folder,set_conversion_activity, source_folder_choice, video_quality_choice, video_preset_choice, conversion_items, ConversionPaths, remember_conversion_choice, checked_counts, remaining_seconds
+from conversion_jobs import ConversionJobs,close_conversion_window
+from process_utils import start_owned_process,stop_owned_process
+from conversion_profiles import visible_profiles,profile_for_id,fixed_resolution,output_dimensions,automatic_video_bitrate,video_compression_arguments,RATE_MODES,AUDIO_BITRATES,AUDIO_CHANNELS
+from ai_backends import VIDEO_MODES as AI_MODES,asset_directory as ai_asset_directory,probe_hardware,hardware_choice,validate_assets as validate_ai_assets
+from video_enhancement import fast_video_arguments,preserve_streams,effective_video_mode,video_effect_arguments,VIDEO_EFFECTS
+from conversion_conflicts import ConversionConflicts,publish_conversion_output,validate_approval,overwrite_approval
+from conversion_display import ConversionDisplay, VideoPreviewSampler
+from ai_pipeline import AIProgress,prepare_ai_video,estimate_ai_video_disk_bytes,media_probe,publish_output_without_replace
 try:
     from watchdog.events import FileSystemEventHandler
     from watchdog.observers import Observer
@@ -48,12 +57,12 @@ except ImportError:  # Keep source startup graceful if optional dependencies are
 VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".webm", ".m4v", ".wmv", ".mpg", ".mpeg"}
 IMAGE_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff", ".bmp", ".gif", ".heic", ".heif", ".avif"}
 SUPPORTED_EXTENSIONS = VIDEO_EXTENSIONS | IMAGE_EXTENSIONS
-APP_VERSION = "12.7.11"
+APP_VERSION = "13.1.4"
 
 
 def interface_scales(platform=None):
-    """Linux font metrics make 200% unsuitable for the current pane layout."""
-    return (100, 125, 150, 175) if (platform or sys.platform).startswith("linux") else (100, 125, 150, 175, 200)
+    """Supported application scales on both desktop platforms."""
+    return (100, 125, 150)
 
 
 def translated_combobox_width(labels, minimum=8, maximum=28):
@@ -84,6 +93,16 @@ _tk_simpledialog = simpledialog
 _tk_filedialog = filedialog
 _active_ui_translator: Translator | None = None
 _ui_localization_installed = False
+
+
+def details_column_order(columns,saved_order=None):
+    """Migrate the former default order while retaining personal arrangements."""
+    preferred=[column for column in ('name','resolution','duration') if column in columns]
+    preferred.extend(column for column in columns if column not in preferred)
+    if not isinstance(saved_order,(list,tuple)) or not saved_order or list(saved_order)==list(columns):return preferred
+    order=list(dict.fromkeys(column for column in saved_order if column in columns))
+    order.extend(column for column in preferred if column not in order)
+    return order
 
 
 class LocalizedMessageBox:
@@ -203,6 +222,9 @@ STORE_PRODUCT_ID = "9NZL6GF5JSJK"
 CODEC_LABELS = {"h264": "H.264", "hevc": "H.265 / HEVC", "av1": "AV1", "vp9": "VP9", "vp8": "VP8", "mpeg4": "MPEG-4", "mpeg2video": "MPEG-2", "mjpeg": "Motion JPEG"}
 COLOR_LABEL_HEX = {"Red": "#d9534f", "Yellow": "#d8aa18", "Green": "#4b9b57", "Blue": "#4a90e2", "Purple": "#8c62b8"}
 TRANSCODE_PRESETS = {
+    "H.264 MKV": {"suffix": "H264", "extension": ".mkv", "arguments": ("-map", "0:v:0", "-map", "0:a?", "-map_metadata", "0", "-c:v", "libx264", "-preset", "medium", "-crf", "{crf}", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k")},
+    "H.265 MKV": {"suffix": "H265", "extension": ".mkv", "arguments": ("-map", "0:v:0", "-map", "0:a?", "-map_metadata", "0", "-c:v", "libx265", "-preset", "medium", "-crf", "{crf}", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k")},
+    "Remux to MP4 (no re-encoding)": {"suffix": "Remux", "extension": ".mp4", "arguments": ("-map", "0", "-map_metadata", "0", "-c", "copy", "-movflags", "+faststart")},
     "H.264 MP4 (compatible)": {"suffix": "H264", "extension": ".mp4", "arguments": ("-map", "0:v:0", "-map", "0:a?", "-map_metadata", "0", "-c:v", "libx264", "-preset", "medium", "-crf", "{crf}", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart")},
     "H.265 MP4 (smaller)": {"suffix": "H265", "extension": ".mp4", "arguments": ("-map", "0:v:0", "-map", "0:a?", "-map_metadata", "0", "-c:v", "libx265", "-preset", "medium", "-crf", "{crf}", "-tag:v", "hvc1", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart")},
     "AV1 MKV (smallest)": {"suffix": "AV1", "extension": ".mkv", "arguments": ("-map", "0:v:0", "-map", "0:a?", "-map_metadata", "0", "-c:v", "libsvtav1", "-preset", "8", "-crf", "{crf}", "-pix_fmt", "yuv420p", "-c:a", "libopus", "-b:a", "128k")},
@@ -210,6 +232,9 @@ TRANSCODE_PRESETS = {
     "Remux to MKV (no re-encoding)": {"suffix": "Remux", "extension": ".mkv", "arguments": ("-map", "0", "-map_metadata", "0", "-c", "copy")},
 }
 TRANSCODE_PRESET_CODEC_FAMILY = {
+    "H.264 MKV": "h264",
+    "H.265 MKV": "hevc",
+    "Remux to MP4 (no re-encoding)": None,
     "H.264 MP4 (compatible)": "h264",
     "H.265 MP4 (smaller)": "hevc",
     "AV1 MKV (smallest)": "av1",
@@ -217,12 +242,19 @@ TRANSCODE_PRESET_CODEC_FAMILY = {
     "Remux to MKV (no re-encoding)": None,
 }
 TRANSCODE_PRESET_LABEL_KEYS = {
+    "H.264 MKV": "convert.preset_h264_mkv",
+    "H.265 MKV": "convert.preset_h265_mkv",
+    "Remux to MP4 (no re-encoding)": "convert.preset_remux_mp4",
     "H.264 MP4 (compatible)": "convert.preset_h264",
     "H.265 MP4 (smaller)": "convert.preset_h265",
     "AV1 MKV (smallest)": "convert.preset_av1",
     "720p H.264 proxy": "convert.preset_proxy",
     "Remux to MKV (no re-encoding)": "convert.preset_remux",
 }
+for _profile in visible_profiles():
+    TRANSCODE_PRESETS[_profile.id]={'suffix':{'h264':'H264','hevc':'H265','av1':'AV1',None:'Remux'}[_profile.family],'extension':_profile.extension,'arguments':_profile.arguments}
+    TRANSCODE_PRESET_CODEC_FAMILY[_profile.id]=_profile.family
+TRANSCODE_PRESET_LABEL_KEYS={p.id:'convert.profile.'+str(i) for i,p in enumerate(visible_profiles())}
 TRANSCODE_ENGINE_ENCODERS = {
     "NVIDIA NVENC": {"h264": "h264_nvenc", "hevc": "hevc_nvenc", "av1": "av1_nvenc"},
     "Intel Quick Sync": {"h264": "h264_qsv", "hevc": "hevc_qsv", "av1": "av1_qsv"},
@@ -234,13 +266,19 @@ TRANSCODE_SOFTWARE = "Software / CPU"
 TRANSCODE_SOURCE_RESOLUTION = "Keep source resolution"
 TRANSCODE_RESOLUTIONS = {
     TRANSCODE_SOURCE_RESOLUTION: None,
+    "360p": 360,
+    "540p": 540,
     "1080p": 1080,
     "720p": 720,
+    "2160p": 2160,
 }
 TRANSCODE_RESOLUTION_LABEL_KEYS = {
     TRANSCODE_SOURCE_RESOLUTION: "convert.resolution_source",
     "1080p": "convert.resolution_1080p",
     "720p": "convert.resolution_720p",
+    "360p": "convert.resolution_360p",
+    "540p": "convert.resolution_540p",
+    "2160p": "convert.resolution_2160p",
 }
 TRANSCODE_ENGINE_LABEL_KEYS = {
     TRANSCODE_AUTOMATIC: "convert.engine_automatic",
@@ -916,6 +954,7 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
         # used for browsing and previewing.  They intentionally are not saved
         # in workspaces and are cleared when this pane navigates elsewhere.
         self.checked_paths: set[str] = set()
+        self.show_checked_var = tk.BooleanVar(master=self, value=False)
         self.results: queue.Queue = queue.Queue()
         self.scan_generation = 0
         self.scan_active = False
@@ -1108,10 +1147,7 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
             saved_widths = {}
         if self.sort_column not in columns: self.sort_column = "name"
         saved_order = saved_state.get("column_order", [])
-        compatible_order = list(columns)
-        if isinstance(saved_order, list):
-            compatible_order = [column for column in saved_order if column in columns]
-            compatible_order.extend(column for column in columns if column not in compatible_order)
+        compatible_order = details_column_order(columns,saved_order)
         self.tree = ttk.Treeview(details_frame, columns=columns, displaycolumns=compatible_order, show="tree headings", selectmode="extended")
         self.tree.heading("#0", text="✓", command=self.toggle_all_checks)
         self.tree.column("#0", width=38, minwidth=38, stretch=False, anchor="center")
@@ -1237,6 +1273,7 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
         self.header_menu = tk.Menu(self, tearoff=False)
         self.header_menu.add_command(label=self.tr("context.configure_columns"), command=self.configure_columns)
         self.header_menu.add_command(label=self.tr("context.reset_columns"), command=self.reset_column_widths)
+        self.header_menu.add_command(label="Reset column layout", command=self.reset_column_layout)
         content.add(folder_frame, weight=0)
         content.add(self.inspector_panes, weight=1)
         self.inspector_panes.add(media_frame, weight=1)
@@ -1281,12 +1318,16 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
         self.status_var = tk.StringVar(value=self.tr("status.ready"))
         status_label = ttk.Label(status_row, textvariable=self.status_var)
         self.checked_label_var = tk.StringVar(value=self.tr("pane.checked", count=0))
-        checked_label = ttk.Label(status_row, textvariable=self.checked_label_var)
+        selection_row = ttk.Frame(self)
+        selection_row.pack(side="bottom", fill="x", before=status_row)
+        checked_label = ttk.Label(selection_row, textvariable=self.checked_label_var)
+        ttk.Button(selection_row, text=self.app.translator.ui_text("Clear ticks"), command=self.clear_checks).pack(side="right")
+        ttk.Checkbutton(selection_row, text=self.app.translator.ui_text("Show ticked"), variable=self.show_checked_var, command=self.refresh_view).pack(side="right", padx=6)
         self.scan_progress = ttk.Progressbar(status_row, mode="determinate", length=110)
         self.cancel_button = ttk.Button(status_row, text=self.tr("pane.cancel"), width=7, command=self.cancel_scan, state="disabled")
         self.cancel_button.pack(side="right")
         self.scan_progress.pack(side="right", padx=5)
-        checked_label.pack(side="right", padx=(6, 4))
+        checked_label.pack(side="left", padx=(6, 4))
         status_label.pack(side="left", fill="x", expand=True)
         self.after(100, self.poll_results)
         self.build_folder_roots()
@@ -1433,7 +1474,7 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
             return False
         path_changed = path != self.current_path
         if path_changed:
-            self.clear_checks()
+            self.clear_checks(refresh_view=False)
         if record_history and path_changed:
             self.navigation_history = self.navigation_history[:self.navigation_index + 1]
             self.navigation_history.append(path)
@@ -1447,11 +1488,12 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
         return True
 
     def restore_folder_width(self, width):
-        if isinstance(width, int) and width > 50:
-            try:
-                self.content_panes.sashpos(0, min(width, max(90, self.content_panes.winfo_width() // 3)))
-            except tk.TclError:
-                pass
+        # A hidden tree is a session choice, never a startup preference.
+        width = max(180, width) if isinstance(width, int) else 180
+        try:
+            self.content_panes.sashpos(0, min(width, max(120, self.content_panes.winfo_width() // 3)))
+        except tk.TclError:
+            pass
 
     def get_state(self) -> dict:
         self.remember_inspector_width()
@@ -1516,8 +1558,7 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
         self.outlier_sensitivity_var.set(state.get("outlier_sensitivity", "Large (1.75×)"))
         self.outlier_display_var.set(self.outlier_choices.label(self.outlier_sensitivity_var.get()))
         columns = list(self.tree["columns"])
-        order = [column for column in state.get("column_order", []) if column in columns]
-        order.extend(column for column in columns if column not in order)
+        order = details_column_order(columns,state.get("column_order"))
         self.tree.configure(displaycolumns=order)
         saved_widths = state.get("column_widths", {})
         if not isinstance(saved_widths, dict): saved_widths = {}
@@ -1794,7 +1835,7 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
         view_generation = self.view_generation
         filter_signature = (
             self.show_videos_var.get(), self.show_images_var.get(), self.search_var.get().strip().lower(),
-            self.filter_var.get(), json.dumps(self.advanced_filters, sort_keys=True), self.sort_column, self.sort_reverse,
+            self.filter_var.get(), json.dumps(self.advanced_filters, sort_keys=True), self.sort_column, self.sort_reverse, self.show_checked_var.get(),
         )
         if filter_signature != self.thumbnail_filter_signature:
             self.thumbnail_page = 0
@@ -1829,7 +1870,11 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
             "modified": lambda i: i.modified, "duration": lambda i: i.duration if i.duration is not None else -1,
         }
         values.sort(key=key_map[self.sort_column], reverse=self.sort_reverse)
+        if self.show_checked_var.get():
+            # A temporary action-group view bypasses filters without changing them.
+            values = sorted((item for key, item in self.items.items() if key in self.checked_paths), key=key_map[self.sort_column], reverse=self.sort_reverse)
         self.visible_items = values
+        self.update_checked_label()
         if self.preferred_selection_path and not any(str(item.path) == self.preferred_selection_path for item in values):
             self.preferred_selection_path = None
         self.tree.delete(*self.tree.get_children())
@@ -2389,7 +2434,11 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
 
     def update_checked_label(self):
         if hasattr(self, "checked_label_var"):
-            self.checked_label_var.set(self.tr("pane.checked", count=len(self.checked_paths)))
+            count, folders, hidden = checked_counts(self.checked_paths, self.visible_items)
+            tr = self.app.translator.ui_text
+            text = tr('{count} files ticked across {folders} folders').format(count=count, folders=folders)
+            if hidden: text += tr(' · {count} hidden by filters').format(count=hidden)
+            self.checked_label_var.set(text)
 
     def refresh_checks(self):
         for iid in self.tree.get_children():
@@ -2398,10 +2447,14 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
             self.tree.item(iid, text="☑" if path_key in self.checked_paths else "☐")
         self.update_checked_label()
         self.update_thumbnail_selection()
+        if self.show_checked_var.get(): self.refresh_view()
 
-    def clear_checks(self):
+    def clear_checks(self, refresh_view=True):
+        was_showing = self.show_checked_var.get()
         self.checked_paths.clear()
+        self.show_checked_var.set(False)
         self.refresh_checks()
+        if was_showing and refresh_view: self.refresh_view()
 
     def toggle_all_checks(self):
         visible = {str(item.path) for item in self.visible_items}
@@ -2428,6 +2481,7 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
             self.tree.item(iid, text="☑" if path_key in self.checked_paths else "☐")
         self.update_checked_label()
         self.update_thumbnail_selection()
+        if self.show_checked_var.get(): self.refresh_view()
         return "break"
 
     def highlighted_items(self) -> list[MediaItem]:
@@ -2698,8 +2752,15 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
             self.tree.column(column, width=self.fitted_column_width(column), stretch=False)
         self.refresh_view()
 
+    def reset_column_layout(self):
+        """Explicitly reset layout; automatic loading still preserves custom orders."""
+        self.tree.configure(displaycolumns=details_column_order(self.tree["columns"]))
+        for column in self.tree["columns"]:
+            self.tree.column(column, width=self.fitted_column_width(column), stretch=False)
+        self.refresh_view()
+
     def configure_columns(self):
-        window = tk.Toplevel(self); window.title(f"Columns — {self.title}"); window.geometry("470x470"); window.transient(self.winfo_toplevel()); window.grab_set()
+        window = tk.Toplevel(self); window.title(f"Columns — {self.title}"); window.geometry("640x470"); window.transient(self.winfo_toplevel()); window.grab_set()
         ttk.Label(window, text="Select a column, then move it or set its width.", font=("Segoe UI", 10, "bold")).pack(fill="x", padx=10, pady=(10, 5))
         list_frame = ttk.Frame(window); list_frame.pack(fill="both", expand=True, padx=10)
         listbox = tk.Listbox(list_frame, exportselection=False); listbox.pack(side="left", fill="both", expand=True)
@@ -2732,6 +2793,13 @@ class FilePane(UpgradePaneMixin, ttk.Frame):
             apply_width(); self.tree.configure(displaycolumns=order); window.destroy(); self.refresh_view()
         bottom = ttk.Frame(window); bottom.pack(fill="x", padx=10, pady=(0, 10))
         ttk.Button(bottom, text="Reset widths", command=self.reset_column_widths).pack(side="left")
+        def reset_layout():
+            self.reset_column_layout()
+            order[:] = list(self.tree["displaycolumns"])
+            listbox.delete(0, "end")
+            for column in order: listbox.insert("end", heading_labels[column])
+            listbox.selection_set(0); sync_width()
+        ttk.Button(bottom, text="Reset column layout", command=reset_layout).pack(side="left", padx=5)
         ttk.Button(bottom, text="Cancel", command=window.destroy).pack(side="right")
         ttk.Button(bottom, text="Apply", command=save).pack(side="right", padx=5)
 
@@ -3325,6 +3393,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         self.ui_events: queue.Queue = queue.Queue()
         self.operation_running = False
         self.operation_cancel = threading.Event()
+        self.conversion_jobs = ConversionJobs()
         self.operation_paused = False
         self.operation_window: tk.Toplevel | None = None
         self.last_failed_operation: dict | None = None
@@ -3505,6 +3574,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         tools_menu.add_command(label=self.tr("menu.export_report"), command=self.export_media_report)
         tools_menu.add_command(label=self.tr("menu.metadata"), command=self.view_embedded_metadata)
         tools_menu.add_command(label=self.tr("menu.convert"), command=self.convert_selected_videos)
+        tools_menu.add_command(label="Convert / enhance images…", command=self.convert_selected_images)
         tools_menu.add_separator()
         tools_menu.add_command(label=self.tr("menu.duplicates"), command=self.find_duplicates)
         tools_menu.add_command(label=self.tr("menu.similar"), command=self.find_similar_images)
@@ -3762,8 +3832,24 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         except (tk.TclError, ValueError, TypeError):
             pass
         self.preview_split_position = int(self.settings.get("preview_split", int(self.winfo_height() * 0.68)))
+        # Restoring the outer split can shrink a child tree to zero after its
+        # own startup timer ran. Settle that geometry before opening both trees.
+        self.update_idletasks()
+        for side in ('left', 'right'):
+            getattr(self, side).restore_folder_width(self.settings.get(side, {}).get('folder_width'))
 
     def close_app(self):
+        def confirm():
+            return messagebox.askyesno('Quit during conversion?', 'An image or video conversion is still running. Are you sure you want to quit?\n\nYes cancels active conversions and waits for temporary working files to be removed. Original files and completed outputs are retained.', parent=self, default=messagebox.NO)
+        def waiting():
+            self.operation_cancel.set()
+            window=tk.Toplevel(self);window.title('Stopping conversions');window.transient(self)
+            ttk.Label(window,text='Cancelling conversions and cleaning temporary working files…\nPlease wait. The application will close when cleanup is complete.',padding=20).pack()
+            progress=ttk.Progressbar(window,mode='indeterminate');progress.pack(fill='x',padx=20,pady=(0,20));progress.start()
+            window.protocol('WM_DELETE_WINDOW',lambda:None);window.grab_set();window.configure(cursor='watch')
+        self.conversion_jobs.request_close(confirm,self.after,self._finish_close_app,waiting)
+
+    def _finish_close_app(self):
         self.operation_cancel.set()
         try:
             updates = {
@@ -3793,6 +3879,9 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         self.thumbnail_executor.shutdown(wait=False, cancel_futures=True)
         self.left_preview.temp_dir.cleanup()
         self.right_preview.temp_dir.cleanup()
+        # Remove queued Tk callbacks before destroying their Tcl commands.
+        for callback in self.tk.call('after', 'info'):
+            self.tk.call("after", "cancel", callback)
         self.destroy()
 
     def current_preview_split(self) -> int:
@@ -4742,6 +4831,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
                 state, details = self.build_video_contact_sheet(item, Path(chosen), count, columns, width, show_captions, cancel_event, lambda done, total: self.post_ui(update_progress, done, total))
                 def finished():
                     if not window.winfo_exists(): return
+                    encoder_live.set(tr('Cancelled') if cancel_event.is_set() else tr('Conversion finished'))
                     running["value"] = False; start_button.configure(state="normal"); cancel_button.configure(state="disabled"); status_var.set(details)
                     if state == "Passed": messagebox.showinfo("Contact sheet complete", details, parent=window)
                     elif state == "Failed": messagebox.showerror("Contact sheet failed", details, parent=window)
@@ -4755,7 +4845,11 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         window.protocol("WM_DELETE_WINDOW", close)
 
     @staticmethod
-    def plan_video_conversions(items: list[MediaItem], preset_name: str, destination: Path, source_root: Path, preserve_relative: bool, existing_policy: str, resolution_name: str | None = None) -> list[dict]:
+    def plan_video_conversions(items: list[MediaItem], preset_name: str, destination: Path, source_root: Path, preserve_relative: bool, existing_policy: str, resolution_name: str | None = None, prefix: str = "", suffix: str | None = None, same_as_source: bool = False) -> list[dict]:
+        for part in (prefix, suffix or ""):
+            if any(char in '<>:"/\\|?*' or ord(char) < 32 for char in part):
+                raise ValueError('Prefix and suffix cannot contain path separators or reserved filename characters.')
+        if preset_name in TRANSCODE_PRESETS:resolution_name=fixed_resolution(preset_name,resolution_name)
         preset = TRANSCODE_PRESETS.get(preset_name)
         if not preset: return [{"item": item, "target": item.path, "status": "Unknown preset"} for item in items]
         if resolution_name is not None and resolution_name not in TRANSCODE_RESOLUTIONS: return [{"item": item, "target": item.path, "status": "Unknown resolution"} for item in items]
@@ -4763,9 +4857,10 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         resolution_suffix = f" {resolution_name}" if family is not None and resolution_name in TRANSCODE_RESOLUTIONS and resolution_name != TRANSCODE_SOURCE_RESOLUTION else ""
         plans = []; reserved = set()
         for item in sorted(items, key=lambda value: str(value.path).casefold()):
-            try: relative_parent = item.path.relative_to(source_root).parent if preserve_relative else Path()
+            try: relative_parent = item.path.relative_to(source_root).parent if preserve_relative and not same_as_source else Path()
             except ValueError: relative_parent = Path()
-            base = destination / relative_parent / f"{item.path.stem} - {preset['suffix']}{resolution_suffix}{preset['extension']}"
+            ending = f" - {preset['suffix']}{resolution_suffix}" if suffix is None else suffix
+            base = (item.path.parent if same_as_source else destination / relative_parent) / f"{prefix}{item.path.stem}{ending}{preset['extension']}"
             target = base; key = str(target.absolute()).casefold()
             if existing_policy == "Keep both":
                 counter = 2
@@ -4810,6 +4905,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
 
     @staticmethod
     def transcode_arguments(preset_name: str, crf: int, engine: str, hardware_decode: bool, resolution_name: str | None = None) -> tuple[list[str], list[str], str]:
+        resolution_name=fixed_resolution(preset_name,resolution_name)
         preset = TRANSCODE_PRESETS[preset_name]
         family = TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name)
         arguments = [str(value).replace("{crf}", str(max(0, min(63, int(crf))))) for value in preset["arguments"]]
@@ -4871,13 +4967,50 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         return pre_input, arguments, f"{engine} ({encoder})"
 
     @classmethod
-    def transcode_video_file(cls, item: MediaItem, target: Path, preset_name: str, crf: int, cancel_event: threading.Event, progress_callback=None, engine: str = TRANSCODE_AUTOMATIC, hardware_decode: bool = True, resolution_name: str | None = None) -> tuple[str, str]:
+    def transcode_video_file(cls, item: MediaItem, target: Path, preset_name: str, crf: int, cancel_event: threading.Event, progress_callback=None, engine: str = TRANSCODE_AUTOMATIC, hardware_decode: bool = True, resolution_name: str | None = None, stats_callback=None, *, ai_mode='ordinary', ai_hardware='auto', stage_callback=None, source_info=None, ai_working_folder=None, preview_directory=None, video_effects=(), effect_strength=2, overwrite=None, _ai_prepared=None, rate_mode='automatic', max_quality=True, audio_bitrate=192, audio_channels='Original channels') -> tuple[str, str]:
+        if preset_name in TRANSCODE_PRESETS:resolution_name=fixed_resolution(preset_name,resolution_name)
         preset = TRANSCODE_PRESETS.get(preset_name)
         if not preset: return "Failed", "Unknown conversion preset"
+        if ai_mode not in AI_MODES:return 'Failed','Unknown upscaling method'
+        if rate_mode not in RATE_MODES or audio_bitrate not in AUDIO_BITRATES or audio_channels not in AUDIO_CHANNELS:return 'Failed','Unknown compression or audio choice'
         if resolution_name is not None and resolution_name not in TRANSCODE_RESOLUTIONS: return "Failed", f"Unknown output resolution: {resolution_name}"
+        try:
+            video_effect_arguments([],video_effects,effect_strength)
+        except ValueError as exc:return 'Failed',str(exc)
+        if video_effects and TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is None:return 'Failed','Video effects require a re-encoding preset'
         if cancel_event.is_set(): return "Cancelled", "Conversion cancelled"
-        if target.exists(): return "Skipped", "Output appeared before conversion started"
+        if overwrite is not None:
+            try:validate_approval(target,overwrite,(item.path,))
+            except (OSError,ValueError) as exc:return 'Failed',str(exc)
+        elif target.exists(): return "Skipped", "Output appeared before conversion started"
         target.parent.mkdir(parents=True, exist_ok=True)
+        if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) and (TRANSCODE_RESOLUTIONS.get(resolution_name) or rate_mode == 'automatic'):
+            try:source_info=source_info or media_probe(item.path,bundled_command('ffprobe'),cancel_event=cancel_event)
+            except InterruptedError:return 'Cancelled','Conversion cancelled'
+            except (ValueError,OSError,subprocess.SubprocessError) as exc:return 'Failed',str(exc)
+        if ai_mode not in ('ordinary','fast_video') and TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is not None:
+            try:
+                if stage_callback:stage_callback(AIProgress('Checking actual AI CPU/GPU support…',0,None,None,None))
+                info=source_info or media_probe(item.path,bundled_command('ffprobe'))
+                height=TRANSCODE_RESOLUTIONS.get(resolution_name)
+                if height and info['height']<height:
+                    validate_ai_assets(ai_asset_directory())
+                    devices=probe_hardware(ai_asset_directory()) if ai_hardware=='auto' else []
+                    device=hardware_choice(ai_hardware,devices).id if ai_hardware=='auto' else ai_hardware
+                    working_root=Path(ai_working_folder or tempfile.gettempdir()).expanduser().resolve()
+                    if not working_root.is_dir():raise ValueError('AI working folder must be an existing folder')
+                    with tempfile.TemporaryDirectory(prefix='rfm-ai-',dir=working_root) as directory:
+                        def ai_update(value):
+                            if value.fraction is not None and progress_callback:
+                                progress_callback(.75*value.fraction)
+                            if stage_callback:stage_callback(value)
+                        manifest=prepare_ai_video(item.path,Path(directory),ai_mode,device,ai_asset_directory(),cancel_event,ai_update,bundled_command('ffmpeg'),bundled_command('ffprobe'),fallback_cpu=ai_hardware=='auto',preview_directory=preview_directory)
+                        timing=json.loads(manifest.with_name('timing.json').read_text())
+                        prepared={'manifest':manifest,'source':item.path,'timing':timing}
+                        state,details=cls.transcode_video_file(item,target,preset_name,crf,cancel_event,lambda f:progress_callback(.75+.25*f) if progress_callback else None,engine,hardware_decode,resolution_name,stats_callback,_ai_prepared=prepared,stage_callback=stage_callback,source_info=info,video_effects=video_effects,effect_strength=effect_strength,overwrite=overwrite,preview_directory=preview_directory,rate_mode=rate_mode,max_quality=max_quality,audio_bitrate=audio_bitrate,audio_channels=audio_channels)
+                        return state,details+f" · {AI_MODES[ai_mode]} on {timing['hardware']}"
+            except InterruptedError:return 'Cancelled','AI conversion cancelled; unfinished files removed'
+            except (OSError,ValueError,RuntimeError,KeyError) as exc:return 'Failed',str(exc)
         temporary = target.with_name(f"{target.stem}.{threading.get_ident()}.partial{target.suffix}")
         flags = subprocess.CREATE_NO_WINDOW if sys.platform == "win32" else 0
         family = TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name)
@@ -4893,39 +5026,92 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             if not wanted or wanted not in encoders:
                 return "Failed", f"{engine} is not available for this preset in the bundled FFmpeg"
 
+        try:
+            target_bitrate = automatic_video_bitrate(preset_name, source_info) if family and rate_mode == 'automatic' else None
+        except (ValueError, KeyError, TypeError) as exc:
+            return 'Failed', str(exc)
         failures = []
         for candidate in engine_candidates:
-            decode_attempts = (True, False) if hardware_decode and family is not None else (False,)
-            for decode_attempt in decode_attempts:
+            decode_attempts = (True, False) if hardware_decode and family is not None and not ((ai_mode=='fast_video' or video_effects) and candidate=='VA-API (Linux)') else (False,)
+            attempts = [(decode, False) for decode in decode_attempts]
+            if candidate == 'NVIDIA NVENC' and max_quality:
+                attempts.append((False, True))
+            quality_retry_allowed = False
+            for decode_attempt, quality_compatibility in attempts:
+                if cancel_event.is_set(): return 'Cancelled', 'Conversion cancelled'
+                if quality_compatibility and not quality_retry_allowed:
+                    continue
                 process = None
                 try:
                     pre_input, arguments, engine_details = cls.transcode_arguments(preset_name, crf, candidate, decode_attempt, resolution_name)
+                    if source_info and TRANSCODE_RESOLUTIONS.get(resolution_name):
+                        width,height=output_dimensions(source_info['width'],source_info['height'],TRANSCODE_RESOLUTIONS[resolution_name],sar=source_info['sar'])
+                        if '-vf' in arguments:
+                            at=arguments.index('-vf');del arguments[at:at+2]
+                        scale=f'scale={width}:{height},setsar=1'
+                        if candidate=='VA-API (Linux)':scale=f'scale_vaapi=w={width}:h={height},setsar=1' if decode_attempt else scale+',format=nv12,hwupload'
+                        arguments+=['-vf',scale]
+                    arguments = video_compression_arguments(arguments, family, candidate, rate_mode, target_bitrate, max_quality, audio_bitrate, audio_channels, compatibility=quality_compatibility)
+                    if family and max_quality: engine_details += ' · Max quality' + (' (compatibility mode)' if quality_compatibility else '')
+                    if family and rate_mode == 'automatic': engine_details += f' · Auto VBR {target_bitrate} kb/s'
+                    if family is not None:
+                        if ai_mode=='fast_video':arguments=fast_video_arguments(arguments,candidate)
+                        arguments=video_effect_arguments(arguments,video_effects,effect_strength)
+                        arguments=preserve_streams(arguments,target.suffix,1 if _ai_prepared else 0)
                     if progress_callback: progress_callback(0.0)
+                    if stage_callback and ai_mode=='fast_video':stage_callback(AIProgress('Fast enhancement (no AI)',0,None,None,None))
+                    if stage_callback:
+                        fallback = (' · Automatic fallback to ' + candidate) if failures and engine == TRANSCODE_AUTOMATIC and candidate != engine_candidates[0] else (' · retry with software decoding' if failures and not decode_attempt and hardware_decode else '')
+                        stage_callback(AIProgress('Encoding (' + engine_details + ')' + fallback, 0, _ai_prepared['timing']['count'] if _ai_prepared else None, None, None))
                     command = [bundled_command("ffmpeg"), "-v", "error", "-y", *pre_input, "-i", str(item.path), *arguments, "-progress", "pipe:1", "-stats_period", "0.25", "-nostats", str(temporary)]
-                    with tempfile.TemporaryFile() as error_log:
-                        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=error_log, text=True, creationflags=flags)
+                    if _ai_prepared:
+                        timing=_ai_prepared['timing'];arguments=list(arguments)
+                        for pos in range(len(arguments)-1):
+                            if arguments[pos]=='-map' and arguments[pos+1]=='0:a?':arguments[pos+1]='1:a?'
+                            if arguments[pos]=='-map_metadata':arguments[pos+1]='1'
+                        command=[bundled_command('ffmpeg'),'-v','error','-y','-copyts','-i',str(_ai_prepared['manifest']),'-itsoffset',str(-timing['source_start']),'-i',str(_ai_prepared['source']),*arguments,'-fps_mode','passthrough','-enc_time_base','1:1000000','-bsf:v',f"setts=pts=PTS:dts=DTS:duration={timing['last_duration']}/TB",'-frames:v',str(timing['count']),'-t',str(timing['duration']),'-progress','pipe:1','-stats_period','0.25','-nostats',str(temporary)]
+                    preview_source=_ai_prepared['manifest'] if _ai_prepared else item.path
+                    with VideoPreviewSampler(preview_source,arguments,preview_directory,bundled_command('ffmpeg'),cancel_event) as sampler, tempfile.TemporaryFile() as error_log:
+                        process = start_owned_process(command, stdout=subprocess.PIPE, stderr=error_log, text=True)
+                        started = time.monotonic()
+                        frame_count = 0
+                        fraction = 0.0
                         lines: queue.Queue[str] = queue.Queue()
                         def reader(active_process=process):
                             if active_process.stdout:
                                 with active_process.stdout:
                                     for line in active_process.stdout: lines.put(line.rstrip())
-                        threading.Thread(target=reader, daemon=True).start()
+                        reader_thread = threading.Thread(target=reader, daemon=True)
+                        reader_thread.start()
+                        def drain_progress():
+                            nonlocal frame_count, fraction
+                            while True:
+                                try: line = lines.get_nowait()
+                                except queue.Empty: break
+                                key, _, value = line.partition('=')
+                                try:
+                                    if key == 'out_time_us': sampler.position=max(0,int(value)/1_000_000-.5)
+                                    if key == 'frame': frame_count = max(0, int(value))
+                                    elif key == 'out_time_us' and item.duration and item.duration > 0:
+                                        fraction = max(0.0, min(0.999, int(value) / 1_000_000 / item.duration))
+                                    elif key == 'progress':
+                                        if progress_callback: progress_callback(fraction)
+                                        if stats_callback: stats_callback(frame_count / max(0.001, time.monotonic() - started))
+                                except ValueError: pass
                         while process.poll() is None:
                             if cancel_event.wait(0.05):
-                                process.terminate()
-                                try: process.wait(timeout=3)
-                                except subprocess.TimeoutExpired: process.kill(); process.wait()
+                                stop_owned_process(process)
+                                reader_thread.join(timeout=2)
                                 try: temporary.unlink()
                                 except OSError: pass
                                 return "Cancelled", "Conversion cancelled"
-                            try:
-                                while True:
-                                    line = lines.get_nowait()
-                                    if line.startswith("out_time_us=") and item.duration and item.duration > 0 and progress_callback:
-                                        progress_callback(min(1.0, int(line.split("=", 1)[1]) / 1_000_000 / item.duration))
-                            except (queue.Empty, ValueError): pass
+                            drain_progress()
+                        reader_thread.join(timeout=2)
+                        drain_progress()
                         error_log.seek(0); error = error_log.read().decode("utf-8", errors="replace").strip()
                     if process.returncode or not temporary.exists():
+                        if candidate == 'NVIDIA NVENC' and max_quality and frame_count == 0:
+                            quality_retry_allowed = True
                         try: temporary.unlink()
                         except OSError: pass
                         decode_label = "hardware decode" if decode_attempt else "software decode"
@@ -4935,35 +5121,61 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
                         try: temporary.unlink()
                         except OSError: pass
                         return "Cancelled", "Conversion cancelled"
-                    os.replace(temporary, target)
+                    if _ai_prepared:
+                        checked=media_probe(temporary,bundled_command('ffprobe'),True,cancel_event=cancel_event);timing=_ai_prepared['timing']
+                        if len(checked['frames'])!=timing['count'] or abs(checked['duration']-timing['duration'])>max(.1,2/timing['info']['fps']):raise ValueError('AI output frame count or duration validation failed')
+                        if TRANSCODE_RESOLUTIONS.get(resolution_name) and checked['height']!=TRANSCODE_RESOLUTIONS[resolution_name]:raise ValueError('AI output size validation failed')
+                    if cancel_event.is_set():
+                        temporary.unlink(missing_ok=True);return 'Cancelled','Conversion cancelled'
+                    try:retained_backup=publish_conversion_output(temporary,target,overwrite)
+                    except FileExistsError:
+                        temporary.unlink(missing_ok=True);return 'Skipped','An output appeared during conversion; existing file retained'
+                    if stats_callback: stats_callback(frame_count / max(0.001, time.monotonic() - started))
                     if progress_callback: progress_callback(1.0)
                     decode_label = "hardware decode" if decode_attempt else "software decode"
                     resolution_details = resolution_name if family is not None and resolution_name else TRANSCODE_SOURCE_RESOLUTION
-                    return "Passed", f"Saved {target} using {engine_details} with {decode_label} at {resolution_details}"
+                    method_details=' · Fast enhancement (no AI)' if ai_mode=='fast_video' and family is not None else ''
+                    effect_details=(' · '+', '.join(video_effects) if video_effects else '') + (f' · Audio {audio_bitrate} kb/s · {audio_channels}' if family else '')
+                    return "Passed", f"Saved {target} using {engine_details} with {decode_label} at {resolution_details}"+method_details+effect_details+(f"; previous output retained at {retained_backup}" if retained_backup else "")
+                except InterruptedError:
+                    temporary.unlink(missing_ok=True);return 'Cancelled','Conversion cancelled'
                 except (OSError, ValueError) as exc:
-                    if process and process.poll() is None: process.kill()
+                    if candidate == 'NVIDIA NVENC' and max_quality and (process is None or frame_count == 0): quality_retry_allowed = True
+                    if process and process.poll() is None: stop_owned_process(process)
                     try: temporary.unlink()
                     except OSError: pass
                     failures.append(f"{candidate}: {exc}")
+                finally:
+                    # Release ownership even after a successful encoder exit.
+                    stop_owned_process(process)
         suffix = f"\nCapability check: {capability_error}" if capability_error else ""
         return "Failed", ("\n\n".join(failures[-4:]) or "No suitable conversion engine was available") + suffix
 
+    def convert_selected_images(self):
+        import image_ui
+        image_ui.messagebox = messagebox
+        image_ui.show_image_conversion(self)
+
     def convert_selected_videos(self):
-        pane = self.current_pane(); items = [item for item in pane.selected_items() if item.path.suffix.lower() in VIDEO_EXTENSIONS]
+        tr = self.translator.ui_text
+        pane = self.current_pane(); items = conversion_items(self, pane, VIDEO_EXTENSIONS)
+        if items is None: return
         if not items: messagebox.showinfo(self.tr("convert.select_first_title"), self.tr("convert.select_first")); return
         other = self.right if pane is self.left else self.left
-        window = tk.Toplevel(self); window.title(self.tr("convert.title")); window.geometry("1060x690"); window.transient(self)
+        window = tk.Toplevel(self); window.title(self.tr("convert.title")); window.geometry("1060x690")
         settings_host = window
-        if self.ui_scale > 100:
+        if self.ui_scale >= 100:
             # Preserve natural selector widths at enlarged text sizes. Settings
             # can scroll in both directions; actions stay outside this viewport.
             width = min(self.winfo_screenwidth()-40, int(1060*self.ui_scale/100))
-            height = min(self.winfo_screenheight()-100, int(690*self.ui_scale/100))
+            base_height = 850 if sys.platform.startswith("linux") else 690
+            height = min(self.winfo_screenheight()-100, int(base_height*self.ui_scale/100))
             window.geometry(f"{width}x{height}")
             settings_host = ttk.Frame(window); settings_host.pack(fill="x", padx=10, pady=10)
-            canvas = tk.Canvas(settings_host, height=min(420, height//2), highlightthickness=0)
+            canvas = tk.Canvas(settings_host, height=360, highlightthickness=0)
             horizontal = ttk.Scrollbar(settings_host, orient="horizontal", command=canvas.xview)
             vertical = ttk.Scrollbar(settings_host, orient="vertical", command=canvas.yview)
+            options_scrollbars=(horizontal,vertical)
             canvas.configure(xscrollcommand=horizontal.set, yscrollcommand=vertical.set)
             horizontal.pack(side="bottom", fill="x"); vertical.pack(side="right", fill="y"); canvas.pack(fill="both", expand=True)
             settings = ttk.LabelFrame(canvas, text=self.tr("convert.settings"), padding=10)
@@ -4971,6 +5183,20 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             def fit_settings(_event=None):
                 canvas.itemconfigure(settings_window, width=max(canvas.winfo_width(), settings.winfo_reqwidth()))
                 canvas.configure(scrollregion=canvas.bbox("all"))
+                if settings_layout_ready:
+                    ai_warning_label.configure(wraplength=max(200, window.winfo_width()-30))
+                    # Give the options their natural height first. Keep a short
+                    # file list and the progress/actions visible on small screens.
+                    siblings = [widget for widget in window.pack_slaves()
+                                if widget not in (settings_host, table_frame)]
+                    reserved = sum(widget.winfo_reqheight() for widget in siblings)
+                    minimum_list = tree.winfo_reqheight()
+                    grow_conversion_options_once(window,settings,reserved+minimum_list+60)
+                    available = max(120, window.winfo_height() - reserved - minimum_list - 60)
+                    desired = min(settings.winfo_reqheight(), available)
+                    if int(canvas.cget('height')) != desired:
+                        canvas.configure(height=desired)
+            settings_layout_ready = False
             settings.bind("<Configure>", fit_settings); canvas.bind("<Configure>", fit_settings)
         else:
             settings = ttk.LabelFrame(window, text=self.tr("convert.settings"), padding=10); settings.pack(fill="x", padx=10, pady=10)
@@ -4986,10 +5212,14 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             unit = max(1, choice_font.measure("0"))
             pixels = max((choice_font.measure(label) for label in labels), default=0)
             return max(minimum, (pixels + unit - 1) // unit + 2)
-        preset_var = tk.StringVar(value=preset_choices.label("H.264 MP4 (compatible)")); crf_var = tk.IntVar(value=23); resolution_var = tk.StringVar(value=resolution_choices.label(TRANSCODE_SOURCE_RESOLUTION)); destination_var = tk.StringVar(value=str(other.current_path)); preserve_var = tk.BooleanVar(value=pane.recursive_var.get()); existing_var = tk.StringVar(value=existing_choices.label("Skip existing"))
+        preset_var = video_preset_choice(self, preset_choices); crf_var = video_quality_choice(self); resolution_var = tk.StringVar(value=resolution_choices.label('720p')); destination_var = tk.StringVar(value=str(items[0].path.parent)); same_source_var = source_folder_choice(self, 'video'); preserve_var = tk.BooleanVar(value=False); existing_var = tk.StringVar(value=existing_choices.label("Skip existing"))
         engine_var = tk.StringVar(value=engine_choices.label(TRANSCODE_AUTOMATIC)); hardware_decode_var = tk.BooleanVar(value=True); engine_status_var = tk.StringVar()
+        remember_engine = remember_conversion_choice(self, 'video_engine', engine_var, tuple(TRANSCODE_ENGINE_LABEL_KEYS), engine_choices, trace=False)
+        remember_conversion_choice(self, 'video_hardware_decode', hardware_decode_var, (True, False))
+        prefix_var = tk.StringVar(value=''); suffix_var = tk.StringVar(value=' - converted')
+        working_var = tk.StringVar(value=tempfile.gettempdir())
         ttk.Label(settings, text=self.tr("convert.preset")).grid(row=0, column=0, sticky="w", pady=4); preset_box = ttk.Combobox(settings, textvariable=preset_var, state="readonly", values=preset_choices.labels, width=choice_width(preset_choices.labels, 30)); preset_box.grid(row=0, column=1, sticky="w", padx=5)
-        ttk.Label(settings, text=self.tr("convert.quality")).grid(row=0, column=2, sticky="w", padx=(15, 0)); ttk.Spinbox(settings, from_=18, to=35, textvariable=crf_var, width=6).grid(row=0, column=3, sticky="w", padx=5)
+        ttk.Label(settings, text=self.tr("convert.quality")).grid(row=0, column=2, sticky="w", padx=(15, 0)); quality_box = ttk.Spinbox(settings, from_=18, to=35, textvariable=crf_var, width=6); quality_box.grid(row=0, column=3, sticky="w", padx=5)
         ttk.Label(settings, text=self.tr("convert.resolution")).grid(row=1, column=0, sticky="w", pady=4); resolution_box = ttk.Combobox(settings, textvariable=resolution_var, state="readonly", values=resolution_choices.labels, width=choice_width(resolution_choices.labels, 24)); resolution_box.grid(row=1, column=1, sticky="w", padx=5)
         ttk.Label(settings, text=self.tr("convert.resolution_help")).grid(row=1, column=2, columnspan=2, sticky="w", padx=(15, 0))
         ttk.Label(settings, text=self.tr("convert.quality_help")).grid(row=2, column=1, columnspan=3, sticky="w")
@@ -4997,18 +5227,139 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         hardware_decode_check = ttk.Checkbutton(settings, text=self.tr("convert.hardware_decode"), variable=hardware_decode_var)
         hardware_decode_check.grid(row=3, column=2, columnspan=2, sticky="w", padx=(15, 0), pady=(10, 4))
         ttk.Label(settings, textvariable=engine_status_var, wraplength=780).grid(row=4, column=1, columnspan=3, sticky="w")
-        ttk.Label(settings, text=self.tr("convert.output_folder")).grid(row=5, column=0, sticky="w", pady=(10, 4)); ttk.Entry(settings, textvariable=destination_var).grid(row=5, column=1, columnspan=2, sticky="ew", padx=5, pady=(10, 4)); ttk.Button(settings, text=self.tr("pane.browse"), command=lambda: destination_var.set(filedialog.askdirectory(parent=window, title=self.tr("convert.choose_output")) or destination_var.get())).grid(row=5, column=3, sticky="w", pady=(10, 4))
-        ttk.Checkbutton(settings, text=self.tr("convert.preserve_folders"), variable=preserve_var).grid(row=6, column=1, columnspan=2, sticky="w", pady=4); ttk.Combobox(settings, textvariable=existing_var, state="readonly", values=existing_choices.labels, width=choice_width(existing_choices.labels, 16)).grid(row=6, column=3, sticky="w"); settings.columnconfigure(1, weight=1)
+        output_label=ttk.Frame(settings);output_label.grid(row=5,column=0,sticky='w',pady=(10,4))
+        ttk.Label(output_label,text=self.tr("convert.output_folder")).pack(anchor='w')
+        ttk.Checkbutton(output_label,text=tr('Same as source'),variable=same_source_var).pack(anchor='w')
+        destination_entry=ttk.Entry(settings,textvariable=destination_var);destination_entry.grid(row=5,column=1,columnspan=2,sticky='ew',padx=5,pady=(10,4))
+        destination_browse=ttk.Button(settings,text=self.tr("pane.browse"),command=lambda:destination_var.set(choose_conversion_folder(window,destination_var.get()) or destination_var.get()));destination_browse.grid(row=5,column=3,sticky='w',pady=(10,4))
+        ttk.Label(settings, text='AI working folder').grid(row=6, column=0, sticky='w', pady=4)
+        working_entry = ttk.Entry(settings, textvariable=working_var)
+        working_entry.grid(row=6, column=1, columnspan=2, sticky='ew', padx=5)
+        working_button = ttk.Button(settings, text='Browse working folder…', command=lambda: working_var.set(choose_conversion_folder(window, working_var.get() or tempfile.gettempdir()) or working_var.get()))
+        working_button.grid(row=6, column=3, sticky='w')
+        preserve_button=ttk.Checkbutton(settings, text=self.tr("convert.preserve_folders"), variable=preserve_var);preserve_button.grid(row=8, column=0, columnspan=3, sticky="w", pady=4)
+        ttk.Combobox(settings, textvariable=existing_var, state="readonly", values=existing_choices.labels, width=choice_width(existing_choices.labels, 16)).grid(row=8, column=3, sticky="w")
+        settings.columnconfigure(1, weight=1)
+        ttk.Label(settings, text='Filename prefix').grid(row=7, column=0, sticky='w', pady=4)
+        ttk.Entry(settings, textvariable=prefix_var).grid(row=7, column=1, sticky='ew', padx=5)
+        ttk.Label(settings, text='Filename suffix').grid(row=7, column=2, sticky='w', padx=(15, 0))
+        ttk.Entry(settings, textvariable=suffix_var, width=20).grid(row=7, column=3, sticky='ew', padx=5)
+        for control in settings.winfo_children():
+            layout=control.grid_info()
+            if int(layout.get('row',0))>=2:control.grid_configure(row=int(layout['row'])+2)
+        from image_ui import ImageChoiceVar
+        ai_var=ImageChoiceVar(self.translator.ui_text,tuple(AI_MODES.values()),AI_MODES['ordinary']);ai_hardware_var=ImageChoiceVar(self.translator.ui_text,('Automatic',),'Automatic')
+        ai_status=tk.StringVar();ai_notice=tk.StringVar()
+        video_effect_vars={name:tk.BooleanVar(value=False) for name in VIDEO_EFFECTS}
+        video_effect_strength=ImageChoiceVar(tr,('Light','Medium','Strong'),'Medium')
+        remember_conversion_choice(self, 'video_enhancement', ai_var, tuple(AI_MODES.values()))
+        remember_conversion_choice(self, 'video_effect_strength', video_effect_strength, ('Light','Medium','Strong'))
+        for name, variable in video_effect_vars.items():
+            remember_conversion_choice(self, 'video_effect_' + name, variable, (True, False))
+        effect_frame=ttk.Frame(settings);effect_frame.grid(row=11,column=0,columnspan=4,sticky='w',pady=4)
+        ttk.Label(effect_frame,text=tr('Standard effects:')).pack(side='left')
+        effect_checks=[]
+        for name,var in video_effect_vars.items():
+            control=ttk.Checkbutton(effect_frame,text=tr(name),variable=var);control.pack(side='left',padx=3);effect_checks.append(control)
+        ttk.Label(settings,text=tr('Effect strength')).grid(row=12,column=0,sticky='w',pady=4)
+        effect_box=ttk.Combobox(settings,textvariable=video_effect_strength,values=video_effect_strength.choices.labels,state='readonly',width=16)
+        effect_box.grid(row=12,column=1,sticky='w',padx=5)
+        rate_var=ImageChoiceVar(tr,tuple(RATE_MODES.values()),RATE_MODES['automatic'])
+        max_quality_var=tk.BooleanVar(master=window,value=True)
+        audio_rate_var=tk.StringVar(master=window,value='192')
+        audio_channels_var=ImageChoiceVar(tr,AUDIO_CHANNELS,'Original channels')
+        remember_conversion_choice(self,'video_rate_mode',rate_var,tuple(RATE_MODES.values()))
+        remember_conversion_choice(self,'video_max_quality',max_quality_var,(True,False))
+        remember_conversion_choice(self,'video_audio_bitrate',audio_rate_var,tuple(str(x) for x in AUDIO_BITRATES))
+        remember_conversion_choice(self,'video_audio_channels',audio_channels_var,AUDIO_CHANNELS)
+        ttk.Label(settings,text=tr('Compression')).grid(row=13,column=0,sticky='w',pady=4)
+        rate_box=ttk.Combobox(settings,textvariable=rate_var,values=rate_var.choices.labels,state='readonly',width=28)
+        rate_box.grid(row=13,column=1,sticky='w',padx=5)
+        max_quality_check=ttk.Checkbutton(settings,text=tr('Max. Quality (slower)'),variable=max_quality_var)
+        max_quality_check.grid(row=13,column=2,columnspan=2,sticky='w',padx=(15,0))
+        ttk.Label(settings,text=tr('Audio bitrate (kb/s)')).grid(row=14,column=0,sticky='w',pady=4)
+        audio_rate_box=ttk.Combobox(settings,textvariable=audio_rate_var,values=tuple(str(x) for x in AUDIO_BITRATES),state='readonly',width=8)
+        audio_rate_box.grid(row=14,column=1,sticky='w',padx=5)
+        ttk.Label(settings,text=tr('Audio channels')).grid(row=14,column=2,sticky='w',padx=(15,0))
+        audio_channels_box=ttk.Combobox(settings,textvariable=audio_channels_var,values=audio_channels_var.choices.labels,state='readonly',width=20)
+        audio_channels_box.grid(row=14,column=3,sticky='w',padx=5)
+
+
+        ttk.Label(settings,text='Upscaling method').grid(row=2,column=0,sticky='w',pady=4)
+        ai_box=ttk.Combobox(settings,textvariable=ai_var,values=ai_var.choices.labels,state='readonly',width=translated_combobox_width(ai_var.choices.labels,28,48))
+        ai_box.grid(row=2,column=1,sticky='w',padx=5)
+        ttk.Label(settings,text='AI processing hardware').grid(row=2,column=2,sticky='w',padx=(15,0))
+        ai_hardware_box=ttk.Combobox(settings,textvariable=ai_hardware_var,values=ai_hardware_var.choices.labels,state='disabled',width=22)
+        ai_hardware_box.grid(row=2,column=3,sticky='w',padx=5)
+        ttk.Label(settings,textvariable=ai_status,wraplength=850).grid(row=3,column=0,columnspan=4,sticky='w',pady=4)
         ttk.Label(window, text=self.tr("convert.originals_retained"), padding=(10, 0)).pack(fill="x")
-        tree = ttk.Treeview(window, columns=("status", "source", "target", "result"), show="headings")
-        for key, label_key, width in (("status", "convert.status", 110), ("source", "convert.source", 340), ("target", "convert.output", 430), ("result", "convert.result", 180)): tree.heading(key, text=self.tr(label_key)); tree.column(key, width=width)
-        scroll = ttk.Scrollbar(window, orient="vertical", command=tree.yview); tree.configure(yscrollcommand=scroll.set); scroll.pack(side="right", fill="y", padx=(0, 10)); tree.pack(fill="both", expand=True, padx=(10, 0), pady=8)
-        progress = ttk.Progressbar(window, mode="determinate", maximum=100); progress.pack(fill="x", padx=10); status_var = tk.StringVar(); ttk.Label(window, textvariable=status_var, padding=(10, 4)).pack(fill="x")
+        ai_warning_label=ttk.Label(window,textvariable=ai_notice,wraplength=1000,padding=(10,2));ai_warning_label.pack(fill='x')
+        table_frame = ttk.Frame(window)
+        tree = ttk.Treeview(table_frame, columns=("status", "source", "target", "result"), show="headings", height=3)
+        for key, label_key, width in (("status", "convert.status", 145), ("source", "convert.source", 340), ("target", "convert.output", 430), ("result", "convert.result", 240)): tree.heading(key, text=self.tr(label_key)); tree.column(key, width=width, stretch=False)
+        scroll = ttk.Scrollbar(table_frame, orient="vertical", command=tree.yview)
+        horizontal = ttk.Scrollbar(table_frame, orient='horizontal', command=tree.xview)
+        tree.configure(yscrollcommand=scroll.set, xscrollcommand=horizontal.set)
+        horizontal.pack(side='bottom', fill='x'); scroll.pack(side="right", fill="y"); tree.pack(fill="both", expand=True)
+        footer = ttk.Frame(window); footer.pack(side='bottom', fill='x')
+        path_labels = ConversionPaths(tree, footer, "target", tr)
+        output_summary = tk.StringVar(master=window)
+        ttk.Label(footer, textvariable=output_summary, wraplength=950, padding=(10, 3)).pack(fill='x')
+        encoder_live = tk.StringVar(master=window, value=tr('Encoder: waiting'))
+        ttk.Label(footer, textvariable=encoder_live, wraplength=950, padding=(10, 3)).pack(fill='x')
+        table_frame.pack(fill='both', expand=True, padx=10, pady=8)
+        if settings_host is not window:
+            settings_layout_ready = True
+            window.bind('<Configure>', lambda event: fit_settings() if event.widget is window else None, add='+')
+            window.after_idle(fit_settings)
+        progress = ttk.Progressbar(footer, mode="determinate", maximum=100); progress.pack(fill="x", padx=10); status_var = tk.StringVar(); ttk.Label(footer, textvariable=status_var, padding=(10, 4)).pack(fill="x")
+        file_progress = ttk.Progressbar(footer, mode='determinate', maximum=100)
+        file_progress.pack(fill='x', padx=10, before=progress)
+        file_status = tk.StringVar(value=tr('Current file: waiting'))
+        ttk.Label(footer, textvariable=file_status, padding=(10, 2)).pack(fill='x', before=file_progress)
+        result_details = {}; latest_fps = {}; latest_progress = {}; latest_stage = {}; stage_started = {}
+        def show_conversion_details(_event=None):
+            selected = tree.selection()
+            if selected:
+                iid = selected[0]; values = tree.item(iid, 'values')
+                messagebox.showinfo('Conversion details', f'Source: {values[1]}\n\nOutput: {values[2]}\n\n{result_details.get(iid, values[0]+chr(10)+values[3])}', parent=window)
+        tree.bind('<Double-1>', show_conversion_details)
+        job_handle={"value":None}
         current = {"plans": []}; cancel_event = threading.Event(); running = {"value": False}; previous_preset = {"value": preset_choices.internal(preset_var.get())}
+        readiness={'headers':False,'hardware_checking':False,'devices':[],'hardware_error':'','info':{}}
+        def rate_mode():return next(key for key,value in RATE_MODES.items() if value==rate_var.get())
+        def ai_mode():return next(key for key,value in AI_MODES.items() if value==ai_var.get()) if profile_for_id(preset_choices.internal(preset_var.get())).family and profile_for_id(preset_choices.internal(preset_var.get())).height else 'ordinary'
+        def update_ai_controls(_event=None):
+            profile=profile_for_id(preset_choices.internal(preset_var.get()))
+            enabled=profile.family is not None and profile.height is not None
+            for control in effect_checks:control.configure(state='normal' if profile.family is not None and not running['value'] else 'disabled')
+            effect_box.configure(state='readonly' if profile.family is not None and not running['value'] else 'disabled')
+
+            ai_box.configure(state='readonly' if enabled and not running['value'] else 'disabled')
+            selected=ai_mode() not in ('ordinary','fast_video')
+            for control in (working_entry,working_button):control.configure(state='normal' if selected and not running['value'] else 'disabled')
+            ai_notice.set(tr('WARNING: AI upscaling uses significant drive space for temporary frames, can heavily use CPU/GPU and may take a long time. Free space is checked before and during processing. Automatic may fall back to slower CPU AI.' if selected else ('Fast enhancement uses high-quality scaling and light sharpening without AI or temporary frame images.' if ai_mode()=='fast_video' else '')))
+            ai_hardware_box.configure(state='readonly' if selected and readiness['devices'] else 'disabled')
+            if selected and not readiness['devices'] and not readiness['hardware_checking']:
+                readiness['hardware_checking']=True;ai_status.set(tr('Checking actual AI CPU/GPU support…'))
+                def check():
+                    try:devices=probe_hardware(ai_asset_directory());error=''
+                    except Exception as exc:devices=[];error=str(exc)
+                    def complete():
+                        if not window.winfo_exists():return
+                        readiness['hardware_checking']=False;readiness['devices']=[d for d in devices if d.usable];readiness['hardware_error']=error or ('No usable AI hardware' if not readiness['devices'] else '')
+                        ai_hardware_var.update_choices(('Automatic',*(d.label for d in readiness['devices'])))
+                        labels=ai_hardware_var.choices.labels
+                        ai_hardware_box.configure(values=labels,state='readonly' if ai_mode() not in ('ordinary','fast_video') else 'disabled')
+                        ai_status.set(tr('AI: {hardware}').format(hardware=', '.join(tr(d.label) if d.label=='CPU (slower)' else d.label for d in readiness['devices'])) if readiness['devices'] else tr('AI unavailable: {error}').format(error=tr(readiness['hardware_error'])))
+                        refresh_preview()
+                    self.post_ui(complete)
+                threading.Thread(target=check,daemon=True).start()
+            refresh_preview()
         def update_engine_choices(_event=None):
             selected_preset = preset_choices.internal(preset_var.get())
-            if selected_preset == "720p H.264 proxy" and previous_preset["value"] != selected_preset:
-                resolution_var.set(resolution_choices.label("720p"))
+            profile=profile_for_id(selected_preset)
+            resolution_var.set(resolution_choices.label(f'{profile.height}p' if profile.height else TRANSCODE_SOURCE_RESOLUTION))
             previous_preset["value"] = selected_preset
             values = self.available_transcode_engines(selected_preset); labels = tuple(engine_choices.label(value) for value in values); engine_box.configure(values=labels, width=choice_width(labels, 24))
             if engine_choices.internal(engine_var.get()) not in values: engine_var.set(engine_choices.label(values[0]))
@@ -5016,59 +5367,219 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             if TRANSCODE_PRESET_CODEC_FAMILY.get(selected_preset) is None:
                 engine_box.configure(state="disabled"); resolution_box.configure(state="disabled"); hardware_decode_check.configure(state="disabled"); engine_status_var.set(self.tr("convert.remux_help"))
             else:
-                engine_box.configure(state="readonly"); resolution_box.configure(state="readonly"); hardware_decode_check.configure(state="normal")
+                engine_box.configure(state="readonly"); resolution_box.configure(state="disabled"); hardware_decode_check.configure(state="normal")
                 hardware = [engine_choices.label(value) for value in values if value not in {TRANSCODE_AUTOMATIC, TRANSCODE_SOFTWARE}]
                 acceleration = ", ".join(sorted(accelerators)) if accelerators else self.tr("convert.none_reported")
                 engine_status_var.set(self.tr("convert.capabilities", hardware=", ".join(hardware) if hardware else self.tr("convert.cpu_fallback"), decode=acceleration) if not error else self.tr("convert.capability_failed", error=error))
-            refresh_preview()
+            update_ai_controls()
         def refresh_preview():
             if running["value"]: return
+            for control in (destination_entry,destination_browse,preserve_button):control.configure(state='disabled' if same_source_var.get() else 'normal')
             destination_text = destination_var.get().strip()
-            if not destination_text: current["plans"] = []; status_var.set(self.tr("convert.choose_folder")); start_button.configure(state="disabled"); return
+            if not destination_text and not same_source_var.get(): current["plans"] = []; status_var.set(tr(self.tr("convert.choose_folder"))); start_button.configure(state="disabled"); return
             existing_mode = existing_choices.internal(existing_var.get())
             preset_name = preset_choices.internal(preset_var.get()); resolution_name = resolution_choices.internal(resolution_var.get())
-            plans = self.plan_video_conversions(items, preset_name, Path(destination_text), pane.current_path, preserve_var.get(), existing_mode, resolution_name); current["plans"] = plans; tree.delete(*tree.get_children())
-            for index, plan in enumerate(plans): tree.insert("", "end", iid=str(index), values=(status_choices.label(plan["status"]), str(plan["item"].path), str(plan["target"]), ""))
+            try:
+                plans = self.plan_video_conversions(items, preset_name, Path(destination_text), pane.current_path, preserve_var.get(), existing_mode, resolution_name, prefix_var.get(), suffix_var.get(), same_as_source=same_source_var.get())
+            except ValueError as exc:
+                current['plans'] = []; tree.delete(*tree.get_children()); status_var.set(tr(str(exc))); start_button.configure(state='disabled'); return
+            plans=conflicts.apply(plans)
+            current["plans"] = plans; tree.delete(*tree.get_children()); result_details.clear()
+            profile=profile_for_id(preset_name)
+            quality_box.configure(state='normal' if profile.family and rate_mode()=='quality' else 'disabled')
+            for control in (rate_box,audio_rate_box,audio_channels_box):control.configure(state='readonly' if profile.family else 'disabled')
+            max_quality_check.configure(state='normal' if profile.family else 'disabled')
+            bitrates=[]
+            for index, plan in enumerate(plans):
+                info=readiness['info'].get(plan['item'].path);summary='Checking source dimensions…'
+                plan['ai_effective']=effective_video_mode(ai_mode(),info['height'] if info else 0,profile.height);plan['temporary_bytes']=0
+                if info:
+                    width,height=output_dimensions(info['width'],info['height'],profile.height,sar=info['sar'])
+                    summary=f"{info['width']}×{info['height']} → {width}×{height}"
+                    if ai_mode()=='fast_video':summary+=tr(' · Fast enhancement (no AI; no frame files)')
+                    elif profile.height and info['height']<profile.height and ai_mode()!='ordinary':
+                        if info['hdr'] or min(info['width'],info['height'],info['fps'],info['duration'])<=0:
+                            plan['status']='AI unavailable';summary+=tr(' · use ordinary resizing for HDR/unknown timing')
+                        else:
+                            factor=int(ai_mode()[-2]);plan['ai_effective']=ai_mode();plan['temporary_bytes']=estimate_ai_video_disk_bytes(info['width'],info['height'],max(1,info['count']),ai_mode())
+                            summary=f"{info['width']}×{info['height']} → AI {info['width']*factor}×{info['height']*factor} → {width}×{height} · temp ~{human_size(plan['temporary_bytes'])}"
+                            if height>info['height']*factor:summary+=tr(' · additional ordinary enlargement')
+                    elif ai_mode()!='ordinary':summary+=tr(' · no enlargement; ordinary processing')
+                elif readiness['headers']:
+                    plan['status']='Source unavailable';summary='Could not verify source dimensions'
+                selected_effect_labels=[tr(name) for name,var in video_effect_vars.items() if var.get() and profile.family]
+                if selected_effect_labels:summary+=' · '+tr('Standard effects:')+' '+', '.join(selected_effect_labels)
+                if info and profile.family and rate_mode()=='automatic':
+                    try:
+                        plan['video_bitrate']=automatic_video_bitrate(preset_name,info)
+                        bitrates.append(plan['video_bitrate'])
+                        summary+=f" · Auto VBR {plan['video_bitrate']} kb/s"
+                    except ValueError as exc:
+                        plan['status']='Source unavailable';summary=tr(str(exc))
+
+                tree.insert("", "end", iid=str(index), values=(tr(status_choices.label(plan["status"])), str(plan["item"].path), str(plan["target"]),tr(summary)),tags=conflicts.tags(plan))
+                path_labels.set(str(index), plan["item"].path, plan["target"])
             ready = sum(plan["status"] == "Ready" for plan in plans); skipped = len(plans) - ready; source_size = sum(plan["item"].size for plan in plans if plan["status"] == "Ready")
-            status_var.set(self.tr("convert.preview_summary", ready=ready, skipped=skipped, size=human_size(source_size))); start_button.configure(state="normal" if ready else "disabled")
+            status_var.set(tr(self.tr("convert.preview_summary", ready=ready, skipped=skipped, size=human_size(source_size)) if readiness['headers'] else 'Checking source dimensions…'))
+            try: quality = str(crf_var.get()) if crf_var.get() in range(18,36) else '?'
+            except tk.TclError: quality = '?'
+            destination = tr('Beside each original') if same_source_var.get() else destination_var.get()
+            effects = ', '.join(selected_effect_labels)
+            if rate_mode()=='automatic':
+                target_text=(str(min(bitrates)) if min(bitrates)==max(bitrates) else f'{min(bitrates)}–{max(bitrates)}') if bitrates else '?'
+                rate_text=tr('Auto VBR {rate} kb/s').format(rate=target_text)
+            else:rate_text=tr('Quality {quality}').format(quality=quality)
+            audio_text=tr('Audio {rate} kb/s · {channels}').format(rate=audio_rate_var.get(),channels=tr(audio_channels_var.get()))
+            output_summary.set(tr('{count} videos → {preset} · {rate} · {destination}').format(count=ready,preset=preset_var.get(),rate=rate_text if profile.family else tr('Stream copy'),destination=destination)
+                               + (' · ' + engine_var.get() + ' · ' + tr(AI_MODES[ai_mode()]) + ' · ' + audio_text if profile.family else '')
+                               + (' · ' + tr('Max. Quality') if profile.family and max_quality_var.get() else '')
+                               + (' · ' + effects + ' (' + tr(video_effect_strength.get()) + ')' if effects else ''))
+            blocked=not readiness['headers'] or (ai_mode() not in ('ordinary','fast_video') and (readiness['hardware_checking'] or not readiness['devices']))
+            start_button.configure(state="normal" if (ready or conflicts.conflicts) and not blocked else "disabled")
         def start():
-            refresh_preview(); plans = [plan for plan in current["plans"] if plan["status"] == "Ready"]
+            if getattr(window, "_conversion_close_pending", False):return
+            refresh_preview()
+            if conflicts.conflicts:
+                conflicts.resolve();return
+            plans = [plan for plan in current["plans"] if plan["status"] == "Ready"]
             if not plans: return
-            try: crf = max(18, min(35, crf_var.get()))
+            try: crf = max(18, min(35, crf_var.get())) if rate_mode()=="quality" else 25
             except tk.TclError: messagebox.showerror(self.tr("convert.invalid_quality"), self.tr("convert.invalid_quality_body"), parent=window); return
             preset_name = preset_choices.internal(preset_var.get()); engine_name = engine_choices.internal(engine_var.get()); use_hardware_decode = hardware_decode_var.get(); resolution_name = resolution_choices.internal(resolution_var.get())
+            selected_rate=rate_mode();selected_max_quality=max_quality_var.get() and profile_for_id(preset_name).family is not None;selected_audio_rate=int(audio_rate_var.get());selected_audio_channels=audio_channels_var.get()
+            selected_effects=tuple(name for name,var in video_effect_vars.items() if var.get() and profile_for_id(preset_name).family)
+            selected_effect_strength=('Light','Medium','Strong').index(video_effect_strength.get())+1
+            selected_ai=ai_mode();selected_hardware='auto' if ai_hardware_var.get()=='Automatic' else next((d.id for d in readiness['devices'] if d.label==ai_hardware_var.get()),'cpu')
+            enlarging=[p for p in plans if profile_for_id(preset_name).height and readiness['info'][p['item'].path]['height']<profile_for_id(preset_name).height]
+            warning=tr('\n\nMax. Quality can be considerably slower on CPU; hardware quality settings are used when supported.') if selected_max_quality else ''
+            if selected_effects:warning+='\n\n'+tr('Standard effects:')+' '+', '.join(tr(name) for name in selected_effects)+' ('+tr(video_effect_strength.get())+')'
+            if enlarging:warning+=tr(f'\n\n{len(enlarging)} file(s) will be enlarged. Ordinary resizing cannot restore lost detail.')
+            needs_ai=[p for p in plans if p['ai_effective'] not in ('ordinary','fast_video')]
+            selected_working_folder=None
+            if needs_ai:
+                required=max(p['temporary_bytes'] for p in needs_ai)
+                try:
+                    selected_working_folder=Path(working_var.get().strip() or tempfile.gettempdir()).expanduser().resolve()
+                    if not selected_working_folder.is_dir():raise ValueError('Choose an existing AI working folder, or create one using Browse.')
+                    free=shutil.disk_usage(selected_working_folder).free
+                    with tempfile.TemporaryFile(dir=selected_working_folder):pass
+                except (OSError,ValueError) as exc:
+                    messagebox.showerror('AI working folder unavailable',str(exc),parent=window);return
+                warning+=tr(f'\n\nWARNING: AI upscaling uses significant drive space and heavy CPU/GPU processing. Approximate temporary space: {human_size(required)} (one file at a time). AI working folder: {selected_working_folder}. Finished files: {tr("Same as source") if same_source_var.get() else Path(destination_var.get())}. Temporary job subfolders are removed after success, cancellation or failure. Encoded output also needs space in its output folder. Processing may take a long time. Automatic can fall back to slow CPU AI. The preset remains the final size; review dimensions in the table.')
+                if free<required:
+                    messagebox.showerror('Not enough working drive space',warning,parent=window);return
             available_engines = self.available_transcode_engines(preset_name)
             if engine_name not in available_engines:
                 messagebox.showerror(self.tr("convert.engine_unavailable"), self.tr("convert.engine_unavailable_body", engine=engine_choices.label(engine_name), preset=preset_choices.label(preset_name)), parent=window); return
             resolution_summary = resolution_choices.label(resolution_name) if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is not None else self.tr("convert.unchanged")
             decode_summary = self.tr("convert.decode_unused") if TRANSCODE_PRESET_CODEC_FAMILY.get(preset_name) is None else (self.tr("convert.decode_fallback") if use_hardware_decode else self.tr("convert.off"))
-            if not messagebox.askyesno(self.tr("convert.confirm_title"), self.tr("convert.confirm_body", count=len(plans), engine=engine_choices.label(engine_name), resolution=resolution_summary, decode=decode_summary), parent=window): return
-            cancel_event.clear(); running["value"] = True; start_button.configure(state="disabled"); refresh_button.configure(state="disabled"); cancel_button.configure(state="normal"); progress.configure(value=0)
+            if not messagebox.askyesno(self.tr("convert.confirm_title"), self.tr("convert.confirm_body", count=len(plans), engine=engine_choices.label(engine_name), resolution=resolution_summary, decode=decode_summary)+"\n\n"+output_summary.get()+tr(warning), parent=window): return
+            for control in (*effect_checks,effect_box,rate_box,max_quality_check,audio_rate_box,audio_channels_box):control.configure(state='disabled')
+            working_entry.configure(state='disabled');working_button.configure(state='disabled')
+            conflicts.button.configure(state='disabled')
+            display.reset()
+            cancel_event.clear(); running["value"] = True; start_button.configure(state="disabled"); cancel_button.configure(state="normal"); progress.configure(value=0)
+            def begin_file(index):
+                if not window.winfo_exists():return
+                iid=str(current['plans'].index(plans[index]))
+                if index>0:display.reset()
+                latest_progress.pop(index,None);latest_fps.pop(index,None);latest_stage.pop(index,None)
+                encoder_live.set(tr('Encoder: starting…'))
+                tree.set(iid,'status',status_choices.label('Converting'))
+                file_status.set(plans[index]['item'].path.name+' · '+status_choices.label('Converting'))
+                status_var.set(file_status.get())
+                set_conversion_activity(file_progress,None)
             def update(index, fraction):
                 if not window.winfo_exists(): return
-                progress.configure(value=((index + fraction) / len(plans)) * 100); status_var.set(self.tr("convert.progress", current=index + 1, total=len(plans), percent=f"{fraction*100:.0f}"))
+                if fraction<=0:
+                    set_conversion_activity(file_progress,None)
+                    return
+                set_conversion_activity(file_progress,fraction)
+                iid = str(current['plans'].index(plans[index]))
+                tree.set(iid, 'status', tr(f'Converting {fraction * 100:.0f}%') if fraction < 1 else tr('Finalising'))
+                latest_progress[index]=fraction
+                base=f"{plans[index]['item'].path.name}: {fraction * 100:.0f}%"
+                file_status.set(base + (tr(' · Average {value0} fps').format(value0=f'{latest_fps[index]:.1f}') if index in latest_fps and fraction>0 else ''))
+                progress.configure(value=((index + fraction) / len(plans)) * 100); status_var.set(tr(self.tr("convert.progress", current=index + 1, total=len(plans), percent=f"{fraction*100:.0f}")))
+            def update_fps(index, fps):
+                if window.winfo_exists():
+                    iid = str(current['plans'].index(plans[index]))
+                    latest_fps[index]=fps
+                    tree.set(iid, 'result', tr('Encoding average {value0} fps').format(value0=f'{fps:.1f}'))
+                    fraction=latest_progress.get(index,0)
+                    live = latest_stage.get(index, tr('Encoding')) + tr(' · Average {value0} fps').format(value0=f'{fps:.1f}')
+                    # AI preparation uses weighted progress, so do not extrapolate
+                    # an encode-only clock across the earlier model/frame work.
+                    if plans[index]['ai_effective'] in ('ordinary','fast_video'):
+                        remaining = remaining_seconds(fraction, time.monotonic() - stage_started.get(index, time.monotonic()))
+                        if remaining is not None: live += tr(' · Estimated remaining: {time}').format(time=human_duration(remaining))
+                    encoder_live.set(live)
+                    file_status.set(f"{plans[index]['item'].path.name}: {fraction*100:.0f}%"+tr(' · Average {value0} fps').format(value0=f'{fps:.1f}'))
+            def update_stage(index,event):
+                if not window.winfo_exists():return
+                latest_stage[index] = event.stage
+                stage_started[index] = time.monotonic()
+                encoder_live.set(tr(event.stage))
+                iid=str(current['plans'].index(plans[index]));rate=tr(' · {value0} fps').format(value0=f'{event.average_fps:.1f}') if event.average_fps is not None else ''
+                set_conversion_activity(file_progress,None if event.fraction is None else latest_progress.get(index,0))
+                tree.set(iid,'status',tr(event.stage))
+                tree.set(iid,'result',tr(event.stage)+rate)
+                file_status.set(f"{plans[index]['item'].path.name} · {tr(event.stage)} · {event.completed}/{event.total or '?'}"+rate)
             def worker():
                 passed = failed = cancelled = 0
                 for index, plan in enumerate(plans):
                     if cancel_event.is_set(): cancelled += len(plans) - index; break
-                    self.post_ui(lambda iid=str(current["plans"].index(plan)): tree.set(iid, "status", status_choices.label("Converting")))
-                    state, details = self.transcode_video_file(plan["item"], plan["target"], preset_name, crf, cancel_event, lambda fraction, i=index: self.post_ui(update, i, fraction), engine_name, use_hardware_decode, resolution_name)
+                    self.post_ui(begin_file,index)
+                    state, details = self.transcode_video_file(plan["item"], plan["target"], preset_name, crf, cancel_event, lambda fraction, i=index: self.post_ui(update, i, fraction), engine_name, use_hardware_decode, resolution_name, stats_callback=lambda fps, i=index: self.post_ui(update_fps, i, fps),ai_mode=plan['ai_effective'],ai_hardware=selected_hardware,stage_callback=lambda event,i=index:self.post_ui(update_stage,i,event),source_info=readiness['info'].get(plan['item'].path),ai_working_folder=selected_working_folder,preview_directory=display.directory,video_effects=selected_effects,effect_strength=selected_effect_strength,overwrite=plan.get('overwrite_approval'),rate_mode=selected_rate,max_quality=selected_max_quality,audio_bitrate=selected_audio_rate,audio_channels=selected_audio_channels)
                     if state == "Passed": passed += 1
                     elif state == "Cancelled": cancelled += len(plans) - index
                     else: failed += 1
                     def show_result(plan=plan, state=state, details=details):
                         if not window.winfo_exists(): return
-                        iid = str(current["plans"].index(plan)); tree.set(iid, "status", status_choices.label(state)); tree.set(iid, "result", details.split(" using ", 1)[1][:120] if state == "Passed" and " using " in details else details[:120])
+                        set_conversion_activity(file_progress,1 if state=='Passed' else 0)
+                        file_status.set(plan['item'].path.name+' · '+status_choices.label(state))
+                        iid = str(current["plans"].index(plan)); result_details[iid] = tr(details); tree.set(iid, "status", status_choices.label(state)); previous = tree.set(iid, 'result'); tree.set(iid, "result", tr(details)[:120])
                     self.post_ui(show_result)
                     if state == "Cancelled": break
                 def finished():
                     if not window.winfo_exists(): return
-                    running["value"] = False; start_button.configure(state="normal"); refresh_button.configure(state="normal"); cancel_button.configure(state="disabled"); progress.configure(value=100 if not cancel_event.is_set() else progress["value"]); status_var.set(self.tr("convert.complete", created=passed, failed=failed, cancelled=cancelled)); other.refresh_browser()
+                    file_progress.stop()
+                    conflicts.button.configure(state='normal')
+                    file_progress.configure(mode='determinate')
+                    for control in effect_checks:control.configure(state='normal' if profile_for_id(preset_name).family is not None else 'disabled')
+                    effect_box.configure(state='readonly' if profile_for_id(preset_name).family is not None else 'disabled')
+                    for control in (rate_box,audio_rate_box,audio_channels_box):control.configure(state='readonly' if profile_for_id(preset_name).family else 'disabled')
+                    max_quality_check.configure(state='normal' if profile_for_id(preset_name).family else 'disabled')
+                    for control in (working_entry,working_button):control.configure(state='normal' if ai_mode() not in ('ordinary','fast_video') else 'disabled')
+                    encoder_live.set(tr('Cancelled') if cancel_event.is_set() else tr('Conversion finished'))
+                    running["value"] = False; start_button.configure(state="normal"); cancel_button.configure(state="disabled"); progress.configure(value=100 if not cancel_event.is_set() else progress["value"]); status_var.set(tr(self.tr("convert.complete", created=passed, failed=failed, cancelled=cancelled))); other.refresh_browser()
                 self.post_ui(finished)
-            threading.Thread(target=worker, daemon=True).start()
-        def close(): cancel_event.set(); window.destroy()
-        buttons = ttk.Frame(window, padding=10); buttons.pack(side="bottom", fill="x", before=window.winfo_children()[0]); refresh_button = ttk.Button(buttons, text=self.tr("convert.refresh"), command=refresh_preview); refresh_button.pack(side="left"); start_button = ttk.Button(buttons, text=self.tr("convert.start"), command=start); start_button.pack(side="left", padx=6); cancel_button = ttk.Button(buttons, text=self.tr("convert.cancel"), command=cancel_event.set, state="disabled"); cancel_button.pack(side="left"); ttk.Button(buttons, text=self.tr("common.close"), command=close).pack(side="right"); window.protocol("WM_DELETE_WINDOW", close)
+            begin_file(0)
+            job_handle['value']=self.conversion_jobs.start(worker,cancel_event,'video conversion')
+        def close():
+            close_conversion_window(window,job_handle['value'],cancel_event,lambda:messagebox.askyesno('Cancel conversion?', 'A conversion is running. Cancel it and close this window after temporary files have been cleaned?',parent=window,default=messagebox.NO))
+        if settings_host is not window:bind_conversion_scrolling(canvas,settings,*options_scrollbars)
+        conflicts=ConversionConflicts(window,footer,tr,refresh_preview,tree)
+        display=ConversionDisplay(window,tr)
+        buttons = ttk.Frame(window, padding=10); buttons.pack(side="bottom", fill="x", before=window.winfo_children()[0]); ttk.Button(buttons, text=tr("Minimise"), command=window.iconify).pack(side="right"); display_button = ttk.Button(buttons, text=tr("Display"), command=display.show); display_button.pack(side="left"); start_button = ttk.Button(buttons, text=self.tr("convert.start"), command=start); start_button.pack(side="left", padx=6); cancel_button = ttk.Button(buttons, text=self.tr("convert.cancel"), command=cancel_event.set, state="disabled"); cancel_button.pack(side="left"); ttk.Button(buttons, text=self.tr("common.close"), command=close).pack(side="right"); window.protocol("WM_DELETE_WINDOW", close)
+        engine_box.bind('<<ComboboxSelected>>', remember_engine)
         preset_box.bind("<<ComboboxSelected>>", update_engine_choices); resolution_box.bind("<<ComboboxSelected>>", lambda _event: refresh_preview()); update_engine_choices()
+        ai_box.bind('<<ComboboxSelected>>',update_ai_controls)
+        engine_var.trace_add('write', lambda *_: refresh_preview())
+        hardware_decode_var.trace_add('write', lambda *_: refresh_preview())
+        crf_var.trace_add('write', lambda *_: refresh_preview())
+        def inspect_sources():
+            values={}
+            for item in items:
+                if cancel_event.is_set():return
+                try:values[item.path]=media_probe(item.path,bundled_command('ffprobe'),cancel_event=cancel_event)
+                except Exception:pass
+            def complete():
+                if window.winfo_exists():readiness['info']=values;readiness['headers']=True;refresh_preview()
+            self.post_ui(complete)
+        threading.Thread(target=inspect_sources,daemon=True).start()
+        for variable in (prefix_var, suffix_var, destination_var, same_source_var, preserve_var, existing_var,video_effect_strength,rate_var,max_quality_var,audio_rate_var,audio_channels_var,*video_effect_vars.values()):
+            variable.trace_add('write', lambda *_args: refresh_preview())
 
     @staticmethod
     def image_difference_hash(path: Path) -> int:
@@ -5114,10 +5625,10 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         return sorted((group for group in groups.values() if len(group) > 1), key=lambda group: (-len(group), str(group[0][0].path).casefold()))
 
     def find_similar_images(self):
-        pane = self.current_pane(); window = tk.Toplevel(self); window.title("Find visually similar images"); window.geometry("540x270"); window.transient(self)
+        pane = self.current_pane(); window = tk.Toplevel(self); window.title("Find visually similar images"); window.geometry("540x360"); window.transient(self)
         body = ttk.Frame(window, padding=12); body.pack(fill="both", expand=True)
         ttk.Label(body, text="Perceptual image matching", font=("Segoe UI", 12, "bold")).grid(row=0, column=0, columnspan=2, sticky="w")
-        ttk.Label(body, text="Review-only: this tool never deletes or changes files.").grid(row=1, column=0, columnspan=2, sticky="w", pady=(2, 12))
+        ttk.Label(body, text="Choose which images to keep, then review and remove the selected alternatives in the main window.", wraplength=500).grid(row=1, column=0, columnspan=2, sticky="w", pady=(2, 12))
         scope_choices = LocalizedChoices(self.translator, {key: value for key, value in SCOPE_LABEL_KEYS.items() if key != "Selected"})
         scope_var = tk.StringVar(value=scope_choices.label("Visible")); threshold_var = tk.IntVar(value=6)
         ttk.Label(body, text="Scope:").grid(row=2, column=0, sticky="w", pady=4); ttk.Combobox(body, textvariable=scope_var, state="readonly", values=scope_choices.labels, width=translated_combobox_width(scope_choices.labels, 14)).grid(row=2, column=1, sticky="w")
@@ -5158,38 +5669,23 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         start_button = ttk.Button(buttons, text="Start", command=start); start_button.pack(side="left")
         cancel_button = ttk.Button(buttons, text="Cancel", command=cancel_event.set, state="disabled"); cancel_button.pack(side="left", padx=6)
         ttk.Button(buttons, text="Close", command=lambda: (cancel_event.set(), window.destroy())).pack(side="right")
+        def fit_search_window():
+            if not window.winfo_exists(): return
+            window.update_idletasks()
+            width = min(window.winfo_screenwidth() - 40, max(540, body.winfo_reqwidth() + 20))
+            height = min(window.winfo_screenheight() - 80, max(360, body.winfo_reqheight() + 20))
+            window.geometry(f"{width}x{height}")
+            window.minsize(width, height)
+        window.after_idle(fit_search_window)
 
     def show_similar_image_results(self, pane: FilePane, groups: list[list[tuple[MediaItem, int]]], threshold: int, cached_count: int, failed: int):
         if not groups:
             messagebox.showinfo("Similar image search", f"No visually similar groups found at tolerance {threshold}.\n\n{cached_count} cached hash(es); {failed} unreadable image(s)."); return
-        window = tk.Toplevel(self); window.title("Review visually similar images"); window.geometry("1120x720")
-        ttk.Label(window, text=f"{len(groups)} visually similar group(s) · tolerance {threshold} · {cached_count} cached · {failed} unreadable", font=("Segoe UI", 11, "bold")).pack(fill="x", padx=10, pady=(10, 2))
-        ttk.Label(window, text="Similarity is an estimate. Review files before taking any action; this window cannot delete them.").pack(fill="x", padx=10, pady=(0, 8))
-        preview = ttk.Label(window, text="Select an image", anchor="center"); preview.pack(fill="x", padx=10, pady=4, ipady=90)
-        columns = ("group", "distance", "name", "folder", "resolution", "size")
-        tree = ttk.Treeview(window, columns=columns, show="headings", selectmode="browse")
-        for key, label, width in (("group", "Group", 65), ("distance", "Difference", 85), ("name", "Name", 260), ("folder", "Folder", 430), ("resolution", "Resolution", 100), ("size", "Size", 90)):
-            tree.heading(key, text=label); tree.column(key, width=width, anchor="center" if key in {"group", "distance", "resolution", "size"} else "w")
-        scroll = ttk.Scrollbar(window, orient="vertical", command=tree.yview); tree.configure(yscrollcommand=scroll.set); scroll.pack(side="right", fill="y", padx=(0, 10)); tree.pack(fill="both", expand=True, padx=(10, 0))
-        item_map = {}
-        for group_number, group in enumerate(groups, 1):
-            reference_hash = group[0][1]
-            for item, value in group:
-                iid = tree.insert("", "end", values=(group_number, (reference_hash ^ value).bit_count(), item.path.name, str(item.path.parent), item.resolution, human_size(item.size)))
-                item_map[iid] = (group_number, item)
-        def selected(_event=None):
-            selection = tree.selection()
-            if not selection: return
-            _group, item = item_map[selection[0]]; self.generate_thumbnail(window, preview, item, 0, (640, 260))
-        tree.bind("<<TreeviewSelect>>", selected)
-        def select_group():
-            selection = tree.selection()
-            if not selection: return
-            group_number = item_map[selection[0]][0]; paths = {str(item.path) for group, item in item_map.values() if group == group_number}
-            rows = [pane.path_to_iid[path] for path in paths if path in pane.path_to_iid]; pane.tree.selection_set(rows); pane.update_thumbnail_selection(); pane.status_var.set(f"Selected {len(rows)} visible file(s) from similar-image group {group_number}"); window.destroy()
-        actions = ttk.Frame(window, padding=10); actions.pack(fill="x"); ttk.Button(actions, text="Select this group in source pane", command=select_group).pack(side="left"); ttk.Button(actions, text="Close", command=window.destroy).pack(side="right")
-        first = next(iter(item_map), None)
-        if first: tree.selection_set(first); tree.focus(first); selected()
+        details = {str(item.path): (group[0][1] ^ value).bit_count()
+                   for group in groups for item, value in group}
+        summary = f"{len(groups)} visually similar group(s) · tolerance {threshold} · {cached_count} cached · {failed} unreadable"
+        self.show_duplicate_review(pane, [[item for item, _value in group] for group in groups],
+                                   similar_details=(summary, details))
 
     @staticmethod
     def file_digest(path: Path) -> str:
@@ -5274,13 +5770,17 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         if item.size == max(value.size for value in group): labels.append(self.tr("duplicates.largest"))
         return ", ".join(labels)
 
-    def show_duplicate_review(self, pane: FilePane, groups: list[list[MediaItem]]):
+    def show_duplicate_review(self, pane: FilePane, groups: list[list[MediaItem]], *, similar_details=None):
         window = tk.Toplevel(self)
-        window.title(self.tr("duplicates.review_title"))
+        window.title("Review visually similar images" if similar_details else self.tr("duplicates.review_title"))
         window.geometry("1120x760")
         window.thumbnail_images = []
-        ttk.Label(window, text=self.tr("duplicates.found", count=len(groups)), font=("Segoe UI", 11, "bold")).pack(fill="x", padx=10, pady=(10, 4))
-        ttk.Label(window, text=self.tr("duplicates.explanation")).pack(fill="x", padx=10, pady=(0, 8))
+        ttk.Label(window, text=similar_details[0] if similar_details else self.tr("duplicates.found", count=len(groups)), font=("Segoe UI", 11, "bold")).pack(fill="x", padx=10, pady=(10, 4))
+        ttk.Label(window, text=("WARNING: Similar images may be different photographs, edits or crops worth keeping. "
+                               "A group can include indirect matches. Compare each image before deleting anything. "
+                               "Keep options select the other visible files for review and removal in the main window."
+                               if similar_details else self.tr("duplicates.explanation")),
+                  wraplength=1060).pack(fill="x", padx=10, pady=(0, 8))
 
         preview = ttk.Frame(window)
         preview.pack(fill="x", padx=10, pady=(0, 8))
@@ -5305,12 +5805,17 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             tree.heading(column, text=headings[column]); tree.column(column, width=widths[column], anchor="center" if column in {"group", "size", "modified"} else "w")
         scroll = ttk.Scrollbar(tree_frame, orient="vertical", command=tree.yview); tree.configure(yscrollcommand=scroll.set)
         scroll.pack(side="right", fill="y"); tree.pack(fill="both", expand=True)
+        def review_labels(group, item):
+            labels = self.duplicate_labels(group, item)
+            if similar_details:
+                labels += f" · Difference: {similar_details[1][str(item.path)]}"
+            return labels
         item_map = {}
         for group_index, group in enumerate(groups, 1):
             for item_index, item in enumerate(group):
                 iid = f"{group_index}-{item_index}"
                 item_map[iid] = (group_index - 1, item)
-                tree.insert("", "end", iid=iid, values=(group_index, item.path.name, str(item.path.parent), human_size(item.size), datetime.fromtimestamp(item.modified).strftime("%Y-%m-%d %H:%M:%S"), self.duplicate_labels(group, item)))
+                tree.insert("", "end", iid=iid, values=(group_index, item.path.name, str(item.path.parent), human_size(item.size), datetime.fromtimestamp(item.modified).strftime("%Y-%m-%d %H:%M:%S"), review_labels(group, item)))
 
         def show_pair(_event=None):
             selection = tree.selection()
@@ -5321,7 +5826,7 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             second = second or next((item for item in group if item is not chosen), chosen)
             for index, item in enumerate((chosen, second)):
                 preview_labels[index].configure(image="", text=self.tr("duplicates.loading"))
-                preview_details[index].set(f"{item.path}\n{human_size(item.size)} · {datetime.fromtimestamp(item.modified).strftime('%Y-%m-%d %H:%M:%S')}\n{self.duplicate_labels(group, item)}")
+                preview_details[index].set(f"{item.path}\n{human_size(item.size)} · {datetime.fromtimestamp(item.modified).strftime('%Y-%m-%d %H:%M:%S')}\n{review_labels(group, item)}")
                 self.generate_thumbnail(window, preview_labels[index], item, index)
         tree.bind("<<TreeviewSelect>>", show_pair)
         first_row = next(iter(item_map), None)
@@ -5330,11 +5835,22 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
         controls = ttk.Frame(window); controls.pack(fill="x", padx=10, pady=10)
         ttk.Label(controls, text=self.tr("duplicates.keep_one")).pack(side="left")
         for strategy in ("first", "newest", "oldest", "smallest", "largest"):
-            ttk.Button(controls, text=self.tr(f"duplicates.{strategy}"), command=lambda value=strategy: self.apply_duplicate_strategy(pane, groups, value, window)).pack(side="left", padx=3)
-        ttk.Button(controls, text=self.tr("duplicates.clear"), command=lambda: pane.tree.selection_remove(pane.tree.selection())).pack(side="left", padx=(10, 3))
+            ttk.Button(controls, text=self.tr(f"duplicates.{strategy}"), command=lambda value=strategy: self.apply_duplicate_strategy(pane, groups, value, window, visually_similar=bool(similar_details))).pack(side="left", padx=3)
+        def clear_selection():
+            if similar_details: pane.clear_checks()
+            pane.tree.selection_remove(pane.tree.selection())
+            pane.update_thumbnail_selection()
+        ttk.Button(controls, text=self.tr("duplicates.clear"), command=clear_selection).pack(side="left", padx=(10, 3))
         ttk.Button(controls, text=self.tr("duplicates.close"), command=window.destroy).pack(side="right")
 
-    def apply_duplicate_strategy(self, pane: FilePane, groups: list[list[MediaItem]], strategy: str, window: tk.Toplevel):
+    def apply_duplicate_strategy(self, pane: FilePane, groups: list[list[MediaItem]], strategy: str, window: tk.Toplevel, *, visually_similar=False):
+        if visually_similar and not messagebox.askyesno(
+            "Review similar-image selection",
+            "Similar images are not verified duplicates. Different photographs, crops or edits may be selected.\n\n"
+            f"Keep {self.tr(f'duplicates.{strategy}')} in each group and select the other visible images in the main window?\n\n"
+            "This replaces any previous ticked action selection. Review the highlighted alternatives before using Delete in the main window.",
+            parent=window, default=messagebox.NO):
+            return
         redundant = []
         for group in groups:
             if strategy == "newest": keeper = max(group, key=lambda item: item.modified)
@@ -5345,12 +5861,23 @@ class MediaSorterApp(UpgradeAppMixin, TkinterDnD.Tk):
             redundant.extend(item for item in group if item is not keeper)
         paths = {str(item.path) for item in redundant}
         rows = [iid for iid in pane.tree.get_children() if pane.tree.item(iid, "tags") and pane.tree.item(iid, "tags")[0] in paths]
+        if visually_similar:
+            pane.clear_checks()
+            self.active_pane = pane
         pane.tree.selection_set(rows)
+        pane.update_thumbnail_selection()
         if rows: pane.tree.focus(rows[0]); pane.tree.see(rows[0])
         strategy_label = self.tr(f"duplicates.{strategy}")
-        pane.status_var.set(self.tr("duplicates.proposal_status", strategy=strategy_label, count=len(rows)))
+        pane.status_var.set(f"Selected {len(rows)} visually similar alternative(s); kept {strategy_label} in each group. Review before deleting."
+                            if visually_similar else self.tr("duplicates.proposal_status", strategy=strategy_label, count=len(rows)))
         window.destroy()
-        messagebox.showinfo(self.tr("duplicates.applied_title"), self.tr("duplicates.applied_body", strategy=strategy_label, count=len(rows)))
+        if visually_similar:
+            messagebox.showinfo("Review selected similar images",
+                f"Selected {len(rows)} visible alternative(s); kept {strategy_label} in each group.\n\n"
+                "Hidden or filtered files were not selected. Similar images may contain unique content. "
+                "Review the highlighted files in the source pane before deleting. No files have been deleted.", parent=self)
+        else:
+            messagebox.showinfo(self.tr("duplicates.applied_title"), self.tr("duplicates.applied_body", strategy=strategy_label, count=len(rows)))
 
     def compare_selected(self, pane: FilePane | None = None):
         pane = pane or self.current_pane(); items = pane.selected_items()
@@ -5993,13 +6520,13 @@ In Details mode, individual rows retain right-button file dragging; a normal rig
 DUPLICATES AND COMPARISON
 Tools > Find duplicates finds exact matches in stages. Same-size files receive a quick fingerprint sampled from the beginning, middle, and end; only matching candidates are then read completely and verified with SHA-256. Both fingerprints are retained in the SQLite cache while path, size, and modification time remain unchanged, making later searches much faster. Progress appears in the active pane status line. The review window shows two copies side by side with paths, dates, and retention labels. A strategy only selects proposed redundant files—it never deletes them automatically. Compare selected shows two chosen files and their technical metadata.
 
-Tools > Find visually similar images detects resized, lightly recompressed, and otherwise visually close images even when their files are not byte-for-byte identical. Choose Visible or All scanned and a tolerance from 0–16; lower values are stricter and 6 is the default. The 64-bit difference hashes are cached against path, size, and modification date, and a BK-tree keeps matching practical on large collections. Results are estimates and open in a review-only window with previews and a Select this group action. The tool never deletes or changes files; review every proposed group before using normal file actions.
+Tools > Find visually similar images detects resized, lightly recompressed, and otherwise visually close images even when their files are not byte-for-byte identical. Choose Visible or All scanned and a tolerance from 0–16; lower values are stricter and 6 is the default. The 64-bit difference hashes are cached against path, size, and modification date, and a BK-tree keeps matching practical on large collections. Results are estimates and open in the same paired-preview review used by Find Duplicates. Keep First, Newest, Oldest, Smallest or Largest selects the other visible images in the source pane after a warning; nothing is deleted from the review window. Similar groups can include indirect matches, so different photographs, edits or crops may be selected. Clear selection removes the source-pane selection. The tool never deletes or changes files; review every proposed group before using normal file actions.
 
 Tools > Verify media integrity performs a read-only full decode to find damaged or incomplete media. Choose Selected, Visible, or All scanned files, then Start. Images are decoded frame by frame in-process and video/audio streams are decoded completely with FFmpeg; original files are never changed. The check can be cancelled, and unchanged results are cached using the file path, size, and modification date. Enable Force recheck to ignore a cached result. The results can select failed files back in the source pane or be exported as a CSV report. Clear all cache removes cached integrity results but does not remove media or user ratings, colours, and tags.
 
 Select exactly one video and choose Tools > Create video contact sheet to save a PNG overview of the clip. Choose 4–48 evenly spaced frames, 2–8 columns, a frame width from 160–640 pixels, and optional frame numbers/timestamps. Sampling avoids the very start and end of the video. Extraction runs in the background with progress and cancellation, the finished image is written atomically, and the source video is never changed.
 
-Select one or more videos and choose Tools > Convert selected videos for a preview-first conversion queue. Presets create compatible H.264 MP4, smaller H.265 MP4, AV1 MKV, 720p H.264 proxy, or a fast stream-copy MKV remux. Resolution independently offers the source size, 1080p, or 720p for every encoded preset and every software or hardware engine. Resizing sets the selected output height, preserves the aspect ratio, and adds 1080p or 720p to the output filename. The 720p proxy preset selects 720p automatically, but you can change it before starting. Remux always retains the source resolution because it copies streams without re-encoding. Encoding engine offers Automatic, Software/CPU, NVIDIA NVENC, Intel Quick Sync, AMD AMF, and Linux VA-API according to the encoders advertised by the bundled FFmpeg and the chosen preset. Automatic tries detected hardware engines and safely falls through to alternatives and finally CPU if the matching hardware cannot actually start. An explicit hardware choice reports failure rather than silently changing the encoder. Use hardware decoding when available is independently selectable; an unsupported hardware decoder is retried with software decoding while retaining the selected encoder. The displayed detection summary lists available engines and decode methods. Quality 18–35 controls software CRF and maps to the comparable constant-quality control for hardware engines (lower is higher quality/larger output); remux ignores quality and acceleration. Output defaults to the opposite pane, can preserve folders relative to a recursive source, and either skips existing names or creates numbered Keep both names. Original videos are always retained and outputs use a partial filename until FFmpeg completes. The queue is sequential to limit CPU/memory pressure, reports the engine used plus overall/per-file progress, and Cancel terminates the current encoder, removes its partial output, and skips the remaining queue.
+Select one or more videos and choose Tools > Convert selected videos for a preview-first conversion queue. Presets create compatible H.264 MP4, smaller H.265 MP4, AV1 MKV, 720p H.264 proxy, or a fast stream-copy MKV remux. Resolution independently offers the source size, 1080p, or 720p for every encoded preset and every software or hardware engine. Resizing sets the selected output height, preserves the aspect ratio, and adds 1080p or 720p to the output filename. The 720p proxy preset selects 720p automatically, but you can change it before starting. Remux always retains the source resolution because it copies streams without re-encoding. Encoding engine offers Automatic, Software/CPU, NVIDIA NVENC, Intel Quick Sync, AMD AMF, and Linux VA-API according to the encoders advertised by the bundled FFmpeg and the chosen preset. Automatic tries detected hardware engines and safely falls through to alternatives and finally CPU if the matching hardware cannot actually start. An explicit hardware choice reports failure rather than silently changing the encoder. Use hardware decoding when available is independently selectable; an unsupported hardware decoder is retried with software decoding while retaining the selected encoder. The displayed detection summary lists available engines and decode methods. Compression defaults to Automatic compression: a per-file target bitrate based on output dimensions and frame rate (for example, 1080p 25 fps H.265 targets 2500 kb/s). This targets compression rather than guaranteeing a final size. Constant quality remains available: Quality 18–35 controls software CRF or the hardware encoder quality control; lower requests higher quality/larger output, and numbers are not equivalent across encoders. Max. Quality defaults on and can be considerably slower on CPU. NVIDIA uses p7 with supported HQ/lookahead/AQ options; a clearly labelled compatibility retry retains NVIDIA encoding when optional settings fail. No two-pass encoding is enabled. Audio defaults to 192 kb/s per track, with 128, 256 and 320 selectable; original channels are retained unless Stereo or Mono is explicitly selected. Compression, maximum quality and audio choices are remembered. Remux ignores these encoding controls and copies compatible streams. Output defaults beside each original, remembers the Same as source checkbox choice, can preserve folders relative to a recursive source when another output folder is chosen, and either skips existing names or creates numbered Keep both names. Original videos are always retained and outputs use a partial filename until FFmpeg completes. The queue is sequential to limit CPU/memory pressure, reports the engine used plus overall/per-file progress, and Cancel terminates the current encoder, removes its partial output, and skips the remaining queue.
 
 FOLDER SYNCHRONIZATION
 Open the folders to compare in the left and right panes, then choose Tools > Compare / synchronize folders. Review Left only, Right only, Newer, and Different entries before queuing a one-way synchronization.
@@ -6228,4 +6755,30 @@ Smart Collection: A saved view definition containing a location, filters, sortin
 
 
 if __name__ == "__main__":
-    MediaSorterApp().mainloop()
+    if len(sys.argv)==3 and sys.argv[1]=='--rfm-ai-worker':
+        from ai_worker import main as ai_worker_main
+        ai_worker_main(sys.argv[2])
+    elif len(sys.argv)==3 and sys.argv[1]=='--rfm-verify-image':
+        from image_pipeline import convert_image_file
+        job=json.loads(Path(sys.argv[2]).read_text(encoding='utf-8'))
+        cancel=threading.Event()
+        if job.get('cancel_after'):
+            timer=threading.Timer(float(job['cancel_after']),cancel.set);timer.daemon=True;timer.start()
+        try:
+            state,details=convert_image_file(Path(job['source']),Path(job['target']),job.get('format','PNG'),job.get('resize','Original size'),cancel,ai_mode=job.get('mode','ordinary'),ai_hardware=job.get('hardware','cpu'),working_folder=job.get('working_folder'),effects=job.get('effects',()),effect_strength=job.get('effect_strength',2),overwrite=overwrite_approval(Path(job['target']),[Path(job['source'])]) if job.get('overwrite_approved') else None)
+            report={'state':state,'details':details}
+        except Exception as exc:report={'state':'Failed','details':str(exc)}
+        Path(job['report']).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+        sys.exit(0 if report['state']=='Passed' else 1)
+    elif len(sys.argv)==3 and sys.argv[1]=='--rfm-verify-conversion':
+        job=json.loads(Path(sys.argv[2]).read_text(encoding='utf-8'))
+        cancel=threading.Event()
+        if job.get('cancel_after'):
+            timer=threading.Timer(float(job['cancel_after']),cancel.set);timer.daemon=True;timer.start()
+        try:
+            state,details=MediaSorterApp.transcode_video_file(inspect_media(Path(job['source'])),Path(job['target']),job['preset'],28,cancel,engine=job.get('engine',TRANSCODE_SOFTWARE),hardware_decode=job.get('hardware_decode',False),ai_mode=job['mode'],ai_hardware=job.get('hardware','cpu'),ai_working_folder=job.get('working_folder'),preview_directory=job.get('preview_directory'),video_effects=tuple(job.get('effects',())),effect_strength=job.get('effect_strength',2),rate_mode=job.get('rate_mode','automatic'),max_quality=job.get('max_quality',True),audio_bitrate=job.get('audio_bitrate',192),audio_channels=job.get('audio_channels','Original channels'))
+            report={'state':state,'details':details}
+        except Exception as exc:report={'state':'Failed','details':str(exc)}
+        Path(job['report']).write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+        sys.exit(0 if report['state']=='Passed' else 1)
+    else:MediaSorterApp().mainloop()

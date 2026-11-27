@@ -1,5 +1,12 @@
 """Translation-service whitespace loss must not merge labels or numbered steps."""
 import unittest
+
+
+class GlossaryBoundaryTests(unittest.TestCase):
+    def test_short_ui_terms_do_not_split_larger_words(self):
+        from tools.translate_help import protect,unprotect
+        prepared,replacements=protect('Automatic Auto Normal No',{'Auto':'Automatisch','No':'Nein'})
+        self.assertEqual(unprotect(prepared,replacements),'Automatic Automatisch Normal Nein')
 from tools.align_help_terminology import restore_instruction_format
 from tools.translate_help import unprotect
 

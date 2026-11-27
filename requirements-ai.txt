@@ -1,0 +1,4 @@
+# Inference only. Model-export Torch dependencies are never shipped.
+onnxruntime==1.31.0
+numpy==2.5.4
+av==19.0.2

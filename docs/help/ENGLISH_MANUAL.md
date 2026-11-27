@@ -61,7 +61,11 @@ Support The Project — [chapter:support_the_project]
 
 Each side of the window is an independent folder browser. Use Browse, the folder tree, the path box, or Up to choose folders. Click inside a pane to make it active.
 
-View > Appearance and text size offers System, Light, Dark, and High contrast themes plus 100%, 125%, 150%, 175%, and 200% interface scaling. Changes preview immediately throughout existing controls. Save keeps the choice for future launches, Cancel or closing the window restores the previous settings, and Restore system default returns to the operating-system theme at 100%. These settings change only presentation, never media or library data.
+Both folder trees reopen visibly every time the app starts, even if a tree was previously collapsed. Drag the divider beside either tree towards the left to hide it during the current session; drag it right to reveal it again. Each side is independent.
+
+View > Appearance and text size offers System, Light, Dark, and High contrast themes plus 100%, 125% and 150% interface scaling. Changes preview immediately throughout existing controls. Save keeps the choice for future launches, Cancel or closing the window restores the previous settings, and Restore system default returns to the operating-system theme at 100%. These settings change only presentation, never media or library data.
+
+175% and 200% are no longer offered on Windows or Linux. A saved unsupported scale returns to 100% at startup.
 
 Each pane has its own compact Explorer-style navigation strip: ← goes Back, → goes Forward, ↑ opens the parent folder, and ↻ Refreshes the folder tree and current scan. Opening a different folder after going Back starts a new forward history from that point.
 
@@ -77,7 +81,7 @@ Use the view selector at the top of either pane, or the View menu, to switch tha
 
 The thumbnail grid measures the actual browser width before its first render and reflows automatically when a pane or the folder/browser divider is resized. In Paged mode, page 1 therefore uses the same column count as later pages for a given pane width and thumbnail size. In Continuous mode, resizing recalculates the virtual rows without constructing the whole collection. Roll the mouse wheel anywhere over a thumbnail pane—including over a card, image, or filename—to scroll that pane up and down; the two panes scroll independently.
 
-In Details mode, the default order is Name, Codec, Resolution, Video length, File size, MB/min, FPS, Date modified, Type, Bitrate, Audio, HDR, Megapixels, Label, Tags, and Rating. Drag the divider between headers to resize a column by any amount; the horizontal-resize cursor shows when the divider is ready. Drag a header itself to reorder it—no keyboard modifier is required. A simple header click still sorts. Columns keep their chosen widths and the horizontal scrollbar reaches fields outside the pane. For precise control, choose View > Configure columns or right-click a header; the Columns window can move fields, set exact widths, and restore defaults. Existing personally arranged and saved column orders are preserved. Long recursive paths are shortened in the middle so the filename remains visible.
+Default column order: Name (relative path) → Resolution → Video length → Codec, then the remaining fields. Only the former exact default migrates; saved custom orders remain. Drag the divider between headers to resize a column by any amount; the horizontal-resize cursor shows when the divider is ready. Drag a header itself to reorder it—no keyboard modifier is required. A simple header click still sorts. Columns keep their chosen widths and the horizontal scrollbar reaches fields outside the pane. For precise control, choose View > Configure columns or right-click a header; the Columns window can move fields, set exact widths, and restore defaults. Existing personally arranged and saved column orders are preserved. Long recursive paths are shortened in the middle so the filename remains visible.
 
 Video thumbnails are sampled 15% into the clip to avoid unrepresentative opening frames. If duration metadata is unavailable, the application uses a one-second fallback. Generated thumbnails are cached for faster repeat browsing.
 
@@ -202,7 +206,7 @@ See also: [chapter:scanning_and_filtering] · [chapter:details_and_thumbnails] �
 
 Tools > Find duplicates finds exact matches in stages. Same-size files receive a quick fingerprint sampled from the beginning, middle, and end; only matching candidates are then read completely and verified with SHA-256. Both fingerprints are retained in the SQLite cache while path, size, and modification time remain unchanged, making later searches much faster. Progress appears in the active pane status line. The review window shows two copies side by side with paths, dates, and retention labels. A strategy only selects proposed redundant files—it never deletes them automatically. Compare selected shows two chosen files and their technical metadata.
 
-Tools > Find visually similar images detects resized, lightly recompressed, and otherwise visually close images even when their files are not byte-for-byte identical. Choose Visible or All scanned and a tolerance from 0–16; lower values are stricter and 6 is the default. The 64-bit difference hashes are cached against path, size, and modification date, and a BK-tree keeps matching practical on large collections. Results are estimates and open in a review-only window with previews and a Select this group action. The tool never deletes or changes files; review every proposed group before using normal file actions.
+Tools > Find visually similar images detects resized, lightly recompressed, and otherwise visually close images even when their files are not byte-for-byte identical. Choose Visible or All scanned and a tolerance from 0–16; lower values are stricter and 6 is the default. The 64-bit difference hashes are cached against path, size, and modification date, and a BK-tree keeps matching practical on large collections. Results are estimates and open in the same paired-preview review used by Find Duplicates. Keep First, Newest, Oldest, Smallest or Largest selects the other visible images in the source pane after a warning; nothing is deleted from the review window. Similar groups can include indirect matches, so different photographs, edits or crops may be selected. Clear selection removes the source-pane selection. The tool never deletes or changes files; review every proposed group before using normal file actions.
 
 USING THE REVIEW TOOLS
 
@@ -214,47 +218,95 @@ To compare a pair directly, clear unwanted ticks, select exactly two files in on
 
 ## Video Conversion
 
-Use Tools > Convert selected videos… to create new video files with a different codec, container or resolution. The originals are retained. Choose a small sample first so you can compare its quality, playback compatibility, file size and conversion time before processing a large group.
+Use Tools > Convert selected videos to create new files while keeping your originals. Tick or highlight videos in the active pane, open the converter, choose a preset and destination, inspect the preview and confirm Start conversion. Test a small sample before a long batch. The converter works independently: no Shutter, Python installation, online service or runtime model download is required by the packaged app.
 
-CONVERT ONE OR MORE VIDEOS
+GROUPED PRESETS AND FINAL SIZE
 
-1. Open the source folder in either pane. Enable Include subfolders if the videos are spread across its subfolders, and wait for scanning to finish.
-2. Tick the videos to convert. If there are no ticks, the command uses highlighted files instead. Clear unwanted ticks first: a ticked file hidden by a filter still belongs to the action group. Images in the group are ignored by this command.
-3. Choose Tools > Convert selected videos….
-4. Choose Preset, Resolution, Quality (CRF) and Encoding engine as described below.
-5. Check Output folder. It initially points to the other pane's folder; use Browse… or enter a different destination if required. Check Preserve folders relative to the active pane to retain the source subfolder structure beneath that destination.
-6. Choose Skip existing or Keep both. Click Refresh preview after changing the destination, folder preservation or existing-file policy. Read every Source and Output path and check the Status column. Only Ready rows will run.
-7. Click Start conversion… and review the confirmation before agreeing. Watch the progress and per-file Result. When finished, open a converted file and check it before deciding what to do with the original.
+Presets are grouped by final height: 360p, 540p, 720p, 1080p and 2160p. Each group offers H.264 MP4 (compatible), H.264 MKV (compatible), H.265 MP4 (smaller), H.265 MKV (smaller), AV1 MP4 (smallest) and AV1 MKV (smallest). Then come six Keep source choices, followed by Remux to MP4 and Remux to MKV. Output size is read-only because the preset controls it; aspect ratio and orientation are preserved. A fixed height can enlarge smaller input. The smaller/smallest descriptions are typical trade-offs, not promises that every output will be smaller. H.264 is widely compatible; check player and device support for H.265 or AV1. MP4 and MKV are containers, not codecs.
 
-CHOOSING A PRESET
+ORDINARY RESIZING AND OPTIONAL AI
 
-H.264 MP4 (compatible): a useful choice when broad player/device compatibility matters.
-H.265 MP4 (smaller): HEVC encoding, which can reduce file size but needs a compatible player.
-AV1 MKV (smallest): AV1 encoding in an MKV container; check playback support and conversion speed on your computer.
-720p H.264 proxy: a lower-resolution H.264 copy useful for quicker browsing or review. Selecting this preset sets Resolution to 720p; you can change it before starting.
-Remux to MKV (no re-encoding): copies the existing streams into MKV. It does not change the video codec, resolution or quality, and is not a way to convert H.264 to H.265. Re-encoding preset names are not a guarantee that every output will be smaller than its source.
+Ordinary resizing is the default. It changes dimensions without inventing missing detail. Fast enhancement (no AI) adds high-quality Lanczos scaling and light sharpening in a single streaming conversion, without temporary frame images or an AI working folder. It emphasises existing detail rather than reconstructing missing detail. Encoding hardware is selected separately; no Vulkan or libplacebo dependency is required. Audio tracks, subtitles and chapters are mapped to the output; unsupported subtitle/container combinations fail rather than being silently dropped. Choose MKV to retain subtitle formats that MP4 cannot represent. AI Photo fast offers the compact photo model for optional quicker AI enlargement; the existing AI Video and Animation choices are retained. When a source is smaller than the preset, choose AI Video 2× or AI Video 4× for real-world footage, or AI Animation 2× or AI Animation 4× for drawn/animated material. AI can introduce artefacts, so compare a sample. The multiplier describes an intermediate AI enlargement; the selected preset still determines the final height. For example, a 540p source with AI Video 2× and a 720p preset goes through an intermediate 1080p result and finishes at 720p. If the target exceeds the intermediate size, the preview identifies an additional ordinary enlargement. The standard video 2× model doubles each frame’s width and height directly; the High quality (slower) option uses a 4× model before reducing the result. Files already at or above the requested height use ordinary resizing. Keep source and remux do not apply AI. AI currently supports known-timing SDR 8-bit video; choose ordinary conversion for HDR or high-bit-depth material.
 
-RESOLUTION AND QUALITY
+Standard Animation 2× uses a native 2× model trained on compressed animation; fine lines and textures can change. Animation 2× High quality (slower) retains the previous 4× then reduction method; better quality is not guaranteed.
 
-Keep source resolution retains the original frame dimensions when re-encoding. 1080p and 720p set the output HEIGHT to 1080 or 720 pixels while preserving the aspect ratio; they are not maximum-width or automatic downscale-only settings. For example, a 3840 × 2160 video becomes 1920 × 1080 at 1080p. A smaller source can be enlarged, which does not restore missing detail. Portrait videos keep their proportions rather than becoming landscape.
+AI HARDWARE, ENCODING AND QUALITY
 
-Quality (CRF) accepts whole numbers from 18 to 35; the default is 23. Lower numbers request higher quality and usually larger files. Hardware engines map this value to their own quality control, so equal values need not produce identical results across engines. Try a sample. Remux ignores quality, resizing and acceleration.
+AI processing hardware and Encoding engine control different stages. Automatic AI selection tests compatible NVIDIA, AMD or Intel graphics and uses GPU inference where supported; CPU (slower) is the bundled fallback. You can choose a detected GPU or CPU explicitly. If Automatic loses GPU support during processing it can retry on CPU; the status reports this, and processing restarts from the source to keep one consistent backend throughout the video. An explicit unavailable GPU reports failure. The app never silently replaces a requested AI mode with ordinary resizing when AI is required.
 
-ENCODING AND DECODING
+Encoding engine controls the final H.264/H.265/AV1 output. Automatic tries supported NVIDIA NVENC, Intel Quick Sync, AMD AMF or Linux VA-API and falls back to Software / CPU when necessary. NVENC accelerates encoding; it is not the AI model processor. Hardware detection is not a guarantee that every codec works on that device. An explicitly selected encoder reports failure if unsupported. Use hardware decoding controls reading the original for ordinary conversion and may retry software decoding. Quality (CRF) accepts 18 to 35; lower values generally request higher quality/larger files, and hardware quality controls need not be identical. Remux ignores quality, resizing and acceleration.
 
-Automatic (recommended) tries available hardware encoding options and falls back through alternatives to Software / CPU if necessary. Software / CPU uses the processor. NVIDIA NVENC, Intel Quick Sync, AMD AMF and Linux VA-API are offered where supported for the chosen preset. The detection summary reports FFmpeg support; the selected hardware and drivers must also work. An explicitly selected hardware engine reports failure instead of silently switching to a different encoder.
+DESTINATION, NAMES AND PREVIEW
 
-Use hardware decoding when available controls reading the source independently of the output encoder. If a requested hardware decoder cannot start, decoding is retried in software while keeping the chosen encoder. Uncheck it when you want software decoding. These settings do not change the original file.
+Output folder initially uses the folder containing the first selected video. Browse opens there, or at the destination you subsequently entered. On Windows, Drives lists all drive letters; Up from a drive root returns to This PC so you can choose another drive without typing it. On Linux, Locations lists the file system, home and mounted locations, and Up from the file-system root returns to that list. Open accepts a typed path, Up opens the parent, double-click or Enter opens a listed folder or drive, and New folder creates and opens a child of the path currently shown. Select folder confirms; Cancel keeps the prior destination. Preserve folders starts unticked, even when the active pane includes subfolders. Tick it only when you want to retain source subfolder paths below the output destination.
 
-OUTPUT NAMES, PROGRESS AND CANCELLATION
+Filename prefix and suffix surround the original filename stem. The default suffix is " - converted". For holiday.mkv, prefix "done_", suffix "_small" and an MP4 preset produce done_holiday_small.mp4. Clear either field to omit it. Reserved filename/path characters are rejected. Skip existing retains the target; Keep both chooses a numbered filename. Preview updates automatically. Use the horizontal scrollbar or double-click a row for full paths, source/AI/final dimensions, approximate temporary space and result details. Only Ready rows run.
 
-New filenames include a preset suffix and, when chosen, the output resolution. Skip existing leaves an existing target alone. Keep both uses a numbered filename instead of replacing it. Check the preview for skipped files, duplicate output names or other problems before starting.
+IMPORTANT: PROCESSING TIME AND DRIVE SPACE
 
-Videos are processed one at a time. Cancel conversion stops the current conversion, removes its unfinished output and stops the remaining queue. Completed outputs remain. Closing this conversion window also requests cancellation. Its queue is separate from Tools > Transfer queue…, which manages copying and moving.
+Selecting AI shows a warning: AI upscaling keeps a lossless timed intermediate on the working drive. CPU frames are enhanced directly in memory; GPU processing uses small batches of temporary frame images that are removed as processing advances. Longer videos still need space for the complete lossless intermediate and the final output. It can heavily load CPU/GPU and take much longer than ordinary conversion; 4× generally costs substantially more than 2×. CPU fallback can be very slow. Before starting, the confirmation shows an approximate conservative space requirement and temporary location inside the selected AI working folder. Files are processed one at a time, so the estimate is the largest single-file requirement rather than the whole batch total. Free space is checked before and during processing. Insufficient space stops the job; the estimate is not a guarantee against other programs filling the drive. Ordinary enlargement also asks for confirmation because it cannot restore lost detail.
 
-EXAMPLE: H.264 TO H.265 AT 1080p
+Stages report AI upscaling with timed-video preparation, then Encoding, with stage/queue progress and average FPS where measurable. AI FPS and encoding FPS measure different work and are not directly comparable. Unknown intermediate percentages are not displayed as a false completion time. Success is reported only after output validation and safe publication.
 
-Tick a few H.264 videos, open Tools > Convert selected videos…, choose H.265 MP4 (smaller), set Resolution to 1080p, leave Quality (CRF) at 23 for an initial trial, and choose Automatic (recommended). Choose an output folder, click Refresh preview, inspect the paths, then Start conversion…. Compare the finished copies with the originals; adjust quality or resolution and test again if needed.
+AI working folder is separate from Output folder. It starts at the system temporary folder; Browse working folder can choose any existing folder or create a new one, including on another drive. For example, use a fast C: folder for extracted/enlarged frames and the lossless intermediate, while saving finished files to F:. A blank field uses the system temporary folder. Each job creates a uniquely named temporary subfolder and removes only that subfolder after success, cancellation or failure; unrelated files in the working folder are retained. Space checks and temporary estimates refer to the working drive. The encoded unfinished/final file stays on the output drive, which also needs sufficient free space. Ordinary conversion does not use the AI working folder.
+
+Activity starts immediately during preparation and model loading. GPU progress counts saved frames before a batch finishes; unknown progress has no invented percentage or completion time.
+
+CANCELLATION, REMUX AND EXAMPLES
+
+Cancel conversion or closing its window requests cancellation. Active owned subprocesses are stopped before unfinished output and temporary frames are removed; originals and previously completed outputs remain. A target created by another process during conversion is retained rather than overwritten. This queue is separate from Tools > Transfer queue, which manages copies and moves.
+
+Example: choose 1080p H.265 MP4 (smaller), ordinary resizing, an output folder and a suffix; compare a sample for quality and playback before processing more. For a 360p animation that you want at 720p, choose 720p AV1 MKV (smallest) and AI Animation 2×, review the hardware and space warning, then compare the result.
+
+Remux to MP4 or MKV copies streams without re-encoding. It does not turn H.264 into H.265 or alter resolution/quality. Compatible H.264/H.265 MKV can be remuxed to MP4; incompatible subtitles, audio or attachments cause a clear failure instead of silent removal. Double-click the row for full details. Remux FPS describes stream-copy throughput, not AI speed.
+
+While an image or video conversion is active, Quit or the main window Close button asks for confirmation; No is selected by default and leaves conversion running. Yes cancels all active conversions and keeps the app open until their processes stop and owned temporary working files and unfinished outputs have been removed. Closing an active conversion dialog also asks first and waits for that job to stop. Originals, completed outputs and unrelated files in the working folder are retained.
+
+Display: click again to close. Completed still outputs or sampled AI frames retain full resolution, without reduced JPEGs. Fit to window scales with the window; 100% shows native pixels with scrollbars. Full screen: F11, button or double-click; Escape exits. The viewer opens beside the dialog or in its upper area, keeping progress visible. Closed: no snapshots. Open: latest frame only, sampled at most about once/second; full-quality copying uses disk I/O and memory. AI frames precede final encoding/effects; ordinary/Fast video has no live frames.
+
+Conflicting output filenames are highlighted. Start offers Rename/Replace/Folder/Skip. Replace needs explicit approval; selected inputs and hardlink aliases are protected. The old output stays until success; unexpected destination changes are preserved and recovery backups reported. Both dialogs fit options to the screen when possible, with scrollbars only as needed. The wheel over options, including drop-downs, scrolls without changing values; Shift+wheel scrolls horizontally.
+
+Optional effects: Denoise / Sharpen / Smooth / Contrast boost / Colour boost; Light / Medium / Strong. All default off. Conventional CPU FFmpeg filters run during final encoding, after AI; GPU encoding remains possible. Effects are disabled for remux. In Fast mode, explicit Sharpen replaces the existing sharpening pass, avoiding double sharpening.
+
+## Image Conversion and Enhancement
+
+OPENING AND OUTPUT SIZE
+
+Select still images in the active pane and choose Tools > Convert / enhance images. JPEG, PNG, WebP, BMP, TIFF and single-frame GIF inputs are supported when Pillow can decode them; animated or multi-page images are excluded rather than silently flattened. Originals are always retained. Review Status, Source, Output and Size/result before starting; double-click a row for full details.
+
+Output size offers Original size, 50%, 200%, 400%, long-edge presets of 1280, 1920, 2560 or 3840 pixels, and Custom long edge up to 32768 pixels. Aspect ratio is preserved. Portrait images remain portrait. EXIF orientation is applied to the pixels so an image does not rotate unexpectedly. The requested final dimensions are shown in the preview; an AI intermediate can be larger.
+
+AI PHOTO RESTORATION AND DETAIL
+
+Ordinary resizing is the default and does not use AI. AI Photo fast uses a compact Real-ESRGAN photo model with medium noise reduction for quicker enhancement. AI Photo restore/detail retains the original larger model. Both use the same offline CPU/Vulkan engines and can change fine textures; compare a sample to choose. Choose 2× or 4× as the AI intermediate, and Original size when you want restoration/detail enhancement without a larger final picture. Choose a larger output size when you also want enlargement. AI Illustration is intended for drawn/cartoon material. No Shutter, Python installation, internet service or paid engine is needed.
+
+AI enhancement estimates plausible texture; it cannot prove or recover the original lost detail and can change faces, lettering or fine patterns. Compare a sample with the original. Old photographs can benefit from this enhancement and the standard contrast/denoise filters, but dedicated scratch removal, face-repair models and black-and-white colourisation are not included.
+
+STANDARD EFFECTS
+
+Denoise uses a median filter to reduce small speckles. Smooth applies a gentle blur to soften noise or texture. Sharpen uses an unsharp mask to emphasise existing edges. Auto contrast expands the tonal range and can improve faded contrast. Colour boost increases existing colour saturation; it does not colourise a black-and-white photograph.
+
+Tick any combination. Effect strength offers Light, Medium and Strong. These are conventional image filters, separate from AI; they also work with Ordinary resizing. Processing order is denoise, smoothing, auto contrast, colour boost and sharpening after final resizing. For an old scan, try AI Photo restore/detail at Original size with Light denoise and Auto contrast. For a soft photograph, try AI restoration and Light sharpening. Avoid strong sharpening plus smoothing unless a sample looks better.
+
+FORMAT, TRANSPARENCY AND NAMES
+
+JPEG produces a broadly compatible compressed picture; PNG preserves transparency and avoids lossy output compression; WebP supports transparency with compressed output. JPEG/WebP quality ranges from 1 to 100, default 92. JPEG flattens transparency onto white. Alpha is resized separately and retained for PNG/WebP, including after AI. RGB ICC colour profiles are retained when compatible; other EXIF metadata, including location, is not copied. This is an 8-bit image tool, not a RAW/HDR photo workflow.
+
+Output folder initially uses the first selected image folder. Browse output opens the drive-aware folder chooser; New folder creates a child folder. Prefix and suffix surround the original filename stem; the default suffix is " - converted". Preserve folders relative to active pane starts unticked. Skip existing retains the existing target; Keep both chooses a numbered name. Output must not be the original source path.
+
+WORKING DRIVE, PROGRESS AND CANCELLATION
+
+AI working folder defaults to the system temporary folder and is independent of Output folder. A fast, spacious C: working folder can be used while finished images go to F:. Only uniquely named owned job subfolders are cleaned after completion, cancellation or failure; unrelated files remain. Ordinary resizing/effects ignore the AI working field.
+
+Automatic AI hardware uses a compatible Vulkan GPU when available and can fall back to CPU; explicit hardware must be available. CPU can be slow. Estimates and free-space checks apply to the working drive; encoded output also needs space on the output drive. AI intermediates and requested outputs above 320 million pixels are rejected; use ordinary resizing to create a smaller copy first. Very large images and unusual formats need individual testing.
+
+The current-file bar runs while a stage has no measurable percentage; overall progress advances by completed images. Cancel conversion or closing the dialog stops the owned job and removes unfinished output. Completed outputs and originals remain. Review failed/skipped rows rather than assuming every selected image succeeded. Compare a small representative sample before starting a large batch.
+
+While an image or video conversion is active, Quit or the main window Close button asks for confirmation; No is selected by default and leaves conversion running. Yes cancels all active conversions and keeps the app open until their processes stop and owned temporary working files and unfinished outputs have been removed. Closing an active conversion dialog also asks first and waits for that job to stop. Originals, completed outputs and unrelated files in the working folder are retained.
+
+Display: click again to close. Completed still outputs or sampled AI frames retain full resolution, without reduced JPEGs. Fit to window scales with the window; 100% shows native pixels with scrollbars. Full screen: F11, button or double-click; Escape exits. The viewer opens beside the dialog or in its upper area, keeping progress visible. Closed: no snapshots. Open: latest frame only, sampled at most about once/second; full-quality copying uses disk I/O and memory. AI frames precede final encoding/effects; ordinary/Fast video has no live frames.
+
+Conflicting output filenames are highlighted. Start offers Rename/Replace/Folder/Skip. Replace needs explicit approval; selected inputs and hardlink aliases are protected. The old output stays until success; unexpected destination changes are preserved and recovery backups reported. Both dialogs fit options to the screen when possible, with scrollbars only as needed. The wheel over options, including drop-downs, scrolls without changing values; Shift+wheel scrolls horizontally.
 
 ## Exporting a Media Report
 
@@ -481,3 +533,11 @@ RATINGS AND OPTIONAL REMINDERS
 After five launches across at least three days, the app may invite you to rate it in Microsoft Store. Later postpones the request by ten launches. The optional coffee reminder begins at launch 11 and repeats every 11 launches only after Maybe later. Don't ask again disables either reminder; Tools > Reminders can re-enable it. A page opens only after you press its explicit button.
 
 Choose Tools > Reminders… to control the rating and support prompts separately. Tick a prompt to enable it or untick it to disable it, then Save. Cancel leaves the current choices unchanged.
+
+### Batch conversion output beside each source
+
+In image or video conversion, select **Same as source** under **Output folder** to save each converted file in its own original folder. This also works when a batch contains files from several folders. The output folder and Preserve folders controls are disabled while this option is selected; clearing it restores the chosen output folder. Review the output paths in the table before starting. Filename prefixes/suffixes and existing-file conflict choices still apply; source files remain protected.
+
+### Selecting visually similar alternatives for removal
+
+For visually similar images, choose Tools > Find visually similar images…, select Scope: Visible or All scanned, set Similarity tolerance (0–16), and click Start. Begin with 6; lower is stricter. Compare the paired previews, paths, dates, sizes and hash differences. Choose Keep First, Newest, Oldest, Smallest or Largest to keep one image per group and select the other visible images in the source pane. Confirm the similarity warning. This clears any previous ticked action selection. Hidden or filtered files are not selected. Inspect the highlighted images carefully, then use the main window’s Delete action to move only the selected alternatives to the Recycle Bin / Trash. Similarity is an estimate and a group may include indirect matches or unique photos, crops and edits. Clear selection removes the proposed selection.

@@ -1,6 +1,9 @@
 param(
     [switch]$SkipBuild,
-    [string]$ReviewedExecutable
+    [string]$ReviewedExecutable,
+    [string]$SourceSnapshot,
+    [string]$LicenseDirectory,
+    [string]$ReviewedEvidence
 )
 
 $ErrorActionPreference = "Stop"
@@ -16,8 +19,16 @@ if ($ReviewedExecutable) {
     # Package the exact reviewed bytes rather than silently rebuilding them.
     $SkipBuild = $true
     $ReviewedExecutable = (Resolve-Path -LiteralPath $ReviewedExecutable).Path
-    python (Join-Path $ProjectDirectory 'tools/verify_english_review.py') $ReviewedExecutable
-    if ($LASTEXITCODE -ne 0) { throw 'Reviewed executable does not match maintained source/resources.' }
+    if ($ReviewedEvidence) {
+        $Evidence = Get-Content -Raw -LiteralPath $ReviewedEvidence | ConvertFrom-Json
+        if ((Get-FileHash -LiteralPath $ReviewedExecutable).Hash -ne $Evidence.binarySha256) { throw 'Reviewed binary changed' }
+        foreach ($Property in $Evidence.sourceSha256.PSObject.Properties) {
+            if ((Get-FileHash -LiteralPath (Join-Path $ProjectDirectory $Property.Name)).Hash -ne $Property.Value) { throw "Reviewed source changed: $($Property.Name)" }
+        }
+    } else {
+        python (Join-Path $ProjectDirectory 'tools/verify_english_review.py') $ReviewedExecutable
+        if ($LASTEXITCODE -ne 0) { throw 'Reviewed executable does not match maintained source/resources.' }
+    }
 }
 if (-not $SkipBuild) {
     & (Join-Path $ProjectDirectory "build_windows.ps1")
@@ -45,8 +56,16 @@ New-Item -ItemType Directory -Path (Join-Path $PortableDirectory "licenses\pytho
 
 $VersionedExe = Join-Path $PortableDirectory "ResolutionFileManager-$Version.exe"
 Copy-Item -LiteralPath $BuiltExe -Destination $VersionedExe
-Copy-Item -LiteralPath README.md, WINDOWS_RELEASE.md, $ReleaseNotes, LICENSE, THIRD_PARTY_NOTICES.md, PRIVACY.md, CHANGELOG.md -Destination $PortableDirectory
+foreach ($Name in @('README.md','WINDOWS_RELEASE.md',"RELEASE_NOTES_$Version.md",'LICENSE','THIRD_PARTY_NOTICES.md','PRIVACY.md','CHANGELOG.md')) {
+    $Doc = if ($SourceSnapshot) { Join-Path $SourceSnapshot $Name } else { Join-Path $ProjectDirectory $Name }
+    Copy-Item -LiteralPath $Doc -Destination $PortableDirectory
+}
 
+if ($LicenseDirectory) {
+    foreach ($Entry in Get-ChildItem -LiteralPath $LicenseDirectory) {
+        Copy-Item -LiteralPath $Entry.FullName -Destination (Join-Path $PortableDirectory 'licenses') -Recurse -Force
+    }
+} else {
 $FfmpegPath = (Get-Command ffmpeg -ErrorAction Stop).Source
 $FfmpegRoot = Split-Path (Split-Path $FfmpegPath -Parent) -Parent
 Copy-Item -LiteralPath (Join-Path $FfmpegRoot "LICENSE") -Destination (Join-Path $PortableDirectory "licenses\ffmpeg\LICENSE")
@@ -72,10 +91,15 @@ foreach ($Entry in $PythonLicenceMap.GetEnumerator()) {
 $PythonRoot = python -c "import sys; print(sys.base_prefix)"
 Copy-Item -LiteralPath (Join-Path $PythonRoot 'LICENSE.txt') -Destination (Join-Path $PortableDirectory 'licenses/python-components/Python.txt')
 Copy-Item -LiteralPath (Join-Path $PythonRoot 'tcl/tk8.6/license.terms') -Destination (Join-Path $PortableDirectory 'licenses/python-components/Tcl-Tk.txt')
+}
 
 $SourceDirectory = Join-Path $ReleaseRoot "ResolutionFileManager-$Version-Source"
-python (Join-Path $ProjectDirectory "tools\project_snapshot.py") create "$SourceDirectory"
-if ($LASTEXITCODE -ne 0) { throw "Complete source export failed." }
+if ($SourceSnapshot) {
+    Copy-Item -LiteralPath (Resolve-Path -LiteralPath $SourceSnapshot).Path -Destination $SourceDirectory -Recurse
+} else {
+    python (Join-Path $ProjectDirectory "tools\project_snapshot.py") create "$SourceDirectory"
+    if ($LASTEXITCODE -ne 0) { throw "Complete source export failed." }
+}
 $GeneratedPackagingDirectories = @(
     (Join-Path $SourceDirectory "packaging\microsoft-store\output"),
     (Join-Path $SourceDirectory "packaging\microsoft-store\stage")
@@ -92,8 +116,8 @@ foreach ($GeneratedDirectory in $GeneratedPackagingDirectories) {
 
 $PortableZip = Join-Path $ReleaseRoot "$PortableName.zip"
 $SourceZip = Join-Path $ReleaseRoot "ResolutionFileManager-$Version-Source.zip"
-Compress-Archive -LiteralPath $PortableDirectory -DestinationPath $PortableZip -CompressionLevel Optimal
-Compress-Archive -LiteralPath $SourceDirectory -DestinationPath $SourceZip -CompressionLevel Optimal
+Compress-Archive -LiteralPath $PortableDirectory -DestinationPath $PortableZip -CompressionLevel Fastest
+Compress-Archive -LiteralPath $SourceDirectory -DestinationPath $SourceZip -CompressionLevel Fastest
 Copy-Item -LiteralPath $VersionedExe -Destination (Join-Path $ReleaseRoot "ResolutionFileManager-$Version.exe")
 
 $ChecksumTargets = Get-ChildItem -LiteralPath $ReleaseRoot -File | Where-Object { $_.Extension -in '.exe', '.zip' } | Sort-Object Name

@@ -2,9 +2,15 @@
 
 A dual-pane media file manager with shared Windows/Linux source that scans images and videos, displays technical metadata, sorts and filters large collections, previews content, and performs reviewable file-management and conversion workflows. Linux binaries require a compatible Linux environment; see LINUX_INSTALL.txt for dependencies and test limitations.
 
-Current Windows version: 12.7.10. Linux 12.7.11 is a Mint 22.x / Ubuntu 24.04 review candidate; physical Mint desktop checks remain outstanding. Read PROJECT_STATUS.md first for current verification, release status and remaining work.
+Current Windows release: 13.1.4. Download the portable Windows package or use the Microsoft Store. Linux test packages are separate; this release does not publish a new Linux or macOS binary.
 
 The maintained development source is the established F: project directory. See DEVELOPMENT_WORKFLOW.md for complete verified snapshots, Git preparation, shared-source builds and preservation of older releases. The authoritative detailed English manual is docs/help/ENGLISH_MANUAL.md; Help completeness is checked before builds. See docs/RECOVERY_REPORT_2026-10-19.md for actual verification status.
+
+## Image and video enhancement
+
+See the [enhancement quick guide](docs/ENHANCEMENT_GUIDE.md) for step-by-step image and video conversion, Photo fast versus restore/detail and illustration modes, Fast video without AI, output sizes, GPU/CPU selection, working-drive space, progress and safe cancellation. The app's searchable Help contains the detailed instructions in all 43 languages.
+
+Version 13.1.4 includes offline AI enhancement, native 2× video/animation modes, automatic VBR compression, remembered conversion settings, and review/selection of visually similar images across subfolders. New conversion controls use English fallback where translations are unavailable.
 
 ## Download and support
 
@@ -67,13 +73,18 @@ Resolution File Manager is free software licensed under GNU GPL version 3 or lat
 - Read-only, cancellable full media-integrity verification with cached results, failed-file selection, and CSV reporting
 - Cancellable video contact-sheet export with evenly spaced frames, configurable layout, and optional timestamps
 - Frame-accurate previous/next preview controls and full-resolution current-frame PNG export
-- Review-only perceptual image matching with adjustable tolerance, cached hashes, and scalable BK-tree lookup
+- Perceptual image matching with reviewed keep/selection actions with adjustable tolerance, cached hashes, and scalable BK-tree lookup
 - Preview-first batch renaming with templates, find/replace, numbering, collision checks, transactional swaps, and whole-batch undo
 - Cancellable Selected/Visible/All-scanned media inventory export to CSV, structured JSON, or self-contained HTML
 - On-demand searchable image EXIF and video container/stream metadata viewer with clipboard and JSON export
 - Persistent System, Light, Dark, and High contrast themes with live 100–200% interface scaling and cancel rollback
 - Persistent preview-first folder organization rules with ordered conditions and safe transfer-queue execution
 - Preview-first sequential H.264/H.265/AV1/proxy/remux conversion with progress, cancellation, atomic outputs, and retained originals
+- Full-resolution optional conversion Display with Fit,100%,full screen and a second-click close toggle; image outputs and sampled AI-video frames retained at native quality
+- Clear conversion filename conflicts with Rename/Replace/Folder/Skip, guarded overwrite of approved converted outputs, and protected input files
+- Five optional video effects, responsive conversion options with mouse-wheel scrolling when needed, and Resolution/Video length immediately after Name in the default Details order
+- Offline image enhancement with Photo fast, Photo restore/detail and Illustration modes, original-size restoration or enlargement, JPEG/PNG/WebP output and optional standard effects
+- Fast streaming video scaling/sharpening without AI, plus optional photo/video/animation AI modes with separate processing/encoding hardware and working-drive controls
 - Full folder-tree and media refresh from View, F5, the toolbar, and browser/folder-tree right-click menus
 - Optional independent live filesystem updates in each pane, with recursive scope matching Include subfolders
 - Quiet, Balanced, and Fast performance profiles with interactive preview priority

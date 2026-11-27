@@ -1,0 +1,89 @@
+{
+  "LICENSE-libwebp.txt": {
+    "url": "https://raw.githubusercontent.com/webmproject/libwebp/main/COPYING",
+    "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+  },
+  "LICENSE-stb.txt": {
+    "url": "https://raw.githubusercontent.com/nothings/stb/master/LICENSE",
+    "sha256": "bebfe904b14301657e4e5d655c811d51fd31b97c455b9cc2d8600d6bac6cff63"
+  },
+  "LICENSE-dirent.txt": {
+    "url": "https://raw.githubusercontent.com/tronkko/dirent/master/LICENSE",
+    "sha256": "2f414f6c48e8c25ffb5d03cddd6043b3b613187f758d0a6964ca2ad7ed749e50"
+  },
+  "COPYING-LGPL-2.1.txt": {
+    "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/master/COPYING.LGPLv2.1",
+    "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30"
+  },
+  "COPYING-LGPL-3.txt": {
+    "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/master/COPYING.LGPLv3",
+    "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+  },
+  "COPYING-GPL-2.txt": {
+    "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/master/COPYING.GPLv2",
+    "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+  },
+  "COPYING-GPL-3.txt": {
+    "url": "https://raw.githubusercontent.com/FFmpeg/FFmpeg/master/COPYING.GPLv3",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  },
+  "onnxruntime": {
+    "version": "1.31.0",
+    "source": "https://pypi.org/project/onnxruntime/1.31.0/"
+  },
+  "numpy": {
+    "version": "2.5.4",
+    "source": "https://pypi.org/project/numpy/2.5.4/"
+  },
+  "av": {
+    "version": "19.0.2",
+    "source": "https://pypi.org/project/av/19.0.2/"
+  },
+  "av_libraries": {
+    "libavutil": [
+      61,
+      1,
+      102
+    ],
+    "libavcodec": [
+      63,
+      1,
+      102
+    ],
+    "libavformat": [
+      63,
+      1,
+      102
+    ],
+    "libavdevice": [
+      63,
+      1,
+      102
+    ],
+    "libavfilter": [
+      12,
+      1,
+      102
+    ],
+    "libswscale": [
+      10,
+      1,
+      102
+    ],
+    "libswresample": [
+      7,
+      1,
+      102
+    ]
+  },
+  "avcodec_license": "LGPL version 3 or later",
+  "avcodec_configuration": "--disable-static --enable-shared --libdir=/tmp/vendor/lib --prefix=/tmp/vendor --disable-programs --disable-doc --disable-libxml2 --disable-lzma --disable-libtheora --disable-libfreetype --disable-libfontconfig --disable-libbluray --disable-libopenjpeg --disable-mediafoundation --enable-version3 --enable-alsa --enable-gnutls --enable-libdav1d --enable-libmp3lame --enable-libopus --enable-libsvtav1 --enable-libvmaf --enable-libvpx --enable-libwebp --enable-libxcb --enable-zlib --enable-libx265 --enable-libx264 --enable-nvenc --enable-nvdec --enable-amf --enable-libvpl --disable-encoder='avui,dca,mlp,opus,s302m,sonic,sonic_ls,truehd' --disable-decoder=sonic --disable-libjack --disable-indev=jack --disable-filter=gfxcapture",
+  "sources": {
+    "PyAV": "https://github.com/PyAV-Org/PyAV/tree/v19.0.2",
+    "PyAV_wheel_builds": "https://github.com/PyAV-Org/pyav-wheels",
+    "FFmpeg": "https://ffmpeg.org/download.html#get-sources",
+    "RealESRGAN": "https://github.com/xinntao/Real-ESRGAN",
+    "ncnn": "https://github.com/Tencent/ncnn",
+    "ONNXRuntime": "https://github.com/microsoft/onnxruntime"
+  }
+}

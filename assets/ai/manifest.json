@@ -1,0 +1,315 @@
+{
+  "schema": 1,
+  "engine_release": "Real-ESRGAN v0.2.5.0 / ncnn 20220424",
+  "model_source_commit": "a4abfb2979a7bbff3f69f58f58ae324608821e27",
+  "sources": {
+    "windows.zip": {
+      "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-windows.zip",
+      "sha256": "abc02804e17982a3be33675e4d471e91ea374e65b70167abc09e31acb412802d"
+    },
+    "linux.zip": {
+      "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesrgan-ncnn-vulkan-20220424-ubuntu.zip",
+      "sha256": "e5aa6eb131234b87c0c51f82b89390f5e3e642b7b70f2b9bbe95b6a285a40c96"
+    },
+    "video.pth": {
+      "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+      "sha256": "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1"
+    },
+    "animation.pth": {
+      "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-animevideov3.pth",
+      "sha256": "b8a8376811077954d82ca3fcf476f1ac3da3e8a68a4f4d71363008000a18b75d"
+    },
+    "LICENSE-RealESRGAN.txt": {
+      "url": "https://raw.githubusercontent.com/xinntao/Real-ESRGAN/a4abfb2979a7bbff3f69f58f58ae324608821e27/LICENSE",
+      "sha256": "4a699ec4863d96a91fc265948a0c90033f7e8735d515524dcf3444736406e0c2"
+    },
+    "LICENSE-ncnn-engine.txt": {
+      "url": "https://raw.githubusercontent.com/xinntao/Real-ESRGAN-ncnn-vulkan/master/LICENSE",
+      "sha256": "5abb941454de437b0e90d78dcb72e3688f74e14bcd4e24393273cb5cd0e9c937"
+    },
+    "LICENSE-onnxruntime.txt": {
+      "url": "https://raw.githubusercontent.com/microsoft/onnxruntime/main/LICENSE",
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    "LICENSE-ncnn.txt": {
+      "url": "https://raw.githubusercontent.com/Tencent/ncnn/master/LICENSE.txt",
+      "sha256": "7c974bac98848df46be1af5bdaa3c3c9c01f6082a90f55caeb7f60c6208aa255"
+    },
+    "rrdbnet_arch.py": {
+      "url": "https://raw.githubusercontent.com/XPixelGroup/BasicSR/master/basicsr/archs/rrdbnet_arch.py",
+      "sha256": "6aa8eb3f77e918b90eeff4ebfaf8745abe0c40eb8fcc03abbc1928693d70ab58"
+    },
+    "srvgg_arch.py": {
+      "url": "https://raw.githubusercontent.com/xinntao/Real-ESRGAN/a4abfb2979a7bbff3f69f58f58ae324608821e27/realesrgan/archs/srvgg_arch.py",
+      "sha256": "7419a75e789ca09295266563d74a6d7c08d6c24502af6b0a919b1811d0a0be59"
+    },
+    "LICENSE-BasicSR.txt": {
+      "url": "https://raw.githubusercontent.com/XPixelGroup/BasicSR/master/LICENSE.txt",
+      "sha256": "5447872f21ddc29dc0dc060d5c885513c01c904e9da9931bba69898a6fb4d415"
+    },
+    "realesr-general-x4v3.pth": {
+      "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth",
+      "sha256": "8dc7edb9ac80ccdc30c3a5dca6616509367f05fbc184ad95b731f05bece96292"
+    },
+    "realesr-general-wdn-x4v3.pth": {
+      "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-wdn-x4v3.pth",
+      "sha256": "1641f8c4464b9f097c9fdda5589273713f67cf59f3d909e0bd688f0cee269dca"
+    },
+    "RealESRGAN_x2plus.pth": {
+      "url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.1/RealESRGAN_x2plus.pth",
+      "sha256": "49fafd45f8fd7aa8d31ab2a22d14d91b536c34494a5cfe31eb5d89c2fa266abb"
+    },
+    "2xHFA2kAVCCompact.pth": {
+      "url": "https://github.com/Phhofm/models/releases/download/2xHFA2kAVCCompact/2xHFA2kAVCCompact.pth",
+      "sha256": "15dfd22c298465d07a7a0b0f82ec6ce3ef974812b96ecc16bef6dd834f5c4255"
+    },
+    "2xHFA2kAVCCompact_fp32.bin": {
+      "url": "https://github.com/Phhofm/models/releases/download/2xHFA2kAVCCompact/2xHFA2kAVCCompact_fp32.bin",
+      "sha256": "2f2afad600f4b95df3cc788fc4c3c4a188e0b121313734452eb28184c45ef06f"
+    },
+    "2xHFA2kAVCCompact_fp32_opset17.onnx": {
+      "url": "https://github.com/Phhofm/models/releases/download/2xHFA2kAVCCompact/2xHFA2kAVCCompact_fp32_opset17.onnx",
+      "sha256": "b29fd3d80e73554decd88136ac822cb0b93d66760eb135cf268624e2825231c7"
+    }
+  },
+  "files": {
+    "LICENSES/LICENSE-BasicSR.txt": {
+      "sha256": "5447872f21ddc29dc0dc060d5c885513c01c904e9da9931bba69898a6fb4d415"
+    },
+    "LICENSES/LICENSE-ncnn-engine.txt": {
+      "sha256": "5abb941454de437b0e90d78dcb72e3688f74e14bcd4e24393273cb5cd0e9c937"
+    },
+    "LICENSES/LICENSE-ncnn.txt": {
+      "sha256": "7c974bac98848df46be1af5bdaa3c3c9c01f6082a90f55caeb7f60c6208aa255"
+    },
+    "LICENSES/LICENSE-onnxruntime.txt": {
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    "LICENSES/LICENSE-RealESRGAN.txt": {
+      "sha256": "4a699ec4863d96a91fc265948a0c90033f7e8735d515524dcf3444736406e0c2"
+    },
+    "LICENSES/linux-README_ubuntu.md": {
+      "sha256": "d9cec056dd612c762e044ea3297e99f246471069f757281892f4f996adba4d86"
+    },
+    "LICENSES/windows-README_windows.md": {
+      "sha256": "2b882314a0c7a9f17a347b9b04f909939f6274aa96cf5b2ebba2f7ab75987480"
+    },
+    "linux/realesrgan-ncnn-vulkan": {
+      "sha256": "22c2296a39b40cc43ac92615c827ab6d4b60b7142e8cee59f718e3f8e2cdbda9"
+    },
+    "models/realesr-animevideov3-x2.bin": {
+      "sha256": "548a36f9c3f4ab8da56cd3b13badf23968bee207b396dad14d04b830e5f2ab2d"
+    },
+    "models/realesr-animevideov3-x2.param": {
+      "sha256": "b88ff4f00ebf019a7fdac17fdd45a7fd3665d37509efc5baf2e4da2e24420a04"
+    },
+    "models/realesr-animevideov3-x3.bin": {
+      "sha256": "548a36f9c3f4ab8da56cd3b13badf23968bee207b396dad14d04b830e5f2ab2d"
+    },
+    "models/realesr-animevideov3-x3.param": {
+      "sha256": "d1a5755008791d09b57e3425fc9dd0bd26b00fdf79c606210bc0e693f8230881"
+    },
+    "models/realesr-animevideov3-x4.bin": {
+      "sha256": "548a36f9c3f4ab8da56cd3b13badf23968bee207b396dad14d04b830e5f2ab2d"
+    },
+    "models/realesr-animevideov3-x4.param": {
+      "sha256": "850a248e7c14c27e5bd8cf7265113a9441036a7db63963bb8aa5169d788a435e"
+    },
+    "models/realesrgan-x4plus.bin": {
+      "sha256": "713ee713b0353afaa27976f0563a64a5043bd70b9bd8936c2e26e25ebcdbcddf"
+    },
+    "models/realesrgan-x4plus.param": {
+      "sha256": "35330ececcea33b6c397a72548e788d5d53becee4734c50b7fada36e89f10a86"
+    },
+    "windows/realesrgan-ncnn-vulkan.exe": {
+      "sha256": "07e49f7cbb4ede01ae4dd4c399d3a7e5846e3d2085c3128eff881e55cb7b1a0c"
+    },
+    "cpu/animation-x4.onnx": {
+      "sha256": "b049499657635ed280d15ef7aa644121f0a34b0c7fc4d0f95c3575d00295f1b1"
+    },
+    "cpu/video-x4.onnx": {
+      "sha256": "54b3a368e9b2783836ca3d2c3528cb0a5f5f12f853d230058f9079295371bc9a"
+    },
+    "LICENSES/COPYING-GPL-2.txt": {
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    "LICENSES/COPYING-GPL-3.txt": {
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "LICENSES/COPYING-LGPL-2.1.txt": {
+      "sha256": "246041b6ecf9bc32d718a62c57877c78b5eb397b6467e74ed7ae2626ab189c30"
+    },
+    "LICENSES/COPYING-LGPL-3.txt": {
+      "sha256": "da7eabb7bafdf7d3ae5e9f223aa5bdc1eece45ac569dc21b3b037520b4464768"
+    },
+    "LICENSES/LICENSE-dirent.txt": {
+      "sha256": "2f414f6c48e8c25ffb5d03cddd6043b3b613187f758d0a6964ca2ad7ed749e50"
+    },
+    "LICENSES/LICENSE-libwebp.txt": {
+      "sha256": "5aec868f669e384a22372a4e8a1a6cd7d44c64cd451f960ca69cc170d1e13acf"
+    },
+    "LICENSES/LICENSE-stb.txt": {
+      "sha256": "bebfe904b14301657e4e5d655c811d51fd31b97c455b9cc2d8600d6bac6cff63"
+    },
+    "LICENSES/RUNTIME-win32.json": {
+      "sha256": "d331f69f66e41c4cb4f185fab0fbebf80aa10ac07042fddc9ceb5dac76db9106"
+    },
+    "LICENSES/win32-av/AUTHORS.py": {
+      "sha256": "a69d8ff2559cf3da0e390c7d9f5f648d9db0333a00f9d4989a330a7180cca910"
+    },
+    "LICENSES/win32-av/AUTHORS.rst": {
+      "sha256": "2abfebe175cefe78fcb14db260a3c8972d3b52156f50dedd0bc416ac4f884a96"
+    },
+    "LICENSES/win32-av/LICENSE.txt": {
+      "sha256": "f32ebcb6007dcc05eea369b3820e6391b0a7ef1ed763f30f1aca15dfdbacbe96"
+    },
+    "LICENSES/win32-numpy/COPYING": {
+      "sha256": "aea41976c720f91bd19725c16916a1ace40eb1ea42620d340e587a5de4bbcea0"
+    },
+    "LICENSES/win32-numpy/dragon4_LICENSE.txt": {
+      "sha256": "b0fd592d4ead563148e3977e7b589169d46a5ef2ff133c755a81af880a3fc919"
+    },
+    "LICENSES/win32-numpy/LICENSE": {
+      "sha256": "d78dbb208b80d92b4d333e41a4baae50d12444f46e53199fa7726a91de6e2da7"
+    },
+    "LICENSES/win32-numpy/LICENSE.md": {
+      "sha256": "b4bc2f4fa1c95778f1ed3dd8f14706bece399475b978f9f34b5d3cd72521b48a"
+    },
+    "LICENSES/win32-numpy/LICENSE.txt": {
+      "sha256": "d544761558b510866c21f7e8a2d5716fca76e0b98117e3b6b86314db7244d150"
+    },
+    "LICENSES/win32-onnxruntime/LICENSE": {
+      "sha256": "c250d6278f0b47a6439fb7592b08b58a55eb9f535aa49a1db63211c3f982b674"
+    },
+    "LICENSES/win32-onnxruntime/ThirdPartyNotices.txt": {
+      "sha256": "c53a76501ef60db6f865f20599f220761201ac4057683acefdab37d861b86622"
+    },
+    "LICENSES/RUNTIME-linux.json": {
+      "sha256": "ebebba482859a0a7f54a137f383eb2430bbc70a6a20d84c541ea06849adf8340"
+    },
+    "LICENSES/linux-av/AUTHORS.py": {
+      "sha256": "0135d9b1e183663cf7179736b93524cc38fe7080f1383b1ce93614e6f244e18d"
+    },
+    "LICENSES/linux-av/AUTHORS.rst": {
+      "sha256": "15b3aeba291c0b560950a58fa3206e42009eb0409c1bc1ac91f8df49bb505977"
+    },
+    "LICENSES/linux-av/LICENSE.txt": {
+      "sha256": "76af0461ffb92e19f1c14449e95557d83a2dfaa1baf202d49e5f1d8746c0da19"
+    },
+    "LICENSES/linux-numpy/COPYING": {
+      "sha256": "3f2c1ffa76383a55ae0aac01c9737cd70050dff63e1f026694fbe9d662573c98"
+    },
+    "LICENSES/linux-numpy/dragon4_LICENSE.txt": {
+      "sha256": "f7b14309e5f54e5022b26448eefd419988ada2aec01d3c1162d84a0ea8f21f2c"
+    },
+    "LICENSES/linux-numpy/LICENSE": {
+      "sha256": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6"
+    },
+    "LICENSES/linux-numpy/LICENSE.md": {
+      "sha256": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f"
+    },
+    "LICENSES/linux-numpy/LICENSE.txt": {
+      "sha256": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec"
+    },
+    "LICENSES/linux-onnxruntime/LICENSE": {
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c"
+    },
+    "LICENSES/linux-onnxruntime/ThirdPartyNotices.txt": {
+      "sha256": "143764b952fdb1a7c69ce653bfba74a7744d6a8a573bfb73e235fba356c83de3"
+    },
+    "cpu/photo_fast-x4.onnx": {
+      "sha256": "9515f50ad9fba4ca2ebd82489c03c7980dc9227ad37dfd801e417aca6b76b75b"
+    },
+    "models/realesr-general-x4v3-medium.param": {
+      "sha256": "64f41840283f6c3e6624f9b2c384029b26ee3d70aaed7cbf87ffbe55f8ccda00"
+    },
+    "models/realesr-general-x4v3-medium.bin": {
+      "sha256": "0ebca4554182673fb34df3a0a1bd85d33dde6b5d6514524d31448b00c8f54a34"
+    },
+    "COMPACT_PHOTO.md": {
+      "sha256": "958deba043ffac76121d6b5ef4c82c32fd796476ee235562c2e0d7c55926aa50"
+    },
+    "models/realesrgan-x2plus.bin": {
+      "sha256": "ae32c8403851724a28ce21e3910ee9405808d74f7a25ecf531b61567af93ba1b"
+    },
+    "models/realesrgan-x2plus.param": {
+      "sha256": "0c99b12c4c0b161c1ad9ca8e38c5dc5a69b080355a795b5431f5deda7d559999"
+    },
+    "cpu/video_native-x2.onnx": {
+      "sha256": "c43d36d40ee04fcbf41d15a57b2343c8562a9ff824f26ba44c2cea1a579e6cff"
+    },
+    "NATIVE_VIDEO_2X.md": {
+      "sha256": "e0febb5edeaf05edb51da50afb40ac928ed3dd5edcc3f723be2e948ce75c4298"
+    },
+    "cpu/animation_native-x2.onnx": {
+      "sha256": "29c50642ce96cd5eff9f43d86520fe5c737fb88d58cf6db93d99acd2a3e6fe4f"
+    },
+    "models/realesr-animation-native-x2.param": {
+      "sha256": "2759ec3ef4c80c0148ed463353a6790544b6ac7e947815ac78bc582faaac8f24"
+    },
+    "models/realesr-animation-native-x2.bin": {
+      "sha256": "2f2afad600f4b95df3cc788fc4c3c4a188e0b121313734452eb28184c45ef06f"
+    },
+    "LICENSES/native-animation2/ATTRIBUTION.txt": {
+      "sha256": "5258cc681f09168b4ae5b19ed23259525089ad67fb1294cbea17a2531c9bd6ae"
+    },
+    "LICENSES/native-animation2/CC-BY-4.0.txt": {
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411"
+    },
+    "LICENSES/native-animation2/UPSTREAM_MODEL_CARD.md": {
+      "sha256": "210332f7c73aaac3d87067571f94281271503e9c8c9487cab94eaa03ce5b13bf"
+    }
+  },
+  "cpu_exports": {
+    "video": {
+      "source_weights_sha256": "4fa0d38905f75ac06eb49a7951b426670021be3018265fd191d2125df9d682f1",
+      "onnx_sha256": "54b3a368e9b2783836ca3d2c3528cb0a5f5f12f853d230058f9079295371bc9a",
+      "max_absolute_error": 2.6881694793701172e-05,
+      "opset": 17,
+      "native_scale": 4
+    },
+    "animation": {
+      "source_weights_sha256": "b8a8376811077954d82ca3fcf476f1ac3da3e8a68a4f4d71363008000a18b75d",
+      "onnx_sha256": "b049499657635ed280d15ef7aa644121f0a34b0c7fc4d0f95c3575d00295f1b1",
+      "max_absolute_error": 1.9073486328125e-06,
+      "opset": 17,
+      "native_scale": 4
+    }
+  },
+  "compact_photo": {
+    "model": "realesr-general-x4v3",
+    "architecture": "SRVGGNetCompact num_feat64 num_conv32 upscale4 PReLU",
+    "denoise_strength": 0.5,
+    "derivation": "0.5*general params + 0.5*weak-denoise params, following upstream DNI; FP32 stored weights in ONNX/NCNN",
+    "native_scale": 4,
+    "license": "BSD-3-Clause; upstream project license retained in LICENSES; no endorsement",
+    "source_commit": "a4abfb2979a7bbff3f69f58f58ae324608821e27",
+    "onnx_export": "opset17 dynamic spatial axes; PyTorch reference max abs error3.159046173095703e-06 on16x16 random input",
+    "ncnn_export": "tools/export_compact_ncnn.py; layout serializer reproduces existing anime binary byte-for-byte; FP16 GPU storage causes backend pixel differences",
+    "staging": "tools/stage_compact_photo.py verifies pinned export digests; source export probes retained locally; tools/export_compact_onnx.py exports from cached upstream weights"
+  },
+  "native_video_2x": {
+    "model": "RealESRGAN_x2plus",
+    "native_scale": 2,
+    "source_url": "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.1/RealESRGAN_x2plus.pth",
+    "source_sha256": "49fafd45f8fd7aa8d31ab2a22d14d91b536c34494a5cfe31eb5d89c2fa266abb",
+    "license": "BSD-3-Clause; existing Real-ESRGAN licence retained in LICENSES",
+    "cpu_onnx_max_absolute_error": 3.635883331298828e-06,
+    "ncnn_derivation": "Original RRDB graph with official x2 weights; pixel-unshuffle2 and first3x3 convolution fused equivalently into6x6stride2pad2 convolution for existing engine compatibility; FP32 stored weights",
+    "exporter": "tools/export_native_2x.py",
+    "scope": "AI Video2x only; still-image restore/detail and video4x unchanged"
+  },
+  "native_animation_2x": {
+    "model": "2xHFA2kAVCCompact",
+    "author": "Philip Hofmann",
+    "license": "CC BY 4.0",
+    "source_release": "https://github.com/Phhofm/models/releases/tag/2xHFA2kAVCCompact",
+    "tag_commit": "c664eb51194ec40fc9f4e258f0980681178e85c2",
+    "native_scale": 2,
+    "attribution": "LICENSES/native-animation2/ATTRIBUTION.txt",
+    "license_text": "LICENSES/native-animation2/CC-BY-4.0.txt",
+    "scope": "Standard AI Animation2x video only; animation_hq_2x retains previousanimevideov3; still-imageIllustration and4x unchanged",
+    "conversion": "tools/export_or_stage_native_animation.py; nativeSRVGGPixelShuffle2,FP32CPU/NCNN; finalClip represented as equivalent MAX0/MIN1; CPUquantisedpixels matchofficialFP32ONNX inreferencecases",
+    "reference_report": "docs/ANIMATION_NATIVE_2X_2026-10-23.json"
+  }
+}

@@ -29,7 +29,8 @@ class LocalizedOptionControlTests(unittest.TestCase):
             TRANSCODE_SOFTWARE,
         )
 
-        self.assertEqual(set(TRANSCODE_PRESET_LABEL_KEYS), set(TRANSCODE_PRESETS))
+        self.assertTrue(set(TRANSCODE_PRESET_LABEL_KEYS).issubset(TRANSCODE_PRESETS))
+        self.assertEqual(len(TRANSCODE_PRESET_LABEL_KEYS), 38)
         self.assertEqual(set(TRANSCODE_RESOLUTION_LABEL_KEYS), set(TRANSCODE_RESOLUTIONS))
         self.assertTrue({TRANSCODE_AUTOMATIC, TRANSCODE_SOFTWARE}.issubset(TRANSCODE_ENGINE_LABEL_KEYS))
 

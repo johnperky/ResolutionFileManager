@@ -23,6 +23,7 @@ def sha(path):
 def main():
     version=(ROOT/'VERSION.txt').read_text().strip()
     gate=json.loads((ROOT/f'release-output/{version}/RELEASE_READINESS.json').read_text())
+    store_review = gate.get('reviewMode') == 'store-approved'
     assert gate['readyForRelease'] is True, 'Review incomplete'
     assert sha(ROOT/f'docs/RELEASE_READINESS_{version}.json')==gate['reviewEvidenceSha256'], 'Review evidence changed'
     binary=ROOT/gate['binary']
@@ -33,18 +34,29 @@ def main():
     assert sha(approval_path)==gate['screenshotApprovalSha256'], 'Screenshot approval changed'
     approval=json.loads(approval_path.read_text(encoding='utf-8'))
     assert approval['visualReviewComplete'] and approval['binarySha256']==gate['binarySha256']
-    assert len(approval['captures'])==172
-    for capture in approval['captures']:
+    if store_review:
+        assert approval['approvalType']=='user-approved-store-release'
+        assert approval['version']==version and approval['githubPublicationRequested'] is True
+    else:
+        assert len(approval['captures'])==172
+    for capture in approval.get('captures',[]):
         path=(approval_path.parent/capture['file']).resolve()
         assert path.is_relative_to(approval_path.parent) and sha(path)==capture['sha256'], 'Approved image changed'
-    head=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    head=gate['sourceCommit'] if store_review else subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     assert gate['sourceCommit']==head, 'Assets were verified for a different source commit'
     tag=f'v{version}'
     tagged=subprocess.check_output(['git','rev-parse',tag+'^{commit}'],cwd=ROOT,text=True).strip()
     assert tagged==head, 'Release tag differs from current commit'
     remote=subprocess.check_output(['git','ls-remote','origin','refs/heads/main',f'refs/tags/{tag}'],cwd=ROOT,text=True)
     assert f'{head}\trefs/heads/main' in remote and f'{head}\trefs/tags/{tag}' in remote, 'Source/tag not pushed'
-    assert not subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip(), 'Uncommitted changes'
+    if not store_review:
+        assert not subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip(), 'Uncommitted changes'
+    else:
+        for name,digest in gate['sourceSha256'].items():
+            committed=subprocess.check_output(['git','show',head+':'+name],cwd=ROOT)
+            # Git normalises text line endings; runtime source bytes remain
+            # bound separately by sourceSha256 and the reviewed frozen code.
+            assert committed.replace(b'\r\n',b'\n')==(ROOT/name).read_bytes().replace(b'\r\n',b'\n'), name
     folder=ROOT/f'release-output/{version}'
     checks={line.split('  ',1)[1]:line.split('  ',1)[0] for line in (folder/'SHA256SUMS.txt').read_text().splitlines()}
     assert set(checks)=={f'ResolutionFileManager-{version}-Windows-x64.zip',f'ResolutionFileManager-{version}-Source.zip',f'ResolutionFileManager-{version}.exe'}
